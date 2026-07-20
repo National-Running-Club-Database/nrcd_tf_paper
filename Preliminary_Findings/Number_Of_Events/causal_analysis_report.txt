@@ -1,0 +1,78 @@
+Causal Analysis — Competition Volume and Seasonal WA Improvement
+==============================================================
+
+Question: If we added more races for the same athlete, would they improve more?
+
+Methods applied:
+  1. Within-athlete panel: athlete×event-group fixed effects across seasons
+  2. Excluded seasons with only 1 result (mechanical point jump = 0)
+  3. Controlled for first-day opening WA (within FE and in delta models)
+  4. Within-season dose–response: cumulative jump by chronological meet index
+
+Raw athlete-season-event_group rows: 15,128
+After excluding 1-result seasons: 7,106
+
+Interpretation: Positive β for result_count means that when the SAME athlete
+races more in a season (relative to their own other seasons), their point jump
+is larger — after controlling opening WA and season. This is stronger than
+the descriptive plots but still not a randomized experiment.
+
+## Model A — Global athlete×event-group fixed effects
+Observations: 2,273 | Panel units: 1,029
+β(result_count): 9.889  (SE 0.671)
+β(first_wa):     -0.503  (SE 0.013)
+Within R²: 0.4135
+Cluster bootstrap 95% CI for β(result_count): [8.105, 11.709]
+
+Reading: Each additional result in a season is associated with
+9.89 more WA points of seasonal jump, holding athlete
+baseline (fixed effect) and opening mark constant within unit.
+
+## Model B — Pooled OLS (no athlete FE; opening WA + season controls)
+β(result_count): 9.871  (SE 0.433)
+n = 7,106
+
+## Model C — Paired within-athlete season deltas
+Season pairs (same athlete×group, ≥2 results each season): 1,459
+β(Δ result_count → Δ point_jump): 9.283 (SE 0.758)
+Control: Δ first_wa coefficient -0.509
+
+When an athlete adds more races in season B than season A, seasonal jump
+changes by ~9.3 WA points per additional race.
+
+## Model D — By event group (athlete×group FE, bootstrap CI)
+  Men Sprints: β=7.708 [4.036, 11.310] n=395 units=179 (positive)
+  Men Distance: β=12.150 [8.711, 16.269] n=759 units=339 (positive)
+  Men Hurdles: β=4.430 [-7.472, 15.025] n=115 units=51 (mixed/uncertain)
+  Men Jumps: β=-0.522 [-8.408, 6.261] n=149 units=70 (mixed/uncertain)
+  Men Throws: β=0.591 [-5.073, 5.133] n=164 units=76 (mixed/uncertain)
+  Women Sprints: β=9.417 [6.114, 13.715] n=193 units=89 (positive)
+  Women Distance: β=16.960 [11.618, 22.089] n=273 units=124 (positive)
+  Women Hurdles: β=22.020 [9.383, 34.999] n=67 units=30 (positive)
+  Women Jumps: β=7.294 [2.028, 13.751] n=86 units=39 (positive)
+  Women Throws: β=6.796 [-2.746, 19.572] n=72 units=32 (mixed/uncertain)
+
+## Within-season dose–response (summary)
+Average cumulative jump from first-day WA by meet index (see plots/).
+  Men Sprints: meet 1 → 13 avg cumulative jump +50.4 WA
+  Men Distance: meet 1 → 9 avg cumulative jump +83.6 WA
+  Men Hurdles: meet 1 → 7 avg cumulative jump +99.6 WA
+  Men Jumps: meet 1 → 8 avg cumulative jump +44.7 WA
+  Men Throws: meet 1 → 9 avg cumulative jump +21.6 WA
+  Women Sprints: meet 1 → 11 avg cumulative jump +64.8 WA
+  Women Distance: meet 1 → 9 avg cumulative jump +143.1 WA
+  Women Hurdles: meet 1 → 6 avg cumulative jump +90.8 WA
+  Women Jumps: meet 1 → 8 avg cumulative jump +36.7 WA
+  Women Throws: meet 1 → 8 avg cumulative jump +28.1 WA
+
+## Causal credibility assessment
+  Supports 'more races → more improvement' IF:
+    • β(result_count) > 0 in FE models (especially with CI excluding 0)
+    • Dose–response curves rise with meet index
+  Remaining threats:
+    • Coaches assign more races to athletes already trending up within season
+    • Season context (team, health, weather) not fully observed
+    • Relay assignments drive volume for non-primary events
+
+Verdict: See coefficients above — FE estimate is the best available answer
+in this dataset, framed as within-athlete associative evidence.

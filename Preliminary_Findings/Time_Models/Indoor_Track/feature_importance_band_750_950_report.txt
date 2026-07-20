@@ -1,0 +1,86 @@
+Indoor Feature Importance within WA Point Band 750-950
+===========================================================
+
+Question: Do previously important features (bal/spec, best_event,
+best_is_from, pair WA gap, from_stronger_wa, bal×best_event) make
+the indoor band 750-950 time models more accurate than the pooled band model?
+
+Method:
+  • Indoor CSVs 2024–2026 (all dates in files); no relays.
+  • Events: Sprints 60/200/400; Distance 800/Mile/3000.
+  • Inclusion: ≥1 result with WA in [750, 950).
+  • For each event pair (n≥20): 5-fold CV routes predictions by feature
+    labels; sub-cohorts need n≥12 to fit a dedicated model,
+    else fall back to the pooled band formula.
+  • “Beats pooled” = CV median |error| improves by >0.01s.
+  • Athlete-seasons in band: 522.
+  • Evaluated pairs: 20.
+
+Feature definitions
+-------------------
+  • bal_spec: balanced vs specialized (wa_spread ≥ 50)
+      How to use: Compute wa_spread = max(event WA) − min(event WA) across events with a season PB. specialized if ≥ 50; else balanced.
+  • best_event: Identity of best-WA event in the group
+      How to use: Identify which event in the group has the athlete's highest season WA; route to the best_<event> formula.
+  • best_is_from: Athlete's best-WA event is the source event
+      How to use: Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  • pair_wa_gap_50: |WA(from)−WA(to)| ≥ 50
+      How to use: Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  • from_stronger_wa: Source event has higher WA than target
+      How to use: Compare WA(from) to WA(to). If from ≥ to, use from_stronger_wa; else from_weaker_wa.
+  • bal_x_best_event: bal/spec × best_event joint route
+      How to use: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • best_is_to: Athlete's best-WA event is the target event
+  • pair_wa_gap_median: |WA(from)−WA(to)| relative to band-pair median
+  • events_competed: Distinct events raced: 2 vs 3+
+
+Strategy leaderboard vs pooled band model
+----------------------------------------
+  Strategy                Beats     Mean Δ  #Best
+  bal_x_best_event       17/20     +0.694s      3
+  best_is_from           15/20     +0.748s      5
+  from_stronger_wa       15/20     +0.670s      2
+  best_event             15/20     +0.587s      2
+  pair_wa_gap_50         15/20     +0.480s      7
+  bal_spec               12/20     +0.157s      0
+  pooled (no split)           —          —      1
+
+Feature-alone vs pooled (secondary table)
+----------------------------------------
+  from_stronger_wa       15/20   mean Δ +0.670s  — Source event has higher WA than target
+  best_event             15/20   mean Δ +0.587s  — Identity of best-WA event in the group
+  pair_wa_gap_50         15/20   mean Δ +0.480s  — |WA(from)−WA(to)| ≥ 50
+  best_is_from           14/20   mean Δ +0.748s  — Athlete's best-WA event is the source event
+  best_is_to             12/20   mean Δ +0.333s  — Athlete's best-WA event is the target event
+  pair_wa_gap_median     12/20   mean Δ +0.228s  — |WA(from)−WA(to)| relative to band-pair median
+  bal_spec               12/20   mean Δ +0.157s  — balanced vs specialized (wa_spread ≥ 50)
+  events_competed        11/20   mean Δ +0.179s  — Distinct events raced: 2 vs 3+
+
+Per-pair best strategy
+----------------------------------------
+  Men Distance 3000m->800m n=32  pooled=4.094s  best=from_stronger_wa (2.241s, Δ=+1.853s)
+  Men Distance 3000m->Mile n=87  pooled=5.550s  best=bal_x_best_event (2.443s, Δ=+3.107s)
+  Men Distance 800m->3000m n=32  pooled=10.862s  best=pair_wa_gap_50 (10.273s, Δ=+0.589s)
+  Men Distance 800m->Mile n=78  pooled=6.767s  best=best_is_from (3.736s, Δ=+3.031s)
+  Men Distance Mile->3000m n=87  pooled=11.624s  best=best_is_from (6.503s, Δ=+5.121s)
+  Men Distance Mile->800m n=78  pooled=1.965s  best=from_stronger_wa (1.415s, Δ=+0.549s)
+  Women Distance 3000m->Mile n=41  pooled=6.617s  best=pair_wa_gap_50 (3.795s, Δ=+2.822s)
+  Women Distance 800m->Mile n=30  pooled=4.944s  best=best_is_from (4.048s, Δ=+0.897s)
+  Women Distance Mile->3000m n=41  pooled=7.269s  best=pair_wa_gap_50 (6.609s, Δ=+0.660s)
+  Women Distance Mile->800m n=30  pooled=3.140s  best=best_event (2.679s, Δ=+0.461s)
+  Men Sprints 200m->400m n=69  pooled=1.069s  best=best_event (0.563s, Δ=+0.506s)
+  Men Sprints 200m->60m n=191  pooled=0.083s  best=bal_x_best_event (0.037s, Δ=+0.046s)
+  Men Sprints 400m->200m n=69  pooled=0.248s  best=best_is_from (0.182s, Δ=+0.065s)
+  Men Sprints 400m->60m n=52  pooled=0.075s  best=pooled (0.075s, Δ=+0.000s)
+  Men Sprints 60m->200m n=191  pooled=0.406s  best=bal_x_best_event (0.140s, Δ=+0.265s)
+  Men Sprints 60m->400m n=52  pooled=1.433s  best=pair_wa_gap_50 (1.188s, Δ=+0.246s)
+  Women Sprints 200m->400m n=33  pooled=2.035s  best=best_is_from (1.124s, Δ=+0.911s)
+  Women Sprints 200m->60m n=74  pooled=0.068s  best=pair_wa_gap_50 (0.053s, Δ=+0.014s)
+  Women Sprints 400m->200m n=33  pooled=0.724s  best=pair_wa_gap_50 (0.369s, Δ=+0.355s)
+  Women Sprints 60m->200m n=74  pooled=0.459s  best=pair_wa_gap_50 (0.239s, Δ=+0.220s)
+
+Band verdict
+------------
+  YES — bal_x_best_event, best_is_from, from_stronger_wa, best_event, pair_wa_gap_50, bal_spec beat the pooled 750-950 model on ≥50% of pairs with mean improvement >0.01s.
+
+Source: Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py

@@ -1,0 +1,266 @@
+Best Event Proportion — When Do Athletes Hit Their Season Best?
+================================================================
+
+Definition:
+  For each athlete × season × event group, results are ordered chronologically
+  (by date, meet, result_id). The best-event proportion is:
+
+    best_meet_index / total_results_in_season
+
+  where best_meet_index is the first meet at which the athlete reaches their
+  season-maximum World Athletics score.
+
+  Example: 4 meets, season best at meet 3 → proportion = 3/4 = 0.75
+
+  Interpretation:
+    • 1.00 = season best on the final (or only) competition
+    • 0.50 = season best by the midpoint of the schedule
+    • Low values = athlete peaked early relative to season length
+
+  Note: Athletes with 1 result always have proportion 1.0 by definition.
+  Section B excludes 1-result seasons for clearer championship-timing read.
+
+Total athlete-season-event_group records: 15,128
+Records with ≥2 results: 7,106
+
+## A. All seasons (including 1-result)
+
+### Men
+
+**Sprints** (n=2,226)
+  Avg proportion: 0.846 | Median: 1.000
+  Avg meets/season: 2.5 | Peaked in final 25% of schedule: 73.1% | Peaked by midpoint (≤50%): 21.4%
+  Distribution:
+    early (≤25%): 64 (2.9%)
+    first half (26–50%): 412 (18.5%)
+    second half (51–75%): 178 (8.0%)
+    late (76–100%): 1,572 (70.6%)
+
+**Distance** (n=3,298)
+  Avg proportion: 0.835 | Median: 1.000
+  Avg meets/season: 2.3 | Peaked in final 25% of schedule: 69.5% | Peaked by midpoint (≤50%): 23.0%
+  Distribution:
+    early (≤25%): 72 (2.2%)
+    first half (26–50%): 688 (20.9%)
+    second half (51–75%): 335 (10.2%)
+    late (76–100%): 2,203 (66.8%)
+
+**Hurdles** (n=1,426)
+  Avg proportion: 0.908 | Median: 1.000
+  Avg meets/season: 1.7 | Peaked in final 25% of schedule: 82.5% | Peaked by midpoint (≤50%): 13.8%
+  Distribution:
+    early (≤25%): 14 (1.0%)
+    first half (26–50%): 183 (12.8%)
+    second half (51–75%): 64 (4.5%)
+    late (76–100%): 1,165 (81.7%)
+
+**Jumps** (n=1,545)
+  Avg proportion: 0.893 | Median: 1.000
+  Avg meets/season: 1.7 | Peaked in final 25% of schedule: 79.8% | Peaked by midpoint (≤50%): 16.7%
+  Distribution:
+    early (≤25%): 18 (1.2%)
+    first half (26–50%): 240 (15.5%)
+    second half (51–75%): 66 (4.3%)
+    late (76–100%): 1,221 (79.0%)
+
+**Throws** (n=1,512)
+  Avg proportion: 0.889 | Median: 1.000
+  Avg meets/season: 1.8 | Peaked in final 25% of schedule: 79.3% | Peaked by midpoint (≤50%): 17.1%
+  Distribution:
+    early (≤25%): 23 (1.5%)
+    first half (26–50%): 236 (15.6%)
+    second half (51–75%): 72 (4.8%)
+    late (76–100%): 1,181 (78.1%)
+
+### Women
+
+**Sprints** (n=1,067)
+  Avg proportion: 0.847 | Median: 1.000
+  Avg meets/season: 2.4 | Peaked in final 25% of schedule: 72.7% | Peaked by midpoint (≤50%): 21.0%
+  Distribution:
+    early (≤25%): 34 (3.2%)
+    first half (26–50%): 190 (17.8%)
+    second half (51–75%): 100 (9.4%)
+    late (76–100%): 743 (69.6%)
+
+**Distance** (n=1,633)
+  Avg proportion: 0.850 | Median: 1.000
+  Avg meets/season: 2.1 | Peaked in final 25% of schedule: 72.1% | Peaked by midpoint (≤50%): 21.7%
+  Distribution:
+    early (≤25%): 26 (1.6%)
+    first half (26–50%): 328 (20.1%)
+    second half (51–75%): 143 (8.8%)
+    late (76–100%): 1,136 (69.6%)
+
+**Hurdles** (n=771)
+  Avg proportion: 0.900 | Median: 1.000
+  Avg meets/season: 1.7 | Peaked in final 25% of schedule: 80.9% | Peaked by midpoint (≤50%): 14.4%
+  Distribution:
+    early (≤25%): 5 (0.6%)
+    first half (26–50%): 106 (13.7%)
+    second half (51–75%): 45 (5.8%)
+    late (76–100%): 615 (79.8%)
+
+**Jumps** (n=837)
+  Avg proportion: 0.876 | Median: 1.000
+  Avg meets/season: 1.8 | Peaked in final 25% of schedule: 77.3% | Peaked by midpoint (≤50%): 18.8%
+  Distribution:
+    early (≤25%): 10 (1.2%)
+    first half (26–50%): 147 (17.6%)
+    second half (51–75%): 48 (5.7%)
+    late (76–100%): 632 (75.5%)
+
+**Throws** (n=813)
+  Avg proportion: 0.872 | Median: 1.000
+  Avg meets/season: 1.8 | Peaked in final 25% of schedule: 77.0% | Peaked by midpoint (≤50%): 19.3%
+  Distribution:
+    early (≤25%): 16 (2.0%)
+    first half (26–50%): 141 (17.3%)
+    second half (51–75%): 41 (5.0%)
+    late (76–100%): 615 (75.6%)
+
+## B. Multi-meet seasons only (≥2 results) — primary coaching read
+
+### Men
+
+**Sprints** (n=1,198)
+  Avg proportion: 0.714 | Median: 0.732
+  Peaked in final 25% of schedule: 50.0% | Peaked by midpoint (≤50%): 39.7%
+  By number of results in season:
+    2 meets: n=505, avg proportion=0.753, median=1.000, late-peak rate=50.7%
+    3 meets: n=262, avg proportion=0.700, median=0.667, late-peak rate=40.8%
+    4 meets: n=138, avg proportion=0.692, median=0.750, late-peak rate=63.8%
+    5 meets: n=88, avg proportion=0.645, median=0.600, late-peak rate=48.9%
+    6 meets: n=64, avg proportion=0.724, median=0.833, late-peak rate=53.1%
+    7 meets: n=38, avg proportion=0.699, median=0.714, late-peak rate=47.4%
+    8 meets: n=33, avg proportion=0.617, median=0.625, late-peak rate=48.5%
+    9 meets: n=25, avg proportion=0.698, median=0.778, late-peak rate=68.0%
+    10 meets: n=14, avg proportion=0.643, median=0.750, late-peak rate=50.0%
+    12 meets: n=15, avg proportion=0.639, median=0.750, late-peak rate=53.3%
+
+**Distance** (n=1,879)
+  Avg proportion: 0.711 | Median: 0.667
+  Peaked in final 25% of schedule: 46.5% | Peaked by midpoint (≤50%): 40.4%
+  By number of results in season:
+    2 meets: n=885, avg proportion=0.737, median=0.500, late-peak rate=47.3%
+    3 meets: n=419, avg proportion=0.706, median=0.667, late-peak rate=38.4%
+    4 meets: n=232, avg proportion=0.685, median=0.750, late-peak rate=63.4%
+    5 meets: n=141, avg proportion=0.670, median=0.600, late-peak rate=43.3%
+    6 meets: n=88, avg proportion=0.697, median=0.667, late-peak rate=47.7%
+    7 meets: n=59, avg proportion=0.613, median=0.714, late-peak rate=28.8%
+    8 meets: n=28, avg proportion=0.652, median=0.625, late-peak rate=42.9%
+    9 meets: n=19, avg proportion=0.608, median=0.667, late-peak rate=47.4%
+
+**Hurdles** (n=501)
+  Avg proportion: 0.738 | Median: 0.750
+  Peaked in final 25% of schedule: 50.3% | Peaked by midpoint (≤50%): 39.3%
+  By number of results in season:
+    2 meets: n=285, avg proportion=0.770, median=1.000, late-peak rate=54.0%
+    3 meets: n=110, avg proportion=0.724, median=0.667, late-peak rate=40.9%
+    4 meets: n=49, avg proportion=0.663, median=0.750, late-peak rate=53.1%
+    5 meets: n=27, avg proportion=0.607, median=0.600, late-peak rate=37.0%
+    6 meets: n=12, avg proportion=0.722, median=0.833, late-peak rate=66.7%
+    7 meets: n=11, avg proportion=0.701, median=0.714, late-peak rate=45.5%
+
+**Jumps** (n=604)
+  Avg proportion: 0.727 | Median: 0.667
+  Peaked in final 25% of schedule: 48.3% | Peaked by midpoint (≤50%): 42.7%
+  By number of results in season:
+    2 meets: n=345, avg proportion=0.755, median=1.000, late-peak rate=51.0%
+    3 meets: n=152, avg proportion=0.746, median=0.667, late-peak rate=46.1%
+    4 meets: n=54, avg proportion=0.657, median=0.625, late-peak rate=50.0%
+    5 meets: n=25, avg proportion=0.544, median=0.400, late-peak rate=36.0%
+    6 meets: n=14, avg proportion=0.679, median=0.750, late-peak rate=50.0%
+
+**Throws** (n=583)
+  Avg proportion: 0.711 | Median: 0.667
+  Peaked in final 25% of schedule: 46.3% | Peaked by midpoint (≤50%): 44.4%
+  By number of results in season:
+    2 meets: n=347, avg proportion=0.744, median=0.500, late-peak rate=48.7%
+    3 meets: n=117, avg proportion=0.715, median=0.667, late-peak rate=39.3%
+    4 meets: n=45, avg proportion=0.683, median=0.750, late-peak rate=62.2%
+    5 meets: n=28, avg proportion=0.621, median=0.600, late-peak rate=46.4%
+    6 meets: n=16, avg proportion=0.573, median=0.583, late-peak rate=37.5%
+    8 meets: n=12, avg proportion=0.500, median=0.500, late-peak rate=25.0%
+
+### Women
+
+**Sprints** (n=581)
+  Avg proportion: 0.718 | Median: 0.714
+  Peaked in final 25% of schedule: 49.9% | Peaked by midpoint (≤50%): 38.6%
+  By number of results in season:
+    2 meets: n=258, avg proportion=0.758, median=1.000, late-peak rate=51.6%
+    3 meets: n=107, avg proportion=0.726, median=0.667, late-peak rate=43.0%
+    4 meets: n=92, avg proportion=0.666, median=0.750, late-peak rate=62.0%
+    5 meets: n=47, avg proportion=0.677, median=0.600, late-peak rate=44.7%
+    6 meets: n=18, avg proportion=0.741, median=0.750, late-peak rate=50.0%
+    7 meets: n=12, avg proportion=0.595, median=0.571, late-peak rate=25.0%
+    8 meets: n=15, avg proportion=0.625, median=0.625, late-peak rate=46.7%
+    9 meets: n=14, avg proportion=0.690, median=0.667, late-peak rate=42.9%
+
+**Distance** (n=863)
+  Avg proportion: 0.717 | Median: 0.667
+  Peaked in final 25% of schedule: 47.2% | Peaked by midpoint (≤50%): 41.0%
+  By number of results in season:
+    2 meets: n=452, avg proportion=0.754, median=1.000, late-peak rate=50.9%
+    3 meets: n=197, avg proportion=0.692, median=0.667, late-peak rate=36.5%
+    4 meets: n=108, avg proportion=0.653, median=0.750, late-peak rate=58.3%
+    5 meets: n=39, avg proportion=0.677, median=0.800, late-peak rate=53.8%
+    6 meets: n=25, avg proportion=0.633, median=0.667, late-peak rate=20.0%
+    7 meets: n=16, avg proportion=0.688, median=0.714, late-peak rate=31.2%
+    8 meets: n=13, avg proportion=0.654, median=0.625, late-peak rate=38.5%
+
+**Hurdles** (n=266)
+  Avg proportion: 0.709 | Median: 0.667
+  Peaked in final 25% of schedule: 44.7% | Peaked by midpoint (≤50%): 41.7%
+  By number of results in season:
+    2 meets: n=136, avg proportion=0.743, median=0.500, late-peak rate=48.5%
+    3 meets: n=60, avg proportion=0.661, median=0.667, late-peak rate=28.3%
+    4 meets: n=23, avg proportion=0.620, median=0.500, late-peak rate=47.8%
+    5 meets: n=24, avg proportion=0.742, median=0.800, late-peak rate=58.3%
+    6 meets: n=15, avg proportion=0.756, median=0.833, late-peak rate=53.3%
+
+**Jumps** (n=327)
+  Avg proportion: 0.682 | Median: 0.625
+  Peaked in final 25% of schedule: 41.9% | Peaked by midpoint (≤50%): 48.0%
+  By number of results in season:
+    2 meets: n=171, avg proportion=0.719, median=0.500, late-peak rate=43.9%
+    3 meets: n=77, avg proportion=0.636, median=0.667, late-peak rate=31.2%
+    4 meets: n=29, avg proportion=0.655, median=0.750, late-peak rate=62.1%
+    5 meets: n=19, avg proportion=0.726, median=0.800, late-peak rate=57.9%
+    6 meets: n=12, avg proportion=0.500, median=0.500, late-peak rate=16.7%
+
+**Throws** (n=304)
+  Avg proportion: 0.657 | Median: 0.500
+  Peaked in final 25% of schedule: 38.5% | Peaked by midpoint (≤50%): 51.6%
+  By number of results in season:
+    2 meets: n=168, avg proportion=0.708, median=0.500, late-peak rate=41.7%
+    3 meets: n=53, avg proportion=0.591, median=0.667, late-peak rate=20.8%
+    4 meets: n=31, avg proportion=0.524, median=0.500, late-peak rate=38.7%
+    5 meets: n=19, avg proportion=0.695, median=0.800, late-peak rate=57.9%
+    6 meets: n=13, avg proportion=0.641, median=0.833, late-peak rate=53.8%
+
+## C. Cross-group comparison (≥2 results, all genders combined)
+
+Ranked by avg best-event proportion (higher = later seasonal peak):
+  Hurdles    n=  767  avg=0.728  median=0.667  late-peak=48.4%
+  Sprints    n=1,779  avg=0.715  median=0.714  late-peak=50.0%
+  Distance   n=2,742  avg=0.713  median=0.667  late-peak=46.7%
+  Jumps      n=  931  avg=0.712  median=0.667  late-peak=46.1%
+  Throws     n=  887  avg=0.693  median=0.667  late-peak=43.6%
+
+## D. Implications for race-volume vs championship timing
+
+Among athletes with multiple meets, a substantial share still record their season best in the second half or final quarter of their schedule — higher volume does not automatically mean early peaking in this dataset.
+
+  Men distance (n=1,879): avg proportion 0.711, 46.5% peak in final 25% of meets.
+  Men sprints (n=1,198): avg proportion 0.714, 50.0% peak in final 25% of meets.
+
+Caveats:
+  • Proportion depends on how many meets are scheduled; more meets create more
+    opportunities for a late peak (and for proportion to land below 1.0).
+  • Relay WA scores can shift 'best mark' timing for leg athletes.
+  • Athletes who miss late-season meets due to injury are not fully captured.
+
+Source: combined relay-inclusive dataset (deduplicated by result_id),
+outdoor 2024–2026, March 1+ per season.

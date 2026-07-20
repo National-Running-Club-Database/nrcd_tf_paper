@@ -1,0 +1,92 @@
+Doubling WA Buffer for Time-Model Predictions
+=============================================
+
+Question: If a time-model prediction is for an event that will be the
+athlete's 2nd (or later) race of the day, what World Athletics point
+buffer should we apply? Does it differ for Sprints vs Distance?
+
+Why a buffer is needed:
+  Feature-important / point-band time models predict season-PB-like
+  equivalency. Same-day doubling adds fatigue that those models do not
+  encode.
+
+Method / caveat:
+  • No heat/start clock in the CSVs → cannot label which event was 1st vs 2nd.
+  • Proxy: within the same athlete-season, mean WA on same-day multi-event
+    days (start_date == end_date, ≥2 group events) minus mean WA on solo days.
+  • Multi-day meets (start ≠ end) excluded so the comparison is day-level.
+  • Buffer = points to subtract from the model-implied TARGET-event WA
+    (positive drop ⇒ subtract that many WA points).
+  • Relays / steeple excluded. Outdoor 2024–2026, March 1+.
+
+Primary evidence (all athlete-seasons with both solo and same-day double days)
+------------------------------------------------------------------------------
+  Sprints    n=122   median Δ=  -8.2 WA  mean Δ=  +0.3  % lower at doubles=54.1%  → typical buffer −8, conservative −57
+  Distance   n=124   median Δ= -33.5 WA  mean Δ= -28.9  % lower at doubles=63.7%  → typical buffer −34, conservative −74
+  All        n=246   median Δ= -18.6 WA  mean Δ= -14.4  % lower at doubles=58.9%  → typical buffer −19, conservative −64
+
+By gender (all seasons):
+  Men Sprints: n=85 median Δ=-6.0 → buffer −6 (conservative −63)
+  Men Distance: n=92 median Δ=-32.0 → buffer −32 (conservative −81)
+  Women Sprints: n=37 median Δ=-13.8 → buffer −14 (conservative −54)
+  Women Distance: n=32 median Δ=-36.1 → buffer −36 (conservative −54)
+
+High-WA band appendix (aligned with point-band time models)
+-------------------------------------------------------
+  Band 750-950:
+    Sprints: n=48 median Δ=+0.0 → buffer −0 (conservative −40)
+    Distance: n=30 median Δ=-63.2 → buffer −63 (conservative −112)
+  Band 800-1000:
+    Sprints: n=33 median Δ=-10.5 → buffer −10 (conservative −48)
+    Distance: n=21 median Δ=-101.0 → buffer −101 (conservative −121)
+  Band 850-1050:
+    Sprints: n=20 median Δ=-22.3 → buffer −22 (conservative −49)
+    Distance: n=12 median Δ=-110.4 → buffer −110 (conservative −158)
+
+Recommended WA buffers (apply AFTER converting model-predicted time to WA
+in the TARGET event, then convert buffered WA back to a time if needed):
+
+  Sprints (100 / 200 / 400):
+    Typical buffer:      −8 WA points
+    Conservative buffer: −57 WA points (~75th percentile drop)
+    Evidence: n=122 athlete-seasons with both same-day doubles and solo days; 54.1% score lower WA at doubles; median Δ (double−solo) = -8.25 WA.
+
+  Distance (800 / 1500 / 5000):
+    Typical buffer:      −34 WA points
+    Conservative buffer: −74 WA points (~75th percentile drop)
+    Evidence: n=124 athlete-seasons; 63.7% score lower WA at doubles; median Δ (double−solo) = -33.5 WA.
+
+  Difference: Distance shows a larger typical doubling cost (sprints −8 vs distance −34 WA).
+
+Opinion — buffers to use with feature-important band time models
+----------------------------------------------------------------
+  When the predicted event is known to be 2nd+ of the day:
+    • Sprints: subtract about 10 WA points from the
+      model-implied target WA (conservative: ~55).
+    • Distance: subtract about 35 WA points
+      (conservative: ~75).
+
+  Yes — use separate buffers for Sprints and Distance; do not use one
+  global number if both groups matter.
+
+  High-WA bands (750–1050): sprint costs stay near the ~10-point typical
+  buffer; distance day-average drops look larger in small samples — still
+  start from −35 WA for distance, and lean conservative
+  (−75) for hard doubles (e.g. 800+5000 same day).
+
+  How to apply:
+    1. Run the usual band + feature time model → predicted time.
+    2. Convert predicted time → WA in the TARGET event.
+    3. Subtract the buffer (points).
+    4. Convert buffered WA back to a time (or report WA with buffer).
+
+  Do NOT apply this buffer for fresh solo races at a future meet;
+  it is specifically for same-day multi-event load.
+
+Caveats:
+  • Proxy mixes 1st and 2nd races of a double day; true 2nd-event cost
+    may be larger than the day-average shown here.
+  • Not causal; athletes may also choose easier marks when doubling.
+  • Buffers are empirical club-athlete estimates, not WA scoring rules.
+
+Source: doubling_analysis/analyze_doubling_wa_buffer.py

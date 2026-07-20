@@ -1,0 +1,555 @@
+Indoor Feature-Important Time Models — WA Band 800-1000 (Width 200)
+===================================================================
+
+Method:
+  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).
+  • Population: athlete-seasons with ≥1 individual result in WA [800, 1000).
+  • Excludes relays. Sprints (60/200/400) & Distance (800/Mile/3000) only.
+  • Pooled formula: lowest-CV winner among candidate families (same search
+    as prior time models; seed=42, folds=5).
+  • Feature formulas: re-fit within feature cohorts (n≥12); pair needs n≥20.
+  • Important features per pair come from Feature_Importance CV
+    (strategies that beat pooled by >0.01s).
+
+Feature explanations
+--------------------
+  bal_spec: balanced vs specialized (wa_spread ≥ 50)
+    → Compute wa_spread = max(event WA) − min(event WA) across events with a season PB. specialized if ≥ 50; else balanced.
+  best_event: Identity of best-WA event in the group
+    → Identify which event in the group has the athlete's highest season WA; route to the best_<event> formula.
+  best_is_from: Athlete's best-WA event is the source event
+    → Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  pair_wa_gap_50: |WA(from)−WA(to)| ≥ 50
+    → Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  from_stronger_wa: Source event has higher WA than target
+    → Compare WA(from) to WA(to). If from ≥ to, use from_stronger_wa; else from_weaker_wa.
+  bal_x_best_event: bal/spec × best_event joint route
+    → Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+
+Formula explanations
+--------------------
+  linear_ols / robust_trimmed_linear: to = intercept + slope × from
+  median_ratio: to = ratio × from  (ratio = median of to/from)
+  log_linear: to = exp(intercept + slope × log(from))
+  ratio_linear: to = from × (a + b×from)
+  quadratic: to = a + b×from + c×from²
+  binned_ratio: to = from × ratio_bin(from); bins shown as nearest from→ratio
+  knn_median: non-parametric median of k nearest from-neighbors' to times
+
+Use:
+  1. Confirm the athlete has a result in WA band 800-1000.
+  2. Start from the pooled formula for the event pair.
+  3. If important features are known, switch to the matching cohort
+     formula below (prefer the pair's recommended strategy first).
+  4. Convert predicted time to World Athletics points in the TARGET event.
+
+
+Sprints — Men
+-------------
+
+60m -> 200m  (n=129 athlete-seasons, r=0.317)
+  Pooled band model: knn_median
+  Formula: 200m ≈ median of k=20 nearest 60m neighbors (train n=129; non-parametric)
+  CV median |error| (pooled routing): 0.314s
+  Full-sample median |error|: 0.280s
+  Ratio 200m/60m: median 3.223 (IQR 3.147–3.278)
+  Median times: 60m 7.21s, 200m 23.16s
+
+  Important features to know
+  --------------------------
+  • Recommended route: bal_x_best_event (CV 0.142s, Δ +0.172s vs pooled).
+  • How to determine it: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • Other features that also beat pooled:
+      - bal_x_best_event: CV 0.142s (Δ +0.172s) ← recommended
+      - best_event: CV 0.243s (Δ +0.071s)
+      - best_is_from: CV 0.260s (Δ +0.055s)
+      - from_stronger_wa: CV 0.260s (Δ +0.055s)
+      - bal_spec: CV 0.288s (Δ +0.026s)
+      - pair_wa_gap_50: CV 0.299s (Δ +0.016s)
+
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 200m ≈ median of k=20 nearest 60m neighbors (train n=129; non-parametric)
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [balanced ∩ best_200m] n=18: 200m = -61.388 + 19.593×60m − 1.094375×60m²  (CV 0.065s)
+      [balanced ∩ best_60m] n=29: 200m = exp(0.975 + 1.101×log(60m))  (CV 0.096s)
+      [specialized ∩ best_200m] n=35: 200m = -113.852 + 35.167×60m − 2.252340×60m²  (CV 0.107s)
+      [specialized ∩ best_60m] n=42: 200m = 3.300 × 60m  (CV 0.177s)
+
+  Alternate useful split — best_event (CV 0.243s, Δ +0.071s):
+  • Identify which event in the group has the athlete's highest season WA; route to the best_<event> formula.
+  How best_event alters the formula:
+  • Baseline (pooled band): 200m ≈ median of k=20 nearest 60m neighbors (train n=129; non-parametric)
+  • Route by which event holds the athlete's season-best WA:
+      [best_200m] n=53: 200m = 60m × ratio_bin(60m)  (CV 0.156s)
+                     nearest 60m 7.05s → 3.166
+                     nearest 60m 7.13s → 3.151
+                     nearest 60m 7.21s → 3.182
+                     nearest 60m 7.27s → 3.193
+                     nearest 60m 7.28s → 3.167
+                     nearest 60m 7.33s → 3.133
+                     nearest 60m 7.36s → 3.143
+                     nearest 60m 7.38s → 3.121
+                     nearest 60m 7.54s → 3.078
+      [best_60m] n=71: 200m = 4.199 × 60m − 6.631  (CV 0.246s)
+
+60m -> 400m  (n=28 athlete-seasons, r=0.206)
+  Pooled band model: knn_median
+  Formula: 400m ≈ median of k=20 nearest 60m neighbors (train n=28; non-parametric)
+  CV median |error| (pooled routing): 1.775s
+  Full-sample median |error|: 1.288s
+  Ratio 400m/60m: median 7.176 (IQR 6.925–7.399)
+  Median times: 60m 7.25s, 400m 51.89s
+
+  Important features to know
+  --------------------------
+  • Recommended route: best_is_from (CV 1.383s, Δ +0.392s vs pooled).
+  • How to determine it: Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  • Other features that also beat pooled:
+      - best_is_from: CV 1.383s (Δ +0.392s) ← recommended
+      - pair_wa_gap_50: CV 1.649s (Δ +0.126s)
+      - from_stronger_wa: CV 1.676s (Δ +0.099s)
+      - bal_spec: CV 1.691s (Δ +0.084s)
+      - bal_x_best_event: CV 1.691s (Δ +0.084s)
+
+  How best_is_from alters the formula:
+  • Baseline (pooled band): 400m ≈ median of k=20 nearest 60m neighbors (train n=28; non-parametric)
+  • If best-WA event is 60m, use best_is_from; otherwise best_not_from:
+      [best_not_from] n=17: 400m = 60m × (13.368 − 0.859038×60m)  (CV 0.938s)
+
+  Alternate useful split — pair_wa_gap_50 (CV 1.649s, Δ +0.126s):
+  • Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled band): 400m ≈ median of k=20 nearest 60m neighbors (train n=28; non-parametric)
+  • If |WA(60m)−WA(400m)| ≥ 50, use pair_gap_ge50; else pair_gap_lt50:
+      [pair_gap_ge50] n=20: 400m = -736.046 + 217.754×60m − 15.024037×60m²  (CV 1.798s)
+
+200m -> 60m  (n=129 athlete-seasons, r=0.317)
+  Pooled band model: robust_trimmed_linear
+  Formula: 60m = 6.069 + 0.049 × 200m
+  CV median |error| (pooled routing): 0.078s
+  Full-sample median |error|: 0.077s
+  Ratio 60m/200m: median 0.310 (IQR 0.305–0.318)
+  Median times: 200m 23.16s, 60m 7.21s
+
+  Important features to know
+  --------------------------
+  • Recommended route: bal_x_best_event (CV 0.030s, Δ +0.049s vs pooled).
+  • How to determine it: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • Other features that also beat pooled:
+      - bal_x_best_event: CV 0.030s (Δ +0.049s) ← recommended
+      - pair_wa_gap_50: CV 0.065s (Δ +0.014s)
+      - from_stronger_wa: CV 0.065s (Δ +0.013s)
+      - best_event: CV 0.066s (Δ +0.013s)
+      - best_is_from: CV 0.067s (Δ +0.012s)
+
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 60m = 6.069 + 0.049 × 200m
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [balanced ∩ best_200m] n=18: 60m = 200m × (0.390 − 0.003330×200m)  (CV 0.015s)
+      [balanced ∩ best_60m] n=29: 60m = 1.030 + 0.264 × 200m  (CV 0.026s)
+      [specialized ∩ best_200m] n=35: 60m = 0.320 × 200m  (CV 0.050s)
+      [specialized ∩ best_60m] n=42: 60m = -33.573 + 3.329×200m − 0.067892×200m²  (CV 0.037s)
+
+200m -> 400m  (n=37 athlete-seasons, r=0.341)
+  Pooled band model: robust_trimmed_linear
+  Formula: 400m = 22.108 + 1.273 × 200m
+  CV median |error| (pooled routing): 1.528s
+  Full-sample median |error|: 1.012s
+  Ratio 400m/200m: median 2.237 (IQR 2.192–2.289)
+  Median times: 200m 23.25s, 400m 51.74s
+
+  Important features to know
+  --------------------------
+  • Recommended route: from_stronger_wa (CV 0.642s, Δ +0.886s vs pooled).
+  • How to determine it: Compare WA(from) to WA(to). If from ≥ to, use from_stronger_wa; else from_weaker_wa.
+  • Other features that also beat pooled:
+      - from_stronger_wa: CV 0.642s (Δ +0.886s) ← recommended
+      - bal_x_best_event: CV 0.858s (Δ +0.671s)
+      - best_is_from: CV 0.907s (Δ +0.622s)
+      - bal_spec: CV 0.927s (Δ +0.601s)
+      - best_event: CV 1.177s (Δ +0.351s)
+      - pair_wa_gap_50: CV 1.181s (Δ +0.347s)
+
+  How from_stronger_wa alters the formula:
+  • Baseline (pooled band): 400m = 22.108 + 1.273 × 200m
+  • If WA(200m) ≥ WA(400m), use from_stronger_wa; else from_weaker_wa:
+      [from_stronger_wa] n=19: 400m = 2.289 × 200m  (CV 0.830s)
+      [from_weaker_wa] n=18: 400m = 2.189 × 200m  (CV 0.533s)
+
+  Alternate useful split — bal_x_best_event (CV 0.858s, Δ +0.671s):
+  • Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 400m = 22.108 + 1.273 × 200m
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [specialized ∩ best_200m] n=12: 400m = 2.293 × 200m  (CV 0.675s)
+
+400m -> 60m  (n=28 athlete-seasons, r=0.206)
+  Pooled band model: robust_trimmed_linear
+  Formula: 60m = 7.120 + 0.003 × 400m
+  CV median |error| (pooled routing): 0.088s
+  Full-sample median |error|: 0.067s
+  Ratio 60m/400m: median 0.139 (IQR 0.135–0.143)
+  Median times: 400m 51.89s, 60m 7.25s
+
+  Important features to know
+  --------------------------
+  • None of the tested features beat pooled by >0.01s for this pair — use the pooled formula as-is.
+
+400m -> 200m  (n=37 athlete-seasons, r=0.341)
+  Pooled band model: ratio_linear
+  Formula: 200m = 400m × (0.786 − 0.006562×400m)
+  CV median |error| (pooled routing): 0.336s
+  Full-sample median |error|: 0.260s
+  Ratio 200m/400m: median 0.447 (IQR 0.437–0.456)
+  Median times: 400m 51.74s, 200m 23.25s
+
+  Important features to know
+  --------------------------
+  • Recommended route: bal_x_best_event (CV 0.152s, Δ +0.184s vs pooled).
+  • How to determine it: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • Other features that also beat pooled:
+      - bal_x_best_event: CV 0.152s (Δ +0.184s) ← recommended
+      - best_is_from: CV 0.187s (Δ +0.149s)
+      - best_event: CV 0.218s (Δ +0.117s)
+      - bal_spec: CV 0.324s (Δ +0.011s)
+      - from_stronger_wa: CV 0.324s (Δ +0.011s)
+
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 200m = 400m × (0.786 − 0.006562×400m)
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [specialized ∩ best_200m] n=12: 200m = -129.388 + 5.542×400m − 0.050294×400m²  (CV 0.249s)
+
+  Alternate useful split — best_is_from (CV 0.187s, Δ +0.149s):
+  • Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  How best_is_from alters the formula:
+  • Baseline (pooled band): 200m = 400m × (0.786 − 0.006562×400m)
+  • If best-WA event is 400m, use best_is_from; otherwise best_not_from:
+      [best_is_from] n=16: 200m = 8.924 + 0.281 × 400m  (CV 0.148s)
+      [best_not_from] n=21: 200m = -61.064 + 2.996×400m − 0.026545×400m²  (CV 0.226s)
+
+
+Sprints — Women
+---------------
+
+60m -> 200m  (n=52 athlete-seasons, r=0.493)
+  Pooled band model: binned_ratio
+  Formula: 200m = 60m × ratio_bin(60m)
+               nearest 60m 7.84s → 3.298
+               nearest 60m 7.99s → 3.346
+               nearest 60m 8.09s → 3.402
+               nearest 60m 8.14s → 3.340
+               nearest 60m 8.17s → 3.346
+               nearest 60m 8.22s → 3.293
+               nearest 60m 8.25s → 3.377
+               nearest 60m 8.30s → 3.328
+               nearest 60m 8.45s → 3.238
+  CV median |error| (pooled routing): 0.501s
+  Full-sample median |error|: 0.335s
+  Ratio 200m/60m: median 3.319 (IQR 3.283–3.406)
+  Median times: 60m 8.17s, 200m 27.19s
+
+  Important features to know
+  --------------------------
+  • Recommended route: pair_wa_gap_50 (CV 0.218s, Δ +0.283s vs pooled).
+  • How to determine it: Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  • Other features that also beat pooled:
+      - pair_wa_gap_50: CV 0.218s (Δ +0.283s) ← recommended
+      - bal_spec: CV 0.286s (Δ +0.214s)
+      - bal_x_best_event: CV 0.318s (Δ +0.182s)
+
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled band): 200m = 60m × ratio_bin(60m)
+  • If |WA(60m)−WA(200m)| ≥ 50, use pair_gap_ge50; else pair_gap_lt50:
+      [pair_gap_ge50] n=19: 200m = 3.422 × 60m  (CV 0.286s)
+      [pair_gap_lt50] n=33: 200m = 3.294 × 60m  (CV 0.174s)
+
+  Alternate useful split — bal_spec (CV 0.286s, Δ +0.214s):
+  • Compute wa_spread = max(event WA) − min(event WA) across events with a season PB. specialized if ≥ 50; else balanced.
+  How bal_spec alters the formula:
+  • Baseline (pooled band): 200m = 60m × ratio_bin(60m)
+  • If wa_spread ≥ 50, use specialized; else balanced:
+      [balanced] n=25: 200m = 3.299 × 60m  (CV 0.174s)
+      [specialized] n=27: 200m = 12.687 + 1.831 × 60m  (CV 0.422s)
+
+200m -> 60m  (n=52 athlete-seasons, r=0.493)
+  Pooled band model: quadratic
+  Formula: 60m = -28.687 + 2.569×200m − 0.044598×200m²
+  CV median |error| (pooled routing): 0.065s
+  Full-sample median |error|: 0.061s
+  Ratio 60m/200m: median 0.301 (IQR 0.293–0.304)
+  Median times: 200m 27.19s, 60m 8.17s
+
+  Important features to know
+  --------------------------
+  • None of the tested features beat pooled by >0.01s for this pair — use the pooled formula as-is.
+
+200m -> 400m  (n=24 athlete-seasons, r=0.146)
+  Pooled band model: knn_median
+  Formula: 400m ≈ median of k=20 nearest 200m neighbors (train n=24; non-parametric)
+  CV median |error| (pooled routing): 2.244s
+  Full-sample median |error|: 0.615s
+  Ratio 400m/200m: median 2.210 (IQR 2.173–2.294)
+  Median times: 200m 27.47s, 400m 61.34s
+
+  Important features to know
+  --------------------------
+  • Recommended route: bal_x_best_event (CV 1.461s, Δ +0.783s vs pooled).
+  • How to determine it: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • Other features that also beat pooled:
+      - bal_x_best_event: CV 1.461s (Δ +0.783s) ← recommended
+      - pair_wa_gap_50: CV 1.474s (Δ +0.770s)
+      - best_event: CV 1.698s (Δ +0.546s)
+      - best_is_from: CV 1.698s (Δ +0.546s)
+      - from_stronger_wa: CV 1.698s (Δ +0.546s)
+
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 400m ≈ median of k=20 nearest 200m neighbors (train n=24; non-parametric)
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [specialized ∩ best_400m] n=15: 400m = 200m × ratio_bin(200m)  (CV 0.485s)
+                     nearest 200m 26.26s → 2.195
+                     nearest 200m 26.88s → 2.205
+                     nearest 200m 26.90s → 2.205
+                     nearest 200m 26.99s → 2.219
+                     nearest 200m 27.32s → 2.120
+                     nearest 200m 27.47s → 2.214
+                     nearest 200m 27.47s → 2.221
+                     nearest 200m 27.77s → 2.193
+                     nearest 200m 27.90s → 2.176
+                     nearest 200m 28.09s → 2.205
+                     nearest 200m 28.24s → 2.173
+                     nearest 200m 28.38s → 2.142
+                     nearest 200m 28.51s → 2.149
+                     nearest 200m 29.05s → 2.112
+                     nearest 200m 30.46s → 2.018
+
+  Alternate useful split — pair_wa_gap_50 (CV 1.474s, Δ +0.770s):
+  • Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled band): 400m ≈ median of k=20 nearest 200m neighbors (train n=24; non-parametric)
+  • If |WA(200m)−WA(400m)| ≥ 50, use pair_gap_ge50; else pair_gap_lt50:
+      [pair_gap_ge50] n=19: 400m ≈ median of k=19 nearest 200m neighbors (train n=19; non-parametric)  (CV 0.645s)
+
+400m -> 200m  (n=24 athlete-seasons, r=0.146)
+  Pooled band model: robust_trimmed_linear
+  Formula: 200m = 26.081 + 0.022 × 400m
+  CV median |error| (pooled routing): 0.574s
+  Full-sample median |error|: 0.510s
+  Ratio 200m/400m: median 0.453 (IQR 0.433–0.460)
+  Median times: 400m 61.34s, 200m 27.47s
+
+  Important features to know
+  --------------------------
+  • Recommended route: best_event (CV 0.474s, Δ +0.100s vs pooled).
+  • How to determine it: Identify which event in the group has the athlete's highest season WA; route to the best_<event> formula.
+  • Other features that also beat pooled:
+      - best_event: CV 0.474s (Δ +0.100s) ← recommended
+      - best_is_from: CV 0.474s (Δ +0.100s)
+      - from_stronger_wa: CV 0.474s (Δ +0.100s)
+
+  How best_event alters the formula:
+  • Baseline (pooled band): 200m = 26.081 + 0.022 × 400m
+  • Route by which event holds the athlete's season-best WA:
+      [best_400m] n=17: 200m = 0.456 × 400m  (CV 0.279s)
+
+  Alternate useful split — best_is_from (CV 0.474s, Δ +0.100s):
+  • Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  How best_is_from alters the formula:
+  • Baseline (pooled band): 200m = 26.081 + 0.022 × 400m
+  • If best-WA event is 400m, use best_is_from; otherwise best_not_from:
+      [best_is_from] n=17: 200m = 0.456 × 400m  (CV 0.279s)
+
+
+Distance — Men
+--------------
+
+800m -> Mile  (n=47 athlete-seasons, r=0.217)
+  Pooled band model: robust_trimmed_linear
+  Formula: Mile = 181.826 + 0.701 × 800m
+  CV median |error| (pooled routing): 5.017s
+  Full-sample median |error|: 5.237s
+  Ratio Mile/800m: median 2.232 (IQR 2.169–2.291)
+  Median times: 800m 118.97s, Mile 265.32s
+
+  Important features to know
+  --------------------------
+  • None of the tested features beat pooled by >0.01s for this pair — use the pooled formula as-is.
+
+800m -> 3000m  (n=20 athlete-seasons, r=-0.434)
+  Pooled band model: robust_trimmed_linear
+  Formula: 3000m = 718.653 + -1.529 × 800m
+  CV median |error| (pooled routing): 6.985s
+  Full-sample median |error|: 6.504s
+  Ratio 3000m/800m: median 4.344 (IQR 4.193–4.559)
+  Median times: 800m 119.58s, 3000m 533.85s
+
+  Important features to know
+  --------------------------
+  • None of the tested features beat pooled by >0.01s for this pair — use the pooled formula as-is.
+
+Mile -> 800m  (n=47 athlete-seasons, r=0.217)
+  Pooled band model: robust_trimmed_linear
+  Formula: 800m = 113.853 + 0.019 × Mile
+  CV median |error| (pooled routing): 1.551s
+  Full-sample median |error|: 1.262s
+  Ratio 800m/Mile: median 0.448 (IQR 0.435–0.459)
+  Median times: Mile 265.32s, 800m 118.97s
+
+  Important features to know
+  --------------------------
+  • Recommended route: best_is_from (CV 1.135s, Δ +0.416s vs pooled).
+  • How to determine it: Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  • Other features that also beat pooled:
+      - best_is_from: CV 1.135s (Δ +0.416s) ← recommended
+      - bal_x_best_event: CV 1.238s (Δ +0.313s)
+      - best_event: CV 1.396s (Δ +0.155s)
+      - from_stronger_wa: CV 1.396s (Δ +0.155s)
+      - bal_spec: CV 1.413s (Δ +0.137s)
+
+  How best_is_from alters the formula:
+  • Baseline (pooled band): 800m = 113.853 + 0.019 × Mile
+  • If best-WA event is Mile, use best_is_from; otherwise best_not_from:
+      [best_not_from] n=40: 800m = 105.850 + 0.048 × Mile  (CV 1.170s)
+
+  Alternate useful split — bal_x_best_event (CV 1.238s, Δ +0.313s):
+  • Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 800m = 113.853 + 0.019 × Mile
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [specialized ∩ best_800m] n=25: 800m = 92.690 + 0.093 × Mile  (CV 1.038s)
+
+Mile -> 3000m  (n=48 athlete-seasons, r=0.130)
+  Pooled band model: robust_trimmed_linear
+  Formula: 3000m = 491.078 + 0.135 × Mile
+  CV median |error| (pooled routing): 11.481s
+  Full-sample median |error|: 9.676s
+  Ratio 3000m/Mile: median 1.987 (IQR 1.943–2.042)
+  Median times: Mile 263.27s, 3000m 527.67s
+
+  Important features to know
+  --------------------------
+  • Recommended route: bal_x_best_event (CV 6.905s, Δ +4.576s vs pooled).
+  • How to determine it: Need both bal/spec (wa_spread ≥ 50) and best_event. Prefer the matching cell formula when n is large enough; else fall back to best_event, then bal/spec, then pooled.
+  • Other features that also beat pooled:
+      - bal_x_best_event: CV 6.905s (Δ +4.576s) ← recommended
+      - pair_wa_gap_50: CV 7.617s (Δ +3.864s)
+      - best_is_from: CV 8.170s (Δ +3.311s)
+      - best_event: CV 8.425s (Δ +3.056s)
+      - bal_spec: CV 10.021s (Δ +1.460s)
+      - from_stronger_wa: CV 10.601s (Δ +0.880s)
+
+  How bal_x_best_event alters the formula:
+  • Baseline (pooled band): 3000m = 491.078 + 0.135 × Mile
+  • Split athletes by balanced/specialized AND best_event; each cell gets its own formula when n is large enough:
+      [specialized ∩ best_3000m] n=23: 3000m = -4912.853 + 39.537×Mile − 0.071842×Mile²  (CV 3.706s)
+
+  Alternate useful split — pair_wa_gap_50 (CV 7.617s, Δ +3.864s):
+  • Compute |WA(from) − WA(to)|. If ≥ 50, use pair_gap_ge50; else pair_gap_lt50.
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled band): 3000m = 491.078 + 0.135 × Mile
+  • If |WA(Mile)−WA(3000m)| ≥ 50, use pair_gap_ge50; else pair_gap_lt50:
+      [pair_gap_ge50] n=32: 3000m = Mile × ratio_bin(Mile)  (CV 5.819s)
+                     nearest Mile 254.45s → 2.027
+                     nearest Mile 259.59s → 2.054
+                     nearest Mile 261.71s → 2.064
+                     nearest Mile 263.54s → 2.013
+                     nearest Mile 265.76s → 1.962
+                     nearest Mile 270.03s → 1.946
+                     nearest Mile 272.45s → 1.933
+                     nearest Mile 278.76s → 1.888
+      [pair_gap_lt50] n=16: 3000m = 1.999 × Mile  (CV 3.856s)
+
+3000m -> 800m  (n=20 athlete-seasons, r=-0.434)
+  Pooled band model: binned_ratio
+  Formula: 800m = 3000m × ratio_bin(3000m)
+               nearest 3000m 504.21s → 0.238
+               nearest 3000m 520.28s → 0.238
+               nearest 3000m 522.65s → 0.245
+               nearest 3000m 525.19s → 0.236
+               nearest 3000m 531.12s → 0.227
+               nearest 3000m 535.17s → 0.226
+               nearest 3000m 536.79s → 0.226
+               nearest 3000m 540.80s → 0.220
+               nearest 3000m 548.06s → 0.213
+               nearest 3000m 558.40s → 0.212
+  CV median |error| (pooled routing): 3.232s
+  Full-sample median |error|: 2.890s
+  Ratio 800m/3000m: median 0.230 (IQR 0.219–0.233)
+  Median times: 3000m 533.85s, 800m 119.58s
+
+  Important features to know
+  --------------------------
+  • None of the tested features beat pooled by >0.01s for this pair — use the pooled formula as-is.
+
+3000m -> Mile  (n=48 athlete-seasons, r=0.130)
+  Pooled band model: binned_ratio
+  Formula: Mile = 3000m × ratio_bin(3000m)
+               nearest 3000m 502.37s → 0.511
+               nearest 3000m 514.25s → 0.508
+               nearest 3000m 521.67s → 0.510
+               nearest 3000m 524.20s → 0.512
+               nearest 3000m 528.54s → 0.515
+               nearest 3000m 533.85s → 0.489
+               nearest 3000m 538.90s → 0.489
+               nearest 3000m 558.40s → 0.479
+  CV median |error| (pooled routing): 5.058s
+  Full-sample median |error|: 2.958s
+  Ratio Mile/3000m: median 0.503 (IQR 0.488–0.514)
+  Median times: 3000m 527.67s, Mile 263.27s
+
+  Important features to know
+  --------------------------
+  • Recommended route: best_event (CV 2.355s, Δ +2.702s vs pooled).
+  • How to determine it: Identify which event in the group has the athlete's highest season WA; route to the best_<event> formula.
+  • Other features that also beat pooled:
+      - best_event: CV 2.355s (Δ +2.702s) ← recommended
+      - best_is_from: CV 2.355s (Δ +2.702s)
+      - bal_x_best_event: CV 2.529s (Δ +2.529s)
+      - from_stronger_wa: CV 2.591s (Δ +2.466s)
+      - pair_wa_gap_50: CV 4.713s (Δ +0.344s)
+
+  How best_event alters the formula:
+  • Baseline (pooled band): Mile = 3000m × ratio_bin(3000m)
+  • Route by which event holds the athlete's season-best WA:
+      [best_3000m] n=27: Mile = 0.514 × 3000m  (CV 2.919s)
+      [best_Mile] n=15: Mile = 3000m × ratio_bin(3000m)  (CV 1.557s)
+                     nearest 3000m 505.20s → 0.498
+                     nearest 3000m 513.25s → 0.496
+                     nearest 3000m 531.48s → 0.486
+                     nearest 3000m 531.86s → 0.494
+                     nearest 3000m 532.26s → 0.471
+                     nearest 3000m 533.22s → 0.475
+                     nearest 3000m 535.87s → 0.491
+                     nearest 3000m 536.72s → 0.492
+                     nearest 3000m 536.75s → 0.490
+                     nearest 3000m 537.51s → 0.488
+                     nearest 3000m 540.29s → 0.482
+                     nearest 3000m 544.44s → 0.484
+                     nearest 3000m 546.56s → 0.481
+                     nearest 3000m 586.65s → 0.442
+                     nearest 3000m 648.22s → 0.403
+
+  Alternate useful split — best_is_from (CV 2.355s, Δ +2.702s):
+  • Check whether the athlete's best-WA event equals the source (from) event. Yes → best_is_from formula; no → best_not_from.
+  How best_is_from alters the formula:
+  • Baseline (pooled band): Mile = 3000m × ratio_bin(3000m)
+  • If best-WA event is 3000m, use best_is_from; otherwise best_not_from:
+      [best_is_from] n=27: Mile = 0.514 × 3000m  (CV 2.919s)
+      [best_not_from] n=21: Mile = 3000m × (0.854 − 0.000683×3000m)  (CV 1.980s)
+
+
+Distance — Women
+----------------
+
+No pairs met n≥20 in band 800-1000.
+
+
+Coverage / notes
+----------------
+  • 16 event pairs reported for band 800-1000.
+  • Cohort formulas require n≥12; thin cells fall back to pooled.
+  • Prefer the recommended strategy when its labels are available;
+    otherwise use the next-best listed feature or the pooled formula.
+
+Source:
+  Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py
+  Feature importance CV: pair_strategy_cv_by_band.csv
