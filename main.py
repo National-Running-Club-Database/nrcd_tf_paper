@@ -5,6 +5,8 @@ Usage:
   python main.py list
   python main.py run test_dataset_time_models
   python main.py run causal_analysis all
+  python main.py enrich-scores    # append VDOT/Purdy/Mercier columns to CSVs
+  python main.py compare-metrics  # RQ1A best-event agreement across 4 metrics
   python main.py run-all          # run every module's default `all` (long)
 """
 
@@ -52,6 +54,14 @@ def build_parser() -> argparse.ArgumentParser:
         "run-all",
         help="Run every module's `all` command sequentially (can take a long time).",
     )
+    sub.add_parser(
+        "enrich-scores",
+        help="Append VDOT / Purdy / Mercier columns to discipline CSVs.",
+    )
+    sub.add_parser(
+        "compare-metrics",
+        help="Cross-metric best-event comparison (scientific vs sports framing).",
+    )
     return parser
 
 
@@ -61,9 +71,14 @@ def list_modules() -> None:
         main_py = ROOT / name / "main.py"
         status = "ready" if main_py.is_file() else "missing main.py"
         print(f"  {name:32s}  [{status}]  {desc}")
+    print("\nScoring:")
+    print("  Scientific framing: Gardner–Purdy + Mercier (1999)")
+    print("  Sports / coaching:  World Athletics Points + VDOT")
     print("\nExamples:")
     print("  python main.py run test_dataset_time_models")
     print("  python main.py run causal_analysis research")
+    print("  python main.py enrich-scores")
+    print("  python main.py compare-metrics")
     print("  python main.py run non_relays_findings all")
     print("\nSee README.md and Summary_findings.md at the repo root.")
 
@@ -103,6 +118,14 @@ def main(argv: list[str] | None = None) -> None:
         raise SystemExit(run_module(args.module, list(args.module_args or [])))
     if action == "run-all":
         raise SystemExit(run_all())
+    if action == "enrich-scores":
+        from scoring.enrich_csvs import main as enrich_main
+
+        raise SystemExit(enrich_main([]))
+    if action == "compare-metrics":
+        from scoring.compare_metrics import main as compare_main
+
+        raise SystemExit(compare_main([]))
     parser.print_help()
 
 

@@ -1,0 +1,3 @@
+IMPROVED RQ1B — 8th-Place Threshold Bootstrap 95% CI (by season)
+Metric: mercier
+

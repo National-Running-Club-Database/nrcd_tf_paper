@@ -1,0 +1,277 @@
+{
+  "meta": {
+    "method": "1999 Mercier documented linear reconstruction (Mureika/Covington/Mercier)",
+    "formula_track": "Points = A * (distance_m / time_s) + B",
+    "formula_field": "Points = A * sqrt(mark_m) + B",
+    "rounding": "ceil to integer (Athletics Canada practice)",
+    "source": "Calibration from published Table 3 max/mean/median performances + WR Mercier scores (Jan 2000)",
+    "note": "Not proprietary Mercier-Rioux tables. Women 3000m SC derived via women rescale of men SC."
+  },
+  "coefficients": {
+    "men:100m": {
+      "A": 300.92158597893547,
+      "B": -2058.84759127396,
+      "kind": "track",
+      "distance_m": 100
+    },
+    "women:100m": {
+      "A": 270.18152026407944,
+      "B": -1498.7905477917084,
+      "kind": "track",
+      "distance_m": 100
+    },
+    "men:200m": {
+      "A": 266.49689752938207,
+      "B": -1689.7819790931378,
+      "kind": "track",
+      "distance_m": 200
+    },
+    "women:200m": {
+      "A": 241.13066262303585,
+      "B": -1192.299574622883,
+      "kind": "track",
+      "distance_m": 200
+    },
+    "men:400m": {
+      "A": 263.263426430952,
+      "B": -1410.516511526081,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "women:400m": {
+      "A": 236.63077366790915,
+      "B": -924.3299552297901,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "men:800m": {
+      "A": 302.83390681023707,
+      "B": -1376.0722296014171,
+      "kind": "track",
+      "distance_m": 800
+    },
+    "women:800m": {
+      "A": 276.2960322972833,
+      "B": -923.685537478011,
+      "kind": "track",
+      "distance_m": 800
+    },
+    "men:1500m": {
+      "A": 321.36757912655077,
+      "B": -1318.7591770709664,
+      "kind": "track",
+      "distance_m": 1500
+    },
+    "women:1500m": {
+      "A": 291.68649645987415,
+      "B": -860.8054923812723,
+      "kind": "track",
+      "distance_m": 1500
+    },
+    "men:Mile": {
+      "A": 323.2889763665769,
+      "B": -1316.4582878618273,
+      "kind": "track",
+      "distance_m": 1609.344
+    },
+    "women:Mile": {
+      "A": 291.98394479148465,
+      "B": -848.5766689486381,
+      "kind": "track",
+      "distance_m": 1609.344
+    },
+    "men:3000m": {
+      "A": 333.61216138202883,
+      "B": -1255.6978068597568,
+      "kind": "track",
+      "distance_m": 3000
+    },
+    "women:3000m": {
+      "A": 295.7024883819358,
+      "B": -759.0845175509518,
+      "kind": "track",
+      "distance_m": 3000
+    },
+    "men:5000m": {
+      "A": 343.7033459216492,
+      "B": -1238.9245540379166,
+      "kind": "track",
+      "distance_m": 5000
+    },
+    "women:5000m": {
+      "A": 313.4861261102972,
+      "B": -797.2135870062301,
+      "kind": "track",
+      "distance_m": 5000
+    },
+    "men:10000m": {
+      "A": 349.8951725651527,
+      "B": -1170.587848329644,
+      "kind": "track",
+      "distance_m": 10000
+    },
+    "women:10000m": {
+      "A": 315.6967935550689,
+      "B": -716.3399089752832,
+      "kind": "track",
+      "distance_m": 10000
+    },
+    "men:3000m SC": {
+      "A": 318.75957245373814,
+      "B": -986.7680538990764,
+      "kind": "track",
+      "distance_m": 3000
+    },
+    "men:110mH": {
+      "A": 230.1465020411937,
+      "B": -957.5695007981195,
+      "kind": "track",
+      "distance_m": 110
+    },
+    "women:100mH": {
+      "A": 244.97053218033358,
+      "B": -967.6516935306523,
+      "kind": "track",
+      "distance_m": 100
+    },
+    "men:400mH": {
+      "A": 235.5674747262369,
+      "B": -995.0821431423394,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "women:400mH": {
+      "A": 236.38299497541982,
+      "B": -776.0429884881211,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "men:4x100m": {
+      "A": 246.66186239084985,
+      "B": -1644.9826960874552,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "women:4x100m": {
+      "A": 222.70347898492884,
+      "B": -1144.0564178326467,
+      "kind": "track",
+      "distance_m": 400
+    },
+    "men:4x400m": {
+      "A": 248.00527775505546,
+      "B": -1278.874053380151,
+      "kind": "track",
+      "distance_m": 1600
+    },
+    "women:4x400m": {
+      "A": 225.67157052303872,
+      "B": -829.7940781905396,
+      "kind": "track",
+      "distance_m": 1600
+    },
+    "men:LJ": {
+      "A": 1062.120098885428,
+      "B": -2108.857245154122,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:LJ": {
+      "A": 939.9643978342167,
+      "B": -1513.8491707783035,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:TJ": {
+      "A": 740.1200175436845,
+      "B": -2138.661084315198,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:TJ": {
+      "A": 649.6581483870664,
+      "B": -1509.8486563944025,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:HJ": {
+      "A": 2154.9030083455086,
+      "B": -2329.3903154801133,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:HJ": {
+      "A": 1955.1208424269175,
+      "B": -1788.485413503592,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:PV": {
+      "A": 836.1887754878479,
+      "B": -1056.1702063894988,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:PV": {
+      "A": 763.5144562113993,
+      "B": -633.2503762230903,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:SP": {
+      "A": 365.18648892965865,
+      "B": -707.8372657790442,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:SP": {
+      "A": 324.3549862714929,
+      "B": -463.82104664533745,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:DT": {
+      "A": 194.6538322679513,
+      "B": -627.8463696728633,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:DT": {
+      "A": 160.3702281169729,
+      "B": -337.1762888522321,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:HT": {
+      "A": 167.3904961963395,
+      "B": -540.8637441623762,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:HT": {
+      "A": 156.32607437095572,
+      "B": -371.2630903680278,
+      "kind": "field",
+      "distance_m": null
+    },
+    "men:JT": {
+      "A": 167.3070829225923,
+      "B": -592.8397304793633,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:JT": {
+      "A": 170.62759094026075,
+      "B": -420.9023212951797,
+      "kind": "field",
+      "distance_m": null
+    },
+    "women:3000m SC": {
+      "A": 289.2072085907416,
+      "B": -559.3722971214085,
+      "kind": "track",
+      "distance_m": 3000,
+      "derived": "women_rescale_of_men_sc"
+    }
+  }
+}

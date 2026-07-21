@@ -3,13 +3,20 @@
 from __future__ import annotations
 
 import csv
+import sys
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).parent
-NON_RELAYS_ROOT = ROOT.parent / "non_relays_findings"
+PROJECT_ROOT = ROOT.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from scoring.columns import points_col as scoring_points_col  # noqa: E402
+
+NON_RELAYS_ROOT = PROJECT_ROOT / "non_relays_findings"
 EVENT_MAP = {
     int(r["running_event_id"]): r["event_name"]
     for r in csv.DictReader(open(NON_RELAYS_ROOT / "Distance_Events_Counting" / "running_event.csv"))
@@ -42,8 +49,9 @@ HURDLES_MEN = {35: "110m Hurdles", 37: "400m Hurdles"}
 HURDLES_WOMEN = {34: "100m Hurdles", 37: "400m Hurdles"}
 
 
-def points_col(gender: str) -> str:
-    return "World_Athletics_Points_Men" if gender == "Men" else "World_Athletics_Points_Women"
+def points_col(gender: str, metric: str = "wa") -> str:
+    """Column for World Athletics (default) or vdot / purdy / mercier."""
+    return scoring_points_col(gender, metric)
 
 
 def is_in_season(date_str: str) -> bool:

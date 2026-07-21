@@ -1,9 +1,18 @@
 # Research Questions & Analysis Plan
-## Event Specialization in Collegiate Club Track & Field Using World Athletics Scoring
+## Event Specialization in Collegiate Club Track & Field
 
 **Target venue:** *Journal of Quantitative Analysis in Sports* (JQAS)  
 **Data source:** National Running Club Database (NRCD), outdoor track seasons 2024–2026  
 **Companion work:** *Faster Results From A Smarter Schedule* (NRCD cross country; standardized performance & scheduling)
+
+### Scoring systems (locked framing)
+
+| Role | Metrics | Notes |
+|------|---------|-------|
+| **Scientific** | Gardner–Purdy points + Mercier (1999) | Purdy: Portuguese / Hoffman implementation. Mercier: documented linear `Points = A·x + B` reconstruction (not Mercier–Rioux). |
+| **Sports / coaching** | World Athletics Points + VDOT | WA 2025 outdoor tables; Daniels–Gilbert Oxygen Power VDOT. |
+
+Shared implementation: [`scoring/`](scoring/). Field events: Purdy/VDOT are undefined → use Mercier (scientific) and WA (sports). Primary published tables remain WA-based; sensitivity under Purdy/Mercier/VDOT is reported via `--metric` / `python main.py compare-metrics`.
 
 ---
 
@@ -13,17 +22,18 @@
 Collegiate club athletes frequently compete in multiple track & field events within a discipline (e.g., 800m, 1500m, 5000m), but roster and lineup decisions are often made without quantitative evidence about **where an athlete’s relative strength lies** or **which event offers the best path to championship competitiveness**.
 
 ### 1.2 Proposed contribution
-This paper introduces a reproducible, scoring-based framework for **event specialization analysis** using World Athletics points as a cross-event performance metric. The work extends the NRCD research program from cross country (environment-adjusted times) to outdoor track (IAAF/WA scoring tables), with explicit attention to:
+This paper introduces a reproducible, multi-metric scoring framework for **event specialization analysis**. The work extends the NRCD research program from cross country (environment-adjusted times) to outdoor track, with explicit attention to:
 
 - **Individual-level specialization** (best event identification)
 - **Population-level competitiveness** (nationals-caliber score distributions)
 - **Gender differences** in specialization patterns
+- **Robustness across scientific vs sports scoring systems**
 - **Robustness extensions** (relays, indoor/outdoor, cross country background)
 
 ### 1.3 Why JQAS
 JQAS emphasizes original statistical thinking applied to difficult sports problems. This manuscript should go beyond descriptive counts by:
 
-1. Formalizing **measurement** (World Athletics points as a latent ability proxy)
+1. Formalizing **measurement** (commensurate points / VDOT as latent ability proxies under dual framing)
 2. Testing **hypotheses** with uncertainty (not only point estimates)
 3. Addressing **selection bias** (who competes in which events, who reaches nationals)
 4. Providing **actionable inference** for lineup and development decisions

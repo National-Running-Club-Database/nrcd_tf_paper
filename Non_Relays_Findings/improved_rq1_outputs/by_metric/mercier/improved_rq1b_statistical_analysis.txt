@@ -1,0 +1,95 @@
+IMPROVED RQ1B — Nationals Top-8 vs Full Season (Statistical Tests)
+========================================================================
+
+## Season 2024
+  Men 100m: Mann-Whitney U (nat>season) p=9.60e-06, rank-biserial r=-0.831, Cohen's d=1.28 *** | nat median=628, season median=469
+  Men 200m: Mann-Whitney U (nat>season) p=1.38e-05, rank-biserial r=-0.863, Cohen's d=1.41 *** | nat median=663, season median=487
+  Men 400m: Mann-Whitney U (nat>season) p=9.67e-06, rank-biserial r=-0.882, Cohen's d=1.37 *** | nat median=643, season median=475
+  Women 100m: Mann-Whitney U (nat>season) p=9.79e-06, rank-biserial r=-0.890, Cohen's d=1.56 *** | nat median=650, season median=455
+  Women 200m: Mann-Whitney U (nat>season) p=3.22e-05, rank-biserial r=-0.832, Cohen's d=1.40 *** | nat median=610, season median=459
+  Women 400m: Mann-Whitney U (nat>season) p=7.58e-05, rank-biserial r=-0.794, Cohen's d=1.12 *** | nat median=602, season median=507
+  Men 800m: Mann-Whitney U (nat>season) p=2.01e-06, rank-biserial r=-0.947, Cohen's d=1.61 *** | nat median=717, season median=468
+  Men 1500m: Mann-Whitney U (nat>season) p=2.56e-06, rank-biserial r=-0.936, Cohen's d=1.64 *** | nat median=665, season median=428
+  Men 5000m: Mann-Whitney U (nat>season) p=1.89e-06, rank-biserial r=-0.952, Cohen's d=1.62 *** | nat median=684, season median=477
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=6.05e-06, rank-biserial r=-0.919, Cohen's d=1.83 *** | nat median=651, season median=398
+  Women 800m: Mann-Whitney U (nat>season) p=6.78e-06, rank-biserial r=-0.903, Cohen's d=1.46 *** | nat median=578, season median=418
+  Women 1500m: Mann-Whitney U (nat>season) p=1.14e-05, rank-biserial r=-0.875, Cohen's d=1.46 *** | nat median=580, season median=418
+  Women 5000m: Mann-Whitney U (nat>season) p=2.32e-05, rank-biserial r=-0.849, Cohen's d=1.55 *** | nat median=622, season median=474
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=5.37e-05, rank-biserial r=-0.837, Cohen's d=1.47 *** | nat median=613, season median=478
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=2.39e-03, rank-biserial r=-0.606, Cohen's d=0.89 ** | nat median=633, season median=513
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=1.30e-02, rank-biserial r=-0.475, Cohen's d=0.74 * | nat median=565, season median=472
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=2.19e-03, rank-biserial r=-0.614, Cohen's d=0.99 ** | nat median=454, season median=350
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=1.65e-02, rank-biserial r=-0.475, Cohen's d=0.67 * | nat median=523, season median=449
+  Men Long Jump: Mann-Whitney U (nat>season) p=3.07e-05, rank-biserial r=-0.845, Cohen's d=1.31 *** | nat median=620, season median=450
+  Men Triple Jump: Mann-Whitney U (nat>season) p=3.55e-03, rank-biserial r=-0.593, Cohen's d=0.80 ** | nat median=506, season median=437
+  Men High Jump: Mann-Whitney U (nat>season) p=4.08e-02, rank-biserial r=-0.360, Cohen's d=0.55 * | nat median=562, season median=522
+  Women Long Jump: Mann-Whitney U (nat>season) p=1.63e-05, rank-biserial r=-0.879, Cohen's d=1.53 *** | nat median=642, season median=470
+  Women Triple Jump: Mann-Whitney U (nat>season) p=2.05e-03, rank-biserial r=-0.634, Cohen's d=1.05 ** | nat median=643, season median=538
+  Women High Jump: Mann-Whitney U (nat>season) p=7.35e-04, rank-biserial r=-0.626, Cohen's d=0.90 *** | nat median=582, season median=517
+  Men Shot Put: Mann-Whitney U (nat>season) p=4.13e-04, rank-biserial r=-0.706, Cohen's d=1.08 *** | nat median=602, season median=476
+  Men Discus: Mann-Whitney U (nat>season) p=1.20e-03, rank-biserial r=-0.645, Cohen's d=0.93 ** | nat median=610, season median=526
+  Women Shot Put: Mann-Whitney U (nat>season) p=1.23e-04, rank-biserial r=-0.784, Cohen's d=1.25 *** | nat median=562, season median=464
+  Women Discus: Mann-Whitney U (nat>season) p=8.81e-04, rank-biserial r=-0.679, Cohen's d=1.10 *** | nat median=570, season median=478
+
+## Season 2025
+  Men 100m: Mann-Whitney U (nat>season) p=7.11e-05, rank-biserial r=-0.786, Cohen's d=1.18 *** | nat median=618, season median=460
+  Men 200m: Mann-Whitney U (nat>season) p=9.25e-05, rank-biserial r=-0.730, Cohen's d=1.08 *** | nat median=637, season median=484
+  Men 400m: Mann-Whitney U (nat>season) p=2.63e-06, rank-biserial r=-0.944, Cohen's d=1.56 *** | nat median=692, season median=502
+  Women 100m: Mann-Whitney U (nat>season) p=2.91e-05, rank-biserial r=-0.846, Cohen's d=1.35 *** | nat median=605, season median=441
+  Women 200m: Mann-Whitney U (nat>season) p=8.03e-06, rank-biserial r=-0.903, Cohen's d=1.51 *** | nat median=641, season median=431
+  Women 400m: Mann-Whitney U (nat>season) p=1.46e-05, rank-biserial r=-0.881, Cohen's d=1.34 *** | nat median=640, season median=491
+  Men 800m: Mann-Whitney U (nat>season) p=3.52e-06, rank-biserial r=-0.924, Cohen's d=1.55 *** | nat median=716, season median=501
+  Men 1500m: Mann-Whitney U (nat>season) p=2.99e-06, rank-biserial r=-0.931, Cohen's d=1.61 *** | nat median=700, season median=477
+  Men 5000m: Mann-Whitney U (nat>season) p=1.57e-05, rank-biserial r=-0.861, Cohen's d=1.39 *** | nat median=640, season median=471
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=3.49e-05, rank-biserial r=-0.849, Cohen's d=1.52 *** | nat median=636, season median=406
+  Women 800m: Mann-Whitney U (nat>season) p=3.22e-06, rank-biserial r=-0.938, Cohen's d=1.55 *** | nat median=633, season median=438
+  Women 1500m: Mann-Whitney U (nat>season) p=2.95e-06, rank-biserial r=-0.942, Cohen's d=1.76 *** | nat median=661, season median=434
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=4.46e-04, rank-biserial r=-0.736, Cohen's d=1.27 *** | nat median=618, season median=486
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=2.58e-02, rank-biserial r=-0.421, Cohen's d=0.70 * | nat median=636, season median=502
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=3.00e-05, rank-biserial r=-0.870, Cohen's d=1.49 *** | nat median=676, season median=507
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=1.97e-03, rank-biserial r=-0.636, Cohen's d=0.90 ** | nat median=462, season median=353
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=1.75e-03, rank-biserial r=-0.663, Cohen's d=0.97 ** | nat median=618, season median=524
+  Men Long Jump: Mann-Whitney U (nat>season) p=1.11e-05, rank-biserial r=-0.900, Cohen's d=1.41 *** | nat median=631, season median=458
+  Men Triple Jump: Mann-Whitney U (nat>season) p=3.28e-03, rank-biserial r=-0.605, Cohen's d=0.80 ** | nat median=566, season median=496
+  Men High Jump: Mann-Whitney U (nat>season) p=5.09e-04, rank-biserial r=-0.613, Cohen's d=0.94 *** | nat median=626, season median=505
+  Women Long Jump: Mann-Whitney U (nat>season) p=7.52e-05, rank-biserial r=-0.818, Cohen's d=1.38 *** | nat median=612, season median=487
+  Women Triple Jump: Mann-Whitney U (nat>season) p=8.44e-03, rank-biserial r=-0.549, Cohen's d=0.95 ** | nat median=624, season median=542
+  Women High Jump: Mann-Whitney U (nat>season) p=1.76e-02, rank-biserial r=-0.429, Cohen's d=0.62 * | nat median=622, season median=574
+  Men Shot Put: Mann-Whitney U (nat>season) p=3.02e-05, rank-biserial r=-0.855, Cohen's d=1.28 *** | nat median=658, season median=496
+  Men Discus: Mann-Whitney U (nat>season) p=1.41e-04, rank-biserial r=-0.775, Cohen's d=1.08 *** | nat median=603, season median=479
+  Women Shot Put: Mann-Whitney U (nat>season) p=6.35e-04, rank-biserial r=-0.701, Cohen's d=1.01 *** | nat median=575, season median=505
+  Women Discus: Mann-Whitney U (nat>season) p=4.22e-03, rank-biserial r=-0.578, Cohen's d=0.75 ** | nat median=568, season median=496
+
+## Season 2026
+  Men 100m: Mann-Whitney U (nat>season) p=5.49e-06, rank-biserial r=-0.908, Cohen's d=1.51 *** | nat median=666, season median=460
+  Men 200m: Mann-Whitney U (nat>season) p=3.21e-06, rank-biserial r=-0.932, Cohen's d=1.44 *** | nat median=707, season median=519
+  Men 400m: Mann-Whitney U (nat>season) p=2.30e-06, rank-biserial r=-0.949, Cohen's d=1.55 *** | nat median=712, season median=518
+  Women 100m: Mann-Whitney U (nat>season) p=2.81e-05, rank-biserial r=-0.842, Cohen's d=1.30 *** | nat median=635, season median=460
+  Women 200m: Mann-Whitney U (nat>season) p=1.21e-05, rank-biserial r=-0.879, Cohen's d=1.39 *** | nat median=646, season median=484
+  Women 400m: Mann-Whitney U (nat>season) p=2.10e-05, rank-biserial r=-0.867, Cohen's d=1.43 *** | nat median=677, season median=510
+  Men 800m: Mann-Whitney U (nat>season) p=1.56e-06, rank-biserial r=-0.960, Cohen's d=1.81 *** | nat median=721, season median=478
+  Men 1500m: Mann-Whitney U (nat>season) p=9.96e-07, rank-biserial r=-0.977, Cohen's d=1.92 *** | nat median=718, season median=466
+  Men 5000m: Mann-Whitney U (nat>season) p=1.37e-06, rank-biserial r=-0.967, Cohen's d=1.80 *** | nat median=681, season median=456
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=7.08e-06, rank-biserial r=-0.915, Cohen's d=1.48 *** | nat median=620, season median=436
+  Women 800m: Mann-Whitney U (nat>season) p=6.13e-06, rank-biserial r=-0.907, Cohen's d=1.64 *** | nat median=650, season median=432
+  Women 1500m: Mann-Whitney U (nat>season) p=2.13e-06, rank-biserial r=-0.952, Cohen's d=1.89 *** | nat median=670, season median=437
+  Women 5000m: Mann-Whitney U (nat>season) p=5.10e-06, rank-biserial r=-0.923, Cohen's d=1.90 *** | nat median=707, season median=496
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=3.16e-05, rank-biserial r=-0.873, Cohen's d=1.82 *** | nat median=673, season median=481
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=5.31e-03, rank-biserial r=-0.548, Cohen's d=0.92 ** | nat median=616, season median=481
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=6.09e-05, rank-biserial r=-0.824, Cohen's d=1.45 *** | nat median=682, season median=494
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=2.58e-02, rank-biserial r=-0.420, Cohen's d=0.46 * | nat median=451, season median=385
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=8.98e-04, rank-biserial r=-0.685, Cohen's d=1.19 *** | nat median=636, season median=456
+  Men Long Jump: Mann-Whitney U (nat>season) p=1.77e-05, rank-biserial r=-0.870, Cohen's d=1.49 *** | nat median=615, season median=430
+  Men Triple Jump: Mann-Whitney U (nat>season) p=1.33e-04, rank-biserial r=-0.796, Cohen's d=1.15 *** | nat median=564, season median=444
+  Men High Jump: Mann-Whitney U (nat>season) p=8.50e-05, rank-biserial r=-0.813, Cohen's d=1.19 *** | nat median=650, season median=481
+  Women Long Jump: Mann-Whitney U (nat>season) p=2.11e-04, rank-biserial r=-0.755, Cohen's d=1.09 *** | nat median=570, season median=468
+  Women Triple Jump: Mann-Whitney U (nat>season) p=2.66e-02, rank-biserial r=-0.444, Cohen's d=0.69 * | nat median=616, season median=536
+  Women High Jump: Mann-Whitney U (nat>season) p=2.48e-02, rank-biserial r=-0.400, Cohen's d=0.62 * | nat median=578, season median=542
+  Men Shot Put: Mann-Whitney U (nat>season) p=4.05e-05, rank-biserial r=-0.829, Cohen's d=1.26 *** | nat median=650, season median=474
+  Men Discus: Mann-Whitney U (nat>season) p=1.02e-04, rank-biserial r=-0.788, Cohen's d=1.10 *** | nat median=622, season median=468
+  Women Shot Put: Mann-Whitney U (nat>season) p=1.88e-05, rank-biserial r=-0.883, Cohen's d=1.38 *** | nat median=606, season median=490
+  Women Discus: Mann-Whitney U (nat>season) p=2.42e-04, rank-biserial r=-0.753, Cohen's d=1.02 *** | nat median=576, season median=503
+
+BH-FDR: 83 / 83 event-season tests significant
+
+========================================================================

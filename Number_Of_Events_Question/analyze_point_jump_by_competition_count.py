@@ -98,11 +98,13 @@ def gender_label(raw: str) -> str | None:
     return None
 
 
-def points_for_row(row: dict, gender: str) -> float:
-    col = "World_Athletics_Points_Men" if gender == "Men" else "World_Athletics_Points_Women"
+def points_for_row(row: dict, gender: str, metric: str = "wa") -> float:
+    from scoring.columns import points_col
+
+    col = points_col(gender, metric)
     try:
         return float(row[col])
-    except (TypeError, ValueError):
+    except (TypeError, ValueError, KeyError):
         return 0.0
 
 
@@ -115,7 +117,7 @@ def data_path(folder: str, prefix: str, gender: str, season: str) -> Path:
     return RELAYS_ROOT / folder / f"Relays_{prefix}_{gender}_Outdoor_{season}_Data.csv"
 
 
-def load_combined_dataset() -> tuple[list[dict], list[AthleteResult]]:
+def load_combined_dataset(metric: str = "wa") -> tuple[list[dict], list[AthleteResult]]:
     """Load all relay CSVs, deduplicate by result_id, expand relay legs to athletes."""
     seen_result_ids: set[str] = set()
     deduped_rows: list[dict] = []
@@ -140,7 +142,7 @@ def load_combined_dataset() -> tuple[list[dict], list[AthleteResult]]:
                         continue
 
                     event_id = int(row["running_event_id"])
-                    wa = points_for_row(row, gender)
+                    wa = points_for_row(row, gender, metric)
                     if wa <= 0:
                         continue
 
@@ -458,41 +460,87 @@ def write_findings(
     path.write_text("\n".join(lines).rstrip() + "\n")
 
 
-def main() -> None:
-    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
+def main(argv: list[str] | None = None) -> None:
+    import argparse
 
-    print("Loading combined dataset...")
-    deduped_rows, athlete_results = load_combined_dataset()
-    print(f"  Deduped results: {len(deduped_rows):,}")
-    print(f"  Athlete-result rows: {len(athlete_results):,}")
+    sys.path.insert(0, str(PROJECT_ROOT))
+    from scoring.columns import ALL_METRICS
 
-    save_combined_csv(deduped_rows, OUTPUT_ROOT / "combined_relay_dataset_deduped.csv")
-
-    print("Computing point jumps...")
-    point_jumps = compute_point_jumps(athlete_results)
-    save_point_jumps_csv(point_jumps, OUTPUT_ROOT / "athlete_point_jumps_by_season.csv")
-
-    summary = aggregate_for_plots(point_jumps)
-    save_combined_csv(summary, OUTPUT_ROOT / "avg_point_jump_by_result_count.csv")
-
-    averaged_summary = aggregate_averaged_summaries(summary)
-    save_combined_csv(averaged_summary, OUTPUT_ROOT / "avg_point_jump_by_result_count_averaged.csv")
-
-    print("Generating plots...")
-    plot_summaries(
-        summary,
-        OUTPUT_ROOT / "plots",
-        title_suffix=f"Avg point jump by competition volume (bins with ≥{MIN_ATHLETES_PER_BIN} athletes)",
+    parser = argparse.ArgumentParser(description="Point jump vs competition volume.")
+    parser.add_argument(
+        "--metric",
+        default="wa",
+        choices=list(ALL_METRICS),
+        help="Scoring metric (default: wa).",
     )
-    plot_averaged_summaries(averaged_summary)
+    parser.add_argument(
+        "--all-metrics",
+        action="store_true",
+        help="Run for each metric into by_metric/<metric>/.",
+    )
+    args = parser.parse_args(argv)
 
-    write_findings(deduped_rows, point_jumps, summary, OUTPUT_ROOT / "point_jump_findings.txt")
-    print(f"Done. Outputs in {OUTPUT_ROOT}")
+    metrics = list(ALL_METRICS) if args.all_metrics else [args.metric]
+    for metric in metrics:
+        if args.all_metrics:
+            out = OUTPUT_ROOT / "by_metric" / metric
+        elif metric == "wa":
+            out = OUTPUT_ROOT
+        else:
+            out = OUTPUT_ROOT / "by_metric" / metric
+        out.mkdir(parents=True, exist_ok=True)
 
-    print("\n--- Research statistics & inferential tests ---\n")
-    from research_stats import run_research_stats  # lazy import: avoids circular import
+        print(f"\n=== Point-jump analysis metric={metric} → {out} ===")
+        print("Loading combined dataset...")
+        deduped_rows, athlete_results = load_combined_dataset(metric=metric)
+        print(f"  Deduped results: {len(deduped_rows):,}")
+        print(f"  Athlete-result rows: {len(athlete_results):,}")
 
-    run_research_stats(point_jump_rows=point_jumps)
+        save_combined_csv(deduped_rows, out / "combined_relay_dataset_deduped.csv")
+
+        print("Computing point jumps...")
+        point_jumps = compute_point_jumps(athlete_results)
+        save_point_jumps_csv(point_jumps, out / "athlete_point_jumps_by_season.csv")
+
+        summary = aggregate_for_plots(point_jumps)
+        save_combined_csv(summary, out / "avg_point_jump_by_result_count.csv")
+
+        averaged_summary = aggregate_averaged_summaries(summary)
+        save_combined_csv(averaged_summary, out / "avg_point_jump_by_result_count_averaged.csv")
+
+        print("Generating plots...")
+        plot_summaries(
+            summary,
+            out / "plots",
+            title_suffix=(
+                f"Avg {metric} jump by competition volume "
+                f"(bins with ≥{MIN_ATHLETES_PER_BIN} athletes)"
+            ),
+        )
+        plot_averaged_summaries(averaged_summary)
+
+        write_findings(deduped_rows, point_jumps, summary, out / "point_jump_findings.txt")
+        print(f"Done. Outputs in {out}")
+
+        if metric == "wa":
+            print("\n--- Research statistics & inferential tests ---\n")
+            from research_stats import run_research_stats
+
+            run_research_stats(point_jump_rows=point_jumps)
+
+    # When batching all metrics, also mirror WA to module root for compatibility
+    if args.all_metrics:
+        wa_dir = OUTPUT_ROOT / "by_metric" / "wa"
+        for name in (
+            "combined_relay_dataset_deduped.csv",
+            "athlete_point_jumps_by_season.csv",
+            "avg_point_jump_by_result_count.csv",
+            "avg_point_jump_by_result_count_averaged.csv",
+            "point_jump_findings.txt",
+        ):
+            src = wa_dir / name
+            if src.exists():
+                (OUTPUT_ROOT / name).write_bytes(src.read_bytes())
 
 
 if __name__ == "__main__":

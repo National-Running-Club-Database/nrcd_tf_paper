@@ -40,13 +40,20 @@ dependencies in Distance/Sprints) and are not wired into `main.py` directly — 
 
 ```bash
 cd non_relays_findings
-python main.py                 # all four top-level analyses
+python main.py                 # all four top-level analyses (WA baseline)
 python main.py rq1_improved
 python main.py rq1b_nationals
 python main.py rq1c
 python main.py rq3
-python main.py all
+
+# Multi-metric RQ1 (scientific: purdy/mercier; sports: wa/vdot)
+python analyze_rq1_improved.py --metric mercier
+python analyze_rq1_improved.py --metric vdot
+python analyze_rq1_improved.py --all-metrics   # → improved_rq1_outputs/by_metric/
 ```
+
+Scoring columns (`VDOT_*`, `Purdy_Points_*`, `Mercier_Points_*`) are added by
+`python main.py enrich-scores` from the repo root. See [`../scoring/`](../scoring/).
 
 To regenerate a specific discipline's best-event counts, run its script directly, e.g.
 `python Sprints_Events_Counting/best_event_analysis.py` (these are not wired into

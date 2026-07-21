@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import csv
 import math
 import random
@@ -11,6 +12,9 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+PROJECT_ROOT = ROOT.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 for lib in (
     ROOT / "Distance_Events_Counting" / ".pylibs",
     ROOT / "Sprints_Events_Counting" / ".pylibs",
@@ -25,8 +29,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 
+from scoring.columns import ALL_METRICS, points_col as scoring_points_col
+
 OUT = ROOT / "improved_rq1_outputs"
 OUT.mkdir(exist_ok=True)
+
+# Active scoring metric for this run (wa | vdot | purdy | mercier)
+ACTIVE_METRIC = "wa"
 
 PRELIM_EVENT_IDS = {3, 4}
 FIELD_EVENT_IDS = {38, 39, 40, 41, 42, 43, 44, 45, 46}
@@ -98,7 +107,20 @@ DISCIPLINES = [
 
 
 def pcol(gender: str) -> str:
-    return "World_Athletics_Points_Men" if gender == "Men" else "World_Athletics_Points_Women"
+    return scoring_points_col(gender, ACTIVE_METRIC)
+
+
+def safe_points(row: dict, gender: str) -> float | None:
+    raw = row.get(pcol(gender), "")
+    if raw is None or raw == "":
+        return None
+    try:
+        pts = float(raw)
+    except (TypeError, ValueError):
+        return None
+    if pts != pts or pts <= 0:  # NaN or non-positive
+        return None
+    return pts
 
 
 def parse_performance(result_time: str, event_id: int) -> float:
@@ -132,7 +154,15 @@ def athlete_event_bests(rows: list[dict], event_map: dict, gender: str) -> dict[
             continue
         ev = event_map[eid]
         aid = r["athlete_id"]
-        pts = float(r[pcol(gender)])
+        raw = r.get(pc, "")
+        if raw is None or raw == "":
+            continue
+        try:
+            pts = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if pts <= 0:
+            continue
         if ev not in best[aid] or pts > best[aid][ev]:
             best[aid][ev] = pts
     return dict(best)
@@ -338,10 +368,21 @@ def run_rq1b(lines: list[str], csv_rows: list[dict]) -> None:
                 rows = list(csv.DictReader(open(path)))
                 pc = pcol(gender)
                 for eid, ev in sorted(em.items()):
-                    season_pts = [float(r[pc]) for r in rows if int(r["running_event_id"]) == eid]
+                    season_pts = [
+                        p
+                        for r in rows
+                        if int(r["running_event_id"]) == eid
+                        for p in [safe_points(r, gender)]
+                        if p is not None
+                    ]
                     pool = filter_nationals_pool(rows, eid)
                     top8 = rank_top8(pool, eid)
-                    nat_pts = [float(r[pc]) for r in top8]
+                    nat_pts = [
+                        p
+                        for r in top8
+                        for p in [safe_points(r, gender)]
+                        if p is not None
+                    ]
                     if len(season_pts) < 5 or len(nat_pts) < 3:
                         continue
                     u, p_mw = stats.mannwhitneyu(nat_pts, season_pts, alternative="greater")
@@ -499,6 +540,9 @@ def split_and_write_sections(full_text: str) -> None:
 
 
 def plot_improved_clear_rates(csv_rows: list[dict]) -> None:
+    # Distance clear rates use WA-calibrated nationals thresholds — only meaningful for WA.
+    if ACTIVE_METRIC != "wa":
+        return
     # Distance clear rates men/women bar chart with Wilson CI error bars
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))
     for ax, gender in zip(axes, ("Men", "Women")):
@@ -514,8 +558,9 @@ def plot_improved_clear_rates(csv_rows: list[dict]) -> None:
             nt = sum(1 for pts in ab.values() if ev in pts)
             clears.append(100 * nc / nt if nt else 0)
             lo, hi = wilson_ci(nc, nt)
-            cis_lo.append(100 * nc / nt - 100 * lo if nt else 0)
-            cis_hi.append(100 * hi - 100 * nc / nt if nt else 0)
+            rate = 100 * nc / nt if nt else 0
+            cis_lo.append(max(0.0, rate - 100 * lo) if nt else 0)
+            cis_hi.append(max(0.0, 100 * hi - rate) if nt else 0)
         x = np.arange(len(events))
         ax.bar(x, clears, color=["#2E86AB", "#A23B72", "#C73E1D", "#F18F01"], edgecolor="black", linewidth=0.8)
         ax.errorbar(x, clears, yerr=[cis_lo, cis_hi], fmt="none", color="black", capsize=4)
@@ -587,10 +632,16 @@ Descriptive RQ1A/RQ1C counts and inferential tests can diverge: women's 5000m be
         dst.write_text(extra.strip() + "\n")
 
 
-def main():
+def _run_once(metric: str, out_dir: Path) -> None:
+    global ACTIVE_METRIC, OUT
+    ACTIVE_METRIC = metric
+    OUT = out_dir
+    OUT.mkdir(parents=True, exist_ok=True)
+
     lines: list[str] = [
         "IMPROVED RQ1 STATISTICAL ANALYSIS",
         "National Running Club Database — Outdoor Track 2024–2026",
+        f"Scoring metric: {metric} (scientific: purdy/mercier; sports: wa/vdot)",
         f"Significance level α = {ALPHA}; multiple comparisons corrected via Benjamini-Hochberg FDR where noted.",
         "",
     ]
@@ -615,30 +666,67 @@ def main():
     plot_improved_clear_rates(csv_rows)
     write_improved_findings(full_text)
 
-    # Copy enhanced 8th-place rankings with bootstrap CI on threshold
-    eighth_lines = ["IMPROVED RQ1B — 8th-Place Threshold Bootstrap 95% CI (by season)", ""]
+    eighth_lines = [
+        "IMPROVED RQ1B — 8th-Place Threshold Bootstrap 95% CI (by season)",
+        f"Metric: {metric}",
+        "",
+    ]
     top8_csv = ROOT / "RQ1B_Nationals" / "rq1b_nationals_top8_all_seasons.csv"
-    if top8_csv.exists():
+    if top8_csv.exists() and metric == "wa":
         by_key = defaultdict(list)
         for r in csv.DictReader(open(top8_csv)):
             if int(r["place"]) == 8:
-                by_key[(r["season"], r["gender"], r["event_name"])].append(float(r["world_athletics_points"]))
+                by_key[(r["season"], r["gender"], r["event_name"])].append(
+                    float(r["world_athletics_points"])
+                )
         for key in sorted(by_key):
             vals = by_key[key]
             if len(vals) >= 2:
-                boot = [statistics.mean([vals[RNG.randrange(len(vals))] for _ in range(len(vals))]) for _ in range(2000)]
+                boot = [
+                    statistics.mean([vals[RNG.randrange(len(vals))] for _ in range(len(vals))])
+                    for _ in range(2000)
+                ]
                 boot.sort()
                 lo, hi = boot[50], boot[1950]
             else:
                 lo = hi = vals[0]
             eighth_lines.append(
-                f"{key[0]} {key[1]} {key[2]}: 8th-place WA={statistics.mean(vals):.1f} | bootstrap CI [{lo:.1f}, {hi:.1f}]"
+                f"{key[0]} {key[1]} {key[2]}: 8th-place WA={statistics.mean(vals):.1f} "
+                f"| bootstrap CI [{lo:.1f}, {hi:.1f}]"
             )
     (OUT / "improved_rq1b_8th_place_thresholds.txt").write_text("\n".join(eighth_lines) + "\n")
 
-    print(f"Wrote improved outputs to {OUT}/")
+    print(f"Wrote improved outputs to {OUT}/ (metric={metric})")
     for p in sorted(OUT.iterdir()):
-        print(f"  {p.name}")
+        if p.is_file():
+            print(f"  {p.name}")
+
+
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description="Improved RQ1 with selectable scoring metric.")
+    parser.add_argument(
+        "--metric",
+        default="wa",
+        choices=list(ALL_METRICS),
+        help="Scoring metric (default: wa). Scientific: purdy/mercier; sports: wa/vdot.",
+    )
+    parser.add_argument(
+        "--all-metrics",
+        action="store_true",
+        help="Run once per metric into improved_rq1_outputs/by_metric/<metric>/.",
+    )
+    args = parser.parse_args(argv)
+
+    if args.all_metrics:
+        base = ROOT / "improved_rq1_outputs" / "by_metric"
+        for metric in ALL_METRICS:
+            _run_once(metric, base / metric)
+        _run_once("wa", ROOT / "improved_rq1_outputs")
+    else:
+        out = ROOT / "improved_rq1_outputs"
+        if args.metric != "wa":
+            out = ROOT / "improved_rq1_outputs" / "by_metric" / args.metric
+        _run_once(args.metric, out)
 
 
 if __name__ == "__main__":

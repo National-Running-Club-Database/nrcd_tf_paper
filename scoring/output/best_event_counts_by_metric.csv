@@ -1,0 +1,98 @@
+gender,discipline,metric,framing,event,n_athletes,pct,n_multi_event
+Men,Sprints,wa,sports,200m,252,39.13,644
+Men,Sprints,wa,sports,100m,244,37.89,644
+Men,Sprints,wa,sports,400m,148,22.98,644
+Men,Sprints,vdot,sports,100m,366,56.57,647
+Men,Sprints,vdot,sports,200m,276,42.66,647
+Men,Sprints,vdot,sports,400m,5,0.77,647
+Men,Sprints,purdy,scientific,400m,219,34.01,644
+Men,Sprints,purdy,scientific,100m,213,33.07,644
+Men,Sprints,purdy,scientific,200m,212,32.92,644
+Men,Sprints,mercier,scientific,200m,304,47.57,639
+Men,Sprints,mercier,scientific,400m,222,34.74,639
+Men,Sprints,mercier,scientific,100m,113,17.68,639
+Men,Distance,wa,sports,1500m,500,52.8,947
+Men,Distance,wa,sports,800m,263,27.77,947
+Men,Distance,wa,sports,5000m,183,19.32,947
+Men,Distance,wa,sports,3000m Steeplechase,1,0.11,947
+Men,Distance,vdot,sports,800m,559,58.17,961
+Men,Distance,vdot,sports,1500m,230,23.93,961
+Men,Distance,vdot,sports,5000m,171,17.79,961
+Men,Distance,vdot,sports,3000m Steeplechase,1,0.1,961
+Men,Distance,purdy,scientific,1500m,448,46.62,961
+Men,Distance,purdy,scientific,5000m,285,29.66,961
+Men,Distance,purdy,scientific,800m,226,23.52,961
+Men,Distance,purdy,scientific,3000m Steeplechase,2,0.21,961
+Men,Distance,mercier,scientific,1500m,364,38.52,945
+Men,Distance,mercier,scientific,800m,334,35.34,945
+Men,Distance,mercier,scientific,5000m,190,20.11,945
+Men,Distance,mercier,scientific,3000m Steeplechase,57,6.03,945
+Men,Hurdles,wa,sports,400m Hurdles,57,82.61,69
+Men,Hurdles,wa,sports,110m Hurdles,12,17.39,69
+Men,Hurdles,vdot,sports,400m Hurdles,62,87.32,71
+Men,Hurdles,vdot,sports,110m Hurdles,9,12.68,71
+Men,Hurdles,purdy,scientific,400m Hurdles,51,96.23,53
+Men,Hurdles,purdy,scientific,110m Hurdles,2,3.77,53
+Men,Hurdles,mercier,scientific,400m Hurdles,55,79.71,69
+Men,Hurdles,mercier,scientific,110m Hurdles,14,20.29,69
+Men,Jumps,wa,sports,Long Jump,52,49.06,106
+Men,Jumps,wa,sports,Triple Jump,33,31.13,106
+Men,Jumps,wa,sports,High Jump,21,19.81,106
+Men,Jumps,mercier,scientific,Long Jump,45,45.0,100
+Men,Jumps,mercier,scientific,High Jump,29,29.0,100
+Men,Jumps,mercier,scientific,Triple Jump,26,26.0,100
+Men,Throws,wa,sports,Shot Put,71,59.17,120
+Men,Throws,wa,sports,Discus,39,32.5,120
+Men,Throws,wa,sports,Javelin Throw,9,7.5,120
+Men,Throws,wa,sports,Hammer Throw,1,0.83,120
+Men,Throws,mercier,scientific,Shot Put,62,53.45,116
+Men,Throws,mercier,scientific,Discus,42,36.21,116
+Men,Throws,mercier,scientific,Javelin Throw,11,9.48,116
+Men,Throws,mercier,scientific,Hammer Throw,1,0.86,116
+Women,Sprints,wa,sports,100m,167,57.59,290
+Women,Sprints,wa,sports,400m,84,28.97,290
+Women,Sprints,wa,sports,200m,39,13.45,290
+Women,Sprints,vdot,sports,100m,202,69.66,290
+Women,Sprints,vdot,sports,200m,87,30.0,290
+Women,Sprints,vdot,sports,400m,1,0.34,290
+Women,Sprints,purdy,scientific,100m,148,51.75,286
+Women,Sprints,purdy,scientific,400m,93,32.52,286
+Women,Sprints,purdy,scientific,200m,45,15.73,286
+Women,Sprints,mercier,scientific,200m,115,39.93,288
+Women,Sprints,mercier,scientific,400m,109,37.85,288
+Women,Sprints,mercier,scientific,100m,64,22.22,288
+Women,Distance,wa,sports,1500m,241,56.84,424
+Women,Distance,wa,sports,5000m,117,27.59,424
+Women,Distance,wa,sports,800m,65,15.33,424
+Women,Distance,wa,sports,3000m Steeplechase,1,0.24,424
+Women,Distance,vdot,sports,800m,225,53.07,424
+Women,Distance,vdot,sports,1500m,126,29.72,424
+Women,Distance,vdot,sports,5000m,73,17.22,424
+Women,Distance,purdy,scientific,1500m,230,54.37,423
+Women,Distance,purdy,scientific,5000m,137,32.39,423
+Women,Distance,purdy,scientific,800m,55,13.0,423
+Women,Distance,purdy,scientific,3000m Steeplechase,1,0.24,423
+Women,Distance,mercier,scientific,1500m,170,40.09,424
+Women,Distance,mercier,scientific,5000m,94,22.17,424
+Women,Distance,mercier,scientific,3000m Steeplechase,89,20.99,424
+Women,Distance,mercier,scientific,800m,71,16.75,424
+Women,Hurdles,wa,sports,400m Hurdles,34,77.27,44
+Women,Hurdles,wa,sports,100m Hurdles,10,22.73,44
+Women,Hurdles,vdot,sports,400m Hurdles,23,52.27,44
+Women,Hurdles,vdot,sports,100m Hurdles,21,47.73,44
+Women,Hurdles,purdy,scientific,400m Hurdles,16,100.0,16
+Women,Hurdles,mercier,scientific,400m Hurdles,37,84.09,44
+Women,Hurdles,mercier,scientific,100m Hurdles,7,15.91,44
+Women,Jumps,wa,sports,Long Jump,31,42.47,73
+Women,Jumps,wa,sports,Triple Jump,27,36.99,73
+Women,Jumps,wa,sports,High Jump,15,20.55,73
+Women,Jumps,mercier,scientific,Triple Jump,29,39.73,73
+Women,Jumps,mercier,scientific,High Jump,26,35.62,73
+Women,Jumps,mercier,scientific,Long Jump,18,24.66,73
+Women,Throws,wa,sports,Shot Put,59,76.62,77
+Women,Throws,wa,sports,Discus,15,19.48,77
+Women,Throws,wa,sports,Javelin Throw,3,3.9,77
+Women,Throws,mercier,scientific,Shot Put,41,53.25,77
+Women,Throws,mercier,scientific,Discus,33,42.86,77
+Women,Throws,mercier,scientific,Javelin Throw,2,2.6,77
+Women,Throws,mercier,scientific,Hammer Throw,1,1.3,77

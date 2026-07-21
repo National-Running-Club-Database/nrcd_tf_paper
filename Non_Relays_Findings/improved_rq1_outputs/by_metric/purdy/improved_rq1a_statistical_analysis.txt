@@ -1,0 +1,101 @@
+IMPROVED RQ1A — Best Event Specialization (2024–2026 Combined)
+========================================================================
+
+## Sprints
+
+### Men (n=1245)
+Chi-square vs uniform best-event distribution: χ²=43.85, df=2, p=3.01e-10
+  400m: 502 (40.3%) | 95% bootstrap CI [37.6%, 43.1%]
+  100m: 430 (34.5%) | 95% bootstrap CI [31.9%, 37.3%]
+  200m: 313 (25.1%) | 95% bootstrap CI [22.8%, 27.6%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 219-230 (ties 0, n=449) | p=6.37e-01, Cohen's h=-0.025 ns
+    100m vs 400m: 62-113 (ties 0, n=175) | p=1.42e-04, Cohen's h=-0.296 ***
+    200m vs 400m: 85-209 (ties 0, n=294) | p=3.26e-13, Cohen's h=-0.435 ***
+
+### Women (n=533)
+Chi-square vs uniform best-event distribution: χ²=42.74, df=2, p=5.25e-10
+  100m: 225 (42.2%) | 95% bootstrap CI [38.1%, 46.3%]
+  400m: 200 (37.5%) | 95% bootstrap CI [33.4%, 41.7%]
+  200m: 108 (20.3%) | 95% bootstrap CI [16.9%, 23.6%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 156-45 (ties 0, n=201) | p=1.54e-15, Cohen's h=0.585 ***
+    100m vs 400m: 24-34 (ties 0, n=58) | p=2.37e-01, Cohen's h=-0.173 ns
+    200m vs 400m: 31-94 (ties 0, n=125) | p=1.46e-08, Cohen's h=-0.528 ***
+
+## Distance
+
+### Men (n=1932)
+Chi-square vs uniform best-event distribution: χ²=550.42, df=3, p=5.63e-119
+  1500m: 761 (39.4%) | 95% bootstrap CI [37.2%, 41.7%]
+  800m: 578 (29.9%) | 95% bootstrap CI [27.8%, 32.0%]
+  5000m: 531 (27.5%) | 95% bootstrap CI [25.5%, 29.5%]
+  3000m Steeplechase: 62 (3.2%) | 95% bootstrap CI [2.4%, 4.0%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 200-386 (ties 0, n=586) | p=1.29e-14, Cohen's h=-0.323 ***
+    800m vs 3000m Steeplechase: 119-7 (ties 0, n=126) | p=2.11e-27, Cohen's h=1.095 ***
+    800m vs 5000m: 70-157 (ties 0, n=227) | p=7.56e-09, Cohen's h=-0.393 ***
+    1500m vs 3000m Steeplechase: 169-2 (ties 0, n=171) | p=9.83e-48, Cohen's h=1.354 ***
+    1500m vs 5000m: 196-241 (ties 0, n=437) | p=3.52e-02, Cohen's h=-0.103 *
+    3000m Steeplechase vs 5000m: 0-109 (ties 0, n=109) | p=3.08e-33, Cohen's h=-1.571 ***
+
+### Women (n=937)
+Chi-square vs uniform best-event distribution: χ²=339.56, df=3, p=2.71e-73
+  1500m: 425 (45.4%) | 95% bootstrap CI [42.0%, 48.6%]
+  5000m: 263 (28.1%) | 95% bootstrap CI [25.2%, 30.9%]
+  800m: 220 (23.5%) | 95% bootstrap CI [20.7%, 26.1%]
+  3000m Steeplechase: 29 (3.1%) | 95% bootstrap CI [2.0%, 4.3%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 46-225 (ties 0, n=271) | p=1.72e-29, Cohen's h=-0.722 ***
+    800m vs 3000m Steeplechase: 42-10 (ties 0, n=52) | p=9.06e-06, Cohen's h=0.663 ***
+    800m vs 5000m: 11-74 (ties 0, n=85) | p=1.29e-12, Cohen's h=-0.835 ***
+    1500m vs 3000m Steeplechase: 79-2 (ties 0, n=81) | p=2.75e-21, Cohen's h=1.255 ***
+    1500m vs 5000m: 35-109 (ties 0, n=144) | p=4.86e-10, Cohen's h=-0.540 ***
+    3000m Steeplechase vs 5000m: 1-43 (ties 0, n=44) | p=5.12e-12, Cohen's h=-1.268 ***
+
+## Hurdles
+
+### Men (n=197)
+Chi-square vs uniform best-event distribution: χ²=79.78, df=2, p=4.74e-18
+  400m Hurdles: 158 (80.2%) | 95% bootstrap CI [74.6%, 85.8%]
+  110m Hurdles: 39 (19.8%) | 95% bootstrap CI [14.2%, 25.4%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    110m Hurdles vs 400m Hurdles: 2-51 (ties 0, n=53) | p=3.18e-13, Cohen's h=-1.180 ***
+
+### Women (n=87)
+Chi-square vs uniform best-event distribution: χ²=49.00, df=2, p=2.29e-11
+  400m Hurdles: 75 (86.2%) | 95% bootstrap CI [78.2%, 93.1%]
+  100m Hurdles: 12 (13.8%) | 95% bootstrap CI [6.9%, 21.8%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m Hurdles vs 400m Hurdles: 0-16 (ties 0, n=16) | p=3.05e-05, Cohen's h=-1.571 ***
+
+## Jumps
+
+### Men (n=0)
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+
+### Women (n=0)
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+
+## Throws
+
+### Men (n=0)
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+
+### Women (n=0)
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+
+Benjamini-Hochberg FDR-adjusted p-values applied across all pairwise tests above.
+Significant at FDR<0.05: 18 / 20 tests
+
+========================================================================

@@ -70,8 +70,18 @@ class DisciplineConfig:
     event_map_for_gender: Callable[[str], dict[int, str]]
 
 
-def points_col(gender: str) -> str:
-    return "World_Athletics_Points_Men" if gender == "Men" else "World_Athletics_Points_Women"
+def points_col(gender: str, metric: str = "wa") -> str:
+    import sys
+    from pathlib import Path
+    root = Path(__file__).resolve().parents
+    # walk up until scoring package is importable
+    for p in Path(__file__).resolve().parents:
+        if (p / "scoring" / "columns.py").exists():
+            if str(p) not in sys.path:
+                sys.path.insert(0, str(p))
+            break
+    from scoring.columns import points_col as _pc
+    return _pc(gender, metric)
 
 
 def is_in_season(date_str: str) -> bool:

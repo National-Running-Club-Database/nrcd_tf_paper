@@ -18,6 +18,7 @@ from __future__ import annotations
 import json
 import math
 import re
+import sys
 from collections import defaultdict
 from datetime import date, datetime
 from pathlib import Path
@@ -27,9 +28,19 @@ import pdfplumber
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent
+PROJECT_ROOT = ROOT.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from scoring.api import score as multi_score  # noqa: E402
+from scoring.marks import parse_mark as scoring_parse_mark  # noqa: E402
+from scoring.marks import parse_time_to_seconds as scoring_parse_time  # noqa: E402
+from scoring.wa import load_coefficients as scoring_load_coefficients  # noqa: E402
+from scoring.wa import wa_points as scoring_wa_points  # noqa: E402
+
 MEN_DOCS = ROOT / "documents" / "men"
 OUT_DIR = ROOT / "output"
-COEFF_PATH = ROOT / "wa_scoring" / "coefficients-2025.json"
+COEFF_PATH = PROJECT_ROOT / "scoring" / "data" / "coefficients-2025.json"
 SPREAD_THRESHOLD = 50.0
 
 # Event groups used for bal_spec / best_event (aligned with outdoor time models)
@@ -195,55 +206,20 @@ FIELD_EVENTS = {"HJ", "PV", "LJ", "TJ", "SP", "DT", "HT", "JT"}
 
 
 def load_coefficients() -> dict:
-    with open(COEFF_PATH) as f:
-        return json.load(f)
+    return scoring_load_coefficients()
 
 
 def wa_points(coeffs: dict, gender: str, event: str, mark_value: float) -> int | None:
-    key = WA_EVENT_KEYS.get(event)
-    if not key or key not in coeffs.get(gender, {}):
-        return None
-    a, b, c = coeffs[gender][key]
-    raw = a * mark_value * mark_value + b * mark_value + c
-    if not math.isfinite(raw):
-        return None
-    pts = int(math.floor(raw))
-    return max(pts, 0)
+    return scoring_wa_points(coeffs, gender, event, mark_value)
 
 
 def parse_time_to_seconds(text: str) -> float | None:
-    t = text.strip()
-    # Fix NF typo style 9.00.49 -> 9:00.49
-    if re.fullmatch(r"\d+\.\d{2}\.\d{2}", t):
-        parts = t.split(".")
-        t = f"{parts[0]}:{parts[1]}.{parts[2]}"
-    if re.fullmatch(r"\d+(?:\.\d+)?", t):
-        return float(t)
-    m = re.fullmatch(r"(\d+):(\d+):(\d+(?:\.\d+)?)", t)
-    if m:
-        return int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
-    m = re.fullmatch(r"(\d+):(\d+(?:\.\d+)?)", t)
-    if m:
-        return int(m.group(1)) * 60 + float(m.group(2))
-    return None
+    return scoring_parse_time(text)
 
 
 def parse_mark(event: str, raw: str) -> tuple[str, float | None]:
-    raw = raw.strip().rstrip("*")
-    if raw.upper() in {"ND", "NM", "DNS", "DNF", "DQ", "FS", "FOUL", "NH", "—", "-"}:
-        return raw, None
-    if event in FIELD_EVENTS:
-        m = re.fullmatch(r"(\d+(?:\.\d+)?)\s*m?", raw, re.I)
-        if not m:
-            return raw, None
-        metres = float(m.group(1))
-        # WA jump coeffs expect centimetres for HJ/PV/LJ/TJ in some tables;
-        # jchen coefficients were fit on metres for field (validated via SP/HT scale).
-        return f"{metres:.2f}m" if "." in m.group(1) else f"{metres}m", metres
-    seconds = parse_time_to_seconds(raw)
-    if seconds is None:
-        return raw, None
-    return raw, seconds
+    display, value = scoring_parse_mark(event, raw)
+    return display or raw, value
 
 
 def parse_siue_date(text: str) -> date | None:
@@ -936,6 +912,8 @@ def make_row(
 ) -> dict:
     men_pts = wa_points(coeffs, "men", event, mark_value)
     women_pts = wa_points(coeffs, "women", event, mark_value)
+    multi_men = multi_score(mark_value, event, "men", coeffs=coeffs)
+    multi_women = multi_score(mark_value, event, "women", coeffs=coeffs)
     if season_year is None and competition_date is not None:
         season_year = competition_date.year
     return {
@@ -952,6 +930,12 @@ def make_row(
         "Wind": float(wind) if wind not in (None, "") else None,
         "World_Athletics_Score_Men": men_pts,
         "World_Athletics_Score_Women": women_pts,
+        "VDOT_Men": multi_men["vdot"],
+        "VDOT_Women": multi_women["vdot"],
+        "Purdy_Points_Men": multi_men["purdy"],
+        "Purdy_Points_Women": multi_women["purdy"],
+        "Mercier_Points_Men": multi_men["mercier"],
+        "Mercier_Points_Women": multi_women["mercier"],
         "Source_File": source,
         "Gender": "Men",
         "Season_Year": season_year,
