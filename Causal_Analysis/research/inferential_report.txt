@@ -1,0 +1,117 @@
+Causal Analysis — Inferential Statistics Report
+=================================================
+
+Scope: hypothesis tests and bootstrap confidence intervals layered on top
+of the athlete x event-group fixed-effects (FE) models in
+causal_analysis_report.txt. All tests below use WITHIN-ATHLETE comparisons
+(same athlete x event group, across two of their own seasons).
+
+Design / causal framing (read before citing these numbers)
+------------------------------------------------------------
+  - These are within-athlete ASSOCIATIONS and DOSE-RESPONSE patterns under a
+    fixed-effects design that controls for athlete baseline (fixed effect) and
+    opening-season WA score.
+  - They are NOT evidence from a randomized experiment. Coaches may assign
+    additional competitions to athletes who are already trending up within a
+    season; unobserved season-level factors (health, training load, weather,
+    team context) are not controlled for.
+  - Do not describe results as proof that racing more CAUSES improvement for a
+    given athlete beyond what this FE design supports; use language such as
+    'within-athlete association' or 'dose-response under fixed effects'.
+
+Bootstrap: percentile method, seed=2026, cluster-resampled by athlete x
+event-group panel UNIT (not by row) so repeated observations from the same
+athlete do not artificially shrink the interval.
+  General statistics: 2000 resamples.
+  Dose-response curves: 400 resamples (nested over nine meet-index bins x two genders x five groups).
+
+## 1. Paired Wilcoxon signed-rank test — higher-volume vs lower-volume season
+-------------------------------------------------------------------------------
+H0: median(point jump in the season with MORE results - point jump in the
+    season with FEWER results) = 0, for the same athlete x event group.
+H1 (one-sided): median difference > 0 (racing more in a season associates
+    with a bigger seasonal WA-point jump for that same athlete).
+
+Overall: n=1,089 season pairs (1,029 athlete x event-group units)
+  Median jump, higher-volume season: 37.0 WA points
+  Median jump, lower-volume season:  0.0 WA points
+  Median within-pair difference: 4.0 WA points [95% CI 0.0, 13.0]
+  Wilcoxon signed-rank statistic: 243700.0, p (one-sided, greater) = 5.85e-18
+  Significant at alpha=0.05: True
+
+By gender x event group (n >= 10 season pairs):
+  Men    Sprints   n= 204 units= 179  median diff=  +0.0 [  +0.0,   +3.0]  p=0.00101  sig=True
+  Men    Distance  n= 365 units= 339  median diff= +16.0 [  +0.5,  +25.0]  p=5.15e-09  sig=True
+  Men    Hurdles   n=  56 units=  51  median diff=  +0.0 [ -11.5,  +32.0]  p=0.367  sig=False
+  Men    Jumps     n=  60 units=  70  median diff=  +0.0 [  +0.0,  +22.0]  p=0.326  sig=False
+  Men    Throws    n=  71 units=  76  median diff=  +0.0 [  -4.0,  +10.0]  p=0.679  sig=False
+  Women  Sprints   n=  91 units=  89  median diff= +14.0 [  +0.0,  +35.0]  p=4.21e-05  sig=True
+  Women  Distance  n= 126 units= 124  median diff= +28.5 [ +14.0,  +39.0]  p=5.24e-07  sig=True
+  Women  Hurdles   n=  37 units=  30  median diff= +14.0 [  +0.0,  +47.0]  p=0.00343  sig=True
+  Women  Jumps     n=  43 units=  39  median diff=  +0.0 [  -2.5,  +29.0]  p=0.0897  sig=False
+  Women  Throws    n=  36 units=  32  median diff= +11.5 [  +0.0,  +25.0]  p=0.00851  sig=True
+
+## 2. Spearman correlation on within-athlete deltas (dose-response)
+---------------------------------------------------------------------
+H0: rho(delta result_count, delta point_jump) = 0 across season pairs.
+H1 (two-sided): rho != 0.
+
+Overall: n=1,459 season pairs (1,029 athlete x event-group units)
+  Spearman rho = 0.251 [95% CI 0.196, 0.310]
+  p (two-sided) = 1.94e-22, significant at alpha=0.05: True
+
+By gender x event group (n >= 10 season pairs):
+  Men    Sprints   n= 253 units= 179  rho=+0.194 [+0.053, +0.339]  p=0.00196  sig=True
+  Men    Distance  n= 501 units= 339  rho=+0.279 [+0.183, +0.378]  p=2.07e-10  sig=True
+  Men    Hurdles   n=  77 units=  51  rho=-0.029 [-0.249, +0.197]  p=0.8  sig=False
+  Men    Jumps     n=  88 units=  70  rho=+0.017 [-0.204, +0.247]  p=0.878  sig=False
+  Men    Throws    n= 100 units=  76  rho=-0.102 [-0.318, +0.146]  p=0.312  sig=False
+  Women  Sprints   n= 119 units=  89  rho=+0.510 [+0.357, +0.644]  p=3.19e-09  sig=True
+  Women  Distance  n= 174 units= 124  rho=+0.486 [+0.345, +0.611]  p=1.11e-11  sig=True
+  Women  Hurdles   n=  44 units=  30  rho=+0.364 [+0.063, +0.626]  p=0.0152  sig=True
+  Women  Jumps     n=  55 units=  39  rho=+0.180 [-0.178, +0.510]  p=0.187  sig=False
+  Women  Throws    n=  48 units=  32  rho=+0.435 [+0.120, +0.712]  p=0.00201  sig=True
+
+## 3. FE regression coefficients recap (from analyze_causal_competition_volume.py)
+--------------------------------------------------------------------------------------
+beta(result_count): WA points of seasonal jump per +1 result, holding athlete FE,
+opening WA, and season constant. 95% CI is the cluster bootstrap from Model D.
+
+  Men    Sprints   beta= +7.71  [ +4.04, +11.31]  n=395  units=179   CI excludes 0
+  Men    Distance  beta=+12.15  [ +8.71, +16.27]  n=759  units=339   CI excludes 0
+  Men    Hurdles   beta= +4.43  [ -7.47, +15.03]  n=115  units=51    CI includes 0
+  Men    Jumps     beta= -0.52  [ -8.41,  +6.26]  n=149  units=70    CI includes 0
+  Men    Throws    beta= +0.59  [ -5.07,  +5.13]  n=164  units=76    CI includes 0
+  Women  Sprints   beta= +9.42  [ +6.11, +13.71]  n=193  units=89    CI excludes 0
+  Women  Distance  beta=+16.96  [+11.62, +22.09]  n=273  units=124   CI excludes 0
+  Women  Hurdles   beta=+22.02  [ +9.38, +35.00]  n=67   units=30    CI excludes 0
+  Women  Jumps     beta= +7.29  [ +2.03, +13.75]  n=86   units=39    CI excludes 0
+  Women  Throws    beta= +6.80  [ -2.75, +19.57]  n=72   units=32    CI includes 0
+
+## 4. Within-season dose-response — cluster-bootstrap 95% CI
+----------------------------------------------------------------
+Mean cumulative WA-point jump from first-day mark by chronological meet index,
+with a 95% CI from resampling athlete x season x event-group panel units.
+See dose_response_bootstrap_ci.csv and plots/dose_response_*.png.
+
+  Men    Sprints   meet  1 -> 13:    0.0 [   0.0,    0.0] ->   50.4 [  24.1,   80.2] WA points
+  Men    Distance  meet  1 ->  9:    0.0 [   0.0,    0.0] ->   83.6 [  60.8,  108.1] WA points
+  Men    Hurdles   meet  1 ->  7:    0.0 [   0.0,    0.0] ->   99.6 [  63.8,  138.6] WA points
+  Men    Jumps     meet  1 ->  8:    0.0 [   0.0,    0.0] ->   44.7 [  17.9,   76.0] WA points
+  Men    Throws    meet  1 ->  9:    0.0 [   0.0,    0.0] ->   21.6 [  10.9,   32.5] WA points
+  Women  Sprints   meet  1 -> 11:    0.0 [   0.0,    0.0] ->   64.8 [  32.8,   92.7] WA points
+  Women  Distance  meet  1 ->  9:    0.0 [   0.0,    0.0] ->  143.1 [  83.0,  219.9] WA points
+  Women  Hurdles   meet  1 ->  6:    0.0 [   0.0,    0.0] ->   90.8 [  62.5,  124.9] WA points
+  Women  Jumps     meet  1 ->  8:    0.0 [   0.0,    0.0] ->   36.7 [  22.0,   53.1] WA points
+  Women  Throws    meet  1 ->  8:    0.0 [   0.0,    0.0] ->   28.1 [  15.4,   45.9] WA points
+
+## Bottom line
+--------------
+The paired Wilcoxon test and the delta-level Spearman correlation both test
+the SAME within-athlete dose-response question as the FE regression (Model A/D)
+but make no linearity assumption. Where all three agree (positive FE beta with
+a CI excluding 0, a significant one-sided Wilcoxon test, and a significant
+positive Spearman rho with a CI excluding 0), the within-athlete association
+between competition volume and seasonal WA improvement is well supported by
+this dataset -- as an associative/dose-response finding under fixed effects,
+not as a randomized-experiment causal claim.

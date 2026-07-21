@@ -5,7 +5,7 @@ Question: Which WA point band yields the most accurate cross-event
 time models on indoor data when band width = 200 points?
 
 Method:
-  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).
+  • Data: indoor_analysis CSVs 2024–2026 (all dates in files).
   • Events: Sprints (60/200/400) and Distance (800/Mile/3000) only.
   • Excludes relay results.
   • Inclusion: athlete-season enters a band if ≥1 individual result has
@@ -82,4 +82,4 @@ Caveats:
     prefer bands with ≥4 pairs and stable coverage.
   • Indoor distance models use Mile/3000m (not outdoor 1500m/5000m).
 
-Source: Indoor_Analysis/analyze_indoor_point_bands.py
+Source: indoor_analysis/analyze_indoor_point_bands.py

@@ -10,8 +10,8 @@ from statistics import mean, median
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_ROOT = Path(__file__).resolve().parent
-POINT_JUMP_ROOT = PROJECT_ROOT / "Number_Of_Events_Question"
-PYLIBS = PROJECT_ROOT / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs"
+POINT_JUMP_ROOT = PROJECT_ROOT / "number_of_events_question"
+PYLIBS = PROJECT_ROOT / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs"
 if PYLIBS.exists():
     sys.path.insert(0, str(PYLIBS))
 

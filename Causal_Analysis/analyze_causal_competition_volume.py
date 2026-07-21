@@ -11,14 +11,15 @@ from __future__ import annotations
 
 import csv
 import math
+import os
 import sys
 from collections import defaultdict
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_ROOT = Path(__file__).resolve().parent
-POINT_JUMP_ROOT = PROJECT_ROOT / "Number_Of_Events_Question"
-PYLIBS = PROJECT_ROOT / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs"
+POINT_JUMP_ROOT = PROJECT_ROOT / "number_of_events_question"
+PYLIBS = PROJECT_ROOT / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs"
 if PYLIBS.exists():
     sys.path.insert(0, str(PYLIBS))
 
@@ -28,6 +29,9 @@ from analyze_point_jump_by_competition_count import (  # noqa: E402
     compute_point_jumps,
     load_combined_dataset,
 )
+
+# Writable cache for headless / sandboxed runs (avoid unwritable ~/.matplotlib)
+os.environ.setdefault("MPLCONFIGDIR", str(OUTPUT_ROOT / ".mplconfig"))
 
 import matplotlib
 
@@ -163,6 +167,10 @@ def paired_within_athlete_deltas(rows: list[dict]) -> list[dict]:
                         "event_group": a["event_group"],
                         "season_a": a["season"],
                         "season_b": b["season"],
+                        "result_count_a": int(a["result_count"]),
+                        "result_count_b": int(b["result_count"]),
+                        "point_jump_a": float(a["point_jump"]),
+                        "point_jump_b": float(b["point_jump"]),
                         "delta_result_count": int(b["result_count"]) - int(a["result_count"]),
                         "delta_point_jump": float(b["point_jump"]) - float(a["point_jump"]),
                         "delta_first_wa": float(b["first_wa"]) - float(a["first_wa"]),
@@ -506,6 +514,11 @@ def main() -> None:
 
     write_report(fe_global, fe_by_group, delta_stats, pooled, dose, len(raw), len(filtered))
     print(f"Done. Outputs in {OUTPUT_ROOT}")
+
+    print("\n--- Research statistics & inferential tests ---\n")
+    from research_stats import run_research_stats  # lazy import: avoids circular import
+
+    run_research_stats(deltas=deltas, trajectories=trajectories, fe_by_group=fe_by_group)
 
 
 if __name__ == "__main__":

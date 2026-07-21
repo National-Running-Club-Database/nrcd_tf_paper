@@ -15,7 +15,7 @@ Method:
     event at the indoor opener meet AND the paired outdoor event at the
     outdoor opener meet.
   • Delta = outdoor_opener_WA − indoor_opener_WA.
-  • Outdoor distance uses New_Steeplechase_Data (corrected WA) when available.
+  • Outdoor distance uses new_steeplechase_data (corrected WA) when available.
   • Relays excluded.
 
 Similar-event pairs:
@@ -113,4 +113,4 @@ Caveats
   • 60m→100m compares different distances on the WA scale (by design).
   • Outdoor March 1+ filter is not applied beyond what the outdoor CSVs contain.
 
-Source: Indoor_Analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py
+Source: indoor_analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py

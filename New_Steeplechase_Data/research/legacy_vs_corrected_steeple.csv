@@ -1,0 +1,3 @@
+gender,n_corrected_pool,steeple_count_corrected,steeple_share_corrected,steeple_share_corrected_ci_lo,steeple_share_corrected_ci_hi,n_legacy_pool,steeple_count_legacy,steeple_share_legacy,steeple_share_legacy_ci_lo,steeple_share_legacy_ci_hi,share_delta_corrected_minus_legacy,fisher_odds_ratio,fisher_p,sig_005
+Men,837,72,0.086,0.0689,0.107,827,0,0.0,0.0,0.0046,0.086,nan,9.374547690332132e-23,True
+Women,372,74,0.1989,0.1615,0.2425,367,1,0.0027,0.0005,0.0153,0.1962,90.886,8.810709816086169e-23,True

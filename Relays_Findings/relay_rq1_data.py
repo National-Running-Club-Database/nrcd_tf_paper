@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).parent
-NON_RELAYS_ROOT = ROOT.parent / "Non_Relays_Findings"
+NON_RELAYS_ROOT = ROOT.parent / "non_relays_findings"
 EVENT_MAP = {
     int(r["running_event_id"]): r["event_name"]
     for r in csv.DictReader(open(NON_RELAYS_ROOT / "Distance_Events_Counting" / "running_event.csv"))

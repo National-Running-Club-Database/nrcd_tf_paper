@@ -18,7 +18,7 @@ from typing import Any, Callable
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 TIME_MODELS_ROOT = Path(__file__).resolve().parents[1]
-RELAYS_ROOT = PROJECT_ROOT / "Relays_Findings"
+RELAYS_ROOT = PROJECT_ROOT / "relays_findings"
 OUTPUT_ROOT = Path(__file__).resolve().parent
 BASELINE_CSV = TIME_MODELS_ROOT / "cross_event_time_models.csv"
 

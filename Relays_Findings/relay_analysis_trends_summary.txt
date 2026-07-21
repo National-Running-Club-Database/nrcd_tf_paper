@@ -6,7 +6,7 @@ maximum across relay appearances.
 
 Source outputs: RQ1A (best event), RQ1B (nationals 8th-place thresholds),
 RQ1C (competitiveness vs. nationals bar) across Sprinters, Distance, Hurdles,
-Jumps, and Throws folders in Relays_Findings/.
+Jumps, and Throws folders in relays_findings/.
 
 
 1. DATA SCOPE AND LIMITATIONS
@@ -181,6 +181,6 @@ f) Coaches and athletes should treat RQ1A (best WA) and RQ1C (vs. nationals
    while an individual event may still be the more realistic nationals path.
 
 
-Generated from Relays_Findings analysis outputs (RQ1A, RQ1B, RQ1C).
+Generated from relays_findings analysis outputs (RQ1A, RQ1B, RQ1C).
 See individual discipline folders and RQ1B_Nationals/, RQ1C_Competitiveness/
 for full tables and figures.

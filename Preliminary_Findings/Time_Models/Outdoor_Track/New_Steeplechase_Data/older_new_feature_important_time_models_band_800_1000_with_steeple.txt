@@ -5,7 +5,7 @@ Method:
   • Outdoor 2024–2026, March 1+.
   • Population: athlete-seasons with ≥1 individual result WA in [800, 1000).
   • Distance group includes 800m, 1500m, 3000m Steeplechase, 5000m
-    (corrected steeplechase WA from New_Steeplechase_Data).
+    (corrected steeplechase WA from new_steeplechase_data).
   • Relays excluded. Feature routing: bal/spec, best_event, best_is_from,
     pair_wa_gap_50, from_stronger_wa, bal×best_event.
   • Min pair n=20; cohort fit n≥12.
@@ -224,4 +224,4 @@ Distance — Women
   Important features: recommended bal_x_best_event (pooled CV 3.650s → 3.374s, Δ +0.276s).
   Features that beat pooled: bal_spec (Δ +0.141s); bal_x_best_event (Δ +0.276s)
 
-Source: New_Steeplechase_Data/Feature_Importance_Point_Band_Time_Models/analyze_feature_importance_with_steeple.py
+Source: new_steeplechase_data/Feature_Importance_Point_Band_Time_Models/analyze_feature_importance_with_steeple.py

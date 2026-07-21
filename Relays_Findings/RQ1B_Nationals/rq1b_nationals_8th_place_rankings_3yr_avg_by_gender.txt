@@ -1,6 +1,6 @@
 Nationals Top-8 Eighth-Place World Athletics Points — 3-Year Average Rankings
 (Relay-inclusive data; average of 2024, 2025, and 2026 8th-place WA scores)
-Source: RQ1B nationals top-8 analysis (Relays_Findings)
+Source: RQ1B nationals top-8 analysis (relays_findings)
 
 ============================================================
 Men — 3-Year Average (2024–2026)

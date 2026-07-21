@@ -6,9 +6,9 @@ Men's vs. Women's Teams — When Athletes Already Clear the Bar in Every Event
 Based on 2024–2026 NIRCA outdoor data (RQ1B thresholds, RQ1C nationals-margin
 comparisons, clearing-pool sizes). Relay-inclusive; March 1+ per season.
 
-DATA NOTE: Distance / steeplechase use corrected WA from New_Steeplechase_Data
+DATA NOTE: Distance / steeplechase use corrected WA from new_steeplechase_data
 (steeple 8th-place ≈740 men / ≈752 women). Sprints, hurdles, jumps, throws
-unchanged from Relays_Findings. All five event groups included.
+unchanged from relays_findings. All five event groups included.
 
 This report assumes a coach has many athletes in each event group who already
 clear the 8th-place WA threshold for every event in that group. Clear rate is
@@ -319,9 +319,9 @@ When everyone clears, stop chasing accessible bars and start chasing where your
 athletes are furthest above the line with the fewest rivals — and spread them so
 your team isn't fighting itself for the same eight places.
 
-See also: New_Steeplechase_Data/Coaches_Analysis/Nationals_Scoring_Focus_Men_Women.txt
+See also: new_steeplechase_data/coaches_analysis/Nationals_Scoring_Focus_Men_Women.txt
 (clear-rate framing for rosters still building toward the nationals bar).
 
 Source: RQ1B nationals 8th-place thresholds, RQ1C nationals-margin head-to-
 heads, clearing-pool counts — relay-inclusive outdoor 2024–2026 (March 1+).
-Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.
+Distance/steeple from new_steeplechase_data; other groups from relays_findings.

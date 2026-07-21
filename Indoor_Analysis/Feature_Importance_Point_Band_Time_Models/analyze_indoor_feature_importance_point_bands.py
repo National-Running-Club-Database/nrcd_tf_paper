@@ -5,7 +5,7 @@ Produces reports modeled on:
   new_feature_important_time_models_band_800_1000.txt
 
 Outputs under:
-  Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/
+  indoor_analysis/Feature_Importance_Point_Band_Time_Models/
 """
 
 from __future__ import annotations
@@ -28,7 +28,7 @@ TIME_MODELS_ROOT = PROJECT_ROOT / "time_models"
 MODEL_SEARCH_ROOT = TIME_MODELS_ROOT / "model_search"
 SPEC_ROOT = TIME_MODELS_ROOT / "specialized_time_models"
 
-sys.path.insert(0, str(PROJECT_ROOT / "Relays_Findings"))
+sys.path.insert(0, str(PROJECT_ROOT / "relays_findings"))
 sys.path.insert(0, str(TIME_MODELS_ROOT))
 sys.path.insert(0, str(MODEL_SEARCH_ROOT))
 sys.path.insert(0, str(SPEC_ROOT))
@@ -883,7 +883,7 @@ def write_band_report(result: dict, n_as: int, path: Path) -> None:
         )
     lines.append("")
     lines.append(
-        "Source: Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/"
+        "Source: indoor_analysis/Feature_Importance_Point_Band_Time_Models/"
         "analyze_indoor_feature_importance_point_bands.py"
     )
     path.write_text("\n".join(lines).rstrip() + "\n")
@@ -902,7 +902,7 @@ def write_feature_important_file(
         "=" * len(title),
         "",
         "Method:",
-        "  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).",
+        "  • Data: indoor_analysis CSVs 2024–2026 (all dates in files).",
         f"  • Population: athlete-seasons with ≥1 individual result in WA [{lo}, {hi}).",
         "  • Excludes relays. Sprints (60/200/400) & Distance (800/Mile/3000) only.",
         "  • Pooled formula: lowest-CV winner among candidate families (same search",
@@ -1098,7 +1098,7 @@ def write_feature_important_file(
             "    otherwise use the next-best listed feature or the pooled formula.",
             "",
             "Source:",
-            "  Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/"
+            "  indoor_analysis/Feature_Importance_Point_Band_Time_Models/"
             "analyze_indoor_feature_importance_point_bands.py",
             "  Feature importance CV: pair_strategy_cv_by_band.csv",
         ]

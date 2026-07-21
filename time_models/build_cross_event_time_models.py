@@ -16,7 +16,7 @@ from itertools import permutations
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RELAYS_ROOT = PROJECT_ROOT / "Relays_Findings"
+RELAYS_ROOT = PROJECT_ROOT / "relays_findings"
 OUTPUT_ROOT = Path(__file__).resolve().parent
 
 sys.path.insert(0, str(RELAYS_ROOT))

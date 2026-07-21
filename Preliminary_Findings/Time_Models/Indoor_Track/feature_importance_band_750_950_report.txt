@@ -83,4 +83,4 @@ Band verdict
 ------------
   YES — bal_x_best_event, best_is_from, from_stronger_wa, best_event, pair_wa_gap_50, bal_spec beat the pooled 750-950 model on ≥50% of pairs with mean improvement >0.01s.
 
-Source: Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py
+Source: indoor_analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py

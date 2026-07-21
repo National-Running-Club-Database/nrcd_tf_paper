@@ -1,5 +1,5 @@
 RQ1C — Which Event Should Athletes Pursue to Be Most Competitive?
-[Distance only — New_Steeplechase_Data / corrected steeplechase WA]
+[Distance only — new_steeplechase_data / corrected steeplechase WA]
 Method: 3-year average nationals 8th-place WA threshold from local RQ1B.
 RQ1C event = largest margin above (or smallest margin below) the 8th-place nationals threshold.
 RQ1A event = highest absolute WA personal best.

@@ -1,0 +1,11 @@
+discipline,gender,n_multi_event,n_agree,n_mismatch,agree_rate,agree_rate_ci_lo,agree_rate_ci_hi
+Sprints,Men,910,817,93,0.8978,0.8764,0.9158
+Sprints,Women,434,395,39,0.9101,0.8795,0.9336
+Distance,Men,1283,1035,248,0.8067,0.7842,0.8274
+Distance,Women,612,464,148,0.7582,0.7227,0.7904
+Hurdles,Men,296,261,35,0.8818,0.84,0.9137
+Hurdles,Women,172,133,39,0.7733,0.7051,0.8295
+Jumps,Men,363,319,44,0.8788,0.8412,0.9085
+Jumps,Women,201,173,28,0.8607,0.806,0.9018
+Throws,Men,343,314,29,0.9155,0.8812,0.9405
+Throws,Women,196,150,46,0.7653,0.7012,0.8192

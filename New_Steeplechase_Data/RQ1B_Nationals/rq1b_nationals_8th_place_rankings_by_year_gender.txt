@@ -1,5 +1,5 @@
 Nationals 8th-Place WA by Year and Gender (All Event Groups)
-Steeplechase from New_Steeplechase_Data; other events from Relays_Findings.
+Steeplechase from new_steeplechase_data; other events from relays_findings.
 
 ## 2024
 ### Men

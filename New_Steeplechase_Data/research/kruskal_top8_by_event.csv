@@ -1,0 +1,3 @@
+gender,n_events,n_total,kruskal_h,kruskal_df,kruskal_p,sig_005,highest_median_event,highest_median_wa,lowest_median_event,lowest_median_wa
+Men,4,96,42.62,3,2.96334941577805e-09,True,800m,871.5,3000m Steeplechase,785.0
+Women,4,88,11.681,3,0.008561249282658362,True,5000m,866.0,800m,793.0

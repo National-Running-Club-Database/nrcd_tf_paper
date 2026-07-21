@@ -35,7 +35,7 @@ from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-INDOOR_ROOT = PROJECT_ROOT / "Indoor_Analysis"
+INDOOR_ROOT = PROJECT_ROOT / "indoor_analysis"
 OUTPUT_ROOT = INDOOR_ROOT / "Indoor_Outdoor_Interplay"
 
 SEASONS = ("2024", "2025", "2026")
@@ -140,11 +140,11 @@ def iter_indoor_paths(year: str) -> list[tuple[Path, str]]:
 
 def iter_outdoor_paths(year: str) -> list[tuple[Path, str]]:
     sources = [
-        (PROJECT_ROOT / "Relays_Findings" / "Sprinters_Relays_Findings", "Sprinters"),
-        (PROJECT_ROOT / "Relays_Findings" / "Hurdles_Relays_Findings", "Hurdles"),
-        (PROJECT_ROOT / "Relays_Findings" / "Jumps_Relays_Findings", "Jumps"),
-        (PROJECT_ROOT / "Relays_Findings" / "Throws_Relays_Findings", "Throws"),
-        (PROJECT_ROOT / "New_Steeplechase_Data", "Distance"),
+        (PROJECT_ROOT / "relays_findings" / "Sprinters_Relays_Findings", "Sprinters"),
+        (PROJECT_ROOT / "relays_findings" / "Hurdles_Relays_Findings", "Hurdles"),
+        (PROJECT_ROOT / "relays_findings" / "Jumps_Relays_Findings", "Jumps"),
+        (PROJECT_ROOT / "relays_findings" / "Throws_Relays_Findings", "Throws"),
+        (PROJECT_ROOT / "new_steeplechase_data", "Distance"),
     ]
     out = []
     for folder, prefix in sources:
@@ -153,7 +153,7 @@ def iter_outdoor_paths(year: str) -> list[tuple[Path, str]]:
             if not path.exists() and prefix == "Distance":
                 path = (
                     PROJECT_ROOT
-                    / "Relays_Findings"
+                    / "relays_findings"
                     / "Distance_Relays_Findings"
                     / f"Relays_Distance_{gender}_Outdoor_{year}_Data.csv"
                 )
@@ -463,7 +463,7 @@ def write_report(
             "    event at the indoor opener meet AND the paired outdoor event at the",
             "    outdoor opener meet.",
             "  • Delta = outdoor_opener_WA − indoor_opener_WA.",
-            "  • Outdoor distance uses New_Steeplechase_Data (corrected WA) when available.",
+            "  • Outdoor distance uses new_steeplechase_data (corrected WA) when available.",
             "  • Relays excluded.",
         ]
     )
@@ -599,7 +599,7 @@ def write_report(
     lines.extend(
         [
             "",
-            "Source: Indoor_Analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py",
+            "Source: indoor_analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py",
         ]
     )
     path.write_text("\n".join(lines).rstrip() + "\n")

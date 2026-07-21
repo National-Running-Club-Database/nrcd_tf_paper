@@ -35,7 +35,7 @@ OUTPUT_ROOT = Path(__file__).resolve().parent
 MODEL_SEARCH_ROOT = TIME_MODELS_ROOT / "model_search"
 SPEC_ROOT = TIME_MODELS_ROOT / "specialized_time_models"
 
-sys.path.insert(0, str(PROJECT_ROOT / "Relays_Findings"))
+sys.path.insert(0, str(PROJECT_ROOT / "relays_findings"))
 sys.path.insert(0, str(TIME_MODELS_ROOT))
 sys.path.insert(0, str(MODEL_SEARCH_ROOT))
 sys.path.insert(0, str(SPEC_ROOT))

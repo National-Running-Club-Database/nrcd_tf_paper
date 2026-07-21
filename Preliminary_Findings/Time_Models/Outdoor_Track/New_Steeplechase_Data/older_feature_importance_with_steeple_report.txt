@@ -3,7 +3,7 @@ Feature Importance Point-Band Time Models — With Steeplechase
 
 Bands: 750–950, 800–1000, 850–1050.
 Distance events: 800m, 1500m, 3000m Steeplechase, 5000m.
-Steeplechase WA from New_Steeplechase_Data.
+Steeplechase WA from new_steeplechase_data.
 
 Band membership vs prior (no steeple):
   750-950: +32 athlete-seasons (553 → 585)

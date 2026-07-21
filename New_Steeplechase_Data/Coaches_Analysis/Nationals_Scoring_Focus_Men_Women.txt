@@ -7,9 +7,9 @@ nationals-margin comparisons. Goal: maximize athletes finishing 8th or higher
 at Nationals.
 
 DATA NOTE: Distance / steeplechase World Athletics points use corrected values
-from New_Steeplechase_Data (steeple 8th-place bars ≈740 men / ≈752 women, not
+from new_steeplechase_data (steeple 8th-place bars ≈740 men / ≈752 women, not
 the prior ~456 / ~511). Sprints, hurdles, jumps, and throws are unchanged from
-Relays_Findings RQ1B/RQ1C.
+relays_findings RQ1B/RQ1C.
 
 How to read this: "Clear count" = how many athletes in the full dataset cleared
 the bar (team depth signal). "Clear rate" = share of athletes who competed in
@@ -359,5 +359,5 @@ Volume matters most| Distance (+12 WA/race)           | Distance (+17 WA/race)
 
 Source: RQ1B nationals 8th-place thresholds, RQ1C clear counts/rates, pairwise
 margin comparisons — relay-inclusive outdoor data 2024–2026 (March 1+).
-Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.
+Distance/steeple from new_steeplechase_data; other groups from relays_findings.
 Relay WA credited to leg athletes; only 4x100m and 4x400m have valid relay WA.

@@ -1,0 +1,126 @@
+indoor_analysis — Inferential Statistics Report
+=================================================
+
+Scope: lightweight hypothesis tests / CIs layered on top of the existing
+RQ1A best-event counts and the indoor->outdoor season-opener WA comparison.
+No raw data was re-scraped; all numbers derive from the *.txt / *.csv already
+produced by analyze_indoor_rq1a.py and
+Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py.
+
+## 1. RQ1A best-event shares (chi-square vs. uniform + Wilson 95% CI)
+-----------------------------------------------------------------------
+H0 (chi-square): best event is uniformly distributed across the individual
+events considered for that discipline x gender cohort.
+
+Sprints Men (n=551): chi2=86.312 df=2 p=1.81e-19
+    60m                       274 ( 49.7%) [95% CI  45.6%,  53.9%]
+    200m                      181 ( 32.9%) [95% CI  29.1%,  36.9%]
+    400m                       96 ( 17.4%) [95% CI  14.5%,  20.8%]
+
+Sprints Women (n=195): chi2=53.2 df=2 p=2.8e-12
+    60m                       112 ( 57.4%) [95% CI  50.4%,  64.2%]
+    400m                       50 ( 25.6%) [95% CI  20.0%,  32.2%]
+    200m                       33 ( 16.9%) [95% CI  12.3%,  22.8%]
+
+Distance Men (n=702): chi2=124.359 df=3 p=8.88e-27
+    Mile                      242 ( 34.5%) [95% CI  31.1%,  38.1%]
+    800m                      215 ( 30.6%) [95% CI  27.3%,  34.1%]
+    3000m                     194 ( 27.6%) [95% CI  24.5%,  31.1%]
+    5000m                      51 (  7.3%) [95% CI   5.6%,   9.4%]
+
+Distance Women (n=332): chi2=35.88 df=3 p=7.94e-08
+    Mile                      101 ( 30.4%) [95% CI  25.7%,  35.6%]
+    3000m                     101 ( 30.4%) [95% CI  25.7%,  35.6%]
+    800m                       94 ( 28.3%) [95% CI  23.7%,  33.4%]
+    5000m                      36 ( 10.8%) [95% CI   7.9%,  14.6%]
+
+Jumps Men (n=77): chi2=4.545 df=2 p=0.103
+    Long Jump                  34 ( 44.2%) [95% CI  33.6%,  55.3%]
+    High Jump                  24 ( 31.2%) [95% CI  21.9%,  42.2%]
+    Triple Jump                19 ( 24.7%) [95% CI  16.4%,  35.4%]
+
+Jumps Women (n=53): chi2=1.396 df=2 p=0.498
+    Triple Jump                21 ( 39.6%) [95% CI  27.6%,  53.1%]
+    Long Jump                  18 ( 34.0%) [95% CI  22.7%,  47.4%]
+    High Jump                  14 ( 26.4%) [95% CI  16.4%,  39.6%]
+
+Throws Men (n=5): chi2=1.8 df=1 p=0.18
+    Shot Put                    4 ( 80.0%) [95% CI  37.5%,  96.4%]
+    Discus                      1 ( 20.0%) [95% CI   3.6%,  62.5%]
+
+## 2. RQ1A pairwise head-to-head (exact binomial vs. 50/50, ties excluded)
+----------------------------------------------------------------------------
+
+Sprints Men:
+    60m vs 200m: 319-207 (ties 4, n=526) p=1.19e-06 Cohen's h=+0.429 ***
+    60m vs 400m: 122-102 (ties 0, n=224) p=0.204 Cohen's h=+0.179 ns
+    200m vs 400m: 171-128 (ties 0, n=299) p=0.015 Cohen's h=+0.289 *
+
+Sprints Women:
+    60m vs 200m: 161-37 (ties 2, n=198) p=1.22e-19 Cohen's h=+1.353 ***
+    60m vs 400m: 39-36 (ties 0, n=75) p=0.818 Cohen's h=+0.080 ns
+    200m vs 400m: 49-89 (ties 2, n=138) p=0.000836 Cohen's h=-0.588 ***
+
+Distance Men:
+    800m vs Mile: 260-205 (ties 2, n=465) p=0.0122 Cohen's h=+0.237 *
+    800m vs 3000m: 73-84 (ties 0, n=157) p=0.425 Cohen's h=-0.140 ns
+    800m vs 5000m: 29-32 (ties 0, n=61) p=0.798 Cohen's h=-0.098 ns
+    Mile vs 3000m: 192-189 (ties 2, n=381) p=0.918 Cohen's h=+0.016 ns
+    Mile vs 5000m: 61-69 (ties 2, n=130) p=0.539 Cohen's h=-0.123 ns
+    3000m vs 5000m: 90-48 (ties 0, n=138) p=0.000441 Cohen's h=+0.619 ***
+
+Distance Women:
+    800m vs Mile: 116-104 (ties 1, n=220) p=0.458 Cohen's h=+0.109 ns
+    800m vs 3000m: 20-34 (ties 0, n=54) p=0.0759 Cohen's h=-0.524 ns
+    800m vs 5000m: 5-14 (ties 0, n=19) p=0.0636 Cohen's h=-0.987 ns
+    Mile vs 3000m: 43-110 (ties 0, n=153) p=5.91e-08 Cohen's h=-0.906 ***
+    Mile vs 5000m: 16-30 (ties 0, n=46) p=0.0541 Cohen's h=-0.619 ns
+    3000m vs 5000m: 22-30 (ties 0, n=52) p=0.332 Cohen's h=-0.309 ns
+
+Hurdles Men:
+    55m Hurdles vs 60m Hurdles: 0-2 (ties 0, n=2) p=0.5 Cohen's h=-3.142 ns
+
+Jumps Men:
+    Long Jump vs Triple Jump: 29-26 (ties 0, n=55) p=0.788 Cohen's h=+0.109 ns
+    Long Jump vs High Jump: 17-21 (ties 0, n=38) p=0.627 Cohen's h=-0.211 ns
+    Triple Jump vs High Jump: 3-12 (ties 0, n=15) p=0.0352 Cohen's h=-1.287 *
+
+Jumps Women:
+    Long Jump vs Triple Jump: 19-24 (ties 0, n=43) p=0.542 Cohen's h=-0.233 ns
+    Long Jump vs High Jump: 10-14 (ties 0, n=24) p=0.541 Cohen's h=-0.335 ns
+    Triple Jump vs High Jump: 7-4 (ties 0, n=11) p=0.549 Cohen's h=+0.552 ns
+
+Throws Men:
+    Shot Put vs Discus: 4-1 (ties 0, n=5) p=0.375 Cohen's h=+1.287 ns
+
+Throws Women:
+    Shot Put vs Discus: 2-0 (ties 0, n=2) p=0.5 Cohen's h=+3.142 ns
+
+## 3. Indoor -> outdoor season-opener WA transition
+-----------------------------------------------------
+Sample: outdoor-opener-WA-in-[750,950) band (matches Summary_findings.md).
+H0 (Wilcoxon): median(outdoor_wa - indoor_wa) = 0 across comparable opener pairs.
+H0 (binomial): P(outdoor higher) = 0.5, ties excluded.
+
+Overall: n=218 (outdoor higher=151, indoor higher=64, ties=3)
+  P(outdoor higher) = 69.3% [95% CI 63.8%, 75.9%]  binomial p=2.75e-09
+  Mean delta (outdoor - indoor) = +27.0 WA, median = +24.0 WA
+  Wilcoxon signed-rank: stat=6079.0 p=1.39e-09
+  Spearman rho (indoor_wa vs outdoor_wa) = 0.547 (p=2.12e-18)
+
+By event pair (n >= 10):
+  60m → 100m               n=  59  outdoor_higher= 66.1% [ 53.4%,  76.9%]  Δmed= +20.0  Wilcoxon p=0.0318  binom p=0.0183
+  200m → 200m              n=  40  outdoor_higher= 75.0% [ 61.7%,  87.4%]  Δmed= +24.5  Wilcoxon p=0.00199  binom p=0.00107
+  Mile → 1500m             n=  26  outdoor_higher= 80.8% [ 62.1%,  91.5%]  Δmed= +55.0  Wilcoxon p=0.000917  binom p=0.00249
+  Long Jump → Long Jump    n=  17  outdoor_higher= 76.5% [ 52.7%,  90.4%]  Δmed= +48.0  Wilcoxon p=0.00522  binom p=0.049
+  3000m → 5000m            n=  14  outdoor_higher= 64.3% [ 38.8%,  83.7%]  Δmed= +12.5  Wilcoxon p=0.47  binom p=0.424
+  800m → 800m              n=  13  outdoor_higher= 46.2% [ 23.2%,  70.9%]  Δmed=  -2.0  Wilcoxon p=0.576  binom p=1
+  400m → 400m              n=  12  outdoor_higher= 66.7% [ 39.1%,  86.2%]  Δmed=  +8.0  Wilcoxon p=0.352  binom p=0.388
+
+## Bottom line
+--------------
+Best-event chi-square tests confirm the RQ1A specialization patterns already
+described in Summary_findings.md are not uniform-random artifacts (most cohorts
+reject the uniform null at p<0.05, small-n disciplines like indoor Hurdles/Throws
+aside). The opener Wilcoxon/binomial tests quantify how reliably outdoor season
+openers beat indoor openers for the same athlete and comparable event.

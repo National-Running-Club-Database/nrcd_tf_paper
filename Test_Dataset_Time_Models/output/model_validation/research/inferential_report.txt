@@ -1,0 +1,61 @@
+Inferential Statistics Report — Men's Outdoor Time-Model Validation
+====================================================================
+
+Design notes
+------------
+  • External validation on NCAA Division I men's outdoor results (dated meets).
+  • Models were fit on club / National Running Club data — expect distribution shift.
+  • Primary cross-event metric: median absolute percent error (MedAPE).
+  • Absolute-second MedAE is interpretable only within an event pair or event group.
+  • Bootstrap: 2000 resamples, percentile 95% CI, seed=2026.
+  • Bias: Wilcoxon signed-rank on (pred − actual), two-sided α = 0.05.
+  • Feature vs pooled: paired Wilcoxon on |error| and |%| error.
+  • Tolerance hit rate: Clopper–Pearson exact 95% CI.
+
+Overall (MedAPE preferred; mixed-second MedAE shown for continuity)
+-------------------------------------------------------------------
+  chronological  feature   n=139  MedAPE=1.80% [1.46, 2.12]  tol=33.8% [26.0%, 42.3%]  Spearman ρ=0.983 (p=3.16e-103)  bias_med=+0.314s (Wilcoxon p=0.000162)
+  chronological  pooled    n=139  MedAPE=2.35% [1.67, 2.91]  tol=33.1% [25.4%, 41.6%]  Spearman ρ=0.977 (p=4.3e-94)  bias_med=+0.365s (Wilcoxon p=0.00135)
+  season_pb      feature   n=802  MedAPE=1.43% [1.32, 1.65]  tol=46.0% [42.5%, 49.5%]  Spearman ρ=0.989 (p=0)  bias_med=+0.160s (Wilcoxon p=3e-06)
+  season_pb      pooled    n=802  MedAPE=2.39% [2.09, 2.68]  tol=31.5% [28.3%, 34.9%]  Spearman ρ=0.983 (p=0)  bias_med=+0.416s (Wilcoxon p=1.97e-10)
+
+Within event group (absolute seconds are more interpretable)
+------------------------------------------------------------
+  Distance   feature   n=504  MedAE=4.783s [3.807, 6.033]  MedAPE=1.90%
+  Sprints    feature   n=298  MedAE=0.209s [0.166, 0.264]  MedAPE=1.03%
+  Distance   pooled    n=504  MedAE=7.910s [6.806, 8.757]  MedAPE=2.95%
+  Sprints    pooled    n=298  MedAE=0.350s [0.289, 0.421]  MedAPE=1.91%
+
+Feature vs pooled (paired Wilcoxon; negative Δ favors feature)
+--------------------------------------------------------------
+  all                          n=941  ΔMed|%|=+0.000  p=1.82e-26  feature_better=True
+  mode=chronological           n=139  ΔMed|%|=+0.000  p=0.00475  feature_better=True
+  mode=season_pb               n=802  ΔMed|%|=+0.000  p=3.69e-25  feature_better=True
+  event_group=Distance         n=586  ΔMed|%|=+0.000  p=1.5e-11  feature_better=True
+  event_group=Sprints          n=355  ΔMed|%|=-0.402  p=1.11e-17  feature_better=True
+  band=750-950                 n=423  ΔMed|%|=-0.092  p=5.95e-14  feature_better=True
+  band=800-1000                n=319  ΔMed|%|=+0.000  p=9e-08  feature_better=True
+  band=850-1050                n=199  ΔMed|%|=+0.000  p=6.67e-08  feature_better=True
+
+Best-calibrated pairs (season-PB · feature · n≥5) by MedAPE
+-----------------------------------------------------------
+  750-950 200m→100m  n=31  MedAPE=0.61% [0.51, 0.81]  MedAE=0.069s
+  850-1050 100m→200m  n=23  MedAPE=0.62% [0.49, 0.93]  MedAE=0.138s
+  850-1050 200m→100m  n=23  MedAPE=0.65% [0.32, 1.08]  MedAE=0.069s
+  800-1000 200m→100m  n=29  MedAPE=0.73% [0.46, 1.05]  MedAE=0.080s
+  750-950 800m→1500m  n=35  MedAPE=0.75% [0.55, 1.02]  MedAE=1.851s
+  750-950 100m→200m  n=31  MedAPE=0.77% [0.49, 1.00]  MedAE=0.170s
+  800-1000 100m→200m  n=29  MedAPE=0.77% [0.59, 1.33]  MedAE=0.175s
+  850-1050 800m→1500m  n=22  MedAPE=0.86% [0.50, 1.11]  MedAE=2.069s
+
+Weakest pairs (season-PB · feature · n≥4) by MedAPE
+--------------------------------------------------
+  800-1000 1500m→3000m SC  n=15  MedAPE=7.03% [5.32, 8.37]  MedAE=37.943s
+  750-950 800m→3000m SC  n=9  MedAPE=6.52% [2.40, 10.96]  MedAE=41.471s
+  750-950 1500m→3000m SC  n=20  MedAPE=4.39% [2.58, 6.82]  MedAE=26.656s
+  850-1050 1500m→5000m  n=24  MedAPE=4.38% [2.54, 5.51]  MedAE=39.783s
+  750-950 3000m SC→1500m  n=20  MedAPE=4.00% [1.91, 5.17]  MedAE=9.518s
+  750-950 5000m→3000m SC  n=12  MedAPE=3.72% [2.03, 6.31]  MedAE=21.275s
+  750-950 3000m SC→800m  n=9  MedAPE=3.61% [0.57, 5.36]  MedAE=4.540s
+  800-1000 1500m→5000m  n=31  MedAPE=3.55% [2.39, 4.23]  MedAE=30.725s
+

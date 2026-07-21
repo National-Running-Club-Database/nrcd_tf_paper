@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run RQ1 → RQ1B → RQ1C for New_Steeplechase_Data distance analyses."""
+"""Run RQ1 → RQ1B → RQ1C for new_steeplechase_data distance analyses."""
 
 from __future__ import annotations
 

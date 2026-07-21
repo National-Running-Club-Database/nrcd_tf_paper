@@ -6,7 +6,7 @@ Method:
   • Population: athlete-seasons with ≥1 individual result in WA [800, 1000).
   • Excludes relays. Sprints (100/200/400) & Distance
     (800/1500/3000m Steeplechase/5000) — corrected steeple WA from
-    New_Steeplechase_Data.
+    new_steeplechase_data.
   • Pooled formula: lowest-CV winner among candidate families (same search
     as prior time models; seed=42, folds=5).
   • Feature formulas: re-fit within feature cohorts (n≥12); pair needs n≥20.
@@ -797,5 +797,5 @@ Coverage / notes
   • Distance includes corrected 3000m Steeplechase WA.
 
 Source:
-  New_Steeplechase_Data/Feature_Importance_Point_Band_Time_Models/generate_new_format_feature_important_time_models.py
+  new_steeplechase_data/Feature_Importance_Point_Band_Time_Models/generate_new_format_feature_important_time_models.py
   Feature importance CV: pair_strategy_cv_by_band_with_steeple.csv

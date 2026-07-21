@@ -8,7 +8,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "Relays_Findings"
+RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "relays_findings"
 sys.path.insert(0, str(RELAYS_FINDINGS))
 
 from analyze_rq1b_nationals_relays import (  # noqa: E402
@@ -63,7 +63,7 @@ def analyze() -> None:
     for year in SEASONS:
         season_header = [
             f"RQ1B — Nationals Top-8 World Athletics Distributions ({year})",
-            "[Distance only — New_Steeplechase_Data / corrected steeplechase WA]",
+            "[Distance only — new_steeplechase_data / corrected steeplechase WA]",
             "Ranking: Finals (or unlabeled nationals rows). Relays by team result_time.",
             "",
         ]
@@ -166,7 +166,7 @@ def analyze() -> None:
     # Combined summary
     lines = [
         "RQ1B — Combined Nationals Top-8 Summary",
-        "[Distance only — New_Steeplechase_Data]",
+        "[Distance only — new_steeplechase_data]",
         "",
     ]
     grouped: dict[tuple, list[dict]] = defaultdict(list)
@@ -189,7 +189,7 @@ def analyze() -> None:
     # 8th-place rankings + thresholds
     rank_lines = [
         "Nationals Top-8 Eighth-Place World Athletics Points — 3-Year Average Rankings",
-        "(Distance only — New_Steeplechase_Data; average of 2024–2026 8th-place WA)",
+        "(Distance only — new_steeplechase_data; average of 2024–2026 8th-place WA)",
         "",
     ]
     thresholds: dict[tuple[str, str], float] = {}

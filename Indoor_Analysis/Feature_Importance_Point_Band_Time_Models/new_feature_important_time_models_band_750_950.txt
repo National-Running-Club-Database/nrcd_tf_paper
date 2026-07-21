@@ -2,7 +2,7 @@ Indoor Feature-Important Time Models — WA Band 750-950 (Width 200)
 ==================================================================
 
 Method:
-  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).
+  • Data: indoor_analysis CSVs 2024–2026 (all dates in files).
   • Population: athlete-seasons with ≥1 individual result in WA [750, 950).
   • Excludes relays. Sprints (60/200/400) & Distance (800/Mile/3000) only.
   • Pooled formula: lowest-CV winner among candidate families (same search
@@ -871,5 +871,5 @@ Coverage / notes
     otherwise use the next-best listed feature or the pooled formula.
 
 Source:
-  Indoor_Analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py
+  indoor_analysis/Feature_Importance_Point_Band_Time_Models/analyze_indoor_feature_importance_point_bands.py
   Feature importance CV: pair_strategy_cv_by_band.csv

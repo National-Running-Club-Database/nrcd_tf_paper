@@ -17,7 +17,7 @@ Method:
     event at the indoor opener meet AND the paired outdoor event at the
     outdoor opener meet.
   • Delta = outdoor_opener_WA − indoor_opener_WA.
-  • Outdoor distance uses New_Steeplechase_Data (corrected WA) when available.
+  • Outdoor distance uses new_steeplechase_data (corrected WA) when available.
   • Relays excluded.
   • Band filter: keep a pair only if outdoor opener WA ∈ [750, 950).
 
@@ -102,4 +102,4 @@ Caveats
   • This file restricts to outdoor opener WA ∈ [750, 950); indoor opener
     WA is unrestricted (may fall outside the band).
 
-Source: Indoor_Analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py
+Source: indoor_analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py

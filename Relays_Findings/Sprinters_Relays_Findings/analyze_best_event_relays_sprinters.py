@@ -9,7 +9,7 @@ from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
 
-PYLIBS = Path(__file__).resolve().parents[2] / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs"
+PYLIBS = Path(__file__).resolve().parents[2] / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs"
 if PYLIBS.exists():
     sys.path.insert(0, str(PYLIBS))
 

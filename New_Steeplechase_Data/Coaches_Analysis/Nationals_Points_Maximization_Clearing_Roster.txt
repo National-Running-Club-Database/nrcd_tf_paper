@@ -6,9 +6,9 @@ Men's vs. Women's Teams — Maximize Total Championship Points (Not Scorer Count
 Based on 2024–2026 NIRCA outdoor data (RQ1B thresholds, RQ1C nationals-margin
 comparisons, national clearing-pool sizes). Relay-inclusive; March 1+ per season.
 
-DATA NOTE: Distance / steeplechase use corrected WA from New_Steeplechase_Data
+DATA NOTE: Distance / steeplechase use corrected WA from new_steeplechase_data
 (steeple 8th-place ≈740 men / ≈752 women). Sprints, hurdles, jumps, throws
-unchanged from Relays_Findings. All five event groups included.
+unchanged from relays_findings. All five event groups included.
 
 Assumption: Many athletes per event group (both genders) already clear the
 8th-place WA threshold for every event in that group.
@@ -398,5 +398,5 @@ SHIFT FROM SCORER-COUNT AND MARGIN-ONLY REPORTS
 
 Source: RQ1B 8th-place thresholds, RQ1C nationals-margin head-to-heads,
 national clearing-pool counts — relay-inclusive outdoor 2024–2026 (March 1+).
-Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.
+Distance/steeple from new_steeplechase_data; other groups from relays_findings.
 Scoring assumed standard 10-8-6-5-4-3-2-1 for places 1–8.

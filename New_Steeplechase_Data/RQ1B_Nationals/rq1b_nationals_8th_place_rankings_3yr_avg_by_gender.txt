@@ -1,6 +1,6 @@
 Nationals Top-8 Eighth-Place World Athletics Points — 3-Year Average Rankings
-(All event groups; relay-inclusive. Steeplechase WA from New_Steeplechase_Data;
- other events from Relays_Findings RQ1B. Average of available 2024–2026 8th-place WA.)
+(All event groups; relay-inclusive. Steeplechase WA from new_steeplechase_data;
+ other events from relays_findings RQ1B. Average of available 2024–2026 8th-place WA.)
 
 ============================================================
 Men — 3-Year Average (2024–2026)

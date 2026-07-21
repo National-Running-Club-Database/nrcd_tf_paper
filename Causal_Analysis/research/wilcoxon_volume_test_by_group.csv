@@ -1,0 +1,11 @@
+n_pairs,n_units,median_more_races_jump,median_fewer_races_jump,median_diff,median_diff_ci_lo,median_diff_ci_hi,wilcoxon_stat,wilcoxon_p_greater,significant_005,gender,event_group
+204,179,16.0,0.0,0.0,0.0,3.0,6768.5,0.00100672282296294,True,Men,Sprints
+365,339,57.0,0.0,16.0,0.4875000000000007,25.0,30992.0,5.150120602577016e-09,True,Men,Distance
+56,51,29.0,35.5,0.0,-11.5,32.0,571.5,0.36741435650407295,False,Men,Hurdles
+60,70,9.0,0.0,0.0,0.0,22.0,557.5,0.32580739061237285,False,Men,Jumps
+71,76,16.0,2.0,0.0,-4.0,10.0,768.0,0.6789725699241607,False,Men,Throws
+91,89,35.0,0.0,14.0,0.0,35.0,1816.5,4.207866171936109e-05,True,Women,Sprints
+126,124,58.0,0.0,28.5,14.0,39.0,4162.0,5.24201972343779e-07,True,Women,Distance
+37,30,42.0,0.0,14.0,0.0,47.04999999999973,301.5,0.0034327371132552636,True,Women,Hurdles
+43,39,38.0,0.0,0.0,-2.5,29.0,376.0,0.08972598179041807,False,Women,Jumps
+36,32,26.5,0.0,11.5,0.0,25.0,348.5,0.008513674656585096,True,Women,Throws

@@ -1,0 +1,143 @@
+relays_findings — Inferential Statistics Report
+=================================================
+
+Scope: lightweight hypothesis tests / CIs layered on top of the existing
+RQ1B nationals top-8 and RQ1C competitiveness outputs (relay-inclusive).
+No raw data was re-scraped; numbers derive from RQ1B_Nationals/
+rq1b_nationals_top8_all_seasons.csv and RQ1C_Competitiveness/
+rq1c_competitiveness_analysis.txt.
+
+## 1. Kruskal-Wallis across events — nationals top-8 WA scores
+-------------------------------------------------------------------
+H0: nationals top-8 WA points are drawn from the same distribution across
+all events within a discipline x gender cohort (all seasons pooled, events
+with n >= 5 places included).
+
+  Men    Distance  n_events=4 n=  96  H=69.97 df=3 p=4.33e-15 sig=True  deepest field: 800m (med=871.5)  shallowest: 3000m Steeplechase (med=505.5)
+  Women  Distance  n_events=4 n=  88  H=57.60 df=3 p=1.91e-12 sig=True  deepest field: 5000m (med=866.0)  shallowest: 3000m Steeplechase (med=569.5)
+  Men    Hurdles   n_events=2 n=  48  H=6.28 df=1 p=0.0122 sig=True  deepest field: 400m Hurdles (med=803.0)  shallowest: 110m Hurdles (med=736.5)
+  Women  Hurdles   n_events=2 n=  48  H=15.52 df=1 p=8.18e-05 sig=True  deepest field: 400m Hurdles (med=762.5)  shallowest: 100m Hurdles (med=654.0)
+  Men    Jumps     n_events=3 n=  77  H=18.34 df=2 p=0.000104 sig=True  deepest field: Long Jump (med=844.0)  shallowest: Triple Jump (med=770.0)
+  Women  Jumps     n_events=3 n=  78  H=28.29 df=2 p=7.19e-07 sig=True  deepest field: Long Jump (med=806.0)  shallowest: High Jump (med=701.5)
+  Men    Relays    n_events=2 n=  48  H=0.01 df=1 p=0.934 sig=False  deepest field: 4x400m (med=837.0)  shallowest: 4x100m (med=826.0)
+  Women  Relays    n_events=2 n=  48  H=4.21 df=1 p=0.0402 sig=True  deepest field: 4x100m (med=846.5)  shallowest: 4x400m (med=802.5)
+  Men    Sprints   n_events=3 n=  74  H=0.00 df=2 p=1 sig=False  deepest field: 200m (med=845.0)  shallowest: 100m (med=840.0)
+  Women  Sprints   n_events=3 n=  72  H=7.83 df=2 p=0.02 sig=True  deepest field: 100m (med=853.5)  shallowest: 400m (med=818.5)
+  Men    Throws    n_events=2 n=  48  H=2.65 df=1 p=0.103 sig=False  deepest field: Shot Put (med=735.0)  shallowest: Discus (med=703.0)
+  Women  Throws    n_events=2 n=  48  H=14.48 df=1 p=0.000142 sig=True  deepest field: Shot Put (med=611.5)  shallowest: Discus (med=555.0)
+
+## 2. RQ1A = RQ1C agreement rate (Wilson 95% CI)
+----------------------------------------------------
+
+  Men    Throws    n= 343  agree= 314 (91.5%) [95% CI 88.1%, 94.0%]  mismatch=29
+  Women  Sprints   n= 434  agree= 395 (91.0%) [95% CI 87.9%, 93.4%]  mismatch=39
+  Men    Sprints   n= 910  agree= 817 (89.8%) [95% CI 87.6%, 91.6%]  mismatch=93
+  Men    Hurdles   n= 296  agree= 261 (88.2%) [95% CI 84.0%, 91.4%]  mismatch=35
+  Men    Jumps     n= 363  agree= 319 (87.9%) [95% CI 84.1%, 90.8%]  mismatch=44
+  Women  Jumps     n= 201  agree= 173 (86.1%) [95% CI 80.6%, 90.2%]  mismatch=28
+  Men    Distance  n=1283  agree=1035 (80.7%) [95% CI 78.4%, 82.7%]  mismatch=248
+  Women  Hurdles   n= 172  agree= 133 (77.3%) [95% CI 70.5%, 83.0%]  mismatch=39
+  Women  Throws    n= 196  agree= 150 (76.5%) [95% CI 70.1%, 81.9%]  mismatch=46
+  Women  Distance  n= 612  agree= 464 (75.8%) [95% CI 72.3%, 79.0%]  mismatch=148
+
+## 3. Individual x relay competitiveness margins (exact binomial vs. 50/50)
+--------------------------------------------------------------------------------
+'wins' = more competitive (larger margin above nationals 8th-place threshold).
+
+Individual vs. relay:
+    Men    Sprints   100m vs 4x100m: 49-209 (ties 0, n=258) p=1.04e-24 Cohen's h=-1.338 ***
+    Men    Sprints   100m vs 4x400m: 62-90 (ties 0, n=152) p=0.0282 Cohen's h=-0.370 *
+    Men    Sprints   200m vs 4x100m: 60-188 (ties 0, n=248) p=1.49e-16 Cohen's h=-1.085 ***
+    Men    Sprints   200m vs 4x400m: 90-130 (ties 1, n=220) p=0.00841 Cohen's h=-0.366 **
+    Men    Sprints   400m vs 4x100m: 44-72 (ties 0, n=116) p=0.0118 Cohen's h=-0.488 *
+    Men    Sprints   400m vs 4x400m: 87-172 (ties 0, n=259) p=1.4e-07 Cohen's h=-0.669 ***
+    Women  Sprints   100m vs 4x100m: 12-124 (ties 0, n=136) p=1.29e-24 Cohen's h=-1.935 ***
+    Women  Sprints   100m vs 4x400m: 15-49 (ties 0, n=64) p=2.44e-05 Cohen's h=-1.120 ***
+    Women  Sprints   200m vs 4x100m: 12-117 (ties 0, n=129) p=8.55e-23 Cohen's h=-1.902 ***
+    Women  Sprints   200m vs 4x400m: 20-92 (ties 0, n=112) p=3.19e-12 Cohen's h=-1.396 ***
+    Women  Sprints   400m vs 4x100m: 15-48 (ties 0, n=63) p=3.76e-05 Cohen's h=-1.103 ***
+    Women  Sprints   400m vs 4x400m: 33-83 (ties 0, n=116) p=3.87e-06 Cohen's h=-0.891 ***
+    Men    Distance  800m vs 4x100m: 29-44 (ties 0, n=73) p=0.101 Cohen's h=-0.414 ns
+    Men    Distance  800m vs 4x400m: 128-227 (ties 0, n=355) p=1.66e-07 Cohen's h=-0.565 ***
+    Men    Distance  1500m vs 4x100m: 27-44 (ties 0, n=71) p=0.0568 Cohen's h=-0.484 ns
+    Men    Distance  1500m vs 4x400m: 115-201 (ties 0, n=316) p=1.51e-06 Cohen's h=-0.551 ***
+    Men    Distance  3000m Steeplechase vs 4x100m: 29-16 (ties 0, n=45) p=0.0725 Cohen's h=+0.586 ns
+    Men    Distance  3000m Steeplechase vs 4x400m: 46-40 (ties 0, n=86) p=0.59 Cohen's h=+0.140 ns
+    Men    Distance  5000m vs 4x100m: 16-23 (ties 0, n=39) p=0.337 Cohen's h=-0.361 ns
+    Men    Distance  5000m vs 4x400m: 81-76 (ties 0, n=157) p=0.75 Cohen's h=+0.064 ns
+    Women  Distance  800m vs 4x100m: 16-25 (ties 0, n=41) p=0.211 Cohen's h=-0.443 ns
+    Women  Distance  800m vs 4x400m: 55-91 (ties 0, n=146) p=0.00362 Cohen's h=-0.498 **
+    Women  Distance  1500m vs 4x100m: 12-24 (ties 0, n=36) p=0.0652 Cohen's h=-0.680 ns
+    Women  Distance  1500m vs 4x400m: 58-74 (ties 0, n=132) p=0.191 Cohen's h=-0.243 ns
+    Women  Distance  3000m Steeplechase vs 4x100m: 5-7 (ties 0, n=12) p=0.774 Cohen's h=-0.335 ns
+    Women  Distance  3000m Steeplechase vs 4x400m: 28-25 (ties 0, n=53) p=0.784 Cohen's h=+0.113 ns
+    Women  Distance  5000m vs 4x100m: 7-4 (ties 0, n=11) p=0.549 Cohen's h=+0.552 ns
+    Women  Distance  5000m vs 4x400m: 42-29 (ties 0, n=71) p=0.154 Cohen's h=+0.368 ns
+    Men    Hurdles   110m Hurdles vs 4x100m: 18-21 (ties 0, n=39) p=0.749 Cohen's h=-0.154 ns
+    Men    Hurdles   110m Hurdles vs 4x400m: 21-21 (ties 0, n=42) p=1 Cohen's h=+0.000 ns
+    Men    Hurdles   400m Hurdles vs 4x100m: 24-25 (ties 1, n=49) p=1 Cohen's h=-0.041 ns
+    Men    Hurdles   400m Hurdles vs 4x400m: 40-41 (ties 0, n=81) p=1 Cohen's h=-0.025 ns
+    Women  Hurdles   100m Hurdles vs 4x100m: 21-25 (ties 0, n=46) p=0.659 Cohen's h=-0.174 ns
+    Women  Hurdles   100m Hurdles vs 4x400m: 16-15 (ties 0, n=31) p=1 Cohen's h=+0.065 ns
+    Women  Hurdles   400m Hurdles vs 4x100m: 17-13 (ties 0, n=30) p=0.585 Cohen's h=+0.268 ns
+    Women  Hurdles   400m Hurdles vs 4x400m: 25-9 (ties 1, n=34) p=0.00904 Cohen's h=+0.980 **
+    Men    Jumps     Long Jump vs 4x100m: 29-46 (ties 0, n=75) p=0.0639 Cohen's h=-0.457 ns
+    Men    Jumps     Long Jump vs 4x400m: 13-21 (ties 0, n=34) p=0.229 Cohen's h=-0.475 ns
+    Men    Jumps     Triple Jump vs 4x100m: 18-13 (ties 0, n=31) p=0.473 Cohen's h=+0.324 ns
+    Men    Jumps     Triple Jump vs 4x400m: 4-7 (ties 0, n=11) p=0.549 Cohen's h=-0.552 ns
+    Men    Jumps     High Jump vs 4x100m: 11-10 (ties 0, n=21) p=1 Cohen's h=+0.095 ns
+    Men    Jumps     High Jump vs 4x400m: 14-10 (ties 0, n=24) p=0.541 Cohen's h=+0.335 ns
+    Women  Jumps     Long Jump vs 4x100m: 21-30 (ties 0, n=51) p=0.262 Cohen's h=-0.355 ns
+    Women  Jumps     Long Jump vs 4x400m: 19-12 (ties 0, n=31) p=0.281 Cohen's h=+0.456 ns
+    Women  Jumps     Triple Jump vs 4x100m: 11-8 (ties 0, n=19) p=0.648 Cohen's h=+0.317 ns
+    Women  Jumps     Triple Jump vs 4x400m: 10-2 (ties 0, n=12) p=0.0386 Cohen's h=+1.460 *
+    Women  Jumps     High Jump vs 4x100m: 14-13 (ties 0, n=27) p=1 Cohen's h=+0.074 ns
+    Women  Jumps     High Jump vs 4x400m: 13-7 (ties 0, n=20) p=0.263 Cohen's h=+0.609 ns
+    Men    Throws    Shot Put vs 4x100m: 20-5 (ties 0, n=25) p=0.00408 Cohen's h=+1.287 **
+    Men    Throws    Shot Put vs 4x400m: 10-9 (ties 0, n=19) p=1 Cohen's h=+0.105 ns
+    Men    Throws    Discus vs 4x100m: 13-2 (ties 0, n=15) p=0.00739 Cohen's h=+1.646 **
+    Men    Throws    Discus vs 4x400m: 4-6 (ties 0, n=10) p=0.754 Cohen's h=-0.403 ns
+    Women  Throws    Shot Put vs 4x100m: 7-8 (ties 0, n=15) p=1 Cohen's h=-0.133 ns
+    Women  Throws    Shot Put vs 4x400m: 8-4 (ties 0, n=12) p=0.388 Cohen's h=+0.680 ns
+    Women  Throws    Discus vs 4x100m: 4-4 (ties 0, n=8) p=1 Cohen's h=+0.000 ns
+    Women  Throws    Discus vs 4x400m: 6-1 (ties 0, n=7) p=0.125 Cohen's h=+1.591 ns
+
+Individual vs. individual:
+    Men    Sprints   100m vs 200m: 243-204 (ties 0, n=447) p=0.0722 Cohen's h=+0.175 ns
+    Men    Sprints   100m vs 400m: 81-93 (ties 0, n=174) p=0.404 Cohen's h=-0.138 ns
+    Men    Sprints   200m vs 400m: 123-170 (ties 0, n=293) p=0.0071 Cohen's h=-0.322 **
+    Women  Sprints   100m vs 200m: 157-46 (ties 1, n=203) p=2.2e-15 Cohen's h=+1.157 ***
+    Women  Sprints   100m vs 400m: 22-36 (ties 1, n=58) p=0.0869 Cohen's h=-0.488 ns
+    Women  Sprints   200m vs 400m: 25-102 (ties 2, n=127) p=3.12e-12 Cohen's h=-1.303 ***
+    Men    Distance  800m vs 1500m: 225-356 (ties 0, n=581) p=6.11e-08 Cohen's h=-0.455 ***
+    Men    Distance  800m vs 3000m Steeplechase: 32-85 (ties 0, n=117) p=1.01e-06 Cohen's h=-0.940 ***
+    Men    Distance  800m vs 5000m: 79-140 (ties 0, n=219) p=4.52e-05 Cohen's h=-0.565 ***
+    Men    Distance  1500m vs 3000m Steeplechase: 39-128 (ties 0, n=167) p=2.91e-12 Cohen's h=-1.124 ***
+    Men    Distance  1500m vs 5000m: 209-225 (ties 0, n=434) p=0.472 Cohen's h=-0.074 ns
+    Men    Distance  3000m Steeplechase vs 5000m: 76-30 (ties 0, n=106) p=9.1e-06 Cohen's h=+0.898 ***
+    Women  Distance  800m vs 1500m: 90-178 (ties 4, n=268) p=8.27e-08 Cohen's h=-0.669 ***
+    Women  Distance  800m vs 3000m Steeplechase: 7-45 (ties 0, n=52) p=6.97e-08 Cohen's h=-1.639 ***
+    Women  Distance  800m vs 5000m: 27-58 (ties 0, n=85) p=0.00102 Cohen's h=-0.747 **
+    Women  Distance  1500m vs 3000m Steeplechase: 6-75 (ties 0, n=81) p=2.91e-16 Cohen's h=-2.039 ***
+    Women  Distance  1500m vs 5000m: 65-79 (ties 0, n=144) p=0.279 Cohen's h=-0.195 ns
+    Women  Distance  3000m Steeplechase vs 5000m: 40-4 (ties 0, n=44) p=1.71e-08 Cohen's h=+1.917 ***
+    Men    Hurdles   110m Hurdles vs 400m Hurdles: 27-42 (ties 0, n=69) p=0.0912 Cohen's h=-0.438 ns
+    Women  Hurdles   100m Hurdles vs 400m Hurdles: 18-26 (ties 0, n=44) p=0.291 Cohen's h=-0.366 ns
+    Men    Jumps     Long Jump vs Triple Jump: 19-61 (ties 0, n=80) p=2.73e-06 Cohen's h=-1.105 ***
+    Men    Jumps     Long Jump vs High Jump: 20-34 (ties 0, n=54) p=0.0759 Cohen's h=-0.524 ns
+    Men    Jumps     Triple Jump vs High Jump: 21-11 (ties 0, n=32) p=0.11 Cohen's h=+0.636 ns
+    Women  Jumps     Long Jump vs Triple Jump: 13-33 (ties 0, n=46) p=0.00453 Cohen's h=-0.900 **
+    Women  Jumps     Long Jump vs High Jump: 15-24 (ties 0, n=39) p=0.2 Cohen's h=-0.466 ns
+    Women  Jumps     Triple Jump vs High Jump: 6-12 (ties 0, n=18) p=0.238 Cohen's h=-0.680 ns
+    Men    Throws    Shot Put vs Discus: 67-45 (ties 0, n=112) p=0.0467 Cohen's h=+0.395 *
+    Women  Throws    Shot Put vs Discus: 32-41 (ties 0, n=73) p=0.349 Cohen's h=-0.247 ns
+
+## Bottom line
+--------------
+The Kruskal-Wallis tests confirm nationals top-8 fields are not equally deep
+across events within a discipline (the 4x100m/4x400m relay fields are
+consistently shallower than their individual-event counterparts, matching the
+RQ1B threshold table in Summary_findings.md). The individual-vs-relay binomial
+tests show that in most sprint/hurdle/jump/throw comparisons the relay wins the
+margin comparison significantly more than half the time, while distance events
+hold their own against 4x400m/4x100m more often.

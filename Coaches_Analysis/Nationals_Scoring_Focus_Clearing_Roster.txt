@@ -313,7 +313,7 @@ When everyone clears, stop chasing accessible bars and start chasing where your
 athletes are furthest above the line with the fewest rivals — and spread them so
 your team isn't fighting itself for the same eight places.
 
-See also: Coaches_Analysis/Nationals_Scoring_Focus_Men_Women.txt (clear-rate
+See also: coaches_analysis/Nationals_Scoring_Focus_Men_Women.txt (clear-rate
 framing for rosters still building toward the nationals bar).
 
 Source: RQ1B nationals 8th-place thresholds, RQ1C nationals-margin head-to-

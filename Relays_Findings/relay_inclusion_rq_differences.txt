@@ -1,7 +1,7 @@
 Impact of Relay Inclusion on RQ1A, RQ1B, and RQ1C
 ==================================================
-Comparison of Non_Relays_Findings/ (individual events only) vs.
-Relays_Findings/ (individual + relay events, team WA credited to each leg).
+Comparison of non_relays_findings/ (individual events only) vs.
+relays_findings/ (individual + relay events, team WA credited to each leg).
 
 Scope: Outdoor track 2024–2026 combined, results on or after March 1.
 Relay scoring: full team World Athletics points assigned to every leg athlete;
@@ -360,14 +360,14 @@ SOURCE FILES
 ======================================================================
 
 Non-relay (baseline):
-  Non_Relays_Findings/*_Events_Counting/best_event_counts_*_2024_2026.txt
-  Non_Relays_Findings/RQ1B_Nationals/rq1b_nationals_8th_place_rankings_3yr_avg_by_gender.txt
-  Non_Relays_Findings/RQ1C_Competitiveness/rq1c_competitiveness_analysis.txt
+  non_relays_findings/*_Events_Counting/best_event_counts_*_2024_2026.txt
+  non_relays_findings/RQ1B_Nationals/rq1b_nationals_8th_place_rankings_3yr_avg_by_gender.txt
+  non_relays_findings/RQ1C_Competitiveness/rq1c_competitiveness_analysis.txt
 
 Relay-inclusive:
-  Relays_Findings/*_Relays_Findings/best_event_counts_*_2024_2026.txt
-  Relays_Findings/RQ1B_Nationals/rq1b_nationals_8th_place_rankings_3yr_avg_by_gender.txt
-  Relays_Findings/RQ1C_Competitiveness/rq1c_competitiveness_analysis.txt
-  Relays_Findings/relay_analysis_trends_summary.txt (relay-only trends)
+  relays_findings/*_relays_findings/best_event_counts_*_2024_2026.txt
+  relays_findings/RQ1B_Nationals/rq1b_nationals_8th_place_rankings_3yr_avg_by_gender.txt
+  relays_findings/RQ1C_Competitiveness/rq1c_competitiveness_analysis.txt
+  relays_findings/relay_analysis_trends_summary.txt (relay-only trends)
 
 Generated: July 2026

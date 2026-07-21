@@ -12,7 +12,7 @@ Method:
     discipline events (max across all seasons/results).
   • Indoor core: 60/200/400, 800/1500/Mile/3000/5000, 60H, LJ/TJ/HJ, Shot.
   • Outdoor core: 100/200/400, 800/1500/5000/steeple, hurdles, jumps, throws.
-  • Outdoor distance uses New_Steeplechase_Data when available.
+  • Outdoor distance uses new_steeplechase_data when available.
 
 INDOOR — best event among 750–950 band athletes
 ===============================================

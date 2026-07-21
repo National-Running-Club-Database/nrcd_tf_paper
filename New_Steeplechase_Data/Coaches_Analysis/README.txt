@@ -1,15 +1,15 @@
-Coaches_Analysis — Rerun with Corrected Steeplechase / Distance Data
+coaches_analysis — Rerun with Corrected Steeplechase / Distance Data
 ====================================================================
 
-This folder mirrors Coaches_Analysis/ using:
+This folder mirrors coaches_analysis/ using:
 
-  • Distance + 3000m Steeplechase: New_Steeplechase_Data RQ1B/RQ1C
+  • Distance + 3000m Steeplechase: new_steeplechase_data RQ1B/RQ1C
     (corrected World Athletics points)
-  • Sprints, Hurdles, Jumps, Throws: Relays_Findings RQ1B/RQ1C
+  • Sprints, Hurdles, Jumps, Throws: relays_findings RQ1B/RQ1C
     (unchanged from the original coaches reports)
 
 All five event groups are included in each report, same structure as
-Coaches_Analysis/.
+coaches_analysis/.
 
 Files
 -----
@@ -22,7 +22,7 @@ Files
   Nationals_Points_Maximization_Clearing_Roster.txt
     Stack thin high-margin events to maximize team points (10-8-6-5-…).
 
-What changed vs. original Coaches_Analysis (distance / steeple only)
+What changed vs. original coaches_analysis (distance / steeple only)
 -------------------------------------------------------------------
   Men's steeple 8th-place bar:   ~456 WA  →  ~740 WA
   Women's steeple 8th-place bar: ~511 WA  →  ~752 WA

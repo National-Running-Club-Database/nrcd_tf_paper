@@ -1,0 +1,74 @@
+new_steeplechase_data — Inferential Statistics Report
+=========================================================
+
+IMPORTANT: this folder holds the CANONICAL, steeplechase-corrected distance
+dataset for this project. Legacy pre-fix steeplechase numbers live in
+relays_findings/Distance_Relays_Findings/ and non_relays_findings/ — see
+DATA_NOTES.txt for the correction magnitude (steeple WA means roughly doubled).
+Any paper text citing distance best-event shares, nationals thresholds, or
+steeplechase WA scores should use the numbers in THIS folder.
+
+No raw data was re-scraped for this research layer; numbers derive from the
+*.txt / *.csv already produced by analyze_rq1_best_event_distance.py and
+analyze_rq1b_nationals_distance.py (plus the legacy relays_findings copies,
+read read-only for comparison).
+
+## 1. RQ1 best-event shares (chi-square vs. uniform + Wilson 95% CI)
+-------------------------------------------------------------------------
+
+Men (n=837): chi2=286.828 df=3 p=7.05e-62
+    1500m                     405 ( 48.4%) [95% CI  45.0%,  51.8%]
+    800m                      204 ( 24.4%) [95% CI  21.6%,  27.4%]
+    5000m                     156 ( 18.6%) [95% CI  16.2%,  21.4%]
+    3000m Steeplechase         72 (  8.6%) [95% CI   6.9%,  10.7%]
+
+Women (n=372): chi2=91.935 df=3 p=8.41e-20
+    1500m                     167 ( 44.9%) [95% CI  39.9%,  50.0%]
+    5000m                      90 ( 24.2%) [95% CI  20.1%,  28.8%]
+    3000m Steeplechase         74 ( 19.9%) [95% CI  16.2%,  24.2%]
+    800m                       41 ( 11.0%) [95% CI   8.2%,  14.6%]
+
+## 2. RQ1 pairwise head-to-head (exact binomial vs. 50/50)
+----------------------------------------------------------------
+
+Men:
+    800m vs 1500m: 232-346 (ties 3, n=578) p=2.42e-06 Cohen's h=-0.397 ***
+    800m vs 3000m Steeplechase: 65-60 (ties 0, n=125) p=0.721 Cohen's h=+0.080 ns
+    800m vs 5000m: 107-111 (ties 1, n=218) p=0.839 Cohen's h=-0.037 ns
+    1500m vs 3000m Steeplechase: 91-79 (ties 1, n=170) p=0.399 Cohen's h=+0.141 ns
+    1500m vs 5000m: 291-142 (ties 1, n=433) p=6.8e-13 Cohen's h=+0.703 ***
+    3000m Steeplechase vs 5000m: 60-48 (ties 1, n=108) p=0.29 Cohen's h=+0.223 ns
+
+Women:
+    800m vs 1500m: 58-214 (ties 0, n=272) p=3.48e-22 Cohen's h=-1.222 ***
+    800m vs 3000m Steeplechase: 7-45 (ties 0, n=52) p=6.97e-08 Cohen's h=-1.639 ***
+    800m vs 5000m: 15-70 (ties 0, n=85) p=1.17e-09 Cohen's h=-1.407 ***
+    1500m vs 3000m Steeplechase: 12-68 (ties 1, n=80) p=1.2e-10 Cohen's h=-1.551 ***
+    1500m vs 5000m: 55-89 (ties 0, n=144) p=0.00577 Cohen's h=-0.477 **
+    3000m Steeplechase vs 5000m: 35-9 (ties 0, n=44) p=0.000106 Cohen's h=+1.264 ***
+
+## 3. Legacy vs. corrected steeplechase best-event share (Fisher's exact test)
+------------------------------------------------------------------------------------
+H0: steeple's share of the best-event pool is the same under legacy and
+corrected WA scoring (2x2 table: steeple vs. all-other-events x legacy vs. corrected).
+
+  Men    legacy:   0/ 827 (0.0% [95% CI 0.0%, 0.5%])  ->  corrected:  72/ 837 (8.6% [95% CI 6.9%, 10.7%])  Δ=+8.6pp  Fisher p=9.37e-23 sig=True
+  Women  legacy:   1/ 367 (0.3% [95% CI 0.1%, 1.5%])  ->  corrected:  74/ 372 (19.9% [95% CI 16.2%, 24.2%])  Δ=+19.6pp  Fisher p=8.81e-23 sig=True
+
+## 4. Kruskal-Wallis across distance events — nationals top-8 WA (corrected steeple)
+-------------------------------------------------------------------------------------------
+H0: nationals top-8 WA points are drawn from the same distribution across all
+distance events (events with n >= 5 places included).
+
+  Men    n_events=4 n=  96  H=42.62 df=3 p=2.96e-09 sig=True  deepest field: 800m (med=871.5)  shallowest: 3000m Steeplechase (med=785.0)
+  Women  n_events=4 n=  88  H=11.68 df=3 p=0.00856 sig=True  deepest field: 5000m (med=866.0)  shallowest: 800m (med=793.0)
+
+## Bottom line
+--------------
+The scoring fix moved steeplechase from an essentially invisible best-event
+(legacy: ~0% men, ~0.3% women) to a real double-digit specialization share
+for both genders (corrected: 8.6% men, 19.9% women) — Fisher's exact test
+rejects equal-share at p<1e-20 for both. The Kruskal-Wallis test confirms
+distance nationals fields are not equally deep across events even after
+correction (steeple's field remains the shallowest for men; 800m is
+shallowest for women).

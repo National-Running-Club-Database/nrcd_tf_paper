@@ -1,7 +1,7 @@
 """Indoor WA point-band time models — width 200 only.
 
 Finds which 200-point World Athletics band yields the most accurate cross-event
-time models using indoor track data only (2024–2026 seasons in Indoor_Analysis).
+time models using indoor track data only (2024–2026 seasons in indoor_analysis).
 
 Method mirrors outdoor Point_Bands_Time_Models/analyze_point_bands_time_models.py:
   • Inclusion: athlete-season in band if ≥1 individual result WA falls in [lo, hi)
@@ -29,7 +29,7 @@ OUTPUT_ROOT = INDOOR_ROOT / "Point_Bands_Time_Models"
 TIME_MODELS_ROOT = PROJECT_ROOT / "time_models"
 MODEL_SEARCH_ROOT = TIME_MODELS_ROOT / "model_search"
 
-sys.path.insert(0, str(PROJECT_ROOT / "Relays_Findings"))
+sys.path.insert(0, str(PROJECT_ROOT / "relays_findings"))
 sys.path.insert(0, str(TIME_MODELS_ROOT))
 sys.path.insert(0, str(MODEL_SEARCH_ROOT))
 
@@ -344,7 +344,7 @@ def write_report(result: dict, path: Path) -> None:
         f"time models on indoor data when band width = {width} points?",
         "",
         "Method:",
-        "  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).",
+        "  • Data: indoor_analysis CSVs 2024–2026 (all dates in files).",
         "  • Events: Sprints (60/200/400) and Distance (800/Mile/3000) only.",
         "  • Excludes relay results.",
         "  • Inclusion: athlete-season enters a band if ≥1 individual result has",
@@ -449,7 +449,7 @@ def write_report(result: dict, path: Path) -> None:
             "    prefer bands with ≥4 pairs and stable coverage.",
             "  • Indoor distance models use Mile/3000m (not outdoor 1500m/5000m).",
             "",
-            "Source: Indoor_Analysis/analyze_indoor_point_bands.py",
+            "Source: indoor_analysis/analyze_indoor_point_bands.py",
         ]
     )
     path.write_text("\n".join(lines).rstrip() + "\n")

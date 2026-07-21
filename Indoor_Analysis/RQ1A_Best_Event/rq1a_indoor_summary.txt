@@ -5,7 +5,7 @@ Question: For athletes competing in multiple events within a discipline,
 which event corresponds to their highest World Athletics point value?
 
 Method: overall best event + pairwise dual-event comparisons (same as outdoor RQ1A).
-Data: Indoor_Analysis CSVs; all dates in files (no outdoor March 1 filter).
+Data: indoor_analysis CSVs; all dates in files (no outdoor March 1 filter).
 Relays: team WA points credited to each leg athlete.
 Not run: RQ1B / RQ1C (no indoor Nationals).
 
@@ -58,4 +58,4 @@ Throws
 
 Scripts
 -------
-  Indoor_Analysis/analyze_indoor_rq1a.py
+  indoor_analysis/analyze_indoor_rq1a.py

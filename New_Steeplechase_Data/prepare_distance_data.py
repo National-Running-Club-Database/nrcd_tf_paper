@@ -1,8 +1,8 @@
-"""Prepare New_Steeplechase_Data distance CSVs for RQ1/RQ1B/RQ1C.
+"""Prepare new_steeplechase_data distance CSVs for RQ1/RQ1B/RQ1C.
 
 Validates gender labels on Relays_Distance_* files. Women's files in
-New_Steeplechase_Data currently appear to be men's datasets; when that
-happens, fall back to Relays_Findings/Distance_Relays_Findings women CSVs
+new_steeplechase_data currently appear to be men's datasets; when that
+happens, fall back to relays_findings/Distance_Relays_Findings women CSVs
 and document the issue.
 """
 
@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 PROJECT = ROOT.parent
-LEGACY_DIST = PROJECT / "Relays_Findings" / "Distance_Relays_Findings"
+LEGACY_DIST = PROJECT / "relays_findings" / "Distance_Relays_Findings"
 OUT_DIST = ROOT / "Distance_Relays_Findings"
 
 SEASONS = ("2024", "2025", "2026")
@@ -62,10 +62,10 @@ def steeple_point_summary(path: Path, gender: str) -> str:
 def main() -> None:
     OUT_DIST.mkdir(parents=True, exist_ok=True)
     notes = [
-        "New_Steeplechase_Data — Distance dataset notes",
+        "new_steeplechase_data — Distance dataset notes",
         "==============================================",
         "",
-        "Source CSVs live in New_Steeplechase_Data/ (Relays_Distance_*).",
+        "Source CSVs live in new_steeplechase_data/ (Relays_Distance_*).",
         "Working copies for analysis are placed in Distance_Relays_Findings/.",
         "",
     ]
@@ -76,7 +76,7 @@ def main() -> None:
             src_old = LEGACY_DIST / name
             dest = OUT_DIST / name
             if not src_new.exists():
-                notes.append(f"[MISSING] {name} in New_Steeplechase_Data")
+                notes.append(f"[MISSING] {name} in new_steeplechase_data")
                 if src_old.exists():
                     shutil.copy2(src_old, dest)
                     notes.append(f"  → copied legacy {name}")
@@ -90,7 +90,7 @@ def main() -> None:
                 )
                 notes.append(
                     "  → This file looks like the opposite gender’s dataset. "
-                    "Using Relays_Findings legacy women/men file instead for this slot."
+                    "Using relays_findings legacy women/men file instead for this slot."
                 )
                 if src_old.exists():
                     shutil.copy2(src_old, dest)
@@ -115,7 +115,7 @@ def main() -> None:
             "",
             "If corrected Women Relays_Distance_* CSVs with female gender labels and",
             "resored steeple WA points become available, replace the files in",
-            "New_Steeplechase_Data/ and re-run prepare_distance_data.py + the RQ scripts.",
+            "new_steeplechase_data/ and re-run prepare_distance_data.py + the RQ scripts.",
             "",
         ]
     )

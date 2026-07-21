@@ -1,0 +1,145 @@
+Cross-Event Time Models — Balanced Athletes — 6 to 10 Races Per Season
+==========================================================================
+
+Population: athlete-seasons with 6–10 valid results in the event group
+  AND specialization = balanced (wa_spread < 50 WA).
+  specialized: wa_spread ≥ 50 WA
+  balanced: wa_spread < 50 WA
+
+Use when race count is 6–10 and specialization status is known.
+Predict time, then convert to WA in the target event table.
+Mean CV median |error| across reported pairs: 0.43s.
+Minimum n = 12 for a cohort formula.
+
+
+Distance — Men
+--------------
+
+1500m -> 800m  (n=24, r=0.931)
+  Model: median_ratio
+  Formula: 800m = 0.480 × 1500m
+  CV median |error|: 0.911s
+  vs pooled 6–10 formula on this cohort: 1.399s (↓0.487s)
+  Ratio 800m/1500m: median 0.480 (IQR 0.476–0.483)
+  Median times in sample: 1500m 270.07s, 800m 130.02s
+
+800m -> 1500m  (n=24, r=0.931)
+  Model: median_ratio
+  Formula: 1500m = 2.083 × 800m
+  CV median |error|: 1.899s
+  vs pooled 6–10 formula on this cohort: 3.827s (↓1.928s)
+  Ratio 1500m/800m: median 2.083 (IQR 2.068–2.098)
+  Median times in sample: 800m 130.02s, 1500m 270.07s
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=45, r=0.915)
+  Model: quadratic
+  Formula: 200m = 0.657 + 1.771×100m + 0.018093×100m²
+  CV median |error|: 0.126s
+  vs pooled 6–10 formula on this cohort: 0.154s (↓0.029s)
+  Ratio 200m/100m: median 2.035 (IQR 2.020–2.047)
+  Median times in sample: 100m 11.36s, 200m 23.21s
+
+200m -> 100m  (n=45, r=0.915)
+  Model: quadratic
+  Formula: 100m = -2.741 + 0.768×200m − 0.006817×200m²
+  CV median |error|: 0.062s
+  vs pooled 6–10 formula on this cohort: 0.082s (↓0.020s)
+  Ratio 100m/200m: median 0.491 (IQR 0.488–0.495)
+  Median times in sample: 200m 23.21s, 100m 11.36s
+
+200m -> 400m  (n=13, r=0.679)
+  Model: quadratic
+  Formula: 400m = 99.301 + -6.031×200m + 0.171313×200m²
+  CV median |error|: 0.410s
+  vs pooled 6–10 formula on this cohort: 0.713s (↓0.304s)
+  Ratio 400m/200m: median 2.227 (IQR 2.210–2.237)
+  Median times in sample: 200m 23.85s, 400m 52.86s
+
+400m -> 200m  (n=13, r=0.679)
+  Model: quadratic
+  Formula: 200m = -42.063 + 2.040×400m − 0.015009×400m²
+  CV median |error|: 0.167s
+  vs pooled 6–10 formula on this cohort: 0.134s (↑0.033s)
+  Ratio 200m/400m: median 0.449 (IQR 0.447–0.453)
+  Median times in sample: 400m 52.86s, 200m 23.85s
+
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=21, r=0.955)
+  Model: log_linear
+  Formula: 200m = exp(0.458 + 1.104×log(100m))
+  CV median |error|: 0.148s
+  vs pooled 6–10 formula on this cohort: 0.136s (↑0.011s)
+  Ratio 200m/100m: median 2.065 (IQR 2.050–2.077)
+  Median times in sample: 100m 12.87s, 200m 26.37s
+
+200m -> 100m  (n=21, r=0.955)
+  Model: binned_ratio
+  Formula: 100m = 200m × ratio_bin(200m)
+  CV median |error|: 0.074s
+  vs pooled 6–10 formula on this cohort: 0.063s (↑0.011s)
+  Ratio 100m/200m: median 0.484 (IQR 0.482–0.488)
+  Median times in sample: 200m 26.37s, 100m 12.87s
+  Binned lookup 200m → 100m (nearest 200m edge):
+    25.04s → ratio 0.489
+    25.61s → ratio 0.483
+    25.89s → ratio 0.490
+    26.19s → ratio 0.484
+    26.27s → ratio 0.486
+    26.45s → ratio 0.486
+    26.90s → ratio 0.487
+    27.39s → ratio 0.483
+    27.90s → ratio 0.483
+    28.85s → ratio 0.477
+    32.52s → ratio 0.476
+
+200m -> 400m  (n=12, r=0.930)
+  Model: quadratic
+  Formula: 400m = -241.855 + 19.653×200m − 0.310924×200m²
+  CV median |error|: 0.430s
+  vs pooled 6–10 formula on this cohort: 0.652s (↓0.222s)
+  Ratio 400m/200m: median 2.295 (IQR 2.270–2.299)
+  Median times in sample: 200m 27.62s, 400m 63.51s
+
+400m -> 200m  (n=12, r=0.930)
+  Model: binned_ratio
+  Formula: 200m = 400m × ratio_bin(400m)
+  CV median |error|: 0.084s
+  vs pooled 6–10 formula on this cohort: 0.072s (↑0.013s)
+  Ratio 200m/400m: median 0.436 (IQR 0.434–0.440)
+  Median times in sample: 400m 63.51s, 200m 27.62s
+  Binned lookup 400m → 200m (nearest 400m edge):
+    57.41s → ratio 0.447
+    59.22s → ratio 0.441
+    59.63s → ratio 0.440
+    60.14s → ratio 0.436
+    60.54s → ratio 0.436
+    63.17s → ratio 0.435
+    63.85s → ratio 0.435
+    64.80s → ratio 0.434
+    64.80s → ratio 0.433
+    65.23s → ratio 0.429
+    66.00s → ratio 0.440
+    67.92s → ratio 0.436
+
+Pair summary
+------------
+  Gender  Group     From     To          n        CV  Formula
+  Men     Distance  1500m    800m       24    0.911s  800m = 0.480 × 1500m
+  Men     Distance  800m     1500m      24    1.899s  1500m = 2.083 × 800m
+  Men     Sprints   100m     200m       45    0.126s  200m = 0.657 + 1.771×100m + 0.018093×100m²
+  Men     Sprints   200m     100m       45    0.062s  100m = -2.741 + 0.768×200m − 0.006817×200m²
+  Men     Sprints   200m     400m       13    0.410s  400m = 99.301 + -6.031×200m + 0.171313×200m²
+  Men     Sprints   400m     200m       13    0.167s  200m = -42.063 + 2.040×400m − 0.015009×400m²
+  Women   Sprints   100m     200m       21    0.148s  200m = exp(0.458 + 1.104×log(100m))
+  Women   Sprints   200m     100m       21    0.074s  100m = 200m × ratio_bin(200m)
+  Women   Sprints   200m     400m       12    0.430s  400m = -241.855 + 19.653×200m − 0.310924×200m²
+  Women   Sprints   400m     200m       12    0.084s  200m = 400m × ratio_bin(400m)
+
+Source: six_to_ten_races_time_models/build_bal_spec_6_to_10_models.py

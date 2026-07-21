@@ -1,6 +1,6 @@
 """RQ1A best-event analysis for indoor track seasons 2024–2026.
 
-Mirrors outdoor Relays_Findings RQ1A (overall + pairwise best event by WA points).
+Mirrors outdoor relays_findings RQ1A (overall + pairwise best event by WA points).
 Does not answer RQ1B/RQ1C (no indoor Nationals).
 
 Season window: all results in the indoor CSVs (typically Dec–March); no outdoor
@@ -20,7 +20,7 @@ from typing import Callable
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 INDOOR_ROOT = Path(__file__).resolve().parent
 OUTPUT_ROOT = INDOOR_ROOT / "RQ1A_Best_Event"
-PYLIBS = PROJECT_ROOT / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs"
+PYLIBS = PROJECT_ROOT / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs"
 if PYLIBS.exists():
     sys.path.insert(0, str(PYLIBS))
 
@@ -542,7 +542,7 @@ def write_summary(path: Path) -> None:
         "which event corresponds to their highest World Athletics point value?",
         "",
         "Method: overall best event + pairwise dual-event comparisons (same as outdoor RQ1A).",
-        "Data: Indoor_Analysis CSVs; all dates in files (no outdoor March 1 filter).",
+        "Data: indoor_analysis CSVs; all dates in files (no outdoor March 1 filter).",
         "Relays: team WA points credited to each leg athlete.",
         "Not run: RQ1B / RQ1C (no indoor Nationals).",
         "",

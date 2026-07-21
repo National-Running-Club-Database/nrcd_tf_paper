@@ -1,0 +1,34 @@
+time_models — Inferential Statistics Report (Feature Importance CV)
+===================================================================
+
+Source: Point_Bands_Time_Models/Feature_Importance_Point_Band_Time_Models/
+        pair_strategy_cv_by_band.csv (5-fold CV median |error|, seconds).
+Tests: Wilcoxon signed-rank on Δ = cv_pooled − cv_best (H1: Δ > 0);
+       exact binomial on beat-rate vs 50%; bootstrap 95% CI (B=2000, seed=2026).
+Note: CV MedAE values are already cross-validated point estimates; bootstrap here
+      reflects variability across event pairs, not re-sampling of athletes.
+
+Feature strategy vs pooled by band
+----------------------------------
+  750-950    n_pairs=22  median Δ=0.344s [0.172, 0.729]  beat_rate=95.5% [78.2%, 99.2%]  Wilcoxon p=2.98e-05  binom p=5.48e-06
+  800-1000   n_pairs=18  median Δ=0.230s [0.031, 0.578]  beat_rate=88.9% [67.2%, 96.9%]  Wilcoxon p=0.000219  binom p=0.000656
+  850-1050   n_pairs=10  median Δ=0.193s [0.071, 0.677]  beat_rate=100.0% [72.2%, 100.0%]  Wilcoxon p=0.000977  binom p=0.000977
+  all        n_pairs=50  median Δ=0.298s [0.126, 0.456]  beat_rate=94.0% [83.8%, 97.9%]  Wilcoxon p=1.2e-09  binom p=1.85e-11
+
+Most frequent winning strategies by band
+----------------------------------------
+  750-950: bal_x_best_event×7, best_is_from×5, from_stronger_wa×3
+  800-1000: bal_x_best_event×4, best_is_from×4, pair_wa_gap_50×4
+  850-1050: bal_x_best_event×6, bal_spec×2, from_stronger_wa×1
+
+Largest pair-level gains (best strategy vs pooled)
+--------------------------------------------------
+  750-950 Men 1500m→5000m  n=83  strategy=pair_wa_gap_50  Δ=14.225s  (pooled=23.915 → best=9.690)
+  750-950 Men 800m→5000m  n=37  strategy=pair_wa_gap_50  Δ=12.830s  (pooled=27.902 → best=15.072)
+  800-1000 Men 1500m→5000m  n=57  strategy=best_is_from  Δ=10.904s  (pooled=21.621 → best=10.717)
+  800-1000 Men 800m→5000m  n=24  strategy=best_is_from  Δ=10.757s  (pooled=32.216 → best=21.458)
+  750-950 Women 1500m→5000m  n=29  strategy=best_event  Δ=3.372s  (pooled=21.682 → best=18.311)
+  750-950 Women 5000m→1500m  n=29  strategy=best_event  Δ=3.012s  (pooled=8.063 → best=5.051)
+  850-1050 Men 1500m→5000m  n=27  strategy=bal_x_best_event  Δ=2.700s  (pooled=18.189 → best=15.489)
+  750-950 Men 800m→1500m  n=124  strategy=bal_x_best_event  Δ=2.370s  (pooled=4.508 → best=2.138)
+

@@ -3,7 +3,7 @@
 Outputs (prefix new_format_):
   new_format_feature_important_time_models_band_{lo}_{hi}_with_steeple.txt
 
-Format matches Indoor_Analysis/.../new_feature_important_time_models_band_750_950.txt:
+Format matches indoor_analysis/.../new_feature_important_time_models_band_750_950.txt:
   feature explanations, formula explanations, per-pair important features,
   and how each recommended feature alters the formula (cohort formulas).
 """
@@ -24,7 +24,7 @@ TIME_MODELS = PROJECT_ROOT / "time_models"
 BAND_FI = TIME_MODELS / "Point_Bands_Time_Models" / "Feature_Importance_Point_Band_Time_Models"
 
 sys.path.insert(0, str(OUTPUT_ROOT))
-sys.path.insert(0, str(PROJECT_ROOT / "Relays_Findings"))
+sys.path.insert(0, str(PROJECT_ROOT / "relays_findings"))
 sys.path.insert(0, str(TIME_MODELS))
 sys.path.insert(0, str(TIME_MODELS / "model_search"))
 sys.path.insert(0, str(TIME_MODELS / "specialized_time_models"))
@@ -361,7 +361,7 @@ def write_band_file(lo: int, hi: int, profiles_by_gg: dict, cv_index: dict) -> P
         f"  • Population: athlete-seasons with ≥1 individual result in WA [{lo}, {hi}).",
         "  • Excludes relays. Sprints (100/200/400) & Distance",
         "    (800/1500/3000m Steeplechase/5000) — corrected steeple WA from",
-        "    New_Steeplechase_Data.",
+        "    new_steeplechase_data.",
         "  • Pooled formula: lowest-CV winner among candidate families (same search",
         f"    as prior time models; seed={CV_SEED}, folds={CV_FOLDS}).",
         f"  • Feature formulas: re-fit within feature cohorts (n≥{MIN_COHORT_N}); "
@@ -556,7 +556,7 @@ def write_band_file(lo: int, hi: int, profiles_by_gg: dict, cv_index: dict) -> P
             "  • Distance includes corrected 3000m Steeplechase WA.",
             "",
             "Source:",
-            "  New_Steeplechase_Data/Feature_Importance_Point_Band_Time_Models/"
+            "  new_steeplechase_data/Feature_Importance_Point_Band_Time_Models/"
             "generate_new_format_feature_important_time_models.py",
             "  Feature importance CV: pair_strategy_cv_by_band_with_steeple.csv",
         ]

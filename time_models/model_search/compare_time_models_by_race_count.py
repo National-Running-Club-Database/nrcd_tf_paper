@@ -22,7 +22,7 @@ from typing import Any
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 TIME_MODELS_ROOT = Path(__file__).resolve().parents[1]
-RELAYS_ROOT = PROJECT_ROOT / "Relays_Findings"
+RELAYS_ROOT = PROJECT_ROOT / "relays_findings"
 OUTPUT_ROOT = Path(__file__).resolve().parent / "race_count"
 BASELINE_ALL_CSV = Path(__file__).resolve().parent / "best_time_models.csv"
 

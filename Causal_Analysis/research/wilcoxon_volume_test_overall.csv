@@ -1,0 +1,2 @@
+n_pairs,n_units,median_more_races_jump,median_fewer_races_jump,median_diff,median_diff_ci_lo,median_diff_ci_hi,wilcoxon_stat,wilcoxon_p_greater,significant_005
+1089,1029,37.0,0.0,4.0,0.0,13.0,243700.0,5.8529153539207305e-18,True

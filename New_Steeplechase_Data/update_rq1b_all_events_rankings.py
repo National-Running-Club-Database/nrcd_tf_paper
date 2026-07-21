@@ -1,7 +1,7 @@
 """Rebuild rq1b_nationals_8th_place_rankings_3yr_avg_by_gender.txt with ALL event groups.
 
-Uses Relays_Findings RQ1B eighth-place WA for every event except 3000m Steeplechase,
-which is taken from New_Steeplechase_Data RQ1B (corrected steeplechase scoring).
+Uses relays_findings RQ1B eighth-place WA for every event except 3000m Steeplechase,
+which is taken from new_steeplechase_data RQ1B (corrected steeplechase scoring).
 """
 
 from __future__ import annotations
@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "RQ1B_Nationals"
 LEGACY_TOP8 = (
-    ROOT.parent / "Relays_Findings" / "RQ1B_Nationals" / "rq1b_nationals_top8_all_seasons.csv"
+    ROOT.parent / "relays_findings" / "RQ1B_Nationals" / "rq1b_nationals_top8_all_seasons.csv"
 )
 NEW_TOP8 = OUTPUT / "rq1b_nationals_top8_all_seasons.csv"
 SEASONS = ("2024", "2025", "2026")
@@ -44,8 +44,8 @@ def main() -> None:
 
     lines = [
         "Nationals Top-8 Eighth-Place World Athletics Points — 3-Year Average Rankings",
-        "(All event groups; relay-inclusive. Steeplechase WA from New_Steeplechase_Data;",
-        " other events from Relays_Findings RQ1B. Average of available 2024–2026 8th-place WA.)",
+        "(All event groups; relay-inclusive. Steeplechase WA from new_steeplechase_data;",
+        " other events from relays_findings RQ1B. Average of available 2024–2026 8th-place WA.)",
         "",
     ]
     thresholds: dict[tuple[str, str], float] = {}
@@ -87,7 +87,7 @@ def main() -> None:
     # Year-by-year all events
     by_year = [
         "Nationals 8th-Place WA by Year and Gender (All Event Groups)",
-        "Steeplechase from New_Steeplechase_Data; other events from Relays_Findings.",
+        "Steeplechase from new_steeplechase_data; other events from relays_findings.",
         "",
     ]
     for year in SEASONS:

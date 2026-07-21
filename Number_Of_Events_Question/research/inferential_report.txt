@@ -1,0 +1,93 @@
+Number of Events Question — Inferential Statistics Report
+=============================================================
+
+Question: Does competing in more races during a season associate with a
+bigger World Athletics (WA) point jump, and does higher volume shift WHEN
+in the season an athlete records their best mark?
+
+Data: athlete_point_jumps_by_season.csv / athlete_best_event_proportion.csv
+(2024-2026 outdoor seasons pooled, relay-inclusive, deduplicated by result_id).
+Total athlete-season-event_group records: 15,128
+
+Design notes (read before citing these numbers)
+---------------------------------------------------
+  - Records are CROSS-SECTIONAL: different athletes and athlete-seasons are
+    compared, including the same athlete across multiple years. Tests here
+    do NOT control for athlete identity, so p-values are optimistic (treat
+    them as descriptive/associative signal, not strict inference).
+  - For a within-athlete (fixed-effects) causal framing of the same volume
+    question, see causal_analysis/research/inferential_report.txt.
+  - Bootstrap: percentile method, 2000 resamples, seed=2026, IID resampling
+    of athlete-season rows within each bin/group.
+  - Athletes with exactly 1 result have point jump = 0 by definition (no
+    second mark to exceed the first); this mechanically anchors the lowest
+    volume bin at 0 in every group.
+
+## 1. Bootstrap 95% CIs for point jump by result-count bin
+---------------------------------------------------------------
+See point_jump_bootstrap_ci_by_bin.csv and plots/point_jump_ci_*.png (bins with >= 10 athlete-seasons).
+
+### Men
+  Sprints    1 results: mean=   0.0 [   0.0,    0.0]  ->  12 results: mean=  55.9 [  37.7,   76.8]  (n=1028->15)
+  Distance   1 results: mean=   0.0 [   0.0,    0.0]  ->   9 results: mean=  87.5 [  61.6,  114.1]  (n=1419->19)
+  Hurdles    1 results: mean=   0.0 [   0.0,    0.0]  ->   7 results: mean= 101.8 [  57.1,  148.0]  (n=925->11)
+  Jumps      1 results: mean=   0.0 [   0.0,    0.0]  ->   6 results: mean=  68.2 [  36.1,  104.9]  (n=941->14)
+  Throws     1 results: mean=   0.0 [   0.0,    0.0]  ->   8 results: mean=  34.8 [  17.2,   53.0]  (n=929->12)
+
+### Women
+  Sprints    1 results: mean=   0.0 [   0.0,    0.0]  ->   9 results: mean=  68.0 [  40.7,  104.5]  (n=486->14)
+  Distance   1 results: mean=   0.0 [   0.0,    0.0]  ->   8 results: mean= 101.4 [  46.4,  181.2]  (n=770->13)
+  Hurdles    1 results: mean=   0.0 [   0.0,    0.0]  ->   6 results: mean=  95.7 [  63.6,  130.9]  (n=505->15)
+  Jumps      1 results: mean=   0.0 [   0.0,    0.0]  ->   6 results: mean=  64.6 [  33.8,   93.3]  (n=510->12)
+  Throws     1 results: mean=   0.0 [   0.0,    0.0]  ->   6 results: mean=  54.2 [  20.4,   95.8]  (n=509->13)
+
+## 2. Spearman correlation — result count vs. point jump
+-------------------------------------------------------------
+H0: rho(result_count, point_jump) = 0. H1 (two-sided): rho != 0.
+
+Overall (all genders/groups pooled): n=15,128  rho=+0.621 [+0.611, +0.630]  p=<1e-300  sig=True
+
+By gender x event group:
+  Men    Sprints   n= 2226  rho=+0.602 [+0.576, +0.627]  p=9.37e-220  sig=True
+  Men    Distance  n= 3298  rho=+0.646 [+0.627, +0.665]  p=<1e-300  sig=True
+  Men    Hurdles   n= 1426  rho=+0.665 [+0.631, +0.697]  p=1.49e-182  sig=True
+  Men    Jumps     n= 1545  rho=+0.612 [+0.580, +0.643]  p=3e-159  sig=True
+  Men    Throws    n= 1512  rho=+0.623 [+0.590, +0.654]  p=2.99e-163  sig=True
+  Women  Sprints   n= 1067  rho=+0.567 [+0.529, +0.604]  p=1.38e-91  sig=True
+  Women  Distance  n= 1633  rho=+0.623 [+0.596, +0.653]  p=1.91e-176  sig=True
+  Women  Hurdles   n=  771  rho=+0.641 [+0.592, +0.686]  p=2.56e-90  sig=True
+  Women  Jumps     n=  837  rho=+0.617 [+0.573, +0.659]  p=4.7e-89  sig=True
+  Women  Throws    n=  813  rho=+0.606 [+0.559, +0.652]  p=1.22e-82  sig=True
+
+## 3. Supplementary — result count vs. best-event-proportion (timing)
+---------------------------------------------------------------------
+H0: rho(result_count, best_event_proportion) = 0, restricted to seasons
+with >= 2 results (proportion is trivially 1.0 for single-meet seasons).
+A positive rho means athletes who race MORE tend to hit their season
+best LATER in the schedule (proportion closer to 1.0).
+
+Overall (>=2 results, pooled): n=7,106  rho=-0.131 [-0.154, -0.106]  p=1.55e-28  sig=True
+
+By gender x event group:
+  Men    Sprints   n= 1198  rho=-0.133 [-0.188, -0.076]  p=3.82e-06  sig=True
+  Men    Distance  n= 1879  rho=-0.086 [-0.132, -0.042]  p=0.00019  sig=True
+  Men    Hurdles   n=  501  rho=-0.152 [-0.238, -0.065]  p=0.00062  sig=True
+  Men    Jumps     n=  604  rho=-0.163 [-0.242, -0.081]  p=5.57e-05  sig=True
+  Men    Throws    n=  583  rho=-0.172 [-0.258, -0.082]  p=2.86e-05  sig=True
+  Women  Sprints   n=  581  rho=-0.148 [-0.229, -0.070]  p=0.000353  sig=True
+  Women  Distance  n=  863  rho=-0.145 [-0.207, -0.079]  p=2e-05  sig=True
+  Women  Hurdles   n=  266  rho=-0.092 [-0.207, +0.033]  p=0.134  sig=False
+  Women  Jumps     n=  327  rho=-0.134 [-0.242, -0.023]  p=0.0156  sig=True
+  Women  Throws    n=  304  rho=-0.189 [-0.306, -0.064]  p=0.000939  sig=True
+
+## Bottom line
+--------------
+Point jump rises with competition volume in a monotone, statistically
+significant way in every gender x event-group slice with adequate sample
+size (bootstrap CIs on the mean/median generally widen but stay positive
+at higher result counts; Spearman rho is positive and significant in most
+slices). This is consistent with -- but on its own weaker evidence than --
+the within-athlete fixed-effects findings in causal_analysis/, because it
+does not separate 'athletes who race more' from 'the same athlete racing
+more'. Read this module's results as descriptive/associative dose-response
+evidence; read causal_analysis/ for the within-athlete association.

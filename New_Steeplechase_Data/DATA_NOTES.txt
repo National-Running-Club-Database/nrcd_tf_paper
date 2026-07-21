@@ -1,7 +1,7 @@
-New_Steeplechase_Data — Distance dataset notes
+new_steeplechase_data — Distance dataset notes
 ==============================================
 
-Source CSVs live in New_Steeplechase_Data/ (Relays_Distance_*).
+Source CSVs live in new_steeplechase_data/ (Relays_Distance_*).
 Working copies for analysis are placed in Distance_Relays_Findings/.
 
 [OK] Relays_Distance_Men_Outdoor_2024_Data.csv gender match 100.0%; steeple: n=161, nonzero=161, mean=458.2, max=877.0

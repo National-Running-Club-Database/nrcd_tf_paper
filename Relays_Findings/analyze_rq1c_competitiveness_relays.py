@@ -104,7 +104,7 @@ def main() -> None:
     thresholds = load_thresholds()
     lines = [
         "RQ1C — Which Event Should Athletes Pursue to Be Most Competitive? [Relay-Inclusive]",
-        "Method: 3-year average nationals 8th-place WA threshold from Relays_Findings RQ1B.",
+        "Method: 3-year average nationals 8th-place WA threshold from relays_findings RQ1B.",
         "RQ1C event = largest margin above (or smallest margin below) the 8th-place nationals threshold.",
         "RQ1A event = highest absolute WA personal best.",
         "Relay events: team WA credited to each leg athlete; clear-rate listings ordered by count clearing bar.",

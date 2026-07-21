@@ -24,7 +24,7 @@ from relay_rq1_data import (
 )
 
 for lib in (
-    NON_RELAYS_ROOT := ROOT.parent / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs",
+    NON_RELAYS_ROOT := ROOT.parent / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs",
 ):
     if lib.exists():
         sys.path.insert(0, str(lib))
@@ -221,7 +221,7 @@ def write_eighth_place_rankings(eighth_by_key: dict[tuple[str, str, str], float]
     lines = [
         "Nationals Top-8 Eighth-Place World Athletics Points — 3-Year Average Rankings",
         "(Relay-inclusive data; average of 2024, 2025, and 2026 8th-place WA scores)",
-        "Source: RQ1B nationals top-8 analysis (Relays_Findings)",
+        "Source: RQ1B nationals top-8 analysis (relays_findings)",
         "",
     ]
     thresholds: dict[tuple[str, str], float] = {}

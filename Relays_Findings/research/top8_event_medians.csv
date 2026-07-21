@@ -1,0 +1,33 @@
+discipline,gender,event_name,n,median_wa,q1_wa,q3_wa
+Sprints,Men,100m,25,840.0,820.0,860.0
+Sprints,Men,200m,25,845.0,814.0,873.0
+Sprints,Men,400m,24,842.0,808.0,887.2
+Distance,Men,800m,24,871.5,854.0,896.0
+Distance,Men,1500m,24,868.0,826.8,892.2
+Distance,Men,5000m,24,817.5,776.0,827.2
+Distance,Men,3000m Steeplechase,24,505.5,490.8,564.8
+Jumps,Men,Long Jump,24,844.0,819.0,870.5
+Jumps,Men,Triple Jump,24,770.0,751.2,811.5
+Jumps,Men,High Jump,29,784.0,758.0,844.0
+Throws,Men,Shot Put,24,735.0,696.2,779.5
+Throws,Men,Discus,24,703.0,688.8,728.2
+Hurdles,Men,110m Hurdles,24,736.5,697.0,773.0
+Hurdles,Men,400m Hurdles,24,803.0,739.5,847.8
+Relays,Men,4x100m,24,826.0,791.2,879.2
+Relays,Men,4x400m,24,837.0,798.2,862.2
+Sprints,Women,100m,24,853.5,829.0,881.2
+Sprints,Women,200m,24,825.5,797.8,839.2
+Sprints,Women,400m,24,818.5,788.2,869.8
+Distance,Women,800m,24,793.0,754.2,827.0
+Distance,Women,1500m,24,837.0,763.8,880.8
+Distance,Women,5000m,16,866.0,805.5,913.5
+Distance,Women,3000m Steeplechase,24,569.5,533.0,617.0
+Jumps,Women,Long Jump,24,806.0,783.5,865.0
+Jumps,Women,Triple Jump,24,792.5,766.0,840.2
+Jumps,Women,High Jump,30,701.5,697.0,744.0
+Throws,Women,Shot Put,24,611.5,589.8,643.2
+Throws,Women,Discus,24,555.0,530.2,591.0
+Hurdles,Women,100m Hurdles,24,654.0,622.8,671.0
+Hurdles,Women,400m Hurdles,24,762.5,701.2,824.2
+Relays,Women,4x100m,24,846.5,784.0,894.0
+Relays,Women,4x400m,24,802.5,773.0,845.8

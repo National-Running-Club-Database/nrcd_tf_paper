@@ -3,8 +3,8 @@
 Only builds models if including steeplechase adds athlete-seasons to the WA bands
 750–950, 800–1000, and/or 850–1050 (vs the prior no-steeple point-band definition).
 
-Distance data: New_Steeplechase_Data/Distance_Relays_Findings (corrected steeple WA).
-Sprints: Relays_Findings/Sprinters_Relays_Findings.
+Distance data: new_steeplechase_data/Distance_Relays_Findings (corrected steeple WA).
+Sprints: relays_findings/Sprinters_Relays_Findings.
 """
 
 from __future__ import annotations
@@ -23,7 +23,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 STEEPLE_ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_ROOT = Path(__file__).resolve().parent
 TIME_MODELS = PROJECT_ROOT / "time_models"
-RELAYS = PROJECT_ROOT / "Relays_Findings"
+RELAYS = PROJECT_ROOT / "relays_findings"
 BAND_FI = TIME_MODELS / "Point_Bands_Time_Models" / "Feature_Importance_Point_Band_Time_Models"
 MODEL_SEARCH = TIME_MODELS / "model_search"
 SPEC_ROOT = TIME_MODELS / "specialized_time_models"
@@ -339,7 +339,7 @@ def write_band_formulas(
         "  • Outdoor 2024–2026, March 1+.",
         f"  • Population: athlete-seasons with ≥1 individual result WA in [{lo}, {hi}).",
         "  • Distance group includes 800m, 1500m, 3000m Steeplechase, 5000m",
-        "    (corrected steeplechase WA from New_Steeplechase_Data).",
+        "    (corrected steeplechase WA from new_steeplechase_data).",
         "  • Relays excluded. Feature routing: bal/spec, best_event, best_is_from,",
         "    pair_wa_gap_50, from_stronger_wa, bal×best_event.",
         f"  • Min pair n={MIN_REPORT_N}; cohort fit n≥{MIN_COHORT_N}.",
@@ -413,7 +413,7 @@ def write_band_formulas(
                 lines.append("")
 
     lines.append(
-        "Source: New_Steeplechase_Data/Feature_Importance_Point_Band_Time_Models/"
+        "Source: new_steeplechase_data/Feature_Importance_Point_Band_Time_Models/"
         "analyze_feature_importance_with_steeple.py"
     )
     (
@@ -579,7 +579,7 @@ def main() -> None:
         "",
         "Bands: 750–950, 800–1000, 850–1050.",
         "Distance events: 800m, 1500m, 3000m Steeplechase, 5000m.",
-        "Steeplechase WA from New_Steeplechase_Data.",
+        "Steeplechase WA from new_steeplechase_data.",
         "",
         "Band membership vs prior (no steeple):",
     ]

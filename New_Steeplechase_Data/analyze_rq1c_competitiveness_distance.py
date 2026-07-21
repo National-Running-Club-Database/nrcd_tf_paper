@@ -1,4 +1,4 @@
-"""RQ1C: Distance-only competitiveness using New_Steeplechase_Data RQ1B thresholds."""
+"""RQ1C: Distance-only competitiveness using new_steeplechase_data RQ1B thresholds."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "Relays_Findings"
+RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "relays_findings"
 sys.path.insert(0, str(RELAYS_FINDINGS))
 
 from analyze_rq1c_competitiveness_relays import (  # noqa: E402
@@ -94,7 +94,7 @@ def main() -> None:
     thresholds = load_thresholds()
     lines = [
         "RQ1C — Which Event Should Athletes Pursue to Be Most Competitive?",
-        "[Distance only — New_Steeplechase_Data / corrected steeplechase WA]",
+        "[Distance only — new_steeplechase_data / corrected steeplechase WA]",
         "Method: 3-year average nationals 8th-place WA threshold from local RQ1B.",
         "RQ1C event = largest margin above (or smallest margin below) the 8th-place nationals threshold.",
         "RQ1A event = highest absolute WA personal best.",

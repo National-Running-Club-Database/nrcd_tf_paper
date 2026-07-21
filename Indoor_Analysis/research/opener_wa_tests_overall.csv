@@ -1,0 +1,2 @@
+n,n_outdoor_higher,n_indoor_higher,n_tie,pct_outdoor_higher,outdoor_higher_ci_lo,outdoor_higher_ci_hi,mean_delta,median_delta,wilcoxon_stat,wilcoxon_p,binomial_p_vs_half,spearman_rho,spearman_p
+218,151,64,3,69.3,0.6381,0.7595,26.97,24.0,6079.0,1.3893572784917376e-09,2.7500373326341323e-09,0.54684197886552,2.122873498959818e-18

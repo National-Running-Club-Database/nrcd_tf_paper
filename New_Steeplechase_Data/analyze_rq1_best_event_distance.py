@@ -1,4 +1,4 @@
-"""RQ1 best-event analysis for New_Steeplechase_Data distance (relay-inclusive)."""
+"""RQ1 best-event analysis for new_steeplechase_data distance (relay-inclusive)."""
 
 from __future__ import annotations
 
@@ -6,7 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
-RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "Relays_Findings"
+RELAYS_FINDINGS = Path(__file__).resolve().parents[1] / "relays_findings"
 sys.path.insert(0, str(RELAYS_FINDINGS))
 
 from relay_best_event_analysis import (  # noqa: E402

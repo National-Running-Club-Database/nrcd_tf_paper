@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import os
 import sys
 from collections import defaultdict
 from dataclasses import dataclass
@@ -10,11 +11,14 @@ from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RELAYS_ROOT = PROJECT_ROOT / "Relays_Findings"
+RELAYS_ROOT = PROJECT_ROOT / "relays_findings"
 OUTPUT_ROOT = Path(__file__).resolve().parent
-PYLIBS = PROJECT_ROOT / "Non_Relays_Findings" / "Sprints_Events_Counting" / ".pylibs"
+PYLIBS = PROJECT_ROOT / "non_relays_findings" / "Sprints_Events_Counting" / ".pylibs"
 if PYLIBS.exists():
     sys.path.insert(0, str(PYLIBS))
+
+# Writable cache for headless / sandboxed runs (avoid unwritable ~/.matplotlib)
+os.environ.setdefault("MPLCONFIGDIR", str(OUTPUT_ROOT / ".mplconfig"))
 
 import matplotlib
 
@@ -36,7 +40,7 @@ DISCIPLINE_FOLDERS = [
 EVENT_MAP = {
     int(r["running_event_id"]): r["event_name"]
     for r in csv.DictReader(
-        open(PROJECT_ROOT / "Non_Relays_Findings" / "Distance_Events_Counting" / "running_event.csv")
+        open(PROJECT_ROOT / "non_relays_findings" / "Distance_Events_Counting" / "running_event.csv")
     )
 }
 
@@ -484,6 +488,11 @@ def main() -> None:
 
     write_findings(deduped_rows, point_jumps, summary, OUTPUT_ROOT / "point_jump_findings.txt")
     print(f"Done. Outputs in {OUTPUT_ROOT}")
+
+    print("\n--- Research statistics & inferential tests ---\n")
+    from research_stats import run_research_stats  # lazy import: avoids circular import
+
+    run_research_stats(point_jump_rows=point_jumps)
 
 
 if __name__ == "__main__":
