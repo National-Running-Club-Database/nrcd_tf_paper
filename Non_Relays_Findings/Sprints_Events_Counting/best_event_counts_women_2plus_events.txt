@@ -1,0 +1,6 @@
+Outdoor Track 2026 Female Sprinters Best Event Count:
+(athletes with results in at least 2 of 100m, 200m, 400m)
+
+100m (89 competed): 64
+200m (119 competed): 20
+400m (56 competed): 38

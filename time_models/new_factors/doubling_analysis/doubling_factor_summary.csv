@@ -1,0 +1,5 @@
+population,factor,description,n_pairs,factor_beats_pooled,joint_beats_pooled,factor_beats_bal_spec,joint_beats_bal_spec,mean_delta_factor_vs_pooled,mean_delta_joint_vs_pooled,mean_delta_factor_vs_bal_spec,mean_delta_joint_vs_bal_spec,best_is_factor,best_is_joint,best_is_bal_spec,best_is_pooled
+5_or_6,double_meet_share,Share of season meets that were doubles (median split),16,7,8,4,5,0.146,0.143,-0.02,-0.023,2,3,8,3
+5_or_6,n_double_meets,Count of double meets in season (median split),16,6,7,5,5,-0.2609,-0.3043,-0.4269,-0.4703,2,4,8,2
+5_or_6,pair_pb_from_double,Any season PB set at a double meet (yes/no),12,5,7,1,6,0.1595,0.2616,-0.038,0.0641,1,5,4,2
+5_or_6,ever_doubled,≥1 meet with 2+ distinct group events (yes/no),8,3,6,1,6,-1.0651,-0.0601,-0.8797,0.1253,0,5,1,2

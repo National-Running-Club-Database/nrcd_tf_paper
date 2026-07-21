@@ -1,0 +1,2 @@
+model,beta_result_count,se_result_count,beta_first_wa,bootstrap_ci_low,bootstrap_ci_high,n_obs,n_units
+global_athlete_event_group_FE,9.8893,0.6714,-0.5033,8.1046,11.7087,2273,1029

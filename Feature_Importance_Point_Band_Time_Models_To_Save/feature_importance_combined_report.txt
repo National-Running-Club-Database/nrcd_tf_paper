@@ -1,0 +1,34 @@
+Feature Importance × Point-Band Time Models — Combined Report
+=============================================================
+
+Does bal/spec, best_event, or related features improve accuracy inside
+the 750–950, 800–1000, and 850–1050 WA bands?
+
+=== Band 750-950 ===
+  pair_wa_gap_50         18/22 mean Δ +1.423s  times_best=3
+  best_is_from           18/22 mean Δ +0.943s  times_best=5
+  bal_x_best_event       17/22 mean Δ +1.181s  times_best=7
+  from_stronger_wa       17/22 mean Δ +0.826s  times_best=3
+  best_event             15/22 mean Δ +0.981s  times_best=3
+  bal_spec               15/22 mean Δ +0.948s  times_best=0
+  pooled best=1/22
+
+=== Band 800-1000 ===
+  from_stronger_wa       11/18 mean Δ +0.418s  times_best=2
+  best_is_from           10/18 mean Δ +1.321s  times_best=4
+  bal_x_best_event       10/18 mean Δ +0.286s  times_best=4
+  pair_wa_gap_50          9/18 mean Δ +0.597s  times_best=4
+  best_event              8/18 mean Δ +0.657s  times_best=1
+  bal_spec                7/18 mean Δ -0.096s  times_best=1
+  pooled best=2/18
+
+=== Band 850-1050 ===
+  bal_x_best_event        8/10 mean Δ +0.460s  times_best=6
+  best_event              8/10 mean Δ +0.356s  times_best=0
+  from_stronger_wa        8/10 mean Δ +0.277s  times_best=1
+  best_is_from            6/10 mean Δ +0.280s  times_best=0
+  bal_spec                6/10 mean Δ +0.144s  times_best=2
+  pair_wa_gap_50          6/10 mean Δ +0.008s  times_best=1
+  pooled best=0/10
+
+Source: analyze_feature_importance_point_bands.py

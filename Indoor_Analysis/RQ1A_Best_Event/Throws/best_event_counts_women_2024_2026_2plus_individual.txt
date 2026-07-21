@@ -1,0 +1,7 @@
+Indoor Track 2024-2026 Female Throws (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+Athletes with results in at least 2 of Shot Put, Discus, Javelin Throw
+
+Shot Put (2 competed): 2
+Discus (2 competed): 0

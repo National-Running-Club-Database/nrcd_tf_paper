@@ -1,0 +1,26 @@
+Short/Long Specialization Time Models — Findings
+================================================
+
+Question: Does knowing Short vs Long sprint (or Mid vs Long distance)
+specialization improve cross-event time prediction?
+
+Definitions require season PBs in all 3 events of the group.
+
+At exactly 6 races:
+  Men Distance: Mid Distance=11, Long Distance=13, miss3=34/58
+  Men Sprints: Short Sprints=7, Long Sprints=8, miss3=23/39
+  Women Distance: Mid Distance=2, Long Distance=1, miss3=8/11
+  Women Sprints: Short Sprints=1, Long Sprints=1, miss3=9/12
+  Cohort models: 5/6 beat pooled; routed 0/6.
+
+At 5 or 6 races (powered sample):
+  Men Distance: Mid Distance=27, Long Distance=34, miss3=79/140
+  Men Sprints: Short Sprints=21, Long Sprints=14, miss3=58/94
+  Women Distance: Mid Distance=8, Long Distance=6, miss3=28/42
+  Women Sprints: Short Sprints=5, Long Sprints=5, miss3=29/40
+  Predictability: Short/Mid better 5/12, Long better 7/12, mean Δ=+2.635s
+  Cohort formulas beat pooled: 12/24 (50%)
+  Routed vs group: 7/12 (58%)
+
+See short_long_specialization_report.txt for pair-level detail.
+Source: analyze_short_long_specialization.py

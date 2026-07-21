@@ -1,0 +1,16 @@
+factor,description,n_pairs,factor_beats_pooled,factor_beats_bal_spec,joint_beats_pooled,joint_beats_bal_spec,best_is_factor,best_is_joint,best_is_bal_spec,best_is_pooled,mean_delta_factor_vs_bal_spec,mean_delta_joint_vs_bal_spec,mean_delta_factor_vs_pooled,median_delta_factor_vs_bal_spec,median_delta_joint_vs_bal_spec
+ability_tier,Max season WA in group: low vs high (median split),8,4,5,5,4,1,2,2,3,1.3187,0.5686,0.32,0.3282,0.0212
+best_event,Identity of best-WA event in the group,8,4,5,4,7,3,3,1,1,1.5854,0.7862,0.5867,0.0578,0.3916
+best_is_from,Athlete's best-WA event is the source event,9,5,7,5,8,2,4,0,3,0.6383,0.7642,-0.2528,0.2513,0.5212
+best_is_to,Athlete's best-WA event is the target event,9,4,5,5,6,3,2,1,3,0.3885,1.0097,-0.5586,0.1902,0.1902
+events_competed,Distinct events raced in group: 2 vs 3+,8,2,5,3,6,2,3,0,3,-0.2258,0.4208,-0.3565,0.0655,0.2632
+from_stronger_wa,Source event has higher WA than target,10,6,6,5,6,3,3,1,3,0.8151,1.8039,-0.0404,0.3216,0.2325
+meet_volume,Unique meets in season: few vs many (median),10,5,6,6,5,4,1,2,3,0.5574,0.3373,-0.2981,0.0554,0.0216
+nationals,Competed at nationals that season (yes/no),10,1,7,2,4,1,2,1,6,0.6446,0.0794,-0.2109,0.0319,0.0045
+pair_wa_gap_50,|WA(from)−WA(to)| ≥ 50 WA points,10,4,9,5,6,4,1,1,4,2.0903,1.2424,1.2348,0.9325,0.0466
+pair_wa_gap_median,|WA(from)−WA(to)| relative to pair median,8,5,7,5,5,5,1,1,1,2.396,1.4452,1.3973,0.991,0.3749
+predict_to_best,Predicting toward the athlete's best-WA event,9,4,5,5,6,3,2,1,3,0.3885,1.0097,-0.5586,0.1902,0.1902
+season_span,Days between first and last race: short vs long (median),10,2,5,4,3,1,1,2,6,0.7466,0.3959,-0.1089,0.0115,0.0
+season_year,Calendar year of the athlete-season,10,2,5,2,1,1,0,2,7,0.7887,-0.0073,-0.0668,0.0158,0.0
+source_ability,Source-event WA low vs high (median),8,2,3,4,3,0,3,1,4,1.12,0.6445,0.1213,-0.0365,0.004
+wa_spread_tertile,Overall WA spread tertile (finer than bal/spec),6,0,4,1,0,0,0,1,5,0.0509,-0.031,-0.029,0.0433,0.0

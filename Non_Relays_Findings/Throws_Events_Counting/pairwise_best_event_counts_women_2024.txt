@@ -1,0 +1,20 @@
+Outdoor Track 2024 Female Throws — Pairwise Best Event Comparison
+(best = highest World Athletics Women's Points per event)
+
+Shot Put vs. Discus (27 athletes competed in both):
+Shot Put best event: 22  vs. Discus best event: 5
+
+Shot Put vs. Hammer Throw (2 athletes competed in both):
+Shot Put best event: 2  vs. Hammer Throw best event: 0
+
+Shot Put vs. Javelin Throw (4 athletes competed in both):
+Shot Put best event: 4  vs. Javelin Throw best event: 0
+
+Discus vs. Hammer Throw (2 athletes competed in both):
+Discus best event: 1  vs. Hammer Throw best event: 1
+
+Discus vs. Javelin Throw (3 athletes competed in both):
+Discus best event: 2  vs. Javelin Throw best event: 1
+
+Hammer Throw vs. Javelin Throw (0 athletes competed in both):
+Hammer Throw best event: 0  vs. Javelin Throw best event: 0

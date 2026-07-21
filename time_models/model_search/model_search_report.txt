@@ -1,0 +1,367 @@
+Cross-Event Time Model Search — Candidate Comparison
+====================================================
+
+Evaluation: 5-fold cross-validation on athlete PB pairs (seed=42).
+Primary metric: CV median absolute error (seconds). Lower is better.
+Baseline: linear_ols from time_models/cross_event_time_models.csv.
+Steeplechase excluded. Data: outdoor 2024–2026, March 1+.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=447)  linear CV med|err|=0.454s
+  WINNER: median_ratio  CV med|err|=0.422s  (↓0.032s vs linear)
+  to = from × median(to/from)
+  Params: x × 2.0440
+    median_ratio             CV med|err|=  0.422s  CV RMSE=  0.919s  Δlinear=+0.032s
+    robust_trimmed_linear    CV med|err|=  0.435s  CV RMSE=  0.909s  Δlinear=+0.019s
+    binned_ratio             CV med|err|=  0.441s  CV RMSE=  0.921s  Δlinear=+0.013s
+    quadratic                CV med|err|=  0.443s  CV RMSE=  0.908s  Δlinear=+0.012s
+    ratio_linear             CV med|err|=  0.446s  CV RMSE=  0.902s  Δlinear=+0.009s
+    log_linear               CV med|err|=  0.452s  CV RMSE=  0.902s  Δlinear=+0.002s
+    linear_ols               CV med|err|=  0.454s  CV RMSE=  0.902s  Δlinear=+0.000s
+    knn_median               CV med|err|=  0.455s  CV RMSE=  0.980s  Δlinear=-0.001s
+
+100m -> 400m  (n=174)  linear CV med|err|=1.990s
+  WINNER: multivariate_ols  CV med|err|=1.337s  (↓0.653s vs linear)
+  400m = a + b×100m + c×200m (requires both inputs)
+  Params: 5.39 + -0.7700×100m + 2.4323×200m
+    multivariate_ols         CV med|err|=  1.337s  CV RMSE=  2.871s  Δlinear=+0.653s
+    chain_residual_adjusted  CV med|err|=  1.350s  CV RMSE=  2.881s  Δlinear=+0.640s
+    binned_ratio             CV med|err|=  1.652s  CV RMSE=  3.832s  Δlinear=+0.338s
+    robust_trimmed_linear    CV med|err|=  1.727s  CV RMSE=  3.719s  Δlinear=+0.263s
+    median_ratio             CV med|err|=  1.747s  CV RMSE=  3.794s  Δlinear=+0.242s
+    knn_median               CV med|err|=  1.815s  CV RMSE=  3.913s  Δlinear=+0.175s
+    log_linear               CV med|err|=  1.957s  CV RMSE=  3.725s  Δlinear=+0.033s
+    ratio_linear             CV med|err|=  1.973s  CV RMSE=  3.725s  Δlinear=+0.017s
+    linear_ols               CV med|err|=  1.990s  CV RMSE=  3.724s  Δlinear=+0.000s
+    quadratic                CV med|err|=  1.993s  CV RMSE=  3.753s  Δlinear=-0.003s
+
+200m -> 100m  (n=447)  linear CV med|err|=0.203s
+  WINNER: quadratic  CV med|err|=0.189s  (↓0.014s vs linear)
+  to = a + b×from + c×from²
+  Params: -3.0616 + 0.8384×x + -0.009142×x²
+    quadratic                CV med|err|=  0.189s  CV RMSE=  0.359s  Δlinear=+0.014s
+    robust_trimmed_linear    CV med|err|=  0.190s  CV RMSE=  0.363s  Δlinear=+0.014s
+    ratio_linear             CV med|err|=  0.191s  CV RMSE=  0.358s  Δlinear=+0.013s
+    log_linear               CV med|err|=  0.193s  CV RMSE=  0.360s  Δlinear=+0.010s
+    binned_ratio             CV med|err|=  0.198s  CV RMSE=  0.378s  Δlinear=+0.006s
+    knn_median               CV med|err|=  0.200s  CV RMSE=  0.374s  Δlinear=+0.003s
+    linear_ols               CV med|err|=  0.203s  CV RMSE=  0.362s  Δlinear=+0.000s
+    median_ratio             CV med|err|=  0.206s  CV RMSE=  0.450s  Δlinear=-0.003s
+
+200m -> 400m  (n=293)  linear CV med|err|=1.331s
+  WINNER: binned_ratio  CV med|err|=1.272s  (↓0.058s vs linear)
+  to = from × median_ratio within 8 speed bins
+  Params: 9 bins (see JSON)
+    binned_ratio             CV med|err|=  1.272s  CV RMSE=  2.898s  Δlinear=+0.058s
+    robust_trimmed_linear    CV med|err|=  1.292s  CV RMSE=  2.915s  Δlinear=+0.039s
+    median_ratio             CV med|err|=  1.305s  CV RMSE=  2.925s  Δlinear=+0.026s
+    log_linear               CV med|err|=  1.319s  CV RMSE=  2.926s  Δlinear=+0.012s
+    knn_median               CV med|err|=  1.320s  CV RMSE=  2.827s  Δlinear=+0.011s
+    linear_ols               CV med|err|=  1.331s  CV RMSE=  2.925s  Δlinear=+0.000s
+    ratio_linear             CV med|err|=  1.349s  CV RMSE=  2.922s  Δlinear=-0.018s
+    quadratic                CV med|err|=  1.381s  CV RMSE=  2.962s  Δlinear=-0.050s
+
+400m -> 100m  (n=174)  linear CV med|err|=0.294s
+  WINNER: robust_trimmed_linear  CV med|err|=0.294s  (↓0.001s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 4.277517419939892, "slope": 0.14191779381713376}
+    robust_trimmed_linear    CV med|err|=  0.294s  CV RMSE=  0.604s  Δlinear=+0.001s
+    linear_ols               CV med|err|=  0.294s  CV RMSE=  0.610s  Δlinear=+0.000s
+    log_linear               CV med|err|=  0.299s  CV RMSE=  0.604s  Δlinear=-0.005s
+    quadratic                CV med|err|=  0.300s  CV RMSE=  0.598s  Δlinear=-0.006s
+    ratio_linear             CV med|err|=  0.305s  CV RMSE=  0.595s  Δlinear=-0.011s
+    knn_median               CV med|err|=  0.320s  CV RMSE=  0.589s  Δlinear=-0.026s
+    binned_ratio             CV med|err|=  0.337s  CV RMSE=  0.678s  Δlinear=-0.042s
+    median_ratio             CV med|err|=  0.382s  CV RMSE=  0.830s  Δlinear=-0.088s
+
+400m -> 200m  (n=293)  linear CV med|err|=0.578s
+  WINNER: robust_trimmed_linear  CV med|err|=0.558s  (↓0.020s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 5.1627445114983, "slope": 0.35441689691386896}
+    robust_trimmed_linear    CV med|err|=  0.558s  CV RMSE=  1.208s  Δlinear=+0.020s
+    ratio_linear             CV med|err|=  0.560s  CV RMSE=  1.206s  Δlinear=+0.018s
+    binned_ratio             CV med|err|=  0.561s  CV RMSE=  1.258s  Δlinear=+0.017s
+    log_linear               CV med|err|=  0.564s  CV RMSE=  1.206s  Δlinear=+0.014s
+    knn_median               CV med|err|=  0.565s  CV RMSE=  1.277s  Δlinear=+0.013s
+    quadratic                CV med|err|=  0.566s  CV RMSE=  1.213s  Δlinear=+0.012s
+    linear_ols               CV med|err|=  0.578s  CV RMSE=  1.207s  Δlinear=+0.000s
+    median_ratio             CV med|err|=  0.586s  CV RMSE=  1.310s  Δlinear=-0.008s
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=204)  linear CV med|err|=0.485s
+  WINNER: median_ratio  CV med|err|=0.484s  (↓0.002s vs linear)
+  to = from × median(to/from)
+  Params: x × 2.1005
+    median_ratio             CV med|err|=  0.484s  CV RMSE=  1.347s  Δlinear=+0.002s
+    linear_ols               CV med|err|=  0.485s  CV RMSE=  1.301s  Δlinear=+0.000s
+    log_linear               CV med|err|=  0.485s  CV RMSE=  1.294s  Δlinear=-0.000s
+    robust_trimmed_linear    CV med|err|=  0.486s  CV RMSE=  1.278s  Δlinear=-0.001s
+    quadratic                CV med|err|=  0.488s  CV RMSE=  1.364s  Δlinear=-0.003s
+    ratio_linear             CV med|err|=  0.495s  CV RMSE=  1.295s  Δlinear=-0.010s
+    binned_ratio             CV med|err|=  0.516s  CV RMSE=  1.385s  Δlinear=-0.030s
+    knn_median               CV med|err|=  0.535s  CV RMSE=  1.490s  Δlinear=-0.050s
+
+100m -> 400m  (n=59)  linear CV med|err|=2.545s
+  WINNER: binned_ratio  CV med|err|=1.686s  (↓0.858s vs linear)
+  to = from × median_ratio within 8 speed bins
+  Params: 9 bins (see JSON)
+    binned_ratio             CV med|err|=  1.686s  CV RMSE=  4.212s  Δlinear=+0.858s
+    multivariate_ols         CV med|err|=  2.228s  CV RMSE=  3.814s  Δlinear=+0.316s
+    median_ratio             CV med|err|=  2.238s  CV RMSE=  4.333s  Δlinear=+0.307s
+    chain_residual_adjusted  CV med|err|=  2.252s  CV RMSE=  4.384s  Δlinear=+0.293s
+    robust_trimmed_linear    CV med|err|=  2.295s  CV RMSE=  4.369s  Δlinear=+0.249s
+    log_linear               CV med|err|=  2.406s  CV RMSE=  4.275s  Δlinear=+0.138s
+    ratio_linear             CV med|err|=  2.498s  CV RMSE=  4.283s  Δlinear=+0.047s
+    linear_ols               CV med|err|=  2.545s  CV RMSE=  4.298s  Δlinear=+0.000s
+    quadratic                CV med|err|=  2.578s  CV RMSE=  5.127s  Δlinear=-0.034s
+    knn_median               CV med|err|=  2.905s  CV RMSE=  5.579s  Δlinear=-0.360s
+
+200m -> 100m  (n=204)  linear CV med|err|=0.209s
+  WINNER: robust_trimmed_linear  CV med|err|=0.189s  (↓0.021s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 3.658433488521231, "slope": 0.34973531729955193}
+    robust_trimmed_linear    CV med|err|=  0.189s  CV RMSE=  0.476s  Δlinear=+0.021s
+    quadratic                CV med|err|=  0.192s  CV RMSE=  0.453s  Δlinear=+0.017s
+    ratio_linear             CV med|err|=  0.193s  CV RMSE=  0.438s  Δlinear=+0.016s
+    binned_ratio             CV med|err|=  0.202s  CV RMSE=  0.466s  Δlinear=+0.008s
+    log_linear               CV med|err|=  0.202s  CV RMSE=  0.459s  Δlinear=+0.007s
+    linear_ols               CV med|err|=  0.209s  CV RMSE=  0.469s  Δlinear=+0.000s
+    knn_median               CV med|err|=  0.220s  CV RMSE=  0.395s  Δlinear=-0.011s
+    median_ratio             CV med|err|=  0.230s  CV RMSE=  0.641s  Δlinear=-0.021s
+
+200m -> 400m  (n=129)  linear CV med|err|=1.888s
+  WINNER: median_ratio  CV med|err|=1.644s  (↓0.244s vs linear)
+  to = from × median(to/from)
+  Params: x × 2.2734
+    median_ratio             CV med|err|=  1.644s  CV RMSE=  3.693s  Δlinear=+0.244s
+    binned_ratio             CV med|err|=  1.758s  CV RMSE=  3.717s  Δlinear=+0.131s
+    robust_trimmed_linear    CV med|err|=  1.760s  CV RMSE=  3.667s  Δlinear=+0.128s
+    ratio_linear             CV med|err|=  1.847s  CV RMSE=  3.544s  Δlinear=+0.041s
+    quadratic                CV med|err|=  1.852s  CV RMSE=  3.425s  Δlinear=+0.037s
+    knn_median               CV med|err|=  1.860s  CV RMSE=  3.692s  Δlinear=+0.028s
+    linear_ols               CV med|err|=  1.888s  CV RMSE=  3.600s  Δlinear=+0.000s
+    log_linear               CV med|err|=  1.957s  CV RMSE=  3.567s  Δlinear=-0.069s
+
+400m -> 100m  (n=59)  linear CV med|err|=0.345s
+  WINNER: log_linear  CV med|err|=0.333s  (↓0.011s vs linear)
+  log(to) = a + b×log(from); multiplicative
+  Params: exp(-0.0601 + 0.6429×log(x))
+    log_linear               CV med|err|=  0.333s  CV RMSE=  0.641s  Δlinear=+0.011s
+    linear_ols               CV med|err|=  0.345s  CV RMSE=  0.643s  Δlinear=+0.000s
+    ratio_linear             CV med|err|=  0.361s  CV RMSE=  0.646s  Δlinear=-0.016s
+    quadratic                CV med|err|=  0.363s  CV RMSE=  0.669s  Δlinear=-0.019s
+    robust_trimmed_linear    CV med|err|=  0.366s  CV RMSE=  0.654s  Δlinear=-0.022s
+    binned_ratio             CV med|err|=  0.389s  CV RMSE=  0.700s  Δlinear=-0.045s
+    knn_median               CV med|err|=  0.450s  CV RMSE=  0.816s  Δlinear=-0.105s
+    median_ratio             CV med|err|=  0.470s  CV RMSE=  0.910s  Δlinear=-0.125s
+
+400m -> 200m  (n=129)  linear CV med|err|=0.673s
+  WINNER: robust_trimmed_linear  CV med|err|=0.661s  (↓0.012s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 3.448725038582591, "slope": 0.38780880897257164}
+    robust_trimmed_linear    CV med|err|=  0.661s  CV RMSE=  1.602s  Δlinear=+0.012s
+    log_linear               CV med|err|=  0.669s  CV RMSE=  1.613s  Δlinear=+0.004s
+    linear_ols               CV med|err|=  0.673s  CV RMSE=  1.616s  Δlinear=+0.000s
+    binned_ratio             CV med|err|=  0.677s  CV RMSE=  1.648s  Δlinear=-0.004s
+    quadratic                CV med|err|=  0.684s  CV RMSE=  1.641s  Δlinear=-0.011s
+    ratio_linear             CV med|err|=  0.685s  CV RMSE=  1.613s  Δlinear=-0.012s
+    median_ratio             CV med|err|=  0.724s  CV RMSE=  1.624s  Δlinear=-0.051s
+    knn_median               CV med|err|=  0.795s  CV RMSE=  1.789s  Δlinear=-0.122s
+
+Distance — Men
+--------------
+
+800m -> 1500m  (n=581)  linear CV med|err|=6.337s
+  WINNER: linear_ols  CV med|err|=6.337s  (↑0.000s vs linear)
+  Baseline: intercept + slope × from_time
+  Params: 27.5942 + 1.8556×x
+    linear_ols               CV med|err|=  6.337s  CV RMSE= 12.181s  Δlinear=+0.000s
+    ratio_linear             CV med|err|=  6.353s  CV RMSE= 12.214s  Δlinear=-0.015s
+    log_linear               CV med|err|=  6.362s  CV RMSE= 12.197s  Δlinear=-0.025s
+    robust_trimmed_linear    CV med|err|=  6.388s  CV RMSE= 12.191s  Δlinear=-0.050s
+    quadratic                CV med|err|=  6.465s  CV RMSE= 12.156s  Δlinear=-0.128s
+    median_ratio             CV med|err|=  6.810s  CV RMSE= 12.426s  Δlinear=-0.473s
+    binned_ratio             CV med|err|=  6.813s  CV RMSE= 12.318s  Δlinear=-0.476s
+    knn_median               CV med|err|=  6.855s  CV RMSE= 13.033s  Δlinear=-0.518s
+
+800m -> 5000m  (n=219)  linear CV med|err|=41.750s
+  WINNER: multivariate_ols  CV med|err|=25.619s  (↓16.131s vs linear)
+  5000m = a + b×800m + c×1500m (requires both inputs)
+  Params: 48.46 + 0.0324×800m + 3.6239×1500m
+    multivariate_ols         CV med|err|= 25.619s  CV RMSE= 46.939s  Δlinear=+16.131s
+    chain_residual_adjusted  CV med|err|= 25.840s  CV RMSE= 46.469s  Δlinear=+15.911s
+    log_linear               CV med|err|= 40.464s  CV RMSE= 67.378s  Δlinear=+1.286s
+    ratio_linear             CV med|err|= 40.674s  CV RMSE= 67.443s  Δlinear=+1.077s
+    quadratic                CV med|err|= 40.905s  CV RMSE= 67.791s  Δlinear=+0.846s
+    linear_ols               CV med|err|= 41.750s  CV RMSE= 67.374s  Δlinear=+0.000s
+    median_ratio             CV med|err|= 41.930s  CV RMSE= 69.038s  Δlinear=-0.180s
+    robust_trimmed_linear    CV med|err|= 43.166s  CV RMSE= 67.261s  Δlinear=-1.416s
+    knn_median               CV med|err|= 43.915s  CV RMSE= 73.457s  Δlinear=-2.165s
+    binned_ratio             CV med|err|= 44.490s  CV RMSE= 71.812s  Δlinear=-2.740s
+
+1500m -> 800m  (n=581)  linear CV med|err|=3.264s
+  WINNER: robust_trimmed_linear  CV med|err|=3.196s  (↓0.067s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 12.144875014278128, "slope": 0.44008874240876034}
+    robust_trimmed_linear    CV med|err|=  3.196s  CV RMSE=  5.814s  Δlinear=+0.067s
+    binned_ratio             CV med|err|=  3.222s  CV RMSE=  5.828s  Δlinear=+0.042s
+    log_linear               CV med|err|=  3.235s  CV RMSE=  5.795s  Δlinear=+0.029s
+    quadratic                CV med|err|=  3.240s  CV RMSE=  5.804s  Δlinear=+0.024s
+    ratio_linear             CV med|err|=  3.243s  CV RMSE=  5.795s  Δlinear=+0.021s
+    linear_ols               CV med|err|=  3.264s  CV RMSE=  5.792s  Δlinear=+0.000s
+    median_ratio             CV med|err|=  3.310s  CV RMSE=  6.030s  Δlinear=-0.046s
+    knn_median               CV med|err|=  3.440s  CV RMSE=  5.921s  Δlinear=-0.176s
+
+1500m -> 5000m  (n=434)  linear CV med|err|=25.922s
+  WINNER: robust_trimmed_linear  CV med|err|=25.474s  (↓0.449s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 25.887190001347903, "slope": 3.671418755192687}
+    robust_trimmed_linear    CV med|err|= 25.474s  CV RMSE= 46.632s  Δlinear=+0.449s
+    median_ratio             CV med|err|= 25.507s  CV RMSE= 46.808s  Δlinear=+0.416s
+    log_linear               CV med|err|= 25.672s  CV RMSE= 46.548s  Δlinear=+0.250s
+    linear_ols               CV med|err|= 25.922s  CV RMSE= 46.528s  Δlinear=+0.000s
+    ratio_linear             CV med|err|= 26.072s  CV RMSE= 46.538s  Δlinear=-0.150s
+    quadratic                CV med|err|= 26.232s  CV RMSE= 46.595s  Δlinear=-0.310s
+    binned_ratio             CV med|err|= 26.646s  CV RMSE= 47.463s  Δlinear=-0.724s
+    knn_median               CV med|err|= 27.850s  CV RMSE= 50.554s  Δlinear=-1.928s
+
+5000m -> 800m  (n=219)  linear CV med|err|=4.694s
+  WINNER: binned_ratio  CV med|err|=4.634s  (↓0.060s vs linear)
+  to = from × median_ratio within 8 speed bins
+  Params: 9 bins (see JSON)
+    binned_ratio             CV med|err|=  4.634s  CV RMSE=  8.037s  Δlinear=+0.060s
+    linear_ols               CV med|err|=  4.694s  CV RMSE=  8.177s  Δlinear=+0.000s
+    robust_trimmed_linear    CV med|err|=  4.707s  CV RMSE=  8.300s  Δlinear=-0.013s
+    ratio_linear             CV med|err|=  4.717s  CV RMSE=  8.184s  Δlinear=-0.023s
+    log_linear               CV med|err|=  4.782s  CV RMSE=  8.183s  Δlinear=-0.088s
+    quadratic                CV med|err|=  4.798s  CV RMSE=  8.203s  Δlinear=-0.104s
+    knn_median               CV med|err|=  4.975s  CV RMSE=  8.773s  Δlinear=-0.281s
+    median_ratio             CV med|err|=  5.436s  CV RMSE=  8.966s  Δlinear=-0.742s
+
+5000m -> 1500m  (n=434)  linear CV med|err|=6.589s
+  WINNER: robust_trimmed_linear  CV med|err|=6.484s  (↓0.105s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 48.05919604760149, "slope": 0.2176066535169407}
+    robust_trimmed_linear    CV med|err|=  6.484s  CV RMSE= 11.318s  Δlinear=+0.105s
+    log_linear               CV med|err|=  6.527s  CV RMSE= 11.326s  Δlinear=+0.062s
+    binned_ratio             CV med|err|=  6.561s  CV RMSE= 11.554s  Δlinear=+0.028s
+    ratio_linear             CV med|err|=  6.564s  CV RMSE= 11.348s  Δlinear=+0.025s
+    linear_ols               CV med|err|=  6.589s  CV RMSE= 11.316s  Δlinear=+0.000s
+    quadratic                CV med|err|=  6.647s  CV RMSE= 11.414s  Δlinear=-0.057s
+    median_ratio             CV med|err|=  6.772s  CV RMSE= 12.433s  Δlinear=-0.182s
+    knn_median               CV med|err|=  6.787s  CV RMSE= 12.257s  Δlinear=-0.198s
+
+Distance — Women
+----------------
+
+800m -> 1500m  (n=272)  linear CV med|err|=8.048s
+  WINNER: ratio_linear  CV med|err|=7.794s  (↓0.254s vs linear)
+  to = from × (a + b×from); speed-dependent ratio
+  Params: x × (2.2792 + -0.001452×x)
+    ratio_linear             CV med|err|=  7.794s  CV RMSE= 14.711s  Δlinear=+0.254s
+    robust_trimmed_linear    CV med|err|=  7.906s  CV RMSE= 14.609s  Δlinear=+0.142s
+    log_linear               CV med|err|=  8.033s  CV RMSE= 14.669s  Δlinear=+0.014s
+    linear_ols               CV med|err|=  8.048s  CV RMSE= 14.648s  Δlinear=+0.000s
+    knn_median               CV med|err|=  8.198s  CV RMSE= 16.120s  Δlinear=-0.150s
+    median_ratio             CV med|err|=  8.309s  CV RMSE= 15.141s  Δlinear=-0.261s
+    binned_ratio             CV med|err|=  8.433s  CV RMSE= 15.071s  Δlinear=-0.385s
+    quadratic                CV med|err|=  8.657s  CV RMSE= 14.712s  Δlinear=-0.610s
+
+800m -> 5000m  (n=85)  linear CV med|err|=48.205s
+  WINNER: chain_residual_adjusted  CV med|err|=33.331s  (↓14.874s vs linear)
+  Uses actual 1500m: adjust 5000m pred by k×(1500m residual from 800m). mid_only_linear CV med|err|=33.331s
+  Params: chain via 1500m + residual k=0.0000
+    chain_residual_adjusted  CV med|err|= 33.331s  CV RMSE= 51.963s  Δlinear=+14.874s
+    multivariate_ols         CV med|err|= 36.742s  CV RMSE= 50.813s  Δlinear=+11.463s
+    median_ratio             CV med|err|= 39.901s  CV RMSE= 77.580s  Δlinear=+8.303s
+    binned_ratio             CV med|err|= 43.491s  CV RMSE= 79.656s  Δlinear=+4.714s
+    robust_trimmed_linear    CV med|err|= 44.245s  CV RMSE= 76.620s  Δlinear=+3.960s
+    quadratic                CV med|err|= 44.501s  CV RMSE= 79.163s  Δlinear=+3.704s
+    log_linear               CV med|err|= 46.046s  CV RMSE= 76.085s  Δlinear=+2.159s
+    ratio_linear             CV med|err|= 46.516s  CV RMSE= 76.263s  Δlinear=+1.689s
+    knn_median               CV med|err|= 47.090s  CV RMSE= 87.392s  Δlinear=+1.115s
+    linear_ols               CV med|err|= 48.205s  CV RMSE= 76.292s  Δlinear=+0.000s
+
+1500m -> 800m  (n=272)  linear CV med|err|=4.051s
+  WINNER: ratio_linear  CV med|err|=3.927s  (↓0.124s vs linear)
+  to = from × (a + b×from); speed-dependent ratio
+  Params: x × (0.5264 + -0.000103×x)
+    ratio_linear             CV med|err|=  3.927s  CV RMSE=  7.289s  Δlinear=+0.124s
+    log_linear               CV med|err|=  3.936s  CV RMSE=  7.305s  Δlinear=+0.114s
+    robust_trimmed_linear    CV med|err|=  3.977s  CV RMSE=  7.361s  Δlinear=+0.073s
+    quadratic                CV med|err|=  4.017s  CV RMSE=  7.252s  Δlinear=+0.033s
+    linear_ols               CV med|err|=  4.051s  CV RMSE=  7.319s  Δlinear=+0.000s
+    median_ratio             CV med|err|=  4.099s  CV RMSE=  7.468s  Δlinear=-0.049s
+    knn_median               CV med|err|=  4.110s  CV RMSE=  7.574s  Δlinear=-0.059s
+    binned_ratio             CV med|err|=  4.298s  CV RMSE=  7.511s  Δlinear=-0.247s
+
+1500m -> 5000m  (n=144)  linear CV med|err|=32.703s
+  WINNER: linear_ols  CV med|err|=32.703s  (↑0.000s vs linear)
+  Baseline: intercept + slope × from_time
+  Params: 113.3090 + 3.3822×x
+    linear_ols               CV med|err|= 32.703s  CV RMSE= 56.416s  Δlinear=+0.000s
+    ratio_linear             CV med|err|= 32.982s  CV RMSE= 56.216s  Δlinear=-0.279s
+    robust_trimmed_linear    CV med|err|= 33.291s  CV RMSE= 56.831s  Δlinear=-0.588s
+    log_linear               CV med|err|= 33.301s  CV RMSE= 56.338s  Δlinear=-0.598s
+    median_ratio             CV med|err|= 34.266s  CV RMSE= 57.200s  Δlinear=-1.563s
+    quadratic                CV med|err|= 34.377s  CV RMSE= 57.144s  Δlinear=-1.674s
+    binned_ratio             CV med|err|= 34.884s  CV RMSE= 57.641s  Δlinear=-2.181s
+    knn_median               CV med|err|= 35.993s  CV RMSE= 62.564s  Δlinear=-3.290s
+
+5000m -> 800m  (n=85)  linear CV med|err|=6.240s
+  WINNER: median_ratio  CV med|err|=5.354s  (↓0.885s vs linear)
+  to = from × median(to/from)
+  Params: x × 0.1341
+    median_ratio             CV med|err|=  5.354s  CV RMSE= 10.384s  Δlinear=+0.885s
+    robust_trimmed_linear    CV med|err|=  5.901s  CV RMSE=  9.517s  Δlinear=+0.339s
+    binned_ratio             CV med|err|=  6.148s  CV RMSE=  9.860s  Δlinear=+0.092s
+    log_linear               CV med|err|=  6.232s  CV RMSE=  9.484s  Δlinear=+0.008s
+    linear_ols               CV med|err|=  6.240s  CV RMSE=  9.509s  Δlinear=+0.000s
+    ratio_linear             CV med|err|=  6.243s  CV RMSE=  9.468s  Δlinear=-0.003s
+    quadratic                CV med|err|=  6.423s  CV RMSE=  9.858s  Δlinear=-0.183s
+    knn_median               CV med|err|=  6.480s  CV RMSE= 11.140s  Δlinear=-0.240s
+
+5000m -> 1500m  (n=144)  linear CV med|err|=8.578s
+  WINNER: robust_trimmed_linear  CV med|err|=8.459s  (↓0.119s vs linear)
+  OLS after trimming large residuals
+  Params: {"intercept": 54.825058684386306, "slope": 0.2232125982801825}
+    robust_trimmed_linear    CV med|err|=  8.459s  CV RMSE= 14.567s  Δlinear=+0.119s
+    log_linear               CV med|err|=  8.468s  CV RMSE= 14.561s  Δlinear=+0.110s
+    linear_ols               CV med|err|=  8.578s  CV RMSE= 14.564s  Δlinear=+0.000s
+    binned_ratio             CV med|err|=  8.602s  CV RMSE= 15.487s  Δlinear=-0.024s
+    ratio_linear             CV med|err|=  8.805s  CV RMSE= 14.558s  Δlinear=-0.227s
+    quadratic                CV med|err|=  9.034s  CV RMSE= 14.594s  Δlinear=-0.456s
+    median_ratio             CV med|err|=  9.219s  CV RMSE= 15.392s  Δlinear=-0.641s
+    knn_median               CV med|err|=  9.642s  CV RMSE= 16.515s  Δlinear=-1.064s
+
+Summary
+-------
+Pairwise comparisons evaluated: 24
+Wins by model (lowest CV median |error|):
+  robust_trimmed_linear: 8
+  median_ratio: 4
+  binned_ratio: 3
+  linear_ols: 2
+  multivariate_ols: 2
+  ratio_linear: 2
+  chain_residual_adjusted: 1
+  log_linear: 1
+  quadratic: 1
+Pairs where winner beats linear by >0.01s CV med|err|: 20/24
+Mean improvement when better than linear: 1.591s
+
+Recommendations
+---------------
+1. Use chain_residual_adjusted when the athlete has run the intermediate event
+   (e.g. 100m+200m -> 400m; 800m+1500m -> 5000m).
+2. Use knn_median or binned_ratio for single-input pairs where they beat linear
+   (often 100m->400m and long distance hops).
+3. Keep linear_ols where it wins — it is simple and often optimal for adjacent
+   sprint pairs (100m<->200m).
+
+Source: time_models/model_search/compare_time_model_candidates.py

@@ -1,0 +1,283 @@
+Cross-Event Time Models — WA Point Band 750-950 (Width 200) (Sprints & Distance)
+=====================================================================================
+
+Method:
+  • Data: outdoor CSVs, 2024–2026, results on or after March 1.
+  • Population: athlete-seasons with ≥1 individual (non-relay, non-steeple)
+    result in World Athletics points [750, 950).
+  • Athlete-season PB: fastest valid mark per event within that season (WA > 0).
+  • Model selection: 5-fold cross-validation across 8+ candidate model families;
+    the formula below is the lowest-CV-median-|error| winner for each pair.
+  • Relays and 3000m Steeplechase excluded. Sprints and Distance only.
+  • Minimum n = 20 athlete-season pairs required to report a model.
+  • CV settings: seed=42, folds=5.
+
+Use:
+  • Apply when the athlete has at least one season result in WA band 750-950.
+  • Predict time in the unknown event from known PB(s), then convert predicted
+    time to World Athletics points in the TARGET event table.
+  • Treat CV median |error| as the typical ± uncertainty band (cross-validated).
+  • Do not compare WA across events directly.
+
+Coverage note:
+  22 of 24 event pairs met n ≥ 20 in band 750-950 (556 athlete-seasons).
+  Mean CV median |error| across reported pairs: 3.871s.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=168 athlete-seasons, r=0.577)
+  Model: knn_median
+  Formula: k=20 nearest neighbors
+  CV median |error|: 0.258s
+  Ratio 200m/100m: median 2.029 (IQR 1.995–2.059)
+  Median times in sample: 100m 11.28s, 200m 22.88s
+
+100m -> 400m  (n=36 athlete-seasons, r=0.028)
+  Model: log_linear (multiplicative)
+  Formula: 400m = exp(3.768 + 0.074×log(100m))
+  CV median |error|: 1.056s | full-sample median |error|: 1.014s
+  Ratio 400m/100m: median 4.496 (IQR 4.326–4.645)
+  Median times in sample: 100m 11.41s, 400m 51.56s
+
+200m -> 100m  (n=168 athlete-seasons, r=0.577)
+  Model: knn_median
+  Formula: k=20 nearest neighbors
+  CV median |error|: 0.115s
+  Ratio 100m/200m: median 0.493 (IQR 0.486–0.501)
+  Median times in sample: 200m 22.88s, 100m 11.28s
+
+200m -> 400m  (n=74 athlete-seasons, r=0.093)
+  Model: knn_median
+  Formula: k=20 nearest neighbors
+  CV median |error|: 0.745s
+  Ratio 400m/200m: median 2.226 (IQR 2.167–2.270)
+  Median times in sample: 200m 23.04s, 400m 51.38s
+
+400m -> 100m  (n=36 athlete-seasons, r=0.028)
+  Model: robust_trimmed_linear
+  Formula: 100m = 11.405 + 0.001 × 400m
+  CV median |error|: 0.312s | full-sample median |error|: 0.281s
+  Ratio 100m/400m: median 0.222 (IQR 0.215–0.230)
+  Median times in sample: 400m 51.56s, 100m 11.41s
+
+400m -> 200m  (n=74 athlete-seasons, r=0.093)
+  Model: robust_trimmed_linear
+  Formula: 200m = 20.943 + 0.040 × 400m
+  CV median |error|: 0.401s | full-sample median |error|: 0.408s
+  Ratio 200m/400m: median 0.449 (IQR 0.440–0.461)
+  Median times in sample: 400m 51.38s, 200m 23.04s
+
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=73 athlete-seasons, r=0.652)
+  Model: median_ratio
+  Formula: 200m = 2.068 × 100m
+  CV median |error|: 0.409s | full-sample median |error|: 0.418s
+  Ratio 200m/100m: median 2.068 (IQR 2.037–2.100)
+  Median times in sample: 100m 12.96s, 200m 26.86s
+
+100m -> 400m  (n=24 athlete-seasons, r=0.420)
+  Model: quadratic
+  Formula: 400m = -576.318 + 92.904×100m − 3.376927×100m²
+  CV median |error|: 1.488s | full-sample median |error|: 1.329s
+  Ratio 400m/100m: median 4.603 (IQR 4.483–4.745)
+  Median times in sample: 100m 13.04s, 400m 60.86s
+
+200m -> 100m  (n=73 athlete-seasons, r=0.652)
+  Model: linear OLS
+  Formula: 100m = 4.363 + 0.320 × 200m
+  CV median |error|: 0.161s | full-sample median |error|: 0.163s
+  Ratio 100m/200m: median 0.484 (IQR 0.476–0.491)
+  Median times in sample: 200m 26.86s, 100m 12.96s
+
+200m -> 400m  (n=34 athlete-seasons, r=0.707)
+  Model: binned_ratio (speed bins)
+  Formula: 400m = 200m × ratio_bin(200m)  [nearest speed bin; see binned table below]
+  CV median |error|: 0.449s | full-sample median |error|: 0.410s
+  Binned lookup for 200m -> 400m (use ratio at nearest 200m edge):
+    nearest 200m edge 25.65s -> ratio 2.234
+    nearest 200m edge 26.16s -> ratio 2.272
+    nearest 200m edge 26.46s -> ratio 2.299
+    nearest 200m edge 26.63s -> ratio 2.257
+    nearest 200m edge 26.81s -> ratio 2.270
+    nearest 200m edge 27.62s -> ratio 2.230
+    nearest 200m edge 27.88s -> ratio 2.236
+    nearest 200m edge 28.11s -> ratio 2.218
+    nearest 200m edge 28.70s -> ratio 2.174
+  Ratio 400m/200m: median 2.238 (IQR 2.217–2.280)
+  Median times in sample: 200m 26.70s, 400m 61.22s
+
+400m -> 100m  (n=24 athlete-seasons, r=0.420)
+  Model: robust_trimmed_linear
+  Formula: 100m = 10.337 + 0.044 × 400m
+  CV median |error|: 0.190s | full-sample median |error|: 0.191s
+  Ratio 100m/400m: median 0.217 (IQR 0.210–0.223)
+  Median times in sample: 400m 60.86s, 100m 13.04s
+
+400m -> 200m  (n=34 athlete-seasons, r=0.707)
+  Model: binned_ratio (speed bins)
+  Formula: 200m = 400m × ratio_bin(400m)  [nearest speed bin; see binned table below]
+  CV median |error|: 0.258s | full-sample median |error|: 0.211s
+  Binned lookup for 400m -> 200m (use ratio at nearest 400m edge):
+    nearest 400m edge 57.37s -> ratio 0.448
+    nearest 400m edge 58.26s -> ratio 0.454
+    nearest 400m edge 59.89s -> ratio 0.438
+    nearest 400m edge 60.79s -> ratio 0.445
+    nearest 400m edge 61.34s -> ratio 0.444
+    nearest 400m edge 62.06s -> ratio 0.449
+    nearest 400m edge 62.31s -> ratio 0.449
+    nearest 400m edge 62.75s -> ratio 0.436
+    nearest 400m edge 65.84s -> ratio 0.417
+  Ratio 200m/400m: median 0.447 (IQR 0.436–0.451)
+  Median times in sample: 400m 61.22s, 200m 26.70s
+
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=83 athlete-seasons, r=0.515)
+  Model: binned_ratio (speed bins)
+  Formula: 5000m = 1500m × ratio_bin(1500m)  [nearest speed bin; see binned table below]
+  CV median |error|: 18.535s | full-sample median |error|: 16.011s
+  Binned lookup for 1500m -> 5000m (use ratio at nearest 1500m edge):
+    nearest 1500m edge 236.28s -> ratio 3.860
+    nearest 1500m edge 238.74s -> ratio 3.821
+    nearest 1500m edge 240.63s -> ratio 3.794
+    nearest 1500m edge 243.22s -> ratio 3.804
+    nearest 1500m edge 244.94s -> ratio 3.774
+    nearest 1500m edge 246.53s -> ratio 3.744
+    nearest 1500m edge 247.79s -> ratio 3.806
+    nearest 1500m edge 250.48s -> ratio 3.611
+    nearest 1500m edge 257.60s -> ratio 3.831
+  Ratio 5000m/1500m: median 3.795 (IQR 3.701–3.875)
+  Median times in sample: 1500m 244.41s, 5000m 916.91s
+
+1500m -> 800m  (n=124 athlete-seasons, r=0.107)
+  Model: knn_median
+  Formula: k=20 nearest neighbors
+  CV median |error|: 1.877s
+  Ratio 800m/1500m: median 0.487 (IQR 0.473–0.497)
+  Median times in sample: 1500m 245.55s, 800m 119.29s
+
+5000m -> 1500m  (n=83 athlete-seasons, r=0.515)
+  Model: linear OLS
+  Formula: 1500m = 173.637 + 0.076 × 5000m
+  CV median |error|: 3.221s | full-sample median |error|: 2.966s
+  Ratio 1500m/5000m: median 0.263 (IQR 0.258–0.270)
+  Median times in sample: 5000m 916.91s, 1500m 244.41s
+
+5000m -> 800m  (n=37 athlete-seasons, r=-0.322)
+  Model: robust_trimmed_linear
+  Formula: 800m = 142.824 + -0.024 × 5000m
+  CV median |error|: 2.843s | full-sample median |error|: 2.372s
+  Ratio 800m/5000m: median 0.131 (IQR 0.126–0.133)
+  Median times in sample: 5000m 919.47s, 800m 119.86s
+
+800m -> 1500m  (n=124 athlete-seasons, r=0.107)
+  Model: binned_ratio (speed bins)
+  Formula: 1500m = 800m × ratio_bin(800m)  [nearest speed bin; see binned table below]
+  CV median |error|: 3.471s | full-sample median |error|: 3.282s
+  Binned lookup for 800m -> 1500m (use ratio at nearest 800m edge):
+    nearest 800m edge 114.08s -> ratio 2.153
+    nearest 800m edge 116.08s -> ratio 2.066
+    nearest 800m edge 117.51s -> ratio 2.063
+    nearest 800m edge 118.66s -> ratio 2.067
+    nearest 800m edge 119.43s -> ratio 2.103
+    nearest 800m edge 120.25s -> ratio 2.048
+    nearest 800m edge 121.85s -> ratio 2.018
+    nearest 800m edge 124.73s -> ratio 1.970
+    nearest 800m edge 129.37s -> ratio 1.882
+  Ratio 1500m/800m: median 2.053 (IQR 2.010–2.108)
+  Median times in sample: 800m 119.29s, 1500m 245.55s
+
+800m -> 5000m  (n=37 athlete-seasons, r=-0.322)
+  Model: multivariate_ols (two inputs required)
+  Formula: 5000m = 224.48 + -5.386×800m + 5.578×1500m
+  CV median |error|: 17.761s
+  Ratio 5000m/800m: median 7.660 (IQR 7.544–7.926)
+  Median times in sample: 800m 119.86s, 5000m 919.47s
+
+
+Distance — Women
+----------------
+
+1500m -> 5000m  (n=29 athlete-seasons, r=0.734)
+  Model: quadratic
+  Formula: 5000m = -4285.026 + 33.604×1500m − 0.052067×1500m²
+  CV median |error|: 19.628s | full-sample median |error|: 19.155s
+  Ratio 5000m/1500m: median 3.699 (IQR 3.625–3.786)
+  Median times in sample: 1500m 296.18s, 5000m 1099.36s
+
+1500m -> 800m  (n=47 athlete-seasons, r=0.345)
+  Model: median_ratio
+  Formula: 800m = 0.498 × 1500m
+  CV median |error|: 2.140s | full-sample median |error|: 2.198s
+  Ratio 800m/1500m: median 0.498 (IQR 0.485–0.505)
+  Median times in sample: 1500m 295.37s, 800m 146.41s
+
+5000m -> 1500m  (n=29 athlete-seasons, r=0.734)
+  Model: robust_trimmed_linear
+  Formula: 1500m = 127.437 + 0.154 × 5000m
+  CV median |error|: 5.543s | full-sample median |error|: 5.352s
+  Ratio 1500m/5000m: median 0.270 (IQR 0.264–0.276)
+  Median times in sample: 5000m 1099.36s, 1500m 296.18s
+
+800m -> 1500m  (n=47 athlete-seasons, r=0.345)
+  Model: median_ratio
+  Formula: 1500m = 2.007 × 800m
+  CV median |error|: 4.298s | full-sample median |error|: 4.412s
+  Ratio 1500m/800m: median 2.007 (IQR 1.981–2.059)
+  Median times in sample: 800m 146.41s, 1500m 295.37s
+
+Not reported for Distance — Women (n < 20 athlete-season pairs):
+  800m -> 5000m, 5000m -> 800m
+
+Pair summary tables
+-------------------
+
+Sprints — Men (band 750-950)
+  From     To           n      r  CV Med|err|  Formula
+  100m     200m       168  0.577       0.258s  k=20 nearest neighbors
+  100m     400m        36  0.028       1.056s  400m = exp(3.768 + 0.074×log(100m))
+  200m     100m       168  0.577       0.115s  k=20 nearest neighbors
+  200m     400m        74  0.093       0.745s  k=20 nearest neighbors
+  400m     100m        36  0.028       0.312s  100m = 11.405 + 0.001 × 400m
+  400m     200m        74  0.093       0.401s  200m = 20.943 + 0.040 × 400m
+
+Sprints — Women (band 750-950)
+  From     To           n      r  CV Med|err|  Formula
+  100m     200m        73  0.652       0.409s  200m = 2.068 × 100m
+  100m     400m        24  0.420       1.488s  400m = -576.318 + 92.904×100m − 3.376927×100m²
+  200m     100m        73  0.652       0.161s  100m = 4.363 + 0.320 × 200m
+  200m     400m        34  0.707       0.449s  400m = 200m × ratio_bin(200m)  [nearest speed bin; see binned table below]
+  400m     100m        24  0.420       0.190s  100m = 10.337 + 0.044 × 400m
+  400m     200m        34  0.707       0.258s  200m = 400m × ratio_bin(400m)  [nearest speed bin; see binned table below]
+
+Distance — Men (band 750-950)
+  From     To           n      r  CV Med|err|  Formula
+  1500m    5000m       83  0.515      18.535s  5000m = 1500m × ratio_bin(1500m)  [nearest speed bin; see binned table below]
+  1500m    800m       124  0.107       1.877s  k=20 nearest neighbors
+  5000m    1500m       83  0.515       3.221s  1500m = 173.637 + 0.076 × 5000m
+  5000m    800m        37 -0.322       2.843s  800m = 142.824 + -0.024 × 5000m
+  800m     1500m      124  0.107       3.471s  1500m = 800m × ratio_bin(800m)  [nearest speed bin; see binned table below]
+  800m     5000m       37 -0.322      17.761s  5000m = 224.48 + -5.386×800m + 5.578×1500m
+
+Distance — Women (band 750-950)
+  From     To           n      r  CV Med|err|  Formula
+  1500m    5000m       29  0.734      19.628s  5000m = -4285.026 + 33.604×1500m − 0.052067×1500m²
+  1500m    800m        47  0.345       2.140s  800m = 0.498 × 1500m
+  5000m    1500m       29  0.734       5.543s  1500m = 127.437 + 0.154 × 5000m
+  800m     1500m       47  0.345       4.298s  1500m = 2.007 × 800m
+
+When to use these vs other formula sets
+---------------------------------------
+  • Use these when filtering by WA point band membership (width 200).
+  • See also time_models_higher_races_formulas.txt (6 races),
+    time_models_5_races_formulas.txt (5 races), and
+    cross_event_time_models_report.txt (full sample).
+
+Source: Point_Bands_Time_Models/generate_point_band_formulas.py

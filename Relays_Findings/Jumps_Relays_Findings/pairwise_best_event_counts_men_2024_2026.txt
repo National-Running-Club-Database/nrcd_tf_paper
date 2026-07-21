@@ -1,0 +1,34 @@
+Outdoor Track 2024-2026 Male Jumps (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+Long Jump vs. Triple Jump (80 athletes in both):
+Long Jump best event: 42  vs. Triple Jump best event: 38
+
+Long Jump vs. High Jump (54 athletes in both):
+Long Jump best event: 30  vs. High Jump best event: 24
+
+Triple Jump vs. High Jump (32 athletes in both):
+Triple Jump best event: 19  vs. High Jump best event: 13
+
+Long Jump vs. 4x100m (75 athletes in both):
+Long Jump best event: 33  vs. 4x100m best event: 41
+(ties: 1)
+
+Long Jump vs. 4x400m (34 athletes in both):
+Long Jump best event: 14  vs. 4x400m best event: 20
+
+Triple Jump vs. 4x100m (31 athletes in both):
+Triple Jump best event: 14  vs. 4x100m best event: 17
+
+Triple Jump vs. 4x400m (11 athletes in both):
+Triple Jump best event: 3  vs. 4x400m best event: 8
+
+High Jump vs. 4x100m (21 athletes in both):
+High Jump best event: 9  vs. 4x100m best event: 12
+
+High Jump vs. 4x400m (24 athletes in both):
+High Jump best event: 14  vs. 4x400m best event: 10
+
+4x100m vs. 4x400m (205 athletes in both):
+4x100m best event: 108  vs. 4x400m best event: 96
+(ties: 1)

@@ -1,0 +1,45 @@
+Point-Band Time Models — Findings (Widths 100 / 150 / 200)
+=========================================================
+
+Question: Which WA point band produces the most accurate time models?
+
+Inclusion: ≥1 individual result (non-relay, non-steeple) in the band.
+Bands: width W with starts every 50 points (overlapping).
+Groups: Sprints and Distance only.
+
+Band width 100:
+  Best band: 850-950  mean CV 2.412s (10 pairs, 184 athlete-seasons)
+    850-950: 2.412s (10 pairs)
+    800-900: 3.111s (16 pairs)
+    750-850: 3.912s (22 pairs)
+    700-800: 4.139s (24 pairs)
+    650-750: 4.774s (24 pairs)
+  Unbanded all: 6.768s (Δ best−all = -4.356s)
+
+Band width 150:
+  Best band: 850-1000  mean CV 2.412s (10 pairs, 187 athlete-seasons)
+    850-1000: 2.412s (10 pairs)
+    800-950: 3.131s (16 pairs)
+    750-900: 3.887s (22 pairs)
+    700-850: 4.494s (24 pairs)
+    650-800: 5.005s (24 pairs)
+  Unbanded all: 6.768s (Δ best−all = -4.356s)
+
+Band width 200:
+  Best band: 850-1050  mean CV 2.412s (10 pairs, 187 athlete-seasons)
+    850-1050: 2.412s (10 pairs)
+    800-1000: 2.838s (18 pairs)
+    750-950: 3.871s (22 pairs)
+    700-900: 4.528s (24 pairs)
+    650-850: 5.046s (24 pairs)
+  Unbanded all: 6.768s (Δ best−all = -4.356s)
+
+Across widths, most accurate bands:
+  width 100: 850-950 (2.412s)
+  width 150: 850-1000 (2.412s)
+  width 200: 850-1050 (2.412s)
+
+Lowest mean CV among width-winners: width 150 band 850-1000 at 2.412s (compare within width; pair sets differ).
+
+See point_band_report_width_*.txt for full leaderboards.
+Source: analyze_point_bands_time_models.py

@@ -1,0 +1,46 @@
+New Factors Beyond Balanced/Specialized — Findings (5 or 6 Races Per Season)
+=================================================================================
+
+Question: Besides balanced vs specialized (wa_spread ≥ 50), what else
+improves cross-event time models for 5 or 6 races athlete-seasons?
+
+Helpful secondary factors:
+  • pair_wa_gap_50: |WA(from)−WA(to)| ≥ 50 WA points
+    joint>bal_spec 14/16 (mean Δ +1.664s); factor alone>bal_spec 15/16
+  • pair_wa_gap_median: |WA(from)−WA(to)| relative to pair median
+    joint>bal_spec 14/16 (mean Δ +1.262s); factor alone>bal_spec 12/16
+  • from_stronger_wa: Source event has higher WA than target
+    joint>bal_spec 12/16 (mean Δ +0.869s); factor alone>bal_spec 11/16
+  • best_is_from: Athlete's best-WA event is the source event
+    joint>bal_spec 11/16 (mean Δ +0.642s); factor alone>bal_spec 12/16
+  • best_is_to: Athlete's best-WA event is the target event
+    joint>bal_spec 11/16 (mean Δ +0.388s); factor alone>bal_spec 11/16
+  • predict_to_best: Predicting toward the athlete's best-WA event
+    joint>bal_spec 11/16 (mean Δ +0.388s); factor alone>bal_spec 11/16
+  • best_event: Identity of best-WA event in the group
+    joint>bal_spec 10/16 (mean Δ -0.097s); factor alone>bal_spec 8/16
+  • events_competed: Distinct events raced in group: 2 vs 3+
+    joint>bal_spec 7/14 (mean Δ -0.051s); factor alone>bal_spec 6/14
+  • season_span: Days between first and last race: short vs long (median)
+    joint>bal_spec 7/16 (mean Δ -0.159s); factor alone>bal_spec 4/16
+  • wa_spread_tertile: Overall WA spread tertile (finer than bal/spec)
+    joint>bal_spec 6/16 (mean Δ +0.611s); factor alone>bal_spec 8/16
+
+Leaderboard (joint beats bal_spec rate):
+  pair_wa_gap_50: 14/16 (mean Δ +1.664s)
+  pair_wa_gap_median: 14/16 (mean Δ +1.262s)
+  from_stronger_wa: 12/16 (mean Δ +0.869s)
+  best_is_from: 11/16 (mean Δ +0.642s)
+  best_is_to: 11/16 (mean Δ +0.388s)
+  predict_to_best: 11/16 (mean Δ +0.388s)
+  best_event: 10/16 (mean Δ -0.097s)
+  events_competed: 7/14 (mean Δ -0.051s)
+
+Recommendation:
+  1. Keep bal/spec as a useful axis when available.
+  2. Strongest secondary factor is usually pair-level WA gap
+     (|WA_from − WA_to| ≥ 50, or median split).
+  3. Next: projection direction (from_stronger_wa, best_is_from / predict_to_best).
+
+See new_factors_report.txt for pair-level tables.
+Source: analyze_new_factors.py

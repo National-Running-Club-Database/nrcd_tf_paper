@@ -1,0 +1,94 @@
+best_is_from × best_event × Balanced/Specialized — 6-Race Time Models
+======================================================================
+
+Question: If we know an athlete's best_is_from, best_event, and
+balanced vs specialized status, can we build more accurate time models
+for athletes with exactly 6 season races?
+
+Important nesting note:
+  best_is_from is fully determined by best_event for a given pair
+  (best_event == from_event ↔ best_is_from). Knowing all three is
+  equivalent to knowing bal/spec + best_event.
+
+Population: exactly 6 races. CV 5-fold seed=42.
+Min cohort n=12; pair n=20.
+
+Strategies:
+  pooled                 — one formula
+  bal_spec               — balanced vs specialized
+  best_is_from           — source is / isn't best-WA event
+  best_event             — which event has best WA
+  bal_x_best_is_from     — bal/spec × best_is_from
+  bal_x_best_event       — bal/spec × best_event  (= know all three)
+  hierarchical_all_three — finest available cell, then fall back
+
+Pairs evaluated: 10
+Best-strategy counts: {'best_event': 3, 'pooled': 2, 'hierarchical_all_three': 1, 'bal_x_best_event': 1, 'bal_x_best_is_from': 2, 'best_is_from': 1}
+
+Strategy vs pooled (wins / mean Δ)
+----------------------------------
+  bal_spec                 2/10  mean Δ=-0.856s
+  best_is_from             5/10  mean Δ=-0.228s
+  best_event               4/10  mean Δ=+0.469s
+  bal_x_best_is_from       5/10  mean Δ=-0.168s
+  bal_x_best_event         4/10  mean Δ=+0.231s
+  hierarchical_all_three   4/10  mean Δ=+0.137s
+
+Strategy vs bal_spec alone (wins / mean Δ)
+------------------------------------------
+  best_is_from             8/10  mean Δ=+0.628s
+  best_event               7/10  mean Δ=+1.325s
+  bal_x_best_is_from       8/10  mean Δ=+0.688s
+  bal_x_best_event         8/10  mean Δ=+1.087s
+  hierarchical_all_three   8/10  mean Δ=+0.992s
+
+Pair-level CV median |error|
+----------------------------
+Pair                                 n    Pool     Bal     BIF      BE   B×BIF    B×BE    Hier Best
+Men Distance 1500m->5000m           34 16.844s 17.172s 17.349s 17.349s 16.250s 16.250s 16.250s bal_x_best_is_from
+Men Distance 1500m->800m            48  3.286s  2.931s  2.333s  2.422s  2.121s  2.000s  2.000s bal_x_best_event
+Men Distance 5000m->1500m           34  4.545s  4.837s  4.284s  4.998s  4.527s  4.825s  4.825s best_is_from
+Men Distance 5000m->800m            24  2.550s  2.143s  1.892s  2.550s  1.622s  1.622s  1.622s bal_x_best_is_from
+Men Distance 800m->1500m            48  6.660s  6.787s  4.819s  4.547s  4.496s  4.220s  4.031s hierarchical_all_three
+Men Distance 800m->5000m            24 15.963s 23.880s 21.383s 13.316s 21.892s 18.004s 19.139s best_event
+Men Sprints 100m->200m              33  0.392s  0.455s  0.372s  0.366s  0.390s  0.390s  0.390s best_event
+Men Sprints 200m->100m              33  0.144s  0.169s  0.145s  0.141s  0.146s  0.141s  0.141s best_event
+Men Sprints 200m->400m              22  1.402s  1.937s  1.402s  1.402s  1.937s  1.937s  1.937s pooled
+Men Sprints 400m->200m              22  0.457s  0.487s  0.540s  0.457s  0.540s  0.540s  0.540s pooled
+
+Dedicated bal×best_event formulas (n≥12)
+----------------------------------------------------
+  [specialized ∩ best_1500m / best_is_from] Men Distance 1500m->5000m n=21: 5000m = 3.806 × 1500m  CV=11.904s
+  [specialized ∩ best_1500m / best_is_from] Men Distance 1500m->800m n=23: 800m = 0.497 × 1500m − 0.087  CV=1.370s
+  [specialized ∩ best_1500m / best_not_from] Men Distance 5000m->800m n=18: 800m = 6.459 + 0.125 × 5000m  CV=1.847s
+  [specialized ∩ best_1500m / best_not_from] Men Distance 800m->5000m n=18: 5000m = 111.435 + 6.737 × 800m  CV=12.723s
+
+Cell power
+----------
+  Distinct 3-way cells across reported pairs: 52
+  Cells with n≥12: 6
+  Most joint cells are small — hierarchical fallback is essential.
+
+Interpretation
+--------------
+bal×best_event (= knowing all three) beats pooled on 4/10 (mean Δ +0.231s) and beats bal/spec alone on 8/10 (mean Δ +1.087s).
+Hierarchical routing beats pooled on 4/10 (mean Δ +0.137s) and bal/spec on 8/10 (mean Δ +0.992s).
+best_event alone vs bal/spec: 7/10 (mean Δ +1.325s).
+Verdict: YES — knowing bal/spec together with best_event (which implies best_is_from) improves 6-race time models for most pairs versus bal/spec alone.
+
+Practical recommendation
+------------------------
+  1. For a known pair (from→to), compute best_event and bal/spec.
+  2. Prefer bal×best_event formula when that cell has n≥12; else fall back
+     to best_event, then best_is_from, then bal/spec, then pooled 6-race.
+  3. best_is_from is redundant once best_event is known for the pair.
+
+Output files:
+  combined_best_event_bal_spec_report.txt
+  combined_best_event_bal_spec_findings.txt
+  strategy_comparison.csv
+  cell_counts.csv
+  bal_x_best_event_formulas.csv
+  athlete_season_labels.csv
+
+Source: new_factors/best_event_bal_spec_6races/analyze_combined_factors_6races.py

@@ -1,0 +1,115 @@
+Best World Athletics Event among Athletes in WA Band 750–950
+============================================================
+
+Question: Among athletes with ≥1 individual result in WA [750, 950),
+which event most often holds their highest WA score — separately for
+indoor and outdoor?
+
+Method:
+  • Combined seasons 2024–2026.
+  • Band membership: ≥1 individual (non-relay) result with WA in [750, 950).
+  • Athlete best event = event with highest gender-specific WA among core
+    discipline events (max across all seasons/results).
+  • Indoor core: 60/200/400, 800/1500/Mile/3000/5000, 60H, LJ/TJ/HJ, Shot.
+  • Outdoor core: 100/200/400, 800/1500/5000/steeple, hurdles, jumps, throws.
+  • Outdoor distance uses New_Steeplechase_Data when available.
+
+INDOOR — best event among 750–950 band athletes
+===============================================
+Athletes with ≥1 individual result in WA [750, 950): 829
+  of whom ≥2 core events: 592
+
+Overall best event (all band athletes; best = highest WA across core events):
+  60m: 207 best (25.0%)  |  355 competed
+  200m: 87 best (10.5%)  |  303 competed
+  400m: 78 best (9.4%)  |  173 competed
+  800m: 117 best (14.1%)  |  190 competed
+  1500m: 5 best (0.6%)  |  12 competed
+  Mile: 77 best (9.3%)  |  230 competed
+  3000m: 101 best (12.2%)  |  172 competed
+  5000m: 33 best (4.0%)  |  78 competed
+  60m Hurdles: 48 best (5.8%)  |  73 competed
+  Long Jump: 29 best (3.5%)  |  112 competed
+  Triple Jump: 13 best (1.6%)  |  46 competed
+  High Jump: 26 best (3.1%)  |  55 competed
+  Shot Put: 8 best (1.0%)  |  30 competed
+
+Among multi-event athletes (≥2 core events):
+  60m: 154 best (26.0%)  |  302 competed
+  200m: 73 best (12.3%)  |  289 competed
+  400m: 57 best (9.6%)  |  152 competed
+  800m: 74 best (12.5%)  |  147 competed
+  1500m: 3 best (0.5%)  |  10 competed
+  Mile: 49 best (8.3%)  |  202 competed
+  3000m: 67 best (11.3%)  |  138 competed
+  5000m: 24 best (4.1%)  |  69 competed
+  60m Hurdles: 38 best (6.4%)  |  63 competed
+  Long Jump: 25 best (4.2%)  |  108 competed
+  Triple Jump: 11 best (1.9%)  |  44 competed
+  High Jump: 16 best (2.7%)  |  45 competed
+  Shot Put: 1 best (0.2%)  |  23 competed
+
+Modal best event (all band athletes): 60m (207 / 829, 25.0%)
+Modal best event (multi-event): 60m (154 / 592, 26.0%)
+
+Men (n=594 band athletes; 415 multi-event):
+  Top best-events (all): 60m 146, 800m 88, 200m 72
+  Top best-events (multi): 60m 106, 200m 64, 800m 55
+
+Women (n=235 band athletes; 177 multi-event):
+  Top best-events (all): 60m 61, 3000m 35, 800m 29
+  Top best-events (multi): 60m 48, 3000m 24, 400m 19
+
+OUTDOOR — best event among 750–950 band athletes
+================================================
+Athletes with ≥1 individual result in WA [750, 950): 801
+  of whom ≥2 core events: 642
+
+Overall best event (all band athletes; best = highest WA across core events):
+  100m: 121 best (15.1%)  |  280 competed
+  200m: 89 best (11.1%)  |  287 competed
+  400m: 72 best (9.0%)  |  165 competed
+  800m: 100 best (12.5%)  |  248 competed
+  1500m: 137 best (17.1%)  |  251 competed
+  5000m: 83 best (10.4%)  |  165 competed
+  3000m Steeplechase: 34 best (4.2%)  |  76 competed
+  100m Hurdles: 2 best (0.2%)  |  23 competed
+  110m Hurdles: 14 best (1.7%)  |  44 competed
+  400m Hurdles: 27 best (3.4%)  |  74 competed
+  Long Jump: 62 best (7.7%)  |  127 competed
+  Triple Jump: 21 best (2.6%)  |  54 competed
+  High Jump: 25 best (3.1%)  |  64 competed
+  Shot Put: 7 best (0.9%)  |  30 competed
+  Discus: 7 best (0.9%)  |  23 competed
+  Hammer Throw: 0 best (0.0%)  |  2 competed
+  Javelin Throw: 0 best (0.0%)  |  11 competed
+
+Among multi-event athletes (≥2 core events):
+  100m: 106 best (16.5%)  |  265 competed
+  200m: 82 best (12.8%)  |  280 competed
+  400m: 64 best (10.0%)  |  157 competed
+  800m: 66 best (10.3%)  |  214 competed
+  1500m: 109 best (17.0%)  |  223 competed
+  5000m: 49 best (7.6%)  |  131 competed
+  3000m Steeplechase: 29 best (4.5%)  |  71 competed
+  100m Hurdles: 2 best (0.3%)  |  23 competed
+  110m Hurdles: 11 best (1.7%)  |  41 competed
+  400m Hurdles: 27 best (4.2%)  |  74 competed
+  Long Jump: 51 best (7.9%)  |  116 competed
+  Triple Jump: 20 best (3.1%)  |  53 competed
+  High Jump: 13 best (2.0%)  |  52 competed
+  Shot Put: 7 best (1.1%)  |  30 competed
+  Discus: 6 best (0.9%)  |  22 competed
+  Hammer Throw: 0 best (0.0%)  |  2 competed
+  Javelin Throw: 0 best (0.0%)  |  11 competed
+
+Modal best event (all band athletes): 1500m (137 / 801, 17.1%)
+Modal best event (multi-event): 1500m (109 / 642, 17.0%)
+
+Men (n=549 band athletes; 441 multi-event):
+  Top best-events (all): 1500m 91, 100m 84, 800m 81
+  Top best-events (multi): 1500m 79, 200m 72, 100m 71
+
+Women (n=252 band athletes; 201 multi-event):
+  Top best-events (all): 1500m 46, 5000m 41, 100m 37
+  Top best-events (multi): 100m 35, 1500m 30, 400m 26

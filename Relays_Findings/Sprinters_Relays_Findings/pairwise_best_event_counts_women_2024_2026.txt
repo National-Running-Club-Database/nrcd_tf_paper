@@ -1,0 +1,35 @@
+Outdoor Track 2024-2026 Female Sprinters (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+100m vs. 200m (204 athletes in both):
+100m best event: 171  vs. 200m best event: 32
+(ties: 1)
+
+100m vs. 400m (59 athletes in both):
+100m best event: 33  vs. 400m best event: 26
+
+200m vs. 400m (129 athletes in both):
+200m best event: 33  vs. 400m best event: 94
+(ties: 2)
+
+100m vs. 4x100m (136 athletes in both):
+100m best event: 18  vs. 4x100m best event: 118
+
+100m vs. 4x400m (64 athletes in both):
+100m best event: 31  vs. 4x400m best event: 33
+
+200m vs. 4x100m (129 athletes in both):
+200m best event: 17  vs. 4x100m best event: 112
+
+200m vs. 4x400m (112 athletes in both):
+200m best event: 34  vs. 4x400m best event: 78
+
+400m vs. 4x100m (63 athletes in both):
+400m best event: 16  vs. 4x100m best event: 47
+
+400m vs. 4x400m (116 athletes in both):
+400m best event: 41  vs. 4x400m best event: 74
+(ties: 1)
+
+4x100m vs. 4x400m (108 athletes in both):
+4x100m best event: 67  vs. 4x400m best event: 41

@@ -1,0 +1,20 @@
+best_is_from + best_event + bal/spec — Findings (6 Races)
+=========================================================
+
+Question: Can knowing these three factors create more accurate 6-race
+time models?
+
+Nesting: best_is_from ⊂ best_event for a given prediction pair.
+Knowing all three = bal/spec + best_event.
+
+Pairs: 10. Best strategy counts: {'best_event': 3, 'pooled': 2, 'hierarchical_all_three': 1, 'bal_x_best_event': 1, 'bal_x_best_is_from': 2, 'best_is_from': 1}
+bal×best_event vs pooled: 4/10 (mean Δ +0.231s)
+bal×best_event vs bal_spec: 8/10 (mean Δ +1.087s)
+hierarchical vs pooled: 4/10 (mean Δ +0.137s)
+hierarchical vs bal_spec: 8/10 (mean Δ +0.992s)
+Dedicated bal×best_event formulas fitted: 4
+
+Verdict: YES — knowing bal/spec together with best_event (which implies best_is_from) improves 6-race time models for most pairs versus bal/spec alone.
+
+See combined_best_event_bal_spec_report.txt for pair tables and formulas.
+Source: analyze_combined_factors_6races.py

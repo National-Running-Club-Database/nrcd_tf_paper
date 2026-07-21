@@ -1,0 +1,363 @@
+Nationals Scoring Focus — Men's vs. Women's Teams
+=================================================
+
+Based on 2024–2026 NIRCA outdoor data: 8th-place WA thresholds (RQ1B), how many
+athletes clear that bar (RQ1C clear count + clear rate), and head-to-head
+nationals-margin comparisons. Goal: maximize athletes finishing 8th or higher
+at Nationals.
+
+DATA NOTE: Distance / steeplechase World Athletics points use corrected values
+from New_Steeplechase_Data (steeple 8th-place bars ≈740 men / ≈752 women, not
+the prior ~456 / ~511). Sprints, hurdles, jumps, and throws are unchanged from
+Relays_Findings RQ1B/RQ1C.
+
+How to read this: "Clear count" = how many athletes in the full dataset cleared
+the bar (team depth signal). "Clear rate" = share of athletes who competed in
+that event who cleared (conversion signal). Both matter — a high count with a
+low rate means a big pool but tough conversion; a high rate with a small pool
+means a niche opportunity.
+
+
+================================================================================
+MEN'S TEAM
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+Priority | Event          | 8th-place bar | Clear rate | Clears
+---------|----------------|---------------|------------|-------
+1        | 4x100m         | 760 WA        | 26.3%      | 133
+2        | 200m           | 820 WA        | 10.2%      | 72
+3        | 4x400m         | 785 WA        | 9.9%       | 81
+         | Deprioritize: 100m (818 WA, 9.3%, 65), 400m (792 WA, 6.9%, 42)
+
+Justification:
+  • 4x100m is the single best scoring pathway for men: most clearers in the
+    entire population (133), highest clear rate among sprint events (26.3%), and
+    a bar ~58 WA points lower than open 100m. Among athletes who do both,
+    4x100 wins the nationals-margin comparison 209–49 over 100m.
+  • 200m is the best open sprint for individual points: 72 clearers (more than
+    100m's 65) with a similar high bar (~820). Use it for athletes who aren't
+    on the A 4x100 but have 200m speed.
+  • 4x400m produces 81 clearers (second-most overall) but only 9.9% of 4x400
+    athletes clear — many leg it without being true scoring threats. Staff it
+    for depth and a second relay score, not as the primary sprint strategy.
+  • Avoid loading up on 100m and 400m for scoring: highest or near-highest
+    bars with the worst clear rates in the sprint group.
+
+Season structure: 6–10 race results; volume helps (~+8 WA per extra race).
+~50% of multi-meet sprinters still peak in the final 25% of their schedule —
+build volume early, sharpen late.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+Priority | Event                    | 8th-place bar | Clear rate | Clears
+---------|--------------------------|---------------|------------|-------
+1        | 4x100m (relay crossover) | 760 WA        | 26.3%      | 133
+2        | 1500m                    | 827 WA        | 4.3%       | 51
+3        | 3000m Steeplechase       | 740 WA        | 8.5%       | 24
+4        | 5000m                    | 786 WA        | 4.9%       | 36
+         | Secondary: 4x400m (785 WA, 9.9%, 81)
+         | Deprioritize: 800m (829 WA — hardest bar, 4.6%, 46)
+
+Justification:
+  • Distance rosters are large, but individual clear rates are low (4–5%) for
+    800m, 1500m, and 5000m. Relay crossover is the most efficient way to get
+    distance athletes on the scoring sheet: 4x100 again leads on conversion.
+  • 1500m gets priority among individual distance events because it has the
+    most clearers (51) and beats 800m in nationals-margin head-to-heads
+    (356–225 among dual athletes). It's the default primary for milers even
+    though the bar is high (~827).
+  • Steeplechase (corrected WA) still has the lowest individual distance bar
+    (~740 vs. 786–829 for 5K/1500/800) and the best clear rate in the group
+    (8.5%, 24/281). It dominates every nationals-margin comparison (e.g. vs.
+    1500m 123–47, vs. 5000m 77–32, vs. 800m 86–39). High ROI for specialists —
+    but no longer an "ultra-accessible" ~450 WA pathway under the old data.
+  • 5000m beats 1500m in nationals-margin comparisons among dual athletes
+    (225–209) and has a lower bar than 1500m or 800m (~786). Assign true 5K
+    types here rather than defaulting everyone to the mile.
+  • 800m is the worst scoring bet for men: highest nationals bar in the sport
+    (829 WA) with only 4.6% clearing. Avoid steering athletes here unless
+    they're already clearly above the line.
+
+Season structure: Highest volume tolerance of any group — aim for 7–9+ results;
+~+12 WA per extra race in fixed-effects models. Late peaking still common
+(~47% in final 25%).
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+Priority | Event          | 8th-place bar | Clear rate | Clears
+---------|----------------|---------------|------------|-------
+1        | 110m Hurdles   | 629 WA        | 32.5%      | 38
+2        | 400m Hurdles   | 728 WA        | 16.8%      | 27
+3        | 4x100m         | 760 WA        | 26.3%      | 133
+         | Deprioritize: 4x400m as primary hurdle path (785 WA, 9.9%, 81)
+
+Justification:
+  • 110m Hurdles is the best individual scoring event for men's hurdlers:
+    highest clear rate of any men's event in the dataset (32.5%) and the bar
+    is ~200 WA below open sprints. Among 110mH athletes, 38 clear — comparable
+    to 800m/1500m despite a much smaller entry pool.
+  • 400m Hurdles is a solid secondary (16.8% clear rate; beats 110mH in
+    head-to-head margin 42–27 among dual hurdlers) for long-hurdle types.
+  • 4x100 is worth staffing hurdlers on — speed + hurdle skill transfers —
+    but 110mH should remain the primary individual scoring target.
+  • Don't treat 4x400 as the main hurdle scoring plan: many hurdlers leg it
+    (688 list it as "best event"), but only 9.9% clear the nationals bar.
+    Relay WA inflates marks without converting to top-8 finishes.
+
+Season structure: 4–6 focused race results; men's hurdles show weak
+volume→improvement signal. Quality and late sharpness over meet quantity.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+Priority | Event      | 8th-place bar | Clear rate | Clears
+---------|------------|---------------|------------|-------
+1        | High Jump  | 732 WA        | 27.9%      | 29
+2        | Triple Jump| 725 WA        | 23.0%      | 23
+3        | Long Jump  | 792 WA        | 13.6%      | 34
+         | Secondary: 4x100m (760 WA, 26.3%, 133)
+
+Justification:
+  • High Jump has the best clear rate among men's jumps (27.9%) with an
+    accessible bar (~732). More men clear high jump than triple (29 vs. 23)
+    despite fewer total competitors.
+  • Triple Jump beats long jump in nationals-margin head-to-heads (61–19 among
+    dual athletes) and has a much lower bar (726 vs. 792). Prioritize triple
+    over long for athletes who can do both.
+  • Long Jump has the most clearers (34) but the worst clear rate (13.6%) and
+    the highest bar of the three — it's a depth event, not the best conversion
+    bet.
+  • 4x100 for jumpers who have speed is a secondary team play; among dual
+    athletes, 4x100 usually wins over long jump on margin, but jumpers who
+    clear their primary event should stay there.
+
+Season structure: 3–5 meet results; more races don't reliably help men jumpers.
+Technical consistency over volume.
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+Priority | Event    | 8th-place bar | Clear rate | Clears
+---------|----------|---------------|------------|-------
+1        | Discus   | 659 WA        | 19.1%      | 25
+2        | Shot Put | 672 WA        | 12.8%      | 22
+         | Deprioritize: Javelin, Hammer (0% clear rate, 0 clearers)
+
+Justification:
+  • Discus has the most clearers (25), the best clear rate (19.1%), and the
+    lowest bar (~659). Among dual throwers, discus beats shot in nationals-
+    margin comparisons (though shot wins overall head-to-head 67–45 — assign
+    by individual margin vs. bar).
+  • Shot Put is secondary: slightly higher bar, fewer clearers, lower rate.
+  • When throwers also leg relays, their primary throw beats 4x100 in margin
+    comparisons (discus 13–2, shot 20–5) — keep them focused on the circle.
+  • Do not target javelin or hammer for nationals scoring in this dataset:
+    zero athletes cleared the bar across three years.
+
+Season structure: 3–5 results; men's throws show no meaningful
+volume→improvement link.
+
+
+Men's Team — Overall Scoring Portfolio (ranked)
+------------------------------------------------
+  1. 4x100m — best event for maximizing scorers
+  2. 110m Hurdles — best individual clear rate (32.5%)
+  3. 200m — best open sprint for individual points
+  4. High Jump — best jump clear rate (27.9%)
+  5. 4x400m — depth/second relay, not primary strategy
+  6. 1500m / Steeple / Discus — specialist paths with clear justification
+
+Avoid steering the roster toward: 800m, open 100m, long jump, 4x400 as a
+default "best event."
+
+
+================================================================================
+WOMEN'S TEAM
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+Priority | Event          | 8th-place bar | Clear rate | Clears
+---------|----------------|---------------|------------|-------
+1        | 4x100m         | 776 WA        | 37.2%      | 105
+2        | 4x400m         | 747 WA        | 18.0%      | 78
+         | Deprioritize: 100m (814 WA, 9.3%, 27), 200m (799 WA, 7.2%, 25),
+                       400m (788 WA, 9.4%, 23)
+
+Justification:
+  • 4x100m dominates women's sprint scoring: 105 clearers (most in the women's
+    dataset) and 37.2% clear rate — the highest conversion rate of any women's
+    event. Bar (~776) is ~38 WA below open 100m (~814). Among dual athletes,
+    4x100 beats 100m 124–12 on nationals margin.
+  • 4x400m is a legitimate second relay target for women (18.0% clear vs. 9.9%
+    for men; 78 clearers). Still well behind 4x100 on conversion, but much
+    more viable than on the men's side.
+  • Open sprints (100m, 200m, 400m) are poor scoring bets: bars among the
+    highest in women's track (788–814 WA) with clear rates of only 7–9%. Use
+    open events only for athletes already above the line — not as the default
+    team strategy.
+  • Among open sprints, 100m beats 200m in margin (157–46) if you must pick
+    one individual event.
+
+Season structure: 6–10 results; ~+9 WA per extra race. ~50% late-peak rate
+among multi-meet athletes.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+Priority | Event                    | 8th-place bar | Clear rate | Clears
+---------|--------------------------|---------------|------------|-------
+1        | 4x100m (relay crossover) | 776 WA        | 37.2%      | 105
+2        | 3000m Steeplechase       | 752 WA        | 17.0%      | 23
+3        | 1500m                    | 792 WA        | 8.0%       | 46
+4        | 5000m                    | 808 WA        | 9.6%       | 29
+         | Secondary: 4x400m (748 WA, 18.0%, 78)
+         | Deprioritize: 800m (760 WA, 6.4%, 30)
+
+Justification:
+  • 4x100 again leads for getting distance athletes on the score sheet.
+  • Steeplechase (corrected WA) is the best individual distance conversion
+    play for women: 17.0% clear rate (23/135) — best among women's distance
+    individuals — with a bar (~752) still below 1500m/5000m. Beats 1500m
+    (75–6) and 5000m (40–4) overwhelmingly on nationals-margin head-to-heads.
+    No longer an ~511 WA "free" pathway; still the niche with the best ROI.
+  • 1500m remains the top individual depth event: 46 clearers and beats 800m
+    in margin (178–90). Default primary for milers who are not steeplers.
+  • 5000m beats 1500m in margin among dual athletes (79–65) but has a very
+    high bar (808.5) — only assign true 5K specialists.
+  • 800m underperforms: 6.4% clear rate despite a moderate bar. 1500m and
+    steeple are better targets.
+
+Season structure: 7–9+ results; strongest volume response in women's track
+(~+17 WA per extra race).
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+Priority | Event          | 8th-place bar | Clear rate | Clears
+---------|----------------|---------------|------------|-------
+1        | 400m Hurdles   | 661 WA        | 40.0%      | 32
+2        | 100m Hurdles   | 608 WA        | 27.2%      | 28
+3        | 4x100m         | 776 WA        | 37.2%      | 105
+         | Deprioritize: 4x400m as primary (748 WA, 18.0%, 78)
+
+Justification:
+  • 400m Hurdles is the single best women's hurdle scoring event: 40.0% clear
+    rate (highest of any women's hurdle/sprint event in the dataset) with a bar
+    ~150 WA below open 400m. Beats 4x400 in margin 25–9 among dual athletes.
+  • 100m Hurdles is an excellent secondary: bar only 608 WA, 27.2% clear rate.
+    Slightly fewer clearers than 400mH but very accessible.
+  • 4x100 for hurdlers with speed is viable, but 400mH should be the primary
+    individual target for long hurdlers; 100mH for sprint hurdlers.
+  • 400mH beats 100mH in margin among dual hurdlers (26–18) — when an athlete
+    can do both, lean 400mH.
+
+Season structure: 4–6 focused results; women's hurdles show strong volume
+response (~+22 WA per race) — more than men's hurdles.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+Priority | Event      | 8th-place bar | Clear rate | Clears
+---------|------------|---------------|------------|-------
+1        | High Jump  | 681 WA        | 37.3%      | 28
+2        | Triple Jump| 741 WA        | 31.6%      | 18
+3        | Long Jump  | 760 WA        | 16.6%      | 26
+         | Secondary: 4x100m (776 WA, 37.2%, 105)
+
+Justification:
+  • High Jump is the top women's jump for scoring: 37.3% clear rate (tied with
+    4x100 for best conversion in the dataset) and the lowest bar among jumps
+    (~681). Beats long jump in margin (24–15) and 4x400 (13–7) among dual
+    athletes.
+  • Triple Jump has the second-best clear rate (31.6%) and beats long jump in
+    margin (33–13). Strong choice for athletes who can do both horizontal
+    jumps.
+  • Long Jump has more clearers (26) than triple (18) but a much worse clear
+    rate (16.6%) and higher bar — deprioritize unless it's clearly the
+    athlete's better margin event.
+  • 4x100 is a secondary option for fast jumpers, but high jump and triple
+    jump specialists should stay in their primary event for individual points.
+
+Season structure: 3–5 results; women jumpers show modest volume benefit
+(~+7 WA per race).
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+Priority | Event    | 8th-place bar | Clear rate | Clears
+---------|----------|---------------|------------|-------
+1        | Discus   | 504 WA        | 29.1%      | 25
+2        | Shot Put | 580 WA        | 20.0%      | 23
+         | Deprioritize: Javelin, Hammer (0% clear rate, 0 clearers)
+
+Justification:
+  • Discus is the best women's throw for scoring: lowest bar in women's track
+    (504 WA), highest clear rate (29.1%), most clearers (25). Beats 4x400 in
+    margin 6–1 among dual athletes.
+  • Shot Put is secondary: bar ~580, 20.0% clear rate, nearly as many clearers
+    (23). Discus beats shot in margin among dual throwers (41–32).
+  • Javelin and hammer: zero clearers across three years — do not build a
+    nationals strategy around them.
+
+Season structure: 3–5 results; modest volume benefit for women (~+7 WA per
+race).
+
+
+Women's Team — Overall Scoring Portfolio (ranked)
+--------------------------------------------------
+  1. 4x100m — #1 across nearly every group (105 clearers, 37.2%)
+  2. 400m Hurdles — best individual clear rate among specialists (40.0%)
+  3. High Jump — best jump conversion (37.3%)
+  4. Steeplechase / 1500m — steeple best distance conversion (17%); 1500m depth
+  5. Discus — best throw (504 WA bar, 29.1%)
+  6. 4x400m — viable second relay (18.0% clear)
+  7. 100mH / Triple Jump — strong niche plays
+
+Avoid steering the roster toward: open 100m/200m/400m, 5000m (unless
+specialist), long jump as default, javelin/hammer.
+
+
+================================================================================
+KEY GENDER DIFFERENCES
+================================================================================
+
+Topic              | Men                              | Women
+-------------------|----------------------------------|----------------------------------
+Best relay         | 4x100 first; 4x400 depth only    | 4x100 first; 4x400 more viable (18% vs 10%)
+Best open sprint   | 200m (72 clearers)               | Open sprints weak — stay in relays
+Best hurdle score  | 110mH (32.5% clear)              | 400mH (40.0% clear)
+Best jump score    | High Jump (27.9%)                | High Jump (37.3%)
+Best distance score| 1500m depth + steeple niche      | Steeple conversion + 1500m depth
+Hardest to score   | 800m (829 bar)                   | 100m / 5000m (814 / 809 bar)
+Volume matters most| Distance (+12 WA/race)           | Distance (+17 WA/race)
+
+
+Source: RQ1B nationals 8th-place thresholds, RQ1C clear counts/rates, pairwise
+margin comparisons — relay-inclusive outdoor data 2024–2026 (March 1+).
+Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.
+Relay WA credited to leg athletes; only 4x100m and 4x400m have valid relay WA.

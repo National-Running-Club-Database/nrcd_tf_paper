@@ -1,0 +1,24 @@
+Indoor Point-Band Time Models — Findings (Width 200)
+===================================================
+
+Question: Which WA point bands of width 200 are best for indoor time models?
+
+Events: Sprints 60/200/400; Distance 800/Mile/3000. Relays excluded.
+Bands: width 200, starts every 50 points.
+
+Most accurate (≥4 pairs): 800-1000  mean CV 2.129s (16 pairs, 319 athlete-seasons)
+Best with ≥12 pairs:      800-1000  mean CV 2.129s (16 pairs, 319 athlete-seasons)
+Unbanded all:             mean CV 5.012s (24 pairs)
+
+Top 5 (require ≥4 pairs):
+  1. 800-1000: 2.129s (16 pairs)
+  2. 750-950: 2.919s (20 pairs)
+  3. 850-1050: 2.987s (8 pairs)
+  4. 700-900: 3.038s (22 pairs)
+  5. 650-850: 3.291s (22 pairs)
+
+Recommendation: use the top width-200 band(s) above when building indoor
+equivalency / future-meet time models. Prefer the ≥12-pair band if you need
+stable coverage across most sprint and distance ordered pairs.
+
+See point_band_report_width_200.txt for the full leaderboard.

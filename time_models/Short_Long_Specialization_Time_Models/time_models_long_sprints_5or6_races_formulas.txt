@@ -1,0 +1,77 @@
+Cross-Event Time Models — Long Sprints — 5 Or 6 Races
+=========================================================
+
+Population: 5 or 6 races athlete-seasons with season PBs in all 3 group events.
+Specialization cohort: Long Sprints
+
+Sprints: Short = |WA100−WA200| < |WA200−WA400|; Long = reverse.
+Distance: Mid = |WA800−WA1500| < |WA1500−WA5000|; Long = reverse.
+
+Use when short/long (or mid/long) status is known.
+Predict time, then convert to WA in the target event table.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=14, r=0.896)
+  Model: binned_ratio
+  Formula: 200m = 100m × ratio_bin(100m)
+  CV median |error|: 0.595s
+  vs pooled model on cohort: 0.863s (↓0.268s)
+  Binned lookup 100m → 200m (nearest 100m edge):
+    11.05s → ratio 1.986
+    11.66s → ratio 1.931
+    11.67s → ratio 2.073
+    11.77s → ratio 1.995
+    11.87s → ratio 1.986
+    12.06s → ratio 1.948
+    12.25s → ratio 1.962
+    12.72s → ratio 1.914
+    12.73s → ratio 2.005
+    12.84s → ratio 2.194
+    12.85s → ratio 2.173
+    13.17s → ratio 2.085
+    13.31s → ratio 1.923
+    13.32s → ratio 1.996
+
+100m -> 400m  (n=14, r=0.738)
+  Model: median_ratio
+  Formula: 400m = 4.503 × 100m
+  CV median |error|: 0.717s
+
+200m -> 100m  (n=14, r=0.896)
+  Model: quadratic
+  Formula: 100m = -42.623 + 4.090×200m − 0.075109×200m²
+  CV median |error|: 0.264s
+  vs pooled model on cohort: 0.456s (↓0.193s)
+
+200m -> 400m  (n=14, r=0.795)
+  Model: robust_trimmed_linear
+  Formula: 400m = 2.262 × 200m − 0.352
+  CV median |error|: 1.102s
+  vs pooled model on cohort: 0.672s (↑0.430s)
+
+400m -> 100m  (n=14, r=0.738)
+  Model: median_ratio
+  Formula: 100m = 0.222 × 400m
+  CV median |error|: 0.159s
+  vs pooled model on cohort: 0.339s (↓0.180s)
+
+400m -> 200m  (n=14, r=0.795)
+  Model: robust_trimmed_linear
+  Formula: 200m = 1.653 + 0.414 × 400m
+  CV median |error|: 0.452s
+  vs pooled model on cohort: 0.340s (↑0.113s)
+
+Pair summary
+------------
+  From     To          n        CV  Formula
+  100m     200m       14    0.595s  200m = 100m × ratio_bin(100m)
+  100m     400m       14    0.717s  400m = 4.503 × 100m
+  200m     100m       14    0.264s  100m = -42.623 + 4.090×200m − 0.075109×200m²
+  200m     400m       14    1.102s  400m = 2.262 × 200m − 0.352
+  400m     100m       14    0.159s  100m = 0.222 × 400m
+  400m     200m       14    0.452s  200m = 1.653 + 0.414 × 400m
+
+Source: Short_Long_Specialization_Time_Models/analyze_short_long_specialization.py

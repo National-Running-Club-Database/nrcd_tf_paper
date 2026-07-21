@@ -1,0 +1,8 @@
+Indoor Track 2024-2026 Female Hurdles (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+Athletes with results in at least 2 events (individual + relay)
+
+60m Hurdles (46 competed): 12
+4x200m (122 competed): 78
+4x400m (115 competed): 47

@@ -1,0 +1,47 @@
+Outdoor Track 2024-2026 Female Throws (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+Shot Put vs. Discus (73 athletes in both):
+Shot Put best event: 57  vs. Discus best event: 16
+
+Shot Put vs. Hammer Throw (7 athletes in both):
+Shot Put best event: 7  vs. Hammer Throw best event: 0
+
+Shot Put vs. Javelin Throw (12 athletes in both):
+Shot Put best event: 10  vs. Javelin Throw best event: 2
+
+Discus vs. Hammer Throw (6 athletes in both):
+Discus best event: 5  vs. Hammer Throw best event: 1
+
+Discus vs. Javelin Throw (11 athletes in both):
+Discus best event: 7  vs. Javelin Throw best event: 4
+
+Hammer Throw vs. Javelin Throw (3 athletes in both):
+Hammer Throw best event: 1  vs. Javelin Throw best event: 2
+
+Shot Put vs. 4x100m (15 athletes in both):
+Shot Put best event: 2  vs. 4x100m best event: 13
+
+Shot Put vs. 4x400m (12 athletes in both):
+Shot Put best event: 6  vs. 4x400m best event: 6
+
+Discus vs. 4x100m (8 athletes in both):
+Discus best event: 0  vs. 4x100m best event: 8
+
+Discus vs. 4x400m (7 athletes in both):
+Discus best event: 4  vs. 4x400m best event: 3
+
+Hammer Throw vs. 4x100m (1 athletes in both):
+Hammer Throw best event: 0  vs. 4x100m best event: 1
+
+Hammer Throw vs. 4x400m (3 athletes in both):
+Hammer Throw best event: 3  vs. 4x400m best event: 0
+
+Javelin Throw vs. 4x100m (7 athletes in both):
+Javelin Throw best event: 0  vs. 4x100m best event: 7
+
+Javelin Throw vs. 4x400m (5 athletes in both):
+Javelin Throw best event: 2  vs. 4x400m best event: 3
+
+4x100m vs. 4x400m (108 athletes in both):
+4x100m best event: 67  vs. 4x400m best event: 41

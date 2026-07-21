@@ -1,0 +1,9 @@
+Balanced / Specialization Counts — Findings
+===========================================
+
+Band 750-950: n=556  balanced=209 (sprints=130, distance=79)  specialized=347 (short_sprints=26, long_sprints=16, mid_distance=17, long_distance=23, unclassified=265)
+Band 800-1000: n=351  balanced=135 (sprints=91, distance=44)  specialized=216 (short_sprints=18, long_sprints=10, mid_distance=12, long_distance=15, unclassified=161)
+Band 850-1050: n=187  balanced=66 (sprints=51, distance=15)  specialized=121 (short_sprints=11, long_sprints=6, mid_distance=9, long_distance=8, unclassified=87)
+
+See balanced_specialization_counts_report.txt for gender × group detail.
+Source: count_balanced_specialization_by_band.py

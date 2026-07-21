@@ -1,0 +1,186 @@
+Major Trends in Relay-Inclusive Track & Field Analysis (2024–2026)
+================================================================
+Outdoor track, results on or after March 1 each year. Relay team World Athletics
+(WA) points are credited to each leg athlete; an athlete's relay best is the
+maximum across relay appearances.
+
+Source outputs: RQ1A (best event), RQ1B (nationals 8th-place thresholds),
+RQ1C (competitiveness vs. nationals bar) across Sprinters, Distance, Hurdles,
+Jumps, and Throws folders in Relays_Findings/.
+
+
+1. DATA SCOPE AND LIMITATIONS
+-----------------------------
+Only 4x100m and 4x400m have nonzero WA scoring in the relay dataset. Other
+relay types (4x200m, 4x800m, DMR, SMR, Swedish Relay) are excluded from
+threshold-based comparisons because nationals 8th-place WA scores are missing
+or zero. Findings below therefore reflect these two sprint relays only.
+
+
+2. RELAYS DRAMATICALLY SHIFT "BEST EVENT" (RQ1A)
+------------------------------------------------
+When relays are included, 4x400m becomes the modal best event across nearly
+every discipline and gender — often by a wide margin.
+
+Examples (athletes whose highest WA mark is in that event):
+  Men sprinters:   4x400m 611 | 100m 351 | 4x100m 308
+  Women sprinters: 4x400m 322 | 4x100m 216 | 100m 142
+  Men hurdles:     4x400m 688 | 4x100m 395 | 400m Hurdles 95
+  Men jumps:       4x400m 699 | 4x100m 372 | Long Jump 155
+  Men throws:      4x400m 707 | 4x100m 394 | Shot Put 113
+  Women jumps:     4x400m 354 | 4x100m 221 | Long Jump 87
+
+Distance is the main exception on RQ1A: men's 1500m (723) and 800m (487) still
+outrank 4x400m (475) for best-event counts, though relays remain substantial.
+
+Trend: Team relay WA scores are often higher than individual marks, so many
+athletes appear "best" at a relay even when their specialty is an individual
+event.
+
+
+3. NATIONALS BARS ARE LOWER FOR RELAYS (RQ1B)
+-----------------------------------------------
+Three-year average 8th-place nationals WA thresholds (2024–2026):
+
+  Men:   800m 829.3 and 1500m 827.0 (highest) … 4x400m 785.3 … 4x100m 760.3
+  Women: 100m 814.3 and 5000m 808.5 (highest) … 4x100m 776.0 … 4x400m 747.7
+
+Relays sit in the middle-to-lower range of nationals competitiveness. The
+4x100m bar is especially accessible relative to open sprints (e.g., men 100m
+818.0 vs. 4x100m 760.3; women 100m 814.3 vs. 4x100m 776.0).
+
+
+4. BEST EVENT ≠ MOST COMPETITIVE EVENT (RQ1C)
+----------------------------------------------
+RQ1C asks which event gives the largest margin above (or smallest margin
+below) the nationals 8th-place bar — a different question than highest
+absolute WA (RQ1A).
+
+Key pattern — 4x400m dominates RQ1C athlete counts but has low clear-rates:
+  Men sprints:   RQ1C modal event 4x400m (614 athletes), but only 9.9% clear bar
+  Women sprints: RQ1C modal event 4x400m (345 athletes), 18.0% clear bar
+
+Meanwhile 4x100m has the highest nationals clear-rates in the population:
+  Men:   133/506 clear (26.3%) — highest count of any event
+  Women: 105/282 clear (37.2%) — highest count of any event
+
+So many athletes are "most competitive" at 4x400m by margin, yet far fewer
+actually clear the nationals threshold there than in 4x100m. High team WA on
+relays inflates best-event labels without matching nationals-level access.
+
+RQ1A vs. RQ1C agreement (same athlete, same discipline):
+  Highest: Men throws 91.5%, Women sprints 91.0%, Men sprints 89.8%
+  Lowest:  Women distance 75.8%, Women throws 76.5%, Women hurdles 77.3%
+
+Distance shows the most RQ1A/RQ1C disagreement — individual middle-distance
+events (1500m, 5000m) remain top RQ1C choices even when relays dominate
+best-event counts for other groups.
+
+
+5. INDIVIDUAL VS. RELAY HEAD-TO-HEAD (RQ1C MARGINS)
+-----------------------------------------------------
+Among athletes with marks in both an individual event and a relay, relays
+usually win the competitiveness comparison (larger margin vs. threshold).
+
+Strong relay advantage (examples):
+  Men 100m vs. 4x100m (258 dual athletes): 4x100m wins 209 | 100m wins 49
+  Men 200m vs. 4x100m (248):               4x100m wins 188 | 200m wins 60
+  Women 100m vs. 4x100m (136):             4x100m wins 124 | 100m wins 12
+
+Distance retains more individual strength:
+  Men 5000m vs. 4x400m (157): 5000m wins 81 | 4x400m wins 76 (near split)
+  Men 3000m SC vs. 4x400m (86): steeple wins 46 | 4x400m wins 40
+
+Throws can favor individuals when overlap is small:
+  Men shot put vs. 4x100m (25): shot put wins 20 | 4x100m wins 5
+  Men discus vs. 4x100m (15):   discus wins 13 | 4x100m wins 2
+
+Hurdles are mixed at small sample sizes; women's 400m Hurdles vs. 4x400m
+(35 dual): 400mH wins 25 | 4x400m wins 9.
+
+
+6. PAIRWISE BEST-EVENT: INDIVIDUAL VS. RELAY (RQ1A)
+---------------------------------------------------
+Across all disciplines, for every individual×relay pairing among athletes
+competing in both events, relay events "win" as best event far more often
+than individual events (roughly 48 of 63 pair types favor relays vs. 15
+favoring individuals).
+
+By discipline (individual wins / total pair types):
+  Distance: 6/16 — strongest for individuals (1500m, 5000m vs. relays)
+  Throws:   5/15
+  Jumps:    3/12
+  Sprinters: 1/12 (men's 200m vs. 4x400m only)
+  Hurdles:  0/8 — relays always win pairwise best-event comparisons
+
+
+7. MULTI-EVENT PARTICIPATION IS COMMON
+--------------------------------------
+Roughly half of athletes in each discipline compete in 2+ scored events
+(e.g., men sprints 910/1830; men distance 1283/2518). Relay inclusion
+amplifies this: 822 men and 434 women have 4x400m results, spreading relay
+exposure across sprint, distance, hurdle, jump, and throw rosters.
+
+
+8. POPULATION-LEVEL NATIONALS ACCESS
+------------------------------------
+When ranked by count of athletes clearing the 8th-place bar (not rate alone):
+
+Men — top events by clear count:
+  1. 4x100m (133)
+  2. 4x400m (81)
+  3. 200m (72)
+  4. 100m (65)
+  … middle/long distance events: 46–51 clears despite large entry pools
+
+Women — top events by clear count:
+  1. 4x100m (105)
+  2. 4x400m (78)
+  3. 1500m (46)
+  … several field/hurdle events show high clear-rates at smaller N
+
+Relays provide the single largest pathway by headcount for men approaching
+nationals-level WA scores; for women, 4x100m leads clearly.
+
+
+9. CROSS-DISCIPLINE RELAY PENETRATION
+-------------------------------------
+Because relay CSVs are shared across discipline folders, hurdle, jump, and
+throw athletes appear heavily in 4x400m and 4x100m RQ1C rankings even though
+their primary discipline is not sprints. Example — men hurdles RQ1C: 672
+athletes "most competitive" at 4x400m vs. 86 at 400m Hurdles. This reflects
+roster crossover (many distance/hurdle/field athletes leg relays), not that
+hurdles specialists should pivot to relays.
+
+
+10. SYNTHESIS — PRACTICAL TAKEAWAYS
+-----------------------------------
+a) Including relays changes the story of athlete specialization: 4x400m
+   becomes the dominant "best event" label across the sport, driven by team
+   WA inflation rather than individual open-event performance.
+
+b) For nationals competitiveness, 4x100m is the stronger relay target
+   (higher clear-rates, lower relative bar) than 4x400m, despite 4x400m
+   winning more RQ1C margin comparisons.
+
+c) Middle- and long-distance individual events remain the best individual
+   alternatives to relays; distance athletes are the group most likely to
+   have an individual event as both best event and most competitive event.
+
+d) Field events and hurdles show high per-athlete clear-rates at nationals
+   thresholds for their primary events, but small overlap with relay rosters
+   limits relay-vs-individual comparisons; where overlap exists, relays
+   often still win on WA margin.
+
+e) Analysis is incomplete for distance relays (4x800m) and specialty relays
+   until WA scoring is populated; current conclusions apply to sprint relays
+   only.
+
+f) Coaches and athletes should treat RQ1A (best WA) and RQ1C (vs. nationals
+   bar) as complementary: high relay WA may mark an athlete's "best" result
+   while an individual event may still be the more realistic nationals path.
+
+
+Generated from Relays_Findings analysis outputs (RQ1A, RQ1B, RQ1C).
+See individual discipline folders and RQ1B_Nationals/, RQ1C_Competitiveness/
+for full tables and figures.

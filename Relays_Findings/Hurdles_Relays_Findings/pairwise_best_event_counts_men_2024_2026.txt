@@ -1,0 +1,22 @@
+Outdoor Track 2024-2026 Male Hurdles (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+110m Hurdles vs. 400m Hurdles (69 athletes in both):
+110m Hurdles best event: 12  vs. 400m Hurdles best event: 57
+
+110m Hurdles vs. 4x100m (39 athletes in both):
+110m Hurdles best event: 9  vs. 4x100m best event: 30
+
+110m Hurdles vs. 4x400m (42 athletes in both):
+110m Hurdles best event: 14  vs. 4x400m best event: 28
+
+400m Hurdles vs. 4x100m (50 athletes in both):
+400m Hurdles best event: 20  vs. 4x100m best event: 29
+(ties: 1)
+
+400m Hurdles vs. 4x400m (81 athletes in both):
+400m Hurdles best event: 36  vs. 4x400m best event: 45
+
+4x100m vs. 4x400m (205 athletes in both):
+4x100m best event: 108  vs. 4x400m best event: 96
+(ties: 1)

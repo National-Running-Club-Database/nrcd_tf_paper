@@ -1,0 +1,174 @@
+Combined Specialization Axes vs Time Model Accuracy
+====================================================
+
+Research question: If we know BOTH
+  (1) Short vs Long sprints / Mid (short-distance) vs Long distance, AND
+  (2) Balanced vs Specialized (wa_spread ≥ 50),
+do time predictions improve beyond knowing either axis alone?
+
+Routing strategies (classifiable athletes = have all 3 event PBs):
+  pooled          — one model for all classifiable
+  bal_spec_only   — route by balanced vs specialized
+  short_long_only — route by Short/Mid vs Long
+  joint           — route by both axes (fallback: short/long → bal/spec → pooled)
+
+Minimum cohort train n=12; pair report n=20.
+
+POPULATION: exactly 6 races
+===========================
+
+Joint crosstab (bal/spec × short/long) among classifiable athletes
+------------------------------------------------------------------
+  Men Distance:
+    balanced|mid_distance: n=1
+    specialized|long_distance: n=13
+    specialized|mid_distance: n=10
+  Men Sprints:
+    balanced|short_sprints: n=1
+    specialized|long_sprints: n=8
+    specialized|short_sprints: n=6
+  Women Distance:
+    balanced|mid_distance: n=1
+    specialized|long_distance: n=1
+    specialized|mid_distance: n=1
+  Women Sprints:
+    specialized|long_sprints: n=1
+    specialized|short_sprints: n=1
+
+  Classifiable total=44; balanced among them=3 (7%). Short/Long classification (needs all 3 events) heavily overlaps with old 'specialized' (≥50 WA spread).
+
+Strategy CV on classifiable athletes (median |error|)
+-----------------------------------------------------
+Pair                                   n    Pool   BalSp    Sh/L   Joint Best
+Men Distance 1500m->5000m             24 24.059s 25.838s 24.059s 25.838s pooled
+Men Distance 1500m->800m              24  2.495s  2.403s  2.495s  2.403s bal_spec_only
+Men Distance 5000m->1500m             24  5.122s  5.995s  5.122s  5.995s pooled
+Men Distance 5000m->800m              24  2.550s  2.143s  2.550s  2.143s bal_spec_only
+Men Distance 800m->1500m              24  5.886s  5.032s  5.886s  5.032s bal_spec_only
+Men Distance 800m->5000m              24 15.963s 23.880s 15.963s 23.880s pooled
+
+Strategy summary
+----------------
+  Pairs compared: 6
+  Best strategy counts: {'bal_spec_only': 3, 'pooled': 3}
+  short_long beats pooled: 0/6 (mean Δ +0.000s)
+  bal_spec beats pooled: 3/6 (mean Δ -1.536s)
+  joint beats pooled: 3/6 (mean Δ -1.536s)
+  joint beats short_long alone: 3/6 (mean Δ -1.536s)
+
+Within short/long arms: balanced vs specialized (linear CV, n≥12)
+-----------------------------------------------------------------
+  Men Distance 1500m->5000m [Long Distance ∩ specialized] n=13  CV=12.923s
+  Men Distance 1500m->800m [Long Distance ∩ specialized] n=13  CV=2.591s
+  Men Distance 5000m->1500m [Long Distance ∩ specialized] n=13  CV=3.258s
+  Men Distance 5000m->800m [Long Distance ∩ specialized] n=13  CV=2.427s
+  Men Distance 800m->1500m [Long Distance ∩ specialized] n=13  CV=5.162s
+  Men Distance 800m->5000m [Long Distance ∩ specialized] n=13  CV=12.656s
+
+POPULATION: 5 or 6 races
+========================
+
+Joint crosstab (bal/spec × short/long) among classifiable athletes
+------------------------------------------------------------------
+  Men Distance:
+    balanced|long_distance: n=1
+    balanced|mid_distance: n=1
+    specialized|long_distance: n=33
+    specialized|mid_distance: n=26
+  Men Sprints:
+    balanced|long_sprints: n=1
+    balanced|short_sprints: n=3
+    specialized|long_sprints: n=13
+    specialized|short_sprints: n=18
+  Women Distance:
+    balanced|mid_distance: n=3
+    specialized|long_distance: n=6
+    specialized|mid_distance: n=5
+  Women Sprints:
+    balanced|long_sprints: n=2
+    specialized|long_sprints: n=3
+    specialized|short_sprints: n=5
+
+  Classifiable total=120; balanced among them=11 (9%). Short/Long classification (needs all 3 events) heavily overlaps with old 'specialized' (≥50 WA spread).
+
+Strategy CV on classifiable athletes (median |error|)
+-----------------------------------------------------
+Pair                                   n    Pool   BalSp    Sh/L   Joint Best
+Men Distance 1500m->5000m             61 19.384s 18.116s 15.461s 18.789s short_long_only
+Men Distance 1500m->800m              61  2.218s  2.195s  2.131s  2.179s short_long_only
+Men Distance 5000m->1500m             61  5.639s  5.692s  4.147s  3.967s joint
+Men Distance 5000m->800m              61  4.319s  4.314s  3.438s  3.553s short_long_only
+Men Distance 800m->1500m              61  4.306s  4.335s  4.758s  4.476s pooled
+Men Distance 800m->5000m              61 32.847s 25.784s 18.838s 21.569s short_long_only
+Men Sprints 100m->200m                35  0.404s  0.432s  0.344s  0.418s short_long_only
+Men Sprints 100m->400m                35  1.944s  2.009s  2.119s  2.009s pooled
+Men Sprints 200m->100m                35  0.151s  0.151s  0.131s  0.144s short_long_only
+Men Sprints 200m->400m                35  1.044s  1.230s  1.430s  1.329s pooled
+Men Sprints 400m->100m                35  0.283s  0.306s  0.292s  0.274s joint
+Men Sprints 400m->200m                35  0.368s  0.419s  0.394s  0.541s pooled
+
+Strategy summary
+----------------
+  Pairs compared: 12
+  Best strategy counts: {'short_long_only': 6, 'pooled': 4, 'joint': 2}
+  short_long beats pooled: 7/12 (mean Δ +1.619s)
+  bal_spec beats pooled: 3/12 (mean Δ +0.660s)
+  joint beats pooled: 5/12 (mean Δ +1.138s)
+  joint beats short_long alone: 5/12 (mean Δ -0.481s)
+
+Within short/long arms: balanced vs specialized (linear CV, n≥12)
+-----------------------------------------------------------------
+  Men Distance 1500m->5000m [Long Distance ∩ specialized] n=33  CV=13.037s
+  Men Distance 1500m->800m [Long Distance ∩ specialized] n=33  CV=2.334s
+  Men Distance 5000m->1500m [Long Distance ∩ specialized] n=33  CV=3.308s
+  Men Distance 5000m->800m [Long Distance ∩ specialized] n=33  CV=2.943s
+  Men Distance 800m->1500m [Long Distance ∩ specialized] n=33  CV=4.758s
+  Men Distance 800m->5000m [Long Distance ∩ specialized] n=33  CV=16.398s
+  Men Distance 1500m->5000m [Mid Distance ∩ specialized] n=26  CV=26.799s
+  Men Distance 1500m->800m [Mid Distance ∩ specialized] n=26  CV=2.143s
+  Men Distance 5000m->1500m [Mid Distance ∩ specialized] n=26  CV=5.663s
+  Men Distance 5000m->800m [Mid Distance ∩ specialized] n=26  CV=3.363s
+  Men Distance 800m->1500m [Mid Distance ∩ specialized] n=26  CV=4.355s
+  Men Distance 800m->5000m [Mid Distance ∩ specialized] n=26  CV=31.735s
+  Men Sprints 100m->200m [Long Sprints ∩ specialized] n=13  CV=0.856s
+  Men Sprints 100m->400m [Long Sprints ∩ specialized] n=13  CV=1.756s
+  Men Sprints 200m->100m [Long Sprints ∩ specialized] n=13  CV=0.552s
+  Men Sprints 200m->400m [Long Sprints ∩ specialized] n=13  CV=0.822s
+  Men Sprints 400m->100m [Long Sprints ∩ specialized] n=13  CV=0.325s
+  Men Sprints 400m->200m [Long Sprints ∩ specialized] n=13  CV=0.241s
+  Men Sprints 100m->200m [Short Sprints ∩ specialized] n=18  CV=0.160s
+  Men Sprints 100m->400m [Short Sprints ∩ specialized] n=18  CV=2.581s
+  Men Sprints 200m->100m [Short Sprints ∩ specialized] n=18  CV=0.079s
+  Men Sprints 200m->400m [Short Sprints ∩ specialized] n=18  CV=2.390s
+  Men Sprints 400m->100m [Short Sprints ∩ specialized] n=18  CV=0.258s
+  Men Sprints 400m->200m [Short Sprints ∩ specialized] n=18  CV=0.591s
+
+Interpretation
+--------------
+Among athletes classifiable on Short/Long (all 3 event PBs), nearly all are already 'specialized' under the old wa_spread≥50 rule. Balanced∩Short/Long cells are tiny (often n=0–3). The two axes are highly overlapping, not independent stratifiers.
+At 5-or-6 races (12 pairs): best strategy counts {'short_long_only': 6, 'pooled': 4, 'joint': 2}. Joint beats short/long alone on 5/12 pairs (mean Δ -0.481s).
+Verdict: NO CLEAR GAIN — combining axes does not reliably beat the better single-axis strategy (Short/Long).
+At exactly 6 races: 6 pairs; joint vs short/long wins 3/6 (underpowered; Mid/Short arms small).
+
+Practical recommendation
+------------------------
+  • If athlete has all 3 event PBs: use Short/Long (Mid/Long) routing.
+  • Old balanced/specialized remains useful for athletes who raced only 2
+    events in the group (not Short/Long-classifiable).
+  • Do not expect a 4-way formula grid — balanced∩Short/Long is too rare.
+
+Caveats:
+  • Joint cells with balanced athletes lack n for dedicated formulas.
+  • Women's joint samples remain too small.
+  • Analysis restricted to athletes classifiable on Short/Long for fair
+    comparison of strategies that use that axis.
+
+Output files:
+  combined_specialization_report.txt
+  combined_specialization_findings.txt
+  athlete_season_combined_specialization.csv
+  combined_crosstab.csv
+  combined_strategy_comparison.csv
+  combined_within_arm_comparison.csv
+
+Source: Combined_Specialization_Time_Models/analyze_combined_specialization.py

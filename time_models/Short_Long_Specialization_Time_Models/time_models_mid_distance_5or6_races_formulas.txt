@@ -1,0 +1,62 @@
+Cross-Event Time Models — Mid Distance — 5 Or 6 Races
+=========================================================
+
+Population: 5 or 6 races athlete-seasons with season PBs in all 3 group events.
+Specialization cohort: Mid Distance
+
+Sprints: Short = |WA100−WA200| < |WA200−WA400|; Long = reverse.
+Distance: Mid = |WA800−WA1500| < |WA1500−WA5000|; Long = reverse.
+
+Use when short/long (or mid/long) status is known.
+Predict time, then convert to WA in the target event table.
+
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=27, r=0.882)
+  Model: log_linear
+  Formula: 5000m = exp(1.636 + 0.951×log(1500m))
+  CV median |error|: 26.127s
+  vs pooled model on cohort: 21.301s (↑4.825s)
+
+1500m -> 800m  (n=27, r=0.899)
+  Model: robust_trimmed_linear
+  Formula: 800m = 4.923 + 0.469 × 1500m
+  CV median |error|: 1.841s
+  vs pooled model on cohort: 1.633s (↑0.207s)
+
+5000m -> 1500m  (n=27, r=0.882)
+  Model: linear_ols
+  Formula: 1500m = 55.102 + 0.202 × 5000m
+  CV median |error|: 4.927s
+  vs pooled model on cohort: 9.434s (↓4.506s)
+
+5000m -> 800m  (n=27, r=0.800)
+  Model: robust_trimmed_linear
+  Formula: 800m = 31.884 + 0.094 × 5000m
+  CV median |error|: 3.170s
+  vs pooled model on cohort: 4.848s (↓1.678s)
+
+800m -> 1500m  (n=27, r=0.899)
+  Model: median_ratio
+  Formula: 1500m = 2.045 × 800m
+  CV median |error|: 3.830s
+  vs pooled model on cohort: 2.972s (↑0.858s)
+
+800m -> 5000m  (n=27, r=0.800)
+  Model: median_ratio
+  Formula: 5000m = 7.900 × 800m
+  CV median |error|: 27.652s
+
+Pair summary
+------------
+  From     To          n        CV  Formula
+  1500m    5000m      27   26.127s  5000m = exp(1.636 + 0.951×log(1500m))
+  1500m    800m       27    1.841s  800m = 4.923 + 0.469 × 1500m
+  5000m    1500m      27    4.927s  1500m = 55.102 + 0.202 × 5000m
+  5000m    800m       27    3.170s  800m = 31.884 + 0.094 × 5000m
+  800m     1500m      27    3.830s  1500m = 2.045 × 800m
+  800m     5000m      27   27.652s  5000m = 7.900 × 800m
+
+Source: Short_Long_Specialization_Time_Models/analyze_short_long_specialization.py

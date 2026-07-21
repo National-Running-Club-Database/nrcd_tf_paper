@@ -1,0 +1,81 @@
+Balanced / Specialization Counts by WA Point Band
+=================================================
+
+Question: Within each high-WA band, how many athlete-seasons are
+balanced vs specialized — and for specialized athletes, how many
+are Short/Long (or Mid/Long) specialists?
+
+Definitions:
+  • Band inclusion: ≥1 individual (non-relay, non-steeple) result with
+    WA points in [lo, hi). Sprints & Distance only. March 1+ outdoor.
+  • Balanced: wa_spread < 50 across season PBs in the
+    event group → sprints_balanced or distance_balanced.
+  • Specialized: wa_spread ≥ 50, then Short/Long label:
+      Sprints — Short: |WA(100)−WA(200)| < |WA(200)−WA(400)|
+               Long:  |WA(400)−WA(200)| < |WA(100)−WA(200)|
+      Distance — Mid:  |WA(800)−WA(1500)| < |WA(1500)−WA(5000)|
+                 Long: |WA(1500)−WA(5000)| < |WA(1500)−WA(800)|
+    (Requires all 3 group-event PBs; else specialized_unclassified.)
+  • Unit: athlete-season (aid|year). An athlete competing in both
+    Sprints and Distance CSVs can contribute one row to each group.
+
+=== Band 750-950 ===
+Total athlete-seasons in band: 556
+  Balanced:    209  (37.6%)
+    sprints_balanced:  130
+    distance_balanced: 79
+  Specialized: 347  (62.4%)
+    short_sprints:              26
+    long_sprints:               16
+    mid_distance:               17
+    long_distance:              23
+    specialized_unclassified*:  265
+    (* missing all 3 events, or Short/Long tie)
+
+  By gender × event group:
+    Men Sprints: n=216  bal=88  spec=128 (short/mid=16, long=11, uncl=101)
+    Men Distance: n=178  bal=56  spec=122 (short/mid=16, long=16, uncl=90)
+    Women Sprints: n=89  bal=42  spec=47 (short/mid=10, long=5, uncl=32)
+    Women Distance: n=73  bal=23  spec=50 (short/mid=1, long=7, uncl=42)
+
+=== Band 800-1000 ===
+Total athlete-seasons in band: 351
+  Balanced:    135  (38.5%)
+    sprints_balanced:  91
+    distance_balanced: 44
+  Specialized: 216  (61.5%)
+    short_sprints:              18
+    long_sprints:               10
+    mid_distance:               12
+    long_distance:              15
+    specialized_unclassified*:  161
+    (* missing all 3 events, or Short/Long tie)
+
+  By gender × event group:
+    Men Sprints: n=141  bal=64  spec=77 (short/mid=11, long=8, uncl=58)
+    Men Distance: n=114  bal=33  spec=81 (short/mid=12, long=10, uncl=59)
+    Women Sprints: n=54  bal=27  spec=27 (short/mid=7, long=2, uncl=18)
+    Women Distance: n=42  bal=11  spec=31 (short/mid=0, long=5, uncl=26)
+
+=== Band 850-1050 ===
+Total athlete-seasons in band: 187
+  Balanced:    66  (35.3%)
+    sprints_balanced:  51
+    distance_balanced: 15
+  Specialized: 121  (64.7%)
+    short_sprints:              11
+    long_sprints:               6
+    mid_distance:               9
+    long_distance:              8
+    specialized_unclassified*:  87
+    (* missing all 3 events, or Short/Long tie)
+
+  By gender × event group:
+    Men Sprints: n=85  bal=38  spec=47 (short/mid=7, long=4, uncl=36)
+    Men Distance: n=57  bal=11  spec=46 (short/mid=9, long=5, uncl=32)
+    Women Sprints: n=28  bal=13  spec=15 (short/mid=4, long=2, uncl=9)
+    Women Distance: n=17  bal=4  spec=13 (short/mid=0, long=3, uncl=10)
+
+Source: Balanced_Specialization_Counts/count_balanced_specialization_by_band.py
+Short/Long definitions: Short_Long_Specialization_Time_Models/
+analyze_short_long_specialization.py

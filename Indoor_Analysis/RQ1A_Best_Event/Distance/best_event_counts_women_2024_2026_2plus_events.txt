@@ -1,0 +1,11 @@
+Indoor Track 2024-2026 Female Distance (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+Athletes with results in at least 2 events (individual + relay)
+
+800m (288 competed): 116
+Mile (420 competed): 134
+3000m (200 competed): 113
+5000m (71 competed): 37
+4x200m (135 competed): 82
+4x400m (318 competed): 118

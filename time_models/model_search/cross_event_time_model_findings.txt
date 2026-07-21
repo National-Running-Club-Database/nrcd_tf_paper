@@ -1,0 +1,299 @@
+Cross-Event Time Model Findings
+===============================
+
+Outdoor track data: 2024–2026, results on or after March 1.
+Event groups: Sprints (100m / 200m / 400m) and Distance (800m / 1500m / 5000m).
+Steeplechase excluded. All times in seconds (e.g. 267.7 = 4:27.7).
+
+Always predict TIME in the target event, then convert to World Athletics points
+in that event's table. Do not compare WA across events directly.
+
+
+================================================================================
+PART 1 — BEST PREDICTION FORMULAS (FULL SAMPLE)
+================================================================================
+
+Source: 5-fold CV model search (time_models/model_search/best_time_models.csv).
+20 of 24 event pairs beat simple linear regression by >0.01s CV median |error|.
+Largest gains: men 100m+200m→400m (−0.65s), men 800m+1500m→5000m (−16.1s).
+
+Decision tree:
+  1. Two known events bracketing the target → multivariate OLS (if available)
+  2. One known event, long hop → binned_ratio or median_ratio
+  3. One known event, inverse/endurance curve → robust_trimmed_linear or ratio_linear
+  4. Else → linear_ols (strong for adjacent events)
+
+Use CV median |error| as a typical ± uncertainty band around each prediction.
+
+
+--------------------------------------------------------------------------------
+SPRINTS — Men
+--------------------------------------------------------------------------------
+
+Predict   Known mark(s)   Best formula                              Typical error
+--------  --------------  ----------------------------------------  -------------
+200m      100m            200m = 2.044 × 100m                       ±0.42s
+400m      100m + 200m     400m = 5.39 − 0.770×100m + 2.432×200m    ±1.34s
+400m      200m only       400m = 200m × ratio (binned; see below)   ±1.27s
+100m      200m            100m = −3.062 + 0.838×200m − 0.00914×200m² ±0.19s
+200m      400m            200m = 5.163 + 0.354×400m                 ±0.56s
+100m      400m            100m = 4.278 + 0.142×400m                 ±0.29s
+
+Men 200m → 400m (binned ratio): find the 200m edge closest to the athlete's
+200m PB, then multiply. Edges (s) → ratio:
+  22.57→2.246  23.40→2.263  23.85→2.205  24.26→2.246  24.88→2.237
+  25.62→2.211  26.84→2.238  28.77→2.224  33.36→2.170
+
+If only 100m is known for 400m (no 200m): multivariate needs both inputs.
+Best single-input fallback: binned ratio on 100m (±1.65s) or linear
+400m = −5.14 + 5.05×100m (±1.99s).
+
+
+--------------------------------------------------------------------------------
+SPRINTS — Women
+--------------------------------------------------------------------------------
+
+Predict   Known mark(s)   Best formula                              Typical error
+--------  --------------  ----------------------------------------  -------------
+200m      100m            200m = 2.101 × 100m                       ±0.48s
+400m      100m only       400m = 100m × ratio (binned; see below)   ±1.69s
+400m      200m only       400m = 2.273 × 200m                       ±1.64s
+100m      200m            100m = 3.658 + 0.350×200m                 ±0.19s
+200m      400m            200m = 3.449 + 0.388×400m                 ±0.66s
+100m      400m            100m = exp(−0.060 + 0.643×log(400m))        ±0.33s
+
+Women 100m → 400m (binned ratio): find the 100m edge closest to the athlete's
+100m PB, then multiply. Edges (s) → ratio:
+  12.82→4.624  13.07→4.865  13.43→4.747  13.69→4.561  14.05→4.834
+  14.62→4.832  14.98→4.855  15.92→4.856  17.15→4.593
+
+If both 100m and 200m are known for 400m: multivariate is available but did
+not beat the 100m-only binned model in this dataset (small n=59).
+
+
+--------------------------------------------------------------------------------
+DISTANCE — Men
+--------------------------------------------------------------------------------
+
+Predict   Known mark(s)   Best formula                              Typical error
+--------  --------------  ----------------------------------------  -------------
+1500m     800m            1500m = 27.59 + 1.856×800m                ±6.34s
+5000m     800m + 1500m    5000m = 48.46 + 0.032×800m + 3.624×1500m  ±25.6s
+800m      1500m           800m = 12.145 + 0.440×1500m               ±3.20s
+5000m     1500m only      5000m = 25.89 + 3.671×1500m               ±25.5s
+800m      5000m only      800m = 5000m × ratio (binned; see below)   ±4.63s
+1500m     5000m           1500m = 48.06 + 0.218×5000m               ±6.48s
+
+Men 5000m → 800m (binned ratio): find the 5000m edge closest to the athlete's
+5000m PB, then multiply. Edges (s) → ratio:
+  910.8→0.1326  941.6→0.1333  974.5→0.1298  996.0→0.1293  1029.4→0.1295
+  1058.0→0.1306  1115.7→0.1252  1208.0→0.1216  1378.1→0.1240
+
+
+--------------------------------------------------------------------------------
+DISTANCE — Women
+--------------------------------------------------------------------------------
+
+Predict   Known mark(s)   Best formula                              Typical error
+--------  --------------  ----------------------------------------  -------------
+1500m     800m            1500m = 800m × (2.279 − 0.00145×800m)      ±7.79s
+5000m     800m + 1500m    Chain via 1500m (see below)               ±33.3s
+800m      1500m           800m = 1500m × (0.526 − 0.000103×1500m)    ±3.93s
+5000m     1500m only      5000m = 113.31 + 3.382×1500m              ±32.7s
+800m      5000m           800m = 0.134 × 5000m                      ±5.35s
+1500m     5000m           1500m = 54.83 + 0.223×5000m               ±8.46s
+
+Women 800m + 1500m → 5000m (chain):
+  With actual 1500m:  5000m ≈ −16.73 + 3.814 × 1500m
+  With only 800m:     1500m_est = 85.57 + 1.486 × 800m
+                      5000m ≈ −16.73 + 3.814 × 1500m_est
+  (Residual adjustment from 800m is effectively zero in this dataset.)
+
+
+================================================================================
+PART 2 — RACE VOLUME ANALYSIS (4, 5, 6 RACES PER SEASON)
+================================================================================
+
+Research question: Do time-prediction models become more accurate when
+restricted to athletes who competed in more races during a season?
+
+Source: time_models/model_search/race_count/
+Script:  time_models/model_search/compare_time_models_by_race_count.py
+
+
+Method
+------
+  • Unit: athlete-season (not pooled across 2024–2026).
+  • Race count: unique valid results in the discipline CSV for that event group
+    (same sources as build_cross_event_time_models.py).
+  • Filters: all athlete-seasons, and exactly 4, 5, or 6 races.
+  • Same 8+ candidate models and 5-fold CV as the full-sample search.
+  • Primary metric: CV median absolute error (seconds). Lower is better.
+  • Minimum n=20 athlete-season pairs per event pair to evaluate.
+
+
+Headline comparison (mean CV median |error| across evaluated pairs)
+-------------------------------------------------------------------
+Filter        Pairs   Mean linear   Mean best   Δ (linear−best)
+all              24       8.139s       6.768s           1.372s
+4 races          20       9.264s       7.092s           2.172s
+5 races          16       6.711s       4.902s           1.809s
+6 races          10       6.086s       4.931s           1.154s
+
+Compared to all athlete-seasons (mean best CV = 6.768s):
+  • 4 races: 7.092s — 0.324s LESS accurate (unreliable; see below)
+  • 5 races: 4.902s — 1.865s MORE accurate
+  • 6 races: 4.931s — 1.836s MORE accurate
+
+
+Sample sizes (athlete-seasons in discipline CSV)
+-----------------------------------------------
+Filter     Men Sprints   Women Sprints   Men Distance   Women Distance
+all           1,536            702            2,503            1,181
+4 races         129             60              180               63
+5 races          57             29               87               31
+6 races          39             12               60               11
+
+At 6 races, many women's pairs drop below n=20 — only 10 of 24 pairs could be
+evaluated. Conclusions for women at 6 races are limited.
+
+
+Key finding: Does more racing improve model accuracy?
+------------------------------------------------------
+YES — but unevenly. The clearest gains appear at 5–6 races, especially for
+men's distance long hops. Sprint pairs improve modestly. The 4-race filter
+is mixed and less reliable due to smaller samples and volatile long-hop pairs.
+
+
+Exactly 4 races vs all athlete-seasons
+--------------------------------------
+  Pairs more accurate: 13/20
+  Pairs less accurate:  7/20
+  Mean Δ (4 minus all): +0.962s
+  Median Δ:             −0.049s  (essentially flat)
+
+  Interpretation: Median pair is unchanged; mean worsens because a few long-hop
+  pairs with tiny n (e.g. men 800m→5000m at n=38: +11.4s error) are unstable.
+  Sprint pairs mostly improve slightly; distance long hops are unreliable at 4.
+
+
+Exactly 5 races vs all athlete-seasons
+--------------------------------------
+  Pairs more accurate: 7/16
+  Pairs less accurate:  7/16
+  Mean Δ (5 minus all): −0.205s
+  Median Δ:             −0.004s  (~same)
+
+  Notable improvements:
+    Men 1500m→5000m:  23.1s → 18.8s  (−4.3s)
+    Men 800m→5000m:   23.7s → 21.0s  (−2.8s)
+    Men 200m→400m:     1.17s → 0.90s (−0.27s)
+    Women 100m→200m:   0.48s → 0.37s (−0.11s)
+
+
+Exactly 6 races vs all athlete-seasons
+--------------------------------------
+  Pairs more accurate: 9/10
+  Pairs less accurate:  1/10
+  Mean Δ (6 minus all): −1.904s
+  Median Δ:             −0.264s
+
+  Strongest signal in the entire analysis. Men's distance dominates:
+
+  Pair              All seasons   6 races    Change
+  ----------------  ------------  ---------  --------
+  Men 800m→5000m       23.7s       16.0s     −7.8s
+  Men 1500m→5000m      23.1s       16.2s     −6.9s
+  Men 5000m→800m        4.1s        1.9s     −2.2s
+  Men 5000m→1500m       5.8s        4.3s     −1.5s
+  Men 1500m→800m        3.0s        2.6s     −0.4s
+  Men 800m→1500m        6.3s        6.2s     −0.1s
+  Men 100m→200m         0.41s       0.36s    −0.04s
+  Men 200m→100m         0.18s       0.13s    −0.05s
+  Men 400m→200m         0.53s       0.45s    −0.08s
+  Men 200m→400m         1.17s       1.26s    +0.09s  (only pair that worsened)
+
+
+Where accuracy improves most (by event group)
+---------------------------------------------
+  SPRINTS
+    Modest but consistent gains at 4–6 races on adjacent pairs (100m↔200m).
+    Typical improvement: 0.04–0.15s CV median |error|.
+    Long hops (100m→400m) do NOT consistently improve — small samples, higher
+    variance. Women 200m→400m and 400m→200m improve ~0.05–0.10s at 4 races.
+
+  DISTANCE — Men (biggest signal)
+    Athletes with 5–6 distance races show much tighter 800m / 1500m / 5000m
+    relationships. Likely reflects more developed, consistent endurance athletes
+    who race multiple times and refine fitness across the season.
+
+  DISTANCE — Women
+    Mixed at 4–5 races; insufficient n at 6 races for most pairs.
+    Women's 800m→1500m and 1500m→800m can worsen at higher race counts in
+  small samples — treat with caution.
+
+
+================================================================================
+PART 3 — PRACTICAL RECOMMENDATIONS
+================================================================================
+
+When projecting an unrun event
+-------------------------------
+  1. List the athlete's season PB times in the event group.
+  2. Apply the best formula from Part 1 (or Part 2 if race-count context applies).
+  3. Use CV median |error| as a typical ± band.
+  4. Convert predicted time to WA in the TARGET event table.
+  5. Compare WA margin vs nationals 8th-place threshold for that event.
+
+Race-volume guidance
+--------------------
+  • Athletes with 5–6 season results in the group: models are meaningfully more
+    trustworthy, especially men's 800m / 1500m / 5000m (−2 to −8s error reduction).
+  • Athletes with exactly 4 races: do not assume better accuracy; wait for 5+.
+  • Athletes with 1–3 results: use full-sample formulas but apply wider uncertainty.
+  • Selection effect: high-race-count athletes may be more committed/coached —
+    accuracy gains partly reflect athlete type, not just more data points.
+
+Model selection quick reference
+-------------------------------
+  Two inputs bracketing target:
+    Men 100m+200m→400m, Men 800m+1500m→5000m → multivariate OLS
+    Women 800m+1500m→5000m → chain via 1500m
+
+  One input, adjacent events:
+  median_ratio or linear_ols (100m↔200m)
+
+  One input, long hop:
+    binned_ratio or median_ratio (100m→400m women; 200m→400m men)
+
+  One input, inverse / endurance:
+    robust_trimmed_linear or ratio_linear (400m→200m; 1500m→800m women)
+
+
+================================================================================
+PART 4 — CAVEATS
+================================================================================
+
+  • Cross-event WA comparison is invalid; always predict time first.
+  • Pooled-athlete baseline (best mark per athlete across 2024–2026) differs
+    slightly from athlete-season units used in the race-count analysis.
+  • Race count = total discipline results in the event group, not per-event count.
+  • Smaller samples at fixed race counts (especially 6 races, women) reduce
+    model stability and limit which pairs can be evaluated.
+  • Associative findings only; high-volume athletes may differ systematically
+    from low-volume athletes beyond what race count alone explains.
+
+
+================================================================================
+SOURCE FILES
+================================================================================
+
+  time_models/model_search/best_time_models.csv
+  time_models/model_search/model_search_report.txt
+  time_models/model_search/improved_process_summary.txt
+  time_models/model_search/race_count/best_time_models_by_race_count.csv
+  time_models/model_search/race_count/summary_by_race_count.csv
+  time_models/model_search/race_count/race_count_analysis_report.txt
+  time_models/model_search/compare_time_model_candidates.py
+  time_models/model_search/compare_time_models_by_race_count.py
+  time_models/build_cross_event_time_models.py

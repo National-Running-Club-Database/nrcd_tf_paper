@@ -1,0 +1,116 @@
+Indoor vs Outdoor Season-Opener World Athletics Scores
+======================================================
+
+Question:
+  For athletes with ≥2 indoor meets and ≥2 outdoor meets in the same year,
+  do outdoor season openers start with higher WA scores than indoor season
+  openers for similar events?
+
+Method:
+  • Years: 2024, 2025, 2026 (indoor season file year paired with outdoor year).
+  • Eligibility: ≥2 distinct meet_ids with individual (non-relay) results indoors
+    AND ≥2 outdoors in that year.
+  • Season opener: earliest meet by start_date for that athlete in the season.
+  • Similar-event pairs compared only when the athlete contested the indoor
+    event at the indoor opener meet AND the paired outdoor event at the
+    outdoor opener meet.
+  • Delta = outdoor_opener_WA − indoor_opener_WA.
+  • Outdoor distance uses New_Steeplechase_Data (corrected WA) when available.
+  • Relays excluded.
+
+Similar-event pairs:
+  • 60m → 100m
+  • 200m → 200m
+  • 400m → 400m
+  • 800m → 800m
+  • Mile → 1500m
+  • 1500m → 1500m
+  • 3000m → 5000m
+  • 5000m → 5000m
+  • 60mH → 110mH [Men only]
+  • 60mH → 100mH [Women only]
+  • Long Jump → Long Jump
+  • Triple Jump → Triple Jump
+  • High Jump → High Jump
+  • Shot Put → Shot Put
+
+Eligibility / sample
+--------------------
+  2024: 501 eligible athletes; 504 opener pair comparisons (397 athletes with ≥1 comparable opener pair)
+  2025: 291 eligible athletes; 252 opener pair comparisons (215 athletes with ≥1 comparable opener pair)
+  2026: 307 eligible athletes; 281 opener pair comparisons (234 athletes with ≥1 comparable opener pair)
+  Combined: 722 athletes contributing 1037 opener pair comparisons
+
+Primary result — all years, all similar-event pairs
+---------------------------------------------------
+  n=1037 athletes=722  indoorμ=613.6 outdoorμ=609.8  Δμ=-3.7 Δmed=+1.0  outdoor_higher=50.6%  indoor_higher=48.6%
+  Verdict: MIXED — mean delta and win-rate do not strongly favor one season.
+
+By year
+-------
+  2024: n=504 athletes=397  indoorμ=595.7 outdoorμ=592.9  Δμ=-2.8 Δmed=+3.0  outdoor_higher=51.4%  indoor_higher=48.0%
+  2025: n=252 athletes=215  indoorμ=636.9 outdoorμ=625.8  Δμ=-11.1 Δmed=-3.0  outdoor_higher=47.2%  indoor_higher=52.0%
+  2026: n=281 athletes=234  indoorμ=624.7 outdoorμ=625.9  Δμ=+1.1 Δmed=+3.0  outdoor_higher=52.3%  indoor_higher=46.6%
+
+By gender
+---------
+  Men: n=707 athletes=491  indoorμ=599.9 outdoorμ=596.9  Δμ=-3.0 Δmed=+3.0  outdoor_higher=51.6%  indoor_higher=47.8%
+  Women: n=330 athletes=231  indoorμ=642.9 outdoorμ=637.4  Δμ=-5.5 Δmed=-1.0  outdoor_higher=48.5%  indoor_higher=50.3%
+
+By similar-event pair
+---------------------
+  60m → 100m: n=170 athletes=146  indoorμ=693.2 outdoorμ=686.6  Δμ=-6.6 Δmed=-8.0  outdoor_higher=44.1%  indoor_higher=55.9%
+  200m → 200m: n=147 athletes=136  indoorμ=658.1 outdoorμ=657.8  Δμ=-0.3 Δmed=+7.0  outdoor_higher=54.4%  indoor_higher=43.5%
+  400m → 400m: n=107 athletes=98  indoorμ=609.8 outdoorμ=594.8  Δμ=-14.9 Δmed=-3.0  outdoor_higher=46.7%  indoor_higher=53.3%
+  800m → 800m: n=121 athletes=116  indoorμ=537.1 outdoorμ=514.0  Δμ=-23.1 Δmed=-27.0  outdoor_higher=38.8%  indoor_higher=61.2%
+  Mile → 1500m: n=181 athletes=167  indoorμ=504.9 outdoorμ=528.7  Δμ=+23.8 Δmed=+28.0  outdoor_higher=66.9%  indoor_higher=32.6%
+  3000m → 5000m: n=80 athletes=74  indoorμ=617.0 outdoorμ=595.3  Δμ=-21.7 Δmed=-7.5  outdoor_higher=41.2%  indoor_higher=58.8%
+  5000m → 5000m: n=21 athletes=21  indoorμ=651.1 outdoorμ=646.2  Δμ=-4.9 Δmed=+9.0  outdoor_higher=61.9%  indoor_higher=38.1%
+  60mH → 110mH: n=21 athletes=16  indoorμ=743.8 outdoorμ=691.0  Δμ=-52.7 Δmed=-36.0  outdoor_higher=33.3%  indoor_higher=61.9%
+  60mH → 100mH: n=20 athletes=18  indoorμ=624.1 outdoorμ=600.3  Δμ=-23.9 Δmed=-18.0  outdoor_higher=35.0%  indoor_higher=65.0%
+  Long Jump → Long Jump: n=55 athletes=48  indoorμ=683.8 outdoorμ=703.4  Δμ=+19.6 Δmed=+13.0  outdoor_higher=56.4%  indoor_higher=43.6%
+  Triple Jump → Triple Jump: n=23 athletes=19  indoorμ=691.9 outdoorμ=704.5  Δμ=+12.6 Δmed=+25.0  outdoor_higher=69.6%  indoor_higher=30.4%
+  High Jump → High Jump: n=23 athletes=19  indoorμ=715.1 outdoorμ=714.5  Δμ=-0.6 Δmed=+10.0  outdoor_higher=52.2%  indoor_higher=34.8%
+  Shot Put → Shot Put: n=68 athletes=47  indoorμ=573.0 outdoorμ=564.8  Δμ=-8.2 Δmed=-4.0  outdoor_higher=48.5%  indoor_higher=51.5%
+
+By gender × event pair (n≥10)
+-----------------------------
+  Men 60m → 100m: n=119 athletes=99  indoorμ=678.9 outdoorμ=679.1  Δμ=+0.2 Δmed=-4.0  outdoor_higher=47.9%  indoor_higher=52.1%
+  Men 200m → 200m: n=108 athletes=98  indoorμ=655.4 outdoorμ=660.9  Δμ=+5.5 Δmed=+20.5  outdoor_higher=58.3%  indoor_higher=40.7%
+  Men 400m → 400m: n=79 athletes=72  indoorμ=601.3 outdoorμ=574.2  Δμ=-27.0 Δmed=-10.0  outdoor_higher=41.8%  indoor_higher=58.2%
+  Men 800m → 800m: n=90 athletes=87  indoorμ=509.1 outdoorμ=496.4  Δμ=-12.7 Δmed=-8.5  outdoor_higher=45.6%  indoor_higher=54.4%
+  Men Mile → 1500m: n=127 athletes=117  indoorμ=468.4 outdoorμ=495.0  Δμ=+26.6 Δmed=+30.0  outdoor_higher=68.5%  indoor_higher=30.7%
+  Men 3000m → 5000m: n=58 athletes=54  indoorμ=607.3 outdoorμ=575.5  Δμ=-31.9 Δmed=-16.5  outdoor_higher=34.5%  indoor_higher=65.5%
+  Men 5000m → 5000m: n=16 athletes=16  indoorμ=628.8 outdoorμ=626.1  Δμ=-2.7 Δmed=+7.0  outdoor_higher=62.5%  indoor_higher=37.5%
+  Men 60mH → 110mH: n=21 athletes=16  indoorμ=743.8 outdoorμ=691.0  Δμ=-52.7 Δmed=-36.0  outdoor_higher=33.3%  indoor_higher=61.9%
+  Men Long Jump → Long Jump: n=25 athletes=23  indoorμ=695.2 outdoorμ=714.8  Δμ=+19.6 Δmed=-3.0  outdoor_higher=48.0%  indoor_higher=52.0%
+  Men Triple Jump → Triple Jump: n=12 athletes=11  indoorμ=668.5 outdoorμ=703.2  Δμ=+34.8 Δmed=+32.0  outdoor_higher=83.3%  indoor_higher=16.7%
+  Men High Jump → High Jump: n=13 athletes=9  indoorμ=749.5 outdoorμ=731.5  Δμ=-17.9 Δmed=+0.0  outdoor_higher=46.2%  indoor_higher=46.2%
+  Men Shot Put → Shot Put: n=39 athletes=26  indoorμ=607.4 outdoorμ=595.2  Δμ=-12.2 Δmed=-1.0  outdoor_higher=48.7%  indoor_higher=51.3%
+  Women 60m → 100m: n=51 athletes=47  indoorμ=726.6 outdoorμ=704.1  Δμ=-22.4 Δmed=-31.0  outdoor_higher=35.3%  indoor_higher=64.7%
+  Women 200m → 200m: n=39 athletes=38  indoorμ=665.4 outdoorμ=649.2  Δμ=-16.2 Δmed=-1.0  outdoor_higher=43.6%  indoor_higher=51.3%
+  Women 400m → 400m: n=28 athletes=26  indoorμ=633.8 outdoorμ=652.9  Δμ=+19.1 Δmed=+15.0  outdoor_higher=60.7%  indoor_higher=39.3%
+  Women 800m → 800m: n=31 athletes=29  indoorμ=618.3 outdoorμ=564.9  Δμ=-53.3 Δmed=-54.0  outdoor_higher=19.4%  indoor_higher=80.6%
+  Women Mile → 1500m: n=54 athletes=50  indoorμ=590.7 outdoorμ=607.9  Δμ=+17.2 Δmed=+14.5  outdoor_higher=63.0%  indoor_higher=37.0%
+  Women 3000m → 5000m: n=22 athletes=20  indoorμ=642.6 outdoorμ=647.6  Δμ=+5.0 Δmed=+8.0  outdoor_higher=59.1%  indoor_higher=40.9%
+  Women 60mH → 100mH: n=20 athletes=18  indoorμ=624.1 outdoorμ=600.3  Δμ=-23.9 Δmed=-18.0  outdoor_higher=35.0%  indoor_higher=65.0%
+  Women Long Jump → Long Jump: n=30 athletes=25  indoorμ=674.2 outdoorμ=693.8  Δμ=+19.5 Δmed=+20.5  outdoor_higher=63.3%  indoor_higher=36.7%
+  Women Triple Jump → Triple Jump: n=11 athletes=8  indoorμ=717.4 outdoorμ=705.8  Δμ=-11.6 Δmed=+19.0  outdoor_higher=54.5%  indoor_higher=45.5%
+  Women High Jump → High Jump: n=10 athletes=10  indoorμ=670.4 outdoorμ=692.3  Δμ=+21.9 Δmed=+19.0  outdoor_higher=60.0%  indoor_higher=20.0%
+  Women Shot Put → Shot Put: n=29 athletes=21  indoorμ=526.8 outdoorμ=523.9  Δμ=-2.9 Δmed=-7.0  outdoor_higher=48.3%  indoor_higher=51.7%
+
+Athlete-level (mean delta across an athlete-year's comparable opener pairs)
+--------------------------------------------------------------------------
+  n_athlete_years=846  mean Δ=-4.44  median Δ=+0.50
+  outdoor_higher=50.0%  indoor_higher=49.3%  tie=0.7%
+
+Caveats
+-------
+  • Only opener-meet results count; later-season form is ignored.
+  • Athlete must run the paired events at BOTH openers — selection into
+    comparable pairs is not random (e.g., many milers may open outdoor in 800).
+  • Mile→1500m and 3000m→5000m are approximate cross-event WA comparisons.
+  • 60m→100m compares different distances on the WA scale (by design).
+  • Outdoor March 1+ filter is not applied beyond what the outdoor CSVs contain.
+
+Source: Indoor_Analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py

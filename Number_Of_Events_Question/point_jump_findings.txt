@@ -1,0 +1,192 @@
+Point Jump vs. Competition Volume — Findings
+==========================================
+
+Research question: Does competing in more races during a track season
+lead to a stronger World Athletics score improvement (point jump)?
+
+Definitions:
+  • Combined dataset: all relay-inclusive discipline CSVs, deduplicated by result_id.
+  • Relay results counted once in the combined dataset; leg athletes each receive
+    the team WA score for that relay appearance.
+  • Season: outdoor year file (2024/2025/2026), results on or after March 1.
+  • Point jump: season max WA minus first-day WA (max WA if multiple events on first date).
+  • Event group: athlete-season rows built from results in that group's events only.
+  • Plots: average point jump by result-count bins with ≥10 athletes.
+
+Combined deduplicated results: 18,153
+Athlete-season-event_group records: 15,128
+Plot bins (≥10 athletes): 147
+
+Important methodological note:
+  Athletes with exactly 1 result in a season-event group have point jump = 0 by
+  definition (first-day WA equals season max). The lowest-volume plotted bin is
+  therefore always 0.0; positive trends with more competitions partly reflect
+  this structure and partly reflect athletes who improve across multiple meets.
+  Interpret as associative, not necessarily causal (committed athletes may both
+  compete more and improve more).
+
+## Men
+
+### 2024
+
+**Sprints** (11 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=314)
+  Highest volume bin: 12 results → avg point jump 49.55 (n=11)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 49.5 WA points.
+
+**Distance** (9 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=494)
+  Highest volume bin: 9 results → avg point jump 92.31 (n=13)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 92.3 WA points.
+
+**Hurdles** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=357)
+  Highest volume bin: 5 results → avg point jump 32.3 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 32.3 WA points.
+
+**Jumps** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=349)
+  Highest volume bin: 5 results → avg point jump 8.55 (n=11)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 8.6 WA points.
+
+**Throws** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=360)
+  Highest volume bin: 6 results → avg point jump 42.7 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 42.7 WA points.
+
+### 2025
+
+**Sprints** (7 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=331)
+  Highest volume bin: 8 results → avg point jump 61.3 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 61.3 WA points.
+
+**Distance** (7 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=480)
+  Highest volume bin: 7 results → avg point jump 98.5 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 98.5 WA points.
+
+**Hurdles** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=224)
+  Highest volume bin: 3 results → avg point jump 56.0 (n=12)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 56.0 WA points.
+
+**Jumps** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=240)
+  Highest volume bin: 3 results → avg point jump 26.29 (n=17)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 26.3 WA points.
+
+**Throws** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=212)
+  Highest volume bin: 3 results → avg point jump 15.0 (n=11)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 15.0 WA points.
+
+### 2026
+
+**Sprints** (6 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=383)
+  Highest volume bin: 6 results → avg point jump 66.3 (n=27)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 66.3 WA points.
+
+**Distance** (7 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=445)
+  Highest volume bin: 7 results → avg point jump 73.62 (n=16)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 73.6 WA points.
+
+**Hurdles** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=344)
+  Highest volume bin: 4 results → avg point jump 108.57 (n=14)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 108.6 WA points.
+
+**Jumps** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=352)
+  Highest volume bin: 5 results → avg point jump 35.67 (n=12)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 35.7 WA points.
+
+**Throws** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=357)
+  Highest volume bin: 5 results → avg point jump 42.58 (n=12)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 42.6 WA points.
+
+## Women
+
+### 2024
+
+**Sprints** (6 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=191)
+  Highest volume bin: 6 results → avg point jump 50.5 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 50.5 WA points.
+
+**Distance** (7 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=285)
+  Highest volume bin: 7 results → avg point jump 97.6 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 97.6 WA points.
+
+**Hurdles** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=227)
+  Highest volume bin: 6 results → avg point jump 92.58 (n=12)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 92.6 WA points.
+
+**Jumps** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=220)
+  Highest volume bin: 5 results → avg point jump 54.33 (n=12)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 54.3 WA points.
+
+**Throws** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=232)
+  Highest volume bin: 4 results → avg point jump 60.41 (n=17)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 60.4 WA points.
+
+### 2025
+
+**Sprints** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=139)
+  Highest volume bin: 4 results → avg point jump 28.7 (n=23)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 28.7 WA points.
+
+**Distance** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=258)
+  Highest volume bin: 4 results → avg point jump 60.5 (n=16)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 60.5 WA points.
+
+**Hurdles** (2 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=96)
+  Highest volume bin: 2 results → avg point jump 8.14 (n=22)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 8.1 WA points.
+
+**Jumps** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=99)
+  Highest volume bin: 3 results → avg point jump 37.6 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 37.6 WA points.
+
+**Throws** (2 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=92)
+  Highest volume bin: 2 results → avg point jump 1.0 (n=31)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 1.0 WA points.
+
+### 2026
+
+**Sprints** (5 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=156)
+  Highest volume bin: 5 results → avg point jump 67.17 (n=18)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 67.2 WA points.
+
+**Distance** (6 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=227)
+  Highest volume bin: 6 results → avg point jump 61.36 (n=11)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 61.4 WA points.
+
+**Hurdles** (4 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=182)
+  Highest volume bin: 4 results → avg point jump 30.7 (n=10)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 30.7 WA points.
+
+**Jumps** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=191)
+  Highest volume bin: 3 results → avg point jump 28.68 (n=37)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 28.7 WA points.
+
+**Throws** (3 bins plotted)
+  Lowest volume bin: 1 results → avg point jump 0.0 (n=185)
+  Highest volume bin: 3 results → avg point jump 55.73 (n=22)
+  End-to-end trend (lowest to highest plotted bin): avg point jump increases by 55.7 WA points.

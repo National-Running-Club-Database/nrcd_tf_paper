@@ -1,0 +1,13 @@
+Outdoor Track 2026 Female Sprinters — Pairwise Best Event Comparison
+(results on or after 2026-03-01; best = highest World Athletics Women's Points per event)
+
+100m vs. 200m (86 athletes ran in both):
+100m best event: 67  vs. 200m best event: 18
+(ties: 1)
+
+100m vs. 400m (23 athletes ran in both):
+100m best event: 11  vs. 400m best event: 12
+
+200m vs. 400m (53 athletes ran in both):
+200m best event: 11  vs. 400m best event: 41
+(ties: 1)

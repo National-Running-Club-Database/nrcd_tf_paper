@@ -1,0 +1,224 @@
+Best First Event of Season — Athletes with Outdoor Opener in WA 750–950
+========================================================================
+
+Question:
+  For athletes whose first outdoor-season result has WA in [750, 950),
+  which events tended to produce the highest WA as the first indoor event,
+  and which as the first outdoor event — by gender and event group?
+
+Method:
+  • Years 2024–2026; athlete-year must have ≥1 indoor and ≥1 outdoor
+    individual (non-relay) result.
+  • First result of a season = results on the chronologically earliest meet
+    date; if multiple events that day, the highest-WA result that day is used
+    as the noted first-event performance.
+  • Inclusion: outdoor first-event WA ∈ [750, 950).
+  • Within each gender × event-group cell, rank events by mean first-event WA.
+  • “Best” recommendation within a cell uses events with n≥5 when available.
+  • Sample: 546 athlete-years.
+
+Mean indoor first WA: 782.7
+Mean outdoor first WA: 810.1
+Mean Δ (out−in): +27.4
+
+Overall first-indoor events with highest mean WA (min n=10)
+  Men:
+    60m Hurdles: mean=824.1 med=820.0 n=15
+    200m: mean=800.6 med=810.0 n=31
+    800m: mean=795.0 med=808.0 n=31
+    60m: mean=795.0 med=793.0 n=81
+    400m: mean=790.7 med=807.5 n=32
+  Women:
+    60m: mean=820.3 med=817.0 n=32
+    200m: mean=785.8 med=801.0 n=21
+    800m: mean=768.3 med=766.0 n=12
+    60m Hurdles: mean=765.7 med=783.5 n=12
+    5000m: mean=764.8 med=765.0 n=11
+
+Overall first-outdoor events with highest mean WA (min n=10)
+  Men:
+    110m Hurdles: mean=843.2 med=844.0 n=11
+    200m: mean=824.6 med=820.5 n=52
+    400m: mean=819.6 med=809.0 n=21
+    100m: mean=816.3 med=804.0 n=68
+    800m: mean=810.7 med=804.0 n=51
+  Women:
+    100m: mean=818.6 med=808.0 n=35
+    400m Hurdles: mean=815.6 med=822.0 n=10
+    1500m: mean=806.0 med=796.0 n=37
+    400m: mean=799.6 med=786.0 n=21
+    5000m: mean=798.7 med=787.5 n=28
+
+First INDOOR event — mean WA by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=154 athlete-years, mean WA=797.2)
+  Event                     n  mean WA   median
+  100m                      2    887.5    887.5
+  55m                       4    833.0    822.5
+  200m                     31    800.6    810.0
+  60m                      81    795.0    793.0
+  500m                      1    793.0    793.0
+  400m                     32    790.7    807.5
+  300m                      3    784.7    820.0
+  → Highest mean WA (n≥5): 200m (800.6, n=31)
+
+Men — Distance  (n=129 athlete-years, mean WA=783.5)
+  Event                     n  mean WA   median
+  1000m                     6    864.0    870.0
+  5000m                     6    820.3    850.5
+  800m                     31    795.0    808.0
+  3000m                    42    782.7    781.5
+  2 Mile                    1    776.0    776.0
+  1500m                     2    769.0    769.0
+  Mile                     41    759.4    757.0
+  → Highest mean WA (n≥5): 1000m (864.0, n=6)
+
+Men — Hurdles  (n=16 athlete-years, mean WA=815.3)
+  Event                     n  mean WA   median
+  60m Hurdles              15    824.1    820.0
+  55m Hurdles               1    684.0    684.0
+  → Highest mean WA (n≥5): 60m Hurdles (824.1, n=15)
+
+Men — Jumps  (n=43 athlete-years, mean WA=761.5)
+  Event                     n  mean WA   median
+  High Jump                14    771.1    745.0
+  Triple Jump              10    759.2    777.0
+  Long Jump                19    755.7    759.0
+  → Highest mean WA (n≥5): High Jump (771.1, n=14)
+
+Men — Throws  (n=12 athlete-years, mean WA=740.0)
+  Event                     n  mean WA   median
+  Shot Put                 12    740.0    756.5
+  → Highest mean WA (n≥5): Shot Put (740.0, n=12)
+
+Women — Sprints  (n=73 athlete-years, mean WA=792.4)
+  Event                     n  mean WA   median
+  60m                      32    820.3    817.0
+  200m                     21    785.8    801.0
+  400m                     19    758.5    771.0
+  600m                      1    682.0    682.0
+  → Highest mean WA (n≥5): 60m (820.3, n=32)
+
+Women — Distance  (n=89 athlete-years, mean WA=759.7)
+  Event                     n  mean WA   median
+  2 Mile                    1    814.0    814.0
+  1000m                     2    770.5    770.5
+  800m                     12    768.3    766.0
+  5000m                    11    764.8    765.0
+  3000m                    22    761.1    760.5
+  Mile                     40    754.1    760.0
+  1500m                     1    717.0    717.0
+  → Highest mean WA (n≥5): 800m (768.3, n=12)
+
+Women — Hurdles  (n=12 athlete-years, mean WA=765.7)
+  Event                     n  mean WA   median
+  60m Hurdles              12    765.7    783.5
+  → Highest mean WA (n≥5): 60m Hurdles (765.7, n=12)
+
+Women — Jumps  (n=18 athlete-years, mean WA=787.3)
+  Event                     n  mean WA   median
+  Triple Jump               7    810.6    811.0
+  Long Jump                 6    775.3    727.0
+  High Jump                 5    769.2    820.0
+  → Highest mean WA (n≥5): Triple Jump (810.6, n=7)
+
+First OUTDOOR event — mean WA by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=141 athlete-years, mean WA=819.9)
+  Event                     n  mean WA   median
+  200m                     52    824.6    820.5
+  400m                     21    819.6    809.0
+  100m                     68    816.3    804.0
+  → Highest mean WA (n≥5): 200m (824.6, n=52)
+
+Men — Distance  (n=134 athlete-years, mean WA=803.5)
+  Event                     n  mean WA   median
+  3000m                     1    863.0    863.0
+  800m                     51    810.7    804.0
+  1500m                    48    802.9    789.0
+  3000m Steeplechase        7    797.7    806.0
+  5000m                    25    792.6    783.0
+  Mile                      2    761.5    761.5
+  → Highest mean WA (n≥5): 800m (810.7, n=51)
+
+Men — Hurdles  (n=20 athlete-years, mean WA=843.6)
+  Event                     n  mean WA   median
+  400m Hurdles              9    844.1    836.0
+  110m Hurdles             11    843.2    844.0
+  → Highest mean WA (n≥5): 400m Hurdles (844.1, n=9)
+
+Men — Jumps  (n=46 athlete-years, mean WA=804.5)
+  Event                     n  mean WA   median
+  Triple Jump               8    811.4    781.0
+  Long Jump                27    803.9    788.0
+  High Jump                11    801.1    801.0
+  → Highest mean WA (n≥5): Triple Jump (811.4, n=8)
+
+Men — Throws  (n=13 athlete-years, mean WA=791.9)
+  Event                     n  mean WA   median
+  Discus                    4    804.0    788.0
+  Shot Put                  9    786.6    779.0
+  → Highest mean WA (n≥5): Shot Put (786.6, n=9)
+
+Women — Sprints  (n=68 athlete-years, mean WA=809.2)
+  Event                     n  mean WA   median
+  100m                     35    818.6    808.0
+  400m                     21    799.6    786.0
+  200m                     12    798.5    791.0
+  → Highest mean WA (n≥5): 100m (818.6, n=35)
+
+Women — Distance  (n=87 athlete-years, mean WA=800.2)
+  Event                     n  mean WA   median
+  1500m                    37    806.0    796.0
+  5000m                    28    798.7    787.5
+  3000m                     4    794.5    789.0
+  800m                     13    793.8    784.0
+  3000m Steeplechase        5    786.6    789.0
+  → Highest mean WA (n≥5): 1500m (806.0, n=37)
+
+Women — Hurdles  (n=12 athlete-years, mean WA=812.8)
+  Event                     n  mean WA   median
+  400m Hurdles             10    815.6    822.0
+  100m Hurdles              2    799.0    799.0
+  → Highest mean WA (n≥5): 400m Hurdles (815.6, n=10)
+
+Women — Jumps  (n=25 athlete-years, mean WA=818.6)
+  Event                     n  mean WA   median
+  Long Jump                 9    825.7    803.0
+  Triple Jump               9    819.8    781.0
+  High Jump                 7    808.0    801.0
+  → Highest mean WA (n≥5): Long Jump (825.7, n=9)
+
+Headline recommendations (n≥5 within gender × group)
+----------------------------------------------------
+Indoor season openers:
+  Indoor | Men Sprints: 200m (mean WA 800.6, n=31)
+  Indoor | Men Distance: 1000m (mean WA 864.0, n=6)
+  Indoor | Men Hurdles: 60m Hurdles (mean WA 824.1, n=15)
+  Indoor | Men Jumps: High Jump (mean WA 771.1, n=14)
+  Indoor | Men Throws: Shot Put (mean WA 740.0, n=12)
+  Indoor | Women Sprints: 60m (mean WA 820.3, n=32)
+  Indoor | Women Distance: 800m (mean WA 768.3, n=12)
+  Indoor | Women Hurdles: 60m Hurdles (mean WA 765.7, n=12)
+  Indoor | Women Jumps: Triple Jump (mean WA 810.6, n=7)
+Outdoor season openers:
+  Outdoor | Men Sprints: 200m (mean WA 824.6, n=52)
+  Outdoor | Men Distance: 800m (mean WA 810.7, n=51)
+  Outdoor | Men Hurdles: 400m Hurdles (mean WA 844.1, n=9)
+  Outdoor | Men Jumps: Triple Jump (mean WA 811.4, n=8)
+  Outdoor | Men Throws: Shot Put (mean WA 786.6, n=9)
+  Outdoor | Women Sprints: 100m (mean WA 818.6, n=35)
+  Outdoor | Women Distance: 1500m (mean WA 806.0, n=37)
+  Outdoor | Women Hurdles: 400m Hurdles (mean WA 815.6, n=10)
+  Outdoor | Women Jumps: Long Jump (mean WA 825.7, n=9)
+
+Caveats:
+  • Conditioning on outdoor opener already in 750–950 truncates outdoor WA
+    from below; outdoor event rankings are within that band only.
+  • Indoor first-event WA is unrestricted and often lower.
+  • Same-day multi-event openers: highest-WA mark that day is used.
+  • Observational — does not prove causality of event choice.
+
+Source detail CSV: first_event_band_750_950_detail.csv

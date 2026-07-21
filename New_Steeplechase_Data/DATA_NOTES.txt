@@ -1,0 +1,21 @@
+New_Steeplechase_Data — Distance dataset notes
+==============================================
+
+Source CSVs live in New_Steeplechase_Data/ (Relays_Distance_*).
+Working copies for analysis are placed in Distance_Relays_Findings/.
+
+[OK] Relays_Distance_Men_Outdoor_2024_Data.csv gender match 100.0%; steeple: n=161, nonzero=161, mean=458.2, max=877.0
+  legacy steeple for comparison: n=161, nonzero=150, mean=202.6, max=611.0
+[OK] Relays_Distance_Men_Outdoor_2025_Data.csv gender match 100.0%; steeple: n=100, nonzero=100, mean=492.1, max=878.0
+  legacy steeple for comparison: n=100, nonzero=95, mean=230.9, max=611.0
+[OK] Relays_Distance_Men_Outdoor_2026_Data.csv gender match 100.0%; steeple: n=141, nonzero=141, mean=508.0, max=901.0
+  legacy steeple for comparison: n=141, nonzero=138, mean=239.9, max=638.0
+[OK] Relays_Distance_Women_Outdoor_2024_Data.csv gender match 100.0%; steeple: n=78, nonzero=78, mean=595.1, max=834.0
+  legacy steeple for comparison: n=78, nonzero=78, mean=344.2, max=606.0
+[OK] Relays_Distance_Women_Outdoor_2025_Data.csv gender match 100.0%; steeple: n=53, nonzero=53, mean=624.0, max=882.0
+  legacy steeple for comparison: n=53, nonzero=53, mean=375.1, max=664.0
+[OK] Relays_Distance_Women_Outdoor_2026_Data.csv gender match 100.0%; steeple: n=65, nonzero=65, mean=612.4, max=889.0
+  legacy steeple for comparison: n=65, nonzero=65, mean=361.4, max=673.0
+
+If these CSVs are replaced again, re-run:
+  python3 run_distance_rq_analyses.py

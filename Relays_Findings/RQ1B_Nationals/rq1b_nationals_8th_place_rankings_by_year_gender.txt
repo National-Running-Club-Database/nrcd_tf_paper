@@ -1,0 +1,111 @@
+Nationals 8th-Place WA by Year and Gender (Relay-Inclusive)
+
+## 2024
+### Men
+  800m: 823.0
+  200m: 821.0
+  100m: 820.0
+  5000m: 815.0
+  1500m: 786.0
+  4x400m: 765.0
+  Long Jump: 752.0
+  400m: 730.0
+  High Jump: 689.0
+  Triple Jump: 677.0
+  4x100m: 671.0
+  110m Hurdles: 651.0
+  Discus: 633.0
+  Shot Put: 612.0
+  400m Hurdles: 600.0
+  3000m Steeplechase: 484.0
+
+### Women
+  100m: 826.0
+  Long Jump: 798.0
+  200m: 777.0
+  5000m: 771.0
+  Triple Jump: 766.0
+  400m: 751.0
+  4x100m: 714.0
+  1500m: 711.0
+  800m: 709.0
+  4x400m: 699.0
+  High Jump: 697.0
+  100m Hurdles: 612.0
+  400m Hurdles: 577.0
+  Shot Put: 556.0
+  3000m Steeplechase: 502.0
+  Discus: 493.0
+
+## 2025
+### Men
+  1500m: 826.0
+  Long Jump: 816.0
+  400m: 810.0
+  800m: 809.0
+  4x400m: 801.0
+  4x100m: 799.0
+  100m: 786.0
+  400m Hurdles: 786.0
+  200m: 777.0
+  High Jump: 758.0
+  Triple Jump: 754.0
+  5000m: 737.0
+  Shot Put: 689.0
+  Discus: 662.0
+  110m Hurdles: 598.0
+  3000m Steeplechase: 420.0
+
+### Women
+  1500m: 826.0
+  200m: 800.0
+  400m: 797.0
+  100m: 792.0
+  800m: 788.0
+  4x100m: 781.0
+  4x400m: 774.0
+  Triple Jump: 761.0
+  Long Jump: 734.0
+  400m Hurdles: 732.0
+  High Jump: 697.0
+  100m Hurdles: 609.0
+  Shot Put: 574.0
+  3000m Steeplechase: 503.0
+  Discus: 492.0
+
+## 2026
+### Men
+  1500m: 869.0
+  200m: 863.0
+  800m: 856.0
+  100m: 848.0
+  400m: 835.0
+  4x100m: 811.0
+  Long Jump: 807.0
+  5000m: 806.0
+  400m Hurdles: 799.0
+  4x400m: 790.0
+  High Jump: 749.0
+  Triple Jump: 746.0
+  Shot Put: 714.0
+  Discus: 683.0
+  110m Hurdles: 638.0
+  3000m Steeplechase: 464.0
+
+### Women
+  5000m: 846.0
+  1500m: 838.0
+  4x100m: 833.0
+  100m: 825.0
+  200m: 821.0
+  400m: 817.0
+  800m: 782.0
+  4x400m: 770.0
+  Long Jump: 749.0
+  Triple Jump: 696.0
+  400m Hurdles: 673.0
+  High Jump: 649.0
+  Shot Put: 609.0
+  100m Hurdles: 602.0
+  Discus: 528.0
+  3000m Steeplechase: 527.0

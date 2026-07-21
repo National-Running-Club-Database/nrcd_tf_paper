@@ -1,0 +1,92 @@
+Doubling Analysis — Report
+==========================
+
+Questions:
+  1) Does doubling (2+ events in one meet) associate with higher WA scores?
+  2) Does knowing doubling status make cross-event time models more accurate?
+
+Definition:
+  A meet is a double if the athlete has ≥2 distinct individual events from
+  the event group (Sprints: 100/200/400; Distance: 800/1500/5000) with the
+  same meet_id. Relays and 3000m steeplechase excluded.
+
+Method:
+  • Outdoor 2024–2026, results on/after March 1.
+  • Primary population: 5 or 6 races per athlete-season (new_factors aligned).
+  • WA appendix: all athlete-seasons with ≥2 group events.
+  • Time-model test: 5-fold CV routing (pooled / bal_spec / doubling factor /
+    joint); pair n≥20; cohort fit n≥12.
+  • “Beats” = CV median |error| improves by >0.01s.
+
+Cohort sizes
+------------
+  5_or_6     Men    Sprints    n=94    ever_doubled=93 (98.9%)
+  5_or_6     Women  Sprints    n=40    ever_doubled=40 (100.0%)
+  5_or_6     Men    Distance   n=140   ever_doubled=135 (96.4%)
+  5_or_6     Women  Distance   n=42    ever_doubled=42 (100.0%)
+  all        Men    Sprints    n=770   ever_doubled=723 (93.9%)
+  all        Women  Sprints    n=346   ever_doubled=332 (96.0%)
+  all        Men    Distance   n=1065  ever_doubled=884 (83.0%)
+  all        Women  Distance   n=419   ever_doubled=357 (85.2%)
+
+1) Doubling and World Athletics scores
+--------------------------------------
+
+  Population: 5 or 6 races
+    Ever doubled: 310/316 (98.1%)
+    Mean season max WA — doubled: 650.35  never: 703.67  Δ (doubled−never): -53.32
+    Mean season mean WA — doubled: 607.9  never: 670.78
+    Within athletes with both double & solo meets (n=219):
+      mean(WA at double meets − WA at solo meets) = -15.3 (median -17.75); 38.4% have higher mean WA at doubles
+    Season PBs set at a double meet: 79.0%
+
+  Population: All seasons (≥2 events)
+    Ever doubled: 2296/2600 (88.3%)
+    Mean season max WA — doubled: 591.8  never: 608.7  Δ (doubled−never): -16.9
+    Mean season mean WA — doubled: 553.01  never: 569.55
+    Within athletes with both double & solo meets (n=891):
+      mean(WA at double meets − WA at solo meets) = -10.46 (median -11.83); 43.0% have higher mean WA at doubles
+    Season PBs set at a double meet: 79.3%
+
+  Primary (5_or_6) by gender × group — Δ mean max WA (doubled−never):
+    Men Distance: Δ=-187.9  (doubled n=135, never n=5)
+    Men Sprints: Δ=+443.59  (doubled n=93, never n=1)
+
+WA interpretation notes:
+  • Cross-sectional Δ may reflect selection (stronger / busier athletes
+    double more) rather than a causal effect of doubling.
+  • Within-athlete double-vs-solo WA compares the same athlete's results
+    at multi-event vs single-event meets — closer to a load tradeoff test.
+
+2) Doubling and time-model accuracy (5 or 6 races)
+--------------------------------------------------
+  Factor                 Beats pooled     Mean Δ Beats bal/spec     Mean Δ
+  double_meet_share        7/16     +0.146s    4/16     -0.020s
+    Share of season meets that were doubles (median split)
+  n_double_meets           6/16     -0.261s    5/16     -0.427s
+    Count of double meets in season (median split)
+  pair_pb_from_double      5/12     +0.160s    1/12     -0.038s
+    Any season PB set at a double meet (yes/no)
+  ever_doubled             3/8      -1.065s    1/8      -0.880s
+    ≥1 meet with 2+ distinct group events (yes/no)
+
+  Pair-level bests (ever_doubled factor):
+    Men Sprints 200m->400m: pooled=1.054s factor=0.888s (Δ +0.166s) best=joint
+    Men Sprints 400m->200m: pooled=0.424s factor=0.477s (Δ -0.054s) best=bal_spec
+    Men Distance 800m->1500m: pooled=6.752s factor=6.758s (Δ -0.006s) best=joint
+    Men Distance 800m->5000m: pooled=27.183s factor=34.563s (Δ -7.380s) best=pooled
+    Men Distance 1500m->800m: pooled=3.129s factor=3.117s (Δ +0.012s) best=joint
+    Men Distance 1500m->5000m: pooled=15.735s factor=17.077s (Δ -1.342s) best=pooled
+    Men Distance 5000m->800m: pooled=4.491s factor=4.570s (Δ -0.078s) best=joint
+    Men Distance 5000m->1500m: pooled=5.175s factor=5.014s (Δ +0.161s) best=joint
+
+Time-model verdict
+-----------------
+  MIXED — best factor double_meet_share beats pooled 7/16 (mean Δ +0.146s); not a clear majority win.
+
+Overall findings
+----------------
+  WA scores: Doublers have lower season max WA on average (Δ -53.32).
+  Within-athlete: results at double meets score lower WA than solo meets (mean Δ -15.3) — possible fatigue tradeoff.
+
+Source: new_factors/doubling_analysis/analyze_doubling.py

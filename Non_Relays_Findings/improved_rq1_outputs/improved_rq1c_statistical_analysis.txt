@@ -1,0 +1,88 @@
+IMPROVED RQ1C — Competitiveness vs Best Event (Statistical Tests)
+========================================================================
+
+## Sprints
+
+### Men
+RQ1A=RQ1C agreement: 608/647 (94.0%), 95% CI [92.0%, 95.8%] | binomial p vs 50%: 2.35e-132
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    200m: 72/710 (10.1%) | Wilson CI [8.1%, 12.6%]
+    100m: 65/706 (9.2%) | Wilson CI [7.3%, 11.6%]
+    400m: 42/617 (6.8%) | Wilson CI [5.1%, 9.1%]
+
+### Women
+RQ1A=RQ1C agreement: 265/290 (91.4%), 95% CI [87.9%, 94.5%] | binomial p vs 50%: 8.95e-52
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    100m: 27/290 (9.3%) | Wilson CI [6.5%, 13.2%]
+    200m: 25/348 (7.2%) | Wilson CI [4.9%, 10.4%]
+    400m: 23/246 (9.3%) | Wilson CI [6.3%, 13.6%]
+
+## Distance
+
+### Men
+RQ1A=RQ1C agreement: 728/961 (75.8%), 95% CI [72.9%, 78.5%] | binomial p vs 50%: 6.71e-60
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    1500m: 51/1187 (4.3%) | Wilson CI [3.3%, 5.6%]
+    800m: 46/1004 (4.6%) | Wilson CI [3.5%, 6.1%]
+    5000m: 36/744 (4.8%) | Wilson CI [3.5%, 6.6%]
+    3000m Steeplechase: 24/281 (8.5%) | Wilson CI [5.8%, 12.4%]
+  1500m vs 5000m competitiveness margin: 1500m 209, 5000m 228 (ties 0) | p=3.89e-01
+
+### Women
+RQ1A=RQ1C agreement: 291/424 (68.6%), 95% CI [64.2%, 73.1%] | binomial p vs 50%: 1.21e-14
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    1500m: 46/577 (8.0%) | Wilson CI [6.0%, 10.5%]
+    800m: 30/473 (6.3%) | Wilson CI [4.5%, 8.9%]
+    5000m: 29/303 (9.6%) | Wilson CI [6.7%, 13.4%]
+    3000m Steeplechase: 22/135 (16.3%) | Wilson CI [11.0%, 23.4%]
+  1500m vs 5000m competitiveness margin: 1500m 65, 5000m 79 (ties 0) | p=2.79e-01
+
+## Hurdles
+
+### Men
+RQ1A=RQ1C agreement: 76/93 (81.7%), 95% CI [74.2%, 89.2%] | binomial p vs 50%: 4.45e-10
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    110m Hurdles: 38/134 (28.4%) | Wilson CI [21.4%, 36.5%]
+    400m Hurdles: 27/197 (13.7%) | Wilson CI [9.6%, 19.2%]
+
+### Women
+RQ1A=RQ1C agreement: 45/53 (84.9%), 95% CI [75.5%, 94.3%] | binomial p vs 50%: 2.37e-07
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    400m Hurdles: 32/92 (34.8%) | Wilson CI [25.8%, 44.9%]
+    100m Hurdles: 28/106 (26.4%) | Wilson CI [19.0%, 35.5%]
+
+## Jumps
+
+### Men
+RQ1A=RQ1C agreement: 80/106 (75.5%), 95% CI [67.9%, 83.0%] | binomial p vs 50%: 1.43e-07
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Long Jump: 34/250 (13.6%) | Wilson CI [9.9%, 18.4%]
+    High Jump: 29/104 (27.9%) | Wilson CI [20.2%, 37.2%]
+    Triple Jump: 23/100 (23.0%) | Wilson CI [15.8%, 32.2%]
+
+### Women
+RQ1A=RQ1C agreement: 57/73 (78.1%), 95% CI [68.5%, 87.7%] | binomial p vs 50%: 1.53e-06
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    High Jump: 28/75 (37.3%) | Wilson CI [27.3%, 48.6%]
+    Long Jump: 26/157 (16.6%) | Wilson CI [11.6%, 23.2%]
+    Triple Jump: 18/57 (31.6%) | Wilson CI [21.0%, 44.5%]
+
+## Throws
+
+### Men
+RQ1A=RQ1C agreement: 108/112 (96.4%), 95% CI [92.0%, 99.1%] | binomial p vs 50%: 2.48e-27
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Discus: 25/131 (19.1%) | Wilson CI [13.3%, 26.7%]
+    Shot Put: 22/172 (12.8%) | Wilson CI [8.6%, 18.6%]
+
+### Women
+RQ1A=RQ1C agreement: 48/73 (65.8%), 95% CI [54.8%, 76.7%] | binomial p vs 50%: 9.54e-03
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Discus: 25/86 (29.1%) | Wilson CI [20.5%, 39.4%]
+    Shot Put: 23/115 (20.0%) | Wilson CI [13.7%, 28.2%]
+
+## Distance — Clear-rate comparisons (Fisher's exact)
+  Men 3000m Steeplechase vs 1500m (n=171): contingency [[7, 9], [4, 151]] | Fisher p=4.13e-06
+  Men 5000m vs 1500m (n=437): contingency [[12, 14], [15, 396]] | Fisher p=1.21e-09
+  Women 3000m Steeplechase vs 1500m (n=81): contingency [[8, 8], [2, 63]] | Fisher p=1.47e-05
+  Women 5000m vs 1500m (n=144): contingency [[14, 5], [4, 121]] | Fisher p=3.12e-12

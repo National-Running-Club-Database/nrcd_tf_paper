@@ -1,0 +1,11 @@
+population,gender,event_group,n_athlete_seasons,n_ever_doubled,n_never_doubled,pct_ever_doubled,mean_max_wa_doubled,mean_max_wa_never,delta_mean_max_wa,mean_mean_wa_doubled,mean_mean_wa_never,n_within_both_meet_types,mean_within_delta_wa_double_minus_solo,median_within_delta_wa_double_minus_solo,pct_within_delta_positive,pct_season_pbs_from_double_meet,mean_double_meets_among_doublers,mean_double_share_among_doublers
+5_or_6,All,All,316,310,6,98.1,650.35,703.67,-53.32,607.9,670.78,219,-15.3,-17.75,38.4,79.0,1.92,0.655
+5_or_6,Men,Distance,140,135,5,96.4,609.7,797.6,-187.9,561.76,758.93,99,-23.25,-19.5,35.4,76.2,1.88,0.622
+5_or_6,Men,Sprints,94,93,1,98.9,677.59,234.0,443.59,637.91,230.0,56,0.91,-5.83,44.6,84.8,1.97,0.708
+5_or_6,Women,Distance,42,42,0,100.0,643.02,,,607.28,,36,-20.54,-28.83,30.6,69.4,1.93,0.617
+5_or_6,Women,Sprints,40,40,0,100.0,731.88,,,694.48,,28,-12.85,-3.58,46.4,85.7,1.9,0.679
+all,All,All,2600,2296,304,88.3,591.8,608.7,-16.9,553.01,569.55,891,-10.46,-11.83,43.0,79.3,1.36,0.803
+all,Men,Distance,1065,884,181,83.0,541.32,599.49,-58.18,500.68,558.48,400,-12.16,-9.5,44.8,72.4,1.28,0.761
+all,Men,Sprints,770,723,47,93.9,637.28,581.4,55.88,600.51,541.81,241,-1.59,0.0,49.8,86.7,1.46,0.837
+all,Women,Distance,419,357,62,85.2,574.97,657.37,-82.4,534.19,622.33,146,-23.83,-27.08,26.0,74.7,1.28,0.794
+all,Women,Sprints,346,332,14,96.0,645.28,603.79,41.49,609.11,572.0,104,-5.76,-4.33,44.2,89.4,1.41,0.854

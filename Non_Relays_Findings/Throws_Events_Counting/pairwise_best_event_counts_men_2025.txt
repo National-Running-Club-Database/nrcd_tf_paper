@@ -1,0 +1,21 @@
+Outdoor Track 2025 Male Throws — Pairwise Best Event Comparison
+(best = highest World Athletics Men's Points per event)
+
+Shot Put vs. Discus (53 athletes competed in both):
+Shot Put best event: 31  vs. Discus best event: 21
+(ties: 1)
+
+Shot Put vs. Hammer Throw (3 athletes competed in both):
+Shot Put best event: 2  vs. Hammer Throw best event: 1
+
+Shot Put vs. Javelin Throw (2 athletes competed in both):
+Shot Put best event: 2  vs. Javelin Throw best event: 0
+
+Discus vs. Hammer Throw (5 athletes competed in both):
+Discus best event: 2  vs. Hammer Throw best event: 3
+
+Discus vs. Javelin Throw (2 athletes competed in both):
+Discus best event: 2  vs. Javelin Throw best event: 0
+
+Hammer Throw vs. Javelin Throw (0 athletes competed in both):
+Hammer Throw best event: 0  vs. Javelin Throw best event: 0

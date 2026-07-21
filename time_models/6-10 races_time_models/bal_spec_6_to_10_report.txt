@@ -1,0 +1,69 @@
+Balanced / Specialized Time Models — 6 to 10 Races
+==================================================
+
+Question: Within the 6–10 race population, do balanced vs specialized
+cohort-specific formulas beat the pooled 6–10 models?
+
+Population: athlete-seasons with 6–10 races.
+Specialized: wa_spread ≥ 50. Balanced: wa_spread < 50.
+Min cohort n=12; pair n=20 for routed comparisons.
+
+Cohort sizes
+------------
+  Men Distance: total=95  balanced=30 (32%)  specialized=65 (68%)
+  Men Sprints: total=108  balanced=53 (49%)  specialized=55 (51%)
+  Women Distance: total=29  balanced=11 (38%)  specialized=18 (62%)
+  Women Sprints: total=40  balanced=23 (58%)  specialized=17 (42%)
+
+Cohort formulas vs pooled 6–10 formula (same cohort)
+---------------------------------------------------
+  Cohort models: 26  beat pooled on cohort: 12 (46%)
+  [specialized] Women Distance 800m->1500m n=18: 6.888s vs 12.523s (↓5.635s)
+  [specialized] Women Distance 1500m->800m n=18: 3.478s vs 8.362s (↓4.884s)
+  [balanced] Men Distance 800m->1500m n=24: 1.899s vs 3.827s (↓1.928s)
+  [specialized] Men Distance 800m->1500m n=61: 4.915s vs 5.737s (↓0.822s)
+  [balanced] Men Distance 1500m->800m n=24: 0.911s vs 1.399s (↓0.487s)
+  [balanced] Men Sprints 200m->400m n=13: 0.410s vs 0.713s (↓0.304s)
+  [balanced] Women Sprints 200m->400m n=12: 0.430s vs 0.652s (↓0.222s)
+  [specialized] Men Distance 1500m->800m n=61: 2.422s vs 2.529s (↓0.106s)
+  [balanced] Men Sprints 100m->200m n=45: 0.126s vs 0.154s (↓0.029s)
+  [specialized] Women Sprints 100m->200m n=16: 0.547s vs 0.575s (↓0.028s)
+  [balanced] Men Sprints 200m->100m n=45: 0.062s vs 0.082s (↓0.020s)
+  [specialized] Men Distance 5000m->800m n=42: 2.686s vs 2.704s (↓0.019s)
+
+Routed prediction (apply bal or spec formula by known status)
+-------------------------------------------------------------
+  Pairs: 18  Routed wins: 8 (44%)
+  Women Distance 800m->1500m: routed 7.362s  group 11.386s  Δ=+4.023s  (n=28, bal=10, spec=18)
+  Women Distance 1500m->800m: routed 4.319s  group 5.821s  Δ=+1.502s  (n=28, bal=10, spec=18)
+  Men Distance 800m->1500m: routed 4.619s  group 5.528s  Δ=+0.909s  (n=85, bal=24, spec=61)
+  Men Distance 1500m->800m: routed 1.912s  group 2.550s  Δ=+0.638s  (n=85, bal=24, spec=61)
+  Men Distance 5000m->800m: routed 2.535s  group 2.798s  Δ=+0.263s  (n=44, bal=2, spec=42)
+  Men Distance 5000m->1500m: routed 4.444s  group 4.465s  Δ=+0.021s  (n=54, bal=8, spec=46)
+  Women Sprints 200m->100m: routed 0.080s  group 0.098s  Δ=+0.018s  (n=37, bal=21, spec=16)
+  Men Sprints 200m->100m: routed 0.126s  group 0.141s  Δ=+0.015s  (n=98, bal=45, spec=53)
+  Women Sprints 200m->400m: routed 0.900s  group 0.900s  Δ=+0.000s  (n=21, bal=12, spec=9)
+  Women Sprints 400m->200m: routed 0.432s  group 0.432s  Δ=+0.000s  (n=21, bal=12, spec=9)
+  Men Sprints 100m->200m: routed 0.276s  group 0.265s  Δ=-0.011s  (n=98, bal=45, spec=53)
+  Men Sprints 400m->200m: routed 0.410s  group 0.389s  Δ=-0.021s  (n=53, bal=13, spec=40)
+  Men Sprints 400m->100m: routed 0.314s  group 0.278s  Δ=-0.036s  (n=43, bal=5, spec=38)
+  Women Sprints 100m->200m: routed 0.317s  group 0.272s  Δ=-0.045s  (n=37, bal=21, spec=16)
+  Men Sprints 200m->400m: routed 1.041s  group 0.935s  Δ=-0.105s  (n=53, bal=13, spec=40)
+  Men Distance 800m->5000m: routed 24.900s  group 24.628s  Δ=-0.272s  (n=44, bal=2, spec=42)
+  Men Sprints 100m->400m: routed 2.319s  group 2.032s  Δ=-0.287s  (n=43, bal=5, spec=38)
+  Men Distance 1500m->5000m: routed 19.081s  group 16.996s  Δ=-2.085s  (n=54, bal=8, spec=46)
+
+Interpretation
+--------------
+Gains from bal/spec stratification in the 6–10 pool are mixed; see pair tables.
+Routed prediction improves 8/18 pairs vs always using the pooled model among 6–10-race athletes.
+
+Output files:
+  time_models_balanced_6_to_10_races_formulas.txt
+  time_models_specialized_6_to_10_races_formulas.txt
+  best_bal_spec_6_to_10_time_models.csv
+  bal_spec_6_to_10_vs_pooled.csv
+  bal_spec_6_to_10_report.txt
+  bal_spec_6_to_10_findings.txt
+
+Source: build_bal_spec_6_to_10_models.py

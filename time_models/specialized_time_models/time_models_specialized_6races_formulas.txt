@@ -1,0 +1,103 @@
+Cross-Event Time Models — Specialized Athletes — 6 Races Per Season
+=========================================
+
+Cohort: 6-race athlete-seasons, specialization = specialized (wa_spread ≥ 50 WA)
+  specialized: wa_spread ≥ 50 WA
+  balanced: wa_spread < 50 WA
+
+Use when athlete's specialization status is known.
+Predict time, then convert to WA in the target event table.
+
+
+Distance — Men
+--------------
+
+1500m -> 800m  (n=36, r=0.928)
+  Model: median_ratio
+  Formula: 800m = 0.492 × 1500m
+  CV median |error|: 2.945s
+  vs group-average 6-race model: 3.220s (↓0.275s)
+
+1500m -> 5000m  (n=27, r=0.869)
+  Model: median_ratio
+  Formula: 5000m = 3.797 × 1500m
+  CV median |error|: 15.701s
+  vs group-average 6-race model: 16.358s (↓0.657s)
+
+5000m -> 800m  (n=23, r=0.806)
+  Model: ratio_linear
+  Formula: 800m = 5000m × (0.157 − 0.000027×5000m)
+  CV median |error|: 2.155s
+  vs group-average 6-race model: 2.385s (↓0.230s)
+
+5000m -> 1500m  (n=27, r=0.869)
+  Model: median_ratio
+  Formula: 1500m = 0.263 × 5000m
+  CV median |error|: 4.130s
+  vs group-average 6-race model: 4.351s (↓0.221s)
+
+800m -> 1500m  (n=36, r=0.928)
+  Model: binned_ratio
+  Formula: 1500m = 800m × ratio_bin(800m)
+  CV median |error|: 5.219s
+  vs group-average 6-race model: 6.245s (↓1.026s)
+  Binned lookup 800m → 1500m (nearest 800m edge):
+    114.98s → ratio 2.164
+    118.89s → ratio 2.021
+    122.66s → ratio 2.038
+    124.91s → ratio 2.007
+    127.12s → ratio 2.031
+    130.65s → ratio 2.018
+    131.00s → ratio 2.064
+    136.66s → ratio 1.997
+    151.88s → ratio 2.050
+
+800m -> 5000m  (n=23, r=0.806)
+  Model: robust_trimmed_linear
+  Formula: 5000m = 94.437 + 6.886 × 800m
+  CV median |error|: 18.259s
+  vs group-average 6-race model: 16.804s (↑1.455s)
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=19, r=0.889)
+  Model: median_ratio
+  Formula: 200m = 2.027 × 100m
+  CV median |error|: 0.614s
+  vs group-average 6-race model: 0.641s (↓0.028s)
+
+200m -> 100m  (n=19, r=0.889)
+  Model: robust_trimmed_linear
+  Formula: 100m = 4.642 + 0.296 × 200m
+  CV median |error|: 0.222s
+  vs group-average 6-race model: 0.244s (↓0.022s)
+
+200m -> 400m  (n=17, r=0.582)
+  Model: log_linear
+  Formula: 400m = exp(1.484 + 0.796×log(200m))
+  CV median |error|: 1.578s
+  vs group-average 6-race model: 1.418s (↑0.160s)
+
+400m -> 200m  (n=17, r=0.582)
+  Model: ratio_linear
+  Formula: 200m = 400m × (0.655 − 0.003876×400m)
+  CV median |error|: 0.491s
+  vs group-average 6-race model: 0.395s (↑0.096s)
+
+Pair summary
+------------
+  From     To          n        CV  Formula
+  1500m    800m       36    2.945s  800m = 0.492 × 1500m
+  1500m    5000m      27   15.701s  5000m = 3.797 × 1500m
+  5000m    800m       23    2.155s  800m = 5000m × (0.157 − 0.000027×5000m)
+  5000m    1500m      27    4.130s  1500m = 0.263 × 5000m
+  800m     1500m      36    5.219s  1500m = 800m × ratio_bin(800m)
+  800m     5000m      23   18.259s  5000m = 94.437 + 6.886 × 800m
+  100m     200m       19    0.614s  200m = 2.027 × 100m
+  200m     100m       19    0.222s  100m = 4.642 + 0.296 × 200m
+  200m     400m       17    1.578s  400m = exp(1.484 + 0.796×log(200m))
+  400m     200m       17    0.491s  200m = 400m × (0.655 − 0.003876×400m)
+
+Source: specialized_time_models/build_specialization_time_models.py

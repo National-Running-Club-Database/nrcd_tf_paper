@@ -1,0 +1,56 @@
+New Factors Beyond Balanced/Specialized — Findings (6 Races Per Season)
+============================================================================
+
+Question: Besides balanced vs specialized (wa_spread ≥ 50), what else
+improves cross-event time models for exactly 6 races athlete-seasons?
+
+Helpful secondary factors:
+  • best_is_from: Athlete's best-WA event is the source event
+    joint>bal_spec 8/9 (mean Δ +0.764s); factor alone>bal_spec 7/9
+  • best_event: Identity of best-WA event in the group
+    joint>bal_spec 7/8 (mean Δ +0.786s); factor alone>bal_spec 5/8
+  • events_competed: Distinct events raced in group: 2 vs 3+
+    joint>bal_spec 6/8 (mean Δ +0.421s); factor alone>bal_spec 5/8
+  • best_is_to: Athlete's best-WA event is the target event
+    joint>bal_spec 6/9 (mean Δ +1.010s); factor alone>bal_spec 5/9
+  • predict_to_best: Predicting toward the athlete's best-WA event
+    joint>bal_spec 6/9 (mean Δ +1.010s); factor alone>bal_spec 5/9
+  • pair_wa_gap_median: |WA(from)−WA(to)| relative to pair median
+    joint>bal_spec 5/8 (mean Δ +1.445s); factor alone>bal_spec 7/8
+  • from_stronger_wa: Source event has higher WA than target
+    joint>bal_spec 6/10 (mean Δ +1.804s); factor alone>bal_spec 6/10
+  • pair_wa_gap_50: |WA(from)−WA(to)| ≥ 50 WA points
+    joint>bal_spec 6/10 (mean Δ +1.242s); factor alone>bal_spec 9/10
+  • ability_tier: Max season WA in group: low vs high (median split)
+    joint>bal_spec 4/8 (mean Δ +0.569s); factor alone>bal_spec 5/8
+  • meet_volume: Unique meets in season: few vs many (median)
+    joint>bal_spec 5/10 (mean Δ +0.337s); factor alone>bal_spec 6/10
+  • nationals: Competed at nationals that season (yes/no)
+    joint>bal_spec 4/10 (mean Δ +0.079s); factor alone>bal_spec 7/10
+  • source_ability: Source-event WA low vs high (median)
+    joint>bal_spec 3/8 (mean Δ +0.644s); factor alone>bal_spec 3/8
+  • season_span: Days between first and last race: short vs long (median)
+    joint>bal_spec 3/10 (mean Δ +0.396s); factor alone>bal_spec 5/10
+  • season_year: Calendar year of the athlete-season
+    joint>bal_spec 1/10 (mean Δ -0.007s); factor alone>bal_spec 5/10
+  • wa_spread_tertile: Overall WA spread tertile (finer than bal/spec)
+    joint>bal_spec 0/6 (mean Δ -0.031s); factor alone>bal_spec 4/6
+
+Leaderboard (joint beats bal_spec rate):
+  best_is_from: 8/9 (mean Δ +0.764s)
+  best_event: 7/8 (mean Δ +0.786s)
+  events_competed: 6/8 (mean Δ +0.421s)
+  best_is_to: 6/9 (mean Δ +1.010s)
+  predict_to_best: 6/9 (mean Δ +1.010s)
+  pair_wa_gap_median: 5/8 (mean Δ +1.445s)
+  from_stronger_wa: 6/10 (mean Δ +1.804s)
+  pair_wa_gap_50: 6/10 (mean Δ +1.242s)
+
+Recommendation:
+  1. Keep bal/spec as a useful axis when available.
+  2. Strongest secondary factor is usually pair-level WA gap
+     (|WA_from − WA_to| ≥ 50, or median split).
+  3. Next: projection direction (from_stronger_wa, best_is_from / predict_to_best).
+
+See new_factors_report_6races.txt for pair-level tables.
+Source: analyze_new_factors.py

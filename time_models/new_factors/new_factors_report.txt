@@ -1,0 +1,230 @@
+New Factors Beyond Balanced/Specialized — 5 or 6 Races Per Season
+===========================================================================
+
+Question: Under the old specialization definition (balanced vs specialized,
+wa_spread ≥ 50), are there other factors that improve
+cross-event time prediction accuracy if we account for them?
+
+Population: athlete-seasons with 5 or 6 races in the event group (2024–2026).
+CV: 5-fold, seed=42. Min cohort n=12; pair n=20.
+
+Strategies compared per factor × event pair:
+  pooled            — one formula for all athletes in the pair
+  bal_spec          — route by balanced vs specialized
+  factor            — route by the candidate factor alone
+  joint (bal×factor)— route by both, with fallbacks
+
+Cohort sizes (5 or 6 races athlete-seasons)
+--------------------------------------------
+  Men Distance: n=140
+  Men Sprints: n=94
+  Women Distance: n=42
+  Women Sprints: n=40
+
+Factor leaderboard (sorted by how often joint beats bal_spec)
+-------------------------------------------------------------
+Factor                 Pairs Fac>Bal Jnt>Bal  MeanΔFac  MeanΔJnt Best=Fac/Jnt
+pair_wa_gap_50            16  15/16   14/16    +1.562s   +1.664s  15/16
+pair_wa_gap_median        16  12/16   14/16    +1.190s   +1.262s  14/16
+from_stronger_wa          16  11/16   12/16    +0.530s   +0.869s  13/16
+best_is_from              16  12/16   11/16    +0.339s   +0.642s  13/16
+best_is_to                16  11/16   11/16    +0.363s   +0.388s  10/16
+predict_to_best           16  11/16   11/16    +0.363s   +0.388s  10/16
+best_event                16   8/16   10/16    +0.409s   -0.097s   9/16
+events_competed           14   6/14    7/14    -0.493s   -0.051s   7/14
+season_span               16   4/16    7/16    -0.329s   -0.159s   5/16
+wa_spread_tertile         16   8/16    6/16    +0.596s   +0.611s   6/16
+ability_tier              16   4/16    6/16    -0.575s   -0.667s   5/16
+nationals                 16   4/16    5/16    -0.366s   -0.121s   4/16
+meet_volume               16   3/16    4/16    -0.598s   -0.258s   6/16
+race_count                16   5/16    4/16    -0.453s   -0.296s   4/16
+source_ability            16   3/16    3/16    -0.095s   -0.091s   3/16
+season_year               16   3/16    1/16    -0.327s   -0.532s   1/16
+
+Promising factors (help on ≥40% of pairs or mean Δ>+0.15s; min 8 pairs)
+----------------------------------------------------------------------
+  pair_wa_gap_50: |WA(from)−WA(to)| ≥ 50 WA points
+    factor>bal_spec 15/16 (mean Δ +1.562s); joint>bal_spec 14/16 (mean Δ +1.664s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 17.244s, joint 16.767s (best=joint)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 12.662s, joint 11.784s (best=joint)
+    e.g. Women Distance 1500m->800m: bal_spec 5.051s, factor 3.079s, joint 3.079s (best=factor)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.254s, joint 3.119s (best=joint)
+  pair_wa_gap_median: |WA(from)−WA(to)| relative to pair median
+    factor>bal_spec 12/16 (mean Δ +1.190s); joint>bal_spec 14/16 (mean Δ +1.262s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 18.609s, joint 18.232s (best=joint)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 12.348s, joint 13.470s (best=factor)
+    e.g. Women Distance 1500m->800m: bal_spec 5.051s, factor 3.063s, joint 3.063s (best=factor)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 6.130s, joint 4.587s (best=joint)
+  from_stronger_wa: Source event has higher WA than target
+    factor>bal_spec 11/16 (mean Δ +0.530s); joint>bal_spec 12/16 (mean Δ +0.869s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 27.951s, joint 25.409s (best=joint)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 13.040s, joint 13.040s (best=factor)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.176s, joint 3.749s (best=joint)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.429s, joint 3.223s (best=joint)
+  best_is_from: Athlete's best-WA event is the source event
+    factor>bal_spec 12/16 (mean Δ +0.339s); joint>bal_spec 11/16 (mean Δ +0.642s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 29.310s, joint 26.197s (best=joint)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.477s, joint 3.641s (best=joint)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 13.943s, joint 14.176s (best=factor)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.429s, joint 3.223s (best=joint)
+  best_is_to: Athlete's best-WA event is the target event
+    factor>bal_spec 11/16 (mean Δ +0.363s); joint>bal_spec 11/16 (mean Δ +0.388s)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 13.040s, joint 13.040s (best=factor)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 28.698s, joint 28.375s (best=pooled)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.638s, joint 4.263s (best=joint)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.829s, joint 4.086s (best=factor)
+  predict_to_best: Predicting toward the athlete's best-WA event
+    factor>bal_spec 11/16 (mean Δ +0.363s); joint>bal_spec 11/16 (mean Δ +0.388s)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 13.040s, joint 13.040s (best=factor)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 28.698s, joint 28.375s (best=pooled)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.638s, joint 4.263s (best=joint)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.829s, joint 4.086s (best=factor)
+  best_event: Identity of best-WA event in the group
+    factor>bal_spec 8/16 (mean Δ +0.409s); joint>bal_spec 10/16 (mean Δ -0.097s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 24.875s, joint 34.743s (best=factor)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 12.025s, joint 12.446s (best=factor)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.492s, joint 3.776s (best=joint)
+    e.g. Men Distance 5000m->1500m: bal_spec 4.960s, factor 3.267s, joint 3.490s (best=factor)
+  events_competed: Distinct events raced in group: 2 vs 3+
+    factor>bal_spec 6/14 (mean Δ -0.493s); joint>bal_spec 7/14 (mean Δ -0.051s)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 5.703s, joint 4.932s (best=joint)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 32.732s, joint 30.250s (best=pooled)
+    e.g. Men Distance 5000m->800m: bal_spec 4.605s, factor 4.109s, joint 4.245s (best=factor)
+    e.g. Men Distance 1500m->800m: bal_spec 2.361s, factor 2.575s, joint 2.145s (best=joint)
+  season_span: Days between first and last race: short vs long (median)
+    factor>bal_spec 4/16 (mean Δ -0.329s); joint>bal_spec 7/16 (mean Δ -0.159s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 27.113s, joint 27.113s (best=factor)
+    e.g. Men Distance 5000m->800m: bal_spec 4.605s, factor 4.158s, joint 4.158s (best=factor)
+    e.g. Women Distance 1500m->800m: bal_spec 5.051s, factor 5.388s, joint 4.650s (best=joint)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 6.571s, joint 5.652s (best=joint)
+  wa_spread_tertile: Overall WA spread tertile (finer than bal/spec)
+    factor>bal_spec 8/16 (mean Δ +0.596s); joint>bal_spec 6/16 (mean Δ +0.611s)
+    e.g. Men Distance 800m->5000m: bal_spec 30.758s, factor 20.925s, joint 20.925s (best=factor)
+    e.g. Men Distance 1500m->5000m: bal_spec 15.893s, factor 13.849s, joint 15.044s (best=factor)
+    e.g. Men Distance 800m->1500m: bal_spec 5.734s, factor 4.795s, joint 4.995s (best=factor)
+    e.g. Men Distance 5000m->800m: bal_spec 4.605s, factor 4.064s, joint 3.896s (best=joint)
+
+Factors that did NOT help beyond bal/spec
+------------------------------------------
+  meet_volume: joint>bal 4/16 (mean Δ -0.258s) — Unique meets in season: few vs many (median)
+  source_ability: joint>bal 3/16 (mean Δ -0.091s) — Source-event WA low vs high (median)
+  season_year: joint>bal 1/16 (mean Δ -0.532s) — Calendar year of the athlete-season
+
+Detail — top factors by joint>bal_spec rate
+--------------------------------------------
+
+pair_wa_gap_50 — |WA(from)−WA(to)| ≥ 50 WA points
+  Pair                                 n    Pool   BalSp     Fac   Joint Best
+  Men Distance 800m->5000m            62 27.183s 30.758s 17.244s 16.767s joint
+  Men Distance 1500m->5000m           87 15.735s 15.893s 12.662s 11.784s joint
+  Women Distance 1500m->800m          39  5.957s  5.051s  3.079s  3.079s factor
+  Men Distance 5000m->1500m           87  5.175s  4.960s  3.254s  3.119s joint
+  Men Distance 800m->1500m           113  6.752s  5.734s  4.176s  4.143s joint
+  Men Distance 5000m->800m            62  4.491s  4.605s  3.362s  3.362s factor
+  Men Distance 1500m->800m           113  3.129s  2.361s  1.788s  1.663s joint
+  Women Distance 800m->1500m          39  9.373s  6.465s  6.056s  6.056s factor
+  Women Sprints 100m->200m            37  0.503s  0.561s  0.283s  0.283s factor
+  Men Sprints 100m->400m              36  1.820s  1.431s  1.267s  1.267s factor
+  Women Sprints 200m->100m            37  0.211s  0.245s  0.111s  0.116s factor
+  Men Sprints 200m->400m              56  1.054s  0.757s  0.640s  0.640s factor
+  Men Sprints 400m->200m              56  0.424s  0.359s  0.310s  0.319s factor
+  Men Sprints 100m->200m              74  0.435s  0.415s  0.395s  0.406s factor
+  Men Sprints 200m->100m              74  0.186s  0.169s  0.150s  0.149s joint
+  Men Sprints 400m->100m              36  0.311s  0.322s  0.314s  0.314s pooled
+
+pair_wa_gap_median — |WA(from)−WA(to)| relative to pair median
+  Pair                                 n    Pool   BalSp     Fac   Joint Best
+  Men Distance 800m->5000m            62 27.183s 30.758s 18.609s 18.232s joint
+  Men Distance 1500m->5000m           87 15.735s 15.893s 12.348s 13.470s factor
+  Women Distance 1500m->800m          39  5.957s  5.051s  3.063s  3.063s factor
+  Men Distance 800m->1500m           113  6.752s  5.734s  6.130s  4.587s joint
+  Men Distance 5000m->1500m           87  5.175s  4.960s  3.922s  3.946s factor
+  Men Distance 1500m->800m           113  3.129s  2.361s  2.107s  1.570s joint
+  Women Sprints 100m->200m            37  0.503s  0.561s  0.318s  0.431s factor
+  Men Sprints 100m->400m              36  1.820s  1.431s  1.249s  1.386s factor
+  Women Sprints 200m->100m            37  0.211s  0.245s  0.134s  0.126s joint
+  Men Sprints 200m->400m              56  1.054s  0.757s  0.659s  0.663s factor
+  Men Sprints 400m->200m              56  0.424s  0.359s  0.295s  0.286s joint
+  Men Sprints 100m->200m              74  0.435s  0.415s  0.435s  0.365s joint
+  Men Sprints 400m->100m              36  0.311s  0.322s  0.277s  0.277s factor
+  Men Sprints 200m->100m              74  0.186s  0.169s  0.151s  0.151s joint
+  Men Distance 5000m->800m            62  4.491s  4.605s  4.604s  4.604s pooled
+  Women Distance 800m->1500m          39  9.373s  6.465s  6.744s  6.744s bal_spec
+
+from_stronger_wa — Source event has higher WA than target
+  Pair                                 n    Pool   BalSp     Fac   Joint Best
+  Men Distance 800m->5000m            62 27.183s 30.758s 27.951s 25.409s joint
+  Men Distance 1500m->5000m           87 15.735s 15.893s 13.040s 13.040s factor
+  Men Distance 800m->1500m           113  6.752s  5.734s  4.176s  3.749s joint
+  Men Distance 5000m->1500m           87  5.175s  4.960s  3.429s  3.223s joint
+  Men Distance 5000m->800m            62  4.491s  4.605s  3.537s  3.736s factor
+  Men Distance 1500m->800m           113  3.129s  2.361s  1.885s  1.743s joint
+  Women Distance 1500m->800m          39  5.957s  5.051s  5.102s  4.460s joint
+  Women Sprints 100m->200m            37  0.503s  0.561s  0.448s  0.379s joint
+  Men Sprints 100m->200m              74  0.435s  0.415s  0.257s  0.263s factor
+  Men Sprints 400m->100m              36  0.311s  0.322s  0.222s  0.261s factor
+  Women Sprints 200m->100m            37  0.211s  0.245s  0.179s  0.183s factor
+  Men Sprints 200m->100m              74  0.186s  0.169s  0.132s  0.119s joint
+  Men Sprints 400m->200m              56  0.424s  0.359s  0.389s  0.354s joint
+  Women Distance 800m->1500m          39  9.373s  6.465s  8.302s  6.568s bal_spec
+  Men Sprints 200m->400m              56  1.054s  0.757s  0.907s  0.954s bal_spec
+  Men Sprints 100m->400m              36  1.820s  1.431s  1.647s  1.742s bal_spec
+
+best_is_from — Athlete's best-WA event is the source event
+  Pair                                 n    Pool   BalSp     Fac   Joint Best
+  Men Distance 800m->5000m            62 27.183s 30.758s 29.310s 26.197s joint
+  Men Distance 800m->1500m           113  6.752s  5.734s  4.477s  3.641s joint
+  Men Distance 1500m->5000m           87 15.735s 15.893s 13.943s 14.176s factor
+  Men Distance 5000m->1500m           87  5.175s  4.960s  3.429s  3.223s joint
+  Women Distance 1500m->800m          39  5.957s  5.051s  4.592s  4.066s joint
+  Men Distance 1500m->800m           113  3.129s  2.361s  1.715s  1.833s factor
+  Men Distance 5000m->800m            62  4.491s  4.605s  4.569s  4.410s joint
+  Men Sprints 100m->200m              74  0.435s  0.415s  0.238s  0.266s factor
+  Men Sprints 100m->400m              36  1.820s  1.431s  1.288s  1.625s factor
+  Women Sprints 100m->200m            37  0.503s  0.561s  0.511s  0.431s joint
+  Men Sprints 200m->100m              74  0.186s  0.169s  0.120s  0.132s factor
+  Men Sprints 400m->200m              56  0.424s  0.359s  0.430s  0.327s joint
+  Men Sprints 400m->100m              36  0.311s  0.322s  0.293s  0.314s factor
+  Women Sprints 200m->100m            37  0.211s  0.245s  0.251s  0.251s pooled
+  Men Sprints 200m->400m              56  1.054s  0.757s  0.907s  0.791s bal_spec
+  Women Distance 800m->1500m          39  9.373s  6.465s  8.591s  8.124s bal_spec
+
+best_is_to — Athlete's best-WA event is the target event
+  Pair                                 n    Pool   BalSp     Fac   Joint Best
+  Men Distance 1500m->5000m           87 15.735s 15.893s 13.040s 13.040s factor
+  Men Distance 800m->5000m            62 27.183s 30.758s 28.698s 28.375s pooled
+  Men Distance 800m->1500m           113  6.752s  5.734s  4.638s  4.263s joint
+  Men Distance 5000m->1500m           87  5.175s  4.960s  3.829s  4.086s factor
+  Women Distance 1500m->800m          39  5.957s  5.051s  4.607s  4.525s joint
+  Men Distance 1500m->800m           113  3.129s  2.361s  2.175s  1.981s joint
+  Men Distance 5000m->800m            62  4.491s  4.605s  4.347s  4.256s joint
+  Men Sprints 100m->200m              74  0.435s  0.415s  0.254s  0.295s factor
+  Women Sprints 100m->200m            37  0.503s  0.561s  0.498s  0.561s factor
+  Men Sprints 200m->100m              74  0.186s  0.169s  0.118s  0.136s factor
+  Women Sprints 200m->100m            37  0.211s  0.245s  0.219s  0.219s pooled
+  Men Sprints 400m->100m              36  0.311s  0.322s  0.352s  0.299s joint
+  Men Sprints 400m->200m              56  0.424s  0.359s  0.419s  0.379s bal_spec
+  Men Sprints 100m->400m              36  1.820s  1.431s  1.493s  1.935s bal_spec
+  Men Sprints 200m->400m              56  1.054s  0.757s  1.005s  1.005s bal_spec
+  Women Distance 800m->1500m          39  9.373s  6.465s  8.591s  8.526s bal_spec
+
+Interpretation
+--------------
+Yes — several factors beyond balanced/specialized improve models: pair_wa_gap_50, pair_wa_gap_median, from_stronger_wa, best_is_from, best_is_to.
+Most useful are typically pair-level WA gaps and projection direction (from stronger WA / best-event involvement).
+Best practice: start with bal/spec routing, then layer the strongest secondary factor via joint routing when both labels are known.
+
+Notes:
+  • Factors are median-split or categorical labels fit per event-pair sample.
+  • Women's pairs often drop out for joint cells due to small n.
+  • wa_spread_tertile is a finer version of bal/spec — expected to correlate.
+  • Short/Long specialization was studied separately (other folders).
+
+Output files:
+  new_factors_report.txt
+  new_factors_findings.txt
+  factor_summary.csv
+  factor_pair_comparison.csv
+  athlete_season_new_factors.csv
+
+Source: time_models/new_factors/analyze_new_factors.py

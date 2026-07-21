@@ -1,0 +1,143 @@
+Short/Long (and Mid/Long) Specialization vs Time Model Accuracy
+================================================================
+
+Research question: If we know Short vs Long sprint specialization
+(or Mid vs Long distance specialization), do time predictions improve?
+
+Definitions (require season PBs in all 3 events of the group):
+  Sprints — Short: |WA(100)−WA(200)| < |WA(200)−WA(400)|
+  Sprints — Long:  |WA(400)−WA(200)| < |WA(100)−WA(200)|
+  Distance — Mid:  |WA(800)−WA(1500)| < |WA(1500)−WA(5000)|
+  Distance — Long: |WA(1500)−WA(5000)| < |WA(1500)−WA(800)|
+
+Note: Short/Long (and Mid/Long) are complements except exact gap ties.
+Minimum n=12 for cohort CV; n=20 to report a pair.
+
+Why two populations?
+  Exactly 6 races alone leaves Mid Distance (n=11) and all sprint arms
+  below the cohort threshold after requiring all 3 event PBs. The 5-or-6
+  race population is the practical sample for this question.
+
+POPULATION: exactly 6 races
+===========================
+
+Cohort sizes
+------------
+  Men Distance: total=58  Mid Distance=11  Long Distance=13  tie=0  missing_all_3_events=34
+  Men Sprints: total=39  Short Sprints=7  Long Sprints=8  tie=1  missing_all_3_events=23
+  Women Distance: total=11  Mid Distance=2  Long Distance=1  tie=0  missing_all_3_events=8
+  Women Sprints: total=12  Short Sprints=1  Long Sprints=1  tie=1  missing_all_3_events=9
+
+Pair-level linear OLS CV by cohort
+----------------------------------
+Gender  Group     Pair            nA  nB     CohA     CohB   Δ(A−B) Better?
+
+  No pairs with both cohorts at n≥12.
+
+Cohort-specific formulas vs pooled model (same cohort)
+------------------------------------------------------
+  Compared: 6  beat pooled: 5 (83%)  worse: 1
+  [Long Distance] Men Distance 800m->1500m n=13: 4.277s vs 8.562s (↓4.286s)
+  [Long Distance] Men Distance 1500m->5000m n=13: 10.682s vs 11.928s (↓1.246s)
+  [Long Distance] Men Distance 5000m->800m n=13: 1.126s vs 2.084s (↓0.958s)
+  [Long Distance] Men Distance 1500m->800m n=13: 2.409s vs 3.061s (↓0.652s)
+  [Long Distance] Men Distance 5000m->1500m n=13: 2.845s vs 3.173s (↓0.328s)
+
+Routed prediction (status-aware formula assignment)
+---------------------------------------------------
+  Pairs: 6  Routed wins: 0 (0%)
+  Men Distance 800m->1500m: routed 5.886s  group 5.886s  Δ=+0.000s  (n=24, A=11, B=13)
+  Men Distance 800m->5000m: routed 15.963s  group 15.963s  Δ=+0.000s  (n=24, A=11, B=13)
+  Men Distance 1500m->800m: routed 2.495s  group 2.495s  Δ=+0.000s  (n=24, A=11, B=13)
+  Men Distance 1500m->5000m: routed 24.059s  group 24.059s  Δ=+0.000s  (n=24, A=11, B=13)
+  Men Distance 5000m->800m: routed 2.550s  group 2.550s  Δ=+0.000s  (n=24, A=11, B=13)
+  Men Distance 5000m->1500m: routed 5.122s  group 5.122s  Δ=+0.000s  (n=24, A=11, B=13)
+
+POPULATION: 5 or 6 races
+========================
+
+Cohort sizes
+------------
+  Men Distance: total=140  Mid Distance=27  Long Distance=34  tie=0  missing_all_3_events=79
+  Men Sprints: total=94  Short Sprints=21  Long Sprints=14  tie=1  missing_all_3_events=58
+  Women Distance: total=42  Mid Distance=8  Long Distance=6  tie=0  missing_all_3_events=28
+  Women Sprints: total=40  Short Sprints=5  Long Sprints=5  tie=1  missing_all_3_events=29
+
+Pair-level linear OLS CV by cohort
+----------------------------------
+Gender  Group     Pair            nA  nB     CohA     CohB   Δ(A−B) Better?
+Men     Distance  1500m->5000m   27  34  26.422s  13.860s +12.562s Long Distance
+Men     Distance  1500m->800m    27  34   2.078s   2.519s  -0.441s Mid Distance
+Men     Distance  5000m->1500m   27  34   4.927s   3.580s  +1.347s Long Distance
+Men     Distance  5000m->800m    27  34   3.507s   3.678s  -0.171s Mid Distance
+Men     Distance  800m->1500m   27  34   4.533s   5.094s  -0.562s Mid Distance
+Men     Distance  800m->5000m   27  34  35.761s  17.689s +18.073s Long Distance
+Men     Sprints   100m->200m    21  14   0.199s   1.024s  -0.825s Short Sprints
+Men     Sprints   100m->400m    21  14   2.267s   1.365s  +0.902s Long Sprints
+Men     Sprints   200m->100m    21  14   0.071s   0.368s  -0.298s Short Sprints
+Men     Sprints   200m->400m    21  14   1.957s   1.175s  +0.783s Long Sprints
+Men     Sprints   400m->100m    21  14   0.315s   0.265s  +0.049s Long Sprints
+Men     Sprints   400m->200m    21  14   0.723s   0.522s  +0.201s Long Sprints
+
+  Both arms n≥12: 12 pairs
+  Short/Mid more predictable: 5/12
+  Long more predictable: 7/12
+  Mean Δ (Short/Mid − Long): +2.635s
+  Median Δ: +0.125s
+
+Cohort-specific formulas vs pooled model (same cohort)
+------------------------------------------------------
+  Compared: 24  beat pooled: 12 (50%)  worse: 8
+  [Mid Distance] Men Distance 5000m->1500m n=27: 4.927s vs 9.434s (↓4.506s)
+  [Long Distance] Men Distance 800m->1500m n=34: 3.673s vs 5.973s (↓2.299s)
+  [Long Distance] Men Distance 1500m->800m n=34: 2.250s vs 4.286s (↓2.035s)
+  [Mid Distance] Men Distance 5000m->800m n=27: 3.170s vs 4.848s (↓1.677s)
+  [Short Sprints] Men Sprints 200m->400m n=21: 1.156s vs 1.727s (↓0.571s)
+  [Long Sprints] Men Sprints 100m->200m n=14: 0.595s vs 0.863s (↓0.268s)
+  [Long Sprints] Men Sprints 200m->100m n=14: 0.264s vs 0.456s (↓0.193s)
+  [Long Sprints] Men Sprints 400m->100m n=14: 0.159s vs 0.339s (↓0.180s)
+  [Long Distance] Men Distance 5000m->1500m n=34: 3.163s vs 3.324s (↓0.161s)
+  [Short Sprints] Men Sprints 100m->200m n=21: 0.142s vs 0.246s (↓0.104s)
+  [Short Sprints] Men Sprints 200m->100m n=21: 0.066s vs 0.107s (↓0.041s)
+  [Short Sprints] Men Sprints 400m->100m n=21: 0.261s vs 0.274s (↓0.013s)
+
+Routed prediction (status-aware formula assignment)
+---------------------------------------------------
+  Pairs: 12  Routed wins: 7 (58%)
+  Men Distance 800m->5000m: routed 18.838s  group 32.847s  Δ=+14.009s  (n=61, A=27, B=34)
+  Men Distance 1500m->5000m: routed 15.461s  group 19.384s  Δ=+3.923s  (n=61, A=27, B=34)
+  Men Distance 5000m->1500m: routed 4.147s  group 5.639s  Δ=+1.492s  (n=61, A=27, B=34)
+  Men Distance 5000m->800m: routed 3.438s  group 4.319s  Δ=+0.881s  (n=61, A=27, B=34)
+  Men Distance 1500m->800m: routed 2.131s  group 2.218s  Δ=+0.088s  (n=61, A=27, B=34)
+  Men Sprints 100m->200m: routed 0.344s  group 0.404s  Δ=+0.060s  (n=35, A=21, B=14)
+  Men Sprints 200m->100m: routed 0.131s  group 0.151s  Δ=+0.020s  (n=35, A=21, B=14)
+  Men Sprints 400m->100m: routed 0.292s  group 0.283s  Δ=-0.009s  (n=35, A=21, B=14)
+  Men Sprints 400m->200m: routed 0.394s  group 0.368s  Δ=-0.026s  (n=35, A=21, B=14)
+  Men Sprints 100m->400m: routed 2.119s  group 1.944s  Δ=-0.175s  (n=35, A=21, B=14)
+  Men Sprints 200m->400m: routed 1.430s  group 1.044s  Δ=-0.386s  (n=35, A=21, B=14)
+  Men Distance 800m->1500m: routed 4.758s  group 4.306s  Δ=-0.452s  (n=61, A=27, B=34)
+
+Interpretation
+--------------
+At exactly 6 races: 5/6 cohort models beat pooled; routed wins 0/6. Only Long Distance reaches n≥12; Short/Mid/Sprints are underpowered.
+At 5 or 6 races: Short/Mid more predictable on 5/12 pairs; Long on 7/12 (mean Δ Short/Mid−Long = +2.635s).
+Cohort-specific formulas beat pooled on 12/24 (50%) subgroup fits at 5-or-6.
+Routed prediction improves 7/12 (58%) pairs vs always using the pooled model among classifiable athletes.
+Verdict: YES — knowing Short/Long (Mid/Long) status improves accuracy when you fit and route cohort-specific formulas (best evidence at 5-or-6 races).
+
+Caveats:
+  • Classification requires PBs in all 3 group events (~40–60% of high-race
+    athlete-seasons are unclassifiable).
+  • 6-race-only Short/Mid/Sprint arms are too small for stable CV.
+  • Women's cohorts remain small even at 5-or-6.
+
+Output files:
+  short_long_specialization_report.txt
+  short_long_findings.txt
+  athlete_season_short_long.csv
+  short_long_model_comparison.csv
+  best_short_long_time_models.csv
+  short_long_vs_group_comparison.csv
+  time_models_*_{6,5or6}_formulas.txt (per cohort with enough n)
+
+Source: Short_Long_Specialization_Time_Models/analyze_short_long_specialization.py

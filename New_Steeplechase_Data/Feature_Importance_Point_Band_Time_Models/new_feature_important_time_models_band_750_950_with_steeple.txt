@@ -1,0 +1,299 @@
+Feature-Important Time Models — WA Band 750-950 (with Steeplechase)
+=====================================================================
+
+Method:
+  • Outdoor 2024–2026, March 1+.
+  • Population: athlete-seasons with ≥1 individual result WA in [750, 950).
+  • Distance group includes 800m, 1500m, 3000m Steeplechase, 5000m
+    (corrected steeplechase WA from New_Steeplechase_Data).
+  • Relays excluded. Feature routing: bal/spec, best_event, best_is_from,
+    pair_wa_gap_50, from_stronger_wa, bal×best_event.
+  • Min pair n=20; cohort fit n≥12.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=168 athlete-seasons, r=0.577)
+  Pooled band model: knn_median
+  Formula: 200m ≈ median of k=20 nearest 100m neighbors
+  CV median |error|: 0.258s
+  Ratio 200m/100m: median 2.029 (IQR 1.995–2.059)
+  Median times: 100m 11.28s, 200m 22.88s
+  Important features: recommended bal_x_best_event (pooled CV 0.339s → 0.127s, Δ +0.212s).
+  Features that beat pooled: bal_spec (Δ +0.044s); best_event (Δ +0.106s); best_is_from (Δ +0.097s); pair_wa_gap_50 (Δ +0.065s); from_stronger_wa (Δ +0.085s); bal_x_best_event (Δ +0.212s)
+
+100m -> 400m  (n=36 athlete-seasons, r=0.028)
+  Pooled band model: log_linear
+  Formula: 400m = exp(3.768 + 0.074×log(100m))
+  CV median |error|: 1.056s
+  Ratio 400m/100m: median 4.496 (IQR 4.326–4.645)
+  Median times: 100m 11.41s, 400m 51.56s
+  Important features: recommended best_is_from (pooled CV 1.484s → 1.115s, Δ +0.368s).
+  Features that beat pooled: bal_spec (Δ +0.332s); best_is_from (Δ +0.368s); pair_wa_gap_50 (Δ +0.274s); from_stronger_wa (Δ +0.110s); bal_x_best_event (Δ +0.274s)
+
+200m -> 100m  (n=168 athlete-seasons, r=0.577)
+  Pooled band model: knn_median
+  Formula: 100m ≈ median of k=20 nearest 200m neighbors
+  CV median |error|: 0.115s
+  Ratio 100m/200m: median 0.493 (IQR 0.486–0.501)
+  Median times: 200m 22.88s, 100m 11.28s
+  Important features: recommended bal_x_best_event (pooled CV 0.162s → 0.052s, Δ +0.109s).
+  Features that beat pooled: bal_spec (Δ +0.030s); best_event (Δ +0.058s); best_is_from (Δ +0.062s); pair_wa_gap_50 (Δ +0.023s); from_stronger_wa (Δ +0.028s); bal_x_best_event (Δ +0.109s)
+
+200m -> 400m  (n=74 athlete-seasons, r=0.093)
+  Pooled band model: knn_median
+  Formula: 400m ≈ median of k=20 nearest 200m neighbors
+  CV median |error|: 0.745s
+  Ratio 400m/200m: median 2.226 (IQR 2.167–2.270)
+  Median times: 200m 23.04s, 400m 51.38s
+  Important features: recommended best_is_from (pooled CV 0.623s → 0.491s, Δ +0.132s).
+  Features that beat pooled: best_is_from (Δ +0.132s); pair_wa_gap_50 (Δ +0.044s); from_stronger_wa (Δ +0.089s)
+
+400m -> 100m  (n=36 athlete-seasons, r=0.028)
+  Pooled band model: robust_trimmed_linear
+  Formula: 100m = 11.405 + 0.001 × 400m
+  CV median |error|: 0.312s
+  Ratio 100m/400m: median 0.222 (IQR 0.215–0.230)
+  Median times: 400m 51.56s, 100m 11.41s
+  Important features: recommended best_is_from (pooled CV 0.377s → 0.325s, Δ +0.052s).
+  Features that beat pooled: bal_spec (Δ +0.026s); best_is_from (Δ +0.052s); pair_wa_gap_50 (Δ +0.044s); from_stronger_wa (Δ +0.026s); bal_x_best_event (Δ +0.038s)
+
+400m -> 200m  (n=74 athlete-seasons, r=0.093)
+  Pooled band model: robust_trimmed_linear
+  Formula: 200m = 20.943 + 0.040 × 400m
+  CV median |error|: 0.401s
+  Ratio 200m/400m: median 0.449 (IQR 0.440–0.461)
+  Median times: 400m 51.38s, 200m 23.04s
+  Important features: recommended best_is_from (pooled CV 0.495s → 0.218s, Δ +0.277s).
+  Features that beat pooled: bal_spec (Δ +0.134s); best_event (Δ +0.204s); best_is_from (Δ +0.277s); pair_wa_gap_50 (Δ +0.152s); from_stronger_wa (Δ +0.277s); bal_x_best_event (Δ +0.199s)
+
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=73 athlete-seasons, r=0.652)
+  Pooled band model: median_ratio
+  Formula: 200m = 2.068 × 100m
+  CV median |error|: 0.409s
+  Ratio 200m/100m: median 2.068 (IQR 2.037–2.100)
+  Median times: 100m 12.96s, 200m 26.86s
+  Important features: recommended bal_x_best_event (pooled CV 0.463s → 0.216s, Δ +0.247s).
+  Features that beat pooled: bal_spec (Δ +0.146s); best_event (Δ +0.074s); best_is_from (Δ +0.178s); pair_wa_gap_50 (Δ +0.203s); from_stronger_wa (Δ +0.197s); bal_x_best_event (Δ +0.247s)
+
+100m -> 400m  (n=24 athlete-seasons, r=0.420)
+  Pooled band model: quadratic
+  Formula: 400m = -576.318 + 92.904×100m − 3.376927×100m²
+  CV median |error|: 1.488s
+  Ratio 400m/100m: median 4.603 (IQR 4.483–4.745)
+  Median times: 100m 13.04s, 400m 60.86s
+  Important features: recommended bal_x_best_event (pooled CV 1.488s → 1.067s, Δ +0.421s).
+  Features that beat pooled: bal_spec (Δ +0.085s); best_event (Δ +0.259s); best_is_from (Δ +0.360s); pair_wa_gap_50 (Δ +0.085s); from_stronger_wa (Δ +0.259s); bal_x_best_event (Δ +0.421s)
+
+200m -> 100m  (n=73 athlete-seasons, r=0.652)
+  Pooled band model: linear_ols
+  Formula: 100m = 4.363 + 0.320 × 200m
+  CV median |error|: 0.161s
+  Ratio 100m/200m: median 0.484 (IQR 0.476–0.491)
+  Median times: 200m 26.86s, 100m 12.96s
+  Important features: recommended from_stronger_wa (pooled CV 0.165s → 0.108s, Δ +0.057s).
+  Features that beat pooled: bal_spec (Δ +0.053s); pair_wa_gap_50 (Δ +0.047s); from_stronger_wa (Δ +0.057s); bal_x_best_event (Δ +0.036s)
+
+200m -> 400m  (n=34 athlete-seasons, r=0.707)
+  Pooled band model: binned_ratio
+  Formula: 400m = 200m × ratio_bin(200m)
+  CV median |error|: 0.449s
+  Ratio 400m/200m: median 2.238 (IQR 2.217–2.280)
+  Median times: 200m 26.70s, 400m 61.22s
+  Important features: recommended best_event (pooled CV 0.625s → 0.587s, Δ +0.038s).
+  Features that beat pooled: best_event (Δ +0.038s); pair_wa_gap_50 (Δ +0.026s); bal_x_best_event (Δ +0.038s)
+
+400m -> 100m  (n=24 athlete-seasons, r=0.420)
+  Pooled band model: robust_trimmed_linear
+  Formula: 100m = 10.337 + 0.044 × 400m
+  CV median |error|: 0.190s
+  Ratio 100m/400m: median 0.217 (IQR 0.210–0.223)
+  Median times: 400m 60.86s, 100m 13.04s
+  Important features: recommended pooled (pooled CV 0.199s → 0.199s, Δ +0.000s).
+  No feature split beat pooled by >0.01s — use pooled formula.
+
+400m -> 200m  (n=34 athlete-seasons, r=0.707)
+  Pooled band model: binned_ratio
+  Formula: 200m = 400m × ratio_bin(400m)
+  CV median |error|: 0.258s
+  Ratio 200m/400m: median 0.447 (IQR 0.436–0.451)
+  Median times: 400m 61.22s, 200m 26.70s
+  Important features: recommended bal_x_best_event (pooled CV 0.428s → 0.401s, Δ +0.028s).
+  Features that beat pooled: best_event (Δ +0.025s); best_is_from (Δ +0.025s); bal_x_best_event (Δ +0.028s)
+
+
+Distance — Men
+--------------
+
+1500m -> 3000m Steeplechase  (n=31 athlete-seasons, r=0.404)
+  Pooled band model: binned_ratio
+  Formula: 3000m Steeplechase = 1500m × ratio_bin(1500m)
+  CV median |error|: 17.352s
+  Ratio 3000m Steeplechase/1500m: median 2.498 (IQR 2.356–2.532)
+  Median times: 1500m 244.92s, 3000m Steeplechase 605.94s
+  Important features: recommended pooled (pooled CV 17.353s → 17.353s, Δ +0.000s).
+  No feature split beat pooled by >0.01s — use pooled formula.
+
+1500m -> 5000m  (n=85 athlete-seasons, r=0.500)
+  Pooled band model: knn_median
+  Formula: 5000m ≈ median of k=20 nearest 1500m neighbors
+  CV median |error|: 18.360s
+  Ratio 5000m/1500m: median 3.795 (IQR 3.691–3.875)
+  Median times: 1500m 244.62s, 5000m 917.38s
+  Important features: recommended best_is_from (pooled CV 26.046s → 12.373s, Δ +13.673s).
+  Features that beat pooled: bal_spec (Δ +0.997s); best_event (Δ +6.524s); best_is_from (Δ +13.673s); pair_wa_gap_50 (Δ +10.456s); from_stronger_wa (Δ +5.037s); bal_x_best_event (Δ +8.576s)
+
+1500m -> 800m  (n=127 athlete-seasons, r=0.125)
+  Pooled band model: quadratic
+  Formula: 800m = -889.025 + 8.052×1500m − 0.016051×1500m²
+  CV median |error|: 1.987s
+  Ratio 800m/1500m: median 0.487 (IQR 0.474–0.497)
+  Median times: 1500m 245.65s, 800m 119.32s
+  Important features: recommended from_stronger_wa (pooled CV 2.143s → 1.376s, Δ +0.767s).
+  Features that beat pooled: bal_spec (Δ +0.473s); best_event (Δ +0.662s); best_is_from (Δ +0.584s); pair_wa_gap_50 (Δ +0.377s); from_stronger_wa (Δ +0.767s); bal_x_best_event (Δ +0.630s)
+
+3000m Steeplechase -> 1500m  (n=31 athlete-seasons, r=0.404)
+  Pooled band model: binned_ratio
+  Formula: 1500m = 3000m Steeplechase × ratio_bin(3000m Steeplechase)
+  CV median |error|: 4.241s
+  Ratio 1500m/3000m Steeplechase: median 0.400 (IQR 0.395–0.417)
+  Median times: 3000m Steeplechase 605.94s, 1500m 244.92s
+  Important features: recommended best_is_from (pooled CV 5.745s → 4.733s, Δ +1.011s).
+  Features that beat pooled: best_event (Δ +0.737s); best_is_from (Δ +1.011s); from_stronger_wa (Δ +1.011s); bal_x_best_event (Δ +0.737s)
+
+3000m Steeplechase -> 5000m  (n=23 athlete-seasons, r=0.491)
+  Pooled band model: knn_median
+  Formula: 5000m ≈ median of k=20 nearest 3000m Steeplechase neighbors
+  CV median |error|: 13.470s
+  Ratio 5000m/3000m Steeplechase: median 1.539 (IQR 1.498–1.577)
+  Median times: 3000m Steeplechase 599.45s, 5000m 925.49s
+  Important features: recommended best_is_from (pooled CV 22.873s → 14.624s, Δ +8.249s).
+  Features that beat pooled: bal_spec (Δ +0.169s); best_is_from (Δ +8.249s); bal_x_best_event (Δ +0.169s)
+
+3000m Steeplechase -> 800m  (n=25 athlete-seasons, r=-0.104)
+  Pooled band model: robust_trimmed_linear
+  Formula: 800m = 136.274 + -0.027 × 3000m Steeplechase
+  CV median |error|: 3.455s
+  Ratio 800m/3000m Steeplechase: median 0.196 (IQR 0.189–0.206)
+  Median times: 3000m Steeplechase 614.97s, 800m 119.86s
+  Important features: recommended bal_spec (pooled CV 4.091s → 3.684s, Δ +0.407s).
+  Features that beat pooled: bal_spec (Δ +0.407s); bal_x_best_event (Δ +0.407s)
+
+5000m -> 1500m  (n=85 athlete-seasons, r=0.500)
+  Pooled band model: quadratic
+  Formula: 1500m = 375.792 + -0.337×5000m + 0.000210×5000m²
+  CV median |error|: 3.299s
+  Ratio 1500m/5000m: median 0.263 (IQR 0.258–0.271)
+  Median times: 5000m 917.38s, 1500m 244.62s
+  Important features: recommended from_stronger_wa (pooled CV 3.369s → 2.840s, Δ +0.530s).
+  Features that beat pooled: best_event (Δ +0.253s); best_is_from (Δ +0.314s); pair_wa_gap_50 (Δ +0.344s); from_stronger_wa (Δ +0.530s); bal_x_best_event (Δ +0.437s)
+
+5000m -> 3000m Steeplechase  (n=23 athlete-seasons, r=0.491)
+  Pooled band model: knn_median
+  Formula: 3000m Steeplechase ≈ median of k=20 nearest 5000m neighbors
+  CV median |error|: 13.665s
+  Ratio 3000m Steeplechase/5000m: median 0.650 (IQR 0.632–0.662)
+  Median times: 5000m 925.49s, 3000m Steeplechase 599.45s
+  Important features: recommended best_is_from (pooled CV 18.658s → 15.543s, Δ +3.115s).
+  Features that beat pooled: bal_spec (Δ +0.720s); best_is_from (Δ +3.115s); bal_x_best_event (Δ +0.720s)
+
+5000m -> 800m  (n=38 athlete-seasons, r=-0.323)
+  Pooled band model: binned_ratio
+  Formula: 800m = 5000m × ratio_bin(5000m)
+  CV median |error|: 2.349s
+  Ratio 800m/5000m: median 0.131 (IQR 0.126–0.133)
+  Median times: 5000m 922.48s, 800m 119.88s
+  Important features: recommended from_stronger_wa (pooled CV 3.373s → 2.389s, Δ +0.984s).
+  Features that beat pooled: bal_spec (Δ +0.240s); pair_wa_gap_50 (Δ +0.966s); from_stronger_wa (Δ +0.984s)
+
+800m -> 1500m  (n=127 athlete-seasons, r=0.125)
+  Pooled band model: binned_ratio
+  Formula: 1500m = 800m × ratio_bin(800m)
+  CV median |error|: 4.059s
+  Ratio 1500m/800m: median 2.053 (IQR 2.011–2.105)
+  Median times: 800m 119.32s, 1500m 245.65s
+  Important features: recommended bal_x_best_event (pooled CV 4.973s → 2.950s, Δ +2.024s).
+  Features that beat pooled: bal_spec (Δ +0.106s); best_event (Δ +1.841s); best_is_from (Δ +1.290s); pair_wa_gap_50 (Δ +1.626s); from_stronger_wa (Δ +1.703s); bal_x_best_event (Δ +2.024s)
+
+800m -> 3000m Steeplechase  (n=25 athlete-seasons, r=-0.104)
+  Pooled band model: median_ratio
+  Formula: 3000m Steeplechase = 5.107 × 800m
+  CV median |error|: 31.942s
+  Ratio 3000m Steeplechase/800m: median 5.107 (IQR 4.848–5.295)
+  Median times: 800m 119.86s, 3000m Steeplechase 614.97s
+  Important features: recommended best_is_from (pooled CV 44.371s → 30.093s, Δ +14.279s).
+  Features that beat pooled: best_is_from (Δ +14.279s); pair_wa_gap_50 (Δ +9.656s)
+
+800m -> 5000m  (n=38 athlete-seasons, r=-0.323)
+  Pooled band model: knn_median
+  Formula: 5000m ≈ median of k=20 nearest 800m neighbors
+  CV median |error|: 17.525s
+  Ratio 5000m/800m: median 7.644 (IQR 7.539–7.897)
+  Median times: 800m 119.88s, 5000m 922.48s
+  Important features: recommended pair_wa_gap_50 (pooled CV 21.614s → 12.078s, Δ +9.536s).
+  Features that beat pooled: best_event (Δ +1.318s); best_is_from (Δ +1.914s); pair_wa_gap_50 (Δ +9.536s); from_stronger_wa (Δ +3.654s); bal_x_best_event (Δ +1.920s)
+
+
+Distance — Women
+----------------
+
+1500m -> 3000m Steeplechase  (n=20 athlete-seasons, r=0.147)
+  Pooled band model: robust_trimmed_linear
+  Formula: 3000m Steeplechase = 452.387 + 0.905 × 1500m
+  CV median |error|: 12.857s
+  Ratio 3000m Steeplechase/1500m: median 2.380 (IQR 2.333–2.440)
+  Median times: 1500m 296.40s, 3000m Steeplechase 724.83s
+  Important features: recommended pooled (pooled CV 16.517s → 16.517s, Δ +0.000s).
+  No feature split beat pooled by >0.01s — use pooled formula.
+
+1500m -> 5000m  (n=32 athlete-seasons, r=0.779)
+  Pooled band model: robust_trimmed_linear
+  Formula: 5000m = 338.885 + 2.557 × 1500m
+  CV median |error|: 21.166s
+  Ratio 5000m/1500m: median 3.682 (IQR 3.595–3.786)
+  Median times: 1500m 297.45s, 5000m 1110.15s
+  Important features: recommended best_event (pooled CV 19.412s → 16.315s, Δ +3.098s).
+  Features that beat pooled: bal_spec (Δ +1.734s); best_event (Δ +3.098s); bal_x_best_event (Δ +1.394s)
+
+1500m -> 800m  (n=52 athlete-seasons, r=0.499)
+  Pooled band model: ratio_linear
+  Formula: 800m = 1500m × (0.760 − 0.000892×1500m)
+  CV median |error|: 2.790s
+  Ratio 800m/1500m: median 0.498 (IQR 0.484–0.505)
+  Median times: 1500m 296.62s, 800m 147.06s
+  Important features: recommended pair_wa_gap_50 (pooled CV 3.016s → 1.650s, Δ +1.366s).
+  Features that beat pooled: bal_spec (Δ +0.393s); pair_wa_gap_50 (Δ +1.366s); from_stronger_wa (Δ +0.299s); bal_x_best_event (Δ +0.297s)
+
+3000m Steeplechase -> 1500m  (n=20 athlete-seasons, r=0.147)
+  Pooled band model: median_ratio
+  Formula: 1500m = 0.420 × 3000m Steeplechase
+  CV median |error|: 7.844s
+  Ratio 1500m/3000m Steeplechase: median 0.420 (IQR 0.409–0.428)
+  Median times: 3000m Steeplechase 724.83s, 1500m 296.40s
+  Important features: recommended bal_spec (pooled CV 8.483s → 8.288s, Δ +0.195s).
+  Features that beat pooled: bal_spec (Δ +0.195s)
+
+5000m -> 1500m  (n=32 athlete-seasons, r=0.779)
+  Pooled band model: ratio_linear
+  Formula: 1500m = 5000m × (0.333 − 0.000057×5000m)
+  CV median |error|: 6.901s
+  Ratio 1500m/5000m: median 0.272 (IQR 0.263–0.276)
+  Median times: 5000m 1110.15s, 1500m 297.45s
+  Important features: recommended best_event (pooled CV 7.493s → 5.960s, Δ +1.533s).
+  Features that beat pooled: bal_spec (Δ +0.389s); best_event (Δ +1.533s); best_is_from (Δ +1.059s); pair_wa_gap_50 (Δ +0.827s); from_stronger_wa (Δ +1.203s); bal_x_best_event (Δ +0.986s)
+
+800m -> 1500m  (n=52 athlete-seasons, r=0.499)
+  Pooled band model: robust_trimmed_linear
+  Formula: 1500m = 93.607 + 1.378 × 800m
+  CV median |error|: 5.264s
+  Ratio 1500m/800m: median 2.008 (IQR 1.981–2.061)
+  Median times: 800m 147.06s, 1500m 296.62s
+  Important features: recommended pair_wa_gap_50 (pooled CV 5.896s → 2.998s, Δ +2.898s).
+  Features that beat pooled: bal_spec (Δ +1.573s); best_is_from (Δ +0.397s); pair_wa_gap_50 (Δ +2.898s); from_stronger_wa (Δ +0.678s); bal_x_best_event (Δ +0.340s)
+
+Source: New_Steeplechase_Data/Feature_Importance_Point_Band_Time_Models/analyze_feature_importance_with_steeple.py

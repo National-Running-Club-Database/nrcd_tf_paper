@@ -1,0 +1,573 @@
+race_count_filter,gender,event_group,from_event,to_event,n_athlete_seasons,model,cv_median_abs_error,cv_rmse,delta_vs_linear_cv_med,is_winner,params_summary
+all,Men,Sprints,100m,200m,541,linear_ols,0.4368,0.9051,0.0,False,-2.8604 + 2.2942×x
+all,Men,Sprints,100m,200m,541,log_linear,0.4345,0.9047,0.0023,False,exp(0.4621 + 1.1037×log(x))
+all,Men,Sprints,100m,200m,541,median_ratio,0.4133,0.934,0.0235,False,x × 2.0450
+all,Men,Sprints,100m,200m,541,ratio_linear,0.4329,0.9045,0.0039,False,x × (1.8373 + 0.018141×x)
+all,Men,Sprints,100m,200m,541,quadratic,0.4234,0.9086,0.0134,False,3.1065 + 1.3338×x + 0.038441×x²
+all,Men,Sprints,100m,200m,541,binned_ratio,0.4191,0.9182,0.0177,False,9 bins (see JSON)
+all,Men,Sprints,100m,200m,541,knn_median,0.425,0.9628,0.0118,False,k=20 nearest neighbors
+all,Men,Sprints,100m,200m,541,robust_trimmed_linear,0.4059,0.9142,0.0309,True,"{""intercept"": -1.7679789975496298, ""slope"": 2.1944967974265035}"
+all,Men,Sprints,100m,400m,190,linear_ols,1.907,3.7903,0.0,False,-8.3720 + 5.3061×x
+all,Men,Sprints,100m,400m,190,log_linear,1.8268,3.791,0.0802,False,exp(1.1842 + 1.1375×log(x))
+all,Men,Sprints,100m,400m,190,median_ratio,1.6853,3.8897,0.2217,False,x × 4.5683
+all,Men,Sprints,100m,400m,190,ratio_linear,1.8479,3.7959,0.0591,False,x × (3.9915 + 0.051290×x)
+all,Men,Sprints,100m,400m,190,quadratic,1.891,3.8033,0.016,False,-16.4782 + 6.5723×x + -0.049138×x²
+all,Men,Sprints,100m,400m,190,binned_ratio,1.7402,3.8649,0.1668,False,9 bins (see JSON)
+all,Men,Sprints,100m,400m,190,knn_median,1.79,3.9668,0.117,False,k=20 nearest neighbors
+all,Men,Sprints,100m,400m,190,robust_trimmed_linear,1.7696,3.8226,0.1374,False,"{""intercept"": -7.717374526668209, ""slope"": 5.216163793438536}"
+all,Men,Sprints,100m,400m,190,chain_residual_adjusted,1.1384,2.8876,0.7686,True,chain via 200m + residual k=-0.0000
+all,Men,Sprints,100m,400m,190,multivariate_ols,1.1673,2.8858,0.7397,False,4.51 + -0.8957×100m + 2.5285×200m
+all,Men,Sprints,200m,100m,541,linear_ols,0.1929,0.3536,0.0,False,3.3830 + 0.3495×x
+all,Men,Sprints,200m,100m,541,log_linear,0.1911,0.3513,0.0018,False,exp(0.1336 + 0.7337×log(x))
+all,Men,Sprints,200m,100m,541,median_ratio,0.2022,0.4567,-0.0093,False,x × 0.4890
+all,Men,Sprints,200m,100m,541,ratio_linear,0.1921,0.348,0.0008,False,x × (0.6079 + -0.004886×x)
+all,Men,Sprints,200m,100m,541,quadratic,0.1832,0.3458,0.0096,True,-4.0288 + 0.9209×x + -0.010911×x²
+all,Men,Sprints,200m,100m,541,binned_ratio,0.1905,0.3843,0.0024,False,9 bins (see JSON)
+all,Men,Sprints,200m,100m,541,knn_median,0.195,0.3572,-0.0021,False,k=20 nearest neighbors
+all,Men,Sprints,200m,100m,541,robust_trimmed_linear,0.1881,0.3571,0.0048,False,"{""intercept"": 2.784359346468346, ""slope"": 0.374075182387187}"
+all,Men,Sprints,200m,400m,327,linear_ols,1.2917,2.8142,0.0,False,2.9845 + 2.1237×x
+all,Men,Sprints,200m,400m,327,log_linear,1.2917,2.8116,-0.0,False,exp(0.9734 + 0.9483×log(x))
+all,Men,Sprints,200m,400m,327,median_ratio,1.2303,2.7907,0.0613,False,x × 2.2366
+all,Men,Sprints,200m,400m,327,ratio_linear,1.2639,2.81,0.0277,False,x × (2.3384 + -0.003790×x)
+all,Men,Sprints,200m,400m,327,quadratic,1.2829,2.8382,0.0087,False,-27.9206 + 4.4645×x + -0.043881×x²
+all,Men,Sprints,200m,400m,327,binned_ratio,1.2284,2.851,0.0633,False,9 bins (see JSON)
+all,Men,Sprints,200m,400m,327,knn_median,1.17,2.707,0.1217,True,k=20 nearest neighbors
+all,Men,Sprints,200m,400m,327,robust_trimmed_linear,1.2367,2.8108,0.0549,False,"{""intercept"": 1.6917789125011922, ""slope"": 2.165082140425686}"
+all,Men,Sprints,400m,100m,190,linear_ols,0.2951,0.5694,0.0,False,5.5016 + 0.1207×x
+all,Men,Sprints,400m,100m,190,log_linear,0.287,0.5647,0.0082,False,exp(0.1893 + 0.5755×log(x))
+all,Men,Sprints,400m,100m,190,median_ratio,0.369,0.8509,-0.0739,False,x × 0.2189
+all,Men,Sprints,400m,100m,190,ratio_linear,0.2731,0.5541,0.022,False,x × (0.3020 + -0.001474×x)
+all,Men,Sprints,400m,100m,190,quadratic,0.2716,0.5516,0.0235,True,-6.8288 + 0.5303×x + -0.003358×x²
+all,Men,Sprints,400m,100m,190,binned_ratio,0.3041,0.5984,-0.0089,False,9 bins (see JSON)
+all,Men,Sprints,400m,100m,190,knn_median,0.3175,0.5646,-0.0224,False,k=20 nearest neighbors
+all,Men,Sprints,400m,100m,190,robust_trimmed_linear,0.2839,0.5718,0.0112,False,"{""intercept"": 4.7354977895602515, ""slope"": 0.13401896531259996}"
+all,Men,Sprints,400m,200m,327,linear_ols,0.5312,1.1337,0.0,False,5.4822 + 0.3488×x
+all,Men,Sprints,400m,200m,327,log_linear,0.5314,1.1329,-0.0002,False,exp(0.0452 + 0.7885×log(x))
+all,Men,Sprints,400m,200m,327,median_ratio,0.5499,1.2481,-0.0187,False,x × 0.4471
+all,Men,Sprints,400m,200m,327,ratio_linear,0.5292,1.1334,0.002,False,x × (0.5339 + -0.001544×x)
+all,Men,Sprints,400m,200m,327,quadratic,0.5376,1.1464,-0.0063,False,1.4598 + 0.4844×x + -0.001128×x²
+all,Men,Sprints,400m,200m,327,binned_ratio,0.5378,1.167,-0.0066,False,9 bins (see JSON)
+all,Men,Sprints,400m,200m,327,knn_median,0.54,1.214,-0.0088,False,k=20 nearest neighbors
+all,Men,Sprints,400m,200m,327,robust_trimmed_linear,0.5269,1.1344,0.0043,True,"{""intercept"": 5.316680434099286, ""slope"": 0.35076558346754994}"
+all,Women,Sprints,100m,200m,243,linear_ols,0.4935,1.3519,0.0,False,-4.1686 + 2.4066×x
+all,Women,Sprints,100m,200m,243,log_linear,0.4897,1.3483,0.0038,False,exp(0.4041 + 1.1291×log(x))
+all,Women,Sprints,100m,200m,243,median_ratio,0.4847,1.3647,0.0088,False,x × 2.0975
+all,Women,Sprints,100m,200m,243,ratio_linear,0.4933,1.3515,0.0002,False,x × (1.8232 + 0.020284×x)
+all,Women,Sprints,100m,200m,243,quadratic,0.5284,1.4136,-0.0349,False,-5.7565 + 2.6276×x + -0.007644×x²
+all,Women,Sprints,100m,200m,243,binned_ratio,0.5091,1.3892,-0.0156,False,9 bins (see JSON)
+all,Women,Sprints,100m,200m,243,knn_median,0.525,1.4122,-0.0315,False,k=20 nearest neighbors
+all,Women,Sprints,100m,200m,243,robust_trimmed_linear,0.4824,1.3424,0.0111,True,"{""intercept"": -4.194400585172293, ""slope"": 2.4012710847157988}"
+all,Women,Sprints,100m,400m,62,linear_ols,2.0075,3.7383,0.0,False,-15.3153 + 5.8633×x
+all,Women,Sprints,100m,400m,62,log_linear,1.9394,3.7233,0.0681,False,exp(1.0014 + 1.2117×log(x))
+all,Women,Sprints,100m,400m,62,median_ratio,1.9822,3.8151,0.0252,False,x × 4.7466
+all,Women,Sprints,100m,400m,62,ratio_linear,1.9402,3.7331,0.0673,False,x × (3.7666 + 0.071134×x)
+all,Women,Sprints,100m,400m,62,quadratic,1.9372,4.2511,0.0703,False,0.8869 + 3.6508×x + 0.074858×x²
+all,Women,Sprints,100m,400m,62,binned_ratio,2.2164,4.078,-0.2089,False,9 bins (see JSON)
+all,Women,Sprints,100m,400m,62,knn_median,2.56,5.0837,-0.5525,False,k=20 nearest neighbors
+all,Women,Sprints,100m,400m,62,robust_trimmed_linear,1.8477,3.6813,0.1598,False,"{""intercept"": -12.146354733830677, ""slope"": 5.617971954043207}"
+all,Women,Sprints,100m,400m,62,chain_residual_adjusted,2.2689,3.6436,-0.2614,False,chain via 200m + residual k=0.0000
+all,Women,Sprints,100m,400m,62,multivariate_ols,1.7492,3.1708,0.2582,True,-5.38 + 3.1838×100m + 0.9361×200m
+all,Women,Sprints,200m,100m,243,linear_ols,0.2001,0.4942,0.0,False,4.2869 + 0.3290×x
+all,Women,Sprints,200m,100m,243,log_linear,0.1912,0.4849,0.0089,False,exp(0.1898 + 0.7236×log(x))
+all,Women,Sprints,200m,100m,243,median_ratio,0.231,0.6508,-0.031,False,x × 0.4768
+all,Women,Sprints,200m,100m,243,ratio_linear,0.1889,0.468,0.0111,False,x × (0.5972 + -0.004127×x)
+all,Women,Sprints,200m,100m,243,quadratic,0.1937,0.4739,0.0063,False,-9.3480 + 1.2028×x + -0.013823×x²
+all,Women,Sprints,200m,100m,243,binned_ratio,0.194,0.5351,0.006,False,9 bins (see JSON)
+all,Women,Sprints,200m,100m,243,knn_median,0.205,0.4341,-0.0049,False,k=20 nearest neighbors
+all,Women,Sprints,200m,100m,243,robust_trimmed_linear,0.1868,0.4971,0.0133,True,"{""intercept"": 3.391536562880555, ""slope"": 0.35939991388410086}"
+all,Women,Sprints,200m,400m,145,linear_ols,1.5414,3.1997,0.0,False,9.2606 + 1.9580×x
+all,Women,Sprints,200m,400m,145,log_linear,1.488,3.1827,0.0534,False,exp(1.2033 + 0.8867×log(x))
+all,Women,Sprints,200m,400m,145,median_ratio,1.3139,3.2441,0.2275,True,x × 2.2712
+all,Women,Sprints,200m,400m,145,ratio_linear,1.5643,3.167,-0.0229,False,x × (2.5161 + -0.008223×x)
+all,Women,Sprints,200m,400m,145,quadratic,1.488,3.0115,0.0534,False,-75.8155 + 7.4314×x + -0.087060×x²
+all,Women,Sprints,200m,400m,145,binned_ratio,1.5966,3.3019,-0.0551,False,9 bins (see JSON)
+all,Women,Sprints,200m,400m,145,knn_median,1.61,3.2613,-0.0686,False,k=20 nearest neighbors
+all,Women,Sprints,200m,400m,145,robust_trimmed_linear,1.4205,3.2298,0.1209,False,"{""intercept"": 3.864176852918689, ""slope"": 2.1370291932375207}"
+all,Women,Sprints,400m,100m,62,linear_ols,0.2977,0.5659,0.0,False,4.8483 + 0.1374×x
+all,Women,Sprints,400m,100m,62,log_linear,0.2955,0.5634,0.0022,False,exp(-0.1618 + 0.6672×log(x))
+all,Women,Sprints,400m,100m,62,median_ratio,0.4179,0.8026,-0.1202,False,x × 0.2107
+all,Women,Sprints,400m,100m,62,ratio_linear,0.3282,0.5679,-0.0305,False,x × (0.2747 + -0.000955×x)
+all,Women,Sprints,400m,100m,62,quadratic,0.3248,0.571,-0.0271,False,2.2528 + 0.2104×x + -0.000504×x²
+all,Women,Sprints,400m,100m,62,binned_ratio,0.3378,0.6051,-0.0401,False,9 bins (see JSON)
+all,Women,Sprints,400m,100m,62,knn_median,0.3825,0.7664,-0.0848,False,k=20 nearest neighbors
+all,Women,Sprints,400m,100m,62,robust_trimmed_linear,0.2943,0.5658,0.0034,True,"{""intercept"": 4.5900718223104295, ""slope"": 0.1409939278305339}"
+all,Women,Sprints,400m,200m,145,linear_ols,0.5753,1.411,0.0,False,3.4345 + 0.3898×x
+all,Women,Sprints,400m,200m,145,log_linear,0.5768,1.4087,-0.0015,False,exp(-0.3318 + 0.8841×log(x))
+all,Women,Sprints,400m,200m,145,median_ratio,0.5792,1.4274,-0.004,False,x × 0.4403
+all,Women,Sprints,400m,200m,145,ratio_linear,0.5639,1.4079,0.0114,False,x × (0.4875 + -0.000688×x)
+all,Women,Sprints,400m,200m,145,quadratic,0.5727,1.4134,0.0025,False,-6.5346 + 0.6765×x + -0.002042×x²
+all,Women,Sprints,400m,200m,145,binned_ratio,0.5437,1.4344,0.0315,False,9 bins (see JSON)
+all,Women,Sprints,400m,200m,145,knn_median,0.62,1.5261,-0.0447,False,k=20 nearest neighbors
+all,Women,Sprints,400m,200m,145,robust_trimmed_linear,0.5211,1.4022,0.0542,True,"{""intercept"": 2.7758258924144705, ""slope"": 0.3990014928723562}"
+all,Men,Distance,800m,1500m,686,linear_ols,6.335,11.2433,0.0,False,24.2792 + 1.8831×x
+all,Men,Distance,800m,1500m,686,log_linear,6.3122,11.2564,0.0228,False,exp(1.1728 + 0.9084×log(x))
+all,Men,Distance,800m,1500m,686,median_ratio,6.6109,11.4357,-0.276,False,x × 2.0643
+all,Men,Distance,800m,1500m,686,ratio_linear,6.3451,11.2671,-0.0101,False,x × (2.2429 + -0.001322×x)
+all,Men,Distance,800m,1500m,686,quadratic,6.3393,11.2424,-0.0043,False,79.1692 + 1.0861×x + 0.002865×x²
+all,Men,Distance,800m,1500m,686,binned_ratio,6.4362,11.3531,-0.1012,False,9 bins (see JSON)
+all,Men,Distance,800m,1500m,686,knn_median,6.7175,11.9089,-0.3825,False,k=20 nearest neighbors
+all,Men,Distance,800m,1500m,686,robust_trimmed_linear,6.3045,11.2362,0.0305,True,"{""intercept"": 19.841621332737333, ""slope"": 1.9114769284883035}"
+all,Men,Distance,800m,5000m,201,linear_ols,36.0962,63.9374,0.0,False,170.6828 + 6.4424×x
+all,Men,Distance,800m,5000m,201,log_linear,36.3655,64.0282,-0.2693,False,exp(2.8737 + 0.8302×log(x))
+all,Men,Distance,800m,5000m,201,median_ratio,33.4326,65.6632,2.6636,False,x × 7.6923
+all,Men,Distance,800m,5000m,201,ratio_linear,36.1769,64.0928,-0.0808,False,x × (8.9459 + -0.009099×x)
+all,Men,Distance,800m,5000m,201,quadratic,37.2527,64.2405,-1.1565,False,500.3689 + 1.7047×x + 0.016855×x²
+all,Men,Distance,800m,5000m,201,binned_ratio,35.4733,62.9842,0.6229,False,9 bins (see JSON)
+all,Men,Distance,800m,5000m,201,knn_median,36.29,65.9387,-0.1938,False,k=20 nearest neighbors
+all,Men,Distance,800m,5000m,201,robust_trimmed_linear,32.4673,63.978,3.6289,False,"{""intercept"": 124.48840961479641, ""slope"": 6.7428318834656515}"
+all,Men,Distance,800m,5000m,201,chain_residual_adjusted,23.74,41.63,12.3562,True,chain via 1500m + residual k=0.0000
+all,Men,Distance,800m,5000m,201,multivariate_ols,24.3888,42.8432,11.7074,False,78.55 + -0.5737×800m + 3.8051×1500m
+all,Men,Distance,1500m,800m,686,linear_ols,3.005,5.3695,0.0,False,14.8649 + 0.4302×x
+all,Men,Distance,1500m,800m,686,log_linear,2.9907,5.3713,0.0143,True,exp(-0.1000 + 0.8886×log(x))
+all,Men,Distance,1500m,800m,686,median_ratio,3.2016,5.5396,-0.1966,False,x × 0.4844
+all,Men,Distance,1500m,800m,686,ratio_linear,3.0101,5.3722,-0.0051,False,x × (0.5352 + -0.000184×x)
+all,Men,Distance,1500m,800m,686,quadratic,3.0245,5.3751,-0.0195,False,12.2153 + 0.4487×x + -0.000032×x²
+all,Men,Distance,1500m,800m,686,binned_ratio,3.0696,5.419,-0.0646,False,9 bins (see JSON)
+all,Men,Distance,1500m,800m,686,knn_median,3.355,5.5308,-0.35,False,k=20 nearest neighbors
+all,Men,Distance,1500m,800m,686,robust_trimmed_linear,3.0558,5.3723,-0.0508,False,"{""intercept"": 12.601181699898348, ""slope"": 0.43807241139153325}"
+all,Men,Distance,1500m,5000m,498,linear_ols,23.2662,42.2972,0.0,False,61.4281 + 3.5495×x
+all,Men,Distance,1500m,5000m,498,log_linear,23.17,42.2828,0.0962,False,exp(1.6653 + 0.9398×log(x))
+all,Men,Distance,1500m,5000m,498,median_ratio,23.5984,42.5256,-0.3322,False,x × 3.7742
+all,Men,Distance,1500m,5000m,498,ratio_linear,23.6322,42.2701,-0.3661,False,x × (3.9835 + -0.000760×x)
+all,Men,Distance,1500m,5000m,498,quadratic,23.1139,42.4414,0.1523,True,-61.9962 + 4.4244×x + -0.001537×x²
+all,Men,Distance,1500m,5000m,498,binned_ratio,24.5566,42.199,-1.2905,False,9 bins (see JSON)
+all,Men,Distance,1500m,5000m,498,knn_median,25.2575,44.7106,-1.9913,False,k=20 nearest neighbors
+all,Men,Distance,1500m,5000m,498,robust_trimmed_linear,23.4662,42.2898,-0.2,False,"{""intercept"": 41.88498384492584, ""slope"": 3.616493537196368}"
+all,Men,Distance,5000m,800m,201,linear_ols,4.1895,7.8317,0.0,False,34.7593 + 0.0963×x
+all,Men,Distance,5000m,800m,201,log_linear,4.1787,7.822,0.0108,False,exp(-0.2786 + 0.7460×log(x))
+all,Men,Distance,5000m,800m,201,median_ratio,4.3415,8.5413,-0.152,False,x × 0.1300
+all,Men,Distance,5000m,800m,201,ratio_linear,4.1979,7.8171,-0.0084,False,x × (0.1607 + -0.000030×x)
+all,Men,Distance,5000m,800m,201,quadratic,4.1909,7.894,-0.0014,False,2.5345 + 0.1560×x + -0.000027×x²
+all,Men,Distance,5000m,800m,201,binned_ratio,4.1391,8.263,0.0504,False,9 bins (see JSON)
+all,Men,Distance,5000m,800m,201,knn_median,4.35,8.2598,-0.1605,False,k=20 nearest neighbors
+all,Men,Distance,5000m,800m,201,robust_trimmed_linear,4.0998,7.8619,0.0897,True,"{""intercept"": 26.987059966672078, ""slope"": 0.10359089115204338}"
+all,Men,Distance,5000m,1500m,498,linear_ols,6.0469,10.6226,0.0,False,44.3529 + 0.2216×x
+all,Men,Distance,5000m,1500m,498,log_linear,6.0723,10.6326,-0.0254,False,exp(-0.1967 + 0.8367×log(x))
+all,Men,Distance,5000m,1500m,498,median_ratio,6.2534,11.2681,-0.2065,False,x × 0.2650
+all,Men,Distance,5000m,1500m,498,ratio_linear,5.9584,10.6583,0.0885,False,x × (0.3057 + -0.000040×x)
+all,Men,Distance,5000m,1500m,498,quadratic,6.0339,10.6736,0.013,False,64.5997 + 0.1835×x + 0.000018×x²
+all,Men,Distance,5000m,1500m,498,binned_ratio,6.1611,10.8369,-0.1142,False,9 bins (see JSON)
+all,Men,Distance,5000m,1500m,498,knn_median,6.07,11.4192,-0.0231,False,k=20 nearest neighbors
+all,Men,Distance,5000m,1500m,498,robust_trimmed_linear,5.8169,10.6046,0.23,True,"{""intercept"": 37.77182361422879, ""slope"": 0.22759083790619605}"
+all,Women,Distance,800m,1500m,312,linear_ols,7.6871,13.9384,0.0,False,32.2216 + 1.8426×x
+all,Women,Distance,800m,1500m,312,log_linear,7.7766,13.9553,-0.0895,False,exp(1.2359 + 0.8973×log(x))
+all,Women,Distance,800m,1500m,312,median_ratio,7.6382,14.2042,0.0489,True,x × 2.0281
+all,Women,Distance,800m,1500m,312,ratio_linear,7.9094,14.0,-0.2223,False,x × (2.2312 + -0.001160×x)
+all,Women,Distance,800m,1500m,312,quadratic,8.3824,14.0408,-0.6953,False,157.2087 + 0.3822×x + 0.004221×x²
+all,Women,Distance,800m,1500m,312,binned_ratio,8.1644,14.1964,-0.4773,False,8 bins (see JSON)
+all,Women,Distance,800m,1500m,312,knn_median,8.71,15.7489,-1.0229,False,k=20 nearest neighbors
+all,Women,Distance,800m,1500m,312,robust_trimmed_linear,7.819,13.8983,-0.1319,False,"{""intercept"": 31.84165436336815, ""slope"": 1.8393296347941035}"
+all,Women,Distance,800m,5000m,82,linear_ols,48.1068,74.0492,0.0,False,204.9340 + 6.2874×x
+all,Women,Distance,800m,5000m,82,log_linear,48.2752,73.9363,-0.1684,False,exp(2.8259 + 0.8417×log(x))
+all,Women,Distance,800m,5000m,82,median_ratio,38.7752,76.2152,9.3316,False,x × 7.4520
+all,Women,Distance,800m,5000m,82,ratio_linear,46.9574,74.0204,1.1494,False,x × (8.6630 + -0.006819×x)
+all,Women,Distance,800m,5000m,82,quadratic,46.096,74.5566,2.0108,False,-310.2890 + 12.3294×x + -0.017557×x²
+all,Women,Distance,800m,5000m,82,binned_ratio,49.7367,75.8031,-1.6299,False,9 bins (see JSON)
+all,Women,Distance,800m,5000m,82,knn_median,45.39,86.2881,2.7168,False,k=20 nearest neighbors
+all,Women,Distance,800m,5000m,82,robust_trimmed_linear,46.1101,74.8791,1.9967,False,"{""intercept"": 165.31189902686083, ""slope"": 6.501298446633372}"
+all,Women,Distance,800m,5000m,82,chain_residual_adjusted,32.5694,52.4407,15.5374,True,chain via 1500m + residual k=0.0000
+all,Women,Distance,800m,5000m,82,multivariate_ols,35.6002,51.2885,12.5066,False,-44.97 + 2.0098×800m + 2.8898×1500m
+all,Women,Distance,1500m,800m,312,linear_ols,3.7362,6.855,0.0,False,13.5958 + 0.4511×x
+all,Women,Distance,1500m,800m,312,log_linear,3.6963,6.8432,0.0399,False,exp(-0.2881 + 0.9274×log(x))
+all,Women,Distance,1500m,800m,312,median_ratio,3.7665,7.0025,-0.0303,False,x × 0.4931
+all,Women,Distance,1500m,800m,312,ratio_linear,3.6579,6.8309,0.0783,True,x × (0.5260 + -0.000102×x)
+all,Women,Distance,1500m,800m,312,quadratic,3.7628,6.8109,-0.0266,False,-44.4854 + 0.7803×x + -0.000461×x²
+all,Women,Distance,1500m,800m,312,binned_ratio,3.9256,6.8465,-0.1894,False,8 bins (see JSON)
+all,Women,Distance,1500m,800m,312,knn_median,3.9725,7.3834,-0.2363,False,k=20 nearest neighbors
+all,Women,Distance,1500m,800m,312,robust_trimmed_linear,3.7653,6.8565,-0.0291,False,"{""intercept"": 11.279905351360071, ""slope"": 0.457900104280265}"
+all,Women,Distance,1500m,5000m,135,linear_ols,32.8199,53.3637,0.0,False,64.5527 + 3.5361×x
+all,Women,Distance,1500m,5000m,135,log_linear,31.9874,53.1705,0.8325,False,exp(1.5489 + 0.9599×log(x))
+all,Women,Distance,1500m,5000m,135,median_ratio,32.2282,52.4845,0.5917,False,x × 3.7262
+all,Women,Distance,1500m,5000m,135,ratio_linear,32.4058,53.2367,0.4141,False,x × (3.8815 + -0.000450×x)
+all,Women,Distance,1500m,5000m,135,quadratic,34.168,55.4073,-1.3482,False,-842.9926 + 8.9240×x + -0.007933×x²
+all,Women,Distance,1500m,5000m,135,binned_ratio,31.1624,55.5219,1.6575,True,9 bins (see JSON)
+all,Women,Distance,1500m,5000m,135,knn_median,38.15,61.1671,-5.3301,False,k=20 nearest neighbors
+all,Women,Distance,1500m,5000m,135,robust_trimmed_linear,31.5859,53.0499,1.234,False,"{""intercept"": 48.005957145302546, ""slope"": 3.574751634498694}"
+all,Women,Distance,5000m,800m,82,linear_ols,6.2443,9.4088,0.0,False,40.4176 + 0.1008×x
+all,Women,Distance,5000m,800m,82,log_linear,6.348,9.3876,-0.1037,False,exp(-0.3476 + 0.7658×log(x))
+all,Women,Distance,5000m,800m,82,median_ratio,5.206,10.2279,1.0382,True,x × 0.1342
+all,Women,Distance,5000m,800m,82,ratio_linear,6.463,9.3332,-0.2188,False,x × (0.1629 + -0.000024×x)
+all,Women,Distance,5000m,800m,82,quadratic,6.9951,9.3906,-0.7509,False,-52.9208 + 0.2457×x + -0.000056×x²
+all,Women,Distance,5000m,800m,82,binned_ratio,6.8575,10.3059,-0.6132,False,9 bins (see JSON)
+all,Women,Distance,5000m,800m,82,knn_median,5.965,10.7316,0.2793,False,k=20 nearest neighbors
+all,Women,Distance,5000m,800m,82,robust_trimmed_linear,6.0612,9.4307,0.1831,False,"{""intercept"": 26.470203216947937, ""slope"": 0.1118648269445003}"
+all,Women,Distance,5000m,1500m,135,linear_ols,8.044,13.3163,0.0,False,54.0679 + 0.2239×x
+all,Women,Distance,5000m,1500m,135,log_linear,8.1818,13.2924,-0.1378,False,exp(-0.1667 + 0.8383×log(x))
+all,Women,Distance,5000m,1500m,135,median_ratio,8.6828,14.0848,-0.6388,False,x × 0.2684
+all,Women,Distance,5000m,1500m,135,ratio_linear,8.1965,13.2901,-0.1526,False,x × (0.3101 + -0.000034×x)
+all,Women,Distance,5000m,1500m,135,quadratic,8.1783,13.3406,-0.1343,False,-31.8861 + 0.3614×x + -0.000054×x²
+all,Women,Distance,5000m,1500m,135,binned_ratio,7.8785,13.405,0.1654,True,9 bins (see JSON)
+all,Women,Distance,5000m,1500m,135,knn_median,8.77,15.432,-0.726,False,k=20 nearest neighbors
+all,Women,Distance,5000m,1500m,135,robust_trimmed_linear,8.2652,13.4123,-0.2213,False,"{""intercept"": 49.54924091926114, ""slope"": 0.2272470988446038}"
+4,Men,Sprints,100m,200m,91,linear_ols,0.3343,0.7829,0.0,False,-2.1859 + 2.2413×x
+4,Men,Sprints,100m,200m,91,log_linear,0.3253,0.782,0.009,False,exp(0.5112 + 1.0847×log(x))
+4,Men,Sprints,100m,200m,91,median_ratio,0.3883,0.7885,-0.054,False,x × 2.0498
+4,Men,Sprints,100m,200m,91,ratio_linear,0.336,0.7826,-0.0017,False,x × (1.8807 + 0.014824×x)
+4,Men,Sprints,100m,200m,91,quadratic,0.3076,0.8177,0.0267,True,8.2795 + 0.4950×x + 0.072631×x²
+4,Men,Sprints,100m,200m,91,binned_ratio,0.3934,0.8114,-0.0591,False,9 bins (see JSON)
+4,Men,Sprints,100m,200m,91,knn_median,0.465,0.9729,-0.1307,False,k=20 nearest neighbors
+4,Men,Sprints,100m,200m,91,robust_trimmed_linear,0.3477,0.7793,-0.0134,False,"{""intercept"": -3.2150756914727303, ""slope"": 2.321496785221016}"
+4,Men,Sprints,100m,400m,24,linear_ols,2.2866,4.0818,0.0,False,-22.0275 + 6.3916×x
+4,Men,Sprints,100m,400m,24,log_linear,2.1608,4.0823,0.1258,False,exp(0.6741 + 1.3384×log(x))
+4,Men,Sprints,100m,400m,24,median_ratio,1.7486,3.5098,0.538,False,x × 4.5315
+4,Men,Sprints,100m,400m,24,ratio_linear,2.2179,4.0821,0.0687,False,x × (2.8791 + 0.139501×x)
+4,Men,Sprints,100m,400m,24,quadratic,1.4819,3.5433,0.8047,True,378.4147 + -59.4751×x + 2.701999×x²
+4,Men,Sprints,100m,400m,24,binned_ratio,2.3712,4.5851,-0.0846,False,8 bins (see JSON)
+4,Men,Sprints,100m,400m,24,knn_median,2.3475,5.2531,-0.0609,False,k=20 nearest neighbors
+4,Men,Sprints,100m,400m,24,robust_trimmed_linear,1.9372,3.8276,0.3493,False,"{""intercept"": -18.724957838029503, ""slope"": 6.100255079429173}"
+4,Men,Sprints,200m,100m,91,linear_ols,0.151,0.315,0.0,False,3.3705 + 0.3479×x
+4,Men,Sprints,200m,100m,91,log_linear,0.1542,0.3128,-0.0032,False,exp(0.1572 + 0.7250×log(x))
+4,Men,Sprints,200m,100m,91,median_ratio,0.1895,0.3848,-0.0385,False,x × 0.4879
+4,Men,Sprints,200m,100m,91,ratio_linear,0.1465,0.3096,0.0046,False,x × (0.6161 + -0.005308×x)
+4,Men,Sprints,200m,100m,91,quadratic,0.1425,0.3175,0.0085,True,-11.6343 + 1.5546×x + -0.024143×x²
+4,Men,Sprints,200m,100m,91,binned_ratio,0.1755,0.3005,-0.0244,False,9 bins (see JSON)
+4,Men,Sprints,200m,100m,91,knn_median,0.19,0.3479,-0.039,False,k=20 nearest neighbors
+4,Men,Sprints,200m,100m,91,robust_trimmed_linear,0.1565,0.3136,-0.0054,False,"{""intercept"": 2.9346554497891226, ""slope"": 0.3667952672364883}"
+4,Men,Sprints,200m,400m,51,linear_ols,1.3202,2.035,0.0,True,-2.6384 + 2.3202×x
+4,Men,Sprints,200m,400m,51,log_linear,1.3216,2.0324,-0.0014,False,exp(0.6764 + 1.0366×log(x))
+4,Men,Sprints,200m,400m,51,median_ratio,1.3371,2.0206,-0.0169,False,x × 2.2074
+4,Men,Sprints,200m,400m,51,ratio_linear,1.3367,2.0335,-0.0165,False,x × (2.1206 + 0.003740×x)
+4,Men,Sprints,200m,400m,51,quadratic,1.3879,2.0844,-0.0677,False,38.7905 + -0.9380×x + 0.063710×x²
+4,Men,Sprints,200m,400m,51,binned_ratio,1.3804,2.0286,-0.0602,False,9 bins (see JSON)
+4,Men,Sprints,200m,400m,51,knn_median,1.64,3.362,-0.3198,False,k=20 nearest neighbors
+4,Men,Sprints,200m,400m,51,robust_trimmed_linear,1.342,2.0326,-0.0219,False,"{""intercept"": 0.6383865562265427, ""slope"": 2.1842996011128726}"
+4,Men,Sprints,400m,100m,24,linear_ols,0.2025,0.3992,0.0,False,6.8274 + 0.0952×x
+4,Men,Sprints,400m,100m,24,log_linear,0.2055,0.3957,-0.003,False,exp(0.6870 + 0.4501×log(x))
+4,Men,Sprints,400m,100m,24,median_ratio,0.385,0.7787,-0.1825,False,x × 0.2207
+4,Men,Sprints,400m,100m,24,ratio_linear,0.2165,0.3918,-0.0141,False,x × (0.3324 + -0.002039×x)
+4,Men,Sprints,400m,100m,24,quadratic,0.2223,0.4854,-0.0198,False,0.5690 + 0.3124×x + -0.001865×x²
+4,Men,Sprints,400m,100m,24,binned_ratio,0.2707,0.5681,-0.0682,False,8 bins (see JSON)
+4,Men,Sprints,400m,100m,24,knn_median,0.45,0.6292,-0.2475,False,k=20 nearest neighbors
+4,Men,Sprints,400m,100m,24,robust_trimmed_linear,0.1877,0.4272,0.0148,True,"{""intercept"": 5.853230083431154, ""slope"": 0.11345328466909219}"
+4,Men,Sprints,400m,200m,51,linear_ols,0.5531,0.7949,0.0,False,5.7363 + 0.3473×x
+4,Men,Sprints,400m,200m,51,log_linear,0.5576,0.7892,-0.0044,False,exp(0.0871 + 0.7799×log(x))
+4,Men,Sprints,400m,200m,51,median_ratio,0.6057,0.9165,-0.0526,False,x × 0.4530
+4,Men,Sprints,400m,200m,51,ratio_linear,0.5747,0.7862,-0.0215,False,x × (0.5469 + -0.001721×x)
+4,Men,Sprints,400m,200m,51,quadratic,0.602,0.8099,-0.0488,False,-14.9235 + 1.0720×x + -0.006303×x²
+4,Men,Sprints,400m,200m,51,binned_ratio,0.5384,0.9395,0.0148,True,9 bins (see JSON)
+4,Men,Sprints,400m,200m,51,knn_median,0.695,1.2587,-0.1419,False,k=20 nearest neighbors
+4,Men,Sprints,400m,200m,51,robust_trimmed_linear,0.5435,0.8263,0.0096,False,"{""intercept"": 3.7322394024009036, ""slope"": 0.38446549283160597}"
+4,Women,Sprints,100m,200m,37,linear_ols,0.6288,1.1248,0.0,False,-2.2081 + 2.2809×x
+4,Women,Sprints,100m,200m,37,log_linear,0.6031,1.1255,0.0257,False,exp(0.5792 + 1.0655×log(x))
+4,Women,Sprints,100m,200m,37,median_ratio,0.43,1.1767,0.1988,True,x × 2.0940
+4,Women,Sprints,100m,200m,37,ratio_linear,0.6155,1.1242,0.0133,False,x × (1.9745 + 0.010563×x)
+4,Women,Sprints,100m,200m,37,quadratic,0.6944,1.2428,-0.0656,False,-2.4892 + 2.3199×x + -0.001343×x²
+4,Women,Sprints,100m,200m,37,binned_ratio,0.5693,1.2436,0.0595,False,10 bins (see JSON)
+4,Women,Sprints,100m,200m,37,knn_median,1.205,2.2986,-0.5762,False,k=20 nearest neighbors
+4,Women,Sprints,100m,200m,37,robust_trimmed_linear,0.4964,1.1565,0.1324,False,"{""intercept"": -5.092634977784172, ""slope"": 2.4771749618605043}"
+4,Women,Sprints,200m,100m,37,linear_ols,0.1905,0.4813,0.0,False,3.5695 + 0.3500×x
+4,Women,Sprints,200m,100m,37,log_linear,0.1717,0.4863,0.0188,True,exp(0.0695 + 0.7571×log(x))
+4,Women,Sprints,200m,100m,37,median_ratio,0.2054,0.5611,-0.015,False,x × 0.4776
+4,Women,Sprints,200m,100m,37,ratio_linear,0.1871,0.508,0.0033,False,x × (0.5778 + -0.003592×x)
+4,Women,Sprints,200m,100m,37,quadratic,0.2167,0.87,-0.0262,False,-6.1072 + 0.9731×x + -0.009929×x²
+4,Women,Sprints,200m,100m,37,binned_ratio,0.2074,0.4626,-0.017,False,10 bins (see JSON)
+4,Women,Sprints,200m,100m,37,knn_median,0.3,0.8883,-0.1095,False,k=20 nearest neighbors
+4,Women,Sprints,200m,100m,37,robust_trimmed_linear,0.1758,0.4673,0.0147,False,"{""intercept"": 3.50664816452478, ""slope"": 0.3539632354530898}"
+4,Women,Sprints,200m,400m,26,linear_ols,1.4186,3.1237,0.0,False,15.5691 + 1.7373×x
+4,Women,Sprints,200m,400m,26,log_linear,1.4241,3.068,-0.0055,False,exp(1.5773 + 0.7756×log(x))
+4,Women,Sprints,200m,400m,26,median_ratio,1.2695,3.1703,0.1491,False,x × 2.2776
+4,Women,Sprints,200m,400m,26,ratio_linear,1.3767,3.1005,0.0419,False,x × (2.7199 + -0.015273×x)
+4,Women,Sprints,200m,400m,26,quadratic,1.5969,3.5877,-0.1782,False,4.4266 + 2.4378×x + -0.010839×x²
+4,Women,Sprints,200m,400m,26,binned_ratio,2.0679,3.9929,-0.6493,False,9 bins (see JSON)
+4,Women,Sprints,200m,400m,26,knn_median,2.495,6.2708,-1.0764,False,k=20 nearest neighbors
+4,Women,Sprints,200m,400m,26,robust_trimmed_linear,1.2679,3.4278,0.1507,True,"{""intercept"": 10.968178504701882, ""slope"": 1.89988632029232}"
+4,Women,Sprints,400m,200m,26,linear_ols,0.4555,1.4782,0.0,False,-1.1971 + 0.4599×x
+4,Women,Sprints,400m,200m,26,log_linear,0.4224,1.4747,0.033,True,exp(-0.9203 + 1.0245×log(x))
+4,Women,Sprints,400m,200m,26,median_ratio,0.5578,1.3914,-0.1024,False,x × 0.4391
+4,Women,Sprints,400m,200m,26,ratio_linear,0.4314,1.4765,0.024,False,x × (0.4287 + 0.000199×x)
+4,Women,Sprints,400m,200m,26,quadratic,0.4823,1.6784,-0.0268,False,14.2246 + 0.0265×x + 0.003012×x²
+4,Women,Sprints,400m,200m,26,binned_ratio,0.9993,1.7187,-0.5438,False,9 bins (see JSON)
+4,Women,Sprints,400m,200m,26,knn_median,1.11,3.0813,-0.6545,False,k=20 nearest neighbors
+4,Women,Sprints,400m,200m,26,robust_trimmed_linear,0.4976,1.418,-0.0421,False,"{""intercept"": 0.13982744204986375, ""slope"": 0.4391282676610932}"
+4,Men,Distance,800m,1500m,117,linear_ols,8.0362,12.146,0.0,False,32.8851 + 1.8181×x
+4,Men,Distance,800m,1500m,117,log_linear,8.0901,12.1244,-0.054,False,exp(1.2616 + 0.8903×log(x))
+4,Men,Distance,800m,1500m,117,median_ratio,7.3309,12.3832,0.7052,False,x × 2.0684
+4,Men,Distance,800m,1500m,117,ratio_linear,8.2632,12.1232,-0.227,False,x × (2.2882 + -0.001658×x)
+4,Men,Distance,800m,1500m,117,quadratic,8.0717,12.2771,-0.0355,False,-96.9238 + 3.7195×x + -0.006895×x²
+4,Men,Distance,800m,1500m,117,binned_ratio,5.5817,11.4273,2.4545,True,9 bins (see JSON)
+4,Men,Distance,800m,1500m,117,knn_median,6.415,13.8047,1.6212,False,k=20 nearest neighbors
+4,Men,Distance,800m,1500m,117,robust_trimmed_linear,7.7079,12.2119,0.3283,False,"{""intercept"": 10.358754329888825, ""slope"": 1.9880318923770592}"
+4,Men,Distance,800m,5000m,38,linear_ols,60.5315,93.3823,0.0,False,296.5464 + 5.4819×x
+4,Men,Distance,800m,5000m,38,log_linear,58.5931,93.3074,1.9385,False,exp(3.5287 + 0.6958×log(x))
+4,Men,Distance,800m,5000m,38,median_ratio,45.8539,88.2987,14.6777,False,x × 7.6088
+4,Men,Distance,800m,5000m,38,ratio_linear,62.2175,96.9328,-1.686,False,x × (9.9048 + -0.016321×x)
+4,Men,Distance,800m,5000m,38,quadratic,62.741,99.229,-2.2095,False,1855.4709 + -16.6865×x + 0.077877×x²
+4,Men,Distance,800m,5000m,38,binned_ratio,65.2831,95.767,-4.7516,False,10 bins (see JSON)
+4,Men,Distance,800m,5000m,38,knn_median,48.2475,104.9828,12.284,False,k=20 nearest neighbors
+4,Men,Distance,800m,5000m,38,robust_trimmed_linear,59.8634,97.0257,0.6682,False,"{""intercept"": 192.16277862890104, ""slope"": 6.1690293572126516}"
+4,Men,Distance,800m,5000m,38,chain_residual_adjusted,35.1568,58.2385,25.3748,True,chain via 1500m + residual k=-0.0000
+4,Men,Distance,800m,5000m,38,multivariate_ols,38.4455,62.6317,22.086,False,114.62 + -0.7394×800m + 3.7249×1500m
+4,Men,Distance,1500m,800m,117,linear_ols,2.8752,5.7767,0.0,False,17.7464 + 0.4175×x
+4,Men,Distance,1500m,800m,117,log_linear,2.8883,5.7877,-0.0131,False,exp(0.0952 + 0.8530×log(x))
+4,Men,Distance,1500m,800m,117,median_ratio,3.5459,5.9751,-0.6707,False,x × 0.4835
+4,Men,Distance,1500m,800m,117,ratio_linear,3.059,5.8013,-0.1838,False,x × (0.5488 + -0.000241×x)
+4,Men,Distance,1500m,800m,117,quadratic,2.8397,5.8402,0.0355,False,85.8741 + -0.0712×x + 0.000869×x²
+4,Men,Distance,1500m,800m,117,binned_ratio,3.2144,6.1784,-0.3392,False,9 bins (see JSON)
+4,Men,Distance,1500m,800m,117,knn_median,2.65,7.6477,0.2252,True,k=20 nearest neighbors
+4,Men,Distance,1500m,800m,117,robust_trimmed_linear,2.6691,5.7603,0.2061,False,"{""intercept"": 20.706515046815838, ""slope"": 0.40448050416532083}"
+4,Men,Distance,1500m,5000m,87,linear_ols,27.7765,44.2216,0.0,False,55.9417 + 3.5584×x
+4,Men,Distance,1500m,5000m,87,log_linear,28.2413,44.2636,-0.4648,False,exp(1.6445 + 0.9430×log(x))
+4,Men,Distance,1500m,5000m,87,median_ratio,24.2555,43.6637,3.521,True,x × 3.7658
+4,Men,Distance,1500m,5000m,87,ratio_linear,27.0667,44.2911,0.7098,False,x × (3.9617 + -0.000720×x)
+4,Men,Distance,1500m,5000m,87,quadratic,28.2817,44.3726,-0.5052,False,168.7544 + 2.7538×x + 0.001420×x²
+4,Men,Distance,1500m,5000m,87,binned_ratio,28.4878,47.1903,-0.7113,False,9 bins (see JSON)
+4,Men,Distance,1500m,5000m,87,knn_median,27.765,63.0444,0.0115,False,k=20 nearest neighbors
+4,Men,Distance,1500m,5000m,87,robust_trimmed_linear,25.6835,43.7968,2.0929,False,"{""intercept"": 24.639826860041012, ""slope"": 3.674017859914869}"
+4,Men,Distance,5000m,800m,38,linear_ols,5.0863,10.8746,0.0,False,47.2994 + 0.0847×x
+4,Men,Distance,5000m,800m,38,log_linear,5.0527,10.9025,0.0336,False,exp(0.4923 + 0.6354×log(x))
+4,Men,Distance,5000m,800m,38,median_ratio,6.0265,11.5591,-0.9402,False,x × 0.1314
+4,Men,Distance,5000m,800m,38,ratio_linear,5.384,11.2392,-0.2977,False,x × (0.1739 + -0.000042×x)
+4,Men,Distance,5000m,800m,38,quadratic,4.973,17.4609,0.1133,False,143.0936 + -0.0926×x + 0.000081×x²
+4,Men,Distance,5000m,800m,38,binned_ratio,5.7634,11.4364,-0.6771,False,10 bins (see JSON)
+4,Men,Distance,5000m,800m,38,knn_median,2.555,12.4914,2.5313,True,k=20 nearest neighbors
+4,Men,Distance,5000m,800m,38,robust_trimmed_linear,5.3745,11.3215,-0.2882,False,"{""intercept"": 40.015077353399434, ""slope"": 0.09177286554447499}"
+4,Men,Distance,5000m,1500m,87,linear_ols,5.94,11.1401,0.0,False,39.4091 + 0.2265×x
+4,Men,Distance,5000m,1500m,87,log_linear,5.9275,11.1391,0.0125,False,exp(-0.3096 + 0.8530×log(x))
+4,Men,Distance,5000m,1500m,87,median_ratio,6.4576,11.5847,-0.5175,False,x × 0.2655
+4,Men,Distance,5000m,1500m,87,ratio_linear,5.8317,11.1436,0.1083,False,x × (0.3018 + -0.000036×x)
+4,Men,Distance,5000m,1500m,87,quadratic,5.5851,11.2181,0.355,True,62.4725 + 0.1829×x + 0.000020×x²
+4,Men,Distance,5000m,1500m,87,binned_ratio,6.5367,11.8138,-0.5966,False,9 bins (see JSON)
+4,Men,Distance,5000m,1500m,87,knn_median,6.63,15.1277,-0.69,False,k=20 nearest neighbors
+4,Men,Distance,5000m,1500m,87,robust_trimmed_linear,6.0401,11.1628,-0.1001,False,"{""intercept"": 31.12046651419962, ""slope"": 0.23407226046906757}"
+4,Women,Distance,800m,1500m,53,linear_ols,8.8082,13.4908,0.0,False,80.2800 + 1.5460×x
+4,Women,Distance,800m,1500m,53,log_linear,9.0356,13.4354,-0.2273,False,exp(1.8511 + 0.7764×log(x))
+4,Women,Distance,800m,1500m,53,median_ratio,8.6978,14.7614,0.1104,False,x × 2.0276
+4,Women,Distance,800m,1500m,53,ratio_linear,8.6638,13.3399,0.1445,True,x × (2.4785 + -0.002681×x)
+4,Women,Distance,800m,1500m,53,quadratic,9.6963,15.2982,-0.8881,False,-162.7101 + 4.4165×x + -0.008402×x²
+4,Women,Distance,800m,1500m,53,binned_ratio,9.1847,14.1719,-0.3764,False,9 bins (see JSON)
+4,Women,Distance,800m,1500m,53,knn_median,10.1,16.7638,-1.2918,False,k=20 nearest neighbors
+4,Women,Distance,800m,1500m,53,robust_trimmed_linear,9.1457,13.6594,-0.3374,False,"{""intercept"": 65.23841499924617, ""slope"": 1.6362309518454912}"
+4,Women,Distance,1500m,800m,53,linear_ols,4.098,7.4407,0.0,False,-2.4319 + 0.4997×x
+4,Women,Distance,1500m,800m,53,log_linear,3.8104,7.4449,0.2876,False,exp(-0.7318 + 1.0039×log(x))
+4,Women,Distance,1500m,800m,53,median_ratio,4.2897,7.2792,-0.1917,False,x × 0.4932
+4,Women,Distance,1500m,800m,53,ratio_linear,4.0415,7.4368,0.0565,False,x × (0.4882 + 0.000013×x)
+4,Women,Distance,1500m,800m,53,quadratic,3.6061,7.4912,0.4919,True,62.5348 + 0.1163×x + 0.000562×x²
+4,Women,Distance,1500m,800m,53,binned_ratio,4.9875,8.8469,-0.8895,False,9 bins (see JSON)
+4,Women,Distance,1500m,800m,53,knn_median,4.43,10.6621,-0.332,False,k=20 nearest neighbors
+4,Women,Distance,1500m,800m,53,robust_trimmed_linear,3.7132,7.3422,0.3849,False,"{""intercept"": 3.323357962614665, ""slope"": 0.48275463342825886}"
+4,Women,Distance,1500m,5000m,24,linear_ols,44.0649,63.3386,0.0,False,70.2931 + 3.5160×x
+4,Women,Distance,1500m,5000m,24,log_linear,44.22,62.8566,-0.1551,False,exp(1.6416 + 0.9438×log(x))
+4,Women,Distance,1500m,5000m,24,median_ratio,40.0323,62.3755,4.0326,True,x × 3.7593
+4,Women,Distance,1500m,5000m,24,ratio_linear,43.7591,63.471,0.3058,False,x × (3.9307 + -0.000605×x)
+4,Women,Distance,1500m,5000m,24,quadratic,44.1973,78.0452,-0.1324,False,250.2502 + 2.4539×x + 0.001551×x²
+4,Women,Distance,1500m,5000m,24,binned_ratio,42.6534,66.0113,1.4115,False,8 bins (see JSON)
+4,Women,Distance,1500m,5000m,24,knn_median,59.135,136.2313,-15.0701,False,k=20 nearest neighbors
+4,Women,Distance,1500m,5000m,24,robust_trimmed_linear,40.0465,68.0785,4.0184,False,"{""intercept"": 42.713027230395255, ""slope"": 3.611009660193286}"
+4,Women,Distance,5000m,1500m,24,linear_ols,10.5223,15.2463,0.0,False,39.5444 + 0.2369×x
+4,Women,Distance,5000m,1500m,24,log_linear,10.1353,15.1284,0.3869,False,exp(-0.5147 + 0.8878×log(x))
+4,Women,Distance,5000m,1500m,24,median_ratio,10.7153,16.5368,-0.193,False,x × 0.2660
+4,Women,Distance,5000m,1500m,24,ratio_linear,10.2845,15.0786,0.2378,False,x × (0.2987 + -0.000024×x)
+4,Women,Distance,5000m,1500m,24,quadratic,10.8708,15.7636,-0.3485,False,-23.5333 + 0.3360×x + -0.000038×x²
+4,Women,Distance,5000m,1500m,24,binned_ratio,14.2966,18.9297,-3.7743,False,8 bins (see JSON)
+4,Women,Distance,5000m,1500m,24,knn_median,19.2375,33.9931,-8.7152,False,k=20 nearest neighbors
+4,Women,Distance,5000m,1500m,24,robust_trimmed_linear,7.4837,15.0069,3.0385,True,"{""intercept"": 43.48472995455154, ""slope"": 0.23142913013549868}"
+5,Men,Sprints,100m,200m,41,linear_ols,0.5055,0.7608,0.0,False,0.1206 + 2.0374×x
+5,Men,Sprints,100m,200m,41,log_linear,0.4957,0.7594,0.0098,False,exp(0.7096 + 1.0027×log(x))
+5,Men,Sprints,100m,200m,41,median_ratio,0.4355,0.7599,0.0699,True,x × 2.0358
+5,Men,Sprints,100m,200m,41,ratio_linear,0.5084,0.7604,-0.0029,False,x × (2.0512 + -0.000306×x)
+5,Men,Sprints,100m,200m,41,quadratic,0.5386,0.7845,-0.0331,False,-11.9466 + 3.9943×x + -0.078910×x²
+5,Men,Sprints,100m,200m,41,binned_ratio,0.6999,0.8756,-0.1944,False,9 bins (see JSON)
+5,Men,Sprints,100m,200m,41,knn_median,0.84,1.4325,-0.3345,False,k=20 nearest neighbors
+5,Men,Sprints,100m,200m,41,robust_trimmed_linear,0.5003,0.766,0.0051,False,"{""intercept"": -0.3066051910429479, ""slope"": 2.0644966278220593}"
+5,Men,Sprints,100m,400m,20,linear_ols,1.4366,2.5122,0.0,False,-10.7494 + 5.5623×x
+5,Men,Sprints,100m,400m,20,log_linear,1.409,2.5093,0.0276,False,exp(1.1252 + 1.1667×log(x))
+5,Men,Sprints,100m,400m,20,median_ratio,1.7302,2.6998,-0.2937,False,x × 4.6567
+5,Men,Sprints,100m,400m,20,ratio_linear,1.4243,2.5039,0.0122,False,x × (3.8844 + 0.064990×x)
+5,Men,Sprints,100m,400m,20,quadratic,1.5158,2.4717,-0.0792,False,130.8330 + -17.1031×x + 0.901959×x²
+5,Men,Sprints,100m,400m,20,binned_ratio,1.9046,2.4614,-0.4681,False,10 bins (see JSON)
+5,Men,Sprints,100m,400m,20,knn_median,4.185,6.1534,-2.7484,False,k=20 nearest neighbors
+5,Men,Sprints,100m,400m,20,robust_trimmed_linear,1.1976,2.5019,0.239,True,"{""intercept"": -12.510465946621473, ""slope"": 5.674589282229186}"
+5,Men,Sprints,200m,100m,41,linear_ols,0.1864,0.3525,0.0,False,2.1520 + 0.4002×x
+5,Men,Sprints,200m,100m,41,log_linear,0.1852,0.358,0.0012,True,exp(-0.0786 + 0.8002×log(x))
+5,Men,Sprints,200m,100m,41,median_ratio,0.2143,0.3734,-0.028,False,x × 0.4912
+5,Men,Sprints,200m,100m,41,ratio_linear,0.1999,0.3626,-0.0135,False,x × (0.5809 + -0.003775×x)
+5,Men,Sprints,200m,100m,41,quadratic,0.2111,0.332,-0.0247,False,24.4523 + -1.3917×x + 0.035803×x²
+5,Men,Sprints,200m,100m,41,binned_ratio,0.2838,0.3806,-0.0974,False,9 bins (see JSON)
+5,Men,Sprints,200m,100m,41,knn_median,0.29,0.6736,-0.1036,False,k=20 nearest neighbors
+5,Men,Sprints,200m,100m,41,robust_trimmed_linear,0.2018,0.3536,-0.0154,False,"{""intercept"": 2.1940107719645496, ""slope"": 0.40050491480169975}"
+5,Men,Sprints,200m,400m,34,linear_ols,1.135,2.2357,0.0,False,-4.6133 + 2.4599×x
+5,Men,Sprints,200m,400m,34,log_linear,1.1151,2.2098,0.0199,False,exp(0.6221 + 1.0619×log(x))
+5,Men,Sprints,200m,400m,34,median_ratio,0.899,2.0109,0.236,True,x × 2.2576
+5,Men,Sprints,200m,400m,34,ratio_linear,1.1271,2.2295,0.0079,False,x × (2.1181 + 0.006245×x)
+5,Men,Sprints,200m,400m,34,quadratic,1.0391,2.3603,0.0959,False,107.0390 + -6.3480×x + 0.172652×x²
+5,Men,Sprints,200m,400m,34,binned_ratio,1.1003,2.5897,0.0347,False,9 bins (see JSON)
+5,Men,Sprints,200m,400m,34,knn_median,1.6375,4.3148,-0.5025,False,k=20 nearest neighbors
+5,Men,Sprints,200m,400m,34,robust_trimmed_linear,1.1202,2.1674,0.0148,False,"{""intercept"": -2.272486095877717, ""slope"": 2.351373983451819}"
+5,Men,Sprints,400m,100m,20,linear_ols,0.2848,0.4145,0.0,False,3.8375 + 0.1466×x
+5,Men,Sprints,400m,100m,20,log_linear,0.2736,0.4116,0.0112,False,exp(-0.2986 + 0.6925×log(x))
+5,Men,Sprints,400m,100m,20,median_ratio,0.3703,0.58,-0.0855,False,x × 0.2147
+5,Men,Sprints,400m,100m,20,ratio_linear,0.2421,0.4124,0.0427,False,x × (0.2766 + -0.001091×x)
+5,Men,Sprints,400m,100m,20,quadratic,0.3125,0.4465,-0.0277,False,2.7795 + 0.1823×x + -0.000298×x²
+5,Men,Sprints,400m,100m,20,binned_ratio,0.339,0.5089,-0.0542,False,10 bins (see JSON)
+5,Men,Sprints,400m,100m,20,knn_median,0.5925,0.9834,-0.3077,False,k=20 nearest neighbors
+5,Men,Sprints,400m,100m,20,robust_trimmed_linear,0.2225,0.4299,0.0624,True,"{""intercept"": 3.5688722955740424, ""slope"": 0.15201552673720703}"
+5,Men,Sprints,400m,200m,34,linear_ols,0.6152,0.7891,0.0,False,5.3702 + 0.3444×x
+5,Men,Sprints,400m,200m,34,log_linear,0.6019,0.7751,0.0134,False,exp(-0.0049 + 0.7975×log(x))
+5,Men,Sprints,400m,200m,34,median_ratio,0.398,0.8904,0.2172,True,x × 0.4429
+5,Men,Sprints,400m,200m,34,ratio_linear,0.5666,0.767,0.0487,False,x × (0.5251 + -0.001503×x)
+5,Men,Sprints,400m,200m,34,quadratic,0.4667,1.0589,0.1485,False,-14.2779 + 1.0137×x + -0.005646×x²
+5,Men,Sprints,400m,200m,34,binned_ratio,0.6932,1.1181,-0.0779,False,9 bins (see JSON)
+5,Men,Sprints,400m,200m,34,knn_median,1.0375,1.5266,-0.4223,False,k=20 nearest neighbors
+5,Men,Sprints,400m,200m,34,robust_trimmed_linear,0.5294,0.8193,0.0859,False,"{""intercept"": 5.553245492370724, ""slope"": 0.34224279813061614}"
+5,Women,Sprints,100m,200m,25,linear_ols,0.3683,0.7616,0.0,True,1.1214 + 2.0120×x
+5,Women,Sprints,100m,200m,25,log_linear,0.4034,0.7619,-0.0351,False,exp(0.8696 + 0.9499×log(x))
+5,Women,Sprints,100m,200m,25,median_ratio,0.3697,0.7535,-0.0014,False,x × 2.0871
+5,Women,Sprints,100m,200m,25,ratio_linear,0.3833,0.7628,-0.0151,False,x × (2.1929 + -0.007235×x)
+5,Women,Sprints,100m,200m,25,quadratic,0.5383,0.7632,-0.17,False,42.2464 + -4.0942×x + 0.226003×x²
+5,Women,Sprints,100m,200m,25,binned_ratio,0.5928,1.0281,-0.2246,False,9 bins (see JSON)
+5,Women,Sprints,100m,200m,25,knn_median,1.14,1.7384,-0.7717,False,k=20 nearest neighbors
+5,Women,Sprints,100m,200m,25,robust_trimmed_linear,0.4966,0.7575,-0.1283,False,"{""intercept"": -0.5028087398303072, ""slope"": 2.1341003526659454}"
+5,Women,Sprints,200m,100m,25,linear_ols,0.225,0.3623,0.0,False,2.3591 + 0.3933×x
+5,Women,Sprints,200m,100m,25,log_linear,0.2174,0.3607,0.0076,False,exp(-0.1776 + 0.8315×log(x))
+5,Women,Sprints,200m,100m,25,median_ratio,0.1772,0.361,0.0478,True,x × 0.4791
+5,Women,Sprints,200m,100m,25,ratio_linear,0.212,0.3602,0.013,False,x × (0.5571 + -0.002833×x)
+5,Women,Sprints,200m,100m,25,quadratic,0.2184,0.3771,0.0066,False,-12.5568 + 1.4407×x + -0.018322×x²
+5,Women,Sprints,200m,100m,25,binned_ratio,0.2546,0.3905,-0.0296,False,9 bins (see JSON)
+5,Women,Sprints,200m,100m,25,knn_median,0.52,0.7342,-0.295,False,k=20 nearest neighbors
+5,Women,Sprints,200m,100m,25,robust_trimmed_linear,0.2468,0.3576,-0.0218,False,"{""intercept"": 1.4348638594512533, ""slope"": 0.4266436117302132}"
+5,Men,Distance,800m,1500m,65,linear_ols,7.3548,10.6731,0.0,False,60.9336 + 1.5677×x
+5,Men,Distance,800m,1500m,65,log_linear,7.1344,10.6437,0.2205,False,exp(1.7560 + 0.7853×log(x))
+5,Men,Distance,800m,1500m,65,median_ratio,6.9435,12.0703,0.4113,False,x × 2.0270
+5,Men,Distance,800m,1500m,65,ratio_linear,6.8829,10.6135,0.4719,False,x × (2.4503 + -0.003160×x)
+5,Men,Distance,800m,1500m,65,quadratic,6.9027,10.6316,0.4521,False,-93.2814 + 3.8221×x + -0.008151×x²
+5,Men,Distance,800m,1500m,65,binned_ratio,7.7162,12.0556,-0.3614,False,9 bins (see JSON)
+5,Men,Distance,800m,1500m,65,knn_median,9.035,14.9018,-1.6802,False,k=20 nearest neighbors
+5,Men,Distance,800m,1500m,65,robust_trimmed_linear,6.7467,10.9555,0.6081,True,"{""intercept"": 62.07426202751233, ""slope"": 1.5493113583671208}"
+5,Men,Distance,800m,5000m,38,linear_ols,35.7741,56.2241,0.0,False,340.5450 + 5.1178×x
+5,Men,Distance,800m,5000m,38,log_linear,34.045,56.063,1.7291,False,exp(3.6043 + 0.6797×log(x))
+5,Men,Distance,800m,5000m,38,median_ratio,48.7919,64.474,-13.0178,False,x × 7.6785
+5,Men,Distance,800m,5000m,38,ratio_linear,35.4301,56.0556,0.344,False,x × (10.0191 + -0.017448×x)
+5,Men,Distance,800m,5000m,38,quadratic,35.7421,57.4726,0.032,False,-108.1908 + 11.5871×x + -0.023071×x²
+5,Men,Distance,800m,5000m,38,binned_ratio,39.7866,64.62,-4.0125,False,10 bins (see JSON)
+5,Men,Distance,800m,5000m,38,knn_median,49.71,72.0442,-13.9359,False,k=20 nearest neighbors
+5,Men,Distance,800m,5000m,38,robust_trimmed_linear,33.1269,56.7166,2.6472,False,"{""intercept"": 343.13975637399994, ""slope"": 5.073165464185406}"
+5,Men,Distance,800m,5000m,38,chain_residual_adjusted,20.969,38.9344,14.8051,True,chain via 1500m + residual k=0.0000
+5,Men,Distance,800m,5000m,38,multivariate_ols,26.5769,40.4175,9.1972,False,113.72 + -0.6907×800m + 3.7666×1500m
+5,Men,Distance,1500m,800m,65,linear_ols,3.4087,6.0676,0.0,False,-4.2546 + 0.5087×x
+5,Men,Distance,1500m,800m,65,log_linear,3.3577,6.0625,0.0509,False,exp(-0.8149 + 1.0190×log(x))
+5,Men,Distance,1500m,800m,65,median_ratio,3.4272,5.9517,-0.0185,False,x × 0.4933
+5,Men,Distance,1500m,800m,65,ratio_linear,3.3788,6.0654,0.0298,False,x × (0.4798 + 0.000048×x)
+5,Men,Distance,1500m,800m,65,quadratic,3.3926,6.1521,0.0161,False,65.4411 + -0.0005×x + 0.000923×x²
+5,Men,Distance,1500m,800m,65,binned_ratio,4.2773,6.5808,-0.8686,False,9 bins (see JSON)
+5,Men,Distance,1500m,800m,65,knn_median,4.385,9.0185,-0.9763,False,k=20 nearest neighbors
+5,Men,Distance,1500m,800m,65,robust_trimmed_linear,3.1197,5.9542,0.2889,True,"{""intercept"": 0.4789219159748086, ""slope"": 0.48880858665203797}"
+5,Men,Distance,1500m,5000m,53,linear_ols,21.9506,40.4101,0.0,False,106.9568 + 3.4008×x
+5,Men,Distance,1500m,5000m,53,log_linear,18.7918,40.4011,3.1588,True,exp(1.9317 + 0.8932×log(x))
+5,Men,Distance,1500m,5000m,53,median_ratio,21.5494,40.4817,0.4011,False,x × 3.7983
+5,Men,Distance,1500m,5000m,53,ratio_linear,19.8864,40.4455,2.0642,False,x × (4.1948 + -0.001464×x)
+5,Men,Distance,1500m,5000m,53,quadratic,23.4358,41.9229,-1.4852,False,241.3836 + 2.4135×x + 0.001800×x²
+5,Men,Distance,1500m,5000m,53,binned_ratio,25.7168,48.6076,-3.7662,False,9 bins (see JSON)
+5,Men,Distance,1500m,5000m,53,knn_median,34.8,57.4847,-12.8494,False,k=20 nearest neighbors
+5,Men,Distance,1500m,5000m,53,robust_trimmed_linear,19.6039,41.0476,2.3466,False,"{""intercept"": 132.97624584768812, ""slope"": 3.285843964602143}"
+5,Men,Distance,5000m,800m,38,linear_ols,5.7995,8.9165,0.0,False,9.0312 + 0.1222×x
+5,Men,Distance,5000m,800m,38,log_linear,5.7902,8.894,0.0094,False,exp(-1.5014 + 0.9232×log(x))
+5,Men,Distance,5000m,800m,38,median_ratio,6.3389,8.3964,-0.5394,False,x × 0.1302
+5,Men,Distance,5000m,800m,38,ratio_linear,5.7905,8.9121,0.009,False,x × (0.1399 + -0.000009×x)
+5,Men,Distance,5000m,800m,38,quadratic,5.7834,9.1722,0.0161,True,52.0751 + 0.0399×x + 0.000039×x²
+5,Men,Distance,5000m,800m,38,binned_ratio,7.3467,11.762,-1.5471,False,10 bins (see JSON)
+5,Men,Distance,5000m,800m,38,knn_median,6.695,11.8557,-0.8955,False,k=20 nearest neighbors
+5,Men,Distance,5000m,800m,38,robust_trimmed_linear,7.1593,9.6073,-1.3598,False,"{""intercept"": 18.524463180764073, ""slope"": 0.11160822777850354}"
+5,Men,Distance,5000m,1500m,53,linear_ols,7.8485,10.3858,0.0,False,33.5259 + 0.2302×x
+5,Men,Distance,5000m,1500m,53,log_linear,7.8853,10.3871,-0.0368,False,exp(-0.4823 + 0.8768×log(x))
+5,Men,Distance,5000m,1500m,53,median_ratio,5.6707,10.6623,2.1778,True,x × 0.2633
+5,Men,Distance,5000m,1500m,53,ratio_linear,7.7641,10.3902,0.0844,False,x × (0.2947 + -0.000031×x)
+5,Men,Distance,5000m,1500m,53,quadratic,7.3815,10.6829,0.467,False,-17.8566 + 0.3294×x + -0.000048×x²
+5,Men,Distance,5000m,1500m,53,binned_ratio,6.9765,11.7235,0.872,False,9 bins (see JSON)
+5,Men,Distance,5000m,1500m,53,knn_median,9.105,15.2628,-1.2565,False,k=20 nearest neighbors
+5,Men,Distance,5000m,1500m,53,robust_trimmed_linear,6.4568,10.5261,1.3917,False,"{""intercept"": 20.221558065154596, ""slope"": 0.24341381231574863}"
+5,Women,Distance,800m,1500m,29,linear_ols,14.0981,16.3379,0.0,False,16.6410 + 1.9616×x
+5,Women,Distance,800m,1500m,29,log_linear,14.5211,16.4891,-0.4229,False,exp(0.9807 + 0.9496×log(x))
+5,Women,Distance,800m,1500m,29,median_ratio,11.0303,15.4187,3.0678,False,x × 2.0689
+5,Women,Distance,800m,1500m,29,ratio_linear,14.2489,16.3516,-0.1508,False,x × (2.1598 + -0.000581×x)
+5,Women,Distance,800m,1500m,29,quadratic,15.0721,17.5847,-0.974,False,55.4935 + 1.5072×x + 0.001304×x²
+5,Women,Distance,800m,1500m,29,binned_ratio,9.2958,19.2387,4.8023,True,10 bins (see JSON)
+5,Women,Distance,800m,1500m,29,knn_median,21.78,39.6941,-7.6819,False,k=20 nearest neighbors
+5,Women,Distance,800m,1500m,29,robust_trimmed_linear,14.083,16.5754,0.0151,False,"{""intercept"": 23.459812855416942, ""slope"": 1.91866695647936}"
+5,Women,Distance,1500m,800m,29,linear_ols,6.3911,7.5028,0.0,False,12.0102 + 0.4479×x
+5,Women,Distance,1500m,800m,29,log_linear,5.5985,7.5311,0.7926,False,exp(-0.2353 + 0.9155×log(x))
+5,Women,Distance,1500m,800m,29,median_ratio,5.4132,7.4895,0.9779,False,x × 0.4833
+5,Women,Distance,1500m,800m,29,ratio_linear,5.8029,7.5613,0.5881,False,x × (0.5204 + -0.000108×x)
+5,Women,Distance,1500m,800m,29,quadratic,5.5676,7.8631,0.8235,False,65.7331 + 0.1427×x + 0.000426×x²
+5,Women,Distance,1500m,800m,29,binned_ratio,4.1788,8.0303,2.2123,True,10 bins (see JSON)
+5,Women,Distance,1500m,800m,29,knn_median,10.925,19.5587,-4.5339,False,k=20 nearest neighbors
+5,Women,Distance,1500m,800m,29,robust_trimmed_linear,6.1488,8.0402,0.2423,False,"{""intercept"": 5.982002326031534, ""slope"": 0.4647835127250302}"
+6,Men,Sprints,100m,200m,33,linear_ols,0.3928,0.87,0.0,False,-1.5656 + 2.1740×x
+6,Men,Sprints,100m,200m,33,log_linear,0.411,0.8683,-0.0182,False,exp(0.5751 + 1.0559×log(x))
+6,Men,Sprints,100m,200m,33,median_ratio,0.4172,0.8218,-0.0244,False,x × 2.0412
+6,Men,Sprints,100m,200m,33,ratio_linear,0.3931,0.8695,-0.0003,False,x × (1.9128 + 0.010851×x)
+6,Men,Sprints,100m,200m,33,quadratic,0.4546,0.9907,-0.0618,False,2.8791 + 1.4273×x + 0.031254×x²
+6,Men,Sprints,100m,200m,33,binned_ratio,0.4561,1.2021,-0.0633,False,9 bins (see JSON)
+6,Men,Sprints,100m,200m,33,knn_median,0.795,1.4063,-0.4022,False,k=20 nearest neighbors
+6,Men,Sprints,100m,200m,33,robust_trimmed_linear,0.3625,0.8609,0.0302,True,"{""intercept"": -3.0229638376836583, ""slope"": 2.302395485078061}"
+6,Men,Sprints,200m,100m,33,linear_ols,0.1342,0.3325,0.0,False,3.0560 + 0.3637×x
+6,Men,Sprints,200m,100m,33,log_linear,0.1312,0.3306,0.003,False,exp(0.0482 + 0.7610×log(x))
+6,Men,Sprints,200m,100m,33,median_ratio,0.2041,0.403,-0.0699,False,x × 0.4899
+6,Men,Sprints,200m,100m,33,ratio_linear,0.1297,0.3264,0.0045,True,x × (0.6055 + -0.004753×x)
+6,Men,Sprints,200m,100m,33,quadratic,0.2,0.3041,-0.0658,False,-25.4764 + 2.6733×x + -0.046499×x²
+6,Men,Sprints,200m,100m,33,binned_ratio,0.1883,0.3446,-0.0541,False,9 bins (see JSON)
+6,Men,Sprints,200m,100m,33,knn_median,0.465,0.5378,-0.3308,False,k=20 nearest neighbors
+6,Men,Sprints,200m,100m,33,robust_trimmed_linear,0.1544,0.3455,-0.0201,False,"{""intercept"": 2.373216342023163, ""slope"": 0.3911083455637956}"
+6,Men,Sprints,200m,400m,22,linear_ols,1.755,4.5976,0.0,False,11.1454 + 1.8241×x
+6,Men,Sprints,200m,400m,22,log_linear,1.6909,4.5536,0.0642,False,exp(1.3626 + 0.8309×log(x))
+6,Men,Sprints,200m,400m,22,median_ratio,1.3855,4.3133,0.3695,False,x × 2.2526
+6,Men,Sprints,200m,400m,22,ratio_linear,1.7218,4.5941,0.0333,False,x × (2.7051 + -0.017307×x)
+6,Men,Sprints,200m,400m,22,quadratic,2.0618,4.8608,-0.3068,False,-32.6855 + 5.3180×x + -0.069261×x²
+6,Men,Sprints,200m,400m,22,binned_ratio,2.3267,5.26,-0.5716,False,11 bins (see JSON)
+6,Men,Sprints,200m,400m,22,knn_median,2.3,5.1184,-0.545,False,k=20 nearest neighbors
+6,Men,Sprints,200m,400m,22,robust_trimmed_linear,1.2605,4.4968,0.4945,True,"{""intercept"": 0.9406101052125209, ""slope"": 2.2095822445330753}"
+6,Men,Sprints,400m,200m,22,linear_ols,0.4902,1.907,0.0,False,14.0168 + 0.1860×x
+6,Men,Sprints,400m,200m,22,log_linear,0.49,1.8631,0.0001,False,exp(1.3760 + 0.4521×log(x))
+6,Men,Sprints,400m,200m,22,median_ratio,0.6136,1.9203,-0.1235,False,x × 0.4439
+6,Men,Sprints,400m,200m,22,ratio_linear,0.4504,1.7991,0.0398,True,x × (0.6558 + -0.003884×x)
+6,Men,Sprints,400m,200m,22,quadratic,0.6822,1.9277,-0.192,False,-72.9025 + 3.1852×x + -0.025613×x²
+6,Men,Sprints,400m,200m,22,binned_ratio,0.6897,2.1527,-0.1996,False,11 bins (see JSON)
+6,Men,Sprints,400m,200m,22,knn_median,0.635,1.6521,-0.1448,False,k=20 nearest neighbors
+6,Men,Sprints,400m,200m,22,robust_trimmed_linear,0.4725,1.6998,0.0176,False,"{""intercept"": 12.088190093340112, ""slope"": 0.2209482309340272}"
+6,Men,Distance,800m,1500m,48,linear_ols,6.194,8.8496,0.0,False,8.8256 + 1.9904×x
+6,Men,Distance,800m,1500m,48,log_linear,6.159,8.8891,0.035,True,exp(0.9252 + 0.9581×log(x))
+6,Men,Distance,800m,1500m,48,median_ratio,7.2295,8.8897,-1.0356,False,x × 2.0431
+6,Men,Distance,800m,1500m,48,ratio_linear,6.1598,8.9274,0.0341,False,x × (2.1363 + -0.000598×x)
+6,Men,Distance,800m,1500m,48,quadratic,6.4362,8.6639,-0.2423,False,139.2787 + 0.0285×x + 0.007326×x²
+6,Men,Distance,800m,1500m,48,binned_ratio,6.6031,9.8505,-0.4092,False,8 bins (see JSON)
+6,Men,Distance,800m,1500m,48,knn_median,7.71,15.3404,-1.516,False,k=20 nearest neighbors
+6,Men,Distance,800m,1500m,48,robust_trimmed_linear,6.3755,9.091,-0.1815,False,"{""intercept"": 8.095334435983375, ""slope"": 1.9872377737552052}"
+6,Men,Distance,800m,5000m,24,linear_ols,23.5403,49.0244,0.0,False,168.7941 + 6.3919×x
+6,Men,Distance,800m,5000m,24,log_linear,22.7075,49.3284,0.8328,False,exp(2.8823 + 0.8268×log(x))
+6,Men,Distance,800m,5000m,24,median_ratio,15.9633,49.5686,7.577,True,x × 7.5895
+6,Men,Distance,800m,5000m,24,ratio_linear,23.8542,49.5298,-0.3139,False,x × (8.9739 + -0.009818×x)
+6,Men,Distance,800m,5000m,24,quadratic,21.9434,52.4126,1.597,False,909.1896 + -4.5512×x + 0.040139×x²
+6,Men,Distance,800m,5000m,24,binned_ratio,26.1455,51.745,-2.6051,False,8 bins (see JSON)
+6,Men,Distance,800m,5000m,24,knn_median,36.27,79.7236,-12.7297,False,k=20 nearest neighbors
+6,Men,Distance,800m,5000m,24,robust_trimmed_linear,16.7963,47.9972,6.744,False,"{""intercept"": 94.51079366122985, ""slope"": 6.888811792506301}"
+6,Men,Distance,1500m,800m,48,linear_ols,3.0109,3.8771,0.0,False,14.0903 + 0.4326×x
+6,Men,Distance,1500m,800m,48,log_linear,2.8211,3.8658,0.1898,False,exp(-0.1062 + 0.8896×log(x))
+6,Men,Distance,1500m,800m,48,median_ratio,3.526,4.3408,-0.5152,False,x × 0.4894
+6,Men,Distance,1500m,800m,48,ratio_linear,2.8815,3.8682,0.1293,False,x × (0.5369 + -0.000192×x)
+6,Men,Distance,1500m,800m,48,quadratic,3.1102,4.1519,-0.0994,False,49.9282 + 0.1715×x + 0.000472×x²
+6,Men,Distance,1500m,800m,48,binned_ratio,3.5836,4.3729,-0.5727,False,8 bins (see JSON)
+6,Men,Distance,1500m,800m,48,knn_median,2.975,7.47,0.0359,False,k=20 nearest neighbors
+6,Men,Distance,1500m,800m,48,robust_trimmed_linear,2.6075,3.8748,0.4034,True,"{""intercept"": 15.804446444348955, ""slope"": 0.4268496794249293}"
+6,Men,Distance,1500m,5000m,34,linear_ols,18.5383,35.987,0.0,False,125.8818 + 3.3038×x
+6,Men,Distance,1500m,5000m,34,log_linear,18.6941,36.1413,-0.1559,False,exp(2.0030 + 0.8792×log(x))
+6,Men,Distance,1500m,5000m,34,median_ratio,16.1933,35.5538,2.345,True,x × 3.7598
+6,Men,Distance,1500m,5000m,34,ratio_linear,18.0228,36.2921,0.5155,False,x × (4.2138 + -0.001632×x)
+6,Men,Distance,1500m,5000m,34,quadratic,17.4599,36.6041,1.0784,False,-115.3051 + 5.0586×x + -0.003170×x²
+6,Men,Distance,1500m,5000m,34,binned_ratio,16.286,41.8149,2.2523,False,9 bins (see JSON)
+6,Men,Distance,1500m,5000m,34,knn_median,23.1525,67.8638,-4.6142,False,k=20 nearest neighbors
+6,Men,Distance,1500m,5000m,34,robust_trimmed_linear,18.6562,34.7721,-0.118,False,"{""intercept"": 118.73215476128098, ""slope"": 3.3160748922912715}"
+6,Men,Distance,5000m,800m,24,linear_ols,2.4124,7.2722,0.0,False,28.3650 + 0.1017×x
+6,Men,Distance,5000m,800m,24,log_linear,2.4148,7.2615,-0.0024,False,exp(-0.4852 + 0.7749×log(x))
+6,Men,Distance,5000m,800m,24,median_ratio,2.103,6.5289,0.3095,False,x × 0.1318
+6,Men,Distance,5000m,800m,24,ratio_linear,2.4203,7.3051,-0.0079,False,x × (0.1567 + -0.000027×x)
+6,Men,Distance,5000m,800m,24,quadratic,1.8785,7.9805,0.5339,True,37.2543 + 0.0845×x + 0.000008×x²
+6,Men,Distance,5000m,800m,24,binned_ratio,3.7282,7.8997,-1.3158,False,8 bins (see JSON)
+6,Men,Distance,5000m,800m,24,knn_median,5.2325,10.1611,-2.8201,False,k=20 nearest neighbors
+6,Men,Distance,5000m,800m,24,robust_trimmed_linear,2.3572,6.7928,0.0553,False,"{""intercept"": 25.11772208438414, ""slope"": 0.10543364237348316}"
+6,Men,Distance,5000m,1500m,34,linear_ols,4.3887,9.5116,0.0,False,35.4259 + 0.2288×x
+6,Men,Distance,5000m,1500m,34,log_linear,4.4424,9.4926,-0.0538,False,exp(-0.4007 + 0.8653×log(x))
+6,Men,Distance,5000m,1500m,34,median_ratio,4.3099,9.441,0.0788,True,x × 0.2660
+6,Men,Distance,5000m,1500m,34,ratio_linear,4.4978,9.4684,-0.1092,False,x × (0.2969 + -0.000033×x)
+6,Men,Distance,5000m,1500m,34,quadratic,4.3445,9.9864,0.0442,False,-23.2699 + 0.3423×x + -0.000054×x²
+6,Men,Distance,5000m,1500m,34,binned_ratio,5.0221,10.2905,-0.6334,False,9 bins (see JSON)
+6,Men,Distance,5000m,1500m,34,knn_median,8.105,16.319,-3.7163,False,k=20 nearest neighbors
+6,Men,Distance,5000m,1500m,34,robust_trimmed_linear,4.3958,9.6549,-0.0072,False,"{""intercept"": 3.5332565697430027, ""slope"": 0.2611269362122383}"

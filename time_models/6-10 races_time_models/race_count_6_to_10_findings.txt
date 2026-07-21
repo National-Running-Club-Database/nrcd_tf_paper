@@ -1,0 +1,19 @@
+6–10 Race Time Models — Findings
+================================
+
+Question: Do time models become more accurate using athletes with 6–10
+season races (vs all-season or exact-6 only)?
+
+  all: 24 pairs, mean best CV 6.768s
+  6: 10 pairs, mean best CV 4.931s
+  7: 4 pairs, mean best CV 1.991s
+  8: 2 pairs, mean best CV 0.204s
+  9: no pairs with n≥20
+  10: no pairs with n≥20
+  6_to_10: 18 pairs, mean best CV 3.700s
+
+Matched 6 vs 6–10: 7/10 favor 6–10; mean Δ -0.107s
+6–10 vs all headline mean: 3.700s vs 6.768s (Δ -3.068s)
+
+See race_count_6_to_10_report.txt for full tables.
+Source: analyze_6_to_10_races_time_models.py

@@ -1,0 +1,167 @@
+Cross-Event Time Models — Balanced Athletes — 6 Races Per Season (Sprints & Distance)
+========================================================================================
+
+Method:
+  • Data: relay-inclusive outdoor CSVs, 2024–2026, results on or after March 1.
+  • Population: athlete-seasons with exactly 6 valid results in the event group's
+    discipline CSV AND wa_spread < 50 WA across season PBs in that group.
+  • Specialization: wa_spread = max(season PB WA) − min(season PB WA) across events
+    in the group with a PB that season.
+  • Balanced: wa_spread < 50 WA (well-rounded multi-event profile within the group).
+  • Athlete-season PB: fastest valid mark per event within that season (WA > 0).
+  • Model selection: 5-fold cross-validation across 8+ candidate model families;
+    the formula below is the lowest-CV-median-|error| winner for each pair.
+  • 3000m Steeplechase excluded from distance.
+  • Minimum n = 12 balanced athlete-season pairs required to report a model.
+
+Use:
+  • Apply these formulas when the athlete has exactly 6 season races in the event group AND is balanced (wa_spread < 50 WA).
+  • Mean CV median |error| across reported pairs: 0.53s.
+  • Balanced-specific formulas beat pooled 6-race formulas on 4 of 4 reported pairs.
+  • Predict time in the unknown event from known PB(s), then convert predicted
+    time to World Athletics points in the TARGET event table.
+  • Treat CV median |error| as the typical ± uncertainty band (cross-validated).
+  • Do not compare WA across events directly.
+  • If specialization is unknown or wa_spread ≥ 50, use the pooled race-count
+    formula files or specialized-cohort formulas instead.
+
+Coverage note:
+  4 of 24 event pairs met n ≥ 12 among balanced athletes
+  with exactly 6 valid results.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=14 balanced athlete-seasons, r=0.983)
+  Model: binned_ratio (speed bins)
+  Formula: 200m = 100m × ratio_bin(100m)
+  CV median |error|: 0.110s
+  vs pooled 6-race model CV: 0.362s
+  vs pooled 6-race formula on balanced cohort: 0.190s (↓0.079s)
+  Binned lookup for 100m -> 200m (use ratio at nearest 100m edge):
+    nearest 100m edge 10.92s -> ratio 2.041
+    nearest 100m edge 10.94s -> ratio 2.044
+    nearest 100m edge 11.08s -> ratio 2.021
+    nearest 100m edge 11.09s -> ratio 2.060
+    nearest 100m edge 11.75s -> ratio 2.051
+    nearest 100m edge 11.84s -> ratio 2.047
+    nearest 100m edge 12.01s -> ratio 2.077
+    nearest 100m edge 12.04s -> ratio 2.050
+    nearest 100m edge 12.12s -> ratio 2.024
+    nearest 100m edge 12.22s -> ratio 2.038
+    nearest 100m edge 12.26s -> ratio 2.041
+    nearest 100m edge 12.41s -> ratio 2.010
+    nearest 100m edge 12.60s -> ratio 2.077
+    nearest 100m edge 12.91s -> ratio 2.091
+  Ratio 200m/100m: median 2.046 (IQR 2.038–2.051)
+  Median times in sample: 100m 12.02s, 200m 24.61s
+
+200m -> 100m  (n=14 balanced athlete-seasons, r=0.983)
+  Model: quadratic
+  Formula: 100m = -14.959 + 1.768×200m − 0.027265×200m²
+  CV median |error|: 0.058s | full-sample median |error|: 0.049s
+  vs pooled 6-race model CV: 0.130s
+  vs pooled 6-race formula on balanced cohort: 0.092s (↓0.034s)
+  Ratio 100m/200m: median 0.489 (IQR 0.485–0.490)
+  Median times in sample: 200m 24.61s, 100m 12.02s
+
+Not reported for Sprints — Men (n < 12 balanced athlete-season pairs):
+  100m -> 400m (n=1), 200m -> 400m (n=5), 400m -> 100m (n=1), 400m -> 200m (n=5)
+
+
+Sprints — Women
+---------------
+
+No pairs met the minimum sample size (n ≥ 12 balanced athlete-seasons).
+Use time_models_5_or_6_races_formulas.txt or cross_event_time_models_report.txt.
+
+
+Distance — Men
+--------------
+
+1500m -> 800m  (n=12 balanced athlete-seasons, r=0.990)
+  Model: binned_ratio (speed bins)
+  Formula: 800m = 1500m × ratio_bin(1500m)
+  CV median |error|: 0.749s
+  vs pooled 6-race model CV: 2.607s
+  vs pooled 6-race formula on balanced cohort: 1.618s (↓0.869s)
+  Binned lookup for 1500m -> 800m (use ratio at nearest 1500m edge):
+    nearest 1500m edge 243.01s -> ratio 0.491
+    nearest 1500m edge 244.24s -> ratio 0.492
+    nearest 1500m edge 248.80s -> ratio 0.476
+    nearest 1500m edge 252.10s -> ratio 0.482
+    nearest 1500m edge 264.73s -> ratio 0.480
+    nearest 1500m edge 269.98s -> ratio 0.483
+    nearest 1500m edge 270.16s -> ratio 0.480
+    nearest 1500m edge 275.64s -> ratio 0.484
+    nearest 1500m edge 276.33s -> ratio 0.473
+    nearest 1500m edge 276.56s -> ratio 0.476
+    nearest 1500m edge 285.02s -> ratio 0.474
+    nearest 1500m edge 308.92s -> ratio 0.474
+  Ratio 800m/1500m: median 0.480 (IQR 0.474–0.483)
+  Median times in sample: 1500m 270.07s, 800m 130.02s
+
+800m -> 1500m  (n=12 balanced athlete-seasons, r=0.990)
+  Model: binned_ratio (speed bins)
+  Formula: 1500m = 800m × ratio_bin(800m)
+  CV median |error|: 1.192s
+  vs pooled 6-race model CV: 6.159s
+  vs pooled 6-race formula on balanced cohort: 3.625s (↓2.433s)
+  Binned lookup for 800m -> 1500m (use ratio at nearest 800m edge):
+    nearest 800m edge 118.42s -> ratio 2.101
+    nearest 800m edge 119.43s -> ratio 2.035
+    nearest 800m edge 120.10s -> ratio 2.034
+    nearest 800m edge 121.62s -> ratio 2.073
+    nearest 800m edge 127.12s -> ratio 2.083
+    nearest 800m edge 129.57s -> ratio 2.085
+    nearest 800m edge 130.48s -> ratio 2.069
+    nearest 800m edge 130.76s -> ratio 2.113
+    nearest 800m edge 131.67s -> ratio 2.100
+    nearest 800m edge 133.32s -> ratio 2.068
+    nearest 800m edge 135.00s -> ratio 2.111
+    nearest 800m edge 146.28s -> ratio 2.112
+  Ratio 1500m/800m: median 2.084 (IQR 2.068–2.101)
+  Median times in sample: 800m 130.02s, 1500m 270.07s
+
+Not reported for Distance — Men (n < 12 balanced athlete-season pairs):
+  800m -> 5000m (n=1), 1500m -> 5000m (n=7), 5000m -> 800m (n=1), 5000m -> 1500m (n=7)
+
+
+Distance — Women
+----------------
+
+No pairs met the minimum sample size (n ≥ 12 balanced athlete-seasons).
+Use time_models_5_or_6_races_formulas.txt or cross_event_time_models_report.txt.
+
+Pair summary tables
+-------------------
+
+Sprints — Men (balanced, exactly 6 valid results)
+  From     To           n      r  CV Med|err|  Formula
+  100m     200m        14  0.983       0.110s  200m = 100m × ratio_bin(100m)
+  200m     100m        14  0.983       0.058s  100m = -14.959 + 1.768×200m − 0.027265×200m²
+
+Distance — Men (balanced, exactly 6 valid results)
+  From     To           n      r  CV Med|err|  Formula
+  1500m    800m        12  0.990       0.749s  800m = 1500m × ratio_bin(1500m)
+  800m     1500m       12  0.990       1.192s  1500m = 800m × ratio_bin(800m)
+
+Accuracy vs pooled 6-race models (applied to balanced cohort)
+------------------------------------------------------
+
+  Pair                    Pooled on balanced   Balanced CV   Improvement
+  ----------------------  ------------------   -----------   -----------
+  Men Distance 800m->1500m              3.625s       1.192s       -2.433s
+  Men Distance 1500m->800m              1.618s       0.749s       -0.869s
+  Men Sprints 100m->200m              0.190s       0.110s       -0.079s
+  Men Sprints 200m->100m              0.092s       0.058s       -0.034s
+
+When to use these vs other formula sets
+---------------------------------------
+  • Athlete has 5 or 6 races AND wa_spread < 50 WA → time_models_balanced_5_6_race_formulas.txt
+  • Athlete has exactly 6 races AND wa_spread < 50 WA → time_models_balanced_6races_formulas.txt
+  • Athlete has 6 races AND wa_spread ≥ 50 WA → time_models_specialized_6races_formulas.txt
+  • Specialization unknown → pooled race-count formula files
+
+Source: time_models/specialized_time_models/generate_balanced_6races_formula_report.py

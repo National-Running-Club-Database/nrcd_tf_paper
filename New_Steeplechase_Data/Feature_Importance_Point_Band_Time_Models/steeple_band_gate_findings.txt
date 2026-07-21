@@ -1,0 +1,14 @@
+Steeplechase-Inclusive Point-Band Models — Gate Check
+=====================================================
+
+Question: Does including 3000m Steeplechase add athlete-seasons to the
+WA bands 750–950, 800–1000, 850–1050?
+
+  750-950: 553 → 585 (+32 new athlete-seasons)
+  800-1000: 350 → 368 (+18 new athlete-seasons)
+  850-1050: 186 → 194 (+8 new athlete-seasons)
+
+Verdict: YES — at least one band gains athletes. Building
+feature-important time models with steeplechase included.
+
+Source: analyze_feature_importance_with_steeple.py

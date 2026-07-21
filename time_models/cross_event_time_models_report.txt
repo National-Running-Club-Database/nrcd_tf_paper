@@ -1,0 +1,212 @@
+Cross-Event Linear Time Models — Sprints & Distance
+===================================================
+
+Method:
+  • Data: relay-inclusive outdoor CSVs, 2024–2026, results on or after March 1.
+  • Athlete-season PB: fastest valid mark per athlete per event (WA > 0).
+  • Model: to_event_seconds = intercept + slope × from_event_seconds.
+  • Each ordered pair (A -> B) is separate from (B -> A).
+  • 3000m Steeplechase excluded from distance.
+
+Use:
+  Predict time in an unrun event from a known PB, then convert predicted time
+  to World Athletics points in the TARGET event table. Treat median_abs_error
+  and RMSE as typical uncertainty bands, not guarantees.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=447, r=0.897)
+  Formula: 200m = 2.236 × 100m − 2.199
+  RMSE: 0.894s | median |error|: 0.441s
+  Ratio 200m/100m: median 2.044 (IQR 2.011–2.083)
+  Median times in sample: 100m 11.91s, 200m 24.39s
+
+100m -> 400m  (n=174, r=0.809)
+  Formula: 400m = 5.046 × 100m − 5.145
+  RMSE: 3.675s | median |error|: 1.984s
+  Ratio 400m/100m: median 4.570 (IQR 4.459–4.744)
+  Median times in sample: 100m 12.27s, 400m 55.87s
+
+200m -> 100m  (n=447, r=0.897)
+  Formula: 100m = 3.144 + 0.360 × 200m
+  RMSE: 0.359s | median |error|: 0.203s
+  Ratio 100m/200m: median 0.489 (IQR 0.480–0.497)
+  Median times in sample: 200m 24.39s, 100m 11.91s
+
+200m -> 400m  (n=293, r=0.849)
+  Formula: 400m = 4.859 + 2.045 × 200m
+  RMSE: 2.872s | median |error|: 1.346s
+  Ratio 400m/200m: median 2.234 (IQR 2.180–2.285)
+  Median times in sample: 200m 24.62s, 400m 55.07s
+
+400m -> 100m  (n=174, r=0.809)
+  Formula: 100m = 4.972 + 0.130 × 400m
+  RMSE: 0.590s | median |error|: 0.297s
+  Ratio 100m/400m: median 0.219 (IQR 0.211–0.224)
+  Median times in sample: 400m 55.87s, 100m 12.27s
+
+400m -> 200m  (n=293, r=0.849)
+  Formula: 200m = 5.305 + 0.353 × 400m
+  RMSE: 1.193s | median |error|: 0.550s
+  Ratio 200m/400m: median 0.448 (IQR 0.438–0.459)
+  Median times in sample: 400m 55.07s, 200m 24.62s
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=204, r=0.899)
+  Formula: 200m = 2.523 × 100m − 5.744
+  RMSE: 1.258s | median |error|: 0.451s
+  Ratio 200m/100m: median 2.101 (IQR 2.067–2.135)
+  Median times in sample: 100m 13.88s, 200m 29.12s
+
+100m -> 400m  (n=59, r=0.853)
+  Formula: 400m = 5.535 × 100m − 10.407
+  RMSE: 4.125s | median |error|: 2.191s
+  Ratio 400m/100m: median 4.775 (IQR 4.593–4.884)
+  Median times in sample: 100m 13.96s, 400m 66.99s
+
+200m -> 100m  (n=204, r=0.899)
+  Formula: 100m = 4.526 + 0.320 × 200m
+  RMSE: 0.448s | median |error|: 0.211s
+  Ratio 100m/200m: median 0.476 (IQR 0.468–0.484)
+  Median times in sample: 200m 29.12s, 100m 13.88s
+
+200m -> 400m  (n=129, r=0.850)
+  Formula: 400m = 13.029 + 1.834 × 200m
+  RMSE: 3.416s | median |error|: 1.838s
+  Ratio 400m/200m: median 2.273 (IQR 2.217–2.327)
+  Median times in sample: 200m 29.13s, 400m 66.38s
+
+400m -> 100m  (n=59, r=0.853)
+  Formula: 100m = 5.235 + 0.132 × 400m
+  RMSE: 0.636s | median |error|: 0.332s
+  Ratio 100m/400m: median 0.209 (IQR 0.205–0.218)
+  Median times in sample: 400m 66.99s, 100m 13.96s
+
+400m -> 200m  (n=129, r=0.850)
+  Formula: 200m = 3.194 + 0.394 × 400m
+  RMSE: 1.583s | median |error|: 0.679s
+  Ratio 200m/400m: median 0.440 (IQR 0.430–0.451)
+  Median times in sample: 400m 66.38s, 200m 29.13s
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=434, r=0.866)
+  Formula: 5000m = 52.301 + 3.583 × 1500m
+  RMSE: 46.425s | median |error|: 25.640s
+  Ratio 5000m/1500m: median 3.764 (IQR 3.675–3.862)
+  Median times in sample: 1500m 267.71s, 5000m 1007.23s
+
+1500m -> 800m  (n=581, r=0.882)
+  Formula: 800m = 17.833 + 0.419 × 1500m
+  RMSE: 5.772s | median |error|: 3.187s
+  Ratio 800m/1500m: median 0.485 (IQR 0.473–0.497)
+  Median times in sample: 1500m 269.31s, 800m 130.33s
+
+5000m -> 1500m  (n=434, r=0.866)
+  Formula: 1500m = 56.684 + 0.210 × 5000m
+  RMSE: 11.228s | median |error|: 6.491s
+  Ratio 1500m/5000m: median 0.266 (IQR 0.259–0.272)
+  Median times in sample: 5000m 1007.23s, 1500m 267.71s
+
+5000m -> 800m  (n=219, r=0.770)
+  Formula: 800m = 37.774 + 0.093 × 5000m
+  RMSE: 8.040s | median |error|: 4.602s
+  Ratio 800m/5000m: median 0.130 (IQR 0.125–0.135)
+  Median times in sample: 5000m 1013.52s, 800m 131.59s
+
+800m -> 1500m  (n=581, r=0.882)
+  Formula: 1500m = 27.594 + 1.856 × 800m
+  RMSE: 12.141s | median |error|: 6.264s
+  Ratio 1500m/800m: median 2.060 (IQR 2.011–2.113)
+  Median times in sample: 800m 130.33s, 1500m 269.31s
+
+800m -> 5000m  (n=219, r=0.770)
+  Formula: 5000m = 181.555 + 6.369 × 800m
+  RMSE: 66.540s | median |error|: 40.232s
+  Ratio 5000m/800m: median 7.709 (IQR 7.407–7.996)
+  Median times in sample: 800m 131.59s, 5000m 1013.52s
+
+Distance — Women
+----------------
+
+1500m -> 5000m  (n=144, r=0.871)
+  Formula: 5000m = 113.309 + 3.382 × 1500m
+  RMSE: 56.010s | median |error|: 33.688s
+  Ratio 5000m/1500m: median 3.716 (IQR 3.620–3.825)
+  Median times in sample: 1500m 321.87s, 5000m 1212.21s
+
+1500m -> 800m  (n=272, r=0.898)
+  Formula: 800m = 14.048 + 0.450 × 1500m
+  RMSE: 7.295s | median |error|: 4.061s
+  Ratio 800m/1500m: median 0.493 (IQR 0.479–0.503)
+  Median times in sample: 1500m 335.51s, 800m 164.44s
+
+5000m -> 1500m  (n=144, r=0.871)
+  Formula: 1500m = 53.923 + 0.224 × 5000m
+  RMSE: 14.422s | median |error|: 8.734s
+  Ratio 1500m/5000m: median 0.269 (IQR 0.261–0.276)
+  Median times in sample: 5000m 1212.21s, 1500m 321.87s
+
+5000m -> 800m  (n=85, r=0.779)
+  Formula: 800m = 41.549 + 0.099 × 5000m
+  RMSE: 9.429s | median |error|: 6.598s
+  Ratio 800m/5000m: median 0.134 (IQR 0.128–0.138)
+  Median times in sample: 5000m 1242.31s, 800m 162.97s
+
+800m -> 1500m  (n=272, r=0.898)
+  Formula: 1500m = 40.342 + 1.793 × 800m
+  RMSE: 14.565s | median |error|: 8.102s
+  Ratio 1500m/800m: median 2.028 (IQR 1.988–2.086)
+  Median times in sample: 800m 164.44s, 1500m 335.51s
+
+800m -> 5000m  (n=85, r=0.779)
+  Formula: 5000m = 234.916 + 6.109 × 800m
+  RMSE: 73.896s | median |error|: 46.296s
+  Ratio 5000m/800m: median 7.456 (IQR 7.262–7.806)
+  Median times in sample: 800m 162.97s, 5000m 1242.31s
+
+Pair summary tables
+-------------------
+
+Sprints — Men
+  From     To           n      r     RMSE Med|err|  Formula
+  100m     200m       447  0.897   0.894s   0.441s  200m = 2.236 × 100m − 2.199
+  100m     400m       174  0.809   3.675s   1.984s  400m = 5.046 × 100m − 5.145
+  200m     100m       447  0.897   0.359s   0.203s  100m = 3.144 + 0.360 × 200m
+  200m     400m       293  0.849   2.872s   1.346s  400m = 4.859 + 2.045 × 200m
+  400m     100m       174  0.809   0.590s   0.297s  100m = 4.972 + 0.130 × 400m
+  400m     200m       293  0.849   1.193s   0.550s  200m = 5.305 + 0.353 × 400m
+
+Sprints — Women
+  From     To           n      r     RMSE Med|err|  Formula
+  100m     200m       204  0.899   1.258s   0.451s  200m = 2.523 × 100m − 5.744
+  100m     400m        59  0.853   4.125s   2.191s  400m = 5.535 × 100m − 10.407
+  200m     100m       204  0.899   0.448s   0.211s  100m = 4.526 + 0.320 × 200m
+  200m     400m       129  0.850   3.416s   1.838s  400m = 13.029 + 1.834 × 200m
+  400m     100m        59  0.853   0.636s   0.332s  100m = 5.235 + 0.132 × 400m
+  400m     200m       129  0.850   1.583s   0.679s  200m = 3.194 + 0.394 × 400m
+
+Distance — Men
+  From     To           n      r     RMSE Med|err|  Formula
+  1500m    5000m      434  0.866  46.425s  25.640s  5000m = 52.301 + 3.583 × 1500m
+  1500m    800m       581  0.882   5.772s   3.187s  800m = 17.833 + 0.419 × 1500m
+  5000m    1500m      434  0.866  11.228s   6.491s  1500m = 56.684 + 0.210 × 5000m
+  5000m    800m       219  0.770   8.040s   4.602s  800m = 37.774 + 0.093 × 5000m
+  800m     1500m      581  0.882  12.141s   6.264s  1500m = 27.594 + 1.856 × 800m
+  800m     5000m      219  0.770  66.540s  40.232s  5000m = 181.555 + 6.369 × 800m
+
+Distance — Women
+  From     To           n      r     RMSE Med|err|  Formula
+  1500m    5000m      144  0.871  56.010s  33.688s  5000m = 113.309 + 3.382 × 1500m
+  1500m    800m       272  0.898   7.295s   4.061s  800m = 14.048 + 0.450 × 1500m
+  5000m    1500m      144  0.871  14.422s   8.734s  1500m = 53.923 + 0.224 × 5000m
+  5000m    800m        85  0.779   9.429s   6.598s  800m = 41.549 + 0.099 × 5000m
+  800m     1500m      272  0.898  14.565s   8.102s  1500m = 40.342 + 1.793 × 800m
+  800m     5000m       85  0.779  73.896s  46.296s  5000m = 234.916 + 6.109 × 800m
+
+Source: time_models/build_cross_event_time_models.py

@@ -1,0 +1,11 @@
+gender,event_group,model,beta_result_count,se_result_count,beta_first_wa,bootstrap_ci_low,bootstrap_ci_high,n_obs,n_units,r2_within
+Men,Sprints,athlete_event_group_FE,7.708,1.188,-0.307,4.036,11.31,395,179,0.2998
+Men,Distance,athlete_event_group_FE,12.15,1.322,-0.569,8.711,16.269,759,339,0.4792
+Men,Hurdles,athlete_event_group_FE,4.43,5.032,-0.699,-7.472,15.025,115,51,0.6123
+Men,Jumps,athlete_event_group_FE,-0.522,2.727,-0.535,-8.408,6.261,149,70,0.4076
+Men,Throws,athlete_event_group_FE,0.591,2.41,-0.634,-5.073,5.133,164,76,0.5677
+Women,Sprints,athlete_event_group_FE,9.417,1.472,-0.233,6.114,13.715,193,89,0.2656
+Women,Distance,athlete_event_group_FE,16.96,2.119,-0.426,11.618,22.089,273,124,0.4009
+Women,Hurdles,athlete_event_group_FE,22.02,4.868,-0.516,9.383,34.999,67,30,0.4766
+Women,Jumps,athlete_event_group_FE,7.294,1.873,-0.447,2.028,13.751,86,39,0.4037
+Women,Throws,athlete_event_group_FE,6.796,4.002,-0.619,-2.746,19.572,72,32,0.6546

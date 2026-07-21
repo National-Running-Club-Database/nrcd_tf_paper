@@ -1,0 +1,5 @@
+gender,event_group,from_event,to_event,bal_spec,best_event,best_is_from,n,best_model,cv_median_abs,formula,params_json
+Men,Distance,800m,5000m,specialized,best_1500m,best_not_from,18,linear_ols,12.7227,5000m = 111.435 + 6.737 × 800m,"{""intercept"": 111.43498625552559, ""slope"": 6.736512748340763}"
+Men,Distance,1500m,800m,specialized,best_1500m,best_is_from,23,robust_trimmed_linear,1.3699,800m = 0.497 × 1500m − 0.087,"{""intercept"": -0.087319699517451, ""slope"": 0.4967236165334707}"
+Men,Distance,1500m,5000m,specialized,best_1500m,best_is_from,21,median_ratio,11.9038,5000m = 3.806 × 1500m,"{""ratio"": 3.805944191079848}"
+Men,Distance,5000m,800m,specialized,best_1500m,best_not_from,18,linear_ols,1.8466,800m = 6.459 + 0.125 × 5000m,"{""intercept"": 6.458674432143809, ""slope"": 0.12503499271836718}"

@@ -1,0 +1,41 @@
+Feature Importance Point-Band Time Models — With Steeplechase
+===============================================================
+
+Bands: 750–950, 800–1000, 850–1050.
+Distance events: 800m, 1500m, 3000m Steeplechase, 5000m.
+Steeplechase WA from New_Steeplechase_Data.
+
+Band membership vs prior (no steeple):
+  750-950: +32 athlete-seasons (553 → 585)
+  800-1000: +18 athlete-seasons (350 → 368)
+  850-1050: +8 athlete-seasons (186 → 194)
+
+=== Band 750-950 (30 pairs with feature CV) ===
+  best_strategy=best_is_from: 9 pairs
+  best_strategy=bal_x_best_event: 6 pairs
+  best_strategy=from_stronger_wa: 4 pairs
+  best_strategy=pair_wa_gap_50: 3 pairs
+  best_strategy=pooled: 3 pairs
+  best_strategy=best_event: 3 pairs
+  best_strategy=bal_spec: 2 pairs
+  Formula file: new_feature_important_time_models_band_750_950_with_steeple.txt
+
+=== Band 800-1000 (22 pairs with feature CV) ===
+  best_strategy=bal_x_best_event: 6 pairs
+  best_strategy=from_stronger_wa: 4 pairs
+  best_strategy=pair_wa_gap_50: 4 pairs
+  best_strategy=best_is_from: 3 pairs
+  best_strategy=pooled: 3 pairs
+  best_strategy=bal_spec: 1 pairs
+  best_strategy=best_event: 1 pairs
+  Formula file: new_feature_important_time_models_band_800_1000_with_steeple.txt
+
+=== Band 850-1050 (10 pairs with feature CV) ===
+  best_strategy=bal_x_best_event: 4 pairs
+  best_strategy=best_event: 2 pairs
+  best_strategy=pair_wa_gap_50: 2 pairs
+  best_strategy=bal_spec: 1 pairs
+  best_strategy=from_stronger_wa: 1 pairs
+  Formula file: new_feature_important_time_models_band_850_1050_with_steeple.txt
+
+Source: analyze_feature_importance_with_steeple.py

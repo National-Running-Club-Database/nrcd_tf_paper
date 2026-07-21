@@ -1,0 +1,402 @@
+Nationals Team Points Maximization — Clearing-Capable Rosters
+=============================================================
+
+Men's vs. Women's Teams — Maximize Total Championship Points (Not Scorer Count)
+
+Based on 2024–2026 NIRCA outdoor data (RQ1B thresholds, RQ1C nationals-margin
+comparisons, national clearing-pool sizes). Relay-inclusive; March 1+ per season.
+
+DATA NOTE: Distance / steeplechase use corrected WA from New_Steeplechase_Data
+(steeple 8th-place ≈740 men / ≈752 women). Sprints, hurdles, jumps, throws
+unchanged from Relays_Findings. All five event groups included.
+
+Assumption: Many athletes per event group (both genders) already clear the
+8th-place WA threshold for every event in that group.
+
+
+================================================================================
+HOW THIS REPORT DIFFERS FROM THE SCORER-COUNT FRAME
+================================================================================
+
+Maximizing athletes in the top 8 favors SPREADING clearing-capable talent across
+events (more scoring lines). Maximizing TEAM POINTS favors CONCENTRATING depth
+where your athletes can finish HIGH (1st–4th), not just clear the bar.
+
+Standard track scoring (assumed 10-8-6-5-4-3-2-1 for places 1–8):
+  • 1st place = 10 points; 8th place = 1 point
+  • Four athletes placing 1st–4th in one event = 29 points
+  • Four athletes placing 6th–8th in a crowded event = 9 points
+  • One relay team placing 1st = 10 points (uses 4 athletes, one scoring line)
+
+Decision logic for clearing-capable rosters:
+  1. RQ1C margin — largest buffer above the 8th-place line predicts higher
+     finish position, not just qualification.
+  2. National clearing-pool size — fewer clearing athletes nationally = less
+     competition for top places (where points are weighted).
+  3. Depth economics — individual events allow up to 8 scoring lines per team;
+     relays allow 1. With deep clearing rosters, stacking thin fields beats
+     staffing one relay.
+  4. Relay rule — staff ONE A relay per gender where margin is strongest
+     (usually 4x100m); do not sink relay depth that could sweep individual
+     events.
+
+
+================================================================================
+MEN'S TEAM — EVENT FOCUS BY GROUP
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 400m
+SECONDARY:    100m (margin outliers)
+RELAY:        One 4x100m A team only
+DEPRIORITIZE: 200m, 4x400m depth, crowded open-sprint concentration
+
+Why 400m is the points play:
+  • Smallest national open-sprint clearing pool (42 clearers vs. 65–72 for
+    100m/200m and 133 for 4x100m).
+  • Best open-sprint nationals margin: beats 200m (170–123) and narrowly beats
+    100m (93–81) among dual athletes.
+  • With many clearing-capable sprinters on your team, stacking 400m targets
+    10+8+6+5 point bundles instead of 3+2+1 scraps in a deep field.
+
+Why one 4x100m, not depth:
+  • 4x100 wins margin vs. all open sprints (e.g. vs. 200m 188–60), so the A
+    relay is worth ~10 points if competitive for the win.
+  • But 133 athletes clear nationally — winning or placing 2nd is hard.
+  • Four legs in 4x100 = one scoring opportunity. Those same four in 400m could
+    yield four scoring lines if the national 400m field stays thin.
+
+Why not 200m / 4x400:
+  • 200m loses every margin comparison to 100m and 400m.
+  • 4x400 has 81 national clearers and only modest margin gains over 400m; four
+    athletes produce one relay score.
+
+Points strategy: Enter 3–5 clearing-capable men in 400m. Staff one 4x100. Use
+100m only for athletes whose margin clearly exceeds 400m. Treat 200m as
+development, not a points target.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 3000m Steeplechase
+SECONDARY:    5000m
+TERTIARY:     1500m
+RELAY:        One 4x400m at most (milers who don't stack steeple/5K)
+AVOID:        800m as a points target
+
+Why steeplechase is the top men's distance points event:
+  • Smallest distance clearing pool nationally (24 clearers).
+  • Dominates every nationals-margin comparison (vs. 1500m 123–47, vs. 5000m
+    77–32, vs. 800m 86–39).
+  • Lowest individual distance bar under corrected WA (~740 vs. 786–829) —
+    clearing-capable steeplers typically still have the largest margin in the
+    group → best chance at 1st–3rd (10+8+6 points).
+
+Why stack 5000m second:
+  • Beats 1500m (225–209) and 800m (140–79) on margin; beats 4x400 (81–76).
+  • Only 36 national clearers — room for multiple high placings from one team.
+  • Bar ~786 vs. 827–829 for 1500m/800m — more separation above the line.
+
+Why 1500m is tertiary, 800m avoided:
+  • 1500m has the most distance clearers (51) — harder to pile up top places;
+    use for milers without steeple/5K margin advantage.
+  • 800m: highest bar (829 WA), loses all margin comparisons — clearing-capable
+    800m runners are fighting for 1–2 points at best.
+
+Points strategy: Concentrate clearing-capable distance men in steeple and 5K.
+Use 1500m for overflow milers. One 4x400 for relay points if roster allows.
+Do not spread depth into 800m.
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 110m Hurdles
+SECONDARY:    400m Hurdles
+RELAY:        One 4x100m (speed hurdlers not stacking 110mH)
+
+Why 110mH is the men's hurdle points focus:
+  • Highest clear rate in men's track (32.5%) with only 38 national clearers —
+    clearing-capable 110m hurdlers often have large margins above the ~629 WA
+    bar (lowest among men's sprint/hurdle events).
+  • Margin vs. relays is essentially even; vs. 400mH, 400mH wins head-to-head
+    (42–27) — so long hurdlers go to 400mH, sprint hurdlers stack 110mH.
+
+Why 400mH as secondary stack:
+  • 27 national clearers (thin field). Best individual margin for dual hurdlers
+    running both events.
+  • Stack long-hurdle specialists here for 10+8+6 potential.
+
+Why not 4x400 depth:
+  • Large clearing pool (81), modest margin edge — points return poor vs.
+    stacking both hurdle events.
+
+Points strategy: Split clearing hurdlers — 110mH stack for sprint types, 400mH
+stack for long types. One 4x100 from elite speed hurdlers if not already scoring
+in 110mH.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: Triple Jump
+SECONDARY:    High Jump
+AVOID:        Long Jump as a points concentration
+
+Why triple jump:
+  • Best nationals margin in the jump group (vs. long 61–19, vs. high 21–11).
+  • Only 23 national clearers — thinnest horizontal jump field.
+  • Lower bar than long jump (726 vs. 792 WA) → clearing-capable triple jumpers
+    are positioned for top places, not 7th–8th.
+
+Why high jump second:
+  • 29 clearers nationally; 27.9% clear rate; beats long jump on margin (34–20).
+  • Stack vertical jumpers separately from triple for parallel point bundles.
+
+Why not long jump:
+  • Most jump clearers nationally (34) but loses all margin comparisons and has
+    the highest bar — clearing-capable long jumpers fight for low places (1–3
+    points) in a crowded event.
+
+Points strategy: Stack clearing-capable jumpers in triple and high jump. Use
+long jump only when an athlete's margin there clearly exceeds triple/high.
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: Shot Put
+SECONDARY:    Discus
+AVOID:        Javelin, Hammer
+
+Why shot put:
+  • Beats discus on nationals margin among dual throwers (67–45).
+  • Beats relays when throwers cross over (shot vs. 4x100: 20–5).
+  • 22 national clearers — thin enough to target 1st–4th with a deep roster.
+
+Why discus second:
+  • 25 clearers; strong margin vs. relays (13–2 vs. 4x100).
+  • Stack dual throwers in both implements if roster depth allows separate
+    point bundles (shot stack + discus stack).
+
+Points strategy: Keep throwers in the circle. Concentrate clearing-capable men
+in shot first; add discus depth for dual-competency athletes.
+
+
+================================================================================
+WOMEN'S TEAM — EVENT FOCUS BY GROUP
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 400m
+SECONDARY:    100m (margin outliers)
+RELAY:        One 4x100m A team only
+DEPRIORITIZE: 200m, 4x400m depth
+
+Why 400m is the women's sprint points play:
+  • Smallest open-sprint clearing pool (23 clearers vs. 27–25 for 100m/200m and
+    105 for 4x100m).
+  • Crushes 200m on margin (102–25); beats 100m (36–22).
+  • Deep clearing rosters can target 10+8+6+5 in 400m vs. fighting 100+ national
+    4x100 clearers for a single 10-point relay line.
+
+Why one 4x100m:
+  • Best relay margin (vs. 100m 124–12, vs. 400m 48–15) — A team still worth
+    staffing for a shot at 10 points.
+  • Do not stack the roster into 4x100; national field is too deep for reliable
+    high places beyond the A team.
+
+Why not 200m:
+  • Loses margin to both 100m and 400m — worst open sprint for points.
+
+Points strategy: Stack clearing-capable women in 400m (3–5 entries). One 4x100.
+100m for athletes with clear 100m margin advantage. Minimal 200m investment.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 3000m Steeplechase
+SECONDARY:    5000m
+TERTIARY:     1500m
+RELAY:        One 4x400m (milers with 4x400 margin over 1500m)
+AVOID:        800m as a points target
+
+Why steeplechase:
+  • Dominant margins vs. all distance events (vs. 1500m 75–6, vs. 5000m 40–4,
+    vs. 800m 45–7). Beats 4x400 (30–23).
+  • 23 national clearers — thin field for sweeping top places.
+  • Corrected bar ~752 WA (was ~511 under old data) — still the lowest
+    individual women's distance bar and the best margin buffers in the group.
+
+Why stack 5000m second:
+  • Beats 1500m (79–65) and 800m (58–27); beats 4x400 (42–29).
+  • 29 national clearers — room for multiple high finishes.
+
+Why 1500m tertiary, one 4x400:
+  • 1500m has 46 national clearers — most crowded individual distance event;
+    use for milers without steeple/5K advantage.
+  • 4x400 beats 1500m on margin (74–58) — one relay for milers who don't stack
+    steeple/5K is a reasonable ~10-point play.
+  • 800m loses every margin comparison — avoid as a points concentration.
+
+Points strategy: Steeple and 5K stacks first. 1500m for overflow. One 4x400.
+No 800m depth strategy.
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: 400m Hurdles
+SECONDARY:    100m Hurdles
+RELAY:        One 4x100m (only if not stacking 400mH)
+
+Why 400mH is the women's hurdle points centerpiece:
+  • 40.0% national clear rate with only 32 clearers — best combination of margin
+    and thin field among women's hurdle/sprint events.
+  • Beats 100mH (26–18), beats 4x400 strongly (25–9), beats 4x100 (17–13).
+  • Clearing-capable 400m hurdlers should almost all stack here for 10+8+6
+    potential.
+
+Why 100mH secondary:
+  • For dedicated sprint hurdlers; 28 national clearers, accessible bar (~608).
+  • Stack separately from 400mH — don't merge into one hurdle line.
+
+Why not 4x400:
+  • Loses margin to 400mH (9–25) — poor points return vs. individual stack.
+
+Points strategy: Concentrate clearing-capable women hurdlers in 400mH. 100mH
+stack for sprint-hurdle specialists. Relay only as overflow.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: High Jump
+SECONDARY:    Triple Jump
+AVOID:        Long Jump as a points concentration
+
+Why high jump:
+  • Best women's jump margin: beats long (24–15), beats triple (12–6).
+  • 28 national clearers; lowest jump bar (~681 WA).
+  • Clearing-capable high jumpers are positioned for top places in a thin field.
+
+Why triple jump second:
+  • Beats long jump (33–13); 18 clearers nationally — second stack opportunity.
+  • 31.6% clear rate — strong conversion for horizontal jumpers.
+
+Why not long jump:
+  • 26 clearers but loses margin to both high and triple; highest jump bar
+    (~760 WA) — clearing-capable long jumpers land in lower places (1–4 pts).
+
+Points strategy: Stack high jump first (women differ from men — high beats
+triple on margin). Triple stack for horizontal specialists. Avoid long-jump
+concentration.
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+PRIMARY STACK: Discus
+SECONDARY:    Shot Put
+AVOID:        Javelin, Hammer
+
+Why discus:
+  • Lowest bar in women's track (~504 WA) — largest margin buffers.
+  • Beats shot on margin (41–32); beats 4x400 (6–1).
+  • 25 national clearers — ideal for 1st–4th point bundles.
+
+Why shot put second:
+  • 23 clearers; 20.0% clear rate — secondary stack for dual throwers.
+
+Points strategy: Stack clearing-capable throwers in discus first; shot put for
+additional depth. No javelin/hammer points strategy (zero national clearers).
+
+
+================================================================================
+CROSS-GENDER POINTS STRATEGY — CLEARING ROSTERS
+================================================================================
+
+Principle: STACK vs. SPREAD
+---------------------------
+  Scorer-count logic:     Spread athletes across events (maximize scoring lines)
+  Points-maximization:    Stack thin, high-margin events (maximize place value)
+
+Relay allocation
+----------------
+  • One 4x100m per gender (margin-strongest sprint relay).
+  • Men: one 4x400m only if distance/hurdle roster allows without stealing
+    steeple/5K/400mH stacks.
+  • Women: one 4x400m for milers with relay margin over 1500m.
+  • Never staff B/C relay depth at the expense of individual stacks.
+
+Highest point-potential stacks (thin national clearing pool + strong margin)
+----------------------------------------------------------------------------
+  Men:
+    1. 3000m Steeplechase (24 clearers, dominant margins)
+    2. Triple Jump (23 clearers, best jump margins)
+    3. 400m (42 clearers, best open sprint margins)
+    4. Shot Put (22 clearers, best throw margins)
+    5. 5000m (36 clearers)
+    6. 110m Hurdles (38 clearers, low bar)
+
+  Women:
+    1. 3000m Steeplechase (23 clearers, dominant margins)
+    2. 400m (23 clearers, best open sprint margins)
+    3. 400m Hurdles (32 clearers, 40% clear rate)
+    4. High Jump (28 clearers, best jump margins)
+    5. Discus (25 clearers, lowest bar)
+    6. 5000m (29 clearers)
+
+Events to avoid stacking (crowded national clearing pools — low place value)
+----------------------------------------------------------------------------
+  Men:  4x100m (133), 4x400m (81), 200m (72), 1500m (51), 800m (46)
+  Women: 4x100m (105), 4x400m (78), 1500m (46)
+
+  Note: 4x100 still gets ONE A team per gender — just not depth concentration.
+
+
+QUICK REFERENCE — POINTS FOCUS (CLEARING ROSTERS)
+--------------------------------------------------
+
+Group     | Men — stack here                    | Women — stack here
+----------|-------------------------------------|----------------------------------
+Sprints   | 400m (+ one 4x100)                  | 400m (+ one 4x100)
+Distance  | Steeple → 5K → 1500m                | Steeple → 5K → 1500m (+ one 4x400)
+Hurdles   | 110mH → 400mH                       | 400mH → 100mH
+Jumps     | Triple → High                       | High → Triple
+Throws    | Shot → Discus                       | Discus → Shot
+
+
+SHIFT FROM SCORER-COUNT AND MARGIN-ONLY REPORTS
+-------------------------------------------------
+  Nationals_Scoring_Focus_Men_Women.txt:
+    Maximize how many athletes clear the bar (clear rate, accessibility).
+
+  Nationals_Scoring_Focus_Clearing_Roster.txt:
+  Maximize scoring lines by spreading clearing-capable athletes (margin +
+    thin fields, but still one athlete per line).
+
+  This report:
+    Maximize total place value by STACKING clearing-capable athletes in the
+    thinnest high-margin events, with minimal relay depth.
+
+Source: RQ1B 8th-place thresholds, RQ1C nationals-margin head-to-heads,
+national clearing-pool counts — relay-inclusive outdoor 2024–2026 (March 1+).
+Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.
+Scoring assumed standard 10-8-6-5-4-3-2-1 for places 1–8.

@@ -1,0 +1,123 @@
+IMPROVED RQ1A — Best Event Specialization (2024–2026 Combined)
+========================================================================
+
+## Sprints
+
+### Men (n=1248)
+Chi-square vs uniform best-event distribution: χ²=16.88, df=2, p=2.16e-04
+  100m: 467 (37.4%) | 95% bootstrap CI [34.8%, 40.1%]
+  400m: 430 (34.5%) | 95% bootstrap CI [31.8%, 37.2%]
+  200m: 351 (28.1%) | 95% bootstrap CI [25.6%, 30.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 239-208 (ties 4, n=447) | p=1.56e-01, Cohen's h=0.069 ns
+    100m vs 400m: 97-78 (ties 1, n=175) | p=1.73e-01, Cohen's h=0.109 ns
+    200m vs 400m: 155-136 (ties 5, n=291) | p=2.91e-01, Cohen's h=0.065 ns
+
+### Women (n=542)
+Chi-square vs uniform best-event distribution: χ²=55.31, df=2, p=9.76e-13
+  100m: 245 (45.2%) | 95% bootstrap CI [41.1%, 49.4%]
+  400m: 192 (35.4%) | 95% bootstrap CI [31.2%, 39.7%]
+  200m: 105 (19.4%) | 95% bootstrap CI [16.1%, 22.9%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 171-32 (ties 1, n=203) | p=3.80e-24, Cohen's h=0.754 ***
+    100m vs 400m: 34-26 (ties 0, n=60) | p=3.66e-01, Cohen's h=0.134 ns
+    200m vs 400m: 34-94 (ties 2, n=128) | p=1.09e-07, Cohen's h=-0.488 ***
+
+## Distance
+
+### Men (n=1933)
+Chi-square vs uniform best-event distribution: χ²=644.58, df=3, p=2.18e-139
+  1500m: 816 (42.2%) | 95% bootstrap CI [40.1%, 44.4%]
+  800m: 626 (32.4%) | 95% bootstrap CI [30.4%, 34.4%]
+  5000m: 429 (22.2%) | 95% bootstrap CI [20.3%, 24.1%]
+  3000m Steeplechase: 62 (3.2%) | 95% bootstrap CI [2.5%, 4.0%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 232-349 (ties 5, n=581) | p=1.38e-06, Cohen's h=-0.203 ***
+    800m vs 3000m Steeplechase: 119-7 (ties 0, n=126) | p=2.11e-27, Cohen's h=1.095 ***
+    800m vs 5000m: 109-114 (ties 4, n=223) | p=7.89e-01, Cohen's h=-0.022 ns
+    1500m vs 3000m Steeplechase: 170-1 (ties 0, n=171) | p=1.15e-49, Cohen's h=1.418 ***
+    1500m vs 5000m: 294-142 (ties 1, n=436) | p=2.76e-13, Cohen's h=0.356 ***
+    3000m Steeplechase vs 5000m: 1-108 (ties 0, n=109) | p=3.39e-31, Cohen's h=-1.379 ***
+
+### Women (n=946)
+Chi-square vs uniform best-event distribution: χ²=350.53, df=3, p=1.14e-75
+  1500m: 436 (46.1%) | 95% bootstrap CI [42.8%, 49.3%]
+  5000m: 243 (25.7%) | 95% bootstrap CI [22.9%, 28.4%]
+  800m: 238 (25.2%) | 95% bootstrap CI [22.4%, 28.1%]
+  3000m Steeplechase: 29 (3.1%) | 95% bootstrap CI [2.0%, 4.2%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 58-214 (ties 0, n=272) | p=3.48e-22, Cohen's h=-0.611 ***
+    800m vs 3000m Steeplechase: 44-8 (ties 0, n=52) | p=4.04e-07, Cohen's h=0.765 ***
+    800m vs 5000m: 15-70 (ties 0, n=85) | p=1.17e-09, Cohen's h=-0.704 ***
+    1500m vs 3000m Steeplechase: 79-2 (ties 0, n=81) | p=2.75e-21, Cohen's h=1.255 ***
+    1500m vs 5000m: 55-89 (ties 0, n=144) | p=5.77e-03, Cohen's h=-0.238 **
+    3000m Steeplechase vs 5000m: 1-43 (ties 0, n=44) | p=5.12e-12, Cohen's h=-1.268 ***
+
+## Hurdles
+
+### Men (n=238)
+Chi-square vs uniform best-event distribution: χ²=38.62, df=2, p=4.10e-09
+  400m Hurdles: 163 (68.5%) | 95% bootstrap CI [62.6%, 74.4%]
+  110m Hurdles: 75 (31.5%) | 95% bootstrap CI [25.6%, 37.4%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    110m Hurdles vs 400m Hurdles: 20-59 (ties 14, n=79) | p=1.30e-05, Cohen's h=-0.516 ***
+
+### Women (n=145)
+Chi-square vs uniform best-event distribution: χ²=0.08, df=2, p=9.60e-01
+  400m Hurdles: 74 (51.0%) | 95% bootstrap CI [43.4%, 59.3%]
+  100m Hurdles: 71 (49.0%) | 95% bootstrap CI [40.7%, 57.2%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m Hurdles vs 400m Hurdles: 17-35 (ties 1, n=52) | p=1.75e-02, Cohen's h=-0.353 *
+
+## Jumps
+
+### Men (n=318)
+Chi-square vs uniform best-event distribution: χ²=121.30, df=2, p=4.57e-27
+  Long Jump: 198 (62.3%) | 95% bootstrap CI [56.9%, 67.3%]
+  High Jump: 69 (21.7%) | 95% bootstrap CI [17.0%, 26.1%]
+  Triple Jump: 51 (16.0%) | 95% bootstrap CI [11.9%, 20.1%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Long Jump vs Triple Jump: 42-38 (ties 0, n=80) | p=7.38e-01, Cohen's h=0.050 ns
+    Long Jump vs High Jump: 30-24 (ties 0, n=54) | p=4.97e-01, Cohen's h=0.111 ns
+    Triple Jump vs High Jump: 19-13 (ties 0, n=32) | p=3.77e-01, Cohen's h=0.189 ns
+
+### Women (n=201)
+Chi-square vs uniform best-event distribution: χ²=62.00, df=2, p=3.44e-14
+  Long Jump: 119 (59.2%) | 95% bootstrap CI [52.2%, 66.2%]
+  High Jump: 48 (23.9%) | 95% bootstrap CI [18.4%, 29.9%]
+  Triple Jump: 34 (16.9%) | 95% bootstrap CI [11.9%, 22.4%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Long Jump vs Triple Jump: 19-26 (ties 1, n=45) | p=3.71e-01, Cohen's h=-0.156 ns
+    Long Jump vs High Jump: 24-15 (ties 0, n=39) | p=2.00e-01, Cohen's h=0.233 ns
+    Triple Jump vs High Jump: 14-4 (ties 0, n=18) | p=3.09e-02, Cohen's h=0.589 *
+
+## Throws
+
+### Men (n=191)
+Chi-square vs uniform best-event distribution: χ²=26.39, df=1, p=2.79e-07
+  Shot Put: 131 (68.6%) | 95% bootstrap CI [61.8%, 75.4%]
+  Discus: 60 (31.4%) | 95% bootstrap CI [25.1%, 37.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Shot Put vs Discus: 70-41 (ties 1, n=111) | p=7.58e-03, Cohen's h=0.264 **
+
+### Women (n=128)
+Chi-square vs uniform best-event distribution: χ²=38.28, df=1, p=6.12e-10
+  Shot Put: 99 (77.3%) | 95% bootstrap CI [70.3%, 84.4%]
+  Discus: 29 (22.7%) | 95% bootstrap CI [15.6%, 29.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Shot Put vs Discus: 57-16 (ties 0, n=73) | p=1.53e-06, Cohen's h=0.596 ***
+
+Benjamini-Hochberg FDR-adjusted p-values applied across all pairwise tests above.
+Significant at FDR<0.05: 18 / 28 tests
+
+========================================================================

@@ -1,0 +1,84 @@
+College,Athlete,Season_Year,Event_Group,Bal_Spec,Best_Event,WA_Spread,Events_Competed_In_Group
+DePaul,Alex Bernstein,2026,Throws,specialized,HT,378.0,2
+DePaul,Alex Long-Craine,2026,Sprints,balanced,100m,49.0,2
+DePaul,Amaru Mazibuko,2026,Sprints,balanced,100m,0.0,1
+DePaul,Caleb Schulz,2026,Sprints,balanced,100m,0.0,1
+DePaul,Christian Ortiz-Velazquez,2026,Sprints,balanced,400m,26.0,2
+DePaul,Cole Tupper,2026,Distance,specialized,3000m,64.0,3
+DePaul,Cole Tupper,2026,Hurdles,balanced,110mH,0.0,1
+DePaul,Daniel Fasasi,2026,Sprints,specialized,400m,67.0,2
+DePaul,Daniel Grauer,2026,Distance,specialized,3000m,108.0,2
+DePaul,Demetrius Rolle,2026,Sprints,specialized,100m,168.0,2
+DePaul,Denhm Holt,2026,Sprints,balanced,400m,0.0,1
+DePaul,Gavin Greaney,2026,Sprints,balanced,400m,0.0,1
+DePaul,Harper Bryan,2026,Hurdles,specialized,400mH,94.0,2
+DePaul,Hunter Bostwick,2026,Distance,specialized,3000m SC,136.0,2
+DePaul,Ian Bello,2026,Sprints,balanced,400m,0.0,1
+DePaul,Isaiah Hopf,2026,Jumps,balanced,TJ,0.0,1
+DePaul,Jack Broghammer,2026,Distance,specialized,1500m,58.0,3
+DePaul,Jack Hopkins,2026,Distance,balanced,800m,18.0,2
+DePaul,Jaiden Gary,2026,Throws,specialized,SP,248.0,3
+DePaul,Jayvion Cunningham,2026,Sprints,balanced,200m,33.0,2
+DePaul,John Bush,2026,Distance,specialized,800m,103.0,2
+DePaul,Jorden Reddick,2026,Hurdles,balanced,110mH,0.0,1
+DePaul,Joshua Hill,2026,Jumps,balanced,TJ,28.0,2
+DePaul,Kyle Clark,2026,Distance,specialized,3000m,86.0,2
+DePaul,Kyle Dube,2026,Hurdles,balanced,400mH,0.0,1
+DePaul,Kyle Friedl,2026,Distance,specialized,800m,101.0,2
+DePaul,Mason Krieg,2026,Distance,specialized,5000m,78.0,2
+DePaul,Mohamed Abdullahi,2026,Distance,specialized,1500m,133.0,2
+DePaul,Musa Butler,2026,Hurdles,balanced,400mH,0.0,1
+DePaul,Musa Butler,2026,Sprints,balanced,400m,0.0,1
+DePaul,Myles Money,2026,Sprints,balanced,100m,21.0,2
+DePaul,Nick Quinn,2026,Distance,balanced,800m,0.0,1
+DePaul,Owen Larkins,2026,Distance,balanced,800m,0.0,1
+DePaul,Quinton Boyd,2026,Throws,balanced,HT,33.0,2
+DePaul,Reid Waco,2026,Distance,specialized,1500m,169.0,2
+DePaul,Sergio Ayala,2026,Throws,specialized,SP,259.0,3
+DePaul,Tyce Smith,2026,Sprints,balanced,400m,25.0,2
+North Florida,Andrew Mahorner,2024,Distance,balanced,1500m,0.0,1
+North Florida,Ben Tary,2024,Distance,balanced,3000m SC,19.0,2
+North Florida,Camden Springer,2024,Sprints,balanced,400m,39.0,2
+North Florida,Christian Ruocco,2024,Distance,balanced,1500m,33.0,2
+North Florida,Cole Perry,2024,Distance,specialized,3000m SC,123.0,2
+North Florida,Colton Lawson,2024,Distance,specialized,3000m SC,97.0,2
+North Florida,Gavin O’Brien,2024,Distance,balanced,3000m SC,41.0,2
+North Florida,Ilias El Khattabi,2024,Distance,specialized,3000m SC,61.0,2
+North Florida,Jacob Hippo,2024,Jumps,balanced,HJ,0.0,1
+North Florida,Jonathan Bailey,2024,Sprints,specialized,100m,85.0,2
+North Florida,Justin Tackling,2024,Distance,balanced,5000m,40.0,2
+North Florida,Kameron Wallizada,2024,Distance,balanced,5000m,44.0,2
+North Florida,Ladarius Tellis,2024,Distance,balanced,800m,0.0,1
+North Florida,Ladarius Tellis,2024,Sprints,balanced,400m,0.0,1
+North Florida,Martin Ahlstrom,2024,Distance,specialized,10000m,94.0,2
+North Florida,Paul Lespasio,2024,Distance,specialized,5000m,99.0,3
+North Florida,Rey Hernandez,2024,Hurdles,balanced,400mH,45.0,2
+North Florida,Rey Hernandez,2024,Sprints,balanced,400m,31.0,3
+North Florida,Ryan Douihech,2024,Distance,balanced,1500m,6.0,2
+North Florida,Sebastian Hernandez,2024,Distance,balanced,5000m,16.0,2
+North Florida,Seth Martinez,2024,Distance,specialized,5000m,126.0,3
+North Florida,Tariq LaJoie,2024,Jumps,balanced,HJ,0.0,1
+North Florida,Thomas Weiler,2024,Distance,balanced,5000m,31.0,2
+SIUE,Aaron Conderman,2026,Distance,balanced,3000m,26.0,2
+SIUE,Andrew Perry,2026,Distance,balanced,5000m,42.0,2
+SIUE,Cadem Belcher,2026,Sprints,balanced,400m,0.0,1
+SIUE,Caden Belcher,2026,Sprints,balanced,400m,0.0,1
+SIUE,Cullen Krieg,2026,Distance,specialized,800m,97.0,2
+SIUE,D'Andre Watson,2026,Distance,balanced,800m,0.0,1
+SIUE,Darius Alberty,2026,Hurdles,balanced,110mH,0.0,1
+SIUE,D’Andre Watson,2026,Distance,balanced,1500m,0.0,1
+SIUE,Ian O’Laughlin,2026,Distance,balanced,5000m,3.0,2
+SIUE,Jack Willenborg,2026,Distance,specialized,5000m,439.0,2
+SIUE,Konnor Bouman,2026,Sprints,balanced,100m,0.0,1
+SIUE,Konrad Sacha,2026,Sprints,balanced,400m,27.0,2
+SIUE,Logan Luttrell,2026,Distance,balanced,800m,0.0,1
+SIUE,Nathaniel Wright,2026,Distance,specialized,800m,115.0,2
+SIUE,Norman Mukwada,2026,Sprints,balanced,200m,4.0,2
+SIUE,Plamedi Nseka,2026,Sprints,balanced,400m,0.0,1
+SIUE,Reece Wolf,2026,Distance,balanced,800m,0.0,1
+SIUE,Simon McClaine,2026,Hurdles,balanced,110mH,23.0,2
+SIUE,Simon McClaine,2026,Sprints,balanced,200m,0.0,1
+SIUE,Tanner Emerson,2026,Distance,specialized,3000m,70.0,4
+SIUE,Trenton Brooks,2026,Sprints,specialized,100m,80.0,2
+SIUE,Tyler Bell,2026,Hurdles,balanced,110mH,0.0,1
+SIUE,Tyler Bell,2026,Sprints,balanced,200m,0.0,1

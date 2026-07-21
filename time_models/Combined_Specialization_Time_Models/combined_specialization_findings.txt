@@ -1,0 +1,22 @@
+Combined Specialization Axes — Findings
+=======================================
+
+Question: Does knowing Short/Long (Mid/Long) AND balanced/specialized
+together improve time models beyond either alone?
+
+Core finding: the axes heavily overlap. Athletes with all 3 event PBs
+(required for Short/Long) are almost always 'specialized' (wa_spread≥50).
+
+Exactly 6 races:
+  Classifiable: 44; balanced among them: 3 (7%)
+  Strategy pairs: 6; best={'bal_spec_only': 3, 'pooled': 3}; joint>short_long 3/6 (mean Δ -1.536s); short_long>pooled 0/6; bal_spec>pooled 3/6
+
+5 or 6 races:
+  Classifiable: 120; balanced among them: 11 (9%)
+  Strategy pairs: 12; best={'short_long_only': 6, 'pooled': 4, 'joint': 2}; joint>short_long 5/12 (mean Δ -0.481s); short_long>pooled 7/12; bal_spec>pooled 3/12
+
+Recommendation: use Short/Long when all 3 PBs exist; use balanced/specialized
+when only 2 events are known. Combining both rarely adds a third gain.
+
+See combined_specialization_report.txt for pair-level CV tables.
+Source: analyze_combined_specialization.py

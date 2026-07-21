@@ -1,0 +1,124 @@
+RQ1C — Which Event Should Athletes Pursue to Be Most Competitive?
+[Distance only — New_Steeplechase_Data / corrected steeplechase WA]
+Method: 3-year average nationals 8th-place WA threshold from local RQ1B.
+RQ1C event = largest margin above (or smallest margin below) the 8th-place nationals threshold.
+RQ1A event = highest absolute WA personal best.
+Relay events: team WA credited to each leg athlete.
+
+======================================================================
+## Distance
+======================================================================
+
+### Men
+Athletes in discipline: 2524
+Multi-event athletes (2+): 1286
+RQ1A = RQ1C agreement: 1114 (86.6%) | Mismatch: 172
+
+Most competitive event (RQ1C):
+  1500m: 586 athletes | 51/1179 clear 8th-place bar (4.3%) | threshold=827.0
+  4x400m: 494 athletes | 81/822 clear 8th-place bar (9.9%) | threshold=785.3
+  5000m: 444 athletes | 36/737 clear 8th-place bar (4.9%) | threshold=786.0
+  800m: 430 athletes | 46/992 clear 8th-place bar (4.6%) | threshold=829.3
+  4x100m: 399 athletes | 133/506 clear 8th-place bar (26.3%) | threshold=760.3
+  3000m Steeplechase: 171 athletes | 24/281 clear 8th-place bar (8.5%) | threshold=740.0
+
+Best event (RQ1A) for comparison:
+  1500m: 681
+  800m: 480
+  4x400m: 470
+  5000m: 391
+  4x100m: 379
+  3000m Steeplechase: 123
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  4x100m: 133/506 (26.3%)
+  4x400m: 81/822 (9.9%)
+  1500m: 51/1179 (4.3%)
+  800m: 46/992 (4.6%)
+  5000m: 36/737 (4.9%)
+  3000m Steeplechase: 24/281 (8.5%)
+
+Individual×relay competitiveness (margin above 8th-place threshold):
+  800m vs. 4x100m (73 in both): 800m more competitive: 29 | 4x100m more competitive: 44
+  800m vs. 4x400m (355 in both): 800m more competitive: 128 | 4x400m more competitive: 227
+  1500m vs. 4x100m (71 in both): 1500m more competitive: 27 | 4x100m more competitive: 44
+  1500m vs. 4x400m (316 in both): 1500m more competitive: 115 | 4x400m more competitive: 201
+  3000m Steeplechase vs. 4x100m (49 in both): 3000m Steeplechase more competitive: 29 | 4x100m more competitive: 20
+  3000m Steeplechase vs. 4x400m (89 in both): 3000m Steeplechase more competitive: 46 | 4x400m more competitive: 43
+  5000m vs. 4x100m (39 in both): 5000m more competitive: 16 | 4x100m more competitive: 23
+  5000m vs. 4x400m (157 in both): 5000m more competitive: 81 | 4x400m more competitive: 76
+
+Individual head-to-head competitiveness:
+  800m vs. 1500m (581 in both): 800m more competitive: 225 | 1500m more competitive: 356
+  800m vs. 3000m Steeplechase (125 in both): 800m more competitive: 39 | 3000m Steeplechase more competitive: 86
+  800m vs. 5000m (219 in both): 800m more competitive: 79 | 5000m more competitive: 140
+  1500m vs. 3000m Steeplechase (171 in both): 1500m more competitive: 47 | 3000m Steeplechase more competitive: 123 | ties: 1
+  1500m vs. 5000m (434 in both): 1500m more competitive: 209 | 5000m more competitive: 225
+  3000m Steeplechase vs. 5000m (109 in both): 3000m Steeplechase more competitive: 77 | 5000m more competitive: 32
+
+### Women
+Athletes in discipline: 1297
+Multi-event athletes (2+): 612
+RQ1A = RQ1C agreement: 540 (88.2%) | Mismatch: 72
+
+Most competitive event (RQ1C):
+  1500m: 314 athletes | 46/577 clear 8th-place bar (8.0%) | threshold=791.7
+  4x400m: 271 athletes | 78/434 clear 8th-place bar (18.0%) | threshold=747.7
+  4x100m: 215 athletes | 105/282 clear 8th-place bar (37.2%) | threshold=776.0
+  800m: 197 athletes | 30/468 clear 8th-place bar (6.4%) | threshold=759.7
+  5000m: 195 athletes | 29/303 clear 8th-place bar (9.6%) | threshold=808.5
+  3000m Steeplechase: 105 athletes | 23/135 clear 8th-place bar (17.0%) | threshold=752.0
+
+Best event (RQ1A) for comparison:
+  1500m: 348
+  4x400m: 243
+  4x100m: 224
+  5000m: 213
+  800m: 173
+  3000m Steeplechase: 96
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  4x100m: 105/282 (37.2%)
+  4x400m: 78/434 (18.0%)
+  1500m: 46/577 (8.0%)
+  800m: 30/468 (6.4%)
+  5000m: 29/303 (9.6%)
+  3000m Steeplechase: 23/135 (17.0%)
+
+Individual×relay competitiveness (margin above 8th-place threshold):
+  800m vs. 4x100m (41 in both): 800m more competitive: 16 | 4x100m more competitive: 25
+  800m vs. 4x400m (146 in both): 800m more competitive: 55 | 4x400m more competitive: 91
+  1500m vs. 4x100m (36 in both): 1500m more competitive: 12 | 4x100m more competitive: 24
+  1500m vs. 4x400m (132 in both): 1500m more competitive: 58 | 4x400m more competitive: 74
+  3000m Steeplechase vs. 4x100m (12 in both): 3000m Steeplechase more competitive: 5 | 4x100m more competitive: 7
+  3000m Steeplechase vs. 4x400m (53 in both): 3000m Steeplechase more competitive: 30 | 4x400m more competitive: 23
+  5000m vs. 4x100m (11 in both): 5000m more competitive: 7 | 4x100m more competitive: 4
+  5000m vs. 4x400m (71 in both): 5000m more competitive: 42 | 4x400m more competitive: 29
+
+Individual head-to-head competitiveness:
+  800m vs. 1500m (272 in both): 800m more competitive: 90 | 1500m more competitive: 178 | ties: 4
+  800m vs. 3000m Steeplechase (52 in both): 800m more competitive: 7 | 3000m Steeplechase more competitive: 45
+  800m vs. 5000m (85 in both): 800m more competitive: 27 | 5000m more competitive: 58
+  1500m vs. 3000m Steeplechase (81 in both): 1500m more competitive: 6 | 3000m Steeplechase more competitive: 75
+  1500m vs. 5000m (144 in both): 1500m more competitive: 65 | 5000m more competitive: 79
+  3000m Steeplechase vs. 5000m (44 in both): 3000m Steeplechase more competitive: 40 | 5000m more competitive: 4
+
+======================================================================
+## Population-Level: Nationals Clear Counts (ordered by athletes clearing 8th-place bar)
+======================================================================
+
+### Men
+  4x100m                   133 clear (133/506, 26.3%)
+  4x400m                    81 clear (81/822, 9.9%)
+  1500m                     51 clear (51/1179, 4.3%)
+  800m                      46 clear (46/992, 4.6%)
+  5000m                     36 clear (36/737, 4.9%)
+  3000m Steeplechase        24 clear (24/281, 8.5%)
+
+### Women
+  4x100m                   105 clear (105/282, 37.2%)
+  4x400m                    78 clear (78/434, 18.0%)
+  1500m                     46 clear (46/577, 8.0%)
+  800m                      30 clear (30/468, 6.4%)
+  5000m                     29 clear (29/303, 9.6%)
+  3000m Steeplechase        23 clear (23/135, 17.0%)

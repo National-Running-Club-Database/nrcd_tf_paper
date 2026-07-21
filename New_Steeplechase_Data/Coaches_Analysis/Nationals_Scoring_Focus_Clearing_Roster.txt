@@ -1,0 +1,327 @@
+Nationals Scoring Focus — Clearing-Capable Rosters
+===============================================
+
+Men's vs. Women's Teams — When Athletes Already Clear the Bar in Every Event
+
+Based on 2024–2026 NIRCA outdoor data (RQ1B thresholds, RQ1C nationals-margin
+comparisons, clearing-pool sizes). Relay-inclusive; March 1+ per season.
+
+DATA NOTE: Distance / steeplechase use corrected WA from New_Steeplechase_Data
+(steeple 8th-place ≈740 men / ≈752 women). Sprints, hurdles, jumps, throws
+unchanged from Relays_Findings. All five event groups included.
+
+This report assumes a coach has many athletes in each event group who already
+clear the 8th-place WA threshold for every event in that group. Clear rate is
+no longer the decision driver. The question becomes: where do those athletes
+have the largest margin above the 8th-place line, and where is the clearing
+pool smallest?
+
+Clearing the bar is necessary but not sufficient — only 8 score. Logic shifts to:
+
+  1. RQ1C margin — which event gives the biggest buffer above the threshold
+     among dual-event athletes?
+  2. Field density — how many other clearing-capable athletes exist nationally
+     (more clearers = harder to actually place)?
+  3. Relay vs. individual — team WA can inflate relay marks; for clearing-
+     capable athletes, check whether the relay still wins on margin, not just
+     absolute WA.
+
+
+================================================================================
+MEN'S TEAM
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+Focus on: 400m (primary open), 4x100m (relay)
+
+Rank | Event    | Why (for clearing-capable athletes)
+-----|----------|--------------------------------------
+1    | 400m     | Best open-sprint margin profile. Beats 200m (170–123) and
+     |          | narrowly beats 100m (93–81) in nationals-margin head-to-heads.
+     |          | Smallest clearing pool among open sprints (42 clearers vs.
+     |          | 65–72 for 100m/200m) — less competition for top-8 spots.
+2    | 4x100m   | Wins every sprint margin comparison vs. open events (e.g. vs.
+     |          | 100m 209–49, vs. 200m 188–60). Best relay option for clearing-
+     |          | capable sprinters. Tradeoff: largest clearing pool nationally
+     |          | (133) — very crowded at Nationals.
+3    | 100m     | Beats 200m on margin (243–204). Use for athletes whose 100m
+     |          | margin clearly exceeds their 400m margin.
+     | Avoid:   | 200m, 4x400m as primary. 200m loses margin comparisons to both
+     |          | 100m and 400m. 4x400 beats 400m on margin (172–87) but has a
+     |          | much larger clearing pool (81) and only modest margin gains —
+     |          | better as depth/second relay than default focus for elite open
+     |          | sprinters.
+
+Coaching read: Spread clearing-capable sprinters — 400m and 100m for individual
+points, one 4x100 from your best legs. Don't stack everyone into 4x100; margin
+is best there but the field is deepest.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+Focus on: Steeplechase (if cleared), then 5000m, then 1500m
+
+Rank | Event              | Why
+-----|--------------------|------------------------------------------------------
+1    | 3000m Steeplechase | Dominates nationals-margin comparisons vs. every
+     |                    | other distance event (vs. 1500m 123–47, vs. 5000m
+     |                    | 77–32, vs. 800m 86–39). Smallest clearing pool (24).
+     |                    | Lowest individual distance bar under corrected WA
+     |                    | (~740 vs. 786–829) — clearing-capable steeplers still
+     |                    | often have the largest margin in the group.
+2    | 5000m              | Beats 1500m (225–209) and 800m (140–79) on margin.
+     |                    | Beats 4x400 (81–76) among dual athletes. Bar ~786 vs.
+     |                    | 827–829 for 800/1500 — more room above the line.
+3    | 1500m              | Beats 800m clearly (356–225). Default for milers who
+     |                    | aren't steeple/5K types. Modal best-event label for
+     |                    | distance men.
+     | Secondary:         | 4x100m / 4x400m — for clearing distance athletes,
+     |                    | relays usually lose margin comparisons to steeple and
+     |                    | often to 5000m. Use relays to fill team slots, not as
+     |                    | primary focus for best individuals.
+     | Avoid:             | 800m — loses margin comparisons to 1500m, 5000m, and
+     |                    | steeple. Hardest nationals bar (829 WA). Worst
+     |                    | individual bet even for clearing-capable athletes.
+
+Coaching read: Assign clearing-capable distance athletes by specialty margin,
+not roster size. Steeple → 5K → 1500m hierarchy. Keep 800m only when clearly
+above the line and stronger there than at 1500m.
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+Focus on: 400m Hurdles (primary individual), 4x100m (relay)
+
+Rank | Event        | Why
+-----|--------------|----------------------------------------------------------
+1    | 400m Hurdles | Beats 110mH on nationals margin (42–27). Among clearing
+     |              | hurdlers, long hurdles are the stronger individual bet.
+     |              | Smaller clearing pool (27 vs. 38 for 110mH).
+2    | 110m Hurdles | Best for dedicated sprint hurdlers who don't run 400mH.
+     |              | Margin vs. relays is essentially even (21–21 vs. 4x400;
+     |              | 18–21 vs. 4x100).
+3    | 4x100m       | Pecking order and margin favor it over 4x400 for hurdlers
+     |              | with speed. Good relay assignment for clearing-capable
+     |              | athletes.
+     | Avoid:       | 4x400m as primary — often tied or barely ahead on margin
+     |              | vs. hurdle events, with a large clearing pool (81). Depth
+     |              | relay, not the focus for best hurdlers.
+
+Coaching read: Clearing-capable men hurdlers should default to 400mH unless
+clearly a 110m specialist. Relay them in 4x100, not automatically 4x400.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+Focus on: Triple Jump, then High Jump
+
+Rank | Event       | Why
+-----|-------------|-----------------------------------------------------------
+1    | Triple Jump | Wins margin comparisons vs. long jump (61–19) and high jump
+     |             | (21–11). Lower bar than long jump (726 vs. 792 WA).
+     |             | Clearing-capable triple jumpers typically have the most
+     |             | buffer.
+2    | High Jump   | Beats long jump on margin (34–20). Beats 4x400 (14–10).
+     |             | Strong second choice for athletes who don't triple.
+3    | 4x100m      | Only if the athlete has real sprint value; long jump
+     |             | specialists lose margin to 4x100 (46–29).
+     | Avoid:      | Long Jump — most clearers (34) but loses every margin
+     |             | comparison within the jump group and has the highest bar.
+     |             | Worst focus for clearing-capable jumpers who also clear
+     |             | triple/high.
+
+Coaching read: If they clear all three jumps, triple first, high second, long
+only if it's clearly their outlier mark.
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+Focus on: Shot Put, then Discus
+
+Rank | Event    | Why
+-----|----------|-----------------------------------------------------------
+1    | Shot Put | Beats discus on nationals margin among dual throwers (67–45).
+     |          | Beats 4x100 (20–5) and splits evenly with 4x400 when throwers
+     |          | leg relays.
+2    | Discus   | Strong margin vs. relays (13–2 vs. 4x100). Secondary for dual
+     |          | throwers.
+     | Avoid:   | Javelin / Hammer — no clearing athletes in the dataset.
+
+Coaching read: Clearing-capable throwers should stay in the circle. Shot put is
+the default individual focus; discus for dual-competency athletes where margin
+favors disc.
+
+
+================================================================================
+WOMEN'S TEAM
+================================================================================
+
+--------------------------------------------------------------------------------
+Sprints
+--------------------------------------------------------------------------------
+
+Focus on: 400m (primary open), 4x100m (relay)
+
+Rank | Event    | Why
+-----|----------|-----------------------------------------------------------
+1    | 400m     | Beats 100m (36–22) and crushes 200m (102–25) on nationals
+     |          | margin. Best open sprint for clearing-capable women. Smallest
+     |          | open clearing pool among 100/200/400 (23 clearers).
+2    | 4x100m   | Wins all individual×relay margin comparisons (e.g. vs. 100m
+     |          | 124–12, vs. 400m 48–15). Best relay focus. Crowded field
+     |          | (105 clearers) — spread talent, don't concentrate everyone here.
+3    | 100m     | Beats 200m on margin (157–46). For athletes whose 100m margin
+     |          | exceeds 400m.
+     | Secondary:| 4x400m — more viable than for men, but loses to 4x100 on
+     |          | margin (67–41). Second relay, not primary.
+     | Avoid:   | 200m — loses margin to both 100m and 400m. Weakest open sprint
+     |          | for clearing-capable athletes.
+
+Coaching read: Women's clearing-capable sprinters → 400m individually, 4x100 as
+the A relay. Open 100m/200m only when margin data clearly supports it.
+
+
+--------------------------------------------------------------------------------
+Distance
+--------------------------------------------------------------------------------
+
+Focus on: Steeplechase, then 5000m, then 4x400m / 1500m
+
+Rank | Event              | Why
+-----|--------------------|------------------------------------------------------
+1    | 3000m Steeplechase | Overwhelming margin advantage vs. 1500m (75–6), 5000m
+     |                    | (40–4), and 800m (45–7). Beats 4x400 (30–23). Lowest
+     |                    | individual distance bar under corrected WA (~752 vs.
+     |                    | 760–808 for 800/1500/5000) — still the margin leader.
+2    | 5000m              | Beats 1500m (79–65) and 800m (58–27). Beats 4x400
+     |                    | (42–29). Best individual target for non-steeple distance
+     |                    | runners.
+3    | 4x400m             | Beats 1500m on margin (74–58) among dual athletes. Viable
+     |                    | relay for clearing milers who aren't 5K/steeple types.
+4    | 1500m              | Beats 800m (178–90). Default for milers who don't have
+     |                    | stronger margins at 5K, steeple, or 4x400.
+     | Avoid:             | 800m — loses margin to 1500m, 5000m, and steeple. Weakest
+     |                    | individual distance bet.
+
+Coaching read: Steeple → 5K → 4x400/1500m hierarchy. Don't default milers to
+800m even when they clear it.
+
+
+--------------------------------------------------------------------------------
+Hurdles
+--------------------------------------------------------------------------------
+
+Focus on: 400m Hurdles
+
+Rank | Event        | Why
+-----|--------------|----------------------------------------------------------
+1    | 400m Hurdles | Best margin in the group: beats 100mH (26–18), beats 4x400
+     |              | strongly (25–9), beats 4x100 (17–13). Highest clear rate
+     |              | among women's hurdle events (40%).
+2    | 100m Hurdles | For sprint-hurdle specialists. Loses to 400mH on margin but
+     |              | still clearing-viable.
+3    | 4x100m       | Beats 100mH on margin (25–21). Relay option for hurdlers with
+     |              | speed.
+     | Avoid:       | 4x400m as primary — loses margin to 400mH (9–25). Not the
+     |              | focus for best clearing hurdlers.
+
+Coaching read: Clearing-capable women hurdlers should almost all default to
+400mH unless exclusively a 100mH athlete.
+
+
+--------------------------------------------------------------------------------
+Jumps
+--------------------------------------------------------------------------------
+
+Focus on: High Jump, then Triple Jump
+
+Rank | Event       | Why
+-----|-------------|-----------------------------------------------------------
+1    | High Jump   | Best margin among women's jumps: beats long jump (24–15) and
+     |             | beats triple jump (12–6). Lowest bar (~681 WA).
+2    | Triple Jump | Beats long jump (33–13) and 4x400 (10–2). Second choice for
+     |             | dual horizontal/high jump athletes.
+3    | 4x100m      | Margin roughly even with high jump (13–14). Only for fast
+     |             | jumpers where relay adds team value.
+     | Avoid:      | Long Jump — loses margin to both high jump and triple. Highest
+     |             | bar among jumps (~760 WA).
+
+Coaching read: Unlike men (triple first), women's clearing-capable jumpers should
+lead with high jump, then triple.
+
+
+--------------------------------------------------------------------------------
+Throws
+--------------------------------------------------------------------------------
+
+Focus on: Discus, then Shot Put
+
+Rank | Event    | Why
+-----|----------|-----------------------------------------------------------
+1    | Discus   | Beats shot on margin (41–32). Beats 4x400 (6–1). Lowest bar in
+     |          | women's track (~504 WA) — clearing-capable discus throwers often
+     |          | have the largest margin in the group.
+2    | Shot Put | Secondary for dual throwers. Still viable (20% population clear
+     |          | rate).
+     | Avoid:   | Javelin / Hammer — zero clearers in dataset.
+
+
+================================================================================
+CROSS-CUTTING STRATEGY — MANY CLEARING-CAPABLE ATHLETES
+================================================================================
+
+Clear rate no longer drives placement — margins and field density do.
+
+Principle              | Application
+-----------------------|--------------------------------------------------------
+Spread, don't stack    | Many clearing athletes in one event (especially 4x100,
+                       | 1500m) means internal competition for 8 spots. Assign by
+                       | margin strength across events.
+Margin > best WA       | 4x400 often shows highest WA but weaker conversion; for
+                       | clearing athletes, use RQ1C margin head-to-heads instead.
+Smaller pools = edge   | Steeple, 400m (women sprints), 400mH, triple (men), high
+                       | jump (women), discus (women) have fewer clearing
+                       | competitors.
+Relays are team slots  | Staff 4x100 from clearing sprinters/hurdlers; don't let
+                       | relay WA pull distance/field specialists off their best
+                       | individual margin event.
+Season structure       | Still build volume early and sharpen late (~half peak in
+                       | final 25% of schedule). Event choice changes; timing doesn't.
+
+
+QUICK REFERENCE — CLEARING-CAPABLE ATHLETE FOCUS
+-------------------------------------------------
+
+Group     | Men — focus here              | Women — focus here
+----------|-------------------------------|----------------------------------
+Sprints   | 400m, 4x100                   | 400m, 4x100
+Distance  | Steeple → 5000m → 1500m       | Steeple → 5000m → 4x400/1500m
+Hurdles   | 400mH, 4x100                  | 400mH
+Jumps     | Triple → High                 | High → Triple
+Throws    | Shot → Discus                 | Discus → Shot
+
+
+SHIFT FROM CLEAR-RATE REPORT
+----------------------------
+
+When everyone clears, stop chasing accessible bars and start chasing where your
+athletes are furthest above the line with the fewest rivals — and spread them so
+your team isn't fighting itself for the same eight places.
+
+See also: New_Steeplechase_Data/Coaches_Analysis/Nationals_Scoring_Focus_Men_Women.txt
+(clear-rate framing for rosters still building toward the nationals bar).
+
+Source: RQ1B nationals 8th-place thresholds, RQ1C nationals-margin head-to-
+heads, clearing-pool counts — relay-inclusive outdoor 2024–2026 (March 1+).
+Distance/steeple from New_Steeplechase_Data; other groups from Relays_Findings.

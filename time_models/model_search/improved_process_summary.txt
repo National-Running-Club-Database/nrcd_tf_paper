@@ -1,0 +1,115 @@
+Improved Cross-Event Time Models — Process Guide
+==============================================
+
+Generated from 5-fold CV model search (time_models/model_search/).
+Baseline: linear OLS in time_models/cross_event_time_models.csv.
+Data: outdoor 2024–2026, March 1+, steeplechase excluded.
+
+SUMMARY
+-------
+20 of 24 event pairs beat simple linear regression by >0.01s (CV median |error|).
+Largest gains come from using TWO known marks (multivariate) or speed-binned
+ratios for long cross-event hops (100m->400m, 800m->5000m).
+
+
+UNIFIED PREDICTION PROCESS
+--------------------------
+
+Step 1 — List what the athlete has actually run (season PB times).
+
+Step 2 — Choose model tier by available inputs:
+
+  TIER A: Two known events bracketing the target (best accuracy)
+  -----------------------------------------------------------
+  Use multivariate OLS when both predictor events are available:
+
+  Men 100m + 200m -> 400m:
+    400m_pred = 5.39 − 0.770×100m + 2.432×200m
+    CV median |error| ≈ 1.34s  (vs 1.99s linear from 100m alone)
+
+  Men 800m + 1500m -> 5000m:
+    5000m_pred = 48.46 + 0.032×800m + 3.624×1500m
+    CV median |error| ≈ 25.6s  (vs 41.8s linear from 800m alone)
+
+  Women 800m + 1500m -> 5000m:
+    Use chain via 1500m (1500m-only path after mid prediction); CV ≈ 33.3s
+    (vs 48.2s linear from 800m alone). Multivariate also available.
+
+  If only the intermediate + target are known (e.g. 200m + 400m), use the
+  single-input best model for that pair from best_time_models.csv.
+
+
+  TIER B: One known event — use pair-specific winner from best_time_models.csv
+  ---------------------------------------------------------------------------
+  Model types that won most often:
+
+  • median_ratio:     to = from × median(to/from)
+                      Won: men 100->200, women 100->200, women 200->400,
+                            women 5000->800
+
+  • binned_ratio:     to = from × ratio_bin(from)
+                      Speed bins use median ratio within PB-speed cohort.
+                      Won: men 200->400, women 100->400, men 5000->800
+
+  • ratio_linear:     to = from × (a + b×from)
+                      Won: women 800->1500, women 1500->800
+
+  • robust_trimmed_linear: OLS after removing outliers (>2.5× median |residual|)
+                      Won: many inverse/long-to-short pairs (400->200, etc.)
+
+  • quadratic:        to = a + b×from + c×from²
+                      Won: men 200m -> 100m
+
+  • log_linear:       to = exp(a + b×log(from))
+                      Won: women 400m -> 100m
+
+  • linear_ols:       Keep baseline when it wins (men 800->1500, women 1500->5000)
+
+
+  TIER C: Apply uncertainty band
+  ------------------------------
+  After point prediction, use CV median |error| from best_time_models.csv as a
+  typical ± band. Example: men 100m+200m -> 400m pred ± ~1.3s.
+
+
+Step 3 — Convert predicted TIME to WA in the TARGET event table (not source event).
+
+Step 4 — Compare WA margin vs RQ1B nationals 8th-place threshold for target event.
+
+
+WHEN EACH APPROACH HELPS MOST
+-----------------------------
+
+| Situation | Better than linear? | Recommended model |
+|-----------|--------------------|-------------------|
+| Predict 400m, have 100m+200m | Yes (~0.65s men) | multivariate_ols |
+| Predict 5000m, have 800m+1500m | Yes (~16s men) | multivariate_ols |
+| Predict 400m, have 100m only | Moderate | binned_ratio (women) or linear (men) |
+| Predict 400m, have 200m only | Small | binned_ratio (men) or median_ratio (women) |
+| Adjacent sprint (100<->200) | Small (~0.03s) | median_ratio or linear |
+| 800m <-> 1500m | Small | linear (men) or ratio_linear (women) |
+
+
+KEY INSIGHT
+-----------
+The improved process is NOT one formula for all pairs. It is a decision tree:
+
+  1. Two predictors available?  -> multivariate OLS (if validated for pair)
+  2. Long hop single input?     -> binned_ratio or median_ratio
+  3. Inverse / endurance curve? -> robust_trimmed_linear or ratio_linear
+  4. Else                       -> linear_ols (still strong for adjacent events)
+
+Cross-event WA comparison remains invalid; always predict TIME first, then
+score in the target event.
+
+
+FILES IN model_search/
+----------------------
+  compare_time_model_candidates.py   — reruns search
+  model_comparison_all_candidates.csv — all models × all pairs
+  best_time_models.csv               — winning model per pair
+  model_search_report.txt            — full CV comparison report
+  improved_process_summary.txt       — this file
+
+Regenerate:
+  python3 time_models/model_search/compare_time_model_candidates.py

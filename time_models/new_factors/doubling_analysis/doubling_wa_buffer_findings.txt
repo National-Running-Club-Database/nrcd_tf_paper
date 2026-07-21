@@ -1,0 +1,14 @@
+Doubling WA Buffer — Findings
+=============================
+
+Use case: time-model prediction for an event that is 2nd+ of the day.
+Proxy: within-athlete mean WA on same-day doubles vs solo days.
+
+Sprints: median drop 8.25 WA (typical buffer −10; conservative −55).
+Distance: median drop 33.5 WA (typical buffer −35; conservative −75).
+
+Verdict: YES apply a WA buffer; YES use different buffers for
+Sprints (~−10) vs Distance (~−35).
+
+See doubling_wa_buffer_report.txt for method and band splits.
+Source: analyze_doubling_wa_buffer.py

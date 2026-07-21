@@ -1,0 +1,255 @@
+gender,event_group,from_event,to_event,factor,n,r,factor_levels,cv_pooled,cv_bal_spec,cv_factor,cv_joint,delta_factor_vs_pooled,delta_factor_vs_bal_spec,delta_joint_vs_pooled,delta_joint_vs_bal_spec,best_strategy
+Men,Sprints,100m,200m,ability_tier,74,0.8965,"{""ability_low"": 37, ""ability_high"": 37}",0.4355,0.4152,0.4186,0.4267,0.0169,-0.0034,0.0088,-0.0115,bal_spec
+Men,Sprints,100m,200m,season_span,74,0.8965,"{""span_long"": 44, ""span_short"": 30}",0.4355,0.4152,0.3888,0.4001,0.0467,0.0264,0.0354,0.0151,factor
+Men,Sprints,100m,200m,meet_volume,74,0.8965,"{""meets_many"": 51, ""meets_few"": 23}",0.4355,0.4152,0.4041,0.4237,0.0314,0.0111,0.0118,-0.0085,factor
+Men,Sprints,100m,200m,events_competed,74,0.8965,"{""events_2"": 38, ""events_3plus"": 36}",0.4355,0.4152,0.3791,0.3955,0.0564,0.0361,0.04,0.0197,factor
+Men,Sprints,100m,200m,race_count,74,0.8965,"{""races_5"": 41, ""races_6"": 33}",0.4355,0.4152,0.4708,0.4426,-0.0353,-0.0556,-0.0071,-0.0274,bal_spec
+Men,Sprints,100m,200m,season_year,74,0.8965,"{""year_2024"": 32, ""year_2025"": 23, ""year_2026"": 19}",0.4355,0.4152,0.4525,0.4669,-0.017,-0.0373,-0.0315,-0.0517,bal_spec
+Men,Sprints,100m,200m,nationals,74,0.8965,"{""nationals_no"": 18, ""nationals_yes"": 56}",0.4355,0.4152,0.4195,0.4563,0.016,-0.0043,-0.0208,-0.0411,bal_spec
+Men,Sprints,100m,200m,best_is_from,74,0.8965,"{""best_is_from"": 39, ""best_not_from"": 35}",0.4355,0.4152,0.238,0.2658,0.1975,0.1772,0.1697,0.1494,factor
+Men,Sprints,100m,200m,best_is_to,74,0.8965,"{""best_not_to"": 44, ""best_is_to"": 30}",0.4355,0.4152,0.2544,0.2952,0.1811,0.1608,0.1403,0.12,factor
+Men,Sprints,100m,200m,predict_to_best,74,0.8965,"{""to_nonbest"": 44, ""to_best"": 30}",0.4355,0.4152,0.2544,0.2952,0.1811,0.1608,0.1403,0.12,factor
+Men,Sprints,100m,200m,pair_wa_gap_median,74,0.8965,"{""pair_gap_small"": 36, ""pair_gap_large"": 38}",0.4355,0.4152,0.435,0.365,0.0005,-0.0198,0.0705,0.0502,joint
+Men,Sprints,100m,200m,pair_wa_gap_50,74,0.8965,"{""pair_gap_lt50"": 43, ""pair_gap_ge50"": 31}",0.4355,0.4152,0.3945,0.4056,0.041,0.0207,0.0299,0.0096,factor
+Men,Sprints,100m,200m,from_stronger_wa,74,0.8965,"{""from_stronger_wa"": 40, ""from_weaker_wa"": 34}",0.4355,0.4152,0.2571,0.2634,0.1784,0.1581,0.1721,0.1518,factor
+Men,Sprints,100m,200m,source_ability,74,0.8965,"{""from_wa_low"": 37, ""from_wa_high"": 37}",0.4355,0.4152,0.4538,0.4708,-0.0183,-0.0386,-0.0354,-0.0556,bal_spec
+Men,Sprints,100m,200m,wa_spread_tertile,74,0.8965,"{""spread_low"": 24, ""spread_high"": 24, ""spread_mid"": 26}",0.4355,0.4152,0.4955,0.4827,-0.06,-0.0803,-0.0472,-0.0675,bal_spec
+Men,Sprints,100m,200m,best_event,74,0.8965,"{""best_100m"": 39, ""best_200m"": 30, ""best_400m"": 5}",0.4355,0.4152,0.2404,0.2765,0.1951,0.1748,0.159,0.1387,factor
+Men,Sprints,100m,400m,ability_tier,36,0.7379,"{""ability_low"": 18, ""ability_high"": 18}",1.8203,1.4315,2.5134,2.0863,-0.6931,-1.0819,-0.2659,-0.6547,bal_spec
+Men,Sprints,100m,400m,season_span,36,0.7379,"{""span_long"": 22, ""span_short"": 14}",1.8203,1.4315,2.0468,1.9416,-0.2264,-0.6152,-0.1212,-0.51,bal_spec
+Men,Sprints,100m,400m,meet_volume,36,0.7379,"{""meets_many"": 20, ""meets_few"": 16}",1.8203,1.4315,1.6293,2.1814,0.191,-0.1978,-0.3611,-0.7499,bal_spec
+Men,Sprints,100m,400m,race_count,36,0.7379,"{""races_6"": 16, ""races_5"": 20}",1.8203,1.4315,1.8545,1.8254,-0.0342,-0.423,-0.005,-0.3938,bal_spec
+Men,Sprints,100m,400m,season_year,36,0.7379,"{""year_2024"": 16, ""year_2025"": 11, ""year_2026"": 9}",1.8203,1.4315,1.8203,1.4315,0.0,-0.3888,0.3888,0.0,bal_spec
+Men,Sprints,100m,400m,nationals,36,0.7379,"{""nationals_no"": 10, ""nationals_yes"": 26}",1.8203,1.4315,2.0863,1.774,-0.2659,-0.6547,0.0463,-0.3425,bal_spec
+Men,Sprints,100m,400m,best_is_from,36,0.7379,"{""best_not_from"": 23, ""best_is_from"": 13}",1.8203,1.4315,1.2876,1.6249,0.5327,0.1439,0.1955,-0.1933,factor
+Men,Sprints,100m,400m,best_is_to,36,0.7379,"{""best_not_to"": 31, ""best_is_to"": 5}",1.8203,1.4315,1.4934,1.9347,0.327,-0.0618,-0.1143,-0.5031,bal_spec
+Men,Sprints,100m,400m,predict_to_best,36,0.7379,"{""to_nonbest"": 31, ""to_best"": 5}",1.8203,1.4315,1.4934,1.9347,0.327,-0.0618,-0.1143,-0.5031,bal_spec
+Men,Sprints,100m,400m,pair_wa_gap_median,36,0.7379,"{""pair_gap_large"": 18, ""pair_gap_small"": 18}",1.8203,1.4315,1.2489,1.386,0.5715,0.1827,0.4343,0.0455,factor
+Men,Sprints,100m,400m,pair_wa_gap_50,36,0.7379,"{""pair_gap_ge50"": 23, ""pair_gap_lt50"": 13}",1.8203,1.4315,1.2672,1.2672,0.5532,0.1644,0.5532,0.1644,factor
+Men,Sprints,100m,400m,from_stronger_wa,36,0.7379,"{""from_weaker_wa"": 12, ""from_stronger_wa"": 24}",1.8203,1.4315,1.6467,1.7418,0.1737,-0.2151,0.0785,-0.3103,bal_spec
+Men,Sprints,100m,400m,source_ability,36,0.7379,"{""from_wa_low"": 18, ""from_wa_high"": 18}",1.8203,1.4315,1.9446,1.9114,-0.1242,-0.513,-0.091,-0.4798,bal_spec
+Men,Sprints,100m,400m,wa_spread_tertile,36,0.7379,"{""spread_high"": 11, ""spread_low"": 12, ""spread_mid"": 13}",1.8203,1.4315,1.8203,1.4315,0.0,-0.3888,0.3888,0.0,bal_spec
+Men,Sprints,100m,400m,best_event,36,0.7379,"{""best_200m"": 18, ""best_100m"": 13, ""best_400m"": 5}",1.8203,1.4315,1.774,1.9416,0.0463,-0.3425,-0.1212,-0.51,bal_spec
+Men,Sprints,200m,100m,ability_tier,74,0.8965,"{""ability_low"": 37, ""ability_high"": 37}",0.1859,0.1685,0.1882,0.1909,-0.0024,-0.0197,-0.005,-0.0223,bal_spec
+Men,Sprints,200m,100m,season_span,74,0.8965,"{""span_long"": 44, ""span_short"": 30}",0.1859,0.1685,0.1796,0.1949,0.0063,-0.0111,-0.009,-0.0264,bal_spec
+Men,Sprints,200m,100m,meet_volume,74,0.8965,"{""meets_many"": 51, ""meets_few"": 23}",0.1859,0.1685,0.207,0.1502,-0.0211,-0.0384,0.0357,0.0183,joint
+Men,Sprints,200m,100m,events_competed,74,0.8965,"{""events_2"": 38, ""events_3plus"": 36}",0.1859,0.1685,0.1834,0.173,0.0025,-0.0149,0.0129,-0.0045,bal_spec
+Men,Sprints,200m,100m,race_count,74,0.8965,"{""races_5"": 41, ""races_6"": 33}",0.1859,0.1685,0.2059,0.2049,-0.02,-0.0373,-0.019,-0.0363,bal_spec
+Men,Sprints,200m,100m,season_year,74,0.8965,"{""year_2024"": 32, ""year_2025"": 23, ""year_2026"": 19}",0.1859,0.1685,0.2353,0.1858,-0.0494,-0.0668,0.0001,-0.0172,bal_spec
+Men,Sprints,200m,100m,nationals,74,0.8965,"{""nationals_no"": 18, ""nationals_yes"": 56}",0.1859,0.1685,0.1922,0.1922,-0.0063,-0.0237,-0.0063,-0.0237,bal_spec
+Men,Sprints,200m,100m,best_is_from,74,0.8965,"{""best_not_from"": 44, ""best_is_from"": 30}",0.1859,0.1685,0.1197,0.1323,0.0662,0.0489,0.0536,0.0362,factor
+Men,Sprints,200m,100m,best_is_to,74,0.8965,"{""best_is_to"": 39, ""best_not_to"": 35}",0.1859,0.1685,0.1185,0.136,0.0674,0.05,0.0499,0.0325,factor
+Men,Sprints,200m,100m,predict_to_best,74,0.8965,"{""to_best"": 39, ""to_nonbest"": 35}",0.1859,0.1685,0.1185,0.136,0.0674,0.05,0.0499,0.0325,factor
+Men,Sprints,200m,100m,pair_wa_gap_median,74,0.8965,"{""pair_gap_small"": 36, ""pair_gap_large"": 38}",0.1859,0.1685,0.1513,0.1506,0.0346,0.0172,0.0353,0.0179,joint
+Men,Sprints,200m,100m,pair_wa_gap_50,74,0.8965,"{""pair_gap_lt50"": 43, ""pair_gap_ge50"": 31}",0.1859,0.1685,0.1505,0.1492,0.0354,0.018,0.0367,0.0193,joint
+Men,Sprints,200m,100m,from_stronger_wa,74,0.8965,"{""from_weaker_wa"": 40, ""from_stronger_wa"": 34}",0.1859,0.1685,0.132,0.1194,0.0539,0.0366,0.0665,0.0492,joint
+Men,Sprints,200m,100m,source_ability,74,0.8965,"{""from_wa_low"": 37, ""from_wa_high"": 37}",0.1859,0.1685,0.1881,0.1701,-0.0022,-0.0195,0.0158,-0.0016,bal_spec
+Men,Sprints,200m,100m,wa_spread_tertile,74,0.8965,"{""spread_low"": 24, ""spread_high"": 24, ""spread_mid"": 26}",0.1859,0.1685,0.2049,0.2083,-0.019,-0.0364,-0.0224,-0.0397,bal_spec
+Men,Sprints,200m,100m,best_event,74,0.8965,"{""best_100m"": 39, ""best_200m"": 30, ""best_400m"": 5}",0.1859,0.1685,0.1122,0.1309,0.0737,0.0564,0.055,0.0376,factor
+Men,Sprints,200m,400m,ability_tier,56,0.7951,"{""ability_low"": 28, ""ability_high"": 28}",1.0542,0.7571,1.0741,1.1186,-0.0198,-0.317,-0.0643,-0.3615,bal_spec
+Men,Sprints,200m,400m,season_span,56,0.7951,"{""span_long"": 35, ""span_short"": 21}",1.0542,0.7571,0.9726,0.9726,0.0816,-0.2155,0.0816,-0.2155,bal_spec
+Men,Sprints,200m,400m,meet_volume,56,0.7951,"{""meets_many"": 40, ""meets_few"": 16}",1.0542,0.7571,0.8163,0.8163,0.238,-0.0592,0.238,-0.0592,bal_spec
+Men,Sprints,200m,400m,events_competed,56,0.7951,"{""events_3plus"": 36, ""events_2"": 20}",1.0542,0.7571,0.743,0.7904,0.3113,0.0141,0.2639,-0.0333,factor
+Men,Sprints,200m,400m,race_count,56,0.7951,"{""races_6"": 22, ""races_5"": 34}",1.0542,0.7571,1.3441,1.2443,-0.2899,-0.5871,-0.19,-0.4872,bal_spec
+Men,Sprints,200m,400m,season_year,56,0.7951,"{""year_2024"": 30, ""year_2025"": 14, ""year_2026"": 12}",1.0542,0.7571,0.9091,0.8079,0.1452,-0.152,0.2463,-0.0508,bal_spec
+Men,Sprints,200m,400m,nationals,56,0.7951,"{""nationals_no"": 16, ""nationals_yes"": 40}",1.0542,0.7571,0.8561,0.9166,0.1982,-0.099,0.1376,-0.1595,bal_spec
+Men,Sprints,200m,400m,best_is_from,56,0.7951,"{""best_is_from"": 29, ""best_not_from"": 27}",1.0542,0.7571,0.9068,0.7908,0.1474,-0.1498,0.2635,-0.0337,bal_spec
+Men,Sprints,200m,400m,best_is_to,56,0.7951,"{""best_not_to"": 42, ""best_is_to"": 14}",1.0542,0.7571,1.005,1.005,0.0492,-0.2479,0.0492,-0.2479,bal_spec
+Men,Sprints,200m,400m,predict_to_best,56,0.7951,"{""to_nonbest"": 42, ""to_best"": 14}",1.0542,0.7571,1.005,1.005,0.0492,-0.2479,0.0492,-0.2479,bal_spec
+Men,Sprints,200m,400m,pair_wa_gap_median,56,0.7951,"{""pair_gap_small"": 28, ""pair_gap_large"": 28}",1.0542,0.7571,0.6592,0.6628,0.395,0.0979,0.3914,0.0942,factor
+Men,Sprints,200m,400m,pair_wa_gap_50,56,0.7951,"{""pair_gap_lt50"": 25, ""pair_gap_ge50"": 31}",1.0542,0.7571,0.6396,0.6396,0.4146,0.1175,0.4146,0.1175,factor
+Men,Sprints,200m,400m,from_stronger_wa,56,0.7951,"{""from_stronger_wa"": 41, ""from_weaker_wa"": 15}",1.0542,0.7571,0.9074,0.954,0.1468,-0.1504,0.1002,-0.197,bal_spec
+Men,Sprints,200m,400m,source_ability,56,0.7951,"{""from_wa_low"": 28, ""from_wa_high"": 28}",1.0542,0.7571,0.9138,0.9138,0.1405,-0.1567,0.1405,-0.1567,bal_spec
+Men,Sprints,200m,400m,wa_spread_tertile,56,0.7951,"{""spread_high"": 18, ""spread_low"": 18, ""spread_mid"": 20}",1.0542,0.7571,0.7692,0.7678,0.2851,-0.0121,0.2864,-0.0108,bal_spec
+Men,Sprints,200m,400m,best_event,56,0.7951,"{""best_200m"": 29, ""best_400m"": 14, ""best_100m"": 13}",1.0542,0.7571,0.9439,0.8771,0.1103,-0.1868,0.1771,-0.12,bal_spec
+Men,Sprints,400m,100m,ability_tier,36,0.7379,"{""ability_low"": 18, ""ability_high"": 18}",0.3113,0.3215,0.3934,0.2771,-0.0821,-0.072,0.0342,0.0443,joint
+Men,Sprints,400m,100m,season_span,36,0.7379,"{""span_long"": 22, ""span_short"": 14}",0.3113,0.3215,0.3609,0.3625,-0.0496,-0.0394,-0.0512,-0.0411,pooled
+Men,Sprints,400m,100m,meet_volume,36,0.7379,"{""meets_many"": 20, ""meets_few"": 16}",0.3113,0.3215,0.3214,0.3451,-0.0101,0.0001,-0.0338,-0.0237,pooled
+Men,Sprints,400m,100m,race_count,36,0.7379,"{""races_6"": 16, ""races_5"": 20}",0.3113,0.3215,0.2834,0.32,0.0279,0.038,-0.0087,0.0014,factor
+Men,Sprints,400m,100m,season_year,36,0.7379,"{""year_2024"": 16, ""year_2025"": 11, ""year_2026"": 9}",0.3113,0.3215,0.3205,0.3215,-0.0092,0.0009,-0.0102,0.0,pooled
+Men,Sprints,400m,100m,nationals,36,0.7379,"{""nationals_no"": 10, ""nationals_yes"": 26}",0.3113,0.3215,0.3429,0.3552,-0.0316,-0.0214,-0.0439,-0.0337,pooled
+Men,Sprints,400m,100m,best_is_from,36,0.7379,"{""best_not_from"": 31, ""best_is_from"": 5}",0.3113,0.3215,0.2928,0.314,0.0185,0.0287,-0.0026,0.0075,factor
+Men,Sprints,400m,100m,best_is_to,36,0.7379,"{""best_not_to"": 23, ""best_is_to"": 13}",0.3113,0.3215,0.3516,0.2993,-0.0403,-0.0301,0.0121,0.0222,joint
+Men,Sprints,400m,100m,predict_to_best,36,0.7379,"{""to_nonbest"": 23, ""to_best"": 13}",0.3113,0.3215,0.3516,0.2993,-0.0403,-0.0301,0.0121,0.0222,joint
+Men,Sprints,400m,100m,pair_wa_gap_median,36,0.7379,"{""pair_gap_large"": 18, ""pair_gap_small"": 18}",0.3113,0.3215,0.2766,0.2766,0.0347,0.0449,0.0347,0.0449,factor
+Men,Sprints,400m,100m,pair_wa_gap_50,36,0.7379,"{""pair_gap_ge50"": 23, ""pair_gap_lt50"": 13}",0.3113,0.3215,0.3142,0.3142,-0.0029,0.0073,-0.0029,0.0073,pooled
+Men,Sprints,400m,100m,from_stronger_wa,36,0.7379,"{""from_stronger_wa"": 13, ""from_weaker_wa"": 23}",0.3113,0.3215,0.222,0.2613,0.0893,0.0994,0.05,0.0601,factor
+Men,Sprints,400m,100m,source_ability,36,0.7379,"{""from_wa_high"": 18, ""from_wa_low"": 18}",0.3113,0.3215,0.3587,0.3223,-0.0474,-0.0372,-0.011,-0.0009,pooled
+Men,Sprints,400m,100m,wa_spread_tertile,36,0.7379,"{""spread_high"": 11, ""spread_low"": 12, ""spread_mid"": 13}",0.3113,0.3215,0.3266,0.3221,-0.0153,-0.0052,-0.0108,-0.0006,pooled
+Men,Sprints,400m,100m,best_event,36,0.7379,"{""best_200m"": 18, ""best_100m"": 13, ""best_400m"": 5}",0.3113,0.3215,0.3476,0.3265,-0.0363,-0.0261,-0.0152,-0.005,pooled
+Men,Sprints,400m,200m,ability_tier,56,0.7951,"{""ability_low"": 28, ""ability_high"": 28}",0.4238,0.3588,0.5194,0.5178,-0.0957,-0.1607,-0.094,-0.159,bal_spec
+Men,Sprints,400m,200m,season_span,56,0.7951,"{""span_long"": 35, ""span_short"": 21}",0.4238,0.3588,0.4473,0.4569,-0.0235,-0.0885,-0.0331,-0.0981,bal_spec
+Men,Sprints,400m,200m,meet_volume,56,0.7951,"{""meets_many"": 40, ""meets_few"": 16}",0.4238,0.3588,0.366,0.3587,0.0578,-0.0072,0.065,0.0,joint
+Men,Sprints,400m,200m,events_competed,56,0.7951,"{""events_3plus"": 36, ""events_2"": 20}",0.4238,0.3588,0.554,0.4397,-0.1302,-0.1952,-0.0159,-0.0809,bal_spec
+Men,Sprints,400m,200m,race_count,56,0.7951,"{""races_6"": 22, ""races_5"": 34}",0.4238,0.3588,0.4376,0.4417,-0.0138,-0.0788,-0.018,-0.083,bal_spec
+Men,Sprints,400m,200m,season_year,56,0.7951,"{""year_2024"": 30, ""year_2025"": 14, ""year_2026"": 12}",0.4238,0.3588,0.4265,0.3675,-0.0027,-0.0677,0.0563,-0.0087,bal_spec
+Men,Sprints,400m,200m,nationals,56,0.7951,"{""nationals_no"": 16, ""nationals_yes"": 40}",0.4238,0.3588,0.5331,0.4959,-0.1093,-0.1743,-0.0721,-0.1371,bal_spec
+Men,Sprints,400m,200m,best_is_from,56,0.7951,"{""best_not_from"": 42, ""best_is_from"": 14}",0.4238,0.3588,0.4297,0.327,-0.006,-0.0709,0.0968,0.0318,joint
+Men,Sprints,400m,200m,best_is_to,56,0.7951,"{""best_is_to"": 29, ""best_not_to"": 27}",0.4238,0.3588,0.4191,0.3787,0.0047,-0.0603,0.045,-0.0199,bal_spec
+Men,Sprints,400m,200m,predict_to_best,56,0.7951,"{""to_best"": 29, ""to_nonbest"": 27}",0.4238,0.3588,0.4191,0.3787,0.0047,-0.0603,0.045,-0.0199,bal_spec
+Men,Sprints,400m,200m,pair_wa_gap_median,56,0.7951,"{""pair_gap_small"": 28, ""pair_gap_large"": 28}",0.4238,0.3588,0.2946,0.2863,0.1291,0.0642,0.1374,0.0725,joint
+Men,Sprints,400m,200m,pair_wa_gap_50,56,0.7951,"{""pair_gap_lt50"": 25, ""pair_gap_ge50"": 31}",0.4238,0.3588,0.31,0.3192,0.1138,0.0488,0.1045,0.0395,factor
+Men,Sprints,400m,200m,from_stronger_wa,56,0.7951,"{""from_weaker_wa"": 41, ""from_stronger_wa"": 15}",0.4238,0.3588,0.3889,0.3539,0.0349,-0.0301,0.0699,0.0049,joint
+Men,Sprints,400m,200m,source_ability,56,0.7951,"{""from_wa_low"": 28, ""from_wa_high"": 28}",0.4238,0.3588,0.5194,0.5036,-0.0957,-0.1607,-0.0798,-0.1448,bal_spec
+Men,Sprints,400m,200m,wa_spread_tertile,56,0.7951,"{""spread_high"": 18, ""spread_low"": 18, ""spread_mid"": 20}",0.4238,0.3588,0.2891,0.3016,0.1347,0.0697,0.1221,0.0572,factor
+Men,Sprints,400m,200m,best_event,56,0.7951,"{""best_200m"": 29, ""best_400m"": 14, ""best_100m"": 13}",0.4238,0.3588,0.4129,0.3397,0.0108,-0.0541,0.0841,0.0191,joint
+Women,Sprints,100m,200m,ability_tier,37,0.9289,"{""ability_low"": 17, ""ability_high"": 20}",0.5032,0.5615,0.3639,0.4093,0.1394,0.1976,0.0939,0.1521,factor
+Women,Sprints,100m,200m,season_span,37,0.9289,"{""span_short"": 18, ""span_long"": 19}",0.5032,0.5615,0.5805,0.5158,-0.0773,-0.019,-0.0126,0.0456,pooled
+Women,Sprints,100m,200m,meet_volume,37,0.9289,"{""meets_few"": 9, ""meets_many"": 28}",0.5032,0.5615,0.5295,0.5615,-0.0262,0.032,-0.0582,0.0,pooled
+Women,Sprints,100m,200m,events_competed,37,0.9289,"{""events_2"": 26, ""events_3plus"": 11}",0.5032,0.5615,0.4717,0.4608,0.0316,0.0898,0.0425,0.1007,joint
+Women,Sprints,100m,200m,race_count,37,0.9289,"{""races_5"": 25, ""races_6"": 12}",0.5032,0.5615,0.4984,0.6012,0.0049,0.0631,-0.0979,-0.0397,factor
+Women,Sprints,100m,200m,season_year,37,0.9289,"{""year_2024"": 18, ""year_2025"": 8, ""year_2026"": 11}",0.5032,0.5615,0.5032,0.617,0.0,0.0582,-0.1138,-0.0555,pooled
+Women,Sprints,100m,200m,nationals,37,0.9289,"{""nationals_no"": 7, ""nationals_yes"": 30}",0.5032,0.5615,0.4165,0.5267,0.0867,0.145,-0.0234,0.0348,factor
+Women,Sprints,100m,200m,best_is_from,37,0.9289,"{""best_is_from"": 29, ""best_not_from"": 8}",0.5032,0.5615,0.5114,0.4308,-0.0081,0.0501,0.0725,0.1307,joint
+Women,Sprints,100m,200m,best_is_to,37,0.9289,"{""best_not_to"": 36, ""best_is_to"": 1}",0.5032,0.5615,0.4984,0.5615,0.0049,0.0631,-0.0582,0.0,factor
+Women,Sprints,100m,200m,predict_to_best,37,0.9289,"{""to_nonbest"": 36, ""to_best"": 1}",0.5032,0.5615,0.4984,0.5615,0.0049,0.0631,-0.0582,0.0,factor
+Women,Sprints,100m,200m,pair_wa_gap_median,37,0.9289,"{""pair_gap_small"": 18, ""pair_gap_large"": 19}",0.5032,0.5615,0.3183,0.4308,0.1849,0.2431,0.0725,0.1307,factor
+Women,Sprints,100m,200m,pair_wa_gap_50,37,0.9289,"{""pair_gap_lt50"": 17, ""pair_gap_ge50"": 20}",0.5032,0.5615,0.2835,0.2835,0.2197,0.2779,0.2197,0.2779,factor
+Women,Sprints,100m,200m,from_stronger_wa,37,0.9289,"{""from_stronger_wa"": 30, ""from_weaker_wa"": 7}",0.5032,0.5615,0.4481,0.3791,0.0551,0.1134,0.1241,0.1824,joint
+Women,Sprints,100m,200m,source_ability,37,0.9289,"{""from_wa_low"": 18, ""from_wa_high"": 19}",0.5032,0.5615,0.3864,0.3602,0.1168,0.1751,0.1431,0.2013,joint
+Women,Sprints,100m,200m,wa_spread_tertile,37,0.9289,"{""spread_low"": 12, ""spread_mid"": 13, ""spread_high"": 12}",0.5032,0.5615,0.5032,0.5615,0.0,0.0582,-0.0582,0.0,pooled
+Women,Sprints,100m,200m,best_event,37,0.9289,"{""best_100m"": 29, ""best_400m"": 7, ""best_200m"": 1}",0.5032,0.5615,0.5114,0.4308,-0.0081,0.0501,0.0725,0.1307,joint
+Women,Sprints,200m,100m,ability_tier,37,0.9289,"{""ability_low"": 17, ""ability_high"": 20}",0.2108,0.2446,0.2171,0.2222,-0.0063,0.0275,-0.0114,0.0224,pooled
+Women,Sprints,200m,100m,season_span,37,0.9289,"{""span_short"": 18, ""span_long"": 19}",0.2108,0.2446,0.2161,0.2161,-0.0053,0.0285,-0.0053,0.0285,pooled
+Women,Sprints,200m,100m,meet_volume,37,0.9289,"{""meets_few"": 9, ""meets_many"": 28}",0.2108,0.2446,0.1226,0.1577,0.0882,0.122,0.0531,0.0869,factor
+Women,Sprints,200m,100m,events_competed,37,0.9289,"{""events_2"": 26, ""events_3plus"": 11}",0.2108,0.2446,0.2073,0.22,0.0035,0.0373,-0.0092,0.0247,factor
+Women,Sprints,200m,100m,race_count,37,0.9289,"{""races_5"": 25, ""races_6"": 12}",0.2108,0.2446,0.2108,0.2225,0.0,0.0338,-0.0117,0.0221,pooled
+Women,Sprints,200m,100m,season_year,37,0.9289,"{""year_2024"": 18, ""year_2025"": 8, ""year_2026"": 11}",0.2108,0.2446,0.2556,0.2792,-0.0448,-0.0109,-0.0684,-0.0346,pooled
+Women,Sprints,200m,100m,nationals,37,0.9289,"{""nationals_no"": 7, ""nationals_yes"": 30}",0.2108,0.2446,0.1534,0.1534,0.0574,0.0912,0.0574,0.0912,factor
+Women,Sprints,200m,100m,best_is_from,37,0.9289,"{""best_not_from"": 36, ""best_is_from"": 1}",0.2108,0.2446,0.2507,0.2507,-0.0399,-0.0061,-0.0399,-0.0061,pooled
+Women,Sprints,200m,100m,best_is_to,37,0.9289,"{""best_is_to"": 29, ""best_not_to"": 8}",0.2108,0.2446,0.2187,0.2187,-0.008,0.0259,-0.008,0.0259,pooled
+Women,Sprints,200m,100m,predict_to_best,37,0.9289,"{""to_best"": 29, ""to_nonbest"": 8}",0.2108,0.2446,0.2187,0.2187,-0.008,0.0259,-0.008,0.0259,pooled
+Women,Sprints,200m,100m,pair_wa_gap_median,37,0.9289,"{""pair_gap_small"": 18, ""pair_gap_large"": 19}",0.2108,0.2446,0.1344,0.1262,0.0764,0.1102,0.0846,0.1185,joint
+Women,Sprints,200m,100m,pair_wa_gap_50,37,0.9289,"{""pair_gap_lt50"": 17, ""pair_gap_ge50"": 20}",0.2108,0.2446,0.1113,0.1164,0.0995,0.1333,0.0944,0.1282,factor
+Women,Sprints,200m,100m,from_stronger_wa,37,0.9289,"{""from_weaker_wa"": 30, ""from_stronger_wa"": 7}",0.2108,0.2446,0.1792,0.1835,0.0316,0.0654,0.0273,0.0611,factor
+Women,Sprints,200m,100m,source_ability,37,0.9289,"{""from_wa_low"": 18, ""from_wa_high"": 19}",0.2108,0.2446,0.2058,0.1924,0.005,0.0388,0.0184,0.0522,joint
+Women,Sprints,200m,100m,wa_spread_tertile,37,0.9289,"{""spread_low"": 12, ""spread_mid"": 13, ""spread_high"": 12}",0.2108,0.2446,0.2108,0.2652,0.0,0.0338,-0.0544,-0.0205,pooled
+Women,Sprints,200m,100m,best_event,37,0.9289,"{""best_100m"": 29, ""best_400m"": 7, ""best_200m"": 1}",0.2108,0.2446,0.2187,0.2187,-0.008,0.0259,-0.008,0.0259,pooled
+Men,Distance,800m,1500m,ability_tier,113,0.8993,"{""ability_low"": 56, ""ability_high"": 57}",6.7521,5.734,6.6378,6.3191,0.1142,-0.9038,0.433,-0.5851,bal_spec
+Men,Distance,800m,1500m,season_span,113,0.8993,"{""span_short"": 40, ""span_long"": 73}",6.7521,5.734,6.5706,5.6517,0.1815,-0.8365,1.1004,0.0823,joint
+Men,Distance,800m,1500m,meet_volume,113,0.8993,"{""meets_many"": 97, ""meets_few"": 16}",6.7521,5.734,6.8015,6.7421,-0.0495,-1.0675,0.01,-1.0081,bal_spec
+Men,Distance,800m,1500m,events_competed,113,0.8993,"{""events_3plus"": 61, ""events_2"": 52}",6.7521,5.734,5.7033,4.9319,1.0488,0.0308,1.8201,0.8021,joint
+Men,Distance,800m,1500m,race_count,113,0.8993,"{""races_5"": 65, ""races_6"": 48}",6.7521,5.734,7.5196,7.0186,-0.7675,-1.7856,-0.2666,-1.2846,bal_spec
+Men,Distance,800m,1500m,season_year,113,0.8993,"{""year_2024"": 53, ""year_2025"": 26, ""year_2026"": 34}",6.7521,5.734,6.3614,5.9089,0.3907,-0.6274,0.8432,-0.1749,bal_spec
+Men,Distance,800m,1500m,nationals,113,0.8993,"{""nationals_yes"": 96, ""nationals_no"": 17}",6.7521,5.734,6.6378,6.5559,0.1142,-0.9038,0.1962,-0.8219,bal_spec
+Men,Distance,800m,1500m,best_is_from,113,0.8993,"{""best_not_from"": 77, ""best_is_from"": 36}",6.7521,5.734,4.477,3.6409,2.2751,1.2571,3.1112,2.0931,joint
+Men,Distance,800m,1500m,best_is_to,113,0.8993,"{""best_is_to"": 68, ""best_not_to"": 45}",6.7521,5.734,4.6383,4.2631,2.1138,1.0957,2.489,1.4709,joint
+Men,Distance,800m,1500m,predict_to_best,113,0.8993,"{""to_best"": 68, ""to_nonbest"": 45}",6.7521,5.734,4.6383,4.2631,2.1138,1.0957,2.489,1.4709,joint
+Men,Distance,800m,1500m,pair_wa_gap_median,113,0.8993,"{""pair_gap_small"": 55, ""pair_gap_large"": 58}",6.7521,5.734,6.1298,4.5874,0.6222,-0.3958,2.1647,1.1466,joint
+Men,Distance,800m,1500m,pair_wa_gap_50,113,0.8993,"{""pair_gap_lt50"": 37, ""pair_gap_ge50"": 76}",6.7521,5.734,4.1757,4.1432,2.5763,1.5583,2.6088,1.5908,joint
+Men,Distance,800m,1500m,from_stronger_wa,113,0.8993,"{""from_weaker_wa"": 75, ""from_stronger_wa"": 38}",6.7521,5.734,4.1757,3.7488,2.5763,1.5583,3.0033,1.9852,joint
+Men,Distance,800m,1500m,source_ability,113,0.8993,"{""from_wa_low"": 56, ""from_wa_high"": 57}",6.7521,5.734,7.4775,7.1196,-0.7255,-1.7435,-0.3676,-1.3856,bal_spec
+Men,Distance,800m,1500m,wa_spread_tertile,113,0.8993,"{""spread_low"": 37, ""spread_high"": 37, ""spread_mid"": 39}",6.7521,5.734,4.7953,4.9952,1.9567,0.9387,1.7569,0.7388,factor
+Men,Distance,800m,1500m,best_event,113,0.8993,"{""best_1500m"": 68, ""best_800m"": 36, ""best_5000m"": 9}",6.7521,5.734,4.4922,3.7759,2.2599,1.2418,2.9761,1.9581,joint
+Men,Distance,800m,5000m,ability_tier,62,0.7997,"{""ability_low"": 31, ""ability_high"": 31}",27.1834,30.758,34.7676,36.1368,-7.5842,-4.0096,-8.9534,-5.3788,pooled
+Men,Distance,800m,5000m,season_span,62,0.7997,"{""span_short"": 26, ""span_long"": 36}",27.1834,30.758,27.1126,27.1126,0.0707,3.6453,0.0707,3.6453,factor
+Men,Distance,800m,5000m,meet_volume,62,0.7997,"{""meets_many"": 46, ""meets_few"": 16}",27.1834,30.758,31.0064,31.6275,-3.823,-0.2484,-4.4442,-0.8696,pooled
+Men,Distance,800m,5000m,events_competed,62,0.7997,"{""events_3plus"": 61, ""events_2"": 1}",27.1834,30.758,32.7319,30.2504,-5.5485,-1.9739,-3.067,0.5076,pooled
+Men,Distance,800m,5000m,race_count,62,0.7997,"{""races_5"": 38, ""races_6"": 24}",27.1834,30.758,29.3822,27.5623,-2.1988,1.3757,-0.3789,3.1956,pooled
+Men,Distance,800m,5000m,season_year,62,0.7997,"{""year_2024"": 29, ""year_2025"": 12, ""year_2026"": 21}",27.1834,30.758,27.6987,31.0918,-0.5153,3.0593,-3.9084,-0.3338,pooled
+Men,Distance,800m,5000m,nationals,62,0.7997,"{""nationals_yes"": 51, ""nationals_no"": 11}",27.1834,30.758,29.9457,28.1314,-2.7624,0.8122,-0.948,2.6266,pooled
+Men,Distance,800m,5000m,best_is_from,62,0.7997,"{""best_not_from"": 55, ""best_is_from"": 7}",27.1834,30.758,29.3098,26.1965,-2.1264,1.4482,0.9869,4.5615,joint
+Men,Distance,800m,5000m,best_is_to,62,0.7997,"{""best_not_to"": 52, ""best_is_to"": 10}",27.1834,30.758,28.6982,28.3749,-1.5148,2.0598,-1.1915,2.3831,pooled
+Men,Distance,800m,5000m,predict_to_best,62,0.7997,"{""to_nonbest"": 52, ""to_best"": 10}",27.1834,30.758,28.6982,28.3749,-1.5148,2.0598,-1.1915,2.3831,pooled
+Men,Distance,800m,5000m,pair_wa_gap_median,62,0.7997,"{""pair_gap_small"": 31, ""pair_gap_large"": 31}",27.1834,30.758,18.6092,18.2324,8.5741,12.1487,8.951,12.5256,joint
+Men,Distance,800m,5000m,pair_wa_gap_50,62,0.7997,"{""pair_gap_lt50"": 22, ""pair_gap_ge50"": 40}",27.1834,30.758,17.2441,16.7667,9.9393,13.5139,10.4167,13.9913,joint
+Men,Distance,800m,5000m,from_stronger_wa,62,0.7997,"{""from_weaker_wa"": 37, ""from_stronger_wa"": 25}",27.1834,30.758,27.9508,25.4089,-0.7674,2.8071,1.7745,5.3491,joint
+Men,Distance,800m,5000m,source_ability,62,0.7997,"{""from_wa_low"": 31, ""from_wa_high"": 31}",27.1834,30.758,24.7715,24.7715,2.4119,5.9864,2.4119,5.9864,factor
+Men,Distance,800m,5000m,wa_spread_tertile,62,0.7997,"{""spread_low"": 20, ""spread_high"": 20, ""spread_mid"": 22}",27.1834,30.758,20.9255,20.9255,6.2579,9.8325,6.2579,9.8325,factor
+Men,Distance,800m,5000m,best_event,62,0.7997,"{""best_1500m"": 45, ""best_5000m"": 10, ""best_800m"": 7}",27.1834,30.758,24.8747,34.7429,2.3087,5.8833,-7.5596,-3.985,factor
+Men,Distance,1500m,800m,ability_tier,113,0.8993,"{""ability_low"": 56, ""ability_high"": 57}",3.1291,2.3615,2.989,3.0308,0.1401,-0.6274,0.0982,-0.6693,bal_spec
+Men,Distance,1500m,800m,season_span,113,0.8993,"{""span_short"": 40, ""span_long"": 73}",3.1291,2.3615,2.9394,2.7229,0.1897,-0.5779,0.4061,-0.3614,bal_spec
+Men,Distance,1500m,800m,meet_volume,113,0.8993,"{""meets_many"": 97, ""meets_few"": 16}",3.1291,2.3615,3.195,2.4095,-0.066,-0.8335,0.7196,-0.0479,bal_spec
+Men,Distance,1500m,800m,events_competed,113,0.8993,"{""events_3plus"": 61, ""events_2"": 52}",3.1291,2.3615,2.5752,2.1453,0.5539,-0.2136,0.9838,0.2163,joint
+Men,Distance,1500m,800m,race_count,113,0.8993,"{""races_5"": 65, ""races_6"": 48}",3.1291,2.3615,3.2575,2.9926,-0.1284,-0.8959,0.1365,-0.631,bal_spec
+Men,Distance,1500m,800m,season_year,113,0.8993,"{""year_2024"": 53, ""year_2025"": 26, ""year_2026"": 34}",3.1291,2.3615,2.9996,2.5531,0.1294,-0.6381,0.576,-0.1916,bal_spec
+Men,Distance,1500m,800m,nationals,113,0.8993,"{""nationals_yes"": 96, ""nationals_no"": 17}",3.1291,2.3615,3.1383,2.3615,-0.0093,-0.7768,0.7675,0.0,bal_spec
+Men,Distance,1500m,800m,best_is_from,113,0.8993,"{""best_is_from"": 68, ""best_not_from"": 45}",3.1291,2.3615,1.7151,1.8327,1.414,0.6465,1.2964,0.5288,factor
+Men,Distance,1500m,800m,best_is_to,113,0.8993,"{""best_not_to"": 77, ""best_is_to"": 36}",3.1291,2.3615,2.1746,1.9812,0.9545,0.187,1.1479,0.3803,joint
+Men,Distance,1500m,800m,predict_to_best,113,0.8993,"{""to_nonbest"": 77, ""to_best"": 36}",3.1291,2.3615,2.1746,1.9812,0.9545,0.187,1.1479,0.3803,joint
+Men,Distance,1500m,800m,pair_wa_gap_median,113,0.8993,"{""pair_gap_small"": 55, ""pair_gap_large"": 58}",3.1291,2.3615,2.1075,1.57,1.0216,0.2541,1.559,0.7915,joint
+Men,Distance,1500m,800m,pair_wa_gap_50,113,0.8993,"{""pair_gap_lt50"": 37, ""pair_gap_ge50"": 76}",3.1291,2.3615,1.7878,1.6626,1.3413,0.5737,1.4665,0.699,joint
+Men,Distance,1500m,800m,from_stronger_wa,113,0.8993,"{""from_stronger_wa"": 75, ""from_weaker_wa"": 38}",3.1291,2.3615,1.8851,1.7431,1.244,0.4764,1.386,0.6185,joint
+Men,Distance,1500m,800m,source_ability,113,0.8993,"{""from_wa_low"": 56, ""from_wa_high"": 57}",3.1291,2.3615,3.0497,2.8883,0.0793,-0.6882,0.2408,-0.5268,bal_spec
+Men,Distance,1500m,800m,wa_spread_tertile,113,0.8993,"{""spread_low"": 37, ""spread_high"": 37, ""spread_mid"": 39}",3.1291,2.3615,2.5451,2.3725,0.584,-0.1835,0.7565,-0.011,bal_spec
+Men,Distance,1500m,800m,best_event,113,0.8993,"{""best_1500m"": 68, ""best_800m"": 36, ""best_5000m"": 9}",3.1291,2.3615,2.3548,1.9152,0.7743,0.0068,1.2139,0.4464,joint
+Men,Distance,1500m,5000m,ability_tier,87,0.8817,"{""ability_low"": 43, ""ability_high"": 44}",15.7352,15.8931,18.0335,19.4233,-2.2983,-2.1404,-3.6881,-3.5302,pooled
+Men,Distance,1500m,5000m,season_span,87,0.8817,"{""span_short"": 31, ""span_long"": 56}",15.7352,15.8931,18.7473,19.4662,-3.0121,-2.8542,-3.731,-3.5731,pooled
+Men,Distance,1500m,5000m,meet_volume,87,0.8817,"{""meets_many"": 71, ""meets_few"": 16}",15.7352,15.8931,20.1064,17.6407,-4.3712,-4.2133,-1.9055,-1.7476,pooled
+Men,Distance,1500m,5000m,events_competed,87,0.8817,"{""events_3plus"": 61, ""events_2"": 26}",15.7352,15.8931,16.8056,17.249,-1.0705,-0.9125,-1.5139,-1.3559,pooled
+Men,Distance,1500m,5000m,race_count,87,0.8817,"{""races_5"": 53, ""races_6"": 34}",15.7352,15.8931,17.8677,21.0175,-2.1325,-1.9746,-5.2823,-5.1244,pooled
+Men,Distance,1500m,5000m,season_year,87,0.8817,"{""year_2024"": 43, ""year_2025"": 17, ""year_2026"": 27}",15.7352,15.8931,16.7014,18.3629,-0.9662,-0.8083,-2.6277,-2.4698,pooled
+Men,Distance,1500m,5000m,nationals,87,0.8817,"{""nationals_yes"": 67, ""nationals_no"": 20}",15.7352,15.8931,19.546,19.3384,-3.8108,-3.6529,-3.6032,-3.4453,pooled
+Men,Distance,1500m,5000m,best_is_from,87,0.8817,"{""best_is_from"": 60, ""best_not_from"": 27}",15.7352,15.8931,13.9431,14.1763,1.792,1.9499,1.5589,1.7168,factor
+Men,Distance,1500m,5000m,best_is_to,87,0.8817,"{""best_not_to"": 67, ""best_is_to"": 20}",15.7352,15.8931,13.0398,13.0398,2.6953,2.8533,2.6953,2.8533,factor
+Men,Distance,1500m,5000m,predict_to_best,87,0.8817,"{""to_nonbest"": 67, ""to_best"": 20}",15.7352,15.8931,13.0398,13.0398,2.6953,2.8533,2.6953,2.8533,factor
+Men,Distance,1500m,5000m,pair_wa_gap_median,87,0.8817,"{""pair_gap_small"": 43, ""pair_gap_large"": 44}",15.7352,15.8931,12.3478,13.4701,3.3874,3.5453,2.2651,2.423,factor
+Men,Distance,1500m,5000m,pair_wa_gap_50,87,0.8817,"{""pair_gap_lt50"": 35, ""pair_gap_ge50"": 52}",15.7352,15.8931,12.6618,11.7842,3.0734,3.2313,3.951,4.1089,joint
+Men,Distance,1500m,5000m,from_stronger_wa,87,0.8817,"{""from_stronger_wa"": 67, ""from_weaker_wa"": 20}",15.7352,15.8931,13.0398,13.0398,2.6953,2.8533,2.6953,2.8533,factor
+Men,Distance,1500m,5000m,source_ability,87,0.8817,"{""from_wa_low"": 43, ""from_wa_high"": 44}",15.7352,15.8931,18.4656,18.407,-2.7304,-2.5725,-2.6718,-2.5139,pooled
+Men,Distance,1500m,5000m,wa_spread_tertile,87,0.8817,"{""spread_low"": 29, ""spread_high"": 28, ""spread_mid"": 30}",15.7352,15.8931,13.8492,15.0444,1.886,2.0439,0.6907,0.8487,factor
+Men,Distance,1500m,5000m,best_event,87,0.8817,"{""best_1500m"": 60, ""best_5000m"": 20, ""best_800m"": 7}",15.7352,15.8931,12.0248,12.446,3.7104,3.8683,3.2892,3.4471,factor
+Men,Distance,5000m,800m,ability_tier,62,0.7997,"{""ability_low"": 31, ""ability_high"": 31}",4.4914,4.6049,3.9514,4.328,0.54,0.6535,0.1633,0.2768,factor
+Men,Distance,5000m,800m,season_span,62,0.7997,"{""span_short"": 26, ""span_long"": 36}",4.4914,4.6049,4.1577,4.1577,0.3337,0.4472,0.3337,0.4472,factor
+Men,Distance,5000m,800m,meet_volume,62,0.7997,"{""meets_many"": 46, ""meets_few"": 16}",4.4914,4.6049,4.6649,5.009,-0.1736,-0.0601,-0.5176,-0.4041,pooled
+Men,Distance,5000m,800m,events_competed,62,0.7997,"{""events_3plus"": 61, ""events_2"": 1}",4.4914,4.6049,4.1088,4.2445,0.3825,0.496,0.2469,0.3603,factor
+Men,Distance,5000m,800m,race_count,62,0.7997,"{""races_5"": 38, ""races_6"": 24}",4.4914,4.6049,4.6363,4.2253,-0.1449,-0.0314,0.2661,0.3796,joint
+Men,Distance,5000m,800m,season_year,62,0.7997,"{""year_2024"": 29, ""year_2025"": 12, ""year_2026"": 21}",4.4914,4.6049,4.5632,3.7948,-0.0718,0.0417,0.6966,0.8101,joint
+Men,Distance,5000m,800m,nationals,62,0.7997,"{""nationals_yes"": 51, ""nationals_no"": 11}",4.4914,4.6049,4.3149,4.5055,0.1765,0.29,-0.0141,0.0994,factor
+Men,Distance,5000m,800m,best_is_from,62,0.7997,"{""best_not_from"": 52, ""best_is_from"": 10}",4.4914,4.6049,4.5692,4.4104,-0.0779,0.0356,0.081,0.1945,joint
+Men,Distance,5000m,800m,best_is_to,62,0.7997,"{""best_not_to"": 55, ""best_is_to"": 7}",4.4914,4.6049,4.3467,4.2564,0.1446,0.2581,0.235,0.3485,joint
+Men,Distance,5000m,800m,predict_to_best,62,0.7997,"{""to_nonbest"": 55, ""to_best"": 7}",4.4914,4.6049,4.3467,4.2564,0.1446,0.2581,0.235,0.3485,joint
+Men,Distance,5000m,800m,pair_wa_gap_median,62,0.7997,"{""pair_gap_small"": 31, ""pair_gap_large"": 31}",4.4914,4.6049,4.6037,4.6037,-0.1124,0.0011,-0.1124,0.0011,pooled
+Men,Distance,5000m,800m,pair_wa_gap_50,62,0.7997,"{""pair_gap_lt50"": 22, ""pair_gap_ge50"": 40}",4.4914,4.6049,3.3617,3.3617,1.1296,1.2431,1.1296,1.2431,factor
+Men,Distance,5000m,800m,from_stronger_wa,62,0.7997,"{""from_stronger_wa"": 37, ""from_weaker_wa"": 25}",4.4914,4.6049,3.5369,3.7357,0.9545,1.068,0.7557,0.8692,factor
+Men,Distance,5000m,800m,source_ability,62,0.7997,"{""from_wa_low"": 31, ""from_wa_high"": 31}",4.4914,4.6049,4.7137,4.6629,-0.2223,-0.1088,-0.1715,-0.058,pooled
+Men,Distance,5000m,800m,wa_spread_tertile,62,0.7997,"{""spread_low"": 20, ""spread_high"": 20, ""spread_mid"": 22}",4.4914,4.6049,4.064,3.8962,0.4274,0.5409,0.5952,0.7087,joint
+Men,Distance,5000m,800m,best_event,62,0.7997,"{""best_1500m"": 45, ""best_5000m"": 10, ""best_800m"": 7}",4.4914,4.6049,4.8522,4.5267,-0.3608,-0.2473,-0.0353,0.0782,pooled
+Men,Distance,5000m,1500m,ability_tier,87,0.8817,"{""ability_low"": 43, ""ability_high"": 44}",5.1751,4.9601,5.7015,4.7574,-0.5264,-0.7414,0.4177,0.2027,joint
+Men,Distance,5000m,1500m,season_span,87,0.8817,"{""span_short"": 31, ""span_long"": 56}",5.1751,4.9601,6.0053,6.1041,-0.8302,-1.0452,-0.9289,-1.144,bal_spec
+Men,Distance,5000m,1500m,meet_volume,87,0.8817,"{""meets_many"": 71, ""meets_few"": 16}",5.1751,4.9601,5.049,5.3404,0.1261,-0.0889,-0.1653,-0.3803,bal_spec
+Men,Distance,5000m,1500m,events_competed,87,0.8817,"{""events_3plus"": 61, ""events_2"": 26}",5.1751,4.9601,6.1395,6.0149,-0.9644,-1.1794,-0.8398,-1.0548,bal_spec
+Men,Distance,5000m,1500m,race_count,87,0.8817,"{""races_5"": 53, ""races_6"": 34}",5.1751,4.9601,5.3586,5.73,-0.1835,-0.3985,-0.5549,-0.7699,bal_spec
+Men,Distance,5000m,1500m,season_year,87,0.8817,"{""year_2024"": 43, ""year_2025"": 17, ""year_2026"": 27}",5.1751,4.9601,5.2507,6.4991,-0.0756,-0.2907,-1.324,-1.539,bal_spec
+Men,Distance,5000m,1500m,nationals,87,0.8817,"{""nationals_yes"": 67, ""nationals_no"": 20}",5.1751,4.9601,5.435,5.7698,-0.2599,-0.4749,-0.5947,-0.8097,bal_spec
+Men,Distance,5000m,1500m,best_is_from,87,0.8817,"{""best_not_from"": 67, ""best_is_from"": 20}",5.1751,4.9601,3.4289,3.2232,1.7462,1.5312,1.9519,1.7369,joint
+Men,Distance,5000m,1500m,best_is_to,87,0.8817,"{""best_is_to"": 60, ""best_not_to"": 27}",5.1751,4.9601,3.8288,4.0864,1.3463,1.1313,1.0887,0.8737,factor
+Men,Distance,5000m,1500m,predict_to_best,87,0.8817,"{""to_best"": 60, ""to_nonbest"": 27}",5.1751,4.9601,3.8288,4.0864,1.3463,1.1313,1.0887,0.8737,factor
+Men,Distance,5000m,1500m,pair_wa_gap_median,87,0.8817,"{""pair_gap_small"": 43, ""pair_gap_large"": 44}",5.1751,4.9601,3.9224,3.9461,1.2527,1.0377,1.229,1.014,factor
+Men,Distance,5000m,1500m,pair_wa_gap_50,87,0.8817,"{""pair_gap_lt50"": 35, ""pair_gap_ge50"": 52}",5.1751,4.9601,3.2543,3.1195,1.9208,1.7058,2.0556,1.8406,joint
+Men,Distance,5000m,1500m,from_stronger_wa,87,0.8817,"{""from_weaker_wa"": 67, ""from_stronger_wa"": 20}",5.1751,4.9601,3.4289,3.2232,1.7462,1.5312,1.9519,1.7369,joint
+Men,Distance,5000m,1500m,source_ability,87,0.8817,"{""from_wa_low"": 43, ""from_wa_high"": 44}",5.1751,4.9601,5.1719,5.8627,0.0032,-0.2118,-0.6876,-0.9026,bal_spec
+Men,Distance,5000m,1500m,wa_spread_tertile,87,0.8817,"{""spread_low"": 29, ""spread_high"": 28, ""spread_mid"": 30}",5.1751,4.9601,4.3199,4.8868,0.8552,0.6402,0.2883,0.0733,factor
+Men,Distance,5000m,1500m,best_event,87,0.8817,"{""best_1500m"": 60, ""best_5000m"": 20, ""best_800m"": 7}",5.1751,4.9601,3.2672,3.4905,1.9079,1.6929,1.6846,1.4696,factor
+Women,Distance,800m,1500m,ability_tier,39,0.9459,"{""ability_high"": 20, ""ability_low"": 19}",9.3732,6.4645,6.5636,6.5636,2.8096,-0.0991,2.8096,-0.0991,bal_spec
+Women,Distance,800m,1500m,season_span,39,0.9459,"{""span_short"": 17, ""span_long"": 22}",9.3732,6.4645,9.2284,7.6992,0.1448,-2.7638,1.674,-1.2347,bal_spec
+Women,Distance,800m,1500m,meet_volume,39,0.9459,"{""meets_many"": 37, ""meets_few"": 2}",9.3732,6.4645,8.82,6.3186,0.5532,-2.3555,3.0546,0.146,joint
+Women,Distance,800m,1500m,events_competed,39,0.9459,"{""events_3plus"": 14, ""events_2"": 25}",9.3732,6.4645,9.3732,6.4645,0.0,-2.9087,2.9087,0.0,bal_spec
+Women,Distance,800m,1500m,race_count,39,0.9459,"{""races_5"": 29, ""races_6"": 10}",9.3732,6.4645,9.0037,7.2985,0.3695,-2.5392,2.0747,-0.834,bal_spec
+Women,Distance,800m,1500m,season_year,39,0.9459,"{""year_2024"": 15, ""year_2025"": 6, ""year_2026"": 18}",9.3732,6.4645,10.8677,10.8677,-1.4945,-4.4032,-1.4945,-4.4032,bal_spec
+Women,Distance,800m,1500m,nationals,39,0.9459,"{""nationals_yes"": 37, ""nationals_no"": 2}",9.3732,6.4645,6.672,6.6971,2.7012,-0.2075,2.6761,-0.2326,bal_spec
+Women,Distance,800m,1500m,best_is_from,39,0.9459,"{""best_not_from"": 30, ""best_is_from"": 9}",9.3732,6.4645,8.5907,8.1243,0.7825,-2.1262,1.2489,-1.6598,bal_spec
+Women,Distance,800m,1500m,best_is_to,39,0.9459,"{""best_not_to"": 19, ""best_is_to"": 20}",9.3732,6.4645,8.5907,8.5256,0.7825,-2.1262,0.8476,-2.0611,bal_spec
+Women,Distance,800m,1500m,predict_to_best,39,0.9459,"{""to_nonbest"": 19, ""to_best"": 20}",9.3732,6.4645,8.5907,8.5256,0.7825,-2.1262,0.8476,-2.0611,bal_spec
+Women,Distance,800m,1500m,pair_wa_gap_median,39,0.9459,"{""pair_gap_small"": 19, ""pair_gap_large"": 20}",9.3732,6.4645,6.744,6.744,2.6292,-0.2795,2.6292,-0.2795,bal_spec
+Women,Distance,800m,1500m,pair_wa_gap_50,39,0.9459,"{""pair_gap_lt50"": 17, ""pair_gap_ge50"": 22}",9.3732,6.4645,6.0565,6.0565,3.3167,0.408,3.3167,0.408,factor
+Women,Distance,800m,1500m,from_stronger_wa,39,0.9459,"{""from_weaker_wa"": 28, ""from_stronger_wa"": 11}",9.3732,6.4645,8.3023,6.5684,1.0709,-1.8378,2.8048,-0.1039,bal_spec
+Women,Distance,800m,1500m,source_ability,39,0.9459,"{""from_wa_low"": 19, ""from_wa_high"": 20}",9.3732,6.4645,7.7691,7.7691,1.6041,-1.3046,1.6041,-1.3046,bal_spec
+Women,Distance,800m,1500m,wa_spread_tertile,39,0.9459,"{""spread_high"": 12, ""spread_mid"": 14, ""spread_low"": 13}",9.3732,6.4645,9.3732,8.5907,0.0,-2.9087,0.7825,-2.1262,bal_spec
+Women,Distance,800m,1500m,best_event,39,0.9459,"{""best_5000m"": 10, ""best_1500m"": 20, ""best_800m"": 9}",9.3732,6.4645,11.1527,11.1527,-1.7795,-4.6882,-1.7795,-4.6882,bal_spec
+Women,Distance,1500m,800m,ability_tier,39,0.9459,"{""ability_high"": 20, ""ability_low"": 19}",5.9574,5.0505,4.9539,4.9539,1.0035,0.0967,1.0035,0.0967,factor
+Women,Distance,1500m,800m,season_span,39,0.9459,"{""span_short"": 17, ""span_long"": 22}",5.9574,5.0505,5.3882,4.6501,0.5691,-0.3377,1.3073,0.4005,joint
+Women,Distance,1500m,800m,meet_volume,39,0.9459,"{""meets_many"": 37, ""meets_few"": 2}",5.9574,5.0505,5.6081,4.1233,0.3493,-0.5576,1.8341,0.9273,joint
+Women,Distance,1500m,800m,events_competed,39,0.9459,"{""events_3plus"": 14, ""events_2"": 25}",5.9574,5.0505,5.2661,5.2661,0.6913,-0.2155,0.6913,-0.2155,bal_spec
+Women,Distance,1500m,800m,race_count,39,0.9459,"{""races_5"": 29, ""races_6"": 10}",5.9574,5.0505,5.004,3.6689,0.9534,0.0466,2.2885,1.3816,joint
+Women,Distance,1500m,800m,season_year,39,0.9459,"{""year_2024"": 15, ""year_2025"": 6, ""year_2026"": 18}",5.9574,5.0505,5.9574,5.0505,0.0,-0.9068,0.9068,0.0,bal_spec
+Women,Distance,1500m,800m,nationals,39,0.9459,"{""nationals_yes"": 37, ""nationals_no"": 2}",5.9574,5.0505,5.2541,3.7927,0.7033,-0.2035,2.1647,1.2579,joint
+Women,Distance,1500m,800m,best_is_from,39,0.9459,"{""best_not_from"": 19, ""best_is_from"": 20}",5.9574,5.0505,4.5916,4.0655,1.3657,0.4589,1.8918,0.985,joint
+Women,Distance,1500m,800m,best_is_to,39,0.9459,"{""best_not_to"": 30, ""best_is_to"": 9}",5.9574,5.0505,4.6073,4.5248,1.35,0.4432,1.4326,0.5258,joint
+Women,Distance,1500m,800m,predict_to_best,39,0.9459,"{""to_nonbest"": 30, ""to_best"": 9}",5.9574,5.0505,4.6073,4.5248,1.35,0.4432,1.4326,0.5258,joint
+Women,Distance,1500m,800m,pair_wa_gap_median,39,0.9459,"{""pair_gap_small"": 19, ""pair_gap_large"": 20}",5.9574,5.0505,3.063,3.063,2.8944,1.9876,2.8944,1.9876,factor
+Women,Distance,1500m,800m,pair_wa_gap_50,39,0.9459,"{""pair_gap_lt50"": 17, ""pair_gap_ge50"": 22}",5.9574,5.0505,3.0789,3.0789,2.8784,1.9716,2.8784,1.9716,factor
+Women,Distance,1500m,800m,from_stronger_wa,39,0.9459,"{""from_stronger_wa"": 28, ""from_weaker_wa"": 11}",5.9574,5.0505,5.1022,4.46,0.8552,-0.0516,1.4974,0.5905,joint
+Women,Distance,1500m,800m,source_ability,39,0.9459,"{""from_wa_low"": 19, ""from_wa_high"": 20}",5.9574,5.0505,5.209,5.209,0.7484,-0.1584,0.7484,-0.1584,bal_spec
+Women,Distance,1500m,800m,wa_spread_tertile,39,0.9459,"{""spread_high"": 12, ""spread_mid"": 14, ""spread_low"": 13}",5.9574,5.0505,6.0512,5.2554,-0.0939,-1.0007,0.702,-0.2049,bal_spec
+Women,Distance,1500m,800m,best_event,39,0.9459,"{""best_5000m"": 10, ""best_1500m"": 20, ""best_800m"": 9}",5.9574,5.0505,5.9574,5.0505,0.0,-0.9068,0.9068,0.0,bal_spec

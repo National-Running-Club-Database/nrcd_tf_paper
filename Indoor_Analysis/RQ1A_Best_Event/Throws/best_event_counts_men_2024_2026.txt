@@ -1,0 +1,11 @@
+Indoor Track 2024-2026 Male Throws (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+All athletes with at least one event result
+
+Shot Put (174 competed): 143
+Discus (5 competed): 1
+Javelin Throw (1 competed): 1
+4x100m (4 competed): 4
+4x200m (533 competed): 420
+4x400m (912 competed): 845

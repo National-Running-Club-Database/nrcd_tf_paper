@@ -1,0 +1,77 @@
+Cross-Event Time Models — Long Distance — Exactly 6 Races
+=============================================================
+
+Population: exactly 6 races athlete-seasons with season PBs in all 3 group events.
+Specialization cohort: Long Distance
+
+Sprints: Short = |WA100−WA200| < |WA200−WA400|; Long = reverse.
+Distance: Mid = |WA800−WA1500| < |WA1500−WA5000|; Long = reverse.
+
+Use when short/long (or mid/long) status is known.
+Predict time, then convert to WA in the target event table.
+
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=13, r=0.869)
+  Model: median_ratio
+  Formula: 5000m = 3.755 × 1500m
+  CV median |error|: 10.682s
+  vs pooled model on cohort: 11.928s (↓1.246s)
+
+1500m -> 800m  (n=13, r=0.928)
+  Model: median_ratio
+  Formula: 800m = 0.503 × 1500m
+  CV median |error|: 2.409s
+  vs pooled model on cohort: 3.061s (↓0.652s)
+
+5000m -> 1500m  (n=13, r=0.869)
+  Model: median_ratio
+  Formula: 1500m = 0.266 × 5000m
+  CV median |error|: 2.845s
+  vs pooled model on cohort: 3.173s (↓0.328s)
+
+5000m -> 800m  (n=13, r=0.806)
+  Model: median_ratio
+  Formula: 800m = 0.133 × 5000m
+  CV median |error|: 1.126s
+  vs pooled model on cohort: 2.085s (↓0.958s)
+
+800m -> 1500m  (n=13, r=0.928)
+  Model: binned_ratio
+  Formula: 1500m = 800m × ratio_bin(800m)
+  CV median |error|: 4.277s
+  vs pooled model on cohort: 8.562s (↓4.286s)
+  Binned lookup 800m → 1500m (nearest 800m edge):
+    117.52s → ratio 2.013
+    119.86s → ratio 1.988
+    123.67s → ratio 1.942
+    123.70s → ratio 1.985
+    127.04s → ratio 1.983
+    127.20s → ratio 2.036
+    129.92s → ratio 1.992
+    130.61s → ratio 2.009
+    130.68s → ratio 2.029
+    130.77s → ratio 2.027
+    136.24s → ratio 1.956
+    141.57s → ratio 1.979
+    150.81s → ratio 1.989
+
+800m -> 5000m  (n=13, r=0.806)
+  Model: median_ratio
+  Formula: 5000m = 7.545 × 800m
+  CV median |error|: 8.488s
+  vs pooled model on cohort: 5.880s (↑2.608s)
+
+Pair summary
+------------
+  From     To          n        CV  Formula
+  1500m    5000m      13   10.682s  5000m = 3.755 × 1500m
+  1500m    800m       13    2.409s  800m = 0.503 × 1500m
+  5000m    1500m      13    2.845s  1500m = 0.266 × 5000m
+  5000m    800m       13    1.126s  800m = 0.133 × 5000m
+  800m     1500m      13    4.277s  1500m = 800m × ratio_bin(800m)
+  800m     5000m      13    8.488s  5000m = 7.545 × 800m
+
+Source: Short_Long_Specialization_Time_Models/analyze_short_long_specialization.py

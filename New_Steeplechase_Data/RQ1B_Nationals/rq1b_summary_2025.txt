@@ -1,0 +1,191 @@
+RQ1B — Nationals Top-8 World Athletics Distributions (2025)
+[Distance only — New_Steeplechase_Data / corrected steeplechase WA]
+Ranking: Finals (or unlabeled nationals rows). Relays by team result_time.
+
+## Men
+
+### Distance — Men — 800m
+Nationals pool: 224 | Season total: 581
+Nationals top-8 WA points — n=8, mean=871.0, median=866.5, std=46.8, min=809.0, max=928.0
+Full season WA points — n=575, mean=523.6, median=551.0, std=214.1, min=3.0, max=991.0
+  1. 1:53.50 | WA=928 | athlete=539
+  2. 1:53.77 | WA=921 | athlete=1216
+  3. 1:53.88 | WA=918 | athlete=2896
+  4. 1:55.65 | WA=871 | athlete=2492
+  5. 1:55.98 | WA=862 | athlete=24914
+  6. 1:57.16 | WA=832 | athlete=18865
+  7. 1:57.34 | WA=827 | athlete=466
+  8. 1:58.04 | WA=809 | athlete=5500
+
+### Distance — Men — 1500m
+Nationals pool: 290 | Season total: 589
+Nationals top-8 WA points — n=8, mean=867.2, median=868.5, std=30.0, min=826.0, max=909.0
+Full season WA points — n=588, mean=534.7, median=545.0, std=202.4, min=1.0, max=1041.0
+  1. 3:55.40 | WA=909 | athlete=19375
+  2. 3:56.40 | WA=897 | athlete=466
+  3. 3:57.21 | WA=887 | athlete=26626
+  4. 3:58.29 | WA=875 | athlete=673
+  5. 3:59.33 | WA=862 | athlete=8038
+  6. 4:00.41 | WA=849 | athlete=2492
+  7. 4:01.83 | WA=833 | athlete=4910
+  8. 4:02.45 | WA=826 | athlete=26627
+
+### Distance — Men — 3000m Steeplechase
+Nationals pool: 55 | Season total: 100
+Nationals top-8 WA points — n=8, mean=798.9, median=798.5, std=60.0, min=707.0, max=878.0
+Full season WA points — n=100, mean=492.1, median=478.5, std=201.0, min=37.0, max=878.0
+  1. 9:28.87 | WA=878 | athlete=466
+  2. 9:35.08 | WA=854 | athlete=667
+  3. 9:37.24 | WA=846 | athlete=18742
+  4. 9:46.93 | WA=809 | athlete=2723
+  5. 9:52.50 | WA=788 | athlete=23574
+  6. 9:55.36 | WA=778 | athlete=2007
+  7. 10:08.26 | WA=731 | athlete=673
+  8. 10:15.08 | WA=707 | athlete=1996
+
+### Distance — Men — 5000m
+Nationals pool: 155 | Season total: 351
+Nationals top-8 WA points — n=8, mean=764.8, median=766.0, std=20.1, min=737.0, max=800.0
+Full season WA points — n=346, mean=511.5, median=524.5, std=177.5, min=1.0, max=896.0
+  1. 15:03.24 | WA=800 | athlete=19375
+  2. 15:11.26 | WA=776 | athlete=18964
+  3. 15:11.44 | WA=776 | athlete=673
+  4. 15:13.95 | WA=768 | athlete=2007
+  5. 15:15.24 | WA=764 | athlete=26626
+  6. 15:19.47 | WA=752 | athlete=2584
+  7. 15:21.80 | WA=745 | athlete=7975
+  8. 15:24.78 | WA=737 | athlete=26699
+
+### Relays — Men — 4x100m
+Nationals pool: 31 | Season total: 58
+Nationals top-8 WA points — n=8, mean=858.0, median=860.5, std=45.7, min=799.0, max=931.0
+Full season WA points — n=58, mean=636.5, median=683.5, std=215.1, min=135.0, max=992.0
+  1. 42.04 | WA=931 | athlete=26659
+  2. 42.46 | WA=903 | athlete=26660
+  3. 42.87 | WA=875 | athlete=26661
+  4. 43.09 | WA=861 | athlete=26662
+  5. 43.10 | WA=860 | athlete=26663
+  6. 43.62 | WA=827 | athlete=26664
+  7. 43.92 | WA=808 | athlete=26665
+  8. 44.06 | WA=799 | athlete=26666
+
+### Relays — Men — 4x400m
+Nationals pool: 48 | Season total: 93
+Nationals top-8 WA points — n=8, mean=840.1, median=842.0, std=29.4, min=801.0, max=875.0
+Full season WA points — n=93, mean=591.8, median=634.0, std=193.3, min=25.0, max=875.0
+  1. 3:22.29 | WA=875 | athlete=26728
+  2. 3:22.86 | WA=868 | athlete=26729
+  3. 3:23.27 | WA=862 | athlete=26730
+  4. 3:23.30 | WA=862 | athlete=26731
+  5. 3:26.36 | WA=822 | athlete=26664
+  6. 3:26.60 | WA=819 | athlete=26732
+  7. 3:27.17 | WA=812 | athlete=26733
+  8. 3:27.97 | WA=801 | athlete=26577
+
+### Relays — Men — 4x800m
+Nationals pool: 32 | Season total: 40
+Nationals top-8 WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+Full season WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+  1. 7:54.66 | WA=0 | athlete=26574
+  2. 7:56.50 | WA=0 | athlete=26575
+  3. 7:57.95 | WA=0 | athlete=26576
+  4. 8:00.33 | WA=0 | athlete=26577
+  5. 8:06.99 | WA=0 | athlete=26578
+  6. 8:07.23 | WA=0 | athlete=26579
+  7. 8:10.68 | WA=0 | athlete=26580
+  8. 8:12.90 | WA=0 | athlete=26581
+
+### Relays — Men — DMR
+Nationals pool: 0 | Season total: 16
+Nationals top-8 WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+Full season WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+
+## Women
+
+### Distance — Women — 800m
+Nationals pool: 121 | Season total: 249
+Nationals top-8 WA points — n=8, mean=814.0, median=801.0, std=34.9, min=788.0, max=891.0
+Full season WA points — n=246, mean=512.8, median=528.5, std=193.0, min=24.0, max=891.0
+  1. 2:16.14 | WA=891 | athlete=1928
+  2. 2:20.13 | WA=830 | athlete=3862
+  3. 2:20.67 | WA=822 | athlete=23384
+  4. 2:21.69 | WA=806 | athlete=24579
+  5. 2:22.36 | WA=796 | athlete=246
+  6. 2:22.83 | WA=790 | athlete=620
+  7. 2:22.86 | WA=789 | athlete=24949
+  8. 2:22.94 | WA=788 | athlete=25022
+
+### Distance — Women — 1500m
+Nationals pool: 144 | Season total: 242
+Nationals top-8 WA points — n=8, mean=864.9, median=852.5, std=38.7, min=826.0, max=917.0
+Full season WA points — n=242, mean=549.7, median=547.5, std=182.3, min=25.0, max=917.0
+  1. 4:38.31 | WA=917 | athlete=3862
+  2. 4:38.57 | WA=915 | athlete=23882
+  3. 4:41.96 | WA=892 | athlete=23384
+  4. 4:45.24 | WA=869 | athlete=23462
+  5. 4:50.15 | WA=836 | athlete=18911
+  6. 4:50.23 | WA=835 | athlete=18726
+  7. 4:51.25 | WA=829 | athlete=577
+  8. 4:51.58 | WA=826 | athlete=25098
+
+### Distance — Women — 3000m Steeplechase
+Nationals pool: 29 | Season total: 53
+Nationals top-8 WA points — n=8, mean=799.9, median=790.0, std=44.5, min=746.0, max=882.0
+Full season WA points — n=53, mean=624.0, median=610.0, std=142.4, min=296.0, max=882.0
+  1. 11:33.45 | WA=882 | athlete=7746
+  2. 11:52.62 | WA=841 | athlete=25052
+  3. 12:04.78 | WA=815 | athlete=570
+  4. 12:15.97 | WA=792 | athlete=568
+  5. 12:18.05 | WA=788 | athlete=2924
+  6. 12:27.43 | WA=769 | athlete=68
+  7. 12:28.76 | WA=766 | athlete=577
+  8. 12:38.98 | WA=746 | athlete=11344
+
+### Distance — Women — 5000m
+Nationals pool: 0 | Season total: 56
+Nationals top-8 WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+Full season WA points — n=56, mean=575.2, median=583.5, std=159.6, min=86.0, max=857.0
+
+### Relays — Women — 4x100m
+Nationals pool: 21 | Season total: 27
+Nationals top-8 WA points — n=8, mean=861.6, median=850.5, std=67.0, min=781.0, max=942.0
+Full season WA points — n=27, mean=774.0, median=775.0, std=104.7, min=574.0, max=942.0
+  1. 48.81 | WA=942 | athlete=26639
+  2. 48.84 | WA=940 | athlete=26640
+  3. 49.23 | WA=926 | athlete=26641
+  4. 51.12 | WA=855 | athlete=26642
+  5. 51.38 | WA=846 | athlete=26643
+  6. 52.11 | WA=819 | athlete=26644
+  7. 53.10 | WA=784 | athlete=26645
+  8. 53.19 | WA=781 | athlete=26646
+
+### Relays — Women — 4x400m
+Nationals pool: 33 | Season total: 42
+Nationals top-8 WA points — n=8, mean=834.8, median=823.0, std=46.9, min=774.0, max=917.0
+Full season WA points — n=42, mean=683.9, median=690.0, std=121.2, min=450.0, max=917.0
+  1. 3:57.59 | WA=917 | athlete=26647
+  2. 4:03.77 | WA=871 | athlete=26641
+  3. 4:04.54 | WA=865 | athlete=26642
+  4. 4:09.13 | WA=832 | athlete=26649
+  5. 4:11.69 | WA=814 | athlete=26556
+  6. 4:11.80 | WA=813 | athlete=26648
+  7. 4:14.76 | WA=792 | athlete=26707
+  8. 4:17.30 | WA=774 | athlete=26643
+
+### Relays — Women — 4x800m
+Nationals pool: 18 | Season total: 21
+Nationals top-8 WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+Full season WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+  1. 9:40.72 | WA=0 | athlete=26556
+  2. 9:49.68 | WA=0 | athlete=26557
+  3. 9:51.75 | WA=0 | athlete=26558
+  4. 9:56.79 | WA=0 | athlete=26559
+  5. 9:59.81 | WA=0 | athlete=26560
+  6. 10:11.91 | WA=0 | athlete=68
+  7. 10:15.68 | WA=0 | athlete=26562
+  8. 10:28.86 | WA=0 | athlete=26563
+
+### Relays — Women — DMR
+Nationals pool: 0 | Season total: 4
+Nationals top-8 WA points — n=0, mean=None, median=None, std=None, min=None, max=None
+Full season WA points — n=0, mean=None, median=None, std=None, min=None, max=None

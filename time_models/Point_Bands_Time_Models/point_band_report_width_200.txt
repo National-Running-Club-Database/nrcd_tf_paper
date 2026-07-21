@@ -1,0 +1,76 @@
+World Athletics Point-Band Time Models — Band Width 200
+=======================================================
+
+Question: Which WA point band yields the most accurate cross-event
+time models when band width = 200 points?
+
+Method:
+  • Data: outdoor CSVs 2024–2026, results on/after March 1.
+  • Events: Sprints (100/200/400) and Distance (800/1500/5000) only.
+  • Excludes relay results and 3000m Steeplechase.
+  • Inclusion: athlete-season enters a band if ≥1 individual result has
+    WA points in [lo, lo+200).
+  • Bands slide every 50 points (overlapping windows).
+  • Modeling: season PBs for athletes included in the band; same CV model
+    search as other time models (seed=42, folds=5).
+  • Minimum n=20 athlete-season pairs per event pair.
+  • Primary metric: mean CV median |error| (seconds) across evaluated pairs.
+
+Unbanded baseline (all athlete-seasons): mean best CV = 6.768s (24 pairs).
+
+Band leaderboard (width=200; require ≥4 pairs)
+--------------------------------------------------
+Band          Ath-seas  Pairs   Mean best CV  Mean linear
+850-1050           187     10         2.412s       2.681s
+800-1000           351     18         2.838s       4.418s
+750-950            556     22         3.871s       4.610s
+700-900            809     24         4.528s       5.720s
+650-850           1047     24         5.046s       6.217s
+600-800           1287     24         5.731s       6.783s
+550-750           1428     24         5.849s       6.924s
+500-700           1480     24         6.182s       7.197s
+450-650           1458     24         6.555s       7.758s
+150-350            535     18         6.678s       8.168s
+400-600           1338     24         6.920s       7.465s
+350-550           1206     24         7.251s       8.748s
+100-300            430     16         7.736s       8.815s
+300-500           1041     24         7.862s       9.193s
+200-400            660     22         9.146s      10.825s
+250-450            850     22         9.402s      10.523s
+50-250             316     14         9.427s      10.294s
+0-200              235     14         9.719s      11.519s
+
+Bands with <4 evaluated pairs (unstable averages):
+  900-1100: n_as=75, pairs=2, mean CV=0.128s
+
+Most accurate band
+------------------
+  850-1050 WA points  →  mean best CV 2.412s (10 pairs, 187 athlete-seasons).
+  vs unbanded all: Δ -4.356s
+
+Pair results — band 850-1050
+----------------------------------------
+  Men Distance 1500m->5000m n=27  log_linear  CV=16.548s
+  Men Distance 1500m->800m n=44  log_linear  CV=1.552s
+  Men Distance 5000m->1500m n=27  quadratic  CV=1.859s
+  Men Distance 800m->1500m n=44  knn_median  CV=2.465s
+  Men Sprints 100m->200m n=70  knn_median  CV=0.207s
+  Men Sprints 200m->100m n=70  knn_median  CV=0.100s
+  Men Sprints 200m->400m n=28  robust_trimmed_linear  CV=0.550s
+  Men Sprints 400m->200m n=28  knn_median  CV=0.275s
+  Women Sprints 100m->200m n=25  binned_ratio  CV=0.412s
+  Women Sprints 200m->100m n=25  binned_ratio  CV=0.147s
+
+Top 3 bands by mean best CV
+---------------------------
+  1. 850-1050: 2.412s (10 pairs)
+  2. 800-1000: 2.838s (18 pairs)
+  3. 750-950: 3.871s (22 pairs)
+
+Caveats:
+  • Athletes can appear in multiple bands (any result membership).
+  • Low/high extreme bands have small n and few pairs.
+  • Mean CV across unequal pair sets favors bands that retain easy pairs;
+    prefer bands with ≥4 pairs and stable coverage.
+
+Source: Point_Bands_Time_Models/analyze_point_bands_time_models.py (width=200)

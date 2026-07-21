@@ -1,0 +1,17 @@
+factor,description,n_pairs,factor_beats_pooled,factor_beats_bal_spec,joint_beats_pooled,joint_beats_bal_spec,best_is_factor,best_is_joint,best_is_bal_spec,best_is_pooled,mean_delta_factor_vs_bal_spec,mean_delta_joint_vs_bal_spec,mean_delta_factor_vs_pooled,median_delta_factor_vs_bal_spec,median_delta_joint_vs_bal_spec
+ability_tier,Max season WA in group: low vs high (median split),16,7,4,8,6,3,2,8,3,-0.5751,-0.6673,-0.409,-0.1299,-0.0607
+best_event,Identity of best-WA event in the group,16,10,8,10,10,5,4,4,3,0.4093,-0.0973,0.5753,0.0163,0.0318
+best_is_from,Athlete's best-WA event is the source event,16,11,12,14,11,6,7,2,1,0.3389,0.6425,0.505,0.097,0.1401
+best_is_to,Athlete's best-WA event is the target event,16,11,11,12,11,5,5,4,2,0.3626,0.3878,0.5286,0.1119,0.0762
+events_competed,Distinct events raced in group: 2 vs 3+,14,7,6,9,7,4,3,5,2,-0.4935,-0.051,-0.3308,-0.1051,0.0098
+from_stronger_wa,Source event has higher WA than target,16,15,11,16,12,5,8,3,0,0.5301,0.8688,0.6962,0.1064,0.1671
+meet_volume,Unique meets in season: few vs many (median),16,8,3,8,4,2,4,5,5,-0.5976,-0.2575,-0.4316,-0.0745,-0.0358
+nationals,Competed at nationals that season (yes/no),16,8,4,7,5,3,1,9,3,-0.3661,-0.1211,-0.2001,-0.1366,-0.0374
+pair_wa_gap_50,|WA(from)−WA(to)| ≥ 50 WA points,16,15,15,15,14,9,6,0,1,1.5621,1.6636,1.7281,0.3429,0.3429
+pair_wa_gap_median,|WA(from)−WA(to)| relative to pair median,16,14,12,15,14,7,7,1,1,1.19,1.2615,1.356,0.1041,0.1064
+predict_to_best,Predicting toward the athlete's best-WA event,16,11,11,12,11,5,5,4,2,0.3626,0.3878,0.5286,0.1119,0.0762
+race_count,Season race count: 5 vs 6,16,3,5,4,4,2,2,9,3,-0.4531,-0.2957,-0.2871,-0.0672,-0.0614
+season_span,Days between first and last race: short vs long (median),16,8,4,8,7,3,2,7,4,-0.3285,-0.1587,-0.1625,-0.152,-0.0338
+season_year,Calendar year of the athlete-season,16,3,3,7,1,0,1,10,5,-0.3274,-0.5325,-0.1613,-0.1099,-0.0513
+source_ability,Source-event WA low vs high (median),16,6,3,8,3,1,2,10,3,-0.0946,-0.0906,0.0715,-0.1576,-0.1507
+wa_spread_tertile,Overall WA spread tertile (finer than bal/spec),16,8,8,11,6,5,1,7,3,0.5964,0.6111,0.7624,0.0143,-0.0003

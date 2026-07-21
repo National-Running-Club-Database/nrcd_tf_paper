@@ -1,0 +1,195 @@
+Cross-Event Time Models by Season Race Volume
+==============================================
+
+Question: Do time-prediction models become more accurate when restricted
+to athletes who competed in more races during a season?
+
+Method:
+  • Unit: athlete-season (not pooled across years).
+  • Race count: unique valid results in the discipline CSV for that event group
+    (same sources as build_cross_event_time_models.py).
+  • Filters: all athlete-seasons, and exactly 4, 5, 6 races.
+  • Model search: same 5-fold CV candidates as compare_time_model_candidates.py
+    (seed=42, folds=5).
+  • Primary metric: CV median absolute error (seconds). Lower is better.
+
+Headline comparison (mean CV median |error| across evaluated pairs)
+----------------------------------------------------------------
+Filter        Pairs  Mean linear    Mean best  Δ (linear-best)
+all              24       8.139s       6.768s           1.372s
+4                20       9.264s       7.092s           2.172s
+5                16       6.711s       4.902s           1.809s
+6                10       6.086s       4.931s           1.154s
+
+Note: 'all' uses athlete-season units. The original pooled-athlete baseline
+(best mark per athlete across 2024–2026) is shown per pair below for reference.
+
+
+=== Exactly 4 races vs all athlete-seasons ===
+Gender  Group     Pair          n(all) n(4)   CV all  CV 4        Δ  Better?
+Men     Distance  1500m->800m      686     117   2.991s   2.650s  -0.341s      yes
+Men     Distance  1500m->5000m     498      87  23.114s  24.256s  +1.142s       no
+Men     Distance  5000m->800m      201      38   4.100s   2.555s  -1.545s      yes
+Men     Distance  5000m->1500m     498      87   5.817s   5.585s  -0.232s      yes
+Men     Distance  800m->1500m      686     117   6.304s   5.582s  -0.723s      yes
+Men     Distance  800m->5000m      201      38  23.740s  35.157s +11.417s       no
+Women   Distance  1500m->800m      312      53   3.658s   3.606s  -0.052s      yes
+Women   Distance  1500m->5000m     135      24  31.162s  40.032s  +8.870s       no
+Women   Distance  5000m->1500m     135      24   7.878s   7.484s  -0.395s      yes
+Women   Distance  800m->1500m      312      53   7.638s   8.664s  +1.026s       no
+Men     Sprints   100m->200m       541      91   0.406s   0.308s  -0.098s      yes
+Men     Sprints   100m->400m       190      24   1.138s   1.482s  +0.343s       no
+Men     Sprints   200m->100m       541      91   0.183s   0.142s  -0.041s      yes
+Men     Sprints   200m->400m       327      51   1.170s   1.320s  +0.150s       no
+Men     Sprints   400m->100m       190      24   0.272s   0.188s  -0.084s      yes
+Men     Sprints   400m->200m       327      51   0.527s   0.538s  +0.011s       no
+Women   Sprints   100m->200m       243      37   0.482s   0.430s  -0.052s      yes
+Women   Sprints   200m->100m       243      37   0.187s   0.172s  -0.015s      yes
+Women   Sprints   200m->400m       145      26   1.314s   1.268s  -0.046s      yes
+Women   Sprints   400m->200m       145      26   0.521s   0.422s  -0.099s      yes
+
+  Pairs more accurate at 4 races: 13/20
+  Pairs less accurate at 4 races: 7/20
+  Mean Δ CV med|err| (4 minus all): +0.962s
+  Median Δ: -0.049s
+
+=== Exactly 5 races vs all athlete-seasons ===
+Gender  Group     Pair          n(all) n(5)   CV all  CV 5        Δ  Better?
+Men     Distance  1500m->800m      686      65   2.991s   3.120s  +0.129s       no
+Men     Distance  1500m->5000m     498      53  23.114s  18.792s  -4.322s      yes
+Men     Distance  5000m->800m      201      38   4.100s   5.783s  +1.684s       no
+Men     Distance  5000m->1500m     498      53   5.817s   5.671s  -0.146s      yes
+Men     Distance  800m->1500m      686      65   6.304s   6.747s  +0.442s       no
+Men     Distance  800m->5000m      201      38  23.740s  20.969s  -2.771s      yes
+Women   Distance  1500m->800m      312      29   3.658s   4.179s  +0.521s       no
+Women   Distance  800m->1500m      312      29   7.638s   9.296s  +1.658s       no
+Men     Sprints   100m->200m       541      41   0.406s   0.435s  +0.030s       no
+Men     Sprints   100m->400m       190      20   1.138s   1.198s  +0.059s       no
+Men     Sprints   200m->100m       541      41   0.183s   0.185s  +0.002s    ~same
+Men     Sprints   200m->400m       327      34   1.170s   0.899s  -0.271s      yes
+Men     Sprints   400m->100m       190      20   0.272s   0.223s  -0.049s      yes
+Men     Sprints   400m->200m       327      34   0.527s   0.398s  -0.129s      yes
+Women   Sprints   100m->200m       243      25   0.482s   0.368s  -0.114s      yes
+Women   Sprints   200m->100m       243      25   0.187s   0.177s  -0.010s    ~same
+
+  Pairs more accurate at 5 races: 7/16
+  Pairs less accurate at 5 races: 7/16
+  Mean Δ CV med|err| (5 minus all): -0.205s
+  Median Δ: -0.004s
+
+=== Exactly 6 races vs all athlete-seasons ===
+Gender  Group     Pair          n(all) n(6)   CV all  CV 6        Δ  Better?
+Men     Distance  1500m->800m      686      48   2.991s   2.607s  -0.383s      yes
+Men     Distance  1500m->5000m     498      34  23.114s  16.193s  -6.921s      yes
+Men     Distance  5000m->800m      201      24   4.100s   1.879s  -2.221s      yes
+Men     Distance  5000m->1500m     498      34   5.817s   4.310s  -1.507s      yes
+Men     Distance  800m->1500m      686      48   6.304s   6.159s  -0.146s      yes
+Men     Distance  800m->5000m      201      24  23.740s  15.963s  -7.777s      yes
+Men     Sprints   100m->200m       541      33   0.406s   0.362s  -0.043s      yes
+Men     Sprints   200m->100m       541      33   0.183s   0.130s  -0.053s      yes
+Men     Sprints   200m->400m       327      22   1.170s   1.260s  +0.091s       no
+Men     Sprints   400m->200m       327      22   0.527s   0.450s  -0.077s      yes
+
+  Pairs more accurate at 6 races: 9/10
+  Pairs less accurate at 6 races: 1/10
+  Mean Δ CV med|err| (6 minus all): -1.904s
+  Median Δ: -0.264s
+
+Detailed pair results by filter
+-----------------------------
+
+Filter: 4
+----------------------------------------
+  Men Distance 1500m -> 800m  n=117  linear=2.875s  best=knn_median 2.650s | pooled-athlete baseline: 3.196s (n=581)
+  Men Distance 1500m -> 5000m  n=87  linear=27.776s  best=median_ratio 24.256s | pooled-athlete baseline: 25.474s (n=434)
+  Men Distance 5000m -> 800m  n=38  linear=5.086s  best=knn_median 2.555s | pooled-athlete baseline: 4.633s (n=219)
+  Men Distance 5000m -> 1500m  n=87  linear=5.940s  best=quadratic 5.585s | pooled-athlete baseline: 6.484s (n=434)
+  Men Distance 800m -> 1500m  n=117  linear=8.036s  best=binned_ratio 5.582s | pooled-athlete baseline: 6.337s (n=581)
+  Men Distance 800m -> 5000m  n=38  linear=60.532s  best=chain_residual_adjusted 35.157s | pooled-athlete baseline: 25.619s (n=219)
+  Women Distance 1500m -> 800m  n=53  linear=4.098s  best=quadratic 3.606s | pooled-athlete baseline: 3.927s (n=272)
+  Women Distance 1500m -> 5000m  n=24  linear=44.065s  best=median_ratio 40.032s | pooled-athlete baseline: 32.703s (n=144)
+  Women Distance 5000m -> 1500m  n=24  linear=10.522s  best=robust_trimmed_linear 7.484s | pooled-athlete baseline: 8.459s (n=144)
+  Women Distance 800m -> 1500m  n=53  linear=8.808s  best=ratio_linear 8.664s | pooled-athlete baseline: 7.794s (n=272)
+  Men Sprints 100m -> 200m  n=91  linear=0.334s  best=quadratic 0.308s | pooled-athlete baseline: 0.422s (n=447)
+  Men Sprints 100m -> 400m  n=24  linear=2.287s  best=quadratic 1.482s | pooled-athlete baseline: 1.337s (n=174)
+  Men Sprints 200m -> 100m  n=91  linear=0.151s  best=quadratic 0.142s | pooled-athlete baseline: 0.189s (n=447)
+  Men Sprints 200m -> 400m  n=51  linear=1.320s  best=linear_ols 1.320s | pooled-athlete baseline: 1.272s (n=293)
+  Men Sprints 400m -> 100m  n=24  linear=0.203s  best=robust_trimmed_linear 0.188s | pooled-athlete baseline: 0.294s (n=174)
+  Men Sprints 400m -> 200m  n=51  linear=0.553s  best=binned_ratio 0.538s | pooled-athlete baseline: 0.558s (n=293)
+  Women Sprints 100m -> 200m  n=37  linear=0.629s  best=median_ratio 0.430s | pooled-athlete baseline: 0.484s (n=204)
+  Women Sprints 200m -> 100m  n=37  linear=0.191s  best=log_linear 0.172s | pooled-athlete baseline: 0.189s (n=204)
+  Women Sprints 200m -> 400m  n=26  linear=1.419s  best=robust_trimmed_linear 1.268s | pooled-athlete baseline: 1.644s (n=129)
+  Women Sprints 400m -> 200m  n=26  linear=0.456s  best=log_linear 0.422s | pooled-athlete baseline: 0.661s (n=129)
+
+Filter: 5
+----------------------------------------
+  Men Distance 1500m -> 800m  n=65  linear=3.409s  best=robust_trimmed_linear 3.120s | pooled-athlete baseline: 3.196s (n=581)
+  Men Distance 1500m -> 5000m  n=53  linear=21.951s  best=log_linear 18.792s | pooled-athlete baseline: 25.474s (n=434)
+  Men Distance 5000m -> 800m  n=38  linear=5.800s  best=quadratic 5.783s | pooled-athlete baseline: 4.633s (n=219)
+  Men Distance 5000m -> 1500m  n=53  linear=7.848s  best=median_ratio 5.671s | pooled-athlete baseline: 6.484s (n=434)
+  Men Distance 800m -> 1500m  n=65  linear=7.355s  best=robust_trimmed_linear 6.747s | pooled-athlete baseline: 6.337s (n=581)
+  Men Distance 800m -> 5000m  n=38  linear=35.774s  best=chain_residual_adjusted 20.969s | pooled-athlete baseline: 25.619s (n=219)
+  Women Distance 1500m -> 800m  n=29  linear=6.391s  best=binned_ratio 4.179s | pooled-athlete baseline: 3.927s (n=272)
+  Women Distance 800m -> 1500m  n=29  linear=14.098s  best=binned_ratio 9.296s | pooled-athlete baseline: 7.794s (n=272)
+  Men Sprints 100m -> 200m  n=41  linear=0.505s  best=median_ratio 0.435s | pooled-athlete baseline: 0.422s (n=447)
+  Men Sprints 100m -> 400m  n=20  linear=1.437s  best=robust_trimmed_linear 1.198s | pooled-athlete baseline: 1.337s (n=174)
+  Men Sprints 200m -> 100m  n=41  linear=0.186s  best=log_linear 0.185s | pooled-athlete baseline: 0.189s (n=447)
+  Men Sprints 200m -> 400m  n=34  linear=1.135s  best=median_ratio 0.899s | pooled-athlete baseline: 1.272s (n=293)
+  Men Sprints 400m -> 100m  n=20  linear=0.285s  best=robust_trimmed_linear 0.223s | pooled-athlete baseline: 0.294s (n=174)
+  Men Sprints 400m -> 200m  n=34  linear=0.615s  best=median_ratio 0.398s | pooled-athlete baseline: 0.558s (n=293)
+  Women Sprints 100m -> 200m  n=25  linear=0.368s  best=linear_ols 0.368s | pooled-athlete baseline: 0.484s (n=204)
+  Women Sprints 200m -> 100m  n=25  linear=0.225s  best=median_ratio 0.177s | pooled-athlete baseline: 0.189s (n=204)
+
+Filter: 6
+----------------------------------------
+  Men Distance 1500m -> 800m  n=48  linear=3.011s  best=robust_trimmed_linear 2.607s | pooled-athlete baseline: 3.196s (n=581)
+  Men Distance 1500m -> 5000m  n=34  linear=18.538s  best=median_ratio 16.193s | pooled-athlete baseline: 25.474s (n=434)
+  Men Distance 5000m -> 800m  n=24  linear=2.412s  best=quadratic 1.879s | pooled-athlete baseline: 4.633s (n=219)
+  Men Distance 5000m -> 1500m  n=34  linear=4.389s  best=median_ratio 4.310s | pooled-athlete baseline: 6.484s (n=434)
+  Men Distance 800m -> 1500m  n=48  linear=6.194s  best=log_linear 6.159s | pooled-athlete baseline: 6.337s (n=581)
+  Men Distance 800m -> 5000m  n=24  linear=23.540s  best=median_ratio 15.963s | pooled-athlete baseline: 25.619s (n=219)
+  Men Sprints 100m -> 200m  n=33  linear=0.393s  best=robust_trimmed_linear 0.362s | pooled-athlete baseline: 0.422s (n=447)
+  Men Sprints 200m -> 100m  n=33  linear=0.134s  best=ratio_linear 0.130s | pooled-athlete baseline: 0.189s (n=447)
+  Men Sprints 200m -> 400m  n=22  linear=1.755s  best=robust_trimmed_linear 1.260s | pooled-athlete baseline: 1.272s (n=293)
+  Men Sprints 400m -> 200m  n=22  linear=0.490s  best=ratio_linear 0.450s | pooled-athlete baseline: 0.558s (n=293)
+
+Filter: all
+----------------------------------------
+  Men Distance 1500m -> 800m  n=686  linear=3.005s  best=log_linear 2.991s | pooled-athlete baseline: 3.196s (n=581)
+  Men Distance 1500m -> 5000m  n=498  linear=23.266s  best=quadratic 23.114s | pooled-athlete baseline: 25.474s (n=434)
+  Men Distance 5000m -> 800m  n=201  linear=4.189s  best=robust_trimmed_linear 4.100s | pooled-athlete baseline: 4.633s (n=219)
+  Men Distance 5000m -> 1500m  n=498  linear=6.047s  best=robust_trimmed_linear 5.817s | pooled-athlete baseline: 6.484s (n=434)
+  Men Distance 800m -> 1500m  n=686  linear=6.335s  best=robust_trimmed_linear 6.304s | pooled-athlete baseline: 6.337s (n=581)
+  Men Distance 800m -> 5000m  n=201  linear=36.096s  best=chain_residual_adjusted 23.740s | pooled-athlete baseline: 25.619s (n=219)
+  Women Distance 1500m -> 800m  n=312  linear=3.736s  best=ratio_linear 3.658s | pooled-athlete baseline: 3.927s (n=272)
+  Women Distance 1500m -> 5000m  n=135  linear=32.820s  best=binned_ratio 31.162s | pooled-athlete baseline: 32.703s (n=144)
+  Women Distance 5000m -> 800m  n=82  linear=6.244s  best=median_ratio 5.206s | pooled-athlete baseline: 5.354s (n=85)
+  Women Distance 5000m -> 1500m  n=135  linear=8.044s  best=binned_ratio 7.878s | pooled-athlete baseline: 8.459s (n=144)
+  Women Distance 800m -> 1500m  n=312  linear=7.687s  best=median_ratio 7.638s | pooled-athlete baseline: 7.794s (n=272)
+  Women Distance 800m -> 5000m  n=82  linear=48.107s  best=chain_residual_adjusted 32.569s | pooled-athlete baseline: 33.331s (n=85)
+  Men Sprints 100m -> 200m  n=541  linear=0.437s  best=robust_trimmed_linear 0.406s | pooled-athlete baseline: 0.422s (n=447)
+  Men Sprints 100m -> 400m  n=190  linear=1.907s  best=chain_residual_adjusted 1.138s | pooled-athlete baseline: 1.337s (n=174)
+  Men Sprints 200m -> 100m  n=541  linear=0.193s  best=quadratic 0.183s | pooled-athlete baseline: 0.189s (n=447)
+  Men Sprints 200m -> 400m  n=327  linear=1.292s  best=knn_median 1.170s | pooled-athlete baseline: 1.272s (n=293)
+  Men Sprints 400m -> 100m  n=190  linear=0.295s  best=quadratic 0.272s | pooled-athlete baseline: 0.294s (n=174)
+  Men Sprints 400m -> 200m  n=327  linear=0.531s  best=robust_trimmed_linear 0.527s | pooled-athlete baseline: 0.558s (n=293)
+  Women Sprints 100m -> 200m  n=243  linear=0.493s  best=robust_trimmed_linear 0.482s | pooled-athlete baseline: 0.484s (n=204)
+  Women Sprints 100m -> 400m  n=62  linear=2.007s  best=multivariate_ols 1.749s | pooled-athlete baseline: 1.686s (n=59)
+  Women Sprints 200m -> 100m  n=243  linear=0.200s  best=robust_trimmed_linear 0.187s | pooled-athlete baseline: 0.189s (n=204)
+  Women Sprints 200m -> 400m  n=145  linear=1.541s  best=median_ratio 1.314s | pooled-athlete baseline: 1.644s (n=129)
+  Women Sprints 400m -> 100m  n=62  linear=0.298s  best=robust_trimmed_linear 0.294s | pooled-athlete baseline: 0.333s (n=59)
+  Women Sprints 400m -> 200m  n=145  linear=0.575s  best=robust_trimmed_linear 0.521s | pooled-athlete baseline: 0.661s (n=129)
+
+Interpretation
+--------------
+Among 4, 5, 6-race filters, 5 races had the lowest mean CV error (4.902s vs all athlete-seasons 6.768s).
+  • 4 races: mean best CV = 7.092s (less accurate than all-season average by 0.324s)
+  • 5 races: mean best CV = 4.902s (more accurate than all-season average by 1.865s)
+  • 6 races: mean best CV = 4.931s (more accurate than all-season average by 1.836s)
+
+Caveats:
+  • Smaller sample sizes at fixed race counts reduce model stability.
+  • Athletes with more races may be more committed / coached — selection effect.
+  • Race count here is total discipline results, not per-event race count.
+
+Source: time_models/model_search/compare_time_models_by_race_count.py

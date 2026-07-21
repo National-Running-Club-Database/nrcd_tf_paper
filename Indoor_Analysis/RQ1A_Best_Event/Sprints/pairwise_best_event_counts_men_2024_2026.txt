@@ -1,0 +1,39 @@
+Indoor Track 2024-2026 Male Sprints (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+60m vs. 200m (530 athletes in both):
+60m best event: 319  vs. 200m best event: 207
+(ties: 4)
+
+60m vs. 400m (224 athletes in both):
+60m best event: 122  vs. 400m best event: 102
+
+200m vs. 400m (299 athletes in both):
+200m best event: 171  vs. 400m best event: 128
+
+60m vs. 4x200m (228 athletes in both):
+60m best event: 118  vs. 4x200m best event: 109
+(ties: 1)
+
+60m vs. 4x400m (191 athletes in both):
+60m best event: 83  vs. 4x400m best event: 108
+
+200m vs. 4x100m (2 athletes in both):
+200m best event: 0  vs. 4x100m best event: 2
+
+200m vs. 4x200m (204 athletes in both):
+200m best event: 95  vs. 4x200m best event: 109
+
+200m vs. 4x400m (183 athletes in both):
+200m best event: 79  vs. 4x400m best event: 104
+
+400m vs. 4x200m (120 athletes in both):
+400m best event: 50  vs. 4x200m best event: 69
+(ties: 1)
+
+400m vs. 4x400m (220 athletes in both):
+400m best event: 74  vs. 4x400m best event: 145
+(ties: 1)
+
+4x200m vs. 4x400m (171 athletes in both):
+4x200m best event: 59  vs. 4x400m best event: 112

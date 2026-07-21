@@ -1,0 +1,38 @@
+Indoor Track 2024-2026 Female Jumps (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+Long Jump vs. Triple Jump (43 athletes in both):
+Long Jump best event: 19  vs. Triple Jump best event: 24
+
+Long Jump vs. High Jump (24 athletes in both):
+Long Jump best event: 10  vs. High Jump best event: 14
+
+Triple Jump vs. High Jump (11 athletes in both):
+Triple Jump best event: 7  vs. High Jump best event: 4
+
+Long Jump vs. 4x100m (1 athletes in both):
+Long Jump best event: 0  vs. 4x100m best event: 1
+
+Long Jump vs. 4x200m (45 athletes in both):
+Long Jump best event: 13  vs. 4x200m best event: 32
+
+Long Jump vs. 4x400m (27 athletes in both):
+Long Jump best event: 12  vs. 4x400m best event: 15
+
+Triple Jump vs. 4x200m (16 athletes in both):
+Triple Jump best event: 5  vs. 4x200m best event: 11
+
+Triple Jump vs. 4x400m (9 athletes in both):
+Triple Jump best event: 7  vs. 4x400m best event: 2
+
+High Jump vs. 4x100m (1 athletes in both):
+High Jump best event: 0  vs. 4x100m best event: 1
+
+High Jump vs. 4x200m (20 athletes in both):
+High Jump best event: 7  vs. 4x200m best event: 13
+
+High Jump vs. 4x400m (14 athletes in both):
+High Jump best event: 8  vs. 4x400m best event: 6
+
+4x200m vs. 4x400m (100 athletes in both):
+4x200m best event: 63  vs. 4x400m best event: 37

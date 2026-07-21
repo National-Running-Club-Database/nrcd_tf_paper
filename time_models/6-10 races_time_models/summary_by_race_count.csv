@@ -1,0 +1,8 @@
+race_count_filter,pairs_evaluated,mean_linear_cv_median_abs,mean_best_cv_median_abs,pairs_improved_over_linear
+all,24,8.1395,6.7676,21
+6,10,6.0857,4.9315,9
+7,4,2.0128,1.9913,2
+8,2,0.205,0.2042,0
+9,0,,,0
+10,0,,,0
+6_to_10,18,4.4128,3.6995,14

@@ -1,0 +1,63 @@
+Specialization vs. Cross-Event Time Model Accuracy
+===================================================
+
+Research question: Among athlete-seasons with exactly 6 races in an event
+group, do athletes with stronger WA-based specialization (larger spread
+between their best and weakest events) have worse or better cross-event
+time predictions?
+
+Population:
+  • Exactly 6 valid discipline results in the event group (2024–2026).
+  • Athlete-season PB per event (fastest time, WA > 0).
+
+Specialization metrics (per athlete-season, within group):
+  • wa_spread = max(WA) − min(WA) across season PBs in group events
+  • best_event = event with highest season PB WA
+  • specialized: wa_spread ≥ 50 WA points
+  • balanced: wa_spread < 50 WA points
+  • pair_wa_gap = WA(from) − WA(to) for a specific prediction pair
+
+Model evaluation:
+  • 5-fold CV (seed=42), same candidates as model_search
+  • Compare linear OLS and best 6-race model per pair on each cohort
+  • Minimum n=12 for subgroup CV; n=20 for pair reporting
+
+Cohort sizes (6-race athlete-seasons)
+--------------------------------
+  Men Distance: n=58  median spread=63.0 WA  specialized=40 (69%)  balanced=18
+  Men Sprints: n=39  median spread=63.0 WA  specialized=21 (54%)  balanced=18
+  Women Distance: n=11  median spread=50.0 WA  specialized=6 (55%)  balanced=5
+  Women Sprints: n=12  median spread=57.5 WA  specialized=7 (58%)  balanced=5
+
+Pair-level comparison (linear OLS CV median |error|)
+-------------------------------------------------------
+Gender  Group     Pair            n     All    Spec     Bal   Δ(S-B) Better?
+Men     Distance  1500m->800m    48  3.011s  3.322s  1.232s  +2.090s balanced
+Men     Distance  800m->1500m    48  6.194s  6.719s  3.495s  +3.224s balanced
+Men     Sprints   100m->200m     33  0.393s  0.892s  0.239s  +0.653s balanced
+Men     Sprints   200m->100m     33  0.134s  0.257s  0.102s  +0.155s balanced
+
+Headline — specialization spread ≥50 WA vs balanced:
+  Pairs with both cohorts n≥12: 4
+  Balanced athletes more predictable: 4/4
+  Specialized athletes more predictable: 0/4
+  Mean Δ (specialized − balanced) linear CV: +1.531s
+  Median Δ: +1.371s
+
+Predicting toward best vs non-best event (linear CV)
+--------------------------------------------------
+  Men Distance 1500m->800m: to non-best 1.494s (n=31)  to best 2.230s (n=17)  Δ=-0.736s
+  Men Distance 800m->1500m: to non-best 3.686s (n=21)  to best 2.960s (n=27)  Δ=+0.726s
+  Men Sprints 100m->200m: to non-best 0.274s (n=20)  to best 0.447s (n=13)  Δ=-0.173s
+  Men Sprints 200m->100m: to non-best 0.200s (n=17)  to best 0.195s (n=16)  Δ=+0.005s
+
+Interpretation
+--------------
+Specialized athletes (large WA spread within the group) show LARGER cross-event time prediction errors. Their weaker events are harder to project from stronger ones — WA specialization signals misfit with group-average time relationships.
+
+Caveats:
+  • WA spread uses PB marks in the group; it does not require running all 3 events.
+  • Subgroup sample sizes are small after splitting 6-race seasons.
+  • 50-WA threshold is a rule of thumb from prior WA specialization discussion.
+
+Source: time_models/specialized_time_models/analyze_specialization_time_models.py

@@ -1,0 +1,105 @@
+Indoor vs Outdoor Season-Opener World Athletics Scores (outdoor opener WA in [750, 950))
+========================================================================================
+
+Question:
+  For athletes with ≥2 indoor meets and ≥2 outdoor meets in the same year,
+  do outdoor season openers start with higher WA scores than indoor season
+  openers for similar events?
+  Restricted to comparisons where the outdoor opener result is in WA
+  band [750, 950).
+
+Method:
+  • Years: 2024, 2025, 2026 (indoor season file year paired with outdoor year).
+  • Eligibility: ≥2 distinct meet_ids with individual (non-relay) results indoors
+    AND ≥2 outdoors in that year.
+  • Season opener: earliest meet by start_date for that athlete in the season.
+  • Similar-event pairs compared only when the athlete contested the indoor
+    event at the indoor opener meet AND the paired outdoor event at the
+    outdoor opener meet.
+  • Delta = outdoor_opener_WA − indoor_opener_WA.
+  • Outdoor distance uses New_Steeplechase_Data (corrected WA) when available.
+  • Relays excluded.
+  • Band filter: keep a pair only if outdoor opener WA ∈ [750, 950).
+
+Similar-event pairs:
+  • 60m → 100m
+  • 200m → 200m
+  • 400m → 400m
+  • 800m → 800m
+  • Mile → 1500m
+  • 1500m → 1500m
+  • 3000m → 5000m
+  • 5000m → 5000m
+  • 60mH → 110mH [Men only]
+  • 60mH → 100mH [Women only]
+  • Long Jump → Long Jump
+  • Triple Jump → Triple Jump
+  • High Jump → High Jump
+  • Shot Put → Shot Put
+
+Eligibility / sample
+--------------------
+  2024: 74 eligible athletes; 85 opener pair comparisons (74 athletes with ≥1 comparable opener pair)
+  2025: 50 eligible athletes; 58 opener pair comparisons (50 athletes with ≥1 comparable opener pair)
+  2026: 60 eligible athletes; 75 opener pair comparisons (60 athletes with ≥1 comparable opener pair)
+  Combined: 161 athletes contributing 218 opener pair comparisons
+
+Primary result — all years, all similar-event pairs
+---------------------------------------------------
+  n=218 athletes=161  indoorμ=789.3 outdoorμ=816.3  Δμ=+27.0 Δmed=+24.0  outdoor_higher=69.3%  indoor_higher=29.4%
+  Verdict: YES — outdoor openers average higher WA than indoor openers for comparable events among dual-season athletes.
+
+By year
+-------
+  2024: n=85 athletes=74  indoorμ=780.9 outdoorμ=813.5  Δμ=+32.6 Δmed=+27.0  outdoor_higher=72.9%  indoor_higher=25.9%
+  2025: n=58 athletes=50  indoorμ=781.9 outdoorμ=816.9  Δμ=+35.0 Δmed=+30.0  outdoor_higher=75.9%  indoor_higher=22.4%
+  2026: n=75 athletes=60  indoorμ=804.6 outdoorμ=819.0  Δμ=+14.4 Δmed=+16.0  outdoor_higher=60.0%  indoor_higher=38.7%
+
+By gender
+---------
+  Men: n=148 athletes=105  indoorμ=787.0 outdoorμ=818.6  Δμ=+31.6 Δmed=+29.0  outdoor_higher=69.6%  indoor_higher=30.4%
+  Women: n=70 athletes=56  indoorμ=794.4 outdoorμ=811.5  Δμ=+17.1 Δmed=+15.0  outdoor_higher=68.6%  indoor_higher=27.1%
+
+By similar-event pair
+---------------------
+  60m → 100m: n=59 athletes=51  indoorμ=808.5 outdoorμ=826.3  Δμ=+17.8 Δmed=+20.0  outdoor_higher=66.1%  indoor_higher=33.9%
+  200m → 200m: n=40 athletes=38  indoorμ=802.2 outdoorμ=832.5  Δμ=+30.3 Δmed=+24.5  outdoor_higher=75.0%  indoor_higher=22.5%
+  400m → 400m: n=12 athletes=11  indoorμ=802.2 outdoorμ=812.4  Δμ=+10.2 Δmed=+8.0  outdoor_higher=66.7%  indoor_higher=33.3%
+  800m → 800m: n=13 athletes=13  indoorμ=784.8 outdoorμ=809.5  Δμ=+24.7 Δmed=-2.0  outdoor_higher=46.2%  indoor_higher=53.8%
+  Mile → 1500m: n=26 athletes=23  indoorμ=757.3 outdoorμ=807.1  Δμ=+49.8 Δmed=+55.0  outdoor_higher=80.8%  indoor_higher=19.2%
+  3000m → 5000m: n=14 athletes=14  indoorμ=792.6 outdoorμ=791.1  Δμ=-1.6 Δmed=+12.5  outdoor_higher=64.3%  indoor_higher=35.7%
+  5000m → 5000m: n=5 athletes=5  indoorμ=794.8 outdoorμ=809.0  Δμ=+14.2 Δmed=+9.0  outdoor_higher=60.0%  indoor_higher=40.0%
+  60mH → 110mH: n=8 athletes=5  indoorμ=838.2 outdoorμ=848.0  Δμ=+9.8 Δmed=+15.0  outdoor_higher=62.5%  indoor_higher=37.5%
+  60mH → 100mH: n=4 athletes=3  indoorμ=779.5 outdoorμ=826.0  Δμ=+46.5 Δmed=+31.5  outdoor_higher=50.0%  indoor_higher=50.0%
+  Long Jump → Long Jump: n=17 athletes=17  indoorμ=744.8 outdoorμ=800.4  Δμ=+55.6 Δmed=+48.0  outdoor_higher=76.5%  indoor_higher=23.5%
+  Triple Jump → Triple Jump: n=7 athletes=7  indoorμ=749.0 outdoorμ=781.3  Δμ=+32.3 Δmed=+31.0  outdoor_higher=85.7%  indoor_higher=14.3%
+  High Jump → High Jump: n=9 athletes=8  indoorμ=771.2 outdoorμ=809.8  Δμ=+38.6 Δmed=+60.0  outdoor_higher=66.7%  indoor_higher=11.1%
+  Shot Put → Shot Put: n=4 athletes=2  indoorμ=756.2 outdoorμ=768.2  Δμ=+12.0 Δmed=+13.5  outdoor_higher=75.0%  indoor_higher=25.0%
+
+By gender × event pair (n≥10)
+-----------------------------
+  Men 60m → 100m: n=41 athletes=34  indoorμ=800.6 outdoorμ=823.7  Δμ=+23.1 Δmed=+15.0  outdoor_higher=65.9%  indoor_higher=34.1%
+  Men 200m → 200m: n=32 athletes=30  indoorμ=798.4 outdoorμ=833.7  Δμ=+35.2 Δmed=+30.0  outdoor_higher=75.0%  indoor_higher=25.0%
+  Men 800m → 800m: n=10 athletes=10  indoorμ=777.1 outdoorμ=820.7  Δμ=+43.6 Δmed=+15.0  outdoor_higher=50.0%  indoor_higher=50.0%
+  Men Mile → 1500m: n=14 athletes=12  indoorμ=747.1 outdoorμ=815.3  Δμ=+68.1 Δmed=+59.0  outdoor_higher=85.7%  indoor_higher=14.3%
+  Men Long Jump → Long Jump: n=12 athletes=12  indoorμ=730.2 outdoorμ=795.5  Δμ=+65.3 Δmed=+55.5  outdoor_higher=83.3%  indoor_higher=16.7%
+  Women 60m → 100m: n=18 athletes=17  indoorμ=826.7 outdoorμ=832.4  Δμ=+5.7 Δmed=+20.5  outdoor_higher=66.7%  indoor_higher=33.3%
+  Women Mile → 1500m: n=12 athletes=11  indoorμ=769.1 outdoorμ=797.5  Δμ=+28.4 Δmed=+35.0  outdoor_higher=75.0%  indoor_higher=25.0%
+
+Athlete-level (mean delta across an athlete-year's comparable opener pairs)
+--------------------------------------------------------------------------
+  n_athlete_years=184  mean Δ=+27.02  median Δ=+22.50
+  outdoor_higher=69.6%  indoor_higher=28.8%  tie=1.6%
+
+Caveats
+-------
+  • Only opener-meet results count; later-season form is ignored.
+  • Athlete must run the paired events at BOTH openers — selection into
+    comparable pairs is not random (e.g., many milers may open outdoor in 800).
+  • Mile→1500m and 3000m→5000m are approximate cross-event WA comparisons.
+  • 60m→100m compares different distances on the WA scale (by design).
+  • Outdoor March 1+ filter is not applied beyond what the outdoor CSVs contain.
+  • This file restricts to outdoor opener WA ∈ [750, 950); indoor opener
+    WA is unrestricted (may fall outside the band).
+
+Source: Indoor_Analysis/Indoor_Outdoor_Interplay/analyze_indoor_outdoor_opener_wa.py

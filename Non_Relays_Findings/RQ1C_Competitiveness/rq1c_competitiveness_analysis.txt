@@ -1,0 +1,271 @@
+RQ1C — Which Event Should Athletes Pursue to Be Most Competitive?
+Method: 3-year average nationals 8th-place WA threshold (RQ1B); 2024–2026 combined athlete personal bests.
+RQ1C event = event with largest margin above (or smallest margin below) the 8th-place nationals threshold.
+RQ1A event = event with highest absolute WA personal best.
+Clear-rate listings ordered by count clearing 8th-place bar (numerator), not percentage.
+
+======================================================================
+## Sprints
+======================================================================
+
+### Men
+Athletes in discipline: 1248
+Multi-event athletes (2+): 647
+RQ1A = RQ1C agreement: 608 (94.0%) | Mismatch: 39
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  400m: 466 athletes | 42/617 clear 8th-place bar (6.8%) | threshold=791.7
+  100m: 462 athletes | 65/706 clear 8th-place bar (9.2%) | threshold=818.0
+  200m: 320 athletes | 72/710 clear 8th-place bar (10.1%) | threshold=820.3
+
+Best event (RQ1A) for comparison:
+  100m: 467
+  400m: 430
+  200m: 351
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  200m: 72/710 (10.1%)
+  100m: 65/706 (9.2%)
+  400m: 42/617 (6.8%)
+
+### Women
+Athletes in discipline: 542
+Multi-event athletes (2+): 290
+RQ1A = RQ1C agreement: 265 (91.4%) | Mismatch: 25
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  100m: 225 athletes | 27/290 clear 8th-place bar (9.3%) | threshold=814.3
+  400m: 207 athletes | 23/246 clear 8th-place bar (9.3%) | threshold=788.3
+  200m: 110 athletes | 25/348 clear 8th-place bar (7.2%) | threshold=799.3
+
+Best event (RQ1A) for comparison:
+  100m: 245
+  400m: 192
+  200m: 105
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  100m: 27/290 (9.3%)
+  200m: 25/348 (7.2%)
+  400m: 23/246 (9.3%)
+
+======================================================================
+## Distance
+======================================================================
+
+### Men
+Athletes in discipline: 1933
+Multi-event athletes (2+): 961
+RQ1A = RQ1C agreement: 728 (75.8%) | Mismatch: 233
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  1500m: 669 athletes | 51/1187 clear 8th-place bar (4.3%) | threshold=827.0
+  800m: 576 athletes | 46/1004 clear 8th-place bar (4.6%) | threshold=829.3
+  5000m: 479 athletes | 36/744 clear 8th-place bar (4.8%) | threshold=786.0
+  3000m Steeplechase: 209 athletes | 24/281 clear 8th-place bar (8.5%) | threshold=456.0
+
+Best event (RQ1A) for comparison:
+  1500m: 816
+  800m: 626
+  5000m: 429
+  3000m Steeplechase: 62
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  1500m: 51/1187 (4.3%)
+  800m: 46/1004 (4.6%)
+  5000m: 36/744 (4.8%)
+  3000m Steeplechase: 24/281 (8.5%)
+
+### Women
+Athletes in discipline: 946
+Multi-event athletes (2+): 424
+RQ1A = RQ1C agreement: 291 (68.6%) | Mismatch: 133
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  1500m: 358 athletes | 46/577 clear 8th-place bar (8.0%) | threshold=791.7
+  800m: 260 athletes | 30/473 clear 8th-place bar (6.3%) | threshold=759.7
+  5000m: 206 athletes | 29/303 clear 8th-place bar (9.6%) | threshold=808.5
+  3000m Steeplechase: 122 athletes | 22/135 clear 8th-place bar (16.3%) | threshold=510.7
+
+Best event (RQ1A) for comparison:
+  1500m: 436
+  5000m: 243
+  800m: 238
+  3000m Steeplechase: 29
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  1500m: 46/577 (8.0%)
+  800m: 30/473 (6.3%)
+  5000m: 29/303 (9.6%)
+  3000m Steeplechase: 22/135 (16.3%)
+
+======================================================================
+## Hurdles
+======================================================================
+
+### Men
+Athletes in discipline: 238
+Multi-event athletes (2+): 93
+RQ1A = RQ1C agreement: 76 (81.7%) | Mismatch: 17
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  400m Hurdles: 146 athletes | 27/197 clear 8th-place bar (13.7%) | threshold=728.3
+  110m Hurdles: 92 athletes | 38/134 clear 8th-place bar (28.4%) | threshold=629.0
+
+Best event (RQ1A) for comparison:
+  400m Hurdles: 163
+  110m Hurdles: 75
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  110m Hurdles: 38/134 (28.4%)
+  400m Hurdles: 27/197 (13.7%)
+
+### Women
+Athletes in discipline: 145
+Multi-event athletes (2+): 53
+RQ1A = RQ1C agreement: 45 (84.9%) | Mismatch: 8
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  100m Hurdles: 79 athletes | 28/106 clear 8th-place bar (26.4%) | threshold=607.7
+  400m Hurdles: 66 athletes | 32/92 clear 8th-place bar (34.8%) | threshold=660.7
+
+Best event (RQ1A) for comparison:
+  400m Hurdles: 74
+  100m Hurdles: 71
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  400m Hurdles: 32/92 (34.8%)
+  100m Hurdles: 28/106 (26.4%)
+
+======================================================================
+## Jumps
+======================================================================
+
+### Men
+Athletes in discipline: 318
+Multi-event athletes (2+): 106
+RQ1A = RQ1C agreement: 80 (75.5%) | Mismatch: 26
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  Long Jump: 173 athletes | 34/250 clear 8th-place bar (13.6%) | threshold=791.7
+  High Jump: 73 athletes | 29/104 clear 8th-place bar (27.9%) | threshold=732.0
+  Triple Jump: 72 athletes | 23/100 clear 8th-place bar (23.0%) | threshold=725.7
+
+Best event (RQ1A) for comparison:
+  Long Jump: 198
+  High Jump: 69
+  Triple Jump: 51
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  Long Jump: 34/250 (13.6%)
+  High Jump: 29/104 (27.9%)
+  Triple Jump: 23/100 (23.0%)
+
+### Women
+Athletes in discipline: 201
+Multi-event athletes (2+): 73
+RQ1A = RQ1C agreement: 57 (78.1%) | Mismatch: 16
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  Long Jump: 107 athletes | 26/157 clear 8th-place bar (16.6%) | threshold=760.3
+  High Jump: 59 athletes | 28/75 clear 8th-place bar (37.3%) | threshold=681.0
+  Triple Jump: 35 athletes | 18/57 clear 8th-place bar (31.6%) | threshold=741.0
+
+Best event (RQ1A) for comparison:
+  Long Jump: 119
+  High Jump: 48
+  Triple Jump: 34
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  High Jump: 28/75 (37.3%)
+  Long Jump: 26/157 (16.6%)
+  Triple Jump: 18/57 (31.6%)
+
+======================================================================
+## Throws
+======================================================================
+
+### Men
+Athletes in discipline: 191
+Multi-event athletes (2+): 112
+RQ1A = RQ1C agreement: 108 (96.4%) | Mismatch: 4
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  Shot Put: 127 athletes | 22/172 clear 8th-place bar (12.8%) | threshold=671.7
+  Discus: 64 athletes | 25/131 clear 8th-place bar (19.1%) | threshold=659.3
+
+Best event (RQ1A) for comparison:
+  Shot Put: 131
+  Discus: 60
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  Discus: 25/131 (19.1%)
+  Shot Put: 22/172 (12.8%)
+
+### Women
+Athletes in discipline: 128
+Multi-event athletes (2+): 73
+RQ1A = RQ1C agreement: 48 (65.8%) | Mismatch: 25
+
+Most competitive event (RQ1C) — athletes who should pursue this event:
+  Shot Put: 74 athletes | 23/115 clear 8th-place bar (20.0%) | threshold=579.7
+  Discus: 54 athletes | 25/86 clear 8th-place bar (29.1%) | threshold=504.3
+
+Best event (RQ1A) for comparison:
+  Shot Put: 99
+  Discus: 29
+
+Nationals clear-rate (ordered by count clearing 8th-place bar):
+  Discus: 25/86 (29.1%)
+  Shot Put: 23/115 (20.0%)
+
+======================================================================
+## Distance — Pairwise Competitiveness (margin above 8th-place threshold)
+======================================================================
+
+### Men
+800m vs. 1500m (586 in both): 800m more competitive: 225 | 1500m more competitive: 361
+1500m vs. 5000m (437 in both): 1500m more competitive: 209 | 5000m more competitive: 228
+800m vs. 5000m (227 in both): 800m more competitive: 80 | 5000m more competitive: 147
+1500m vs. 3000m Steeplechase (171 in both): 1500m more competitive: 39 | 3000m Steeplechase more competitive: 132
+
+### Women
+800m vs. 1500m (272 in both): 800m more competitive: 90 | 1500m more competitive: 178 | ties: 4
+1500m vs. 5000m (144 in both): 1500m more competitive: 65 | 5000m more competitive: 79
+800m vs. 5000m (85 in both): 800m more competitive: 27 | 5000m more competitive: 58
+1500m vs. 3000m Steeplechase (81 in both): 1500m more competitive: 6 | 3000m Steeplechase more competitive: 75
+
+======================================================================
+## Population-Level: Nationals Clear Counts (ordered by athletes clearing 8th-place bar)
+======================================================================
+
+### Men
+  200m                      72 clear (72/710, 10.1%) [Sprints]
+  100m                      65 clear (65/706, 9.2%) [Sprints]
+  1500m                     51 clear (51/1187, 4.3%) [Distance]
+  800m                      46 clear (46/1004, 4.6%) [Distance]
+  400m                      42 clear (42/617, 6.8%) [Sprints]
+  110m Hurdles              38 clear (38/134, 28.4%) [Hurdles]
+  5000m                     36 clear (36/744, 4.8%) [Distance]
+  Long Jump                 34 clear (34/250, 13.6%) [Jumps]
+  High Jump                 29 clear (29/104, 27.9%) [Jumps]
+  400m Hurdles              27 clear (27/197, 13.7%) [Hurdles]
+  Discus                    25 clear (25/131, 19.1%) [Throws]
+  3000m Steeplechase        24 clear (24/281, 8.5%) [Distance]
+  Triple Jump               23 clear (23/100, 23.0%) [Jumps]
+  Shot Put                  22 clear (22/172, 12.8%) [Throws]
+
+### Women
+  1500m                     46 clear (46/577, 8.0%) [Distance]
+  400m Hurdles              32 clear (32/92, 34.8%) [Hurdles]
+  800m                      30 clear (30/473, 6.3%) [Distance]
+  5000m                     29 clear (29/303, 9.6%) [Distance]
+  100m Hurdles              28 clear (28/106, 26.4%) [Hurdles]
+  High Jump                 28 clear (28/75, 37.3%) [Jumps]
+  100m                      27 clear (27/290, 9.3%) [Sprints]
+  Long Jump                 26 clear (26/157, 16.6%) [Jumps]
+  200m                      25 clear (25/348, 7.2%) [Sprints]
+  Discus                    25 clear (25/86, 29.1%) [Throws]
+  400m                      23 clear (23/246, 9.3%) [Sprints]
+  Shot Put                  23 clear (23/115, 20.0%) [Throws]
+  3000m Steeplechase        22 clear (22/135, 16.3%) [Distance]
+  Triple Jump               18 clear (18/57, 31.6%) [Jumps]

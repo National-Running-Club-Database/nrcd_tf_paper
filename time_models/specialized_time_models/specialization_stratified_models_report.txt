@@ -1,0 +1,80 @@
+Specialization-Stratified Time Models (6 Races)
+===============================================
+
+Question: If specialization status is known, do cohort-specific formulas
+beat the group-average 6-race models?
+
+Population: exactly 6 races per athlete-season.
+Specialized: wa_spread ≥ 50 WA. Balanced: wa_spread < 50.
+Minimum n=12 to fit cohort model; n=20 to report pair.
+
+Routed prediction: apply specialized formula to specialized athletes and
+balanced formula to balanced athletes (with group-model fallback if cohort
+train n < 12 in a CV fold).
+
+Cohort-specific models beating group-average on same cohort
+-------------------------------------------------------
+  Pairs compared: 14  Cohort model wins: 11  (79%)
+
+Routed vs group-only CV (specialization-aware assignment)
+-------------------------------------------------------
+  Pairs compared: 10  Routed wins: 2 (20%)
+  Men Distance 5000m->800m: routed 2.143s  group 2.550s  Δ=+0.406s  (n=24, spec=23, bal=1)
+  Men Distance 1500m->800m: routed 2.931s  group 3.286s  Δ=+0.355s  (n=48, spec=36, bal=12)
+  Men Sprints 200m->100m: routed 0.169s  group 0.144s  Δ=-0.024s  (n=33, spec=19, bal=14)
+  Men Sprints 400m->200m: routed 0.487s  group 0.457s  Δ=-0.030s  (n=22, spec=17, bal=5)
+  Men Sprints 100m->200m: routed 0.455s  group 0.392s  Δ=-0.062s  (n=33, spec=19, bal=14)
+  Men Distance 800m->1500m: routed 6.787s  group 6.660s  Δ=-0.128s  (n=48, spec=36, bal=12)
+  Men Distance 5000m->1500m: routed 4.837s  group 4.545s  Δ=-0.292s  (n=34, spec=27, bal=7)
+  Men Distance 1500m->5000m: routed 17.172s  group 16.844s  Δ=-0.328s  (n=34, spec=27, bal=7)
+  Men Sprints 200m->400m: routed 1.937s  group 1.402s  Δ=-0.535s  (n=22, spec=17, bal=5)
+  Men Distance 800m->5000m: routed 23.880s  group 15.963s  Δ=-7.916s  (n=24, spec=23, bal=1)
+
+Best cohort-specific formulas (CV improvement > 0.01s vs group on cohort)
+-------------------------------------------------------
+  [balanced] Men Distance 800m->1500m  n=12
+    Formula: 1500m = 800m × ratio_bin(800m)
+    CV: 1.192s vs group on cohort 3.569s (↓2.433s)
+  [specialized] Men Distance 800m->1500m  n=36
+    Formula: 1500m = 800m × ratio_bin(800m)
+    CV: 5.219s vs group on cohort 6.362s (↓1.026s)
+  [balanced] Men Distance 1500m->800m  n=12
+    Formula: 800m = 1500m × ratio_bin(1500m)
+    CV: 0.749s vs group on cohort 1.232s (↓0.869s)
+  [specialized] Men Distance 1500m->5000m  n=27
+    Formula: 5000m = 3.797 × 1500m
+    CV: 15.701s vs group on cohort 15.701s (↓0.657s)
+  [specialized] Men Distance 1500m->800m  n=36
+    Formula: 800m = 0.492 × 1500m
+    CV: 2.945s vs group on cohort 3.049s (↓0.275s)
+  [specialized] Men Distance 5000m->800m  n=23
+    Formula: 800m = 5000m × (0.157 − 0.000027×5000m)
+    CV: 2.155s vs group on cohort 2.585s (↓0.230s)
+  [specialized] Men Distance 5000m->1500m  n=27
+    Formula: 1500m = 0.263 × 5000m
+    CV: 4.130s vs group on cohort 4.130s (↓0.221s)
+  [balanced] Men Sprints 100m->200m  n=14
+    Formula: 200m = 100m × ratio_bin(100m)
+    CV: 0.110s vs group on cohort 0.278s (↓0.079s)
+  [balanced] Men Sprints 200m->100m  n=14
+    Formula: 100m = -14.959 + 1.768×200m − 0.027265×200m²
+    CV: 0.058s vs group on cohort 0.101s (↓0.035s)
+  [specialized] Men Sprints 100m->200m  n=19
+    Formula: 200m = 2.027 × 100m
+    CV: 0.614s vs group on cohort 0.867s (↓0.028s)
+  [specialized] Men Sprints 200m->100m  n=19
+    Formula: 100m = 4.642 + 0.296 × 200m
+    CV: 0.222s vs group on cohort 0.274s (↓0.022s)
+
+Interpretation
+--------------
+Yes — cohort-specific formulas often beat applying the pooled 6-race model to the same specialization subgroup. The balanced cohort sees the largest gains.
+Routed prediction shows modest gains; knowing specialization status helps most when applying the balanced-athlete formulas.
+
+Output files:
+  best_specialization_time_models.csv
+  specialization_vs_group_comparison.csv
+  time_models_specialized_6races_formulas.txt
+  time_models_balanced_6races_formulas.txt
+
+Source: build_specialization_time_models.py

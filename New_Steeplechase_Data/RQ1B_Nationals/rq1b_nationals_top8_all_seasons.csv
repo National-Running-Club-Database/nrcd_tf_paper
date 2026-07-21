@@ -1,0 +1,329 @@
+season,discipline,gender,event_id,event_name,place,result_time,world_athletics_points,athlete_id,event_type_used,meet_id
+2024,Distance,Men,9,800m,1,1:54.70,896.0,2492,(unlabeled),227
+2024,Distance,Men,9,800m,2,1:54.70,896.0,1216,(unlabeled),227
+2024,Distance,Men,9,800m,3,1:54.94,890.0,2858,(unlabeled),227
+2024,Distance,Men,9,800m,4,1:55.31,880.0,539,(unlabeled),227
+2024,Distance,Men,9,800m,5,1:56.22,856.0,678,(unlabeled),227
+2024,Distance,Men,9,800m,6,1:56.54,848.0,2860,(unlabeled),227
+2024,Distance,Men,9,800m,7,1:57.28,829.0,530,(unlabeled),227
+2024,Distance,Men,9,800m,8,1:57.50,823.0,1552,(unlabeled),227
+2024,Distance,Men,11,1500m,1,3:58.96,867.0,678,(unlabeled),227
+2024,Distance,Men,11,1500m,2,4:01.92,832.0,2858,(unlabeled),227
+2024,Distance,Men,11,1500m,3,4:02.32,827.0,1989,(unlabeled),227
+2024,Distance,Men,11,1500m,4,4:02.81,821.0,666,(unlabeled),227
+2024,Distance,Men,11,1500m,5,4:03.26,816.0,4535,(unlabeled),227
+2024,Distance,Men,11,1500m,6,4:03.63,812.0,2193,(unlabeled),227
+2024,Distance,Men,11,1500m,7,4:04.93,797.0,130,(unlabeled),227
+2024,Distance,Men,11,1500m,8,4:05.89,786.0,4368,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,1,9:28.97,877.0,466,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,2,9:34.59,856.0,667,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,3,9:38.82,840.0,5236,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,4,9:39.51,837.0,1996,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,5,9:48.57,803.0,2007,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,6,9:54.72,780.0,2858,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,7,9:56.53,773.0,1998,(unlabeled),227
+2024,Distance,Men,20,3000m Steeplechase,8,9:58.82,765.0,1992,(unlabeled),227
+2024,Distance,Men,17,5000m,1,14:51.26,836.0,666,(unlabeled),227
+2024,Distance,Men,17,5000m,2,14:52.74,831.0,505,(unlabeled),227
+2024,Distance,Men,17,5000m,3,14:52.98,831.0,673,(unlabeled),227
+2024,Distance,Men,17,5000m,4,14:53.98,828.0,451,(unlabeled),227
+2024,Distance,Men,17,5000m,5,14:54.36,827.0,1989,(unlabeled),227
+2024,Distance,Men,17,5000m,6,14:57.25,818.0,2007,(unlabeled),227
+2024,Distance,Men,17,5000m,7,14:57.56,817.0,2584,(unlabeled),227
+2024,Distance,Men,17,5000m,8,14:58.18,815.0,1522,(unlabeled),227
+2024,Relays,Men,21,4x100m,1,43.59,829.0,3809,(unlabeled),227
+2024,Relays,Men,21,4x100m,2,43.74,819.0,5218,(unlabeled),227
+2024,Relays,Men,21,4x100m,3,44.55,768.0,3508,(unlabeled),227
+2024,Relays,Men,21,4x100m,4,44.81,752.0,3689,(unlabeled),227
+2024,Relays,Men,21,4x100m,5,45.56,707.0,3946,(unlabeled),227
+2024,Relays,Men,21,4x100m,6,45.66,701.0,5234,(unlabeled),227
+2024,Relays,Men,21,4x100m,7,46.11,675.0,3541,(unlabeled),227
+2024,Relays,Men,21,4x100m,8,46.18,671.0,3728,(unlabeled),227
+2024,Relays,Men,24,4x400m,1,3:23.21,863.0,130,(unlabeled),227
+2024,Relays,Men,24,4x400m,2,3:25.17,838.0,3733,(unlabeled),227
+2024,Relays,Men,24,4x400m,3,3:25.25,836.0,4430,(unlabeled),227
+2024,Relays,Men,24,4x400m,4,3:29.13,787.0,2918,(unlabeled),227
+2024,Relays,Men,24,4x400m,5,3:29.49,782.0,3541,(unlabeled),227
+2024,Relays,Men,24,4x400m,6,3:29.65,780.0,5218,(unlabeled),227
+2024,Relays,Men,24,4x400m,7,3:30.13,774.0,3841,(unlabeled),227
+2024,Relays,Men,24,4x400m,8,3:30.90,765.0,2560,(unlabeled),227
+2024,Relays,Men,26,4x800m,1,7:56.99,0.0,2860,(unlabeled),227
+2024,Relays,Men,26,4x800m,2,8:00.78,0.0,772,(unlabeled),227
+2024,Relays,Men,26,4x800m,3,8:04.93,0.0,2492,(unlabeled),227
+2024,Relays,Men,26,4x800m,4,8:05.31,0.0,123,(unlabeled),227
+2024,Relays,Men,26,4x800m,5,8:14.67,0.0,3688,(unlabeled),227
+2024,Relays,Men,26,4x800m,6,8:16.39,0.0,2967,(unlabeled),227
+2024,Relays,Men,26,4x800m,7,8:16.71,0.0,3015,(unlabeled),227
+2024,Relays,Men,26,4x800m,8,8:19.66,0.0,535,(unlabeled),227
+2024,Distance,Women,9,800m,1,2:20.09,830.0,1928,(unlabeled),227
+2024,Distance,Women,9,800m,2,2:25.00,758.0,2512,(unlabeled),227
+2024,Distance,Women,9,800m,3,2:26.00,743.0,246,(unlabeled),227
+2024,Distance,Women,9,800m,4,2:27.12,728.0,1930,(unlabeled),227
+2024,Distance,Women,9,800m,5,2:27.27,725.0,3366,(unlabeled),227
+2024,Distance,Women,9,800m,6,2:27.50,722.0,807,(unlabeled),227
+2024,Distance,Women,9,800m,7,2:28.22,712.0,291,(unlabeled),227
+2024,Distance,Women,9,800m,8,2:28.45,709.0,620,(unlabeled),227
+2024,Distance,Women,11,1500m,1,4:54.19,809.0,1967,(unlabeled),227
+2024,Distance,Women,11,1500m,2,5:00.91,765.0,1929,(unlabeled),227
+2024,Distance,Women,11,1500m,3,5:01.76,760.0,577,(unlabeled),227
+2024,Distance,Women,11,1500m,4,5:03.16,751.0,2160,(unlabeled),227
+2024,Distance,Women,11,1500m,5,5:04.60,742.0,67,(unlabeled),227
+2024,Distance,Women,11,1500m,6,5:05.90,734.0,2241,(unlabeled),227
+2024,Distance,Women,11,1500m,7,5:05.96,733.0,1930,(unlabeled),227
+2024,Distance,Women,11,1500m,8,5:09.60,711.0,234,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,1,12:02.44,820.0,234,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,2,12:06.04,813.0,568,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,3,12:07.33,810.0,577,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,4,12:16.16,792.0,68,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,5,12:24.93,774.0,992,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,6,12:25.90,772.0,1931,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,7,12:37.07,749.0,1748,(unlabeled),227
+2024,Distance,Women,20,3000m Steeplechase,8,12:39.60,744.0,3098,(unlabeled),227
+2024,Distance,Women,17,5000m,1,17:20.06,907.0,2499,(unlabeled),227
+2024,Distance,Women,17,5000m,2,17:39.29,875.0,5527,(unlabeled),227
+2024,Distance,Women,17,5000m,3,18:00.97,839.0,807,(unlabeled),227
+2024,Distance,Women,17,5000m,4,18:17.23,812.0,3740,(unlabeled),227
+2024,Distance,Women,17,5000m,5,18:33.52,786.0,282,(unlabeled),227
+2024,Distance,Women,17,5000m,6,18:33.75,785.0,1967,(unlabeled),227
+2024,Distance,Women,17,5000m,7,18:39.78,776.0,65,(unlabeled),227
+2024,Distance,Women,17,5000m,8,18:42.56,771.0,567,(unlabeled),227
+2024,Relays,Women,21,4x100m,1,50.08,894.0,4253,(unlabeled),227
+2024,Relays,Women,21,4x100m,2,50.38,882.0,3795,(unlabeled),227
+2024,Relays,Women,21,4x100m,3,52.60,802.0,3526,(unlabeled),227
+2024,Relays,Women,21,4x100m,4,53.12,784.0,4257,(unlabeled),227
+2024,Relays,Women,21,4x100m,5,53.48,771.0,4174,(unlabeled),227
+2024,Relays,Women,21,4x100m,6,53.87,758.0,3826,(unlabeled),227
+2024,Relays,Women,21,4x100m,7,54.43,739.0,4265,(unlabeled),227
+2024,Relays,Women,21,4x100m,8,55.17,714.0,5529,(unlabeled),227
+2024,Relays,Women,24,4x400m,1,4:06.01,855.0,4242,(unlabeled),227
+2024,Relays,Women,24,4x400m,2,4:06.87,848.0,3798,(unlabeled),227
+2024,Relays,Women,24,4x400m,3,4:17.22,775.0,3532,(unlabeled),227
+2024,Relays,Women,24,4x400m,4,4:18.68,765.0,3366,(unlabeled),227
+2024,Relays,Women,24,4x400m,5,4:20.29,753.0,1054,(unlabeled),227
+2024,Relays,Women,24,4x400m,6,4:23.53,731.0,648,(unlabeled),227
+2024,Relays,Women,24,4x400m,7,4:25.32,719.0,285,(unlabeled),227
+2024,Relays,Women,24,4x400m,8,4:28.32,699.0,3656,(unlabeled),227
+2024,Relays,Women,26,4x800m,1,9:45.35,0.0,1928,(unlabeled),227
+2024,Relays,Women,26,4x800m,2,10:06.48,0.0,282,(unlabeled),227
+2024,Relays,Women,26,4x800m,3,10:06.82,0.0,6285,(unlabeled),227
+2024,Relays,Women,26,4x800m,4,10:08.85,0.0,3366,(unlabeled),227
+2024,Relays,Women,26,4x800m,5,10:08.87,0.0,68,(unlabeled),227
+2024,Relays,Women,26,4x800m,6,10:12.43,0.0,1732,(unlabeled),227
+2024,Relays,Women,26,4x800m,7,10:17.24,0.0,237,(unlabeled),227
+2024,Relays,Women,26,4x800m,8,10:17.61,0.0,4114,(unlabeled),227
+2025,Distance,Men,9,800m,1,1:53.50,928.0,539,Finals,1237
+2025,Distance,Men,9,800m,2,1:53.77,921.0,1216,Finals,1237
+2025,Distance,Men,9,800m,3,1:53.88,918.0,2896,Finals,1237
+2025,Distance,Men,9,800m,4,1:55.65,871.0,2492,Finals,1237
+2025,Distance,Men,9,800m,5,1:55.98,862.0,24914,Finals,1237
+2025,Distance,Men,9,800m,6,1:57.16,832.0,18865,Finals,1237
+2025,Distance,Men,9,800m,7,1:57.34,827.0,466,Finals,1237
+2025,Distance,Men,9,800m,8,1:58.04,809.0,5500,Finals,1237
+2025,Distance,Men,11,1500m,1,3:55.40,909.0,19375,Finals,1237
+2025,Distance,Men,11,1500m,2,3:56.40,897.0,466,Finals,1237
+2025,Distance,Men,11,1500m,3,3:57.21,887.0,26626,Finals,1237
+2025,Distance,Men,11,1500m,4,3:58.29,875.0,673,Finals,1237
+2025,Distance,Men,11,1500m,5,3:59.33,862.0,8038,Finals,1237
+2025,Distance,Men,11,1500m,6,4:00.41,849.0,2492,Finals,1237
+2025,Distance,Men,11,1500m,7,4:01.83,833.0,4910,Finals,1237
+2025,Distance,Men,11,1500m,8,4:02.45,826.0,26627,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,1,9:28.87,878.0,466,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,2,9:35.08,854.0,667,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,3,9:37.24,846.0,18742,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,4,9:46.93,809.0,2723,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,5,9:52.50,788.0,23574,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,6,9:55.36,778.0,2007,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,7,10:08.26,731.0,673,Finals,1237
+2025,Distance,Men,20,3000m Steeplechase,8,10:15.08,707.0,1996,Finals,1237
+2025,Distance,Men,17,5000m,1,15:03.24,800.0,19375,Finals,1237
+2025,Distance,Men,17,5000m,2,15:11.26,776.0,18964,Finals,1237
+2025,Distance,Men,17,5000m,3,15:11.44,776.0,673,Finals,1237
+2025,Distance,Men,17,5000m,4,15:13.95,768.0,2007,Finals,1237
+2025,Distance,Men,17,5000m,5,15:15.24,764.0,26626,Finals,1237
+2025,Distance,Men,17,5000m,6,15:19.47,752.0,2584,Finals,1237
+2025,Distance,Men,17,5000m,7,15:21.80,745.0,7975,Finals,1237
+2025,Distance,Men,17,5000m,8,15:24.78,737.0,26699,Finals,1237
+2025,Relays,Men,21,4x100m,1,42.04,931.0,26659,Finals,1237
+2025,Relays,Men,21,4x100m,2,42.46,903.0,26660,Finals,1237
+2025,Relays,Men,21,4x100m,3,42.87,875.0,26661,Finals,1237
+2025,Relays,Men,21,4x100m,4,43.09,861.0,26662,Finals,1237
+2025,Relays,Men,21,4x100m,5,43.10,860.0,26663,Finals,1237
+2025,Relays,Men,21,4x100m,6,43.62,827.0,26664,Finals,1237
+2025,Relays,Men,21,4x100m,7,43.92,808.0,26665,Finals,1237
+2025,Relays,Men,21,4x100m,8,44.06,799.0,26666,Finals,1237
+2025,Relays,Men,24,4x400m,1,3:22.29,875.0,26728,Finals,1237
+2025,Relays,Men,24,4x400m,2,3:22.86,868.0,26729,Finals,1237
+2025,Relays,Men,24,4x400m,3,3:23.27,862.0,26730,Finals,1237
+2025,Relays,Men,24,4x400m,4,3:23.30,862.0,26731,Finals,1237
+2025,Relays,Men,24,4x400m,5,3:26.36,822.0,26664,Finals,1237
+2025,Relays,Men,24,4x400m,6,3:26.60,819.0,26732,Finals,1237
+2025,Relays,Men,24,4x400m,7,3:27.17,812.0,26733,Finals,1237
+2025,Relays,Men,24,4x400m,8,3:27.97,801.0,26577,Finals,1237
+2025,Relays,Men,26,4x800m,1,7:54.66,0.0,26574,Finals,1237
+2025,Relays,Men,26,4x800m,2,7:56.50,0.0,26575,Finals,1237
+2025,Relays,Men,26,4x800m,3,7:57.95,0.0,26576,Finals,1237
+2025,Relays,Men,26,4x800m,4,8:00.33,0.0,26577,Finals,1237
+2025,Relays,Men,26,4x800m,5,8:06.99,0.0,26578,Finals,1237
+2025,Relays,Men,26,4x800m,6,8:07.23,0.0,26579,Finals,1237
+2025,Relays,Men,26,4x800m,7,8:10.68,0.0,26580,Finals,1237
+2025,Relays,Men,26,4x800m,8,8:12.90,0.0,26581,Finals,1237
+2025,Distance,Women,9,800m,1,2:16.14,891.0,1928,Finals,1237
+2025,Distance,Women,9,800m,2,2:20.13,830.0,3862,Finals,1237
+2025,Distance,Women,9,800m,3,2:20.67,822.0,23384,Finals,1237
+2025,Distance,Women,9,800m,4,2:21.69,806.0,24579,Finals,1237
+2025,Distance,Women,9,800m,5,2:22.36,796.0,246,Finals,1237
+2025,Distance,Women,9,800m,6,2:22.83,790.0,620,Finals,1237
+2025,Distance,Women,9,800m,7,2:22.86,789.0,24949,Finals,1237
+2025,Distance,Women,9,800m,8,2:22.94,788.0,25022,Finals,1237
+2025,Distance,Women,11,1500m,1,4:38.31,917.0,3862,Finals,1237
+2025,Distance,Women,11,1500m,2,4:38.57,915.0,23882,Finals,1237
+2025,Distance,Women,11,1500m,3,4:41.96,892.0,23384,Finals,1237
+2025,Distance,Women,11,1500m,4,4:45.24,869.0,23462,Finals,1237
+2025,Distance,Women,11,1500m,5,4:50.15,836.0,18911,Finals,1237
+2025,Distance,Women,11,1500m,6,4:50.23,835.0,18726,Finals,1237
+2025,Distance,Women,11,1500m,7,4:51.25,829.0,577,Finals,1237
+2025,Distance,Women,11,1500m,8,4:51.58,826.0,25098,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,1,11:33.45,882.0,7746,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,2,11:52.62,841.0,25052,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,3,12:04.78,815.0,570,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,4,12:15.97,792.0,568,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,5,12:18.05,788.0,2924,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,6,12:27.43,769.0,68,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,7,12:28.76,766.0,577,Finals,1237
+2025,Distance,Women,20,3000m Steeplechase,8,12:38.98,746.0,11344,Finals,1237
+2025,Relays,Women,21,4x100m,1,48.81,942.0,26639,Finals,1237
+2025,Relays,Women,21,4x100m,2,48.84,940.0,26640,Finals,1237
+2025,Relays,Women,21,4x100m,3,49.23,926.0,26641,Finals,1237
+2025,Relays,Women,21,4x100m,4,51.12,855.0,26642,Finals,1237
+2025,Relays,Women,21,4x100m,5,51.38,846.0,26643,Finals,1237
+2025,Relays,Women,21,4x100m,6,52.11,819.0,26644,Finals,1237
+2025,Relays,Women,21,4x100m,7,53.10,784.0,26645,Finals,1237
+2025,Relays,Women,21,4x100m,8,53.19,781.0,26646,Finals,1237
+2025,Relays,Women,24,4x400m,1,3:57.59,917.0,26647,Finals,1237
+2025,Relays,Women,24,4x400m,2,4:03.77,871.0,26641,Finals,1237
+2025,Relays,Women,24,4x400m,3,4:04.54,865.0,26642,Finals,1237
+2025,Relays,Women,24,4x400m,4,4:09.13,832.0,26649,Finals,1237
+2025,Relays,Women,24,4x400m,5,4:11.69,814.0,26556,Finals,1237
+2025,Relays,Women,24,4x400m,6,4:11.80,813.0,26648,Finals,1237
+2025,Relays,Women,24,4x400m,7,4:14.76,792.0,26707,Finals,1237
+2025,Relays,Women,24,4x400m,8,4:17.30,774.0,26643,Finals,1237
+2025,Relays,Women,26,4x800m,1,9:40.72,0.0,26556,Finals,1237
+2025,Relays,Women,26,4x800m,2,9:49.68,0.0,26557,Finals,1237
+2025,Relays,Women,26,4x800m,3,9:51.75,0.0,26558,Finals,1237
+2025,Relays,Women,26,4x800m,4,9:56.79,0.0,26559,Finals,1237
+2025,Relays,Women,26,4x800m,5,9:59.81,0.0,26560,Finals,1237
+2025,Relays,Women,26,4x800m,6,10:11.91,0.0,68,Finals,1237
+2025,Relays,Women,26,4x800m,7,10:15.68,0.0,26562,Finals,1237
+2025,Relays,Women,26,4x800m,8,10:28.86,0.0,26563,Finals,1237
+2026,Distance,Men,9,800m,1,1:53.01,942.0,5500,(unlabeled),1536
+2026,Distance,Men,9,800m,2,1:53.11,939.0,24914,(unlabeled),1536
+2026,Distance,Men,9,800m,3,1:55.29,880.0,1216,(unlabeled),1536
+2026,Distance,Men,9,800m,4,1:55.48,875.0,539,(unlabeled),1536
+2026,Distance,Men,9,800m,5,1:55.60,872.0,2896,(unlabeled),1536
+2026,Distance,Men,9,800m,6,1:55.68,870.0,128,(unlabeled),1536
+2026,Distance,Men,9,800m,7,1:55.98,862.0,28312,(unlabeled),1536
+2026,Distance,Men,9,800m,8,1:56.22,856.0,3442,(unlabeled),1536
+2026,Distance,Men,11,1500m,1,3:52.03,951.0,8038,(unlabeled),1536
+2026,Distance,Men,11,1500m,2,3:52.74,942.0,3393,(unlabeled),1536
+2026,Distance,Men,11,1500m,3,3:54.43,921.0,135,(unlabeled),1536
+2026,Distance,Men,11,1500m,4,3:56.52,896.0,382,(unlabeled),1536
+2026,Distance,Men,11,1500m,5,3:56.92,891.0,1715,(unlabeled),1536
+2026,Distance,Men,11,1500m,6,3:57.23,887.0,28257,(unlabeled),1536
+2026,Distance,Men,11,1500m,7,3:57.43,885.0,5500,(unlabeled),1536
+2026,Distance,Men,11,1500m,8,3:58.79,869.0,2896,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,1,9:47.54,807.0,27295,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,2,9:51.37,792.0,673,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,3,9:54.23,782.0,676,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,4,9:54.30,782.0,28257,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,5,9:56.51,774.0,1996,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,6,9:59.45,763.0,26627,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,7,10:02.00,754.0,130,(unlabeled),1536
+2026,Distance,Men,20,3000m Steeplechase,8,10:03.66,748.0,27216,(unlabeled),1536
+2026,Distance,Men,17,5000m,1,14:46.30,851.0,3393,(unlabeled),1536
+2026,Distance,Men,17,5000m,2,14:52.98,831.0,27294,(unlabeled),1536
+2026,Distance,Men,17,5000m,3,14:54.68,826.0,27690,(unlabeled),1536
+2026,Distance,Men,17,5000m,4,14:54.87,825.0,26993,(unlabeled),1536
+2026,Distance,Men,17,5000m,5,14:55.81,822.0,8038,(unlabeled),1536
+2026,Distance,Men,17,5000m,6,14:56.15,821.0,2193,(unlabeled),1536
+2026,Distance,Men,17,5000m,7,15:00.32,809.0,2258,(unlabeled),1536
+2026,Distance,Men,17,5000m,8,15:01.10,806.0,7975,(unlabeled),1536
+2026,Relays,Men,21,4x100m,1,41.90,940.0,3698,(unlabeled),1536
+2026,Relays,Men,21,4x100m,2,42.26,916.0,25023,(unlabeled),1536
+2026,Relays,Men,21,4x100m,3,42.47,902.0,3843,(unlabeled),1536
+2026,Relays,Men,21,4x100m,4,42.62,892.0,29744,(unlabeled),1536
+2026,Relays,Men,21,4x100m,5,42.90,873.0,29817,(unlabeled),1536
+2026,Relays,Men,21,4x100m,6,43.65,825.0,24897,(unlabeled),1536
+2026,Relays,Men,21,4x100m,7,43.79,816.0,24880,(unlabeled),1536
+2026,Relays,Men,21,4x100m,8,43.86,811.0,24629,(unlabeled),1536
+2026,Relays,Men,24,4x400m,1,3:19.17,918.0,21404,(unlabeled),1536
+2026,Relays,Men,24,4x400m,2,3:22.39,874.0,29669,(unlabeled),1536
+2026,Relays,Men,24,4x400m,3,3:23.18,864.0,31309,(unlabeled),1536
+2026,Relays,Men,24,4x400m,4,3:23.30,862.0,5500,(unlabeled),1536
+2026,Relays,Men,24,4x400m,5,3:23.60,858.0,18915,(unlabeled),1536
+2026,Relays,Men,24,4x400m,6,3:24.60,845.0,29817,(unlabeled),1536
+2026,Relays,Men,24,4x400m,7,3:26.39,822.0,24401,(unlabeled),1536
+2026,Relays,Men,24,4x400m,8,3:28.88,790.0,21406,(unlabeled),1536
+2026,Relays,Men,26,4x800m,1,7:45.19,0.0,2003,(unlabeled),1536
+2026,Relays,Men,26,4x800m,2,7:46.04,0.0,29607,(unlabeled),1536
+2026,Relays,Men,26,4x800m,3,7:49.57,0.0,27239,(unlabeled),1536
+2026,Relays,Men,26,4x800m,4,7:54.87,0.0,129,(unlabeled),1536
+2026,Relays,Men,26,4x800m,5,7:56.22,0.0,466,(unlabeled),1536
+2026,Relays,Men,26,4x800m,6,7:56.86,0.0,27083,(unlabeled),1536
+2026,Relays,Men,26,4x800m,7,8:09.63,0.0,29618,(unlabeled),1536
+2026,Relays,Men,26,4x800m,8,8:11.77,0.0,1639,(unlabeled),1536
+2026,Distance,Women,9,800m,1,2:18.43,856.0,1945,(unlabeled),1536
+2026,Distance,Women,9,800m,2,2:18.44,856.0,26944,(unlabeled),1536
+2026,Distance,Women,9,800m,3,2:19.58,838.0,31202,(unlabeled),1536
+2026,Distance,Women,9,800m,4,2:20.39,826.0,26947,(unlabeled),1536
+2026,Distance,Women,9,800m,5,2:20.66,822.0,28712,(unlabeled),1536
+2026,Distance,Women,9,800m,6,2:21.91,803.0,26946,(unlabeled),1536
+2026,Distance,Women,9,800m,7,2:23.13,785.0,23384,(unlabeled),1536
+2026,Distance,Women,9,800m,8,2:23.35,782.0,20764,(unlabeled),1536
+2026,Distance,Women,11,1500m,1,4:37.30,924.0,26944,(unlabeled),1536
+2026,Distance,Women,11,1500m,2,4:39.24,911.0,3862,(unlabeled),1536
+2026,Distance,Women,11,1500m,3,4:40.22,904.0,26947,(unlabeled),1536
+2026,Distance,Women,11,1500m,4,4:44.13,877.0,1725,(unlabeled),1536
+2026,Distance,Women,11,1500m,5,4:47.78,852.0,1020,(unlabeled),1536
+2026,Distance,Women,11,1500m,6,4:48.26,849.0,20764,(unlabeled),1536
+2026,Distance,Women,11,1500m,7,4:49.30,842.0,18922,(unlabeled),1536
+2026,Distance,Women,11,1500m,8,4:49.89,838.0,1686,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,1,11:29.87,889.0,2924,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,2,11:30.82,887.0,567,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,3,11:34.70,879.0,1020,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,4,11:39.44,869.0,1725,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,5,11:49.23,848.0,1686,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,6,12:04.88,815.0,3000,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,7,12:14.44,795.0,31504,(unlabeled),1536
+2026,Distance,Women,20,3000m Steeplechase,8,12:28.61,766.0,1954,(unlabeled),1536
+2026,Distance,Women,17,5000m,1,16:08.86,1033.0,27746,(unlabeled),1536
+2026,Distance,Women,17,5000m,2,16:52.00,956.0,3862,(unlabeled),1536
+2026,Distance,Women,17,5000m,3,17:00.41,941.0,27747,(unlabeled),1536
+2026,Distance,Women,17,5000m,4,17:05.34,933.0,23462,(unlabeled),1536
+2026,Distance,Women,17,5000m,5,17:40.27,873.0,18922,(unlabeled),1536
+2026,Distance,Women,17,5000m,6,17:43.00,868.0,23384,(unlabeled),1536
+2026,Distance,Women,17,5000m,7,17:45.79,864.0,1686,(unlabeled),1536
+2026,Distance,Women,17,5000m,8,17:56.49,846.0,1020,(unlabeled),1536
+2026,Relays,Women,21,4x100m,1,48.88,939.0,31182,(unlabeled),1536
+2026,Relays,Women,21,4x100m,2,49.62,911.0,29451,(unlabeled),1536
+2026,Relays,Women,21,4x100m,3,50.08,894.0,24946,(unlabeled),1536
+2026,Relays,Women,21,4x100m,4,50.40,882.0,29777,(unlabeled),1536
+2026,Relays,Women,21,4x100m,5,50.71,870.0,29710,(unlabeled),1536
+2026,Relays,Women,21,4x100m,6,51.35,847.0,24679,(unlabeled),1536
+2026,Relays,Women,21,4x100m,7,51.67,835.0,31457,(unlabeled),1536
+2026,Relays,Women,21,4x100m,8,51.74,833.0,29861,(unlabeled),1536
+2026,Relays,Women,24,4x400m,1,4:00.90,892.0,3650,(unlabeled),1536
+2026,Relays,Women,24,4x400m,2,4:07.36,845.0,29439,(unlabeled),1536
+2026,Relays,Women,24,4x400m,3,4:08.45,837.0,24625,(unlabeled),1536
+2026,Relays,Women,24,4x400m,4,4:09.82,827.0,26947,(unlabeled),1536
+2026,Relays,Women,24,4x400m,5,4:14.71,792.0,3581,(unlabeled),1536
+2026,Relays,Women,24,4x400m,6,4:16.56,779.0,24946,(unlabeled),1536
+2026,Relays,Women,24,4x400m,7,4:17.36,774.0,29454,(unlabeled),1536
+2026,Relays,Women,24,4x400m,8,4:17.88,770.0,31193,(unlabeled),1536
+2026,Relays,Women,26,4x800m,1,9:41.44,0.0,1930,(unlabeled),1536
+2026,Relays,Women,26,4x800m,2,9:55.72,0.0,24949,(unlabeled),1536
+2026,Relays,Women,26,4x800m,3,10:02.76,0.0,26871,(unlabeled),1536
+2026,Relays,Women,26,4x800m,4,10:17.00,0.0,27229,(unlabeled),1536
+2026,Relays,Women,26,4x800m,5,10:20.39,0.0,27617,(unlabeled),1536
+2026,Relays,Women,26,4x800m,6,10:29.90,0.0,27428,(unlabeled),1536
+2026,Relays,Women,26,4x800m,7,10:29.90,0.0,25661,(unlabeled),1536
+2026,Relays,Women,26,4x800m,8,10:36.56,0.0,4092,(unlabeled),1536

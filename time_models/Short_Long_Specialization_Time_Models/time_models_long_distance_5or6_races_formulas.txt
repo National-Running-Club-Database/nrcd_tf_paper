@@ -1,0 +1,82 @@
+Cross-Event Time Models — Long Distance — 5 Or 6 Races
+==========================================================
+
+Population: 5 or 6 races athlete-seasons with season PBs in all 3 group events.
+Specialization cohort: Long Distance
+
+Sprints: Short = |WA100−WA200| < |WA200−WA400|; Long = reverse.
+Distance: Mid = |WA800−WA1500| < |WA1500−WA5000|; Long = reverse.
+
+Use when short/long (or mid/long) status is known.
+Predict time, then convert to WA in the target event table.
+
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=34, r=0.882)
+  Model: median_ratio
+  Formula: 5000m = 3.757 × 1500m
+  CV median |error|: 12.699s
+  vs pooled model on cohort: 11.853s (↑0.846s)
+
+1500m -> 800m  (n=34, r=0.899)
+  Model: robust_trimmed_linear
+  Formula: 800m = 5.775 + 0.482 × 1500m
+  CV median |error|: 2.250s
+  vs pooled model on cohort: 4.286s (↓2.035s)
+
+5000m -> 1500m  (n=34, r=0.882)
+  Model: binned_ratio
+  Formula: 1500m = 5000m × ratio_bin(5000m)
+  CV median |error|: 3.163s
+  vs pooled model on cohort: 3.324s (↓0.161s)
+  Binned lookup 5000m → 1500m (nearest 5000m edge):
+    902.21s → ratio 0.267
+    938.45s → ratio 0.265
+    965.38s → ratio 0.267
+    983.92s → ratio 0.266
+    997.67s → ratio 0.266
+    1042.34s → ratio 0.262
+    1074.07s → ratio 0.268
+    1127.97s → ratio 0.268
+    1213.57s → ratio 0.263
+
+5000m -> 800m  (n=34, r=0.800)
+  Model: median_ratio
+  Formula: 800m = 0.133 × 5000m
+  CV median |error|: 3.149s
+  vs pooled model on cohort: 2.698s (↑0.451s)
+
+800m -> 1500m  (n=34, r=0.899)
+  Model: binned_ratio
+  Formula: 1500m = 800m × ratio_bin(800m)
+  CV median |error|: 3.673s
+  vs pooled model on cohort: 5.973s (↓2.299s)
+  Binned lookup 800m → 1500m (nearest 800m edge):
+    121.60s → ratio 1.979
+    127.12s → ratio 1.984
+    128.60s → ratio 1.995
+    130.73s → ratio 2.018
+    134.77s → ratio 2.008
+    136.73s → ratio 1.968
+    143.66s → ratio 1.930
+    158.03s → ratio 1.962
+    165.69s → ratio 1.861
+
+800m -> 5000m  (n=34, r=0.800)
+  Model: chain_residual_adjusted
+  Formula: chain via 1500m + residual k=0.0000
+  CV median |error|: 13.860s
+
+Pair summary
+------------
+  From     To          n        CV  Formula
+  1500m    5000m      34   12.699s  5000m = 3.757 × 1500m
+  1500m    800m       34    2.250s  800m = 5.775 + 0.482 × 1500m
+  5000m    1500m      34    3.163s  1500m = 5000m × ratio_bin(5000m)
+  5000m    800m       34    3.149s  800m = 0.133 × 5000m
+  800m     1500m      34    3.673s  1500m = 800m × ratio_bin(800m)
+  800m     5000m      34   13.860s  chain via 1500m + residual k=0.0000
+
+Source: Short_Long_Specialization_Time_Models/analyze_short_long_specialization.py

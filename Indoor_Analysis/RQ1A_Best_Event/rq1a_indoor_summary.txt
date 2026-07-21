@@ -1,0 +1,61 @@
+Indoor Track RQ1A — Best Event Summary (2024–2026)
+=================================================
+
+Question: For athletes competing in multiple events within a discipline,
+which event corresponds to their highest World Athletics point value?
+
+Method: overall best event + pairwise dual-event comparisons (same as outdoor RQ1A).
+Data: Indoor_Analysis CSVs; all dates in files (no outdoor March 1 filter).
+Relays: team WA points credited to each leg athlete.
+Not run: RQ1B / RQ1C (no indoor Nationals).
+
+Core individual events analyzed:
+  Sprints: 60m, 200m, 400m
+  Distance: 800m, Mile, 3000m, 5000m
+  Hurdles: 55m Hurdles, 60m Hurdles
+  Jumps: Long Jump, Triple Jump, High Jump
+  Throws: Shot Put, Discus, Javelin Throw
+
+Note: Each discipline folder includes shared indoor relay rows (4x200/4x400/etc.).
+For specialization among multi-event athletes, use *_2plus_individual.txt and
+pairwise *_individual.txt outputs (relay-inflated “all athletes” counts are less informative
+for Hurdles / Jumps / Throws).
+
+Per-discipline outputs: RQ1A_Best_Event/<Discipline>/
+
+
+Headline findings (multi-event athletes / pairwise)
+---------------------------------------------------
+
+Sprints (athletes with ≥2 of 60m, 200m, 400m)
+  Men: 60m is the modal best event (274), then 200m (181), then 400m (96).
+  Women: 60m leads strongly (112), then 400m (50), then 200m (33).
+  Pairwise Men: 60m beats 200m (319–207) and 400m (122–102); 200m beats 400m (171–128).
+  Pairwise Women: 60m dominates vs 200m (161–37); 60m ≈ 400m (39–36); 400m beats 200m (89–49).
+
+Distance (athletes with ≥2 of 800m, Mile, 3000m, 5000m)
+  Men: Mile leads overall bests (242), then 800m (215), 3000m (194), 5000m (51).
+  Women: Mile and 3000m tie for most bests (101 each), then 800m (94), 5000m (36).
+  Pairwise Men: 800m beats Mile (260–205); Mile ≈ 3000m (192–189); 3000m beats 5000m (90–48).
+  Pairwise Women: 800m slightly beats Mile (116–104); longer events win for dual athletes —
+    3000m beats Mile (110–43) and 800m (34–20); 5000m beats Mile (30–16) and 800m (14–5).
+    Gender asymmetry: women who double into longer events tend to score higher there.
+
+Hurdles
+  Almost entirely 60m Hurdles (55m is rare). Too few dual 55/60 athletes for meaningful
+  individual pairwise specialization (Men n=2; Women n=0).
+
+Jumps (athletes with ≥2 of LJ / TJ / HJ)
+  Men: Long Jump 34, High Jump 24, Triple Jump 19.
+  Women: Triple Jump 21, Long Jump 18, High Jump 14.
+  Pairwise Men: LJ ≈ TJ; HJ edges LJ; HJ strongly beats TJ (12–3, n=15).
+  Pairwise Women: TJ edges LJ; HJ edges LJ; TJ edges HJ (small n).
+
+Throws
+  Indoor throws are almost entirely Shot Put. Dual individual throwers are rare
+  (Men n=5 Shot/Discus; Women n=2). Specialization RQ1A is not well identified indoors.
+
+
+Scripts
+-------
+  Indoor_Analysis/analyze_indoor_rq1a.py

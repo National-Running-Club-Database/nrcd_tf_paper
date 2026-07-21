@@ -1,0 +1,9 @@
+population,gender,event_group,n,n_ever_doubled,pct_ever_doubled
+5_or_6,Men,Sprints,94,93,98.9
+5_or_6,Women,Sprints,40,40,100.0
+5_or_6,Men,Distance,140,135,96.4
+5_or_6,Women,Distance,42,42,100.0
+all,Men,Sprints,770,723,93.9
+all,Women,Sprints,346,332,96.0
+all,Men,Distance,1065,884,83.0
+all,Women,Distance,419,357,85.2

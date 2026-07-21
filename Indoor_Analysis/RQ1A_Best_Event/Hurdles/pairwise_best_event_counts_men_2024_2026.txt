@@ -1,0 +1,20 @@
+Indoor Track 2024-2026 Male Hurdles (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+55m Hurdles vs. 60m Hurdles (2 athletes in both):
+55m Hurdles best event: 0  vs. 60m Hurdles best event: 2
+
+55m Hurdles vs. 4x200m (1 athletes in both):
+55m Hurdles best event: 1  vs. 4x200m best event: 0
+
+55m Hurdles vs. 4x400m (2 athletes in both):
+55m Hurdles best event: 1  vs. 4x400m best event: 1
+
+60m Hurdles vs. 4x200m (29 athletes in both):
+60m Hurdles best event: 19  vs. 4x200m best event: 10
+
+60m Hurdles vs. 4x400m (38 athletes in both):
+60m Hurdles best event: 13  vs. 4x400m best event: 25
+
+4x200m vs. 4x400m (171 athletes in both):
+4x200m best event: 59  vs. 4x400m best event: 112

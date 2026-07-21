@@ -1,0 +1,11 @@
+Indoor Track 2024-2026 Female Jumps (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+All athletes with at least one event result
+
+Long Jump (150 competed): 80
+Triple Jump (54 competed): 26
+High Jump (72 competed): 48
+4x100m (8 competed): 8
+4x200m (340 competed): 284
+4x400m (473 competed): 398

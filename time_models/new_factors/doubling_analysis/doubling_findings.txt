@@ -1,0 +1,20 @@
+Doubling Analysis — Findings
+============================
+
+Doubling = ≥2 distinct group events in the same meet.
+Primary population: 5 or 6 races per athlete-season.
+
+WA (5_or_6): ever_doubled=98.1%  Δ mean max WA (doubled−never)=-53.32  within Δ (double−solo meets)=-15.3
+
+Time models (factor vs pooled):
+  double_meet_share: beats 7/16 (mean Δ +0.146s)
+  n_double_meets: beats 6/16 (mean Δ -0.261s)
+  pair_pb_from_double: beats 5/12 (mean Δ +0.160s)
+  ever_doubled: beats 3/8 (mean Δ -1.065s)
+
+WA verdict (cross-sectional): Almost everyone at 5/6 races doubles (never-doubled n=6) — comparing doubled vs never is unreliable.
+WA verdict (within-athlete): Double-meet results average -15.3 WA vs solo meets for the same athlete — suggests doubling does not raise scores (more often a small drop).
+Time-model verdict: NO clear accuracy gain from doubling factors vs pooled (or only weak/mixed gains).
+
+See doubling_report.txt for detail.
+Source: analyze_doubling.py

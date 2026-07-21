@@ -1,0 +1,7 @@
+Outdoor Track 2024-2026 Male Distance Best Event Count:
+(combined dataset; best = highest World Athletics Men's Points per event across all seasons)
+
+800m (1004 competed): 626
+1500m (1187 competed): 816
+3000m Steeplechase (281 competed): 62
+5000m (744 competed): 429

@@ -1,0 +1,21 @@
+Outdoor Track 2025 Female Distance — Pairwise Best Event Comparison
+(best = highest World Athletics Women's Points per event)
+
+800m vs. 1500m (96 athletes ran in both):
+800m best event: 19  vs. 1500m best event: 76
+(ties: 1)
+
+800m vs. 3000m Steeplechase (16 athletes ran in both):
+800m best event: 11  vs. 3000m Steeplechase best event: 5
+
+800m vs. 5000m (9 athletes ran in both):
+800m best event: 3  vs. 5000m best event: 6
+
+1500m vs. 3000m Steeplechase (26 athletes ran in both):
+1500m best event: 25  vs. 3000m Steeplechase best event: 1
+
+1500m vs. 5000m (21 athletes ran in both):
+1500m best event: 8  vs. 5000m best event: 13
+
+3000m Steeplechase vs. 5000m (5 athletes ran in both):
+3000m Steeplechase best event: 0  vs. 5000m best event: 5

@@ -1,0 +1,43 @@
+Point-Band Time Models — Combined Report
+========================================
+
+Three waves: band widths 100, 150, and 200 World Athletics points.
+Band starts every 50 points (overlapping windows).
+Athlete-season included in a band if ≥1 individual result falls in that band.
+Relays and 3000m Steeplechase excluded. Sprints & Distance only.
+
+=== Width 100 ===
+Most accurate: 850-950 (mean CV 2.412s, 10 pairs)
+  850-950         2.412s  pairs=10  n_as=184
+  800-900         3.111s  pairs=16  n_as=339
+  750-850         3.912s  pairs=22  n_as=518
+  700-800         4.139s  pairs=24  n_as=722
+  650-750         4.774s  pairs=24  n_as=845
+  600-700         5.335s  pairs=24  n_as=949
+  300-400         5.439s  pairs=18  n_as=505
+  550-650         5.920s  pairs=24  n_as=1003
+
+=== Width 150 ===
+Most accurate: 850-1000 (mean CV 2.412s, 10 pairs)
+  850-1000        2.412s  pairs=10  n_as=187
+  800-950         3.131s  pairs=16  n_as=348
+  750-900         3.887s  pairs=22  n_as=551
+  700-850         4.494s  pairs=24  n_as=785
+  650-800         5.005s  pairs=24  n_as=990
+  600-750         5.419s  pairs=24  n_as=1158
+  550-700         5.657s  pairs=24  n_as=1242
+  500-650         6.367s  pairs=24  n_as=1259
+
+=== Width 200 ===
+Most accurate: 850-1050 (mean CV 2.412s, 10 pairs)
+  850-1050        2.412s  pairs=10  n_as=187
+  800-1000        2.838s  pairs=18  n_as=351
+  750-950         3.871s  pairs=22  n_as=556
+  700-900         4.528s  pairs=24  n_as=809
+  650-850         5.046s  pairs=24  n_as=1047
+  600-800         5.731s  pairs=24  n_as=1287
+  550-750         5.849s  pairs=24  n_as=1428
+  500-700         6.182s  pairs=24  n_as=1480
+
+See point_band_report_width_*.txt and point_band_findings.txt.
+Source: analyze_point_bands_time_models.py

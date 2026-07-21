@@ -1,0 +1,6 @@
+Outdoor Track 2024 Female Sprinters Best Event Count:
+(athletes with results in at least 2 of 100m, 200m, 400m)
+
+100m (96 competed): 84
+200m (117 competed): 14
+400m (48 competed): 24

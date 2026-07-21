@@ -1,0 +1,31 @@
+Cross-Event Time Models — bal/spec × best_event — 6 Races
+=========================================================
+
+Use when athlete has exactly 6 races and both bal/spec and best_event are known.
+best_is_from is implied by whether best_event equals the source event.
+
+
+Distance — Men — specialized ∩ best_1500m
+-----------------------------------------
+
+1500m -> 5000m  (n=21, best_is_from)
+  Model: median_ratio
+  Formula: 5000m = 3.806 × 1500m
+  CV median |error|: 11.904s
+
+1500m -> 800m  (n=23, best_is_from)
+  Model: robust_trimmed_linear
+  Formula: 800m = 0.497 × 1500m − 0.087
+  CV median |error|: 1.370s
+
+5000m -> 800m  (n=18, best_not_from)
+  Model: linear_ols
+  Formula: 800m = 6.459 + 0.125 × 5000m
+  CV median |error|: 1.847s
+
+800m -> 5000m  (n=18, best_not_from)
+  Model: linear_ols
+  Formula: 5000m = 111.435 + 6.737 × 800m
+  CV median |error|: 12.723s
+
+Source: analyze_combined_factors_6races.py

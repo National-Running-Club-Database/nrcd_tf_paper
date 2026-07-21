@@ -1,0 +1,231 @@
+Cross-Event Time Models — 5 Races Per Season (Sprints & Distance)
+======================================================================
+
+Method:
+  • Data: relay-inclusive outdoor CSVs, 2024–2026, results on or after March 1.
+  • Population: athlete-seasons with exactly 5 valid results in the event group's discipline CSV (same counting as the race-volume analysis).
+  • Athlete-season PB: fastest valid mark per event within that season (WA > 0).
+  • Model selection: 5-fold cross-validation across 8+ candidate model families;
+    the formula below is the lowest-CV-median-|error| winner for each pair.
+  • 3000m Steeplechase excluded from distance.
+  • Minimum n = 20 athlete-season pairs required to report a model.
+
+Use:
+  • Apply these formulas when the athlete has run exactly 5 races in the event group during the season. Mean CV median |error| across evaluated pairs is 4.90s vs 6.77s for all athlete-seasons.
+  • Predict time in the unknown event from known PB(s), then convert predicted
+    time to World Athletics points in the TARGET event table.
+  • Treat CV median |error| as the typical ± uncertainty band (cross-validated).
+  • Do not compare WA across events directly.
+
+Coverage note:
+  16 of 24 event pairs met n ≥ 20 at exactly 5 races. Women's distance pairs qualify; women's long sprint hops (100m↔400m) generally do not.
+
+
+Sprints — Men
+-------------
+
+100m -> 200m  (n=41 athlete-seasons, r=0.903)
+  Model: median_ratio
+  Formula: 200m = 2.036 × 100m
+  CV median |error|: 0.435s | full-sample median |error|: 0.427s
+  Ratio 200m/100m: median 2.036 (IQR 2.006–2.078)
+  Median times in sample: 100m 11.70s, 200m 24.14s
+
+100m -> 400m  (n=20 athlete-seasons, r=0.903)
+  Model: robust_trimmed_linear
+  Formula: 400m = 5.675 × 100m − 12.510
+  CV median |error|: 1.198s | full-sample median |error|: 1.107s
+  Ratio 400m/100m: median 4.657 (IQR 4.519–4.748)
+  Median times in sample: 100m 11.86s, 400m 56.12s
+
+200m -> 100m  (n=41 athlete-seasons, r=0.903)
+  Model: log_linear (multiplicative)
+  Formula: 100m = exp(-0.079 + 0.800×log(200m))
+  CV median |error|: 0.185s | full-sample median |error|: 0.200s
+  Ratio 100m/200m: median 0.491 (IQR 0.481–0.498)
+  Median times in sample: 200m 24.14s, 100m 11.70s
+
+200m -> 400m  (n=34 athlete-seasons, r=0.920)
+  Model: median_ratio
+  Formula: 400m = 2.258 × 200m
+  CV median |error|: 0.899s | full-sample median |error|: 0.792s
+  Ratio 400m/200m: median 2.258 (IQR 2.226–2.283)
+  Median times in sample: 200m 24.45s, 400m 54.64s
+
+400m -> 100m  (n=20 athlete-seasons, r=0.903)
+  Model: robust_trimmed_linear
+  Formula: 100m = 3.569 + 0.152 × 400m
+  CV median |error|: 0.223s | full-sample median |error|: 0.236s
+  Ratio 100m/400m: median 0.215 (IQR 0.206–0.220)
+  Median times in sample: 400m 56.12s, 100m 11.86s
+
+400m -> 200m  (n=34 athlete-seasons, r=0.920)
+  Model: median_ratio
+  Formula: 200m = 0.443 × 400m
+  CV median |error|: 0.398s | full-sample median |error|: 0.351s
+  Ratio 200m/400m: median 0.443 (IQR 0.437–0.447)
+  Median times in sample: 400m 54.64s, 200m 24.45s
+
+
+Sprints — Women
+---------------
+
+100m -> 200m  (n=25 athlete-seasons, r=0.890)
+  Model: linear OLS
+  Formula: 200m = 1.121 + 2.012 × 100m
+  CV median |error|: 0.368s | full-sample median |error|: 0.347s
+  Ratio 200m/100m: median 2.087 (IQR 2.076–2.116)
+  Median times in sample: 100m 13.55s, 200m 27.73s
+
+200m -> 100m  (n=25 athlete-seasons, r=0.890)
+  Model: median_ratio
+  Formula: 100m = 0.479 × 200m
+  CV median |error|: 0.177s | full-sample median |error|: 0.190s
+  Ratio 100m/200m: median 0.479 (IQR 0.473–0.482)
+  Median times in sample: 200m 27.73s, 100m 13.55s
+
+
+Distance — Men
+--------------
+
+1500m -> 5000m  (n=53 athlete-seasons, r=0.885)
+  Model: log_linear (multiplicative)
+  Formula: 5000m = exp(1.932 + 0.893×log(1500m))
+  CV median |error|: 18.792s | full-sample median |error|: 21.424s
+  Ratio 5000m/1500m: median 3.798 (IQR 3.704–3.861)
+  Median times in sample: 1500m 263.37s, 5000m 1000.51s
+
+1500m -> 800m  (n=65 athlete-seasons, r=0.893)
+  Model: robust_trimmed_linear
+  Formula: 800m = 0.479 + 0.489 × 1500m
+  CV median |error|: 3.120s | full-sample median |error|: 3.196s
+  Ratio 800m/1500m: median 0.493 (IQR 0.479–0.504)
+  Median times in sample: 1500m 263.37s, 800m 129.03s
+
+5000m -> 1500m  (n=53 athlete-seasons, r=0.885)
+  Model: median_ratio
+  Formula: 1500m = 0.263 × 5000m
+  CV median |error|: 5.671s | full-sample median |error|: 5.555s
+  Ratio 1500m/5000m: median 0.263 (IQR 0.259–0.270)
+  Median times in sample: 5000m 1000.51s, 1500m 263.37s
+
+5000m -> 800m  (n=38 athlete-seasons, r=0.791)
+  Model: quadratic
+  Formula: 800m = 52.075 + 0.040×5000m + 0.000039×5000m²
+  CV median |error|: 5.783s | full-sample median |error|: 5.349s
+  Ratio 800m/5000m: median 0.130 (IQR 0.126–0.137)
+  Median times in sample: 5000m 1032.93s, 800m 134.77s
+
+800m -> 1500m  (n=65 athlete-seasons, r=0.893)
+  Model: robust_trimmed_linear
+  Formula: 1500m = 62.074 + 1.549 × 800m
+  CV median |error|: 6.747s | full-sample median |error|: 6.976s
+  Ratio 1500m/800m: median 2.027 (IQR 1.984–2.086)
+  Median times in sample: 800m 129.03s, 1500m 263.37s
+
+800m -> 5000m  (n=38 athlete-seasons, r=0.791)
+  Model: chain_residual_adjusted (via intermediate event)
+  Formula: Step 1: 1500m_est = 59.22 + 1.555×800m
+             Step 2 (with actual 1500m): 5000m = 121.99 + 3.389×1500m
+  CV median |error|: 20.969s
+  Ratio 5000m/800m: median 7.678 (IQR 7.262–7.931)
+  Median times in sample: 800m 134.77s, 5000m 1032.93s
+
+
+Distance — Women
+----------------
+
+1500m -> 800m  (n=29 athlete-seasons, r=0.937)
+  Model: binned_ratio (speed bins)
+  Formula: 800m = 1500m × ratio_bin(1500m)  [nearest speed bin; see binned table below]
+  CV median |error|: 4.179s | full-sample median |error|: 2.012s
+  Binned lookup for 1500m -> 800m (use ratio at nearest 1500m edge):
+    nearest 1500m edge 280.22s -> ratio 0.493
+    nearest 1500m edge 294.98s -> ratio 0.492
+    nearest 1500m edge 302.13s -> ratio 0.482
+    nearest 1500m edge 311.14s -> ratio 0.479
+    nearest 1500m edge 318.59s -> ratio 0.484
+    nearest 1500m edge 333.27s -> ratio 0.479
+    nearest 1500m edge 338.69s -> ratio 0.463
+    nearest 1500m edge 349.72s -> ratio 0.466
+    nearest 1500m edge 372.28s -> ratio 0.499
+    nearest 1500m edge 444.23s -> ratio 0.478
+  Ratio 800m/1500m: median 0.483 (IQR 0.466–0.498)
+  Median times in sample: 1500m 323.04s, 800m 155.83s
+
+800m -> 1500m  (n=29 athlete-seasons, r=0.937)
+  Model: binned_ratio (speed bins)
+  Formula: 1500m = 800m × ratio_bin(800m)  [nearest speed bin; see binned table below]
+  CV median |error|: 9.296s | full-sample median |error|: 4.996s
+  Binned lookup for 800m -> 1500m (use ratio at nearest 800m edge):
+    nearest 800m edge 139.62s -> ratio 2.029
+    nearest 800m edge 144.18s -> ratio 2.069
+    nearest 800m edge 145.59s -> ratio 2.079
+    nearest 800m edge 150.29s -> ratio 2.086
+    nearest 800m edge 154.66s -> ratio 2.039
+    nearest 800m edge 156.86s -> ratio 2.159
+    nearest 800m edge 159.85s -> ratio 2.144
+    nearest 800m edge 171.60s -> ratio 1.953
+    nearest 800m edge 184.07s -> ratio 1.953
+    nearest 800m edge 212.62s -> ratio 2.092
+  Ratio 1500m/800m: median 2.069 (IQR 2.007–2.144)
+  Median times in sample: 800m 155.83s, 1500m 323.04s
+
+Not reported for Sprints — Women (n < 20 athlete-season pairs):
+  100m -> 400m, 200m -> 400m, 400m -> 100m, 400m -> 200m
+
+Not reported for Distance — Women (n < 20 athlete-season pairs):
+  800m -> 5000m, 1500m -> 5000m, 5000m -> 800m, 5000m -> 1500m
+
+Pair summary tables
+-------------------
+
+Sprints — Men (5 races per season)
+  From     To           n      r  CV Med|err|  Formula
+  100m     200m        41  0.903       0.435s  200m = 2.036 × 100m
+  100m     400m        20  0.903       1.198s  400m = 5.675 × 100m − 12.510
+  200m     100m        41  0.903       0.185s  100m = exp(-0.079 + 0.800×log(200m))
+  200m     400m        34  0.920       0.899s  400m = 2.258 × 200m
+  400m     100m        20  0.903       0.223s  100m = 3.569 + 0.152 × 400m
+  400m     200m        34  0.920       0.398s  200m = 0.443 × 400m
+
+Sprints — Women (5 races per season)
+  From     To           n      r  CV Med|err|  Formula
+  100m     200m        25  0.890       0.368s  200m = 1.121 + 2.012 × 100m
+  200m     100m        25  0.890       0.177s  100m = 0.479 × 200m
+
+Distance — Men (5 races per season)
+  From     To           n      r  CV Med|err|  Formula
+  1500m    5000m       53  0.885      18.792s  5000m = exp(1.932 + 0.893×log(1500m))
+  1500m    800m        65  0.893       3.120s  800m = 0.479 + 0.489 × 1500m
+  5000m    1500m       53  0.885       5.671s  1500m = 0.263 × 5000m
+  5000m    800m        38  0.791       5.783s  800m = 52.075 + 0.040×5000m + 0.000039×5000m²
+  800m     1500m       65  0.893       6.747s  1500m = 62.074 + 1.549 × 800m
+  800m     5000m       38  0.791      20.969s  Step 1: 1500m_est = 59.22 + 1.555×800m
+
+Distance — Women (5 races per season)
+  From     To           n      r  CV Med|err|  Formula
+  1500m    800m        29  0.937       4.179s  800m = 1500m × ratio_bin(1500m)  [nearest speed bin; see binned table below]
+  800m     1500m       29  0.937       9.296s  1500m = 800m × ratio_bin(800m)  [nearest speed bin; see binned table below]
+
+Accuracy vs all athlete-season models
+-------------------------------------
+  Men Distance 1500m->5000m: all-season 23.114s -> 5 races 18.792s (-4.322s)
+  Men Distance 800m->5000m: all-season 23.740s -> 5 races 20.969s (-2.771s)
+  Men Sprints 200m->400m: all-season 1.170s -> 5 races 0.899s (-0.271s)
+  Men Distance 5000m->1500m: all-season 5.817s -> 5 races 5.671s (-0.146s)
+  Men Sprints 400m->200m: all-season 0.527s -> 5 races 0.398s (-0.129s)
+  Women Sprints 100m->200m: all-season 0.482s -> 5 races 0.368s (-0.114s)
+  Men Sprints 400m->100m: all-season 0.272s -> 5 races 0.223s (-0.049s)
+  Women Sprints 200m->100m: all-season 0.187s -> 5 races 0.177s (-0.010s)
+
+When to use these vs other formula sets
+---------------------------------------
+  • Athlete has exactly 5 season results in the group → use this file.
+  • Athlete has exactly 6 season results → time_models_higher_races_formulas.txt
+  • Athlete has 5 or 6 results (combined cohort) → time_models_5_or_6_races_formulas.txt
+  • Athlete has fewer than 5 results, or unknown race count →
+    cross_event_time_models_report.txt or model_search/best_time_models.csv
+
+Source: time_models/generate_higher_races_formula_reports.py
+        time_models/model_search/race_count/best_time_models_by_race_count.csv

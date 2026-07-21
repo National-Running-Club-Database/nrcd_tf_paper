@@ -1,0 +1,85 @@
+Indoor World Athletics Point-Band Time Models — Band Width 200
+=============================================================
+
+Question: Which WA point band yields the most accurate cross-event
+time models on indoor data when band width = 200 points?
+
+Method:
+  • Data: Indoor_Analysis CSVs 2024–2026 (all dates in files).
+  • Events: Sprints (60/200/400) and Distance (800/Mile/3000) only.
+  • Excludes relay results.
+  • Inclusion: athlete-season enters a band if ≥1 individual result has
+    WA points in [lo, lo+200).
+  • Bands slide every 50 points (overlapping windows).
+  • Modeling: season PBs; same CV model search as outdoor time models
+    (seed=42, folds=5).
+  • Minimum n=20 athlete-season pairs per event pair.
+  • Primary metric: mean CV median |error| (seconds) across evaluated pairs.
+
+Unbanded baseline (all athlete-seasons): mean best CV = 5.012s (24 pairs).
+
+Band leaderboard (width=200; require ≥4 pairs)
+--------------------------------------------------
+Band          Ath-seas  Pairs   Mean best CV  Mean linear
+800-1000           319     16         2.129s       2.697s
+750-950            522     20         2.919s       3.498s
+850-1050           143      8         2.987s       3.600s
+700-900            773     22         3.038s       3.540s
+650-850           1013     22         3.291s       3.729s
+600-800           1221     24         4.149s       4.883s
+550-750           1322     24         4.336s       4.932s
+350-550           1012     22         4.851s       5.469s
+300-500            865     22         4.852s       5.455s
+500-700           1356     24         4.892s       5.392s
+450-650           1327     24         4.892s       5.378s
+200-400            565     20         4.936s       5.236s
+400-600           1180     24         4.973s       5.500s
+150-350            442     20         5.178s       6.065s
+250-450            703     22         5.278s       5.957s
+0-200              195     10         5.716s       6.817s
+100-300            352     20         5.943s       6.853s
+50-250             254     14         8.034s       8.674s
+
+Bands with <4 evaluated pairs (unstable averages):
+  900-1100: n_as=56, pairs=2, mean CV=0.184s
+
+Most accurate band
+------------------
+  800-1000 WA points  →  mean best CV 2.129s (16 pairs, 319 athlete-seasons).
+  vs unbanded all: Δ -2.883s
+
+Pair results — band 800-1000
+----------------------------------------
+  Men Distance 3000m->800m n=20  binned_ratio  CV=2.426s
+  Men Distance 3000m->Mile n=48  binned_ratio  CV=3.960s
+  Men Distance 800m->3000m n=20  robust_trimmed_linear  CV=6.756s
+  Men Distance 800m->Mile n=47  robust_trimmed_linear  CV=5.044s
+  Men Distance Mile->3000m n=48  robust_trimmed_linear  CV=9.776s
+  Men Distance Mile->800m n=47  robust_trimmed_linear  CV=1.264s
+  Men Sprints 200m->400m n=37  robust_trimmed_linear  CV=1.215s
+  Men Sprints 200m->60m n=129  robust_trimmed_linear  CV=0.074s
+  Men Sprints 400m->200m n=37  knn_median  CV=0.295s
+  Men Sprints 400m->60m n=28  robust_trimmed_linear  CV=0.077s
+  Men Sprints 60m->200m n=129  knn_median  CV=0.275s
+  Men Sprints 60m->400m n=28  knn_median  CV=1.302s
+  Women Sprints 200m->400m n=24  knn_median  CV=0.623s
+  Women Sprints 200m->60m n=52  quadratic  CV=0.066s
+  Women Sprints 400m->200m n=24  robust_trimmed_linear  CV=0.538s
+  Women Sprints 60m->200m n=52  binned_ratio  CV=0.376s
+
+Top 5 bands by mean best CV
+---------------------------
+  1. 800-1000: 2.129s (16 pairs, 319 athlete-seasons)
+  2. 750-950: 2.919s (20 pairs, 522 athlete-seasons)
+  3. 850-1050: 2.987s (8 pairs, 143 athlete-seasons)
+  4. 700-900: 3.038s (22 pairs, 773 athlete-seasons)
+  5. 650-850: 3.291s (22 pairs, 1013 athlete-seasons)
+
+Caveats:
+  • Athletes can appear in multiple bands (any-result membership).
+  • Low/high extreme bands have small n and few pairs.
+  • Mean CV across unequal pair sets favors bands that retain easy pairs;
+    prefer bands with ≥4 pairs and stable coverage.
+  • Indoor distance models use Mile/3000m (not outdoor 1500m/5000m).
+
+Source: Indoor_Analysis/analyze_indoor_point_bands.py

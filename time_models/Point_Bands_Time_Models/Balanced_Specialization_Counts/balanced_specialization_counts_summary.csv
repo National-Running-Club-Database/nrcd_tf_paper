@@ -1,0 +1,16 @@
+band,gender,event_group,n_athlete_seasons,balanced_total,specialized_total,sprints_balanced,distance_balanced,short_sprints,long_sprints,mid_distance,long_distance,specialized_unclassified
+750-950,Men,Sprints,216,88,128,88,0,16,11,0,0,101
+750-950,Men,Distance,178,56,122,0,56,0,0,16,16,90
+750-950,Women,Sprints,89,42,47,42,0,10,5,0,0,32
+750-950,Women,Distance,73,23,50,0,23,0,0,1,7,42
+750-950,All,All,556,209,347,130,79,26,16,17,23,265
+800-1000,Men,Sprints,141,64,77,64,0,11,8,0,0,58
+800-1000,Men,Distance,114,33,81,0,33,0,0,12,10,59
+800-1000,Women,Sprints,54,27,27,27,0,7,2,0,0,18
+800-1000,Women,Distance,42,11,31,0,11,0,0,0,5,26
+800-1000,All,All,351,135,216,91,44,18,10,12,15,161
+850-1050,Men,Sprints,85,38,47,38,0,7,4,0,0,36
+850-1050,Men,Distance,57,11,46,0,11,0,0,9,5,32
+850-1050,Women,Sprints,28,13,15,13,0,4,2,0,0,9
+850-1050,Women,Distance,17,4,13,0,4,0,0,0,3,10
+850-1050,All,All,187,66,121,51,15,11,6,9,8,87

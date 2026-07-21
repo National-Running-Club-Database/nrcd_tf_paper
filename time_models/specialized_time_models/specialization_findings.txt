@@ -1,0 +1,167 @@
+Specialization & Time Model Accuracy — Findings (6-Race Cohort)
+================================================================
+
+Research question: Does WA-based specialization within an event group improve
+or worsen cross-event time prediction accuracy for athletes with exactly 6
+season races?
+
+Short answer: **No — specialization does not help; it hurts.** Athletes with
+large WA spread between events in a group are harder to predict cross-event
+from than balanced athletes in the same 6-race cohort.
+
+
+Method
+------
+  • Population: athlete-seasons with exactly 6 valid results in Sprints or
+    Distance discipline CSVs (2024–2026, March 1+).
+  • Specialization: wa_spread = max(season PB WA) − min(season PB WA) across
+    events in the group with a PB that season.
+  • Specialized: wa_spread ≥ 50 WA points
+  • Balanced: wa_spread < 50 WA points
+  • Models: 5-fold CV linear OLS (and best-model search per subgroup)
+  • Compared to existing 6-race formulas in time_models_higher_races_formulas.txt
+
+
+Who is in the 6-race cohort?
+------------------------------
+  Men Sprints:    39 athlete-seasons  (54% specialized, median spread 63 WA)
+  Men Distance:   58 athlete-seasons  (69% specialized, median spread 63 WA)
+  Women Sprints:  12 athlete-seasons  (58% specialized — small n)
+  Women Distance: 11 athlete-seasons  (55% specialized — small n)
+
+Most high-volume athletes are **specialized** by the 50-WA rule, not balanced.
+
+
+Headline result: balanced athletes are more predictable
+-------------------------------------------------------
+Among pairs where both specialized and balanced subgroups had n ≥ 12:
+
+  Pair                    All    Specialized   Balanced   Δ (spec − bal)
+  ----------------------  -----  ------------  ---------  --------------
+  Men 100m → 200m         0.39s      0.89s       0.24s      +0.65s
+  Men 200m → 100m         0.13s      0.26s       0.10s      +0.16s
+  Men 800m → 1500m        6.19s      6.72s       3.49s      +3.22s
+  Men 1500m → 800m        3.01s      3.32s       1.23s      +2.09s
+
+  Balanced cohort more accurate: **4 of 4 pairs**
+  Mean Δ (specialized minus balanced): **+1.53s**
+  Median Δ: **+1.37s**
+
+Specialization **does not** improve time models. Group-average formulas fit
+**balanced** (multi-event) profiles substantially better.
+
+
+Why this makes sense
+--------------------
+  • A specialized athlete's weaker events are disproportionately weak in WA
+    terms — their times in non-primary events don't follow the same scaling
+    as a well-rounded group-average athlete.
+  • Example: an athlete with 200m WA 776 and 400m WA 81 (spread 695) will not
+    project 400m from 200m using a ratio that works for balanced sprinters.
+  • WA spread ≥ 50 flags athletes whose cross-event time relationship is
+    **event-specific**, not group-generic.
+
+
+Additional splits (men, 6-race pairs with sufficient n)
+-------------------------------------------------------
+
+Predicting toward best vs non-best event (linear CV):
+  • Mixed direction — no consistent rule that predicting "to best event" is
+    always easier. Effect is pair-specific and smaller than specialized vs
+    balanced split.
+
+Pair-level WA gap (from stronger to weaker event by ≥50 WA):
+  • Men 1500m → 5000m: small pair gap cohort CV 8.7s vs large gap 11.6s
+  • Men 1500m → 800m: small pair gap 1.08s vs large gap 1.71s
+  When the source event is much stronger WA than the target, errors tend to
+  increase modestly.
+
+Best subgroup-specific models (examples):
+  • Men balanced 100m→200m: binned_ratio CV 0.11s (n=14)
+  • Men specialized 100m→200m: median_ratio CV 0.61s (n=19)
+  • Men balanced 1500m→800m: binned_ratio CV 0.75s (n=12)
+  • Men specialized 800m→1500m: binned_ratio CV 5.22s (n=36)
+
+Training separate models on specialized vs balanced athletes could help each
+subgroup, but **specialization itself is not a signal of better predictability**
+— it is a signal to use different formulas or wider uncertainty bands.
+
+
+Cohort-specific formulas vs group-average (6-race models)
+---------------------------------------------------------
+Follow-up: if specialization status is known, can separate formulas beat the
+pooled 6-race group-average models?
+
+  • Cohort-specific winner vs group model on same subgroup: **11 of 14 pairs
+    win** (79%) — yes, stratified formulas are more accurate within each arm.
+  • Routed prediction (specialized formula → specialized athletes, balanced
+    formula → balanced athletes): **2 of 10 pairs** beat group-only CV on the
+  full 6-race population — modest net gain overall.
+
+Largest cohort-specific gains (vs applying pooled 6-race formula to subgroup):
+  • Men balanced 800m→1500m: 1.19s vs 3.63s (↓2.43s, n=12)
+  • Men specialized 800m→1500m: 5.22s vs 6.25s (↓1.03s, n=36)
+  • Men balanced 1500m→800m: 0.75s vs 1.62s (↓0.87s, n=12)
+  • Men specialized 1500m→5000m: 15.70s vs 16.36s (↓0.66s, n=27)
+
+Routed wins (full population):
+  • Men 1500m→800m: routed 2.93s vs group 3.29s (+0.35s)
+  • Men 5000m→800m: routed 2.14s vs group 2.55s (+0.41s)
+
+Routed losses (specialized cohort dominates n; balanced formulas rarely used):
+  • Men 800m→5000m: routed 23.9s vs group 16.0s (−7.9s) — only 1 balanced athlete
+  • Men 200m→400m: routed 1.94s vs group 1.40s (−0.54s) — balanced n=5
+
+Takeaway: **use specialization status to pick formulas**, especially for
+balanced athletes (largest per-athlete gains). Pooled 6-race formulas
+under-serve balanced athletes and over-serve some specialized long-hop pairs.
+See time_models_specialized_6races_formulas.txt and
+time_models_balanced_6races_formulas.txt.
+
+
+Practical recommendations
+-------------------------
+  1. Before projecting an unrun event, compute wa_spread across the athlete's
+     season PBs in the group.
+  2. If wa_spread < 50 (balanced): use standard 6-race formulas with normal CV bands.
+  3. If wa_spread ≥ 50 (specialized): treat cross-event projections skeptically;
+     apply **wider** uncertainty (often 2–3× the balanced CV band on distance
+     pairs, ~2× on adjacent sprints).
+  4. For specialized athletes, prefer projecting from events closer to the
+     target (e.g. 200m→400m rather than 100m→400m) when possible.
+  5. Do not pool specialized and balanced athletes into one formula without
+     stratification — the 6-race combined models are dominated by specialists
+     and underperform on balanced athletes' actual error rates.
+
+
+Interaction with race-volume finding
+------------------------------------
+  • More races (6 vs all seasons) → tighter time relationships overall.
+  • But within the 6-race cohort, **less WA specialization** → even tighter
+    relationships.
+  • The best-projected profile: **6 races AND balanced WA across events**
+    (relatively rare — only ~30–45% of 6-race seasons are balanced).
+
+
+Limitations
+-----------
+  • Women's splits too small for reliable pair-level conclusions.
+  • Only 4 pairs had n ≥ 12 in both specialized and balanced arms.
+  • 50-WA threshold is a heuristic; tertile splits show same direction.
+  • Associative only — specialists may differ in training focus, not just stats.
+
+
+Output files
+------------
+  specialized_time_models/specialization_time_model_report.txt
+  specialized_time_models/specialization_model_comparison.csv
+  specialized_time_models/athlete_season_specialization_6races.csv
+  specialized_time_models/analyze_specialization_time_models.py
+  specialized_time_models/specialization_stratified_models_report.txt
+  specialized_time_models/best_specialization_time_models.csv
+  specialized_time_models/specialization_vs_group_comparison.csv
+  specialized_time_models/time_models_specialized_6races_formulas.txt
+  specialized_time_models/time_models_balanced_6races_formulas.txt
+  specialized_time_models/build_specialization_time_models.py
+
+Source: time_models/specialized_time_models/

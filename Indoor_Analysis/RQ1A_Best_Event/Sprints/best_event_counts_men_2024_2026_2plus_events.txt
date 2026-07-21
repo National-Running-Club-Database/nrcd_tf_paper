@@ -1,0 +1,11 @@
+Indoor Track 2024-2026 Male Sprints (with Relays) — Best Event Count
+All indoor-season results in provided CSVs; best = highest World Athletics points per event.
+Relay events: team WA points credited to each leg athlete; athlete best = max across relay appearances.
+Athletes with results in at least 2 events (individual + relay)
+
+60m (655 competed): 308
+200m (674 competed): 190
+400m (434 competed): 130
+4x100m (2 competed): 2
+4x200m (326 competed): 95
+4x400m (398 competed): 224

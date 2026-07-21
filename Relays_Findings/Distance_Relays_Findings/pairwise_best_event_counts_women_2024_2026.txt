@@ -1,0 +1,48 @@
+Outdoor Track 2024-2026 Female Distance (with Relays) — Pairwise Best Event Comparison
+All individual pairings, every individual×relay combination, and relay×relay pairings.
+
+800m vs. 1500m (272 athletes in both):
+800m best event: 58  vs. 1500m best event: 214
+
+800m vs. 3000m Steeplechase (52 athletes in both):
+800m best event: 44  vs. 3000m Steeplechase best event: 8
+
+800m vs. 5000m (85 athletes in both):
+800m best event: 15  vs. 5000m best event: 70
+
+1500m vs. 3000m Steeplechase (81 athletes in both):
+1500m best event: 79  vs. 3000m Steeplechase best event: 2
+
+1500m vs. 5000m (144 athletes in both):
+1500m best event: 55  vs. 5000m best event: 89
+
+3000m Steeplechase vs. 5000m (44 athletes in both):
+3000m Steeplechase best event: 1  vs. 5000m best event: 43
+
+800m vs. 4x100m (41 athletes in both):
+800m best event: 15  vs. 4x100m best event: 26
+
+800m vs. 4x400m (146 athletes in both):
+800m best event: 63  vs. 4x400m best event: 82
+(ties: 1)
+
+1500m vs. 4x100m (36 athletes in both):
+1500m best event: 14  vs. 4x100m best event: 22
+
+1500m vs. 4x400m (132 athletes in both):
+1500m best event: 74  vs. 4x400m best event: 58
+
+3000m Steeplechase vs. 4x100m (12 athletes in both):
+3000m Steeplechase best event: 1  vs. 4x100m best event: 11
+
+3000m Steeplechase vs. 4x400m (53 athletes in both):
+3000m Steeplechase best event: 7  vs. 4x400m best event: 46
+
+5000m vs. 4x100m (11 athletes in both):
+5000m best event: 7  vs. 4x100m best event: 4
+
+5000m vs. 4x400m (71 athletes in both):
+5000m best event: 54  vs. 4x400m best event: 17
+
+4x100m vs. 4x400m (108 athletes in both):
+4x100m best event: 67  vs. 4x400m best event: 41

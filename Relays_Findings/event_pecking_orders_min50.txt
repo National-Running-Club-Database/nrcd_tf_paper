@@ -1,0 +1,550 @@
+Event Pecking Orders (≥50 Athletes in Both Events)
+==================================================
+Outdoor track 2024–2026 combined (relay-inclusive datasets).
+
+Only pairwise comparisons with at least 50 athletes competing in BOTH events are used.
+
+Method: For each qualifying event pair, count whose personal-best WA is
+higher. The event with more athletes as best event wins that pairing.
+Pecking order ranks events by head-to-head wins; when pairwise results
+are cyclic or incomplete, Copeland score (total head-to-head wins)
+breaks ties.
+
+## Sprints
+
+### Men — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 100m → 200m → 400m
+
+**Pairwise wins (higher best-event count wins):**
+  • 100m beats 200m (236 vs. 207; ties: 4; 447 athletes in both)
+  • 100m beats 400m (96 vs. 77; ties: 1; 174 athletes in both)
+  • 200m beats 400m (155 vs. 135; ties: 3; 293 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 100m: wins over 200m, 400m
+  • 200m: wins over 400m
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 100m: 2
+  • 200m: 1
+  • 400m: 0
+
+### Men — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → 100m → 200m → 4x400m → 400m
+
+**Pairwise wins (higher best-event count wins):**
+  • 100m beats 200m (236 vs. 207; ties: 4; 447 athletes in both)
+  • 100m beats 400m (96 vs. 77; ties: 1; 174 athletes in both)
+  • 200m beats 400m (155 vs. 135; ties: 3; 293 athletes in both)
+  • 4x100m beats 100m (173 vs. 85; 258 athletes in both)
+  • 4x400m beats 100m (81 vs. 70; ties: 1; 152 athletes in both)
+  • 4x100m beats 200m (144 vs. 103; ties: 1; 248 athletes in both)
+  • 200m beats 4x400m (117 vs. 103; ties: 1; 221 athletes in both)
+  • 4x100m beats 400m (63 vs. 51; ties: 2; 116 athletes in both)
+  • 4x400m beats 400m (172 vs. 87; 259 athletes in both)
+  • 4x100m beats 4x400m (108 vs. 96; ties: 1; 205 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 100m, 200m, 4x400m, 400m
+  • 100m: wins over 200m, 400m; does NOT beat 4x400m (placed above by Copeland score 2)
+  • 200m: wins over 4x400m, 400m
+  • 4x400m: wins over 400m
+
+**Non-transitive cycles (no single strict pecking order exists):**
+  • 100m beats 200m, 200m beats 4x400m, 4x400m beats 100m (Copeland scores used to break ambiguity)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 4
+  • 100m: 2
+  • 200m: 2
+  • 4x400m: 2
+  • 400m: 0
+
+### Women — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 100m → 400m → 200m
+
+**Pairwise wins (higher best-event count wins):**
+  • 100m beats 200m (171 vs. 32; ties: 1; 204 athletes in both)
+  • 100m beats 400m (33 vs. 26; 59 athletes in both)
+  • 400m beats 200m (94 vs. 33; ties: 2; 129 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 100m: wins over 400m, 200m
+  • 400m: wins over 200m
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 100m: 2
+  • 400m: 1
+  • 200m: 0
+
+### Women — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → 4x400m → 100m → 400m → 200m
+
+**Pairwise wins (higher best-event count wins):**
+  • 100m beats 200m (171 vs. 32; ties: 1; 204 athletes in both)
+  • 100m beats 400m (33 vs. 26; 59 athletes in both)
+  • 400m beats 200m (94 vs. 33; ties: 2; 129 athletes in both)
+  • 4x100m beats 100m (118 vs. 18; 136 athletes in both)
+  • 4x400m beats 100m (33 vs. 31; 64 athletes in both)
+  • 4x100m beats 200m (112 vs. 17; 129 athletes in both)
+  • 4x400m beats 200m (78 vs. 34; 112 athletes in both)
+  • 4x100m beats 400m (47 vs. 16; 63 athletes in both)
+  • 4x400m beats 400m (74 vs. 41; ties: 1; 116 athletes in both)
+  • 4x100m beats 4x400m (67 vs. 41; 108 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m, 100m, 400m, 200m
+  • 4x400m: wins over 100m, 400m, 200m
+  • 100m: wins over 400m, 200m
+  • 400m: wins over 200m
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 4
+  • 4x400m: 3
+  • 100m: 2
+  • 400m: 1
+  • 200m: 0
+
+## Distance
+
+### Men — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 1500m → 5000m → 800m → 3000m Steeplechase
+
+**Pairwise wins (higher best-event count wins):**
+  • 1500m beats 800m (346 vs. 232; ties: 3; 581 athletes in both)
+  • 800m beats 3000m Steeplechase (111 vs. 6; 117 athletes in both)
+  • 5000m beats 800m (111 vs. 107; ties: 1; 219 athletes in both)
+  • 1500m beats 3000m Steeplechase (166 vs. 1; 167 athletes in both)
+  • 1500m beats 5000m (291 vs. 142; ties: 1; 434 athletes in both)
+  • 5000m beats 3000m Steeplechase (105 vs. 1; 106 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 1500m: wins over 5000m, 800m, 3000m Steeplechase
+  • 5000m: wins over 800m, 3000m Steeplechase
+  • 800m: wins over 3000m Steeplechase
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 1500m: 3
+  • 5000m: 2
+  • 800m: 1
+  • 3000m Steeplechase: 0
+
+### Men — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 1500m → 4x400m → 5000m → 800m → 4x100m → 3000m Steeplechase
+
+**Pairwise wins (higher best-event count wins):**
+  • 1500m beats 800m (346 vs. 232; ties: 3; 581 athletes in both)
+  • 800m beats 3000m Steeplechase (111 vs. 6; 117 athletes in both)
+  • 5000m beats 800m (111 vs. 107; ties: 1; 219 athletes in both)
+  • 1500m beats 3000m Steeplechase (166 vs. 1; 167 athletes in both)
+  • 1500m beats 5000m (291 vs. 142; ties: 1; 434 athletes in both)
+  • 5000m beats 3000m Steeplechase (105 vs. 1; 106 athletes in both)
+  • 800m beats 4x100m (37 vs. 36; 73 athletes in both)
+  • 4x400m beats 800m (185 vs. 170; 355 athletes in both)
+  • 1500m beats 4x100m (43 vs. 28; 71 athletes in both)
+  • 4x400m beats 1500m (169 vs. 147; 316 athletes in both)
+  • 4x400m beats 3000m Steeplechase (81 vs. 4; ties: 1; 86 athletes in both)
+  • 5000m beats 4x400m (81 vs. 76; 157 athletes in both)
+  • 4x100m beats 4x400m (108 vs. 96; ties: 1; 205 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 1500m: wins over 5000m, 800m, 4x100m, 3000m Steeplechase; does NOT beat 4x400m (placed above by Copeland score 4)
+  • 4x400m: wins over 800m, 3000m Steeplechase; does NOT beat 5000m, 4x100m (placed above by Copeland score 3)
+  • 5000m: wins over 800m, 3000m Steeplechase
+  • 800m: wins over 4x100m, 3000m Steeplechase
+  • 4x100m: does not decisively beat all events below; ranked by Copeland score (1 head-to-head wins)
+
+**Non-transitive cycles (no single strict pecking order exists):**
+  • 1500m beats 4x100m, 4x100m beats 4x400m, 4x400m beats 1500m (Copeland scores used to break ambiguity)
+  • 1500m beats 5000m, 5000m beats 4x400m, 4x400m beats 1500m (Copeland scores used to break ambiguity)
+  • 4x100m beats 4x400m, 4x400m beats 800m, 800m beats 4x100m (Copeland scores used to break ambiguity)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 1500m: 4
+  • 4x400m: 3
+  • 5000m: 3
+  • 800m: 2
+  • 4x100m: 1
+  • 3000m Steeplechase: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 3000m Steeplechase vs. 4x100m: 45 athletes in both
+  • 5000m vs. 4x100m: 39 athletes in both
+
+### Women — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 5000m → 1500m → 800m → 3000m Steeplechase
+
+**Pairwise wins (higher best-event count wins):**
+  • 1500m beats 800m (214 vs. 58; 272 athletes in both)
+  • 800m beats 3000m Steeplechase (44 vs. 8; 52 athletes in both)
+  • 5000m beats 800m (70 vs. 15; 85 athletes in both)
+  • 1500m beats 3000m Steeplechase (79 vs. 2; 81 athletes in both)
+  • 5000m beats 1500m (89 vs. 55; 144 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 5000m: wins over 1500m, 800m
+  • 1500m: wins over 800m, 3000m Steeplechase
+  • 800m: wins over 3000m Steeplechase
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 1500m: 2
+  • 5000m: 2
+  • 800m: 1
+  • 3000m Steeplechase: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 3000m Steeplechase vs. 5000m: 44 athletes in both
+
+### Women — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 5000m → 4x100m → 1500m → 4x400m → 800m → 3000m Steeplechase
+
+**Pairwise wins (higher best-event count wins):**
+  • 1500m beats 800m (214 vs. 58; 272 athletes in both)
+  • 800m beats 3000m Steeplechase (44 vs. 8; 52 athletes in both)
+  • 5000m beats 800m (70 vs. 15; 85 athletes in both)
+  • 1500m beats 3000m Steeplechase (79 vs. 2; 81 athletes in both)
+  • 5000m beats 1500m (89 vs. 55; 144 athletes in both)
+  • 4x400m beats 800m (82 vs. 63; ties: 1; 146 athletes in both)
+  • 1500m beats 4x400m (74 vs. 58; 132 athletes in both)
+  • 4x400m beats 3000m Steeplechase (46 vs. 7; 53 athletes in both)
+  • 5000m beats 4x400m (54 vs. 17; 71 athletes in both)
+  • 4x100m beats 4x400m (67 vs. 41; 108 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 5000m: wins over 1500m, 4x400m, 800m
+  • 4x100m: wins over 4x400m
+  • 1500m: wins over 4x400m, 800m, 3000m Steeplechase
+  • 4x400m: wins over 800m, 3000m Steeplechase
+  • 800m: wins over 3000m Steeplechase
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 1500m: 3
+  • 5000m: 3
+  • 4x400m: 2
+  • 4x100m: 1
+  • 800m: 1
+  • 3000m Steeplechase: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 3000m Steeplechase vs. 5000m: 44 athletes in both
+  • 800m vs. 4x100m: 41 athletes in both
+  • 1500m vs. 4x100m: 36 athletes in both
+  • 3000m Steeplechase vs. 4x100m: 12 athletes in both
+  • 5000m vs. 4x100m: 11 athletes in both
+
+## Hurdles
+
+### Men — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 400m Hurdles → 110m Hurdles
+
+**Pairwise wins (higher best-event count wins):**
+  • 400m Hurdles beats 110m Hurdles (57 vs. 12; 69 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 400m Hurdles: wins over 110m Hurdles
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 400m Hurdles: 1
+  • 110m Hurdles: 0
+
+### Men — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → 4x400m → 400m Hurdles → 110m Hurdles
+
+**Pairwise wins (higher best-event count wins):**
+  • 400m Hurdles beats 110m Hurdles (57 vs. 12; 69 athletes in both)
+  • 4x100m beats 400m Hurdles (29 vs. 20; ties: 1; 50 athletes in both)
+  • 4x400m beats 400m Hurdles (45 vs. 36; 81 athletes in both)
+  • 4x100m beats 4x400m (108 vs. 96; ties: 1; 205 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m, 400m Hurdles
+  • 4x400m: wins over 400m Hurdles
+  • 400m Hurdles: wins over 110m Hurdles
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 2
+  • 400m Hurdles: 1
+  • 4x400m: 1
+  • 110m Hurdles: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 110m Hurdles vs. 4x100m: 39 athletes in both
+  • 110m Hurdles vs. 4x400m: 42 athletes in both
+
+### Women — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+(no qualifying pairwise comparisons)
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 100m Hurdles vs. 400m Hurdles: 44 athletes in both
+
+### Women — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → 4x400m
+
+**Pairwise wins (higher best-event count wins):**
+  • 4x100m beats 4x400m (67 vs. 41; 108 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 1
+  • 4x400m: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • 100m Hurdles vs. 400m Hurdles: 44 athletes in both
+  • 100m Hurdles vs. 4x100m: 46 athletes in both
+  • 100m Hurdles vs. 4x400m: 31 athletes in both
+  • 400m Hurdles vs. 4x100m: 30 athletes in both
+  • 400m Hurdles vs. 4x400m: 35 athletes in both
+
+## Jumps
+
+### Men — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** Long Jump → High Jump → Triple Jump
+
+**Pairwise wins (higher best-event count wins):**
+  • Long Jump beats Triple Jump (42 vs. 38; 80 athletes in both)
+  • Long Jump beats High Jump (30 vs. 24; 54 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • Long Jump: wins over High Jump, Triple Jump
+  • High Jump: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • Long Jump: 2
+  • High Jump: 0
+  • Triple Jump: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Triple Jump vs. High Jump: 32 athletes in both
+
+### Men — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → Long Jump → 4x400m → High Jump → Triple Jump
+
+**Pairwise wins (higher best-event count wins):**
+  • Long Jump beats Triple Jump (42 vs. 38; 80 athletes in both)
+  • Long Jump beats High Jump (30 vs. 24; 54 athletes in both)
+  • 4x100m beats Long Jump (41 vs. 33; ties: 1; 75 athletes in both)
+  • 4x100m beats 4x400m (108 vs. 96; ties: 1; 205 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over Long Jump, 4x400m
+  • Long Jump: wins over High Jump, Triple Jump
+  • 4x400m: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+  • High Jump: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 2
+  • Long Jump: 2
+  • 4x400m: 0
+  • High Jump: 0
+  • Triple Jump: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Triple Jump vs. High Jump: 32 athletes in both
+  • Long Jump vs. 4x400m: 34 athletes in both
+  • Triple Jump vs. 4x100m: 31 athletes in both
+  • Triple Jump vs. 4x400m: 11 athletes in both
+  • High Jump vs. 4x100m: 21 athletes in both
+  • High Jump vs. 4x400m: 24 athletes in both
+
+### Women — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+(no qualifying pairwise comparisons)
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Long Jump vs. Triple Jump: 46 athletes in both
+  • Long Jump vs. High Jump: 39 athletes in both
+  • Triple Jump vs. High Jump: 18 athletes in both
+
+### Women — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → 4x400m → Long Jump
+
+**Pairwise wins (higher best-event count wins):**
+  • 4x100m beats Long Jump (32 vs. 19; 51 athletes in both)
+  • 4x100m beats 4x400m (67 vs. 41; 108 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m, Long Jump
+  • 4x400m: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 2
+  • 4x400m: 0
+  • Long Jump: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Long Jump vs. Triple Jump: 46 athletes in both
+  • Long Jump vs. High Jump: 39 athletes in both
+  • Triple Jump vs. High Jump: 18 athletes in both
+  • Long Jump vs. 4x400m: 31 athletes in both
+  • Triple Jump vs. 4x100m: 19 athletes in both
+  • Triple Jump vs. 4x400m: 12 athletes in both
+  • High Jump vs. 4x100m: 27 athletes in both
+  • High Jump vs. 4x400m: 20 athletes in both
+
+## Throws
+
+### Men — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** Shot Put → Discus
+
+**Pairwise wins (higher best-event count wins):**
+  • Shot Put beats Discus (70 vs. 41; ties: 1; 112 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • Shot Put: wins over Discus
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • Shot Put: 1
+  • Discus: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Shot Put vs. Hammer Throw: 7 athletes in both
+  • Shot Put vs. Javelin Throw: 24 athletes in both
+  • Discus vs. Hammer Throw: 7 athletes in both
+  • Discus vs. Javelin Throw: 23 athletes in both
+  • Hammer Throw vs. Javelin Throw: 4 athletes in both
+
+### Men — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → Shot Put → 4x400m → Discus
+
+**Pairwise wins (higher best-event count wins):**
+  • Shot Put beats Discus (70 vs. 41; ties: 1; 112 athletes in both)
+  • 4x100m beats 4x400m (108 vs. 96; ties: 1; 205 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m
+  • Shot Put: wins over Discus
+  • 4x400m: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 1
+  • Shot Put: 1
+  • 4x400m: 0
+  • Discus: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Shot Put vs. Hammer Throw: 7 athletes in both
+  • Shot Put vs. Javelin Throw: 24 athletes in both
+  • Discus vs. Hammer Throw: 7 athletes in both
+  • Discus vs. Javelin Throw: 23 athletes in both
+  • Hammer Throw vs. Javelin Throw: 4 athletes in both
+  • Shot Put vs. 4x100m: 25 athletes in both
+  • Shot Put vs. 4x400m: 19 athletes in both
+  • Discus vs. 4x100m: 15 athletes in both
+  • Discus vs. 4x400m: 10 athletes in both
+  • Hammer Throw vs. 4x100m: 1 athletes in both
+  • Javelin Throw vs. 4x100m: 7 athletes in both
+  • Javelin Throw vs. 4x400m: 4 athletes in both
+
+### Women — Individual
+(Individual events only)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** Shot Put → Discus
+
+**Pairwise wins (higher best-event count wins):**
+  • Shot Put beats Discus (57 vs. 16; 73 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • Shot Put: wins over Discus
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • Shot Put: 1
+  • Discus: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Shot Put vs. Hammer Throw: 7 athletes in both
+  • Shot Put vs. Javelin Throw: 12 athletes in both
+  • Discus vs. Hammer Throw: 6 athletes in both
+  • Discus vs. Javelin Throw: 11 athletes in both
+  • Hammer Throw vs. Javelin Throw: 3 athletes in both
+
+### Women — All Events
+(Individual + relay events)
+Minimum sample size: 50+ athletes competed in both events.
+
+**Pecking order:** 4x100m → Shot Put → 4x400m → Discus
+
+**Pairwise wins (higher best-event count wins):**
+  • Shot Put beats Discus (57 vs. 16; 73 athletes in both)
+  • 4x100m beats 4x400m (67 vs. 41; 108 athletes in both)
+
+**Justification chain (each event beats all below it in the order):**
+  • 4x100m: wins over 4x400m
+  • Shot Put: wins over Discus
+  • 4x400m: does not decisively beat all events below; ranked by Copeland score (0 head-to-head wins)
+
+**Copeland scores (number of other events beaten head-to-head):**
+  • 4x100m: 1
+  • Shot Put: 1
+  • 4x400m: 0
+  • Discus: 0
+
+**Excluded pairings (fewer than 50 athletes in both):**
+  • Shot Put vs. Hammer Throw: 7 athletes in both
+  • Shot Put vs. Javelin Throw: 12 athletes in both
+  • Discus vs. Hammer Throw: 6 athletes in both
+  • Discus vs. Javelin Throw: 11 athletes in both
+  • Hammer Throw vs. Javelin Throw: 3 athletes in both
+  • Shot Put vs. 4x100m: 15 athletes in both
+  • Shot Put vs. 4x400m: 12 athletes in both
+  • Discus vs. 4x100m: 8 athletes in both
+  • Discus vs. 4x400m: 7 athletes in both
+  • Hammer Throw vs. 4x100m: 1 athletes in both
+  • Hammer Throw vs. 4x400m: 3 athletes in both
+  • Javelin Throw vs. 4x100m: 7 athletes in both
+  • Javelin Throw vs. 4x400m: 5 athletes in both

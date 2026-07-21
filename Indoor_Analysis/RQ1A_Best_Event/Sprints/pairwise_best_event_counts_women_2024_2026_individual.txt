@@ -1,0 +1,13 @@
+Indoor Track 2024-2026 Female Sprints (with Relays) — Pairwise Best Event Comparison
+Individual events only (60m, 200m, 400m).
+
+60m vs. 200m (200 athletes in both):
+60m best event: 161  vs. 200m best event: 37
+(ties: 2)
+
+60m vs. 400m (75 athletes in both):
+60m best event: 39  vs. 400m best event: 36
+
+200m vs. 400m (140 athletes in both):
+200m best event: 49  vs. 400m best event: 89
+(ties: 2)

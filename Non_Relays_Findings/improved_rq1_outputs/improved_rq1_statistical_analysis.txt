@@ -1,0 +1,311 @@
+IMPROVED RQ1 STATISTICAL ANALYSIS
+National Running Club Database — Outdoor Track 2024–2026
+Significance level α = 0.05; multiple comparisons corrected via Benjamini-Hochberg FDR where noted.
+
+========================================================================
+IMPROVED RQ1A — Best Event Specialization (2024–2026 Combined)
+========================================================================
+
+## Sprints
+
+### Men (n=1248)
+Chi-square vs uniform best-event distribution: χ²=16.88, df=2, p=2.16e-04
+  100m: 467 (37.4%) | 95% bootstrap CI [34.8%, 40.1%]
+  400m: 430 (34.5%) | 95% bootstrap CI [31.8%, 37.2%]
+  200m: 351 (28.1%) | 95% bootstrap CI [25.6%, 30.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 239-208 (ties 4, n=447) | p=1.56e-01, Cohen's h=0.069 ns
+    100m vs 400m: 97-78 (ties 1, n=175) | p=1.73e-01, Cohen's h=0.109 ns
+    200m vs 400m: 155-136 (ties 5, n=291) | p=2.91e-01, Cohen's h=0.065 ns
+
+### Women (n=542)
+Chi-square vs uniform best-event distribution: χ²=55.31, df=2, p=9.76e-13
+  100m: 245 (45.2%) | 95% bootstrap CI [41.1%, 49.4%]
+  400m: 192 (35.4%) | 95% bootstrap CI [31.2%, 39.7%]
+  200m: 105 (19.4%) | 95% bootstrap CI [16.1%, 22.9%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m vs 200m: 171-32 (ties 1, n=203) | p=3.80e-24, Cohen's h=0.754 ***
+    100m vs 400m: 34-26 (ties 0, n=60) | p=3.66e-01, Cohen's h=0.134 ns
+    200m vs 400m: 34-94 (ties 2, n=128) | p=1.09e-07, Cohen's h=-0.488 ***
+
+## Distance
+
+### Men (n=1933)
+Chi-square vs uniform best-event distribution: χ²=644.58, df=3, p=2.18e-139
+  1500m: 816 (42.2%) | 95% bootstrap CI [40.1%, 44.4%]
+  800m: 626 (32.4%) | 95% bootstrap CI [30.4%, 34.4%]
+  5000m: 429 (22.2%) | 95% bootstrap CI [20.3%, 24.1%]
+  3000m Steeplechase: 62 (3.2%) | 95% bootstrap CI [2.5%, 4.0%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 232-349 (ties 5, n=581) | p=1.38e-06, Cohen's h=-0.203 ***
+    800m vs 3000m Steeplechase: 119-7 (ties 0, n=126) | p=2.11e-27, Cohen's h=1.095 ***
+    800m vs 5000m: 109-114 (ties 4, n=223) | p=7.89e-01, Cohen's h=-0.022 ns
+    1500m vs 3000m Steeplechase: 170-1 (ties 0, n=171) | p=1.15e-49, Cohen's h=1.418 ***
+    1500m vs 5000m: 294-142 (ties 1, n=436) | p=2.76e-13, Cohen's h=0.356 ***
+    3000m Steeplechase vs 5000m: 1-108 (ties 0, n=109) | p=3.39e-31, Cohen's h=-1.379 ***
+
+### Women (n=946)
+Chi-square vs uniform best-event distribution: χ²=350.53, df=3, p=1.14e-75
+  1500m: 436 (46.1%) | 95% bootstrap CI [42.8%, 49.3%]
+  5000m: 243 (25.7%) | 95% bootstrap CI [22.9%, 28.4%]
+  800m: 238 (25.2%) | 95% bootstrap CI [22.4%, 28.1%]
+  3000m Steeplechase: 29 (3.1%) | 95% bootstrap CI [2.0%, 4.2%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    800m vs 1500m: 58-214 (ties 0, n=272) | p=3.48e-22, Cohen's h=-0.611 ***
+    800m vs 3000m Steeplechase: 44-8 (ties 0, n=52) | p=4.04e-07, Cohen's h=0.765 ***
+    800m vs 5000m: 15-70 (ties 0, n=85) | p=1.17e-09, Cohen's h=-0.704 ***
+    1500m vs 3000m Steeplechase: 79-2 (ties 0, n=81) | p=2.75e-21, Cohen's h=1.255 ***
+    1500m vs 5000m: 55-89 (ties 0, n=144) | p=5.77e-03, Cohen's h=-0.238 **
+    3000m Steeplechase vs 5000m: 1-43 (ties 0, n=44) | p=5.12e-12, Cohen's h=-1.268 ***
+
+## Hurdles
+
+### Men (n=238)
+Chi-square vs uniform best-event distribution: χ²=38.62, df=2, p=4.10e-09
+  400m Hurdles: 163 (68.5%) | 95% bootstrap CI [62.6%, 74.4%]
+  110m Hurdles: 75 (31.5%) | 95% bootstrap CI [25.6%, 37.4%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    110m Hurdles vs 400m Hurdles: 20-59 (ties 14, n=79) | p=1.30e-05, Cohen's h=-0.516 ***
+
+### Women (n=145)
+Chi-square vs uniform best-event distribution: χ²=0.08, df=2, p=9.60e-01
+  400m Hurdles: 74 (51.0%) | 95% bootstrap CI [43.4%, 59.3%]
+  100m Hurdles: 71 (49.0%) | 95% bootstrap CI [40.7%, 57.2%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    100m Hurdles vs 400m Hurdles: 17-35 (ties 1, n=52) | p=1.75e-02, Cohen's h=-0.353 *
+
+## Jumps
+
+### Men (n=318)
+Chi-square vs uniform best-event distribution: χ²=121.30, df=2, p=4.57e-27
+  Long Jump: 198 (62.3%) | 95% bootstrap CI [56.9%, 67.3%]
+  High Jump: 69 (21.7%) | 95% bootstrap CI [17.0%, 26.1%]
+  Triple Jump: 51 (16.0%) | 95% bootstrap CI [11.9%, 20.1%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Long Jump vs Triple Jump: 42-38 (ties 0, n=80) | p=7.38e-01, Cohen's h=0.050 ns
+    Long Jump vs High Jump: 30-24 (ties 0, n=54) | p=4.97e-01, Cohen's h=0.111 ns
+    Triple Jump vs High Jump: 19-13 (ties 0, n=32) | p=3.77e-01, Cohen's h=0.189 ns
+
+### Women (n=201)
+Chi-square vs uniform best-event distribution: χ²=62.00, df=2, p=3.44e-14
+  Long Jump: 119 (59.2%) | 95% bootstrap CI [52.2%, 66.2%]
+  High Jump: 48 (23.9%) | 95% bootstrap CI [18.4%, 29.9%]
+  Triple Jump: 34 (16.9%) | 95% bootstrap CI [11.9%, 22.4%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Long Jump vs Triple Jump: 19-26 (ties 1, n=45) | p=3.71e-01, Cohen's h=-0.156 ns
+    Long Jump vs High Jump: 24-15 (ties 0, n=39) | p=2.00e-01, Cohen's h=0.233 ns
+    Triple Jump vs High Jump: 14-4 (ties 0, n=18) | p=3.09e-02, Cohen's h=0.589 *
+
+## Throws
+
+### Men (n=191)
+Chi-square vs uniform best-event distribution: χ²=26.39, df=1, p=2.79e-07
+  Shot Put: 131 (68.6%) | 95% bootstrap CI [61.8%, 75.4%]
+  Discus: 60 (31.4%) | 95% bootstrap CI [25.1%, 37.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Shot Put vs Discus: 70-41 (ties 1, n=111) | p=7.58e-03, Cohen's h=0.264 **
+
+### Women (n=128)
+Chi-square vs uniform best-event distribution: χ²=38.28, df=1, p=6.12e-10
+  Shot Put: 99 (77.3%) | 95% bootstrap CI [70.3%, 84.4%]
+  Discus: 29 (22.7%) | 95% bootstrap CI [15.6%, 29.7%]
+
+  Pairwise head-to-head (exact binomial vs 50/50 null):
+    Shot Put vs Discus: 57-16 (ties 0, n=73) | p=1.53e-06, Cohen's h=0.596 ***
+
+Benjamini-Hochberg FDR-adjusted p-values applied across all pairwise tests above.
+Significant at FDR<0.05: 18 / 28 tests
+
+========================================================================
+IMPROVED RQ1B — Nationals Top-8 vs Full Season (Statistical Tests)
+========================================================================
+
+## Season 2024
+  Men 100m: Mann-Whitney U (nat>season) p=9.02e-06, rank-biserial r=-0.833, Cohen's d=1.27 *** | nat median=825, season median=629
+  Men 200m: Mann-Whitney U (nat>season) p=1.33e-05, rank-biserial r=-0.865, Cohen's d=1.40 *** | nat median=836, season median=613
+  Men 400m: Mann-Whitney U (nat>season) p=9.41e-06, rank-biserial r=-0.884, Cohen's d=1.42 *** | nat median=783, season median=546
+  Women 100m: Mann-Whitney U (nat>season) p=9.55e-06, rank-biserial r=-0.891, Cohen's d=1.49 *** | nat median=878, season median=659
+  Women 200m: Mann-Whitney U (nat>season) p=3.18e-05, rank-biserial r=-0.833, Cohen's d=1.40 *** | nat median=786, season median=593
+  Women 400m: Mann-Whitney U (nat>season) p=7.39e-05, rank-biserial r=-0.796, Cohen's d=1.09 *** | nat median=770, season median=643
+  Men 800m: Mann-Whitney U (nat>season) p=1.97e-06, rank-biserial r=-0.948, Cohen's d=1.68 *** | nat median=868, season median=504
+  Men 1500m: Mann-Whitney U (nat>season) p=2.52e-06, rank-biserial r=-0.936, Cohen's d=1.69 *** | nat median=818, season median=481
+  Men 5000m: Mann-Whitney U (nat>season) p=1.89e-06, rank-biserial r=-0.952, Cohen's d=1.68 *** | nat median=828, season median=533
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=5.95e-06, rank-biserial r=-0.919, Cohen's d=2.16 *** | nat median=545, season median=184
+  Women 800m: Mann-Whitney U (nat>season) p=6.79e-06, rank-biserial r=-0.903, Cohen's d=1.46 *** | nat median=726, season median=497
+  Women 1500m: Mann-Whitney U (nat>season) p=1.15e-05, rank-biserial r=-0.874, Cohen's d=1.45 *** | nat median=746, season median=523
+  Women 5000m: Mann-Whitney U (nat>season) p=2.34e-05, rank-biserial r=-0.848, Cohen's d=1.52 *** | nat median=799, season median=606
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=5.37e-05, rank-biserial r=-0.837, Cohen's d=1.50 *** | nat median=546, season median=342
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=2.23e-03, rank-biserial r=-0.611, Cohen's d=0.92 ** | nat median=746, season median=560
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=1.15e-02, rank-biserial r=-0.485, Cohen's d=0.77 * | nat median=671, season median=530
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=2.19e-03, rank-biserial r=-0.614, Cohen's d=0.99 ** | nat median=646, season median=516
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=1.61e-02, rank-biserial r=-0.478, Cohen's d=0.68 * | nat median=682, season median=581
+  Men Long Jump: Mann-Whitney U (nat>season) p=2.70e-05, rank-biserial r=-0.851, Cohen's d=1.26 *** | nat median=834, season median=658
+  Men Triple Jump: Mann-Whitney U (nat>season) p=3.20e-03, rank-biserial r=-0.600, Cohen's d=0.79 ** | nat median=720, season median=652
+  Men High Jump: Mann-Whitney U (nat>season) p=4.08e-02, rank-biserial r=-0.360, Cohen's d=0.55 * | nat median=732, season median=689
+  Women Long Jump: Mann-Whitney U (nat>season) p=1.59e-05, rank-biserial r=-0.880, Cohen's d=1.57 *** | nat median=836, season median=665
+  Women Triple Jump: Mann-Whitney U (nat>season) p=2.05e-03, rank-biserial r=-0.634, Cohen's d=1.05 ** | nat median=811, season median=707
+  Women High Jump: Mann-Whitney U (nat>season) p=7.35e-04, rank-biserial r=-0.626, Cohen's d=0.92 *** | nat median=697, season median=622
+  Men Shot Put: Mann-Whitney U (nat>season) p=3.99e-04, rank-biserial r=-0.708, Cohen's d=1.11 *** | nat median=696, season median=556
+  Men Discus: Mann-Whitney U (nat>season) p=1.18e-03, rank-biserial r=-0.646, Cohen's d=0.98 ** | nat median=701, season median=606
+  Women Shot Put: Mann-Whitney U (nat>season) p=1.23e-04, rank-biserial r=-0.784, Cohen's d=1.30 *** | nat median=586, season median=474
+  Women Discus: Mann-Whitney U (nat>season) p=9.06e-04, rank-biserial r=-0.677, Cohen's d=1.14 *** | nat median=557, season median=446
+
+## Season 2025
+  Men 100m: Mann-Whitney U (nat>season) p=6.39e-05, rank-biserial r=-0.791, Cohen's d=1.17 *** | nat median=812, season median=623
+  Men 200m: Mann-Whitney U (nat>season) p=8.27e-05, rank-biserial r=-0.735, Cohen's d=1.08 *** | nat median=803, season median=604
+  Men 400m: Mann-Whitney U (nat>season) p=2.54e-06, rank-biserial r=-0.945, Cohen's d=1.57 *** | nat median=853, season median=580
+  Women 100m: Mann-Whitney U (nat>season) p=2.84e-05, rank-biserial r=-0.847, Cohen's d=1.33 *** | nat median=829, season median=643
+  Women 200m: Mann-Whitney U (nat>season) p=8.04e-06, rank-biserial r=-0.903, Cohen's d=1.51 *** | nat median=824, season median=557
+  Women 400m: Mann-Whitney U (nat>season) p=1.46e-05, rank-biserial r=-0.881, Cohen's d=1.33 *** | nat median=818, season median=621
+  Men 800m: Mann-Whitney U (nat>season) p=3.40e-06, rank-biserial r=-0.926, Cohen's d=1.61 *** | nat median=866, season median=545
+  Men 1500m: Mann-Whitney U (nat>season) p=2.95e-06, rank-biserial r=-0.932, Cohen's d=1.64 *** | nat median=868, season median=545
+  Men 5000m: Mann-Whitney U (nat>season) p=1.50e-05, rank-biserial r=-0.863, Cohen's d=1.40 *** | nat median=766, season median=524
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=3.49e-05, rank-biserial r=-0.849, Cohen's d=1.70 *** | nat median=520, season median=194
+  Women 800m: Mann-Whitney U (nat>season) p=3.16e-06, rank-biserial r=-0.939, Cohen's d=1.54 *** | nat median=801, season median=522
+  Women 1500m: Mann-Whitney U (nat>season) p=2.99e-06, rank-biserial r=-0.942, Cohen's d=1.73 *** | nat median=852, season median=548
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=4.46e-04, rank-biserial r=-0.736, Cohen's d=1.28 *** | nat median=554, season median=353
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=1.48e-02, rank-biserial r=-0.468, Cohen's d=0.80 * | nat median=750, season median=506
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=2.73e-05, rank-biserial r=-0.873, Cohen's d=1.41 *** | nat median=834, season median=584
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=1.50e-03, rank-biserial r=-0.653, Cohen's d=0.91 ** | nat median=658, season median=495
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=1.75e-03, rank-biserial r=-0.663, Cohen's d=0.96 ** | nat median=804, season median=684
+  Men Long Jump: Mann-Whitney U (nat>season) p=9.24e-06, rank-biserial r=-0.907, Cohen's d=1.32 *** | nat median=845, season median=665
+  Men Triple Jump: Mann-Whitney U (nat>season) p=2.59e-03, rank-biserial r=-0.620, Cohen's d=0.80 ** | nat median=780, season median=706
+  Men High Jump: Mann-Whitney U (nat>season) p=5.09e-04, rank-biserial r=-0.613, Cohen's d=0.96 *** | nat median=801, season median=672
+  Women Long Jump: Mann-Whitney U (nat>season) p=7.52e-05, rank-biserial r=-0.818, Cohen's d=1.45 *** | nat median=806, season median=682
+  Women Triple Jump: Mann-Whitney U (nat>season) p=8.44e-03, rank-biserial r=-0.549, Cohen's d=0.95 ** | nat median=791, season median=711
+  Women High Jump: Mann-Whitney U (nat>season) p=1.76e-02, rank-biserial r=-0.429, Cohen's d=0.62 * | nat median=744, season median=687
+  Men Shot Put: Mann-Whitney U (nat>season) p=3.02e-05, rank-biserial r=-0.855, Cohen's d=1.39 *** | nat median=762, season median=578
+  Men Discus: Mann-Whitney U (nat>season) p=1.29e-04, rank-biserial r=-0.779, Cohen's d=1.16 *** | nat median=694, season median=548
+  Women Shot Put: Mann-Whitney U (nat>season) p=6.35e-04, rank-biserial r=-0.701, Cohen's d=1.06 *** | nat median=601, season median=518
+  Women Discus: Mann-Whitney U (nat>season) p=4.34e-03, rank-biserial r=-0.576, Cohen's d=0.79 ** | nat median=555, season median=467
+
+## Season 2026
+  Men 100m: Mann-Whitney U (nat>season) p=5.28e-06, rank-biserial r=-0.909, Cohen's d=1.48 *** | nat median=870, season median=623
+  Men 200m: Mann-Whitney U (nat>season) p=3.15e-06, rank-biserial r=-0.932, Cohen's d=1.44 *** | nat median=892, season median=652
+  Men 400m: Mann-Whitney U (nat>season) p=2.26e-06, rank-biserial r=-0.950, Cohen's d=1.56 *** | nat median=880, season median=598
+  Women 100m: Mann-Whitney U (nat>season) p=2.76e-05, rank-biserial r=-0.842, Cohen's d=1.27 *** | nat median=862, season median=665
+  Women 200m: Mann-Whitney U (nat>season) p=1.20e-05, rank-biserial r=-0.880, Cohen's d=1.35 *** | nat median=830, season median=625
+  Women 400m: Mann-Whitney U (nat>season) p=2.04e-05, rank-biserial r=-0.868, Cohen's d=1.36 *** | nat median=866, season median=645
+  Men 800m: Mann-Whitney U (nat>season) p=1.53e-06, rank-biserial r=-0.961, Cohen's d=1.86 *** | nat median=874, season median=519
+  Men 1500m: Mann-Whitney U (nat>season) p=9.82e-07, rank-biserial r=-0.978, Cohen's d=1.94 *** | nat median=894, season median=534
+  Men 5000m: Mann-Whitney U (nat>season) p=1.35e-06, rank-biserial r=-0.968, Cohen's d=1.83 *** | nat median=824, season median=502
+  Men 3000m Steeplechase: Mann-Whitney U (nat>season) p=7.08e-06, rank-biserial r=-0.915, Cohen's d=1.66 *** | nat median=498, season median=234
+  Women 800m: Mann-Whitney U (nat>season) p=5.89e-06, rank-biserial r=-0.909, Cohen's d=1.60 *** | nat median=824, season median=516
+  Women 1500m: Mann-Whitney U (nat>season) p=2.15e-06, rank-biserial r=-0.951, Cohen's d=1.85 *** | nat median=864, season median=551
+  Women 5000m: Mann-Whitney U (nat>season) p=5.10e-06, rank-biserial r=-0.923, Cohen's d=1.82 *** | nat median=903, season median=637
+  Women 3000m Steeplechase: Mann-Whitney U (nat>season) p=3.16e-05, rank-biserial r=-0.873, Cohen's d=1.83 *** | nat median=636, season median=345
+  Men 110m Hurdles: Mann-Whitney U (nat>season) p=2.91e-03, rank-biserial r=-0.589, Cohen's d=1.02 ** | nat median=720, season median=425
+  Men 400m Hurdles: Mann-Whitney U (nat>season) p=5.66e-05, rank-biserial r=-0.828, Cohen's d=1.43 *** | nat median=842, season median=560
+  Women 100m Hurdles: Mann-Whitney U (nat>season) p=2.21e-02, rank-biserial r=-0.433, Cohen's d=0.52 * | nat median=643, season median=558
+  Women 400m Hurdles: Mann-Whitney U (nat>season) p=8.97e-04, rank-biserial r=-0.685, Cohen's d=1.19 *** | nat median=828, season median=590
+  Men Long Jump: Mann-Whitney U (nat>season) p=1.59e-05, rank-biserial r=-0.874, Cohen's d=1.43 *** | nat median=830, season median=645
+  Men Triple Jump: Mann-Whitney U (nat>season) p=1.02e-04, rank-biserial r=-0.808, Cohen's d=1.15 *** | nat median=779, season median=656
+  Men High Jump: Mann-Whitney U (nat>season) p=8.50e-05, rank-biserial r=-0.813, Cohen's d=1.25 *** | nat median=827, season median=646
+  Women Long Jump: Mann-Whitney U (nat>season) p=2.11e-04, rank-biserial r=-0.755, Cohen's d=1.13 *** | nat median=763, season median=662
+  Women Triple Jump: Mann-Whitney U (nat>season) p=2.66e-02, rank-biserial r=-0.444, Cohen's d=0.68 * | nat median=783, season median=705
+  Women High Jump: Mann-Whitney U (nat>season) p=2.48e-02, rank-biserial r=-0.400, Cohen's d=0.62 * | nat median=692, season median=649
+  Men Shot Put: Mann-Whitney U (nat>season) p=3.95e-05, rank-biserial r=-0.830, Cohen's d=1.35 *** | nat median=754, season median=555
+  Men Discus: Mann-Whitney U (nat>season) p=9.11e-05, rank-biserial r=-0.794, Cohen's d=1.17 *** | nat median=716, season median=540
+  Women Shot Put: Mann-Whitney U (nat>season) p=1.83e-05, rank-biserial r=-0.885, Cohen's d=1.49 *** | nat median=639, season median=502
+  Women Discus: Mann-Whitney U (nat>season) p=2.43e-04, rank-biserial r=-0.753, Cohen's d=1.14 *** | nat median=566, season median=475
+
+BH-FDR: 83 / 83 event-season tests significant
+
+========================================================================
+IMPROVED RQ1C — Competitiveness vs Best Event (Statistical Tests)
+========================================================================
+
+## Sprints
+
+### Men
+RQ1A=RQ1C agreement: 608/647 (94.0%), 95% CI [92.0%, 95.8%] | binomial p vs 50%: 2.35e-132
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    200m: 72/710 (10.1%) | Wilson CI [8.1%, 12.6%]
+    100m: 65/706 (9.2%) | Wilson CI [7.3%, 11.6%]
+    400m: 42/617 (6.8%) | Wilson CI [5.1%, 9.1%]
+
+### Women
+RQ1A=RQ1C agreement: 265/290 (91.4%), 95% CI [87.9%, 94.5%] | binomial p vs 50%: 8.95e-52
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    100m: 27/290 (9.3%) | Wilson CI [6.5%, 13.2%]
+    200m: 25/348 (7.2%) | Wilson CI [4.9%, 10.4%]
+    400m: 23/246 (9.3%) | Wilson CI [6.3%, 13.6%]
+
+## Distance
+
+### Men
+RQ1A=RQ1C agreement: 728/961 (75.8%), 95% CI [72.9%, 78.5%] | binomial p vs 50%: 6.71e-60
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    1500m: 51/1187 (4.3%) | Wilson CI [3.3%, 5.6%]
+    800m: 46/1004 (4.6%) | Wilson CI [3.5%, 6.1%]
+    5000m: 36/744 (4.8%) | Wilson CI [3.5%, 6.6%]
+    3000m Steeplechase: 24/281 (8.5%) | Wilson CI [5.8%, 12.4%]
+  1500m vs 5000m competitiveness margin: 1500m 209, 5000m 228 (ties 0) | p=3.89e-01
+
+### Women
+RQ1A=RQ1C agreement: 291/424 (68.6%), 95% CI [64.2%, 73.1%] | binomial p vs 50%: 1.21e-14
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    1500m: 46/577 (8.0%) | Wilson CI [6.0%, 10.5%]
+    800m: 30/473 (6.3%) | Wilson CI [4.5%, 8.9%]
+    5000m: 29/303 (9.6%) | Wilson CI [6.7%, 13.4%]
+    3000m Steeplechase: 22/135 (16.3%) | Wilson CI [11.0%, 23.4%]
+  1500m vs 5000m competitiveness margin: 1500m 65, 5000m 79 (ties 0) | p=2.79e-01
+
+## Hurdles
+
+### Men
+RQ1A=RQ1C agreement: 76/93 (81.7%), 95% CI [74.2%, 89.2%] | binomial p vs 50%: 4.45e-10
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    110m Hurdles: 38/134 (28.4%) | Wilson CI [21.4%, 36.5%]
+    400m Hurdles: 27/197 (13.7%) | Wilson CI [9.6%, 19.2%]
+
+### Women
+RQ1A=RQ1C agreement: 45/53 (84.9%), 95% CI [75.5%, 94.3%] | binomial p vs 50%: 2.37e-07
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    400m Hurdles: 32/92 (34.8%) | Wilson CI [25.8%, 44.9%]
+    100m Hurdles: 28/106 (26.4%) | Wilson CI [19.0%, 35.5%]
+
+## Jumps
+
+### Men
+RQ1A=RQ1C agreement: 80/106 (75.5%), 95% CI [67.9%, 83.0%] | binomial p vs 50%: 1.43e-07
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Long Jump: 34/250 (13.6%) | Wilson CI [9.9%, 18.4%]
+    High Jump: 29/104 (27.9%) | Wilson CI [20.2%, 37.2%]
+    Triple Jump: 23/100 (23.0%) | Wilson CI [15.8%, 32.2%]
+
+### Women
+RQ1A=RQ1C agreement: 57/73 (78.1%), 95% CI [68.5%, 87.7%] | binomial p vs 50%: 1.53e-06
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    High Jump: 28/75 (37.3%) | Wilson CI [27.3%, 48.6%]
+    Long Jump: 26/157 (16.6%) | Wilson CI [11.6%, 23.2%]
+    Triple Jump: 18/57 (31.6%) | Wilson CI [21.0%, 44.5%]
+
+## Throws
+
+### Men
+RQ1A=RQ1C agreement: 108/112 (96.4%), 95% CI [92.0%, 99.1%] | binomial p vs 50%: 2.48e-27
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Discus: 25/131 (19.1%) | Wilson CI [13.3%, 26.7%]
+    Shot Put: 22/172 (12.8%) | Wilson CI [8.6%, 18.6%]
+
+### Women
+RQ1A=RQ1C agreement: 48/73 (65.8%), 95% CI [54.8%, 76.7%] | binomial p vs 50%: 9.54e-03
+  Nationals clear-rate (Wilson 95% CI; ordered by count clearing bar):
+    Discus: 25/86 (29.1%) | Wilson CI [20.5%, 39.4%]
+    Shot Put: 23/115 (20.0%) | Wilson CI [13.7%, 28.2%]
+
+## Distance — Clear-rate comparisons (Fisher's exact)
+  Men 3000m Steeplechase vs 1500m (n=171): contingency [[7, 9], [4, 151]] | Fisher p=4.13e-06
+  Men 5000m vs 1500m (n=437): contingency [[12, 14], [15, 396]] | Fisher p=1.21e-09
+  Women 3000m Steeplechase vs 1500m (n=81): contingency [[8, 8], [2, 63]] | Fisher p=1.47e-05
+  Women 5000m vs 1500m (n=144): contingency [[14, 5], [4, 121]] | Fisher p=3.12e-12
