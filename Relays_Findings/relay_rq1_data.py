@@ -17,6 +17,13 @@ if str(PROJECT_ROOT) not in sys.path:
 from scoring.columns import points_col as scoring_points_col  # noqa: E402
 
 NON_RELAYS_ROOT = PROJECT_ROOT / "non_relays_findings"
+PROJECT_ROOT = ROOT.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from scoring.columns import points_col as scoring_points_col  # noqa: E402
+
+NON_RELAYS_ROOT = PROJECT_ROOT / "non_relays_findings"
 EVENT_MAP = {
     int(r["running_event_id"]): r["event_name"]
     for r in csv.DictReader(open(NON_RELAYS_ROOT / "Distance_Events_Counting" / "running_event.csv"))

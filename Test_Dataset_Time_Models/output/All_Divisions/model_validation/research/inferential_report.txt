@@ -1,0 +1,58 @@
+Inferential Statistics Report — Men's Outdoor Time-Model Validation
+====================================================================
+
+Design notes
+------------
+  • External validation on collegiate men's outdoor results (all scraped divisions).
+  • Models were fit on club / National Running Club data — expect distribution shift.
+  • Primary cross-event metric: median absolute percent error (MedAPE).
+  • Absolute-second MedAE is interpretable only within an event pair or event group.
+  • Bootstrap: 2000 resamples, percentile 95% CI, seed=2026.
+  • Bias: Wilcoxon signed-rank on (pred − actual), two-sided α = 0.05.
+  • Feature vs pooled: paired Wilcoxon on |error| and |%| error.
+  • Tolerance hit rate: Clopper–Pearson exact 95% CI.
+
+Overall (MedAPE preferred; mixed-second MedAE shown for continuity)
+-------------------------------------------------------------------
+  season_pb      feature   n=1100  MedAPE=1.69% [1.52, 1.87]  tol=42.7% [39.8%, 45.7%]  Spearman ρ=0.981 (p=0)  bias_med=+0.198s (Wilcoxon p=1.58e-13)
+  season_pb      pooled    n=1100  MedAPE=2.71% [2.42, 2.93]  tol=28.6% [26.0%, 31.4%]  Spearman ρ=0.972 (p=0)  bias_med=+0.489s (Wilcoxon p=5.06e-19)
+
+Within event group (absolute seconds are more interpretable)
+------------------------------------------------------------
+  Distance   feature   n=654  MedAE=5.717s [4.887, 6.837]  MedAPE=2.22%
+  Sprints    feature   n=446  MedAE=0.235s [0.191, 0.272]  MedAPE=1.09%
+  Distance   pooled    n=654  MedAE=8.469s [7.698, 9.235]  MedAPE=3.16%
+  Sprints    pooled    n=446  MedAE=0.423s [0.362, 0.477]  MedAPE=2.14%
+
+Feature vs pooled (paired Wilcoxon; negative Δ favors feature)
+--------------------------------------------------------------
+  all                          n=1100  ΔMed|%|=+0.000  p=6.14e-29  feature_better=True
+  mode=season_pb               n=1100  ΔMed|%|=+0.000  p=6.14e-29  feature_better=True
+  event_group=Distance         n=654  ΔMed|%|=+0.000  p=2.14e-10  feature_better=True
+  event_group=Sprints          n=446  ΔMed|%|=-0.416  p=1.21e-22  feature_better=True
+  band=750-950                 n=480  ΔMed|%|=-0.256  p=6.2e-16  feature_better=True
+  band=800-1000                n=382  ΔMed|%|=+0.000  p=2.43e-06  feature_better=True
+  band=850-1050                n=238  ΔMed|%|=+0.000  p=2.45e-11  feature_better=True
+
+Best-calibrated pairs (season-PB · feature · n≥5) by MedAPE
+-----------------------------------------------------------
+  750-950 200m→100m  n=40  MedAPE=0.61% [0.51, 0.76]  MedAE=0.069s
+  850-1050 100m→200m  n=31  MedAPE=0.62% [0.51, 1.10]  MedAE=0.138s
+  850-1050 200m→100m  n=31  MedAPE=0.66% [0.42, 1.01]  MedAE=0.069s
+  800-1000 200m→100m  n=38  MedAPE=0.74% [0.49, 1.00]  MedAE=0.081s
+  750-950 100m→200m  n=40  MedAPE=0.78% [0.51, 0.95]  MedAE=0.170s
+  800-1000 100m→200m  n=38  MedAPE=0.82% [0.66, 1.25]  MedAE=0.180s
+  750-950 800m→1500m  n=42  MedAPE=0.85% [0.62, 1.22]  MedAE=2.052s
+  850-1050 800m→1500m  n=30  MedAPE=1.10% [0.69, 1.44]  MedAE=2.635s
+
+Weakest pairs (season-PB · feature · n≥4) by MedAPE
+--------------------------------------------------
+  750-950 800m→3000m SC  n=10  MedAPE=5.96% [2.40, 10.96]  MedAE=35.862s
+  800-1000 1500m→3000m SC  n=21  MedAPE=5.95% [4.15, 7.80]  MedAE=35.230s
+  750-950 5000m→3000m SC  n=15  MedAPE=4.66% [2.40, 6.55]  MedAE=26.116s
+  800-1000 1500m→5000m  n=41  MedAPE=4.13% [2.89, 4.55]  MedAE=36.672s
+  750-950 1500m→3000m SC  n=26  MedAPE=3.90% [2.59, 6.58]  MedAE=22.615s
+  750-950 3000m SC→800m  n=10  MedAPE=3.88% [1.02, 5.36]  MedAE=4.884s
+  850-1050 1500m→5000m  n=34  MedAPE=3.52% [2.76, 5.26]  MedAE=31.135s
+  800-1000 3000m SC→1500m  n=21  MedAPE=3.47% [2.42, 4.94]  MedAE=8.757s
+

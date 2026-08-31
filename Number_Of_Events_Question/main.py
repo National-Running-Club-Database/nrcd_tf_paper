@@ -5,6 +5,7 @@ Usage:
   python main.py point_jump      # point jump vs. competition volume (chains research_stats.py)
   python main.py best_event      # best-event (season-peak) timing
   python main.py research        # re-run only the inferential-stats layer (research/)
+  python main.py relay_volume    # avg relays by race-count bin → Including_Relays_Plots/
   python main.py all
 """
 
@@ -21,6 +22,7 @@ COMMANDS = {
     "point_jump": "analyze_point_jump_by_competition_count.py",
     "best_event": "analyze_best_event_proportion.py",
     "research": "research_stats.py",
+    "relay_volume": "analyze_relay_volume_by_race_count.py",
 }
 
 

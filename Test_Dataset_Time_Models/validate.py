@@ -444,9 +444,28 @@ def evaluate(
     df: pd.DataFrame,
     pb: pd.DataFrame,
     mode: str,
+    *,
+    min_results_per_event: int = 1,
+    min_results_from: int | None = None,
+    min_results_to: int | None = None,
 ) -> pd.DataFrame:
-    """mode: 'season_pb' or 'chronological'."""
+    """mode: 'season_pb' or 'chronological'.
+
+    min_results_per_event: legacy shorthand — if from/to not set, require ≥N
+    results in both from-event (A) and to-event (B) for season_pb.
+    min_results_from / min_results_to: per-side overrides (athlete-season counts).
+    """
+    n_from_req = min_results_per_event if min_results_from is None else min_results_from
+    n_to_req = min_results_per_event if min_results_to is None else min_results_to
+
     rows_out: list[dict] = []
+
+    # Counts of results per athlete-season-event (for 2+ filters)
+    result_counts: dict[tuple, int] = {}
+    if (n_from_req > 1 or n_to_req > 1) and mode == "season_pb":
+        track = df[df["Event"].isin(TRACK_EVENTS)]
+        vc = track.groupby(["College", "Athlete", "Season_Year", "Event"]).size()
+        result_counts = {tuple(k): int(v) for k, v in vc.items()}
 
     # Precompute group best_event / bal_spec from test features when present
     for pm in models:
@@ -470,6 +489,15 @@ def evaluate(
                 key = (r["College"], r["Athlete"], int(r["Season_Year"]))
                 if key not in in_band:
                     continue
+                if n_from_req > 1 or n_to_req > 1:
+                    n_from = result_counts.get(
+                        (r["College"], r["Athlete"], int(r["Season_Year"]), from_test), 0
+                    )
+                    n_to = result_counts.get(
+                        (r["College"], r["Athlete"], int(r["Season_Year"]), to_test), 0
+                    )
+                    if n_from < n_from_req or n_to < n_to_req:
+                        continue
                 candidates.append(r)
         else:
             # chronological: dated rows only (supplementary undated season-PBs excluded)

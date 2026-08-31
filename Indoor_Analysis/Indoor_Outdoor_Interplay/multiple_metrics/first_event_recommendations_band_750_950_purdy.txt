@@ -1,0 +1,161 @@
+Best First Event of Season — Athletes with Outdoor Opener in WA 750–950
+Metric: Gardner–Purdy [scientific]
+========================================================================
+
+Question:
+  For athletes whose first outdoor-season result has WA in [750, 950),
+  which events tended to produce the highest Gardner–Purdy as the first indoor event,
+  and which as the first outdoor event — by gender and event group?
+
+Method:
+  • Years 2024–2026; athlete-year must have ≥1 indoor and ≥1 outdoor
+    individual (non-relay) result.
+  • First result of a season = results on the chronologically earliest meet
+    date; if multiple events that day, the highest-Gardner–Purdy result that day
+    is used as the noted first-event performance.
+  • Inclusion: outdoor first-event WA ∈ [750, 950)
+    (same cohort definition as the World Athletics report).
+  • Within each gender × event-group cell, rank events by mean first-event Gardner–Purdy.
+  • “Best” recommendation within a cell uses events with n≥5 when available.
+  • Sample: 428 athlete-years.
+
+Mean indoor first Gardner–Purdy: 633.1
+Mean outdoor first Gardner–Purdy: 664.6
+Mean Δ (out−in): +31.5
+
+Overall first-indoor events with highest mean Gardner–Purdy (min n=10)
+  Men:
+    3000m: mean=789.6 med=789.7 n=42
+    Mile: mean=774.1 med=773.3 n=44
+    800m: mean=761.0 med=775.1 n=34
+    400m: mean=739.8 med=740.9 n=43
+    200m: mean=695.1 med=697.9 n=89
+  Women:
+    5000m: mean=503.2 med=502.7 n=11
+    3000m: mean=489.9 med=490.3 n=23
+    Mile: mean=489.4 med=493.6 n=47
+    800m: mean=451.6 med=454.7 n=10
+    400m: mean=429.0 med=446.5 n=22
+
+Overall first-outdoor events with highest mean Gardner–Purdy (min n=10)
+  Men:
+    5000m: mean=820.1 med=818.1 n=28
+    400m: mean=794.0 med=787.5 n=26
+    1500m: mean=793.6 med=785.6 n=46
+    800m: mean=787.2 med=784.3 n=52
+    200m: mean=767.3 med=767.8 n=50
+  Women:
+    5000m: mean=538.9 med=528.8 n=27
+    1500m: mean=518.0 med=512.3 n=39
+    800m: mean=495.9 med=486.6 n=13
+    400m: mean=477.8 med=466.5 n=21
+    100m: mean=470.5 med=475.1 n=37
+
+First INDOOR event — mean Gardner–Purdy by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=134 athlete-years, mean Gardner–Purdy=711.0)
+  Event                     n      mean    median
+  100m                      2     803.5     803.5
+  400m                     43     739.8     740.9
+  200m                     89     695.1     697.9
+  → Highest mean Gardner–Purdy (n≥5): 400m (739.8, n=43)
+
+Men — Distance  (n=129 athlete-years, mean Gardner–Purdy=777.9)
+  Event                     n      mean    median
+  5000m                     7     814.2     820.9
+  3000m                    42     789.6     789.7
+  1500m                     2     775.3     775.3
+  Mile                     44     774.1     773.3
+  800m                     34     761.0     775.1
+  → Highest mean Gardner–Purdy (n≥5): 5000m (814.2, n=7)
+
+Women — Sprints  (n=73 athlete-years, mean Gardner–Purdy=418.4)
+  Event                     n      mean    median
+  100m                      1     497.5     497.5
+  400m                     22     429.0     446.5
+  200m                     50     412.2     423.3
+  → Highest mean Gardner–Purdy (n≥5): 400m (429.0, n=22)
+
+Women — Distance  (n=92 athlete-years, mean Gardner–Purdy=486.8)
+  Event                     n      mean    median
+  5000m                    11     503.2     502.7
+  3000m                    23     489.9     490.3
+  Mile                     47     489.4     493.6
+  1500m                     1     458.9     458.9
+  800m                     10     451.6     454.7
+  → Highest mean Gardner–Purdy (n≥5): 5000m (503.2, n=11)
+
+First OUTDOOR event — mean Gardner–Purdy by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=125 athlete-years, mean Gardner–Purdy=766.3)
+  Event                     n      mean    median
+  400m                     26     794.0     787.5
+  200m                     50     767.3     767.8
+  100m                     49     750.7     740.5
+  → Highest mean Gardner–Purdy (n≥5): 400m (794.0, n=26)
+
+Men — Distance  (n=133 athlete-years, mean Gardner–Purdy=792.1)
+  Event                     n      mean    median
+  3000m                     1     845.5     845.5
+  5000m                    28     820.1     818.1
+  1500m                    46     793.6     785.6
+  800m                     52     787.2     784.3
+  Mile                      2     779.0     779.0
+  3000m Steeplechase        4     635.9     644.0
+  → Highest mean Gardner–Purdy (n≥5): 5000m (820.1, n=28)
+
+Men — Hurdles  (n=5 athlete-years, mean Gardner–Purdy=486.6)
+  Event                     n      mean    median
+  400m Hurdles              3     549.5     568.4
+  110m Hurdles              2     392.2     392.2
+  → Highest mean Gardner–Purdy (n≥5): 400m Hurdles (549.5, n=3)
+
+Women — Sprints  (n=71 athlete-years, mean Gardner–Purdy=470.4)
+  Event                     n      mean    median
+  400m                     21     477.8     466.5
+  100m                     37     470.5     475.1
+  200m                     13     458.1     473.2
+  → Highest mean Gardner–Purdy (n≥5): 400m (477.8, n=21)
+
+Women — Distance  (n=89 athlete-years, mean Gardner–Purdy=514.0)
+  Event                     n      mean    median
+  5000m                    27     538.9     528.8
+  3000m                     4     527.3     523.1
+  event_18                  2     522.6     522.6
+  1500m                    39     518.0     512.3
+  800m                     13     495.9     486.6
+  3000m Steeplechase        4     348.0     351.8
+  → Highest mean Gardner–Purdy (n≥5): 5000m (538.9, n=27)
+
+Women — Hurdles  (n=5 athlete-years, mean Gardner–Purdy=345.9)
+  Event                     n      mean    median
+  400m Hurdles              5     345.9     350.5
+  → Highest mean Gardner–Purdy (n≥5): 400m Hurdles (345.9, n=5)
+
+Headline recommendations (n≥5 within gender × group)
+----------------------------------------------------
+Indoor season openers:
+  Indoor | Men Sprints: 400m (mean Gardner–Purdy 739.8, n=43)
+  Indoor | Men Distance: 5000m (mean Gardner–Purdy 814.2, n=7)
+  Indoor | Women Sprints: 400m (mean Gardner–Purdy 429.0, n=22)
+  Indoor | Women Distance: 5000m (mean Gardner–Purdy 503.2, n=11)
+Outdoor season openers:
+  Outdoor | Men Sprints: 400m (mean Gardner–Purdy 794.0, n=26)
+  Outdoor | Men Distance: 5000m (mean Gardner–Purdy 820.1, n=28)
+  Outdoor | Men Hurdles: 400m Hurdles (mean Gardner–Purdy 549.5, n=3)
+  Outdoor | Women Sprints: 400m (mean Gardner–Purdy 477.8, n=21)
+  Outdoor | Women Distance: 5000m (mean Gardner–Purdy 538.9, n=27)
+  Outdoor | Women Hurdles: 400m Hurdles (mean Gardner–Purdy 345.9, n=5)
+
+Caveats:
+  • Conditioning on outdoor opener already in 750–950 truncates
+    outdoor WA from below; outdoor event rankings are within that cohort.
+  • Indoor first-event scores are unrestricted and often lower.
+  • Same-day multi-event openers: highest-Gardner–Purdy mark that day is used.
+  • Observational — does not prove causality of event choice.
+  • Purdy/VDOT undefined for field events — those marks are skipped for
+    first-event selection under those metrics.
+
+Source detail CSV: first_event_band_750_950_detail_purdy.csv

@@ -1036,9 +1036,21 @@ def add_features(df: pd.DataFrame) -> pd.DataFrame:
         df.loc[idx, "Events_Competed_In_Group"] = n_events
 
     df["Best_Is_This_Event"] = df["Event"] == df["Best_Event"]
-    df["Events_Competed_Bucket"] = df["Events_Competed_In_Group"].map(
-        lambda n: "2" if n == 2 else ("3+" if isinstance(n, (int, float)) and n >= 3 else pd.NA)
-    )
+
+    def _events_bucket(n):
+        if n is pd.NA or (isinstance(n, float) and pd.isna(n)):
+            return pd.NA
+        try:
+            n_int = int(n)
+        except (TypeError, ValueError):
+            return pd.NA
+        if n_int == 2:
+            return "2"
+        if n_int >= 3:
+            return "3+"
+        return pd.NA
+
+    df["Events_Competed_Bucket"] = df["Events_Competed_In_Group"].map(_events_bucket)
 
     # Tolerance helpers for later predicted-vs-actual checks
     def tol_for(row):

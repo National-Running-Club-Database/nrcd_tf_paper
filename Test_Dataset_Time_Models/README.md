@@ -2,6 +2,19 @@
 
 External validation of club-fit outdoor **event-pair time models** on dated NCAA Division I men's results.
 
+## How to run
+
+```bash
+cd test_dataset_time_models
+python main.py              # full pipeline (all scraped sources)
+python main.py preprocess
+python main.py validate
+python main.py research
+python main.py d1_only      # NCAA D1 only → D1_Only_* artifacts
+```
+
+`d1_only` scrapes existing D1 schools plus newly added D1 PDFs, drops non-D1 divisions, keeps the **same absolute tolerance bands**, and writes every artifact with the `D1_Only_` prefix. See [`output/D1_Only_Summary_findings.md`](output/D1_Only_Summary_findings.md).
+
 ## What this folder does
 
 1. **Preprocess** — scrape dated outdoor marks from PDFs, score with World Athletics 2025 outdoor tables, engineer routing features (`bal_spec`, `best_event`, chronology).

@@ -1,0 +1,1336 @@
+athlete_id,gender,discipline,season_year,rq1a,rq1c,prior_margin,agree,n_meets,recommendation
+1,Men,Distance,2024,1500m,1500m,-658.0,True,1,Specialize all outdoor slots on 1500m
+7,Men,Distance,2024,5000m,5000m,-51.0,True,1,Specialize all outdoor slots on 5000m
+8,Men,Distance,2024,5000m,5000m,-35.0,True,1,Specialize all outdoor slots on 5000m
+12,Men,Distance,2024,5000m,5000m,-259.0,True,1,Specialize all outdoor slots on 5000m
+16,Men,Distance,2024,1500m,1500m,-211.0,True,1,Specialize all outdoor slots on 1500m
+17,Men,Distance,2024,5000m,5000m,-193.0,True,1,Specialize all outdoor slots on 5000m
+19,Men,Distance,2024,5000m,5000m,-292.0,True,1,Specialize all outdoor slots on 5000m
+20,Men,Distance,2024,1500m,1500m,-303.0,True,1,Specialize all outdoor slots on 1500m
+31,Men,Distance,2024,1500m,1500m,-362.0,True,1,Specialize all outdoor slots on 1500m
+35,Men,Distance,2024,5000m,5000m,-451.0,True,1,Specialize all outdoor slots on 5000m
+50,Men,Sprints,2024,200m,200m,-510.29999999999995,True,1,Specialize all outdoor slots on 200m
+60,Men,Distance,2024,1500m,1500m,-724.0,True,1,Specialize all outdoor slots on 1500m
+65,Women,Distance,2024,5000m,5000m,-34.5,True,1,Specialize all outdoor slots on 5000m
+67,Women,Distance,2024,1500m,1500m,-43.700000000000045,True,1,Specialize all outdoor slots on 1500m
+68,Women,Distance,2024,1500m,1500m,-89.70000000000005,True,1,Specialize all outdoor slots on 1500m
+70,Women,Distance,2024,1500m,1500m,-116.70000000000005,True,1,Specialize all outdoor slots on 1500m
+71,Women,Distance,2024,1500m,1500m,-289.70000000000005,True,1,Specialize all outdoor slots on 1500m
+74,Women,Distance,2024,1500m,800m,-192.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+123,Men,Distance,2024,1500m,1500m,-15.0,True,1,Specialize all outdoor slots on 1500m
+130,Men,Distance,2024,800m,800m,-31.299999999999955,True,2,Specialize all outdoor slots on 800m
+133,Men,Distance,2024,5000m,5000m,-109.0,True,1,Specialize all outdoor slots on 5000m
+135,Men,Distance,2024,800m,800m,-129.29999999999995,True,1,Specialize all outdoor slots on 800m
+140,Men,Distance,2024,5000m,5000m,-115.0,True,1,Specialize all outdoor slots on 5000m
+141,Men,Distance,2024,1500m,1500m,-48.0,True,1,Specialize all outdoor slots on 1500m
+145,Men,Distance,2024,1500m,1500m,-34.0,True,1,Specialize all outdoor slots on 1500m
+146,Men,Distance,2024,1500m,1500m,-82.0,True,1,Specialize all outdoor slots on 1500m
+147,Men,Distance,2024,1500m,5000m,-340.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+150,Men,Distance,2024,5000m,5000m,-244.0,True,1,Specialize all outdoor slots on 5000m
+160,Men,Distance,2024,5000m,5000m,-283.0,True,1,Specialize all outdoor slots on 5000m
+164,Men,Distance,2024,5000m,5000m,-286.0,True,1,Specialize all outdoor slots on 5000m
+166,Men,Distance,2024,1500m,1500m,-322.0,True,1,Specialize all outdoor slots on 1500m
+181,Men,Distance,2024,1500m,1500m,-230.0,True,1,Specialize all outdoor slots on 1500m
+182,Men,Distance,2024,1500m,1500m,-363.0,True,1,Specialize all outdoor slots on 1500m
+188,Men,Distance,2024,1500m,1500m,-374.0,True,1,Specialize all outdoor slots on 1500m
+191,Men,Distance,2024,1500m,1500m,-595.0,True,1,Specialize all outdoor slots on 1500m
+217,Men,Distance,2024,800m,800m,-540.3,True,1,Specialize all outdoor slots on 800m
+237,Women,Distance,2024,1500m,800m,-122.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+240,Women,Distance,2024,5000m,5000m,-110.5,True,1,Specialize all outdoor slots on 5000m
+246,Women,Distance,2024,1500m,800m,-35.700000000000045,False,1,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+253,Women,Distance,2024,1500m,1500m,-312.70000000000005,True,1,Specialize all outdoor slots on 1500m
+271,Women,Distance,2024,1500m,1500m,-737.7,True,1,Specialize all outdoor slots on 1500m
+283,Women,Distance,2024,5000m,5000m,-108.5,True,1,Specialize all outdoor slots on 5000m
+285,Women,Distance,2024,5000m,800m,-51.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+291,Women,Distance,2024,1500m,1500m,-107.70000000000005,True,1,Specialize all outdoor slots on 1500m
+294,Women,Distance,2024,1500m,1500m,-182.70000000000005,True,1,Specialize all outdoor slots on 1500m
+310,Men,Distance,2024,5000m,5000m,-36.0,True,2,Specialize all outdoor slots on 5000m
+315,Men,Distance,2024,1500m,1500m,-350.0,True,1,Specialize all outdoor slots on 1500m
+324,Men,Distance,2024,1500m,1500m,-397.0,True,1,Specialize all outdoor slots on 1500m
+327,Men,Distance,2024,5000m,5000m,-435.0,True,1,Specialize all outdoor slots on 5000m
+332,Men,Distance,2024,1500m,1500m,-352.0,True,1,Specialize all outdoor slots on 1500m
+345,Men,Distance,2024,1500m,1500m,-570.0,True,1,Specialize all outdoor slots on 1500m
+346,Men,Distance,2024,1500m,1500m,-680.0,True,1,Specialize all outdoor slots on 1500m
+350,Men,Distance,2024,800m,800m,-528.3,True,1,Specialize all outdoor slots on 800m
+363,Men,Distance,2024,1500m,1500m,-42.0,True,1,Specialize all outdoor slots on 1500m
+364,Men,Distance,2024,1500m,1500m,-174.0,True,1,Specialize all outdoor slots on 1500m
+365,Men,Distance,2024,1500m,1500m,-87.0,True,1,Specialize all outdoor slots on 1500m
+368,Men,Distance,2024,1500m,1500m,-752.0,True,2,Specialize all outdoor slots on 1500m
+371,Men,Distance,2024,1500m,1500m,-445.0,True,1,Specialize all outdoor slots on 1500m
+442,Women,Distance,2024,5000m,5000m,-53.5,True,1,Specialize all outdoor slots on 5000m
+445,Women,Distance,2024,5000m,5000m,-122.5,True,2,Specialize all outdoor slots on 5000m
+451,Men,Distance,2024,5000m,5000m,19.0,True,1,Specialize all outdoor slots on 5000m
+466,Men,Distance,2024,1500m,5000m,-14.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+468,Men,Distance,2024,1500m,1500m,-65.0,True,2,Specialize all outdoor slots on 1500m
+471,Men,Distance,2024,1500m,1500m,-306.0,True,1,Specialize all outdoor slots on 1500m
+524,Men,Distance,2024,5000m,5000m,-90.0,True,1,Specialize all outdoor slots on 5000m
+567,Women,Distance,2024,5000m,5000m,-29.5,True,1,Specialize all outdoor slots on 5000m
+568,Women,Distance,2024,5000m,5000m,-39.5,True,1,Specialize all outdoor slots on 5000m
+573,Women,Distance,2024,5000m,5000m,-134.5,True,1,Specialize all outdoor slots on 5000m
+578,Women,Distance,2024,5000m,1500m,-154.70000000000005,False,2,Meet 1: explore alternate; Meets 2–N: lock 1500m (RQ1C≠RQ1A)
+588,Women,Distance,2024,1500m,1500m,-310.70000000000005,True,1,Specialize all outdoor slots on 1500m
+590,Women,Distance,2024,800m,800m,-174.70000000000005,True,2,Specialize all outdoor slots on 800m
+595,Women,Distance,2024,800m,800m,-71.70000000000005,True,1,Specialize all outdoor slots on 800m
+603,Women,Distance,2024,800m,800m,-306.70000000000005,True,1,Specialize all outdoor slots on 800m
+606,Women,Distance,2024,1500m,1500m,-113.70000000000005,True,1,Specialize all outdoor slots on 1500m
+618,Women,Distance,2024,800m,800m,-207.70000000000005,True,1,Specialize all outdoor slots on 800m
+620,Women,Distance,2024,800m,800m,8.299999999999955,True,1,Specialize all outdoor slots on 800m
+623,Women,Distance,2024,1500m,1500m,-195.70000000000005,True,1,Specialize all outdoor slots on 1500m
+648,Women,Jumps,2024,High Jump,High Jump,6.0,True,1,Specialize all outdoor slots on High Jump
+648,Women,Sprints,2024,400m,400m,-18.299999999999955,True,1,Specialize all outdoor slots on 400m
+666,Men,Distance,2024,5000m,5000m,137.0,True,1,Specialize all outdoor slots on 5000m
+673,Men,Distance,2024,5000m,5000m,-6.0,True,2,Specialize all outdoor slots on 5000m
+675,Men,Distance,2024,5000m,5000m,-70.0,True,2,Specialize all outdoor slots on 5000m
+677,Men,Distance,2024,5000m,5000m,-59.0,True,1,Specialize all outdoor slots on 5000m
+678,Men,Distance,2024,1500m,1500m,0.0,True,2,Specialize all outdoor slots on 1500m
+686,Men,Distance,2024,5000m,5000m,-85.0,True,1,Specialize all outdoor slots on 5000m
+689,Men,Distance,2024,800m,800m,-111.29999999999995,True,2,Specialize all outdoor slots on 800m
+691,Men,Distance,2024,5000m,5000m,-90.0,True,1,Specialize all outdoor slots on 5000m
+693,Men,Distance,2024,1500m,1500m,-164.0,True,2,Specialize all outdoor slots on 1500m
+699,Men,Distance,2024,1500m,1500m,-352.0,True,1,Specialize all outdoor slots on 1500m
+700,Men,Distance,2024,800m,800m,-141.29999999999995,True,1,Specialize all outdoor slots on 800m
+705,Men,Distance,2024,800m,800m,-158.29999999999995,True,2,Specialize all outdoor slots on 800m
+706,Men,Distance,2024,5000m,5000m,-182.0,True,2,Specialize all outdoor slots on 5000m
+709,Men,Distance,2024,1500m,1500m,-183.0,True,1,Specialize all outdoor slots on 1500m
+721,Men,Distance,2024,800m,800m,-258.29999999999995,True,1,Specialize all outdoor slots on 800m
+723,Men,Distance,2024,5000m,5000m,-328.0,True,2,Specialize all outdoor slots on 5000m
+727,Men,Distance,2024,1500m,1500m,-371.0,True,1,Specialize all outdoor slots on 1500m
+731,Men,Distance,2024,5000m,5000m,-316.0,True,1,Specialize all outdoor slots on 5000m
+747,Men,Distance,2024,800m,5000m,-265.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+751,Men,Distance,2024,1500m,1500m,-418.0,True,2,Specialize all outdoor slots on 1500m
+764,Men,Distance,2024,1500m,1500m,-600.0,True,1,Specialize all outdoor slots on 1500m
+786,Men,Distance,2024,1500m,5000m,-584.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+802,Men,Sprints,2024,200m,200m,-253.29999999999995,True,1,Specialize all outdoor slots on 200m
+807,Women,Distance,2024,5000m,5000m,19.5,True,1,Specialize all outdoor slots on 5000m
+829,Women,Distance,2024,1500m,1500m,-199.70000000000005,True,1,Specialize all outdoor slots on 1500m
+863,Men,Distance,2024,5000m,5000m,77.0,True,1,Specialize all outdoor slots on 5000m
+876,Men,Distance,2024,1500m,1500m,-134.0,True,1,Specialize all outdoor slots on 1500m
+882,Men,Distance,2024,1500m,1500m,-143.0,True,1,Specialize all outdoor slots on 1500m
+909,Men,Distance,2024,5000m,5000m,-348.0,True,1,Specialize all outdoor slots on 5000m
+916,Men,Distance,2024,1500m,1500m,-291.0,True,1,Specialize all outdoor slots on 1500m
+918,Men,Distance,2024,800m,800m,-125.29999999999995,True,1,Specialize all outdoor slots on 800m
+922,Men,Distance,2024,800m,800m,-217.29999999999995,True,1,Specialize all outdoor slots on 800m
+930,Men,Distance,2024,5000m,5000m,-340.0,True,1,Specialize all outdoor slots on 5000m
+930,Men,Sprints,2024,200m,200m,-234.29999999999995,True,1,Specialize all outdoor slots on 200m
+936,Men,Distance,2024,5000m,5000m,-249.0,True,1,Specialize all outdoor slots on 5000m
+938,Men,Distance,2024,1500m,1500m,-461.0,True,1,Specialize all outdoor slots on 1500m
+964,Men,Sprints,2024,400m,400m,-434.70000000000005,True,1,Specialize all outdoor slots on 400m
+966,Men,Sprints,2024,200m,400m,-334.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+992,Women,Distance,2024,800m,800m,-18.700000000000045,True,2,Specialize all outdoor slots on 800m
+1020,Women,Distance,2024,1500m,1500m,-21.700000000000045,True,1,Specialize all outdoor slots on 1500m
+1044,Women,Distance,2024,800m,800m,-169.70000000000005,True,1,Specialize all outdoor slots on 800m
+1116,Women,Distance,2024,1500m,1500m,-425.70000000000005,True,1,Specialize all outdoor slots on 1500m
+1173,Men,Distance,2024,5000m,5000m,16.0,True,2,Specialize all outdoor slots on 5000m
+1177,Men,Distance,2024,5000m,5000m,-84.0,True,1,Specialize all outdoor slots on 5000m
+1179,Men,Distance,2024,1500m,1500m,-319.0,True,1,Specialize all outdoor slots on 1500m
+1183,Men,Distance,2024,1500m,5000m,-252.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+1209,Men,Distance,2024,1500m,5000m,-248.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+1216,Men,Distance,2024,800m,800m,88.70000000000005,True,2,Specialize all outdoor slots on 800m
+1222,Men,Distance,2024,1500m,1500m,-307.0,True,1,Specialize all outdoor slots on 1500m
+1239,Men,Distance,2024,1500m,1500m,-376.0,True,1,Specialize all outdoor slots on 1500m
+1251,Men,Distance,2024,1500m,1500m,-233.0,True,2,Specialize all outdoor slots on 1500m
+1258,Men,Distance,2024,5000m,5000m,-150.0,True,1,Specialize all outdoor slots on 5000m
+1260,Men,Distance,2024,5000m,5000m,-388.0,True,1,Specialize all outdoor slots on 5000m
+1260,Men,Sprints,2024,400m,400m,-441.70000000000005,True,1,Specialize all outdoor slots on 400m
+1280,Men,Distance,2024,1500m,1500m,-559.0,True,1,Specialize all outdoor slots on 1500m
+1294,Men,Distance,2024,1500m,1500m,-290.0,True,1,Specialize all outdoor slots on 1500m
+1309,Men,Distance,2024,1500m,1500m,-645.0,True,1,Specialize all outdoor slots on 1500m
+1379,Men,Distance,2024,1500m,1500m,-654.0,True,1,Specialize all outdoor slots on 1500m
+1497,Women,Distance,2024,5000m,5000m,-325.5,True,2,Specialize all outdoor slots on 5000m
+1533,Men,Distance,2024,800m,5000m,-204.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+1557,Men,Distance,2024,5000m,5000m,-341.0,True,1,Specialize all outdoor slots on 5000m
+1608,Men,Distance,2024,800m,800m,-733.3,True,1,Specialize all outdoor slots on 800m
+1699,Men,Distance,2024,800m,800m,-267.29999999999995,True,1,Specialize all outdoor slots on 800m
+1839,Men,Distance,2024,800m,800m,-34.299999999999955,True,1,Specialize all outdoor slots on 800m
+1856,Men,Distance,2024,800m,800m,-191.29999999999995,True,1,Specialize all outdoor slots on 800m
+1863,Men,Distance,2024,800m,800m,45.700000000000045,True,1,Specialize all outdoor slots on 800m
+1876,Men,Distance,2024,800m,800m,-252.29999999999995,True,1,Specialize all outdoor slots on 800m
+1930,Women,Distance,2024,1500m,1500m,-11.700000000000045,True,1,Specialize all outdoor slots on 1500m
+1931,Women,Distance,2024,5000m,5000m,-77.5,True,1,Specialize all outdoor slots on 5000m
+1933,Women,Distance,2024,5000m,5000m,-136.5,True,1,Specialize all outdoor slots on 5000m
+1937,Women,Distance,2024,5000m,5000m,-284.5,True,1,Specialize all outdoor slots on 5000m
+1951,Women,Distance,2024,5000m,5000m,-284.5,True,1,Specialize all outdoor slots on 5000m
+1962,Women,Distance,2024,5000m,5000m,-398.5,True,1,Specialize all outdoor slots on 5000m
+1967,Women,Distance,2024,1500m,1500m,-57.700000000000045,True,1,Specialize all outdoor slots on 1500m
+1996,Men,Distance,2024,5000m,5000m,58.0,True,1,Specialize all outdoor slots on 5000m
+1998,Men,Distance,2024,5000m,5000m,-9.0,True,1,Specialize all outdoor slots on 5000m
+2000,Men,Distance,2024,5000m,5000m,-216.0,True,1,Specialize all outdoor slots on 5000m
+2005,Men,Distance,2024,5000m,5000m,-220.0,True,1,Specialize all outdoor slots on 5000m
+2007,Men,Distance,2024,5000m,5000m,70.0,True,1,Specialize all outdoor slots on 5000m
+2011,Men,Distance,2024,5000m,5000m,-127.0,True,1,Specialize all outdoor slots on 5000m
+2012,Men,Distance,2024,5000m,5000m,-258.0,True,1,Specialize all outdoor slots on 5000m
+2037,Men,Distance,2024,1500m,1500m,-530.0,True,1,Specialize all outdoor slots on 1500m
+2044,Men,Distance,2024,1500m,1500m,-516.0,True,1,Specialize all outdoor slots on 1500m
+2045,Men,Distance,2024,1500m,1500m,-303.0,True,1,Specialize all outdoor slots on 1500m
+2057,Men,Distance,2024,800m,800m,145.70000000000005,True,2,Specialize all outdoor slots on 800m
+2081,Women,Distance,2024,800m,800m,-106.70000000000005,True,1,Specialize all outdoor slots on 800m
+2129,Men,Distance,2024,1500m,1500m,-383.0,True,1,Specialize all outdoor slots on 1500m
+2139,Men,Jumps,2024,Long Jump,Long Jump,-221.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+2148,Men,Distance,2024,1500m,5000m,-705.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+2168,Men,Distance,2024,5000m,5000m,-87.0,True,2,Specialize all outdoor slots on 5000m
+2177,Men,Distance,2024,1500m,1500m,-327.0,True,1,Specialize all outdoor slots on 1500m
+2182,Men,Sprints,2024,400m,400m,83.29999999999995,True,1,Specialize all outdoor slots on 400m
+2193,Men,Distance,2024,1500m,1500m,-53.0,True,1,Specialize all outdoor slots on 1500m
+2199,Men,Distance,2024,5000m,5000m,-301.0,True,1,Specialize all outdoor slots on 5000m
+2202,Men,Distance,2024,1500m,1500m,-652.0,True,1,Specialize all outdoor slots on 1500m
+2233,Women,Distance,2024,1500m,1500m,-297.70000000000005,True,1,Specialize all outdoor slots on 1500m
+2354,Men,Distance,2024,800m,5000m,-407.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+2381,Women,Distance,2024,5000m,5000m,-61.5,True,1,Specialize all outdoor slots on 5000m
+2387,Women,Distance,2024,800m,800m,-65.70000000000005,True,1,Specialize all outdoor slots on 800m
+2403,Women,Distance,2024,800m,800m,-108.70000000000005,True,1,Specialize all outdoor slots on 800m
+2424,Women,Jumps,2024,Triple Jump,Triple Jump,-158.0,True,1,Specialize all outdoor slots on Triple Jump
+2424,Women,Sprints,2024,100m,100m,-245.29999999999995,True,1,Specialize all outdoor slots on 100m
+2445,Men,Distance,2024,1500m,1500m,-293.0,True,1,Specialize all outdoor slots on 1500m
+2450,Men,Distance,2024,1500m,1500m,-360.0,True,1,Specialize all outdoor slots on 1500m
+2453,Men,Distance,2024,5000m,5000m,-401.0,True,2,Specialize all outdoor slots on 5000m
+2459,Men,Distance,2024,5000m,5000m,-522.0,True,2,Specialize all outdoor slots on 5000m
+2471,Men,Distance,2024,5000m,5000m,-304.0,True,1,Specialize all outdoor slots on 5000m
+2478,Men,Distance,2024,5000m,5000m,-650.0,True,1,Specialize all outdoor slots on 5000m
+2487,Men,Sprints,2024,100m,100m,-468.0,True,1,Specialize all outdoor slots on 100m
+2524,Women,Distance,2024,800m,800m,-36.700000000000045,True,1,Specialize all outdoor slots on 800m
+2527,Women,Distance,2024,1500m,1500m,-464.70000000000005,True,1,Specialize all outdoor slots on 1500m
+2556,Men,Distance,2024,800m,800m,-102.29999999999995,True,1,Specialize all outdoor slots on 800m
+2584,Men,Distance,2024,5000m,5000m,26.0,True,2,Specialize all outdoor slots on 5000m
+2590,Men,Distance,2024,800m,800m,-361.29999999999995,True,1,Specialize all outdoor slots on 800m
+2616,Men,Sprints,2024,200m,200m,-312.29999999999995,True,1,Specialize all outdoor slots on 200m
+2698,Women,Distance,2024,5000m,5000m,-109.5,True,1,Specialize all outdoor slots on 5000m
+2724,Men,Distance,2024,5000m,5000m,-62.0,True,1,Specialize all outdoor slots on 5000m
+2726,Men,Distance,2024,1500m,5000m,-306.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+2727,Men,Distance,2024,800m,800m,-209.29999999999995,True,2,Specialize all outdoor slots on 800m
+2855,Men,Distance,2024,5000m,5000m,-12.0,True,1,Specialize all outdoor slots on 5000m
+2858,Men,Distance,2024,1500m,1500m,5.0,True,1,Specialize all outdoor slots on 1500m
+2859,Men,Distance,2024,5000m,5000m,-14.0,True,1,Specialize all outdoor slots on 5000m
+2860,Men,Distance,2024,800m,800m,54.700000000000045,True,1,Specialize all outdoor slots on 800m
+2883,Men,Sprints,2024,400m,400m,-336.70000000000005,True,1,Specialize all outdoor slots on 400m
+2950,Men,Distance,2024,5000m,5000m,-29.0,True,1,Specialize all outdoor slots on 5000m
+2953,Men,Distance,2024,800m,5000m,-124.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+3002,Women,Distance,2024,1500m,1500m,-190.70000000000005,True,2,Specialize all outdoor slots on 1500m
+3015,Men,Distance,2024,5000m,5000m,-166.0,True,1,Specialize all outdoor slots on 5000m
+3116,Women,Distance,2024,1500m,1500m,-291.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3136,Men,Distance,2024,800m,800m,-103.29999999999995,True,1,Specialize all outdoor slots on 800m
+3158,Men,Sprints,2024,400m,400m,-235.70000000000005,True,2,Specialize all outdoor slots on 400m
+3173,Men,Sprints,2024,400m,400m,-290.70000000000005,True,1,Specialize all outdoor slots on 400m
+3274,Men,Distance,2024,1500m,1500m,-116.0,True,1,Specialize all outdoor slots on 1500m
+3279,Men,Distance,2024,5000m,5000m,-227.0,True,1,Specialize all outdoor slots on 5000m
+3339,Men,Distance,2024,1500m,1500m,-287.0,True,1,Specialize all outdoor slots on 1500m
+3360,Women,Distance,2024,1500m,1500m,-110.70000000000005,True,3,Specialize all outdoor slots on 1500m
+3368,Women,Distance,2024,1500m,1500m,-308.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3379,Women,Distance,2024,1500m,1500m,-416.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3386,Men,Distance,2024,1500m,1500m,-93.0,True,2,Specialize all outdoor slots on 1500m
+3393,Men,Distance,2024,1500m,1500m,-74.0,True,3,Specialize all outdoor slots on 1500m
+3407,Men,Distance,2024,1500m,1500m,-434.0,True,2,Specialize all outdoor slots on 1500m
+3415,Men,Distance,2024,800m,800m,-100.29999999999995,True,1,Specialize all outdoor slots on 800m
+3437,Men,Distance,2024,1500m,1500m,-290.0,True,2,Specialize all outdoor slots on 1500m
+3522,Men,Sprints,2024,400m,400m,-61.700000000000045,True,1,Specialize all outdoor slots on 400m
+3533,Women,Sprints,2024,200m,200m,-24.299999999999955,True,1,Specialize all outdoor slots on 200m
+3540,Men,Sprints,2024,200m,200m,-393.29999999999995,True,1,Specialize all outdoor slots on 200m
+3541,Men,Sprints,2024,200m,200m,-40.299999999999955,True,1,Specialize all outdoor slots on 200m
+3543,Men,Distance,2024,800m,800m,-211.29999999999995,True,1,Specialize all outdoor slots on 800m
+3548,Men,Distance,2024,5000m,5000m,-401.0,True,1,Specialize all outdoor slots on 5000m
+3554,Men,Sprints,2024,200m,200m,25.700000000000045,True,1,Specialize all outdoor slots on 200m
+3567,Men,Sprints,2024,200m,200m,-193.29999999999995,True,1,Specialize all outdoor slots on 200m
+3574,Men,Sprints,2024,400m,400m,-155.70000000000005,True,1,Specialize all outdoor slots on 400m
+3580,Men,Sprints,2024,200m,200m,-326.29999999999995,True,1,Specialize all outdoor slots on 200m
+3581,Women,Sprints,2024,100m,100m,17.700000000000045,True,1,Specialize all outdoor slots on 100m
+3586,Women,Distance,2024,1500m,800m,-86.70000000000005,False,2,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+3587,Women,Distance,2024,800m,800m,-90.70000000000005,True,1,Specialize all outdoor slots on 800m
+3590,Men,Sprints,2024,100m,100m,137.0,True,1,Specialize all outdoor slots on 100m
+3595,Men,Distance,2024,800m,800m,-481.29999999999995,True,2,Specialize all outdoor slots on 800m
+3605,Men,Sprints,2024,200m,200m,-403.29999999999995,True,1,Specialize all outdoor slots on 200m
+3615,Men,Distance,2024,1500m,1500m,-176.0,True,1,Specialize all outdoor slots on 1500m
+3616,Men,Sprints,2024,200m,200m,-160.29999999999995,True,1,Specialize all outdoor slots on 200m
+3638,Women,Sprints,2024,400m,400m,-68.29999999999995,True,2,Specialize all outdoor slots on 400m
+3642,Men,Sprints,2024,200m,200m,11.700000000000045,True,2,Specialize all outdoor slots on 200m
+3648,Women,Sprints,2024,400m,400m,-140.29999999999995,True,2,Specialize all outdoor slots on 400m
+3649,Women,Sprints,2024,200m,200m,-205.29999999999995,True,2,Specialize all outdoor slots on 200m
+3650,Women,Sprints,2024,400m,400m,105.70000000000005,True,2,Specialize all outdoor slots on 400m
+3651,Women,Sprints,2024,400m,400m,-198.29999999999995,True,1,Specialize all outdoor slots on 400m
+3655,Women,Sprints,2024,200m,200m,-199.29999999999995,True,2,Specialize all outdoor slots on 200m
+3657,Women,Jumps,2024,Triple Jump,Triple Jump,50.0,True,2,Specialize all outdoor slots on Triple Jump
+3658,Women,Sprints,2024,200m,200m,116.70000000000005,True,1,Specialize all outdoor slots on 200m
+3666,Women,Jumps,2024,Triple Jump,High Jump,-50.0,False,1,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+3667,Women,Throws,2024,Shot Put,Shot Put,75.29999999999995,True,2,Specialize all outdoor slots on Shot Put
+3668,Women,Throws,2024,Shot Put,Discus,45.69999999999999,False,2,Meet 1: explore alternate; Meets 2–N: lock Discus (RQ1C≠RQ1A)
+3669,Women,Throws,2024,Shot Put,Shot Put,13.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+3671,Women,Throws,2024,Shot Put,Shot Put,-154.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+3687,Men,Distance,2024,800m,800m,-149.29999999999995,True,2,Specialize all outdoor slots on 800m
+3688,Men,Distance,2024,800m,800m,-31.299999999999955,True,1,Specialize all outdoor slots on 800m
+3689,Men,Sprints,2024,200m,200m,-120.29999999999995,True,2,Specialize all outdoor slots on 200m
+3690,Men,Sprints,2024,200m,200m,11.700000000000045,True,1,Specialize all outdoor slots on 200m
+3691,Men,Sprints,2024,200m,400m,-50.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3692,Men,Throws,2024,Shot Put,Shot Put,105.29999999999995,True,2,Specialize all outdoor slots on Shot Put
+3694,Men,Jumps,2024,High Jump,High Jump,104.0,True,2,Specialize all outdoor slots on High Jump
+3696,Men,Sprints,2024,400m,400m,-5.7000000000000455,True,1,Specialize all outdoor slots on 400m
+3697,Men,Throws,2024,Shot Put,Shot Put,30.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+3698,Men,Sprints,2024,200m,200m,-23.299999999999955,True,2,Specialize all outdoor slots on 200m
+3699,Men,Distance,2024,800m,800m,-327.29999999999995,True,1,Specialize all outdoor slots on 800m
+3699,Men,Sprints,2024,400m,400m,-370.70000000000005,True,1,Specialize all outdoor slots on 400m
+3701,Men,Sprints,2024,200m,200m,-4.2999999999999545,True,2,Specialize all outdoor slots on 200m
+3705,Men,Sprints,2024,200m,200m,-147.29999999999995,True,2,Specialize all outdoor slots on 200m
+3706,Men,Throws,2024,Shot Put,Discus,75.70000000000005,False,2,Meet 1: explore alternate; Meets 2–N: lock Discus (RQ1C≠RQ1A)
+3708,Men,Sprints,2024,200m,200m,-101.29999999999995,True,1,Specialize all outdoor slots on 200m
+3709,Men,Sprints,2024,200m,200m,-479.29999999999995,True,1,Specialize all outdoor slots on 200m
+3710,Men,Jumps,2024,Long Jump,Triple Jump,-44.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+3713,Men,Distance,2024,1500m,1500m,-257.0,True,2,Specialize all outdoor slots on 1500m
+3717,Women,Jumps,2024,Long Jump,Long Jump,222.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+3718,Women,Jumps,2024,Triple Jump,Triple Jump,-47.0,True,1,Specialize all outdoor slots on Triple Jump
+3719,Men,Sprints,2024,200m,200m,38.700000000000045,True,1,Specialize all outdoor slots on 200m
+3720,Men,Sprints,2024,200m,200m,-283.29999999999995,True,1,Specialize all outdoor slots on 200m
+3721,Men,Sprints,2024,200m,200m,-43.299999999999955,True,1,Specialize all outdoor slots on 200m
+3723,Men,Sprints,2024,400m,400m,128.29999999999995,True,1,Specialize all outdoor slots on 400m
+3725,Men,Throws,2024,Discus,Discus,80.70000000000005,True,2,Specialize all outdoor slots on Discus
+3727,Men,Sprints,2024,200m,200m,-489.29999999999995,True,1,Specialize all outdoor slots on 200m
+3728,Men,Sprints,2024,200m,200m,-152.29999999999995,True,1,Specialize all outdoor slots on 200m
+3729,Men,Distance,2024,800m,800m,-162.29999999999995,True,1,Specialize all outdoor slots on 800m
+3729,Men,Sprints,2024,200m,200m,-114.29999999999995,True,1,Specialize all outdoor slots on 200m
+3730,Men,Sprints,2024,200m,200m,-177.29999999999995,True,1,Specialize all outdoor slots on 200m
+3734,Men,Sprints,2024,200m,200m,-64.29999999999995,True,2,Specialize all outdoor slots on 200m
+3741,Men,Distance,2024,1500m,1500m,-79.0,True,1,Specialize all outdoor slots on 1500m
+3790,Men,Distance,2024,1500m,5000m,-373.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+3792,Women,Jumps,2024,Long Jump,High Jump,6.0,False,1,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+3794,Women,Throws,2024,Shot Put,Shot Put,-81.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+3795,Women,Sprints,2024,200m,200m,-13.299999999999955,True,2,Specialize all outdoor slots on 200m
+3798,Women,Sprints,2024,400m,400m,55.700000000000045,True,1,Specialize all outdoor slots on 400m
+3801,Men,Sprints,2024,400m,400m,-107.70000000000005,True,1,Specialize all outdoor slots on 400m
+3804,Men,Distance,2024,800m,800m,-130.29999999999995,True,1,Specialize all outdoor slots on 800m
+3806,Men,Distance,2024,1500m,1500m,-685.0,True,1,Specialize all outdoor slots on 1500m
+3808,Men,Sprints,2024,200m,200m,-98.29999999999995,True,1,Specialize all outdoor slots on 200m
+3813,Women,Sprints,2024,400m,400m,-203.29999999999995,True,1,Specialize all outdoor slots on 400m
+3817,Women,Sprints,2024,400m,400m,-199.29999999999995,True,1,Specialize all outdoor slots on 400m
+3824,Women,Distance,2024,5000m,5000m,-198.5,True,1,Specialize all outdoor slots on 5000m
+3825,Women,Jumps,2024,Long Jump,Long Jump,-34.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+3836,Men,Sprints,2024,200m,200m,-129.29999999999995,True,1,Specialize all outdoor slots on 200m
+3838,Men,Sprints,2024,400m,400m,-281.70000000000005,True,1,Specialize all outdoor slots on 400m
+3841,Men,Sprints,2024,400m,400m,15.299999999999955,True,1,Specialize all outdoor slots on 400m
+3843,Men,Sprints,2024,200m,200m,61.700000000000045,True,1,Specialize all outdoor slots on 200m
+3846,Men,Sprints,2024,400m,400m,130.29999999999995,True,1,Specialize all outdoor slots on 400m
+3852,Men,Distance,2024,800m,800m,-176.29999999999995,True,1,Specialize all outdoor slots on 800m
+3862,Women,Distance,2024,1500m,1500m,-59.700000000000045,True,1,Specialize all outdoor slots on 1500m
+3933,Women,Sprints,2024,200m,200m,-65.29999999999995,True,1,Specialize all outdoor slots on 200m
+3934,Women,Sprints,2024,200m,200m,-195.29999999999995,True,1,Specialize all outdoor slots on 200m
+3935,Women,Sprints,2024,200m,200m,-210.29999999999995,True,1,Specialize all outdoor slots on 200m
+3938,Women,Sprints,2024,400m,400m,-116.29999999999995,True,1,Specialize all outdoor slots on 400m
+3939,Women,Jumps,2024,Long Jump,Long Jump,-21.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+3940,Women,Throws,2024,Shot Put,Shot Put,-113.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+3942,Men,Sprints,2024,400m,400m,-122.70000000000005,True,2,Specialize all outdoor slots on 400m
+3944,Men,Sprints,2024,200m,200m,-9.299999999999955,True,2,Specialize all outdoor slots on 200m
+3946,Men,Sprints,2024,400m,400m,-2.7000000000000455,True,2,Specialize all outdoor slots on 400m
+3949,Men,Sprints,2024,200m,200m,-255.29999999999995,True,1,Specialize all outdoor slots on 200m
+3950,Men,Jumps,2024,Long Jump,Long Jump,-93.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+3972,Women,Sprints,2024,200m,200m,-23.299999999999955,True,1,Specialize all outdoor slots on 200m
+3977,Women,Distance,2024,800m,800m,-172.70000000000005,True,1,Specialize all outdoor slots on 800m
+3980,Women,Distance,2024,800m,800m,-159.70000000000005,True,1,Specialize all outdoor slots on 800m
+3982,Men,Distance,2024,1500m,1500m,-338.0,True,1,Specialize all outdoor slots on 1500m
+3985,Men,Jumps,2024,Long Jump,Long Jump,72.29999999999995,True,1,Specialize all outdoor slots on Long Jump
+3987,Men,Sprints,2024,200m,200m,-314.29999999999995,True,1,Specialize all outdoor slots on 200m
+3988,Men,Jumps,2024,High Jump,High Jump,60.0,True,1,Specialize all outdoor slots on High Jump
+3996,Men,Sprints,2024,200m,400m,-54.700000000000045,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3997,Men,Sprints,2024,200m,200m,-617.3,True,1,Specialize all outdoor slots on 200m
+4010,Men,Distance,2024,1500m,1500m,-626.0,True,1,Specialize all outdoor slots on 1500m
+4015,Women,Throws,2024,Shot Put,Discus,20.69999999999999,False,2,Meet 1: explore alternate; Meets 2–N: lock Discus (RQ1C≠RQ1A)
+4064,Men,Sprints,2024,200m,200m,-127.29999999999995,True,1,Specialize all outdoor slots on 200m
+4073,Men,Sprints,2024,200m,200m,-123.29999999999995,True,1,Specialize all outdoor slots on 200m
+4102,Women,Sprints,2024,200m,200m,-270.29999999999995,True,1,Specialize all outdoor slots on 200m
+4105,Women,Sprints,2024,400m,400m,-36.299999999999955,True,1,Specialize all outdoor slots on 400m
+4112,Men,Sprints,2024,200m,200m,-126.29999999999995,True,1,Specialize all outdoor slots on 200m
+4114,Women,Distance,2024,800m,800m,-59.700000000000045,True,2,Specialize all outdoor slots on 800m
+4118,Men,Sprints,2024,200m,200m,-168.29999999999995,True,1,Specialize all outdoor slots on 200m
+4120,Men,Jumps,2024,Triple Jump,Triple Jump,-64.70000000000005,True,2,Specialize all outdoor slots on Triple Jump
+4123,Men,Distance,2024,1500m,1500m,-64.0,True,1,Specialize all outdoor slots on 1500m
+4139,Women,Distance,2024,1500m,1500m,-292.70000000000005,True,2,Specialize all outdoor slots on 1500m
+4142,Men,Distance,2024,5000m,5000m,-259.0,True,1,Specialize all outdoor slots on 5000m
+4149,Men,Sprints,2024,200m,200m,-132.29999999999995,True,1,Specialize all outdoor slots on 200m
+4225,Women,Distance,2024,800m,800m,-131.70000000000005,True,1,Specialize all outdoor slots on 800m
+4227,Women,Distance,2024,800m,800m,-22.700000000000045,True,1,Specialize all outdoor slots on 800m
+4233,Women,Distance,2024,1500m,1500m,-296.70000000000005,True,1,Specialize all outdoor slots on 1500m
+4242,Women,Sprints,2024,200m,200m,102.70000000000005,True,1,Specialize all outdoor slots on 200m
+4243,Women,Sprints,2024,200m,200m,18.700000000000045,True,1,Specialize all outdoor slots on 200m
+4245,Women,Sprints,2024,400m,400m,-33.299999999999955,True,1,Specialize all outdoor slots on 400m
+4246,Women,Jumps,2024,Triple Jump,Triple Jump,-104.0,True,1,Specialize all outdoor slots on Triple Jump
+4257,Women,Sprints,2024,200m,200m,-133.29999999999995,True,2,Specialize all outdoor slots on 200m
+4258,Women,Sprints,2024,200m,200m,-229.29999999999995,True,2,Specialize all outdoor slots on 200m
+4259,Women,Jumps,2024,Long Jump,High Jump,63.0,False,2,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+4260,Women,Jumps,2024,Long Jump,Triple Jump,-12.0,False,1,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+4260,Women,Sprints,2024,200m,200m,-174.29999999999995,True,1,Specialize all outdoor slots on 200m
+4261,Women,Sprints,2024,200m,200m,-155.29999999999995,True,1,Specialize all outdoor slots on 200m
+4266,Women,Sprints,2024,200m,200m,-118.29999999999995,True,1,Specialize all outdoor slots on 200m
+4288,Women,Distance,2024,800m,800m,-288.70000000000005,True,1,Specialize all outdoor slots on 800m
+4289,Women,Sprints,2024,200m,200m,-4.2999999999999545,True,1,Specialize all outdoor slots on 200m
+4294,Women,Throws,2024,Shot Put,Shot Put,-3.7000000000000455,True,1,Specialize all outdoor slots on Shot Put
+4299,Women,Throws,2024,Shot Put,Shot Put,-154.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4302,Women,Jumps,2024,High Jump,High Jump,16.0,True,1,Specialize all outdoor slots on High Jump
+4303,Men,Jumps,2024,Triple Jump,Triple Jump,-178.70000000000005,True,1,Specialize all outdoor slots on Triple Jump
+4303,Men,Sprints,2024,400m,400m,-250.70000000000005,True,1,Specialize all outdoor slots on 400m
+4304,Men,Sprints,2024,400m,400m,-299.70000000000005,True,1,Specialize all outdoor slots on 400m
+4315,Men,Distance,2024,1500m,1500m,-344.0,True,1,Specialize all outdoor slots on 1500m
+4316,Men,Distance,2024,1500m,1500m,-392.0,True,1,Specialize all outdoor slots on 1500m
+4340,Men,Distance,2024,800m,800m,-425.29999999999995,True,1,Specialize all outdoor slots on 800m
+4342,Men,Sprints,2024,200m,200m,-243.29999999999995,True,1,Specialize all outdoor slots on 200m
+4347,Men,Sprints,2024,400m,400m,-415.70000000000005,True,1,Specialize all outdoor slots on 400m
+4356,Men,Sprints,2024,200m,200m,-287.29999999999995,True,2,Specialize all outdoor slots on 200m
+4363,Men,Throws,2024,Shot Put,Shot Put,-116.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4364,Men,Sprints,2024,200m,200m,-153.29999999999995,True,1,Specialize all outdoor slots on 200m
+4368,Men,Distance,2024,800m,800m,74.70000000000005,True,1,Specialize all outdoor slots on 800m
+4380,Men,Sprints,2024,200m,200m,-250.29999999999995,True,1,Specialize all outdoor slots on 200m
+4385,Men,Distance,2024,800m,800m,-96.29999999999995,True,2,Specialize all outdoor slots on 800m
+4386,Men,Sprints,2024,200m,200m,-172.29999999999995,True,1,Specialize all outdoor slots on 200m
+4401,Men,Distance,2024,800m,800m,-116.29999999999995,True,1,Specialize all outdoor slots on 800m
+4405,Men,Sprints,2024,200m,200m,-153.29999999999995,True,1,Specialize all outdoor slots on 200m
+4410,Men,Jumps,2024,High Jump,High Jump,69.0,True,1,Specialize all outdoor slots on High Jump
+4414,Men,Sprints,2024,400m,400m,-47.700000000000045,True,1,Specialize all outdoor slots on 400m
+4418,Men,Distance,2024,800m,800m,-75.29999999999995,True,1,Specialize all outdoor slots on 800m
+4432,Men,Distance,2024,1500m,1500m,-261.0,True,1,Specialize all outdoor slots on 1500m
+4433,Men,Distance,2024,800m,800m,-482.29999999999995,True,2,Specialize all outdoor slots on 800m
+4437,Men,Sprints,2024,200m,200m,-334.29999999999995,True,2,Specialize all outdoor slots on 200m
+4438,Men,Sprints,2024,200m,200m,-90.29999999999995,True,2,Specialize all outdoor slots on 200m
+4439,Men,Sprints,2024,200m,200m,-227.29999999999995,True,2,Specialize all outdoor slots on 200m
+4440,Men,Throws,2024,Shot Put,Shot Put,-4.7000000000000455,True,2,Specialize all outdoor slots on Shot Put
+4442,Men,Sprints,2024,200m,200m,-486.29999999999995,True,1,Specialize all outdoor slots on 200m
+4444,Men,Throws,2024,Shot Put,Shot Put,-45.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+4446,Men,Throws,2024,Shot Put,Shot Put,-84.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4447,Men,Sprints,2024,200m,200m,-67.29999999999995,True,1,Specialize all outdoor slots on 200m
+4451,Men,Sprints,2024,200m,200m,-33.299999999999955,True,1,Specialize all outdoor slots on 200m
+4452,Men,Throws,2024,Shot Put,Shot Put,-102.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4455,Women,Throws,2024,Shot Put,Shot Put,-46.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+4456,Men,Sprints,2024,200m,200m,-289.29999999999995,True,1,Specialize all outdoor slots on 200m
+4461,Men,Sprints,2024,200m,400m,-204.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+4477,Men,Sprints,2024,400m,400m,-20.700000000000045,True,1,Specialize all outdoor slots on 400m
+4485,Men,Sprints,2024,200m,200m,-164.29999999999995,True,1,Specialize all outdoor slots on 200m
+4535,Men,Distance,2024,5000m,5000m,7.0,True,2,Specialize all outdoor slots on 5000m
+4537,Men,Sprints,2024,200m,200m,-219.29999999999995,True,1,Specialize all outdoor slots on 200m
+4600,Women,Sprints,2024,200m,200m,-244.29999999999995,True,1,Specialize all outdoor slots on 200m
+4604,Men,Sprints,2024,200m,200m,-460.29999999999995,True,1,Specialize all outdoor slots on 200m
+4650,Men,Distance,2024,1500m,1500m,-348.0,True,1,Specialize all outdoor slots on 1500m
+4675,Women,Distance,2024,1500m,1500m,-758.7,True,1,Specialize all outdoor slots on 1500m
+4678,Women,Sprints,2024,200m,200m,-302.29999999999995,True,1,Specialize all outdoor slots on 200m
+4679,Women,Sprints,2024,400m,400m,-411.29999999999995,True,1,Specialize all outdoor slots on 400m
+4688,Women,Sprints,2024,200m,200m,-397.29999999999995,True,1,Specialize all outdoor slots on 200m
+4700,Men,Distance,2024,1500m,1500m,-502.0,True,1,Specialize all outdoor slots on 1500m
+4711,Men,Distance,2024,800m,800m,-312.29999999999995,True,1,Specialize all outdoor slots on 800m
+4714,Men,Distance,2024,800m,800m,-409.29999999999995,True,1,Specialize all outdoor slots on 800m
+4715,Men,Distance,2024,5000m,5000m,-299.0,True,1,Specialize all outdoor slots on 5000m
+4726,Men,Distance,2024,1500m,1500m,-452.0,True,1,Specialize all outdoor slots on 1500m
+4733,Men,Distance,2024,800m,800m,-432.29999999999995,True,1,Specialize all outdoor slots on 800m
+4735,Men,Sprints,2024,200m,200m,-178.29999999999995,True,1,Specialize all outdoor slots on 200m
+4774,Women,Distance,2024,1500m,1500m,-335.70000000000005,True,1,Specialize all outdoor slots on 1500m
+4803,Women,Throws,2024,Shot Put,Shot Put,-151.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4899,Men,Jumps,2024,Long Jump,Triple Jump,-8.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+4901,Men,Distance,2024,1500m,1500m,-380.0,True,1,Specialize all outdoor slots on 1500m
+4981,Women,Sprints,2024,200m,200m,-132.29999999999995,True,1,Specialize all outdoor slots on 200m
+4983,Women,Sprints,2024,200m,200m,-155.29999999999995,True,1,Specialize all outdoor slots on 200m
+4999,Men,Distance,2024,1500m,1500m,-639.0,True,1,Specialize all outdoor slots on 1500m
+5001,Men,Sprints,2024,200m,400m,-250.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+5007,Men,Distance,2024,5000m,5000m,-165.0,True,1,Specialize all outdoor slots on 5000m
+5012,Men,Sprints,2024,200m,200m,-252.29999999999995,True,1,Specialize all outdoor slots on 200m
+5013,Men,Distance,2024,1500m,1500m,-245.0,True,1,Specialize all outdoor slots on 1500m
+5018,Men,Sprints,2024,200m,200m,-448.29999999999995,True,1,Specialize all outdoor slots on 200m
+5028,Men,Sprints,2024,200m,200m,-354.29999999999995,True,1,Specialize all outdoor slots on 200m
+5264,Women,Distance,2024,1500m,1500m,-221.70000000000005,True,1,Specialize all outdoor slots on 1500m
+5391,Women,Distance,2024,800m,800m,-305.70000000000005,True,2,Specialize all outdoor slots on 800m
+5708,Men,Distance,2024,1500m,1500m,-198.0,True,1,Specialize all outdoor slots on 1500m
+7694,Men,Distance,2024,1500m,1500m,-84.0,True,1,Specialize all outdoor slots on 1500m
+1,Men,Distance,2025,5000m,5000m,-607.0,True,1,Specialize all outdoor slots on 5000m
+2,Men,Distance,2025,5000m,5000m,178.0,True,1,Specialize all outdoor slots on 5000m
+19,Men,Distance,2025,5000m,5000m,-128.0,True,1,Specialize all outdoor slots on 5000m
+35,Men,Distance,2025,1500m,1500m,-444.0,True,1,Specialize all outdoor slots on 1500m
+68,Women,Distance,2025,5000m,5000m,-88.5,True,1,Specialize all outdoor slots on 5000m
+123,Men,Distance,2025,800m,800m,22.700000000000045,True,1,Specialize all outdoor slots on 800m
+127,Men,Distance,2025,5000m,5000m,70.0,True,1,Specialize all outdoor slots on 5000m
+130,Men,Distance,2025,800m,800m,24.700000000000045,True,1,Specialize all outdoor slots on 800m
+147,Men,Distance,2025,800m,800m,-481.29999999999995,True,1,Specialize all outdoor slots on 800m
+150,Men,Distance,2025,1500m,1500m,-184.0,True,1,Specialize all outdoor slots on 1500m
+163,Men,Distance,2025,800m,800m,-158.29999999999995,True,1,Specialize all outdoor slots on 800m
+196,Men,Distance,2025,1500m,1500m,-526.0,True,1,Specialize all outdoor slots on 1500m
+253,Women,Distance,2025,5000m,5000m,-253.5,True,1,Specialize all outdoor slots on 5000m
+282,Women,Distance,2025,5000m,5000m,65.5,True,1,Specialize all outdoor slots on 5000m
+291,Women,Distance,2025,800m,800m,-43.700000000000045,True,1,Specialize all outdoor slots on 800m
+294,Women,Distance,2025,800m,800m,-104.70000000000005,True,1,Specialize all outdoor slots on 800m
+364,Men,Distance,2025,1500m,1500m,-61.0,True,2,Specialize all outdoor slots on 1500m
+368,Men,Distance,2025,1500m,1500m,-310.0,True,1,Specialize all outdoor slots on 1500m
+466,Men,Distance,2025,5000m,5000m,49.0,True,2,Specialize all outdoor slots on 5000m
+467,Men,Distance,2025,800m,800m,45.700000000000045,True,1,Specialize all outdoor slots on 800m
+513,Men,Distance,2025,1500m,1500m,-224.0,True,1,Specialize all outdoor slots on 1500m
+570,Women,Distance,2025,5000m,5000m,-24.5,True,2,Specialize all outdoor slots on 5000m
+576,Women,Distance,2025,800m,800m,-30.700000000000045,True,1,Specialize all outdoor slots on 800m
+577,Women,Distance,2025,1500m,1500m,-6.7000000000000455,True,2,Specialize all outdoor slots on 1500m
+578,Women,Distance,2025,5000m,5000m,-90.5,True,1,Specialize all outdoor slots on 5000m
+583,Women,Distance,2025,1500m,1500m,-149.70000000000005,True,1,Specialize all outdoor slots on 1500m
+620,Women,Distance,2025,800m,800m,57.299999999999955,True,1,Specialize all outdoor slots on 800m
+652,Women,Distance,2025,800m,800m,-492.70000000000005,True,1,Specialize all outdoor slots on 800m
+655,Women,Distance,2025,5000m,5000m,-306.5,True,2,Specialize all outdoor slots on 5000m
+666,Men,Distance,2025,5000m,5000m,122.0,True,1,Specialize all outdoor slots on 5000m
+667,Men,Distance,2025,5000m,5000m,24.0,True,2,Specialize all outdoor slots on 5000m
+669,Men,Distance,2025,5000m,5000m,-33.0,True,1,Specialize all outdoor slots on 5000m
+673,Men,Distance,2025,5000m,5000m,62.0,True,2,Specialize all outdoor slots on 5000m
+674,Men,Distance,2025,5000m,5000m,-228.0,True,1,Specialize all outdoor slots on 5000m
+676,Men,Distance,2025,1500m,1500m,-89.0,True,1,Specialize all outdoor slots on 1500m
+681,Men,Distance,2025,1500m,5000m,-189.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+685,Men,Distance,2025,5000m,5000m,-145.0,True,2,Specialize all outdoor slots on 5000m
+695,Men,Distance,2025,5000m,5000m,-234.0,True,2,Specialize all outdoor slots on 5000m
+702,Men,Distance,2025,1500m,1500m,-329.0,True,1,Specialize all outdoor slots on 1500m
+704,Men,Distance,2025,5000m,5000m,-141.0,True,2,Specialize all outdoor slots on 5000m
+709,Men,Distance,2025,5000m,5000m,-74.0,True,1,Specialize all outdoor slots on 5000m
+710,Men,Distance,2025,5000m,5000m,-122.0,True,2,Specialize all outdoor slots on 5000m
+731,Men,Distance,2025,5000m,5000m,-333.0,True,1,Specialize all outdoor slots on 5000m
+740,Men,Distance,2025,800m,800m,-309.29999999999995,True,2,Specialize all outdoor slots on 800m
+743,Men,Distance,2025,800m,800m,-295.29999999999995,True,2,Specialize all outdoor slots on 800m
+760,Men,Distance,2025,1500m,1500m,-477.0,True,2,Specialize all outdoor slots on 1500m
+1020,Women,Distance,2025,5000m,5000m,-71.5,True,1,Specialize all outdoor slots on 5000m
+1032,Women,Distance,2025,800m,800m,11.299999999999955,True,2,Specialize all outdoor slots on 800m
+1116,Women,Distance,2025,1500m,1500m,-602.7,True,1,Specialize all outdoor slots on 1500m
+1201,Men,Distance,2025,5000m,5000m,-42.0,True,1,Specialize all outdoor slots on 5000m
+1216,Men,Distance,2025,800m,800m,128.70000000000005,True,1,Specialize all outdoor slots on 800m
+1266,Men,Distance,2025,1500m,1500m,-433.0,True,1,Specialize all outdoor slots on 1500m
+1294,Men,Distance,2025,1500m,1500m,-350.0,True,1,Specialize all outdoor slots on 1500m
+1309,Men,Distance,2025,1500m,1500m,-607.0,True,2,Specialize all outdoor slots on 1500m
+1421,Men,Distance,2025,1500m,1500m,-551.0,True,2,Specialize all outdoor slots on 1500m
+1458,Women,Distance,2025,800m,800m,-151.70000000000005,True,1,Specialize all outdoor slots on 800m
+1552,Men,Distance,2025,800m,800m,-144.29999999999995,True,2,Specialize all outdoor slots on 800m
+1589,Men,Distance,2025,800m,800m,-427.29999999999995,True,1,Specialize all outdoor slots on 800m
+1704,Men,Distance,2025,1500m,1500m,-254.0,True,1,Specialize all outdoor slots on 1500m
+1930,Women,Distance,2025,800m,800m,22.299999999999955,True,1,Specialize all outdoor slots on 800m
+1946,Women,Distance,2025,1500m,1500m,-134.70000000000005,True,1,Specialize all outdoor slots on 1500m
+1953,Women,Distance,2025,1500m,1500m,-172.70000000000005,True,1,Specialize all outdoor slots on 1500m
+1957,Women,Distance,2025,1500m,1500m,-198.70000000000005,True,1,Specialize all outdoor slots on 1500m
+1965,Women,Distance,2025,1500m,1500m,-137.70000000000005,True,1,Specialize all outdoor slots on 1500m
+1967,Women,Distance,2025,1500m,1500m,-23.700000000000045,True,1,Specialize all outdoor slots on 1500m
+2005,Men,Distance,2025,1500m,1500m,-160.0,True,1,Specialize all outdoor slots on 1500m
+2007,Men,Distance,2025,5000m,5000m,90.0,True,1,Specialize all outdoor slots on 5000m
+2013,Men,Distance,2025,5000m,5000m,-22.0,True,1,Specialize all outdoor slots on 5000m
+2022,Men,Distance,2025,800m,800m,-363.29999999999995,True,1,Specialize all outdoor slots on 800m
+2045,Men,Distance,2025,5000m,5000m,-62.0,True,1,Specialize all outdoor slots on 5000m
+2059,Men,Distance,2025,1500m,1500m,-256.0,True,1,Specialize all outdoor slots on 1500m
+2081,Women,Distance,2025,800m,800m,-63.700000000000045,True,1,Specialize all outdoor slots on 800m
+2193,Men,Distance,2025,5000m,5000m,61.0,True,1,Specialize all outdoor slots on 5000m
+2350,Men,Distance,2025,5000m,5000m,-378.0,True,1,Specialize all outdoor slots on 5000m
+2456,Men,Distance,2025,1500m,1500m,-373.0,True,1,Specialize all outdoor slots on 1500m
+2463,Men,Distance,2025,1500m,1500m,-481.0,True,1,Specialize all outdoor slots on 1500m
+2467,Men,Distance,2025,800m,800m,-284.29999999999995,True,1,Specialize all outdoor slots on 800m
+2470,Men,Distance,2025,800m,800m,-466.29999999999995,True,1,Specialize all outdoor slots on 800m
+2473,Men,Distance,2025,1500m,1500m,-392.0,True,1,Specialize all outdoor slots on 1500m
+2474,Men,Distance,2025,1500m,1500m,-340.0,True,1,Specialize all outdoor slots on 1500m
+2492,Men,Distance,2025,1500m,1500m,-22.0,True,2,Specialize all outdoor slots on 1500m
+2527,Women,Distance,2025,1500m,1500m,-438.70000000000005,True,1,Specialize all outdoor slots on 1500m
+2534,Women,Distance,2025,800m,800m,-635.7,True,2,Specialize all outdoor slots on 800m
+2560,Men,Distance,2025,1500m,1500m,-176.0,True,1,Specialize all outdoor slots on 1500m
+2565,Men,Distance,2025,800m,800m,-337.29999999999995,True,2,Specialize all outdoor slots on 800m
+2584,Men,Distance,2025,5000m,5000m,22.0,True,1,Specialize all outdoor slots on 5000m
+2608,Men,Distance,2025,5000m,5000m,-476.0,True,2,Specialize all outdoor slots on 5000m
+2616,Men,Sprints,2025,200m,200m,-359.29999999999995,True,1,Specialize all outdoor slots on 200m
+2703,Women,Distance,2025,800m,800m,-226.70000000000005,True,1,Specialize all outdoor slots on 800m
+2749,Men,Distance,2025,1500m,1500m,-486.0,True,1,Specialize all outdoor slots on 1500m
+2855,Men,Distance,2025,5000m,5000m,133.0,True,1,Specialize all outdoor slots on 5000m
+2896,Men,Distance,2025,1500m,1500m,-27.0,True,1,Specialize all outdoor slots on 1500m
+2899,Men,Distance,2025,800m,800m,-241.29999999999995,True,1,Specialize all outdoor slots on 800m
+2900,Men,Distance,2025,5000m,5000m,-446.0,True,1,Specialize all outdoor slots on 5000m
+3158,Men,Sprints,2025,400m,400m,-169.70000000000005,True,1,Specialize all outdoor slots on 400m
+3169,Men,Distance,2025,1500m,1500m,-195.0,True,1,Specialize all outdoor slots on 1500m
+3193,Women,Sprints,2025,400m,400m,-331.29999999999995,True,1,Specialize all outdoor slots on 400m
+3360,Women,Distance,2025,1500m,1500m,-211.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3368,Women,Distance,2025,1500m,1500m,-307.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3369,Women,Distance,2025,1500m,1500m,-299.70000000000005,True,1,Specialize all outdoor slots on 1500m
+3379,Women,Distance,2025,1500m,1500m,-392.70000000000005,True,2,Specialize all outdoor slots on 1500m
+3386,Men,Distance,2025,1500m,1500m,-72.0,True,2,Specialize all outdoor slots on 1500m
+3393,Men,Distance,2025,1500m,1500m,-412.0,True,1,Specialize all outdoor slots on 1500m
+3522,Men,Sprints,2025,400m,400m,-7.7000000000000455,True,1,Specialize all outdoor slots on 400m
+3532,Women,Sprints,2025,400m,400m,-5.2999999999999545,True,1,Specialize all outdoor slots on 400m
+3540,Men,Sprints,2025,200m,200m,-470.29999999999995,True,1,Specialize all outdoor slots on 200m
+3541,Men,Sprints,2025,200m,200m,-19.299999999999955,True,1,Specialize all outdoor slots on 200m
+3549,Men,Sprints,2025,200m,200m,-140.29999999999995,True,1,Specialize all outdoor slots on 200m
+3551,Men,Sprints,2025,200m,200m,-411.29999999999995,True,1,Specialize all outdoor slots on 200m
+3571,Men,Jumps,2025,High Jump,High Jump,-43.0,True,1,Specialize all outdoor slots on High Jump
+3578,Men,Sprints,2025,200m,400m,183.29999999999995,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3581,Women,Sprints,2025,200m,200m,-51.299999999999955,True,2,Specialize all outdoor slots on 200m
+3590,Men,Sprints,2025,200m,200m,-215.29999999999995,True,1,Specialize all outdoor slots on 200m
+3596,Men,Distance,2025,800m,800m,-153.29999999999995,True,1,Specialize all outdoor slots on 800m
+3613,Men,Distance,2025,1500m,1500m,-438.0,True,1,Specialize all outdoor slots on 1500m
+3615,Men,Distance,2025,5000m,5000m,-127.0,True,1,Specialize all outdoor slots on 5000m
+3649,Women,Sprints,2025,200m,200m,-135.29999999999995,True,1,Specialize all outdoor slots on 200m
+3650,Women,Sprints,2025,400m,400m,162.70000000000005,True,1,Specialize all outdoor slots on 400m
+3655,Women,Sprints,2025,200m,200m,-246.29999999999995,True,1,Specialize all outdoor slots on 200m
+3657,Women,Jumps,2025,Triple Jump,Triple Jump,13.0,True,1,Specialize all outdoor slots on Triple Jump
+3658,Women,Sprints,2025,200m,200m,117.70000000000005,True,1,Specialize all outdoor slots on 200m
+3664,Women,Jumps,2025,Long Jump,Long Jump,-49.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+3668,Women,Throws,2025,Shot Put,Shot Put,26.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+3680,Men,Sprints,2025,200m,200m,-109.29999999999995,True,1,Specialize all outdoor slots on 200m
+3682,Men,Sprints,2025,200m,200m,-168.29999999999995,True,1,Specialize all outdoor slots on 200m
+3686,Men,Distance,2025,800m,800m,-665.3,True,1,Specialize all outdoor slots on 800m
+3687,Men,Distance,2025,800m,800m,-49.299999999999955,True,2,Specialize all outdoor slots on 800m
+3691,Men,Sprints,2025,200m,200m,46.700000000000045,True,2,Specialize all outdoor slots on 200m
+3694,Men,Jumps,2025,High Jump,High Jump,208.0,True,2,Specialize all outdoor slots on High Jump
+3696,Men,Sprints,2025,400m,400m,-50.700000000000045,True,1,Specialize all outdoor slots on 400m
+3697,Men,Throws,2025,Shot Put,Shot Put,54.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+3698,Men,Sprints,2025,200m,200m,19.700000000000045,True,2,Specialize all outdoor slots on 200m
+3699,Men,Distance,2025,800m,800m,-303.29999999999995,True,2,Specialize all outdoor slots on 800m
+3701,Men,Sprints,2025,200m,200m,-15.299999999999955,True,2,Specialize all outdoor slots on 200m
+3704,Men,Throws,2025,Shot Put,Shot Put,-72.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+3706,Men,Throws,2025,Shot Put,Shot Put,90.29999999999995,True,2,Specialize all outdoor slots on Shot Put
+3708,Men,Sprints,2025,400m,400m,-69.70000000000005,True,2,Specialize all outdoor slots on 400m
+3709,Men,Sprints,2025,400m,400m,-245.70000000000005,True,2,Specialize all outdoor slots on 400m
+3710,Men,Jumps,2025,Long Jump,Triple Jump,-33.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+3713,Men,Distance,2025,800m,800m,-287.29999999999995,True,1,Specialize all outdoor slots on 800m
+3716,Women,Sprints,2025,200m,400m,-308.29999999999995,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3718,Women,Jumps,2025,Triple Jump,High Jump,-69.0,False,1,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+3719,Men,Sprints,2025,200m,200m,24.700000000000045,True,2,Specialize all outdoor slots on 200m
+3720,Men,Sprints,2025,200m,200m,-146.29999999999995,True,1,Specialize all outdoor slots on 200m
+3725,Men,Throws,2025,Shot Put,Shot Put,-142.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+3728,Men,Sprints,2025,200m,200m,-44.299999999999955,True,2,Specialize all outdoor slots on 200m
+3729,Men,Sprints,2025,200m,200m,-211.29999999999995,True,1,Specialize all outdoor slots on 200m
+3735,Men,Throws,2025,Shot Put,Shot Put,-37.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+3790,Men,Distance,2025,1500m,1500m,-419.0,True,1,Specialize all outdoor slots on 1500m
+3794,Women,Throws,2025,Shot Put,Shot Put,-56.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+3796,Women,Sprints,2025,200m,200m,54.700000000000045,True,1,Specialize all outdoor slots on 200m
+3804,Men,Distance,2025,800m,800m,-156.29999999999995,True,1,Specialize all outdoor slots on 800m
+3816,Women,Sprints,2025,200m,200m,-53.299999999999955,True,1,Specialize all outdoor slots on 200m
+3817,Women,Sprints,2025,400m,400m,-122.29999999999995,True,1,Specialize all outdoor slots on 400m
+3832,Men,Distance,2025,1500m,5000m,-129.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+3838,Men,Sprints,2025,200m,400m,-183.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3843,Men,Sprints,2025,400m,400m,-33.700000000000045,True,1,Specialize all outdoor slots on 400m
+3848,Women,Sprints,2025,200m,200m,-68.29999999999995,True,1,Specialize all outdoor slots on 200m
+3851,Men,Sprints,2025,200m,400m,-18.700000000000045,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+3854,Men,Sprints,2025,200m,200m,-128.29999999999995,True,1,Specialize all outdoor slots on 200m
+3934,Women,Sprints,2025,200m,200m,-237.29999999999995,True,1,Specialize all outdoor slots on 200m
+3939,Women,Jumps,2025,Long Jump,Long Jump,-28.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+4073,Men,Sprints,2025,200m,200m,30.700000000000045,True,1,Specialize all outdoor slots on 200m
+4105,Women,Sprints,2025,400m,400m,-74.29999999999995,True,1,Specialize all outdoor slots on 400m
+4111,Men,Sprints,2025,400m,400m,-142.70000000000005,True,1,Specialize all outdoor slots on 400m
+4144,Men,Distance,2025,1500m,1500m,-119.0,True,1,Specialize all outdoor slots on 1500m
+4147,Men,Sprints,2025,400m,400m,-102.70000000000005,True,1,Specialize all outdoor slots on 400m
+4148,Men,Throws,2025,Shot Put,Shot Put,-223.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+4149,Men,Sprints,2025,200m,200m,-126.29999999999995,True,2,Specialize all outdoor slots on 200m
+4234,Women,Distance,2025,1500m,800m,-261.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+4257,Women,Sprints,2025,200m,400m,-148.29999999999995,False,2,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+4260,Women,Jumps,2025,Long Jump,Long Jump,-87.29999999999995,True,1,Specialize all outdoor slots on Long Jump
+4266,Women,Sprints,2025,200m,200m,-25.299999999999955,True,1,Specialize all outdoor slots on 200m
+4270,Women,Sprints,2025,200m,200m,-121.29999999999995,True,1,Specialize all outdoor slots on 200m
+4304,Men,Sprints,2025,400m,400m,-190.70000000000005,True,1,Specialize all outdoor slots on 400m
+4344,Men,Sprints,2025,400m,400m,-358.70000000000005,True,1,Specialize all outdoor slots on 400m
+4379,Men,Jumps,2025,Triple Jump,Triple Jump,-71.70000000000005,True,1,Specialize all outdoor slots on Triple Jump
+4380,Men,Sprints,2025,200m,200m,-203.29999999999995,True,2,Specialize all outdoor slots on 200m
+4386,Men,Sprints,2025,200m,200m,13.700000000000045,True,2,Specialize all outdoor slots on 200m
+4387,Men,Sprints,2025,400m,400m,-178.70000000000005,True,2,Specialize all outdoor slots on 400m
+4393,Men,Sprints,2025,200m,200m,16.700000000000045,True,1,Specialize all outdoor slots on 200m
+4433,Men,Distance,2025,1500m,1500m,-597.0,True,1,Specialize all outdoor slots on 1500m
+4440,Men,Sprints,2025,400m,400m,-47.700000000000045,True,2,Specialize all outdoor slots on 400m
+4475,Men,Sprints,2025,200m,200m,-107.29999999999995,True,1,Specialize all outdoor slots on 200m
+4485,Men,Sprints,2025,200m,400m,-67.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+4665,Women,Distance,2025,5000m,5000m,-29.5,True,1,Specialize all outdoor slots on 5000m
+4726,Men,Distance,2025,800m,800m,-339.29999999999995,True,1,Specialize all outdoor slots on 800m
+4727,Men,Sprints,2025,400m,400m,-101.70000000000005,True,1,Specialize all outdoor slots on 400m
+4802,Women,Throws,2025,Shot Put,Shot Put,6.2999999999999545,True,1,Specialize all outdoor slots on Shot Put
+4910,Men,Distance,2025,800m,5000m,-37.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+4981,Women,Sprints,2025,400m,400m,18.700000000000045,True,1,Specialize all outdoor slots on 400m
+5196,Women,Jumps,2025,Triple Jump,Triple Jump,-140.0,True,2,Specialize all outdoor slots on Triple Jump
+5200,Women,Jumps,2025,Long Jump,Long Jump,-304.29999999999995,True,2,Specialize all outdoor slots on Long Jump
+5228,Men,Throws,2025,Shot Put,Shot Put,-9.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+5229,Men,Throws,2025,Shot Put,Shot Put,-87.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+5242,Men,Throws,2025,Shot Put,Shot Put,-69.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+5246,Men,Sprints,2025,200m,200m,24.700000000000045,True,2,Specialize all outdoor slots on 200m
+5249,Men,Throws,2025,Shot Put,Shot Put,-119.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+5250,Men,Jumps,2025,Triple Jump,Triple Jump,-29.700000000000045,True,2,Specialize all outdoor slots on Triple Jump
+5250,Men,Sprints,2025,200m,200m,-143.29999999999995,True,1,Specialize all outdoor slots on 200m
+5275,Men,Throws,2025,Shot Put,Shot Put,27.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+5301,Women,Sprints,2025,200m,200m,-140.29999999999995,True,1,Specialize all outdoor slots on 200m
+5346,Women,Throws,2025,Shot Put,Shot Put,-58.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+5500,Men,Distance,2025,1500m,1500m,-152.0,True,1,Specialize all outdoor slots on 1500m
+5550,Men,Sprints,2025,200m,200m,-212.29999999999995,True,1,Specialize all outdoor slots on 200m
+5626,Women,Distance,2025,800m,800m,-63.700000000000045,True,1,Specialize all outdoor slots on 800m
+5646,Men,Sprints,2025,400m,400m,-67.70000000000005,True,1,Specialize all outdoor slots on 400m
+7697,Men,Distance,2025,1500m,1500m,-384.0,True,1,Specialize all outdoor slots on 1500m
+7950,Men,Distance,2025,5000m,5000m,-268.0,True,1,Specialize all outdoor slots on 5000m
+7962,Men,Distance,2025,1500m,1500m,-643.0,True,1,Specialize all outdoor slots on 1500m
+7964,Men,Sprints,2025,200m,200m,-580.3,True,1,Specialize all outdoor slots on 200m
+7965,Men,Distance,2025,1500m,1500m,-494.0,True,1,Specialize all outdoor slots on 1500m
+7979,Men,Distance,2025,1500m,1500m,-270.0,True,1,Specialize all outdoor slots on 1500m
+7982,Men,Distance,2025,1500m,1500m,-282.0,True,1,Specialize all outdoor slots on 1500m
+7992,Women,Distance,2025,5000m,1500m,-272.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 1500m (RQ1C≠RQ1A)
+8022,Men,Sprints,2025,400m,400m,-397.70000000000005,True,2,Specialize all outdoor slots on 400m
+8038,Men,Distance,2025,1500m,1500m,-155.0,True,1,Specialize all outdoor slots on 1500m
+8041,Men,Distance,2025,800m,800m,-98.29999999999995,True,1,Specialize all outdoor slots on 800m
+8056,Men,Distance,2025,1500m,5000m,-263.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+8059,Men,Distance,2025,5000m,5000m,-132.0,True,1,Specialize all outdoor slots on 5000m
+8065,Men,Distance,2025,5000m,5000m,-28.0,True,1,Specialize all outdoor slots on 5000m
+8075,Men,Distance,2025,1500m,1500m,-254.0,True,1,Specialize all outdoor slots on 1500m
+8095,Men,Distance,2025,800m,800m,-111.29999999999995,True,1,Specialize all outdoor slots on 800m
+8123,Women,Distance,2025,1500m,1500m,-125.70000000000005,True,1,Specialize all outdoor slots on 1500m
+11307,Men,Distance,2025,800m,800m,-253.29999999999995,True,1,Specialize all outdoor slots on 800m
+11308,Men,Distance,2025,1500m,1500m,-169.0,True,1,Specialize all outdoor slots on 1500m
+11344,Women,Distance,2025,800m,800m,-237.70000000000005,True,1,Specialize all outdoor slots on 800m
+11364,Women,Distance,2025,800m,800m,-445.70000000000005,True,1,Specialize all outdoor slots on 800m
+11400,Men,Distance,2025,800m,800m,-166.29999999999995,True,2,Specialize all outdoor slots on 800m
+16124,Men,Distance,2025,1500m,1500m,-459.0,True,1,Specialize all outdoor slots on 1500m
+16141,Men,Distance,2025,800m,800m,-648.3,True,1,Specialize all outdoor slots on 800m
+16156,Women,Distance,2025,1500m,1500m,-206.70000000000005,True,1,Specialize all outdoor slots on 1500m
+16160,Women,Distance,2025,800m,800m,-159.70000000000005,True,1,Specialize all outdoor slots on 800m
+18726,Women,Distance,2025,1500m,1500m,33.299999999999955,True,1,Specialize all outdoor slots on 1500m
+18741,Women,Sprints,2025,200m,200m,-242.29999999999995,True,1,Specialize all outdoor slots on 200m
+18777,Women,Distance,2025,1500m,1500m,-7.7000000000000455,True,2,Specialize all outdoor slots on 1500m
+18856,Women,Sprints,2025,200m,200m,-448.29999999999995,True,1,Specialize all outdoor slots on 200m
+18878,Men,Distance,2025,1500m,1500m,-334.0,True,1,Specialize all outdoor slots on 1500m
+18879,Men,Distance,2025,1500m,1500m,-210.0,True,1,Specialize all outdoor slots on 1500m
+18897,Men,Distance,2025,1500m,1500m,-619.0,True,1,Specialize all outdoor slots on 1500m
+18922,Women,Distance,2025,5000m,5000m,1.5,True,2,Specialize all outdoor slots on 5000m
+18935,Women,Distance,2025,800m,800m,-234.70000000000005,True,1,Specialize all outdoor slots on 800m
+18971,Men,Distance,2025,5000m,5000m,-92.0,True,1,Specialize all outdoor slots on 5000m
+18977,Men,Distance,2025,800m,800m,-213.29999999999995,True,2,Specialize all outdoor slots on 800m
+18979,Men,Distance,2025,1500m,5000m,-108.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+19007,Men,Distance,2025,5000m,5000m,-343.0,True,1,Specialize all outdoor slots on 5000m
+19007,Men,Sprints,2025,400m,400m,-457.70000000000005,True,1,Specialize all outdoor slots on 400m
+19013,Men,Distance,2025,800m,800m,-454.29999999999995,True,2,Specialize all outdoor slots on 800m
+19364,Men,Distance,2025,1500m,1500m,-159.0,True,1,Specialize all outdoor slots on 1500m
+19376,Men,Distance,2025,800m,800m,-95.29999999999995,True,2,Specialize all outdoor slots on 800m
+19381,Men,Distance,2025,1500m,1500m,-213.0,True,2,Specialize all outdoor slots on 1500m
+19384,Men,Distance,2025,1500m,1500m,-240.0,True,2,Specialize all outdoor slots on 1500m
+19385,Men,Distance,2025,1500m,1500m,-386.0,True,2,Specialize all outdoor slots on 1500m
+19386,Men,Distance,2025,800m,800m,-138.29999999999995,True,1,Specialize all outdoor slots on 800m
+19387,Men,Distance,2025,1500m,1500m,-309.0,True,1,Specialize all outdoor slots on 1500m
+19396,Men,Distance,2025,1500m,1500m,-486.0,True,1,Specialize all outdoor slots on 1500m
+19398,Men,Sprints,2025,400m,400m,-105.70000000000005,True,1,Specialize all outdoor slots on 400m
+19403,Men,Distance,2025,5000m,5000m,-76.0,True,1,Specialize all outdoor slots on 5000m
+19417,Men,Distance,2025,5000m,5000m,-299.0,True,1,Specialize all outdoor slots on 5000m
+19446,Women,Distance,2025,5000m,1500m,-68.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 1500m (RQ1C≠RQ1A)
+19581,Men,Distance,2025,1500m,1500m,-385.0,True,1,Specialize all outdoor slots on 1500m
+19595,Women,Distance,2025,800m,800m,27.299999999999955,True,1,Specialize all outdoor slots on 800m
+19641,Men,Distance,2025,800m,800m,-315.29999999999995,True,1,Specialize all outdoor slots on 800m
+22356,Women,Distance,2025,1500m,1500m,-198.70000000000005,True,1,Specialize all outdoor slots on 1500m
+22385,Men,Distance,2025,1500m,1500m,-31.0,True,1,Specialize all outdoor slots on 1500m
+23919,Men,Sprints,2025,200m,400m,-188.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+24391,Men,Sprints,2025,200m,200m,19.700000000000045,True,1,Specialize all outdoor slots on 200m
+24393,Men,Sprints,2025,200m,200m,-324.29999999999995,True,1,Specialize all outdoor slots on 200m
+24397,Men,Sprints,2025,200m,200m,-511.29999999999995,True,1,Specialize all outdoor slots on 200m
+24397,Men,Throws,2025,Shot Put,Shot Put,-220.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+24398,Men,Sprints,2025,200m,200m,-479.29999999999995,True,1,Specialize all outdoor slots on 200m
+24405,Men,Throws,2025,Shot Put,Shot Put,-128.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+24406,Men,Throws,2025,Shot Put,Shot Put,-230.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+24409,Men,Sprints,2025,400m,400m,-19.700000000000045,True,1,Specialize all outdoor slots on 400m
+24411,Women,Jumps,2025,Triple Jump,Triple Jump,172.0,True,1,Specialize all outdoor slots on Triple Jump
+24411,Women,Sprints,2025,200m,200m,78.70000000000005,True,1,Specialize all outdoor slots on 200m
+24411,Women,Throws,2025,Shot Put,Shot Put,-40.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+24419,Women,Sprints,2025,400m,400m,-148.29999999999995,True,1,Specialize all outdoor slots on 400m
+24434,Men,Sprints,2025,400m,400m,-38.700000000000045,True,1,Specialize all outdoor slots on 400m
+24437,Men,Sprints,2025,400m,400m,-210.70000000000005,True,1,Specialize all outdoor slots on 400m
+24442,Men,Sprints,2025,200m,200m,-110.29999999999995,True,1,Specialize all outdoor slots on 200m
+24444,Men,Sprints,2025,200m,200m,-125.29999999999995,True,1,Specialize all outdoor slots on 200m
+24460,Men,Sprints,2025,200m,200m,-85.29999999999995,True,2,Specialize all outdoor slots on 200m
+24463,Men,Distance,2025,1500m,1500m,-348.0,True,1,Specialize all outdoor slots on 1500m
+24465,Women,Sprints,2025,400m,400m,-111.29999999999995,True,1,Specialize all outdoor slots on 400m
+24466,Women,Sprints,2025,200m,200m,-371.29999999999995,True,1,Specialize all outdoor slots on 200m
+24470,Men,Sprints,2025,200m,200m,-175.29999999999995,True,2,Specialize all outdoor slots on 200m
+24532,Women,Sprints,2025,200m,200m,-238.29999999999995,True,1,Specialize all outdoor slots on 200m
+24541,Men,Sprints,2025,200m,200m,7.7000000000000455,True,2,Specialize all outdoor slots on 200m
+24544,Men,Jumps,2025,Triple Jump,Triple Jump,-81.70000000000005,True,2,Specialize all outdoor slots on Triple Jump
+24567,Women,Jumps,2025,Triple Jump,Triple Jump,63.0,True,2,Specialize all outdoor slots on Triple Jump
+24568,Men,Distance,2025,800m,800m,-296.29999999999995,True,2,Specialize all outdoor slots on 800m
+24571,Men,Jumps,2025,Long Jump,High Jump,-26.0,False,2,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+24573,Women,Sprints,2025,200m,200m,-305.29999999999995,True,2,Specialize all outdoor slots on 200m
+24574,Men,Sprints,2025,200m,200m,109.70000000000005,True,2,Specialize all outdoor slots on 200m
+24578,Men,Jumps,2025,Triple Jump,Triple Jump,3.2999999999999545,True,2,Specialize all outdoor slots on Triple Jump
+24580,Men,Sprints,2025,200m,200m,112.70000000000005,True,2,Specialize all outdoor slots on 200m
+24581,Men,Sprints,2025,200m,200m,46.700000000000045,True,1,Specialize all outdoor slots on 200m
+24585,Men,Throws,2025,Shot Put,Shot Put,-49.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24586,Men,Throws,2025,Shot Put,Shot Put,-111.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+24589,Women,Throws,2025,Shot Put,Shot Put,-10.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24591,Women,Throws,2025,Shot Put,Shot Put,-7.7000000000000455,True,2,Specialize all outdoor slots on Shot Put
+24592,Women,Throws,2025,Shot Put,Shot Put,-56.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24593,Women,Throws,2025,Shot Put,Shot Put,-147.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+24594,Men,Distance,2025,800m,1500m,-335.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 1500m (RQ1C≠RQ1A)
+24595,Men,Distance,2025,800m,800m,62.700000000000045,True,2,Specialize all outdoor slots on 800m
+24600,Women,Sprints,2025,200m,200m,-197.29999999999995,True,2,Specialize all outdoor slots on 200m
+24602,Women,Sprints,2025,400m,400m,153.70000000000005,True,2,Specialize all outdoor slots on 400m
+24604,Women,Distance,2025,800m,800m,-164.70000000000005,True,1,Specialize all outdoor slots on 800m
+24605,Women,Jumps,2025,High Jump,High Jump,216.0,True,2,Specialize all outdoor slots on High Jump
+24607,Men,Sprints,2025,200m,200m,-267.29999999999995,True,1,Specialize all outdoor slots on 200m
+24608,Men,Sprints,2025,200m,200m,-430.29999999999995,True,2,Specialize all outdoor slots on 200m
+24614,Men,Jumps,2025,High Jump,High Jump,69.0,True,1,Specialize all outdoor slots on High Jump
+24635,Men,Sprints,2025,200m,400m,-81.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+24636,Men,Sprints,2025,200m,200m,-206.29999999999995,True,1,Specialize all outdoor slots on 200m
+24640,Men,Distance,2025,800m,800m,66.70000000000005,True,1,Specialize all outdoor slots on 800m
+24642,Men,Distance,2025,1500m,1500m,-185.0,True,1,Specialize all outdoor slots on 1500m
+24643,Men,Distance,2025,1500m,1500m,-172.0,True,1,Specialize all outdoor slots on 1500m
+24654,Men,Distance,2025,5000m,5000m,-547.0,True,1,Specialize all outdoor slots on 5000m
+24672,Men,Jumps,2025,Long Jump,Long Jump,-181.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+24673,Men,Sprints,2025,400m,400m,-49.700000000000045,True,1,Specialize all outdoor slots on 400m
+24675,Men,Sprints,2025,200m,200m,-167.29999999999995,True,1,Specialize all outdoor slots on 200m
+24676,Men,Sprints,2025,200m,400m,-61.700000000000045,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+24678,Men,Distance,2025,5000m,5000m,-229.0,True,1,Specialize all outdoor slots on 5000m
+24679,Women,Sprints,2025,200m,200m,59.700000000000045,True,1,Specialize all outdoor slots on 200m
+24680,Women,Sprints,2025,200m,200m,-82.29999999999995,True,1,Specialize all outdoor slots on 200m
+24682,Women,Sprints,2025,400m,400m,-190.29999999999995,True,1,Specialize all outdoor slots on 400m
+24683,Women,Distance,2025,1500m,1500m,15.299999999999955,True,1,Specialize all outdoor slots on 1500m
+24684,Women,Throws,2025,Shot Put,Shot Put,-96.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+24727,Women,Sprints,2025,200m,200m,-43.299999999999955,True,1,Specialize all outdoor slots on 200m
+24728,Women,Sprints,2025,200m,200m,-273.29999999999995,True,1,Specialize all outdoor slots on 200m
+24733,Men,Sprints,2025,200m,200m,-282.29999999999995,True,1,Specialize all outdoor slots on 200m
+24739,Women,Sprints,2025,200m,200m,-205.29999999999995,True,1,Specialize all outdoor slots on 200m
+24755,Women,Sprints,2025,200m,200m,-254.29999999999995,True,1,Specialize all outdoor slots on 200m
+24800,Men,Throws,2025,Shot Put,Shot Put,15.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+24808,Men,Distance,2025,1500m,1500m,-518.0,True,1,Specialize all outdoor slots on 1500m
+24809,Men,Distance,2025,1500m,1500m,-94.0,True,1,Specialize all outdoor slots on 1500m
+24829,Women,Sprints,2025,400m,400m,-45.299999999999955,True,1,Specialize all outdoor slots on 400m
+24862,Men,Throws,2025,Shot Put,Shot Put,-54.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24869,Men,Sprints,2025,400m,400m,92.29999999999995,True,1,Specialize all outdoor slots on 400m
+24886,Men,Jumps,2025,Long Jump,Long Jump,-47.700000000000045,True,2,Specialize all outdoor slots on Long Jump
+24889,Men,Sprints,2025,200m,200m,-330.29999999999995,True,1,Specialize all outdoor slots on 200m
+24890,Men,Sprints,2025,200m,200m,-404.29999999999995,True,1,Specialize all outdoor slots on 200m
+24942,Women,Sprints,2025,200m,200m,-211.29999999999995,True,1,Specialize all outdoor slots on 200m
+24949,Women,Distance,2025,1500m,1500m,-137.70000000000005,True,1,Specialize all outdoor slots on 1500m
+24957,Women,Sprints,2025,200m,200m,-744.3,True,2,Specialize all outdoor slots on 200m
+24971,Men,Sprints,2025,200m,200m,-350.29999999999995,True,2,Specialize all outdoor slots on 200m
+24983,Men,Sprints,2025,200m,200m,-436.29999999999995,True,1,Specialize all outdoor slots on 200m
+24984,Men,Sprints,2025,200m,200m,-49.299999999999955,True,1,Specialize all outdoor slots on 200m
+24986,Men,Distance,2025,800m,800m,-429.29999999999995,True,1,Specialize all outdoor slots on 800m
+24989,Women,Sprints,2025,200m,400m,-185.29999999999995,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+25022,Women,Distance,2025,800m,800m,3.2999999999999545,True,1,Specialize all outdoor slots on 800m
+25023,Men,Sprints,2025,200m,200m,-29.299999999999955,True,1,Specialize all outdoor slots on 200m
+25024,Men,Sprints,2025,400m,400m,-123.70000000000005,True,2,Specialize all outdoor slots on 400m
+25025,Men,Sprints,2025,200m,200m,-247.29999999999995,True,1,Specialize all outdoor slots on 200m
+25026,Men,Sprints,2025,200m,200m,-177.29999999999995,True,1,Specialize all outdoor slots on 200m
+25030,Men,Distance,2025,1500m,1500m,-348.0,True,2,Specialize all outdoor slots on 1500m
+25033,Men,Jumps,2025,High Jump,High Jump,34.0,True,2,Specialize all outdoor slots on High Jump
+25034,Men,Throws,2025,Shot Put,Shot Put,-99.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+25052,Women,Distance,2025,1500m,1500m,8.299999999999955,True,1,Specialize all outdoor slots on 1500m
+25069,Men,Throws,2025,Shot Put,Shot Put,-118.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+25136,Women,Sprints,2025,200m,200m,-5.2999999999999545,True,1,Specialize all outdoor slots on 200m
+25267,Men,Sprints,2025,200m,200m,-160.29999999999995,True,1,Specialize all outdoor slots on 200m
+25269,Men,Distance,2025,800m,800m,-2.2999999999999545,True,1,Specialize all outdoor slots on 800m
+25346,Men,Distance,2025,1500m,1500m,-270.0,True,1,Specialize all outdoor slots on 1500m
+25666,Women,Sprints,2025,400m,400m,-256.29999999999995,True,2,Specialize all outdoor slots on 400m
+25667,Men,Sprints,2025,200m,200m,-152.29999999999995,True,1,Specialize all outdoor slots on 200m
+25793,Men,Distance,2025,800m,800m,-500.29999999999995,True,1,Specialize all outdoor slots on 800m
+26013,Women,Sprints,2025,200m,200m,-475.29999999999995,True,1,Specialize all outdoor slots on 200m
+29817,Men,Sprints,2025,200m,200m,-63.299999999999955,True,2,Specialize all outdoor slots on 200m
+1,Men,Distance,2026,1500m,5000m,-634.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+7,Men,Distance,2026,5000m,5000m,-50.0,True,1,Specialize all outdoor slots on 5000m
+15,Men,Distance,2026,1500m,1500m,-278.0,True,1,Specialize all outdoor slots on 1500m
+38,Men,Distance,2026,1500m,1500m,-410.0,True,1,Specialize all outdoor slots on 1500m
+45,Men,Distance,2026,1500m,1500m,-481.0,True,1,Specialize all outdoor slots on 1500m
+47,Men,Sprints,2026,200m,200m,-316.29999999999995,True,1,Specialize all outdoor slots on 200m
+60,Men,Distance,2026,1500m,5000m,-786.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+135,Men,Distance,2026,1500m,1500m,43.0,True,1,Specialize all outdoor slots on 1500m
+142,Men,Distance,2026,5000m,5000m,-300.0,True,1,Specialize all outdoor slots on 5000m
+150,Men,Distance,2026,5000m,5000m,-100.0,True,1,Specialize all outdoor slots on 5000m
+161,Men,Distance,2026,1500m,1500m,-302.0,True,1,Specialize all outdoor slots on 1500m
+195,Men,Distance,2026,1500m,1500m,-634.0,True,1,Specialize all outdoor slots on 1500m
+234,Women,Distance,2026,1500m,1500m,-219.70000000000005,True,1,Specialize all outdoor slots on 1500m
+237,Women,Distance,2026,1500m,1500m,-145.70000000000005,True,1,Specialize all outdoor slots on 1500m
+344,Men,Sprints,2026,400m,400m,-233.70000000000005,True,1,Specialize all outdoor slots on 400m
+382,Men,Distance,2026,1500m,1500m,34.0,True,1,Specialize all outdoor slots on 1500m
+417,Men,Distance,2026,1500m,1500m,-47.0,True,1,Specialize all outdoor slots on 1500m
+420,Men,Distance,2026,1500m,1500m,-136.0,True,1,Specialize all outdoor slots on 1500m
+429,Men,Distance,2026,1500m,1500m,-475.0,True,1,Specialize all outdoor slots on 1500m
+466,Men,Distance,2026,5000m,5000m,23.0,True,2,Specialize all outdoor slots on 5000m
+467,Men,Distance,2026,1500m,1500m,-68.0,True,1,Specialize all outdoor slots on 1500m
+529,Men,Distance,2026,1500m,1500m,-274.0,True,1,Specialize all outdoor slots on 1500m
+567,Women,Distance,2026,1500m,1500m,-16.700000000000045,True,2,Specialize all outdoor slots on 1500m
+568,Women,Distance,2026,1500m,1500m,-194.70000000000005,True,1,Specialize all outdoor slots on 1500m
+575,Women,Distance,2026,1500m,1500m,-33.700000000000045,True,2,Specialize all outdoor slots on 1500m
+576,Women,Distance,2026,1500m,1500m,-103.70000000000005,True,1,Specialize all outdoor slots on 1500m
+638,Women,Distance,2026,1500m,1500m,-588.7,True,2,Specialize all outdoor slots on 1500m
+646,Women,Distance,2026,1500m,1500m,-432.70000000000005,True,1,Specialize all outdoor slots on 1500m
+655,Women,Distance,2026,5000m,5000m,-342.5,True,2,Specialize all outdoor slots on 5000m
+663,Women,Distance,2026,800m,800m,-265.70000000000005,True,1,Specialize all outdoor slots on 800m
+666,Men,Distance,2026,1500m,5000m,146.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+673,Men,Distance,2026,5000m,5000m,66.0,True,2,Specialize all outdoor slots on 5000m
+674,Men,Distance,2026,5000m,5000m,-51.0,True,2,Specialize all outdoor slots on 5000m
+676,Men,Distance,2026,1500m,1500m,-123.0,True,1,Specialize all outdoor slots on 1500m
+685,Men,Distance,2026,5000m,5000m,-125.0,True,2,Specialize all outdoor slots on 5000m
+691,Men,Distance,2026,5000m,5000m,-328.0,True,2,Specialize all outdoor slots on 5000m
+704,Men,Distance,2026,800m,800m,-174.29999999999995,True,2,Specialize all outdoor slots on 800m
+705,Men,Distance,2026,5000m,5000m,-65.0,True,2,Specialize all outdoor slots on 5000m
+710,Men,Distance,2026,5000m,5000m,-34.0,True,2,Specialize all outdoor slots on 5000m
+714,Men,Distance,2026,5000m,5000m,-213.0,True,1,Specialize all outdoor slots on 5000m
+743,Men,Distance,2026,1500m,1500m,-337.0,True,2,Specialize all outdoor slots on 1500m
+760,Men,Distance,2026,1500m,1500m,-428.0,True,1,Specialize all outdoor slots on 1500m
+761,Men,Distance,2026,1500m,1500m,-469.0,True,2,Specialize all outdoor slots on 1500m
+786,Men,Distance,2026,800m,800m,-554.3,True,2,Specialize all outdoor slots on 800m
+1020,Women,Distance,2026,5000m,5000m,-18.5,True,2,Specialize all outdoor slots on 5000m
+1032,Women,Distance,2026,5000m,5000m,-242.5,True,2,Specialize all outdoor slots on 5000m
+1116,Women,Distance,2026,5000m,5000m,-347.5,True,1,Specialize all outdoor slots on 5000m
+1231,Men,Distance,2026,5000m,5000m,-195.0,True,1,Specialize all outdoor slots on 5000m
+1266,Men,Distance,2026,1500m,1500m,-342.0,True,2,Specialize all outdoor slots on 1500m
+1288,Men,Distance,2026,5000m,5000m,-251.0,True,1,Specialize all outdoor slots on 5000m
+1294,Men,Distance,2026,1500m,1500m,-220.0,True,1,Specialize all outdoor slots on 1500m
+1309,Men,Distance,2026,800m,800m,-506.29999999999995,True,3,Specialize all outdoor slots on 800m
+1557,Men,Distance,2026,5000m,5000m,-281.0,True,1,Specialize all outdoor slots on 5000m
+1589,Men,Distance,2026,800m,800m,-348.29999999999995,True,2,Specialize all outdoor slots on 800m
+1657,Men,Distance,2026,1500m,1500m,-79.0,True,2,Specialize all outdoor slots on 1500m
+1658,Men,Distance,2026,1500m,1500m,-121.0,True,2,Specialize all outdoor slots on 1500m
+1686,Women,Distance,2026,5000m,5000m,35.5,True,1,Specialize all outdoor slots on 5000m
+1704,Men,Distance,2026,800m,800m,-252.29999999999995,True,2,Specialize all outdoor slots on 800m
+1715,Men,Distance,2026,5000m,5000m,101.0,True,1,Specialize all outdoor slots on 5000m
+1930,Women,Distance,2026,800m,800m,80.29999999999995,True,1,Specialize all outdoor slots on 800m
+1945,Women,Distance,2026,800m,800m,199.29999999999995,True,2,Specialize all outdoor slots on 800m
+1946,Women,Distance,2026,1500m,1500m,-129.70000000000005,True,2,Specialize all outdoor slots on 1500m
+1947,Women,Distance,2026,1500m,1500m,-148.70000000000005,True,2,Specialize all outdoor slots on 1500m
+1948,Women,Distance,2026,800m,800m,-141.70000000000005,True,1,Specialize all outdoor slots on 800m
+1954,Women,Distance,2026,5000m,5000m,-165.5,True,1,Specialize all outdoor slots on 5000m
+2003,Men,Distance,2026,800m,800m,57.700000000000045,True,1,Specialize all outdoor slots on 800m
+2037,Men,Distance,2026,800m,800m,-336.29999999999995,True,1,Specialize all outdoor slots on 800m
+2173,Men,Distance,2026,1500m,1500m,-310.0,True,1,Specialize all outdoor slots on 1500m
+2174,Men,Distance,2026,1500m,1500m,-391.0,True,1,Specialize all outdoor slots on 1500m
+2176,Men,Distance,2026,800m,800m,-165.29999999999995,True,2,Specialize all outdoor slots on 800m
+2302,Men,Distance,2026,1500m,1500m,-178.0,True,3,Specialize all outdoor slots on 1500m
+2387,Women,Distance,2026,800m,800m,-252.70000000000005,True,1,Specialize all outdoor slots on 800m
+2400,Women,Distance,2026,5000m,5000m,-158.5,True,2,Specialize all outdoor slots on 5000m
+2442,Men,Distance,2026,5000m,5000m,-269.0,True,1,Specialize all outdoor slots on 5000m
+2453,Men,Distance,2026,5000m,5000m,-322.0,True,1,Specialize all outdoor slots on 5000m
+2456,Men,Distance,2026,1500m,1500m,-349.0,True,2,Specialize all outdoor slots on 1500m
+2463,Men,Distance,2026,1500m,1500m,-293.0,True,2,Specialize all outdoor slots on 1500m
+2467,Men,Distance,2026,800m,800m,-301.29999999999995,True,1,Specialize all outdoor slots on 800m
+2469,Men,Distance,2026,1500m,1500m,-573.0,True,2,Specialize all outdoor slots on 1500m
+2474,Men,Distance,2026,1500m,1500m,-364.0,True,1,Specialize all outdoor slots on 1500m
+2487,Men,Sprints,2026,200m,200m,-626.3,True,1,Specialize all outdoor slots on 200m
+2540,Men,Distance,2026,800m,800m,-113.29999999999995,True,2,Specialize all outdoor slots on 800m
+2553,Men,Distance,2026,800m,800m,-29.299999999999955,True,1,Specialize all outdoor slots on 800m
+2608,Men,Distance,2026,800m,800m,-467.29999999999995,True,1,Specialize all outdoor slots on 800m
+2700,Women,Distance,2026,1500m,1500m,-175.70000000000005,True,1,Specialize all outdoor slots on 1500m
+2855,Men,Distance,2026,1500m,5000m,-12.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+2867,Men,Distance,2026,800m,800m,-271.29999999999995,True,1,Specialize all outdoor slots on 800m
+2896,Men,Distance,2026,800m,800m,103.70000000000005,True,1,Specialize all outdoor slots on 800m
+2897,Men,Distance,2026,1500m,1500m,-327.0,True,2,Specialize all outdoor slots on 1500m
+2900,Men,Distance,2026,5000m,5000m,-441.0,True,2,Specialize all outdoor slots on 5000m
+3000,Women,Distance,2026,5000m,800m,-24.700000000000045,False,2,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+3015,Men,Distance,2026,800m,800m,-340.29999999999995,True,1,Specialize all outdoor slots on 800m
+3169,Men,Distance,2026,1500m,5000m,-203.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+3522,Men,Sprints,2026,400m,400m,16.299999999999955,True,1,Specialize all outdoor slots on 400m
+3581,Women,Sprints,2026,200m,200m,26.700000000000045,True,2,Specialize all outdoor slots on 200m
+3650,Women,Sprints,2026,400m,400m,48.700000000000045,True,2,Specialize all outdoor slots on 400m
+3654,Women,Distance,2026,800m,800m,-293.70000000000005,True,1,Specialize all outdoor slots on 800m
+3657,Women,Jumps,2026,Triple Jump,Triple Jump,19.0,True,1,Specialize all outdoor slots on Triple Jump
+3664,Women,Jumps,2026,Triple Jump,Triple Jump,-18.0,True,2,Specialize all outdoor slots on Triple Jump
+3666,Women,Jumps,2026,Triple Jump,High Jump,-79.0,False,1,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+3668,Women,Throws,2026,Shot Put,Shot Put,4.2999999999999545,True,3,Specialize all outdoor slots on Shot Put
+3682,Men,Sprints,2026,200m,200m,-155.29999999999995,True,2,Specialize all outdoor slots on 200m
+3692,Men,Throws,2026,Shot Put,Shot Put,97.29999999999995,True,3,Specialize all outdoor slots on Shot Put
+3694,Men,Jumps,2026,High Jump,High Jump,217.0,True,3,Specialize all outdoor slots on High Jump
+3696,Men,Sprints,2026,200m,200m,-128.29999999999995,True,1,Specialize all outdoor slots on 200m
+3706,Men,Throws,2026,Shot Put,Shot Put,67.29999999999995,True,3,Specialize all outdoor slots on Shot Put
+3709,Men,Sprints,2026,400m,400m,-176.70000000000005,True,3,Specialize all outdoor slots on 400m
+3710,Men,Jumps,2026,High Jump,High Jump,0.0,True,3,Specialize all outdoor slots on High Jump
+3710,Men,Sprints,2026,200m,200m,-116.29999999999995,True,2,Specialize all outdoor slots on 200m
+3713,Men,Distance,2026,800m,800m,-240.29999999999995,True,1,Specialize all outdoor slots on 800m
+3719,Men,Sprints,2026,200m,200m,-4.2999999999999545,True,3,Specialize all outdoor slots on 200m
+3720,Men,Sprints,2026,200m,200m,-425.29999999999995,True,1,Specialize all outdoor slots on 200m
+3725,Men,Sprints,2026,400m,400m,-205.70000000000005,True,1,Specialize all outdoor slots on 400m
+3728,Men,Sprints,2026,400m,400m,-74.70000000000005,True,2,Specialize all outdoor slots on 400m
+3733,Men,Sprints,2026,200m,200m,39.700000000000045,True,1,Specialize all outdoor slots on 200m
+3755,Women,Distance,2026,5000m,5000m,-415.5,True,1,Specialize all outdoor slots on 5000m
+3764,Men,Sprints,2026,200m,200m,-2.2999999999999545,True,1,Specialize all outdoor slots on 200m
+3790,Men,Distance,2026,5000m,5000m,-245.0,True,2,Specialize all outdoor slots on 5000m
+3832,Men,Distance,2026,5000m,5000m,-48.0,True,2,Specialize all outdoor slots on 5000m
+3837,Men,Distance,2026,5000m,5000m,-89.0,True,1,Specialize all outdoor slots on 5000m
+3843,Men,Sprints,2026,200m,200m,89.70000000000005,True,1,Specialize all outdoor slots on 200m
+3845,Men,Jumps,2026,Long Jump,Long Jump,-62.700000000000045,True,2,Specialize all outdoor slots on Long Jump
+3871,Men,Sprints,2026,200m,200m,29.700000000000045,True,1,Specialize all outdoor slots on 200m
+4036,Men,Sprints,2026,400m,400m,-188.70000000000005,True,1,Specialize all outdoor slots on 400m
+4073,Men,Sprints,2026,200m,200m,81.70000000000005,True,2,Specialize all outdoor slots on 200m
+4092,Women,Distance,2026,800m,800m,-154.70000000000005,True,1,Specialize all outdoor slots on 800m
+4094,Women,Distance,2026,1500m,1500m,-471.70000000000005,True,1,Specialize all outdoor slots on 1500m
+4148,Men,Throws,2026,Shot Put,Shot Put,-206.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+4149,Men,Sprints,2026,200m,200m,-30.299999999999955,True,3,Specialize all outdoor slots on 200m
+4241,Women,Distance,2026,1500m,800m,-277.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+4264,Women,Jumps,2026,High Jump,High Jump,-32.0,True,1,Specialize all outdoor slots on High Jump
+4266,Women,Sprints,2026,200m,200m,15.700000000000045,True,1,Specialize all outdoor slots on 200m
+4270,Women,Sprints,2026,200m,200m,-137.29999999999995,True,2,Specialize all outdoor slots on 200m
+4288,Women,Distance,2026,800m,800m,-234.70000000000005,True,1,Specialize all outdoor slots on 800m
+4304,Men,Distance,2026,800m,800m,-363.29999999999995,True,1,Specialize all outdoor slots on 800m
+4304,Men,Sprints,2026,200m,200m,-189.29999999999995,True,1,Specialize all outdoor slots on 200m
+4306,Men,Sprints,2026,400m,400m,-59.700000000000045,True,1,Specialize all outdoor slots on 400m
+4337,Men,Sprints,2026,200m,200m,-421.29999999999995,True,1,Specialize all outdoor slots on 200m
+4380,Men,Sprints,2026,200m,200m,-311.29999999999995,True,2,Specialize all outdoor slots on 200m
+4386,Men,Sprints,2026,400m,400m,-131.70000000000005,True,2,Specialize all outdoor slots on 400m
+4432,Men,Distance,2026,5000m,5000m,-404.0,True,1,Specialize all outdoor slots on 5000m
+4732,Men,Distance,2026,5000m,5000m,-274.0,True,1,Specialize all outdoor slots on 5000m
+4864,Men,Sprints,2026,200m,200m,-319.29999999999995,True,1,Specialize all outdoor slots on 200m
+4910,Men,Distance,2026,800m,800m,-5.2999999999999545,True,1,Specialize all outdoor slots on 800m
+5197,Women,Throws,2026,Shot Put,Shot Put,29.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+5202,Women,Distance,2026,800m,800m,-223.70000000000005,True,1,Specialize all outdoor slots on 800m
+5229,Men,Throws,2026,Shot Put,Shot Put,-8.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+5230,Men,Distance,2026,800m,800m,-153.29999999999995,True,2,Specialize all outdoor slots on 800m
+5234,Men,Sprints,2026,200m,200m,6.7000000000000455,True,1,Specialize all outdoor slots on 200m
+5242,Men,Throws,2026,Shot Put,Shot Put,-37.700000000000045,True,1,Specialize all outdoor slots on Shot Put
+5246,Men,Sprints,2026,200m,200m,75.70000000000005,True,1,Specialize all outdoor slots on 200m
+5247,Men,Throws,2026,Shot Put,Shot Put,-104.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+5275,Men,Throws,2026,Shot Put,Shot Put,1.2999999999999545,True,2,Specialize all outdoor slots on Shot Put
+5345,Women,Distance,2026,800m,800m,-619.7,True,1,Specialize all outdoor slots on 800m
+5346,Women,Throws,2026,Shot Put,Shot Put,-103.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+5500,Men,Distance,2026,800m,800m,190.70000000000005,True,2,Specialize all outdoor slots on 800m
+5616,Men,Distance,2026,1500m,1500m,-318.0,True,2,Specialize all outdoor slots on 1500m
+5626,Women,Sprints,2026,400m,400m,-127.29999999999995,True,2,Specialize all outdoor slots on 400m
+5679,Women,Sprints,2026,400m,400m,-199.29999999999995,True,1,Specialize all outdoor slots on 400m
+5708,Men,Distance,2026,1500m,1500m,-251.0,True,1,Specialize all outdoor slots on 1500m
+5768,Men,Sprints,2026,200m,200m,-133.29999999999995,True,1,Specialize all outdoor slots on 200m
+7641,Men,Distance,2026,5000m,5000m,-296.0,True,2,Specialize all outdoor slots on 5000m
+7697,Men,Distance,2026,5000m,5000m,-342.0,True,2,Specialize all outdoor slots on 5000m
+7975,Men,Distance,2026,5000m,5000m,99.0,True,1,Specialize all outdoor slots on 5000m
+7982,Men,Distance,2026,1500m,1500m,-286.0,True,1,Specialize all outdoor slots on 1500m
+8038,Men,Distance,2026,1500m,1500m,-23.0,True,1,Specialize all outdoor slots on 1500m
+8058,Men,Distance,2026,5000m,5000m,-199.0,True,1,Specialize all outdoor slots on 5000m
+8064,Men,Distance,2026,1500m,1500m,-313.0,True,1,Specialize all outdoor slots on 1500m
+8068,Men,Distance,2026,1500m,1500m,-284.0,True,1,Specialize all outdoor slots on 1500m
+8108,Men,Distance,2026,1500m,1500m,-49.0,True,2,Specialize all outdoor slots on 1500m
+8125,Women,Distance,2026,1500m,1500m,-273.70000000000005,True,1,Specialize all outdoor slots on 1500m
+8146,Men,Distance,2026,5000m,5000m,70.0,True,1,Specialize all outdoor slots on 5000m
+11307,Men,Distance,2026,1500m,5000m,-99.0,False,1,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+11341,Women,Distance,2026,5000m,5000m,-189.5,True,1,Specialize all outdoor slots on 5000m
+11364,Women,Distance,2026,5000m,5000m,-491.5,True,2,Specialize all outdoor slots on 5000m
+11400,Men,Distance,2026,800m,800m,-282.29999999999995,True,1,Specialize all outdoor slots on 800m
+11485,Men,Distance,2026,1500m,1500m,-302.0,True,1,Specialize all outdoor slots on 1500m
+16123,Men,Distance,2026,5000m,5000m,-330.0,True,2,Specialize all outdoor slots on 5000m
+16132,Men,Distance,2026,800m,800m,-636.3,True,2,Specialize all outdoor slots on 800m
+16141,Men,Distance,2026,5000m,5000m,-541.0,True,2,Specialize all outdoor slots on 5000m
+16147,Men,Distance,2026,5000m,5000m,-405.0,True,2,Specialize all outdoor slots on 5000m
+16158,Women,Distance,2026,1500m,1500m,-215.70000000000005,True,2,Specialize all outdoor slots on 1500m
+18319,Men,Distance,2026,1500m,1500m,-325.0,True,1,Specialize all outdoor slots on 1500m
+18787,Men,Distance,2026,1500m,1500m,-310.0,True,1,Specialize all outdoor slots on 1500m
+18922,Women,Distance,2026,5000m,5000m,48.5,True,2,Specialize all outdoor slots on 5000m
+18963,Men,Distance,2026,5000m,5000m,-148.0,True,1,Specialize all outdoor slots on 5000m
+18977,Men,Distance,2026,800m,800m,-250.29999999999995,True,2,Specialize all outdoor slots on 800m
+18979,Men,Distance,2026,1500m,5000m,-35.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+18982,Men,Distance,2026,1500m,1500m,-196.0,True,2,Specialize all outdoor slots on 1500m
+19007,Men,Distance,2026,800m,800m,-389.29999999999995,True,1,Specialize all outdoor slots on 800m
+19013,Men,Distance,2026,1500m,1500m,-640.0,True,1,Specialize all outdoor slots on 1500m
+19375,Men,Distance,2026,1500m,1500m,139.0,True,1,Specialize all outdoor slots on 1500m
+19384,Men,Distance,2026,1500m,1500m,-301.0,True,2,Specialize all outdoor slots on 1500m
+19386,Men,Distance,2026,800m,800m,-162.29999999999995,True,2,Specialize all outdoor slots on 800m
+19387,Men,Distance,2026,5000m,5000m,-332.0,True,2,Specialize all outdoor slots on 5000m
+19411,Men,Distance,2026,800m,800m,-110.29999999999995,True,1,Specialize all outdoor slots on 800m
+19417,Men,Distance,2026,5000m,5000m,-322.0,True,2,Specialize all outdoor slots on 5000m
+19424,Men,Distance,2026,1500m,1500m,-231.0,True,1,Specialize all outdoor slots on 1500m
+19449,Women,Distance,2026,5000m,5000m,-167.5,True,1,Specialize all outdoor slots on 5000m
+19505,Women,Distance,2026,5000m,5000m,30.5,True,1,Specialize all outdoor slots on 5000m
+20472,Men,Distance,2026,1500m,1500m,-150.0,True,1,Specialize all outdoor slots on 1500m
+20477,Men,Distance,2026,1500m,1500m,-484.0,True,1,Specialize all outdoor slots on 1500m
+20764,Women,Distance,2026,1500m,1500m,42.299999999999955,True,2,Specialize all outdoor slots on 1500m
+21482,Men,Distance,2026,800m,800m,-402.29999999999995,True,2,Specialize all outdoor slots on 800m
+22384,Men,Distance,2026,800m,800m,4.7000000000000455,True,1,Specialize all outdoor slots on 800m
+22588,Men,Distance,2026,1500m,1500m,-69.0,True,3,Specialize all outdoor slots on 1500m
+22592,Men,Distance,2026,1500m,1500m,-75.0,True,1,Specialize all outdoor slots on 1500m
+22598,Women,Distance,2026,1500m,1500m,-71.70000000000005,True,3,Specialize all outdoor slots on 1500m
+23472,Men,Distance,2026,1500m,1500m,-79.0,True,1,Specialize all outdoor slots on 1500m
+23476,Men,Distance,2026,800m,800m,-349.29999999999995,True,1,Specialize all outdoor slots on 800m
+23908,Women,Sprints,2026,200m,200m,-198.29999999999995,True,2,Specialize all outdoor slots on 200m
+23919,Men,Sprints,2026,200m,200m,-133.29999999999995,True,2,Specialize all outdoor slots on 200m
+24411,Women,Jumps,2026,Triple Jump,Triple Jump,116.0,True,1,Specialize all outdoor slots on Triple Jump
+24415,Men,Sprints,2026,200m,200m,86.70000000000005,True,2,Specialize all outdoor slots on 200m
+24421,Men,Distance,2026,800m,800m,-87.29999999999995,True,1,Specialize all outdoor slots on 800m
+24424,Men,Throws,2026,Shot Put,Shot Put,48.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+24454,Men,Throws,2026,Shot Put,Shot Put,-102.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+24460,Men,Sprints,2026,200m,200m,-118.29999999999995,True,2,Specialize all outdoor slots on 200m
+24567,Women,Jumps,2026,Triple Jump,Triple Jump,62.0,True,3,Specialize all outdoor slots on Triple Jump
+24568,Men,Distance,2026,800m,800m,-280.29999999999995,True,3,Specialize all outdoor slots on 800m
+24571,Men,Jumps,2026,High Jump,High Jump,-17.0,True,3,Specialize all outdoor slots on High Jump
+24572,Women,Sprints,2026,200m,200m,134.70000000000005,True,3,Specialize all outdoor slots on 200m
+24573,Women,Sprints,2026,200m,200m,-267.29999999999995,True,3,Specialize all outdoor slots on 200m
+24576,Women,Jumps,2026,Long Jump,Triple Jump,-131.0,False,1,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+24579,Women,Sprints,2026,400m,400m,-39.299999999999955,True,2,Specialize all outdoor slots on 400m
+24580,Men,Sprints,2026,200m,200m,181.70000000000005,True,2,Specialize all outdoor slots on 200m
+24585,Men,Throws,2026,Shot Put,Shot Put,-41.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24586,Men,Throws,2026,Shot Put,Shot Put,-120.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+24589,Women,Throws,2026,Shot Put,Shot Put,42.299999999999955,True,3,Specialize all outdoor slots on Shot Put
+24591,Women,Throws,2026,Shot Put,Shot Put,-19.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24592,Women,Throws,2026,Shot Put,Shot Put,-8.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+24593,Women,Throws,2026,Shot Put,Shot Put,-139.70000000000005,True,3,Specialize all outdoor slots on Shot Put
+24594,Men,Distance,2026,800m,800m,-314.29999999999995,True,2,Specialize all outdoor slots on 800m
+24595,Men,Distance,2026,800m,800m,149.70000000000005,True,2,Specialize all outdoor slots on 800m
+24602,Women,Sprints,2026,400m,400m,16.700000000000045,True,2,Specialize all outdoor slots on 400m
+24604,Women,Distance,2026,800m,800m,-253.70000000000005,True,2,Specialize all outdoor slots on 800m
+24605,Women,Jumps,2026,Triple Jump,High Jump,139.0,False,2,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+24607,Men,Sprints,2026,200m,200m,-181.29999999999995,True,2,Specialize all outdoor slots on 200m
+24608,Men,Sprints,2026,200m,200m,-533.3,True,1,Specialize all outdoor slots on 200m
+24617,Men,Throws,2026,Shot Put,Shot Put,-38.700000000000045,True,3,Specialize all outdoor slots on Shot Put
+24623,Women,Sprints,2026,200m,200m,10.700000000000045,True,1,Specialize all outdoor slots on 200m
+24625,Women,Sprints,2026,200m,200m,79.70000000000005,True,1,Specialize all outdoor slots on 200m
+24630,Men,Sprints,2026,200m,200m,-64.29999999999995,True,1,Specialize all outdoor slots on 200m
+24634,Men,Sprints,2026,400m,400m,177.29999999999995,True,1,Specialize all outdoor slots on 400m
+24668,Women,Jumps,2026,Long Jump,Long Jump,-42.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+24676,Men,Sprints,2026,400m,400m,102.29999999999995,True,2,Specialize all outdoor slots on 400m
+24687,Women,Sprints,2026,200m,200m,66.70000000000005,True,1,Specialize all outdoor slots on 200m
+24694,Men,Sprints,2026,200m,200m,-291.29999999999995,True,1,Specialize all outdoor slots on 200m
+24700,Men,Distance,2026,5000m,5000m,-355.0,True,1,Specialize all outdoor slots on 5000m
+24701,Men,Throws,2026,Shot Put,Shot Put,26.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+24711,Men,Distance,2026,1500m,1500m,-354.0,True,1,Specialize all outdoor slots on 1500m
+24717,Women,Sprints,2026,400m,400m,29.700000000000045,True,1,Specialize all outdoor slots on 400m
+24739,Women,Jumps,2026,Long Jump,Long Jump,-62.299999999999955,True,2,Specialize all outdoor slots on Long Jump
+24739,Women,Sprints,2026,200m,200m,-175.29999999999995,True,2,Specialize all outdoor slots on 200m
+24829,Women,Sprints,2026,200m,200m,-110.29999999999995,True,1,Specialize all outdoor slots on 200m
+24835,Men,Sprints,2026,400m,400m,-240.70000000000005,True,1,Specialize all outdoor slots on 400m
+24859,Men,Distance,2026,5000m,5000m,-232.0,True,1,Specialize all outdoor slots on 5000m
+24862,Men,Throws,2026,Shot Put,Shot Put,11.299999999999955,True,3,Specialize all outdoor slots on Shot Put
+24869,Men,Sprints,2026,400m,400m,87.29999999999995,True,2,Specialize all outdoor slots on 400m
+24880,Men,Sprints,2026,200m,200m,-0.2999999999999545,True,3,Specialize all outdoor slots on 200m
+24882,Men,Sprints,2026,200m,200m,-147.29999999999995,True,1,Specialize all outdoor slots on 200m
+24888,Men,Sprints,2026,200m,200m,-85.29999999999995,True,3,Specialize all outdoor slots on 200m
+24891,Men,Sprints,2026,200m,200m,-302.29999999999995,True,3,Specialize all outdoor slots on 200m
+24896,Men,Sprints,2026,200m,200m,-69.29999999999995,True,1,Specialize all outdoor slots on 200m
+24911,Men,Distance,2026,800m,800m,-399.29999999999995,True,2,Specialize all outdoor slots on 800m
+24914,Men,Distance,2026,800m,800m,112.70000000000005,True,2,Specialize all outdoor slots on 800m
+24935,Men,Jumps,2026,Long Jump,Triple Jump,-188.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+24949,Women,Sprints,2026,400m,400m,40.700000000000045,True,1,Specialize all outdoor slots on 400m
+24977,Men,Sprints,2026,200m,200m,-228.29999999999995,True,1,Specialize all outdoor slots on 200m
+25022,Women,Distance,2026,5000m,1500m,-69.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 1500m (RQ1C≠RQ1A)
+25024,Men,Sprints,2026,400m,400m,-47.700000000000045,True,1,Specialize all outdoor slots on 400m
+25030,Men,Distance,2026,1500m,1500m,-290.0,True,2,Specialize all outdoor slots on 1500m
+25082,Men,Sprints,2026,400m,400m,-162.70000000000005,True,1,Specialize all outdoor slots on 400m
+25085,Men,Sprints,2026,400m,400m,-140.70000000000005,True,1,Specialize all outdoor slots on 400m
+25098,Women,Distance,2026,1500m,1500m,-71.70000000000005,True,1,Specialize all outdoor slots on 1500m
+25473,Men,Sprints,2026,200m,200m,-183.29999999999995,True,1,Specialize all outdoor slots on 200m
+25474,Men,Sprints,2026,200m,200m,-131.29999999999995,True,2,Specialize all outdoor slots on 200m
+25550,Men,Distance,2026,1500m,1500m,-231.0,True,1,Specialize all outdoor slots on 1500m
+25555,Men,Throws,2026,Shot Put,Shot Put,140.29999999999995,True,1,Specialize all outdoor slots on Shot Put
+25605,Women,Jumps,2026,High Jump,High Jump,101.0,True,1,Specialize all outdoor slots on High Jump
+25878,Men,Jumps,2026,Long Jump,Long Jump,-39.700000000000045,True,2,Specialize all outdoor slots on Long Jump
+26020,Men,Distance,2026,1500m,1500m,-282.0,True,2,Specialize all outdoor slots on 1500m
+26193,Women,Sprints,2026,400m,400m,-78.29999999999995,True,2,Specialize all outdoor slots on 400m
+26491,Men,Throws,2026,Shot Put,Shot Put,-98.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+26504,Men,Sprints,2026,400m,400m,0.2999999999999545,True,1,Specialize all outdoor slots on 400m
+26507,Men,Distance,2026,5000m,5000m,-80.0,True,1,Specialize all outdoor slots on 5000m
+26511,Men,Sprints,2026,200m,200m,-272.29999999999995,True,2,Specialize all outdoor slots on 200m
+26627,Men,Distance,2026,1500m,5000m,18.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+26818,Men,Distance,2026,5000m,5000m,-306.0,True,1,Specialize all outdoor slots on 5000m
+26824,Women,Distance,2026,1500m,1500m,-524.7,True,1,Specialize all outdoor slots on 1500m
+26826,Women,Sprints,2026,200m,200m,-318.29999999999995,True,1,Specialize all outdoor slots on 200m
+26829,Women,Distance,2026,800m,800m,-476.70000000000005,True,1,Specialize all outdoor slots on 800m
+26830,Women,Distance,2026,1500m,1500m,-446.70000000000005,True,2,Specialize all outdoor slots on 1500m
+26835,Men,Distance,2026,5000m,5000m,-293.0,True,1,Specialize all outdoor slots on 5000m
+26845,Men,Distance,2026,1500m,1500m,-282.0,True,1,Specialize all outdoor slots on 1500m
+26847,Men,Distance,2026,5000m,5000m,-379.0,True,1,Specialize all outdoor slots on 5000m
+26852,Women,Distance,2026,5000m,5000m,-92.5,True,1,Specialize all outdoor slots on 5000m
+26873,Women,Distance,2026,5000m,5000m,-31.5,True,1,Specialize all outdoor slots on 5000m
+26884,Women,Distance,2026,1500m,1500m,-398.70000000000005,True,1,Specialize all outdoor slots on 1500m
+26895,Men,Distance,2026,800m,800m,-466.29999999999995,True,1,Specialize all outdoor slots on 800m
+26895,Men,Sprints,2026,200m,200m,-351.29999999999995,True,1,Specialize all outdoor slots on 200m
+26944,Women,Distance,2026,1500m,1500m,127.29999999999995,True,1,Specialize all outdoor slots on 1500m
+26946,Women,Distance,2026,1500m,800m,39.299999999999955,False,2,Meet 1: explore alternate; Meets 2–N: lock 800m (RQ1C≠RQ1A)
+26947,Women,Distance,2026,1500m,1500m,45.299999999999955,True,2,Specialize all outdoor slots on 1500m
+26949,Women,Distance,2026,1500m,1500m,-274.70000000000005,True,1,Specialize all outdoor slots on 1500m
+26951,Women,Distance,2026,800m,800m,-330.70000000000005,True,1,Specialize all outdoor slots on 800m
+26962,Women,Distance,2026,1500m,1500m,-440.70000000000005,True,1,Specialize all outdoor slots on 1500m
+26966,Men,Distance,2026,5000m,5000m,-148.0,True,1,Specialize all outdoor slots on 5000m
+26967,Men,Distance,2026,5000m,5000m,-33.0,True,2,Specialize all outdoor slots on 5000m
+26970,Men,Distance,2026,1500m,1500m,-89.0,True,2,Specialize all outdoor slots on 1500m
+26979,Men,Distance,2026,800m,800m,-149.29999999999995,True,1,Specialize all outdoor slots on 800m
+26985,Men,Distance,2026,1500m,1500m,-520.0,True,1,Specialize all outdoor slots on 1500m
+26993,Men,Distance,2026,5000m,5000m,8.0,True,2,Specialize all outdoor slots on 5000m
+26994,Men,Distance,2026,5000m,5000m,-134.0,True,1,Specialize all outdoor slots on 5000m
+26998,Men,Distance,2026,1500m,1500m,-166.0,True,2,Specialize all outdoor slots on 1500m
+27000,Men,Distance,2026,1500m,1500m,-43.0,True,3,Specialize all outdoor slots on 1500m
+27002,Men,Distance,2026,5000m,5000m,-142.0,True,2,Specialize all outdoor slots on 5000m
+27003,Men,Distance,2026,800m,800m,-184.29999999999995,True,1,Specialize all outdoor slots on 800m
+27004,Men,Distance,2026,1500m,1500m,-250.0,True,2,Specialize all outdoor slots on 1500m
+27009,Men,Distance,2026,5000m,5000m,-299.0,True,2,Specialize all outdoor slots on 5000m
+27010,Men,Distance,2026,800m,800m,-231.29999999999995,True,2,Specialize all outdoor slots on 800m
+27017,Men,Distance,2026,5000m,5000m,-392.0,True,2,Specialize all outdoor slots on 5000m
+27058,Women,Distance,2026,1500m,1500m,-180.70000000000005,True,2,Specialize all outdoor slots on 1500m
+27059,Women,Distance,2026,800m,800m,-252.70000000000005,True,1,Specialize all outdoor slots on 800m
+27072,Women,Sprints,2026,200m,200m,-177.29999999999995,True,2,Specialize all outdoor slots on 200m
+27078,Men,Distance,2026,5000m,5000m,-46.0,True,1,Specialize all outdoor slots on 5000m
+27088,Men,Distance,2026,1500m,1500m,-280.0,True,1,Specialize all outdoor slots on 1500m
+27101,Women,Distance,2026,5000m,5000m,-43.5,True,1,Specialize all outdoor slots on 5000m
+27191,Women,Distance,2026,800m,800m,-85.70000000000005,True,2,Specialize all outdoor slots on 800m
+27193,Women,Distance,2026,5000m,5000m,-196.5,True,1,Specialize all outdoor slots on 5000m
+27206,Men,Distance,2026,800m,800m,-569.3,True,1,Specialize all outdoor slots on 800m
+27209,Men,Distance,2026,5000m,5000m,-537.0,True,2,Specialize all outdoor slots on 5000m
+27229,Women,Distance,2026,800m,800m,57.299999999999955,True,1,Specialize all outdoor slots on 800m
+27236,Men,Distance,2026,5000m,5000m,-224.0,True,1,Specialize all outdoor slots on 5000m
+27261,Women,Distance,2026,800m,800m,-89.70000000000005,True,1,Specialize all outdoor slots on 800m
+27262,Women,Distance,2026,1500m,1500m,-376.70000000000005,True,1,Specialize all outdoor slots on 1500m
+27294,Men,Distance,2026,5000m,5000m,119.0,True,1,Specialize all outdoor slots on 5000m
+27297,Men,Distance,2026,800m,800m,-281.29999999999995,True,1,Specialize all outdoor slots on 800m
+27298,Men,Distance,2026,800m,800m,-28.299999999999955,True,1,Specialize all outdoor slots on 800m
+27299,Men,Distance,2026,1500m,1500m,24.0,True,1,Specialize all outdoor slots on 1500m
+27308,Men,Distance,2026,1500m,5000m,-264.0,False,2,Meet 1: explore alternate; Meets 2–N: lock 5000m (RQ1C≠RQ1A)
+27349,Women,Distance,2026,800m,800m,-194.70000000000005,True,1,Specialize all outdoor slots on 800m
+27396,Men,Distance,2026,1500m,1500m,-315.0,True,1,Specialize all outdoor slots on 1500m
+27487,Men,Distance,2026,5000m,5000m,-146.0,True,1,Specialize all outdoor slots on 5000m
+27491,Men,Distance,2026,1500m,1500m,-400.0,True,2,Specialize all outdoor slots on 1500m
+27496,Men,Distance,2026,800m,800m,-203.29999999999995,True,2,Specialize all outdoor slots on 800m
+27499,Men,Distance,2026,800m,800m,-303.29999999999995,True,1,Specialize all outdoor slots on 800m
+27500,Men,Distance,2026,5000m,5000m,-223.0,True,1,Specialize all outdoor slots on 5000m
+27501,Men,Distance,2026,800m,800m,-409.29999999999995,True,2,Specialize all outdoor slots on 800m
+27516,Men,Distance,2026,800m,800m,-770.3,True,1,Specialize all outdoor slots on 800m
+27524,Women,Distance,2026,800m,800m,47.299999999999955,True,2,Specialize all outdoor slots on 800m
+27526,Women,Distance,2026,5000m,5000m,-133.5,True,2,Specialize all outdoor slots on 5000m
+27528,Women,Distance,2026,800m,800m,-216.70000000000005,True,1,Specialize all outdoor slots on 800m
+27548,Men,Distance,2026,5000m,5000m,-65.0,True,1,Specialize all outdoor slots on 5000m
+27555,Men,Distance,2026,1500m,1500m,-109.0,True,1,Specialize all outdoor slots on 1500m
+27572,Men,Distance,2026,1500m,1500m,-444.0,True,1,Specialize all outdoor slots on 1500m
+27574,Men,Distance,2026,5000m,5000m,-440.0,True,1,Specialize all outdoor slots on 5000m
+27584,Men,Distance,2026,1500m,1500m,-579.0,True,1,Specialize all outdoor slots on 1500m
+27601,Women,Distance,2026,1500m,1500m,-94.70000000000005,True,1,Specialize all outdoor slots on 1500m
+27605,Women,Distance,2026,1500m,1500m,-152.70000000000005,True,1,Specialize all outdoor slots on 1500m
+27627,Women,Distance,2026,1500m,1500m,-413.70000000000005,True,1,Specialize all outdoor slots on 1500m
+27744,Men,Distance,2026,5000m,5000m,-49.0,True,2,Specialize all outdoor slots on 5000m
+27746,Women,Distance,2026,1500m,1500m,84.29999999999995,True,2,Specialize all outdoor slots on 1500m
+27747,Women,Distance,2026,1500m,1500m,69.29999999999995,True,2,Specialize all outdoor slots on 1500m
+27875,Women,Sprints,2026,200m,200m,-486.29999999999995,True,1,Specialize all outdoor slots on 200m
+27911,Men,Distance,2026,800m,800m,-497.29999999999995,True,2,Specialize all outdoor slots on 800m
+27917,Men,Sprints,2026,400m,400m,31.299999999999955,True,1,Specialize all outdoor slots on 400m
+27942,Women,Distance,2026,1500m,1500m,-443.70000000000005,True,2,Specialize all outdoor slots on 1500m
+27953,Men,Distance,2026,5000m,5000m,-104.0,True,1,Specialize all outdoor slots on 5000m
+27971,Women,Distance,2026,1500m,1500m,-548.7,True,1,Specialize all outdoor slots on 1500m
+27988,Men,Distance,2026,5000m,5000m,-349.0,True,1,Specialize all outdoor slots on 5000m
+28005,Men,Distance,2026,800m,800m,-252.29999999999995,True,1,Specialize all outdoor slots on 800m
+28267,Women,Distance,2026,5000m,5000m,-167.5,True,2,Specialize all outdoor slots on 5000m
+28292,Men,Distance,2026,1500m,1500m,-177.0,True,1,Specialize all outdoor slots on 1500m
+28295,Men,Distance,2026,800m,800m,-364.29999999999995,True,1,Specialize all outdoor slots on 800m
+28308,Men,Distance,2026,800m,800m,-126.29999999999995,True,1,Specialize all outdoor slots on 800m
+28319,Men,Distance,2026,800m,800m,-205.29999999999995,True,1,Specialize all outdoor slots on 800m
+28331,Men,Sprints,2026,200m,200m,-176.29999999999995,True,1,Specialize all outdoor slots on 200m
+28345,Men,Distance,2026,1500m,1500m,-165.0,True,1,Specialize all outdoor slots on 1500m
+28355,Women,Distance,2026,1500m,1500m,-97.70000000000005,True,3,Specialize all outdoor slots on 1500m
+28357,Women,Distance,2026,1500m,1500m,-175.70000000000005,True,3,Specialize all outdoor slots on 1500m
+28361,Men,Distance,2026,1500m,1500m,-56.0,True,2,Specialize all outdoor slots on 1500m
+28362,Men,Distance,2026,1500m,1500m,-166.0,True,2,Specialize all outdoor slots on 1500m
+28364,Men,Distance,2026,1500m,1500m,-278.0,True,1,Specialize all outdoor slots on 1500m
+28411,Men,Distance,2026,1500m,1500m,-255.0,True,1,Specialize all outdoor slots on 1500m
+28512,Women,Distance,2026,800m,800m,-230.70000000000005,True,1,Specialize all outdoor slots on 800m
+28782,Men,Distance,2026,1500m,1500m,-459.0,True,2,Specialize all outdoor slots on 1500m
+29447,Men,Sprints,2026,200m,200m,-24.299999999999955,True,1,Specialize all outdoor slots on 200m
+29449,Men,Sprints,2026,200m,200m,-515.3,True,3,Specialize all outdoor slots on 200m
+29454,Women,Sprints,2026,200m,200m,-33.299999999999955,True,1,Specialize all outdoor slots on 200m
+29455,Women,Jumps,2026,High Jump,High Jump,25.0,True,2,Specialize all outdoor slots on High Jump
+29456,Men,Sprints,2026,400m,400m,-15.700000000000045,True,3,Specialize all outdoor slots on 400m
+29458,Men,Distance,2026,5000m,5000m,-222.0,True,3,Specialize all outdoor slots on 5000m
+29461,Women,Throws,2026,Shot Put,Shot Put,15.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+29591,Women,Sprints,2026,200m,200m,-42.299999999999955,True,2,Specialize all outdoor slots on 200m
+29592,Women,Jumps,2026,Triple Jump,Triple Jump,-142.0,True,2,Specialize all outdoor slots on Triple Jump
+29592,Women,Sprints,2026,200m,200m,-390.29999999999995,True,1,Specialize all outdoor slots on 200m
+29593,Women,Jumps,2026,Long Jump,Long Jump,-180.29999999999995,True,1,Specialize all outdoor slots on Long Jump
+29593,Women,Sprints,2026,200m,200m,-401.29999999999995,True,1,Specialize all outdoor slots on 200m
+29594,Women,Jumps,2026,Triple Jump,Triple Jump,-150.0,True,1,Specialize all outdoor slots on Triple Jump
+29596,Women,Distance,2026,800m,800m,-238.70000000000005,True,1,Specialize all outdoor slots on 800m
+29599,Men,Jumps,2026,Long Jump,Long Jump,72.29999999999995,True,1,Specialize all outdoor slots on Long Jump
+29599,Men,Sprints,2026,200m,200m,144.70000000000005,True,1,Specialize all outdoor slots on 200m
+29599,Men,Throws,2026,Shot Put,Shot Put,-210.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+29600,Men,Sprints,2026,200m,200m,-96.29999999999995,True,1,Specialize all outdoor slots on 200m
+29603,Men,Jumps,2026,Triple Jump,Triple Jump,51.299999999999955,True,1,Specialize all outdoor slots on Triple Jump
+29605,Men,Sprints,2026,200m,200m,-308.29999999999995,True,1,Specialize all outdoor slots on 200m
+29608,Men,Distance,2026,800m,800m,-83.29999999999995,True,3,Specialize all outdoor slots on 800m
+29610,Women,Throws,2026,Shot Put,Shot Put,-63.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+29611,Women,Throws,2026,Shot Put,Shot Put,-121.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+29612,Men,Sprints,2026,200m,200m,46.700000000000045,True,1,Specialize all outdoor slots on 200m
+29613,Men,Sprints,2026,200m,200m,-5.2999999999999545,True,1,Specialize all outdoor slots on 200m
+29615,Men,Throws,2026,Shot Put,Shot Put,-88.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+29618,Men,Distance,2026,800m,800m,-126.29999999999995,True,1,Specialize all outdoor slots on 800m
+29628,Women,Distance,2026,5000m,5000m,-213.5,True,1,Specialize all outdoor slots on 5000m
+29630,Men,Sprints,2026,200m,200m,0.7000000000000455,True,2,Specialize all outdoor slots on 200m
+29632,Men,Sprints,2026,200m,200m,108.70000000000005,True,1,Specialize all outdoor slots on 200m
+29633,Men,Sprints,2026,200m,200m,-38.299999999999955,True,2,Specialize all outdoor slots on 200m
+29634,Men,Sprints,2026,200m,200m,-42.299999999999955,True,1,Specialize all outdoor slots on 200m
+29644,Women,Sprints,2026,400m,400m,107.70000000000005,True,1,Specialize all outdoor slots on 400m
+29660,Men,Sprints,2026,200m,200m,78.70000000000005,True,1,Specialize all outdoor slots on 200m
+29663,Men,Sprints,2026,200m,400m,-316.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+29669,Men,Sprints,2026,400m,400m,182.29999999999995,True,1,Specialize all outdoor slots on 400m
+29674,Men,Distance,2026,800m,800m,-314.29999999999995,True,3,Specialize all outdoor slots on 800m
+29677,Men,Sprints,2026,200m,200m,-355.29999999999995,True,1,Specialize all outdoor slots on 200m
+29679,Men,Sprints,2026,200m,200m,-86.29999999999995,True,1,Specialize all outdoor slots on 200m
+29681,Men,Distance,2026,1500m,1500m,-508.0,True,1,Specialize all outdoor slots on 1500m
+29691,Men,Sprints,2026,400m,400m,-122.70000000000005,True,1,Specialize all outdoor slots on 400m
+29697,Women,Throws,2026,Shot Put,Shot Put,-45.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+29709,Men,Jumps,2026,Long Jump,Long Jump,-125.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+29709,Men,Sprints,2026,400m,400m,-108.70000000000005,True,1,Specialize all outdoor slots on 400m
+29711,Men,Sprints,2026,200m,200m,-180.29999999999995,True,2,Specialize all outdoor slots on 200m
+29712,Women,Distance,2026,800m,800m,-4.7000000000000455,True,2,Specialize all outdoor slots on 800m
+29735,Men,Distance,2026,800m,800m,-147.29999999999995,True,1,Specialize all outdoor slots on 800m
+29741,Men,Distance,2026,1500m,1500m,-76.0,True,1,Specialize all outdoor slots on 1500m
+29747,Men,Sprints,2026,200m,200m,-64.29999999999995,True,1,Specialize all outdoor slots on 200m
+29748,Men,Sprints,2026,200m,200m,-255.29999999999995,True,1,Specialize all outdoor slots on 200m
+29749,Men,Sprints,2026,400m,400m,-78.70000000000005,True,1,Specialize all outdoor slots on 400m
+29750,Men,Distance,2026,800m,800m,-560.3,True,1,Specialize all outdoor slots on 800m
+29750,Men,Sprints,2026,200m,400m,-444.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock 400m (RQ1C≠RQ1A)
+29752,Men,Distance,2026,1500m,1500m,-593.0,True,1,Specialize all outdoor slots on 1500m
+29753,Men,Distance,2026,5000m,5000m,-195.0,True,1,Specialize all outdoor slots on 5000m
+29755,Men,Throws,2026,Shot Put,Shot Put,-18.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+29756,Women,Sprints,2026,200m,200m,-337.29999999999995,True,1,Specialize all outdoor slots on 200m
+29760,Women,Jumps,2026,Triple Jump,High Jump,-79.0,False,1,Meet 1: explore alternate; Meets 2–N: lock High Jump (RQ1C≠RQ1A)
+29762,Women,Throws,2026,Shot Put,Shot Put,-77.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+29775,Men,Distance,2026,800m,800m,-233.29999999999995,True,2,Specialize all outdoor slots on 800m
+29790,Women,Sprints,2026,200m,200m,-156.29999999999995,True,4,Specialize all outdoor slots on 200m
+29791,Women,Sprints,2026,200m,200m,-66.29999999999995,True,4,Specialize all outdoor slots on 200m
+29793,Men,Sprints,2026,200m,200m,-127.29999999999995,True,1,Specialize all outdoor slots on 200m
+29794,Men,Distance,2026,800m,800m,-204.29999999999995,True,1,Specialize all outdoor slots on 800m
+29795,Men,Distance,2026,800m,800m,-165.29999999999995,True,2,Specialize all outdoor slots on 800m
+29817,Men,Sprints,2026,200m,200m,-115.29999999999995,True,1,Specialize all outdoor slots on 200m
+29818,Men,Sprints,2026,200m,200m,-5.2999999999999545,True,1,Specialize all outdoor slots on 200m
+29819,Men,Sprints,2026,200m,200m,-166.29999999999995,True,1,Specialize all outdoor slots on 200m
+29827,Women,Jumps,2026,Long Jump,Long Jump,-55.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+29844,Women,Sprints,2026,200m,200m,-284.29999999999995,True,1,Specialize all outdoor slots on 200m
+29845,Women,Jumps,2026,Long Jump,Long Jump,-150.29999999999995,True,2,Specialize all outdoor slots on Long Jump
+29846,Men,Sprints,2026,200m,200m,-215.29999999999995,True,1,Specialize all outdoor slots on 200m
+29847,Women,Sprints,2026,200m,200m,-183.29999999999995,True,2,Specialize all outdoor slots on 200m
+29849,Women,Distance,2026,1500m,1500m,-163.70000000000005,True,2,Specialize all outdoor slots on 1500m
+29851,Women,Distance,2026,5000m,5000m,-65.5,True,2,Specialize all outdoor slots on 5000m
+29862,Men,Sprints,2026,400m,400m,-163.70000000000005,True,3,Specialize all outdoor slots on 400m
+29864,Men,Sprints,2026,400m,400m,43.299999999999955,True,4,Specialize all outdoor slots on 400m
+29867,Men,Jumps,2026,Long Jump,Long Jump,60.299999999999955,True,1,Specialize all outdoor slots on Long Jump
+29868,Men,Jumps,2026,Triple Jump,Triple Jump,-63.700000000000045,True,1,Specialize all outdoor slots on Triple Jump
+29869,Men,Jumps,2026,Triple Jump,Triple Jump,-141.70000000000005,True,2,Specialize all outdoor slots on Triple Jump
+29870,Men,Throws,2026,Shot Put,Shot Put,-344.70000000000005,True,3,Specialize all outdoor slots on Shot Put
+29872,Men,Jumps,2026,Triple Jump,Triple Jump,157.29999999999995,True,1,Specialize all outdoor slots on Triple Jump
+29873,Men,Sprints,2026,200m,200m,120.70000000000005,True,1,Specialize all outdoor slots on 200m
+29876,Men,Sprints,2026,200m,200m,24.700000000000045,True,1,Specialize all outdoor slots on 200m
+29881,Women,Sprints,2026,200m,200m,-176.29999999999995,True,1,Specialize all outdoor slots on 200m
+29973,Men,Sprints,2026,200m,200m,138.70000000000005,True,1,Specialize all outdoor slots on 200m
+29978,Men,Sprints,2026,200m,200m,17.700000000000045,True,1,Specialize all outdoor slots on 200m
+29980,Men,Sprints,2026,200m,200m,-270.29999999999995,True,1,Specialize all outdoor slots on 200m
+29984,Men,Sprints,2026,200m,200m,-282.29999999999995,True,2,Specialize all outdoor slots on 200m
+29985,Men,Sprints,2026,200m,200m,-255.29999999999995,True,1,Specialize all outdoor slots on 200m
+29994,Men,Throws,2026,Shot Put,Shot Put,-92.70000000000005,True,1,Specialize all outdoor slots on Shot Put
+29998,Women,Sprints,2026,200m,200m,-169.29999999999995,True,3,Specialize all outdoor slots on 200m
+29999,Women,Sprints,2026,200m,200m,-197.29999999999995,True,3,Specialize all outdoor slots on 200m
+30000,Women,Sprints,2026,200m,200m,-317.29999999999995,True,2,Specialize all outdoor slots on 200m
+30004,Men,Distance,2026,1500m,1500m,-303.0,True,2,Specialize all outdoor slots on 1500m
+30007,Men,Distance,2026,1500m,1500m,-399.0,True,1,Specialize all outdoor slots on 1500m
+30035,Women,Distance,2026,800m,800m,-236.70000000000005,True,2,Specialize all outdoor slots on 800m
+30039,Men,Sprints,2026,400m,400m,24.299999999999955,True,1,Specialize all outdoor slots on 400m
+30041,Men,Sprints,2026,400m,400m,-203.70000000000005,True,2,Specialize all outdoor slots on 400m
+30043,Men,Sprints,2026,400m,400m,-290.70000000000005,True,2,Specialize all outdoor slots on 400m
+30045,Men,Sprints,2026,200m,200m,-488.29999999999995,True,1,Specialize all outdoor slots on 200m
+30049,Men,Distance,2026,800m,800m,-153.29999999999995,True,2,Specialize all outdoor slots on 800m
+30055,Men,Distance,2026,800m,800m,-389.29999999999995,True,1,Specialize all outdoor slots on 800m
+30065,Men,Distance,2026,800m,800m,-724.3,True,2,Specialize all outdoor slots on 800m
+30071,Men,Sprints,2026,200m,200m,-155.29999999999995,True,1,Specialize all outdoor slots on 200m
+30072,Men,Sprints,2026,200m,200m,-162.29999999999995,True,1,Specialize all outdoor slots on 200m
+30075,Men,Sprints,2026,200m,200m,-454.29999999999995,True,1,Specialize all outdoor slots on 200m
+30079,Women,Sprints,2026,200m,200m,-312.29999999999995,True,1,Specialize all outdoor slots on 200m
+30081,Men,Distance,2026,5000m,5000m,-112.0,True,2,Specialize all outdoor slots on 5000m
+30098,Men,Throws,2026,Shot Put,Shot Put,25.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+30103,Women,Throws,2026,Shot Put,Shot Put,16.299999999999955,True,2,Specialize all outdoor slots on Shot Put
+30106,Women,Throws,2026,Shot Put,Shot Put,-118.70000000000005,True,2,Specialize all outdoor slots on Shot Put
+30107,Women,Throws,2026,Shot Put,Shot Put,-124.70000000000005,True,3,Specialize all outdoor slots on Shot Put
+30109,Men,Jumps,2026,Long Jump,Triple Jump,-134.70000000000005,False,1,Meet 1: explore alternate; Meets 2–N: lock Triple Jump (RQ1C≠RQ1A)
+30115,Women,Sprints,2026,200m,200m,-87.29999999999995,True,2,Specialize all outdoor slots on 200m
+30123,Men,Distance,2026,1500m,1500m,-373.0,True,1,Specialize all outdoor slots on 1500m
+30168,Men,Sprints,2026,200m,200m,-102.29999999999995,True,1,Specialize all outdoor slots on 200m
+30343,Men,Sprints,2026,200m,200m,9.700000000000045,True,1,Specialize all outdoor slots on 200m
+30384,Women,Sprints,2026,400m,400m,37.700000000000045,True,1,Specialize all outdoor slots on 400m
+30413,Women,Distance,2026,5000m,5000m,-159.5,True,1,Specialize all outdoor slots on 5000m
+30415,Men,Distance,2026,1500m,1500m,-328.0,True,1,Specialize all outdoor slots on 1500m
+30424,Women,Distance,2026,1500m,1500m,-281.70000000000005,True,1,Specialize all outdoor slots on 1500m
+30434,Men,Distance,2026,1500m,1500m,-124.0,True,1,Specialize all outdoor slots on 1500m
+30447,Women,Throws,2026,Shot Put,Shot Put,-62.700000000000045,True,2,Specialize all outdoor slots on Shot Put
+30965,Women,Sprints,2026,200m,200m,-121.29999999999995,True,2,Specialize all outdoor slots on 200m
+30967,Women,Sprints,2026,200m,200m,-313.29999999999995,True,1,Specialize all outdoor slots on 200m
+30971,Men,Sprints,2026,200m,200m,-200.29999999999995,True,1,Specialize all outdoor slots on 200m
+30985,Men,Distance,2026,800m,800m,-380.29999999999995,True,2,Specialize all outdoor slots on 800m
+31019,Men,Sprints,2026,200m,200m,-208.29999999999995,True,1,Specialize all outdoor slots on 200m
+31178,Men,Sprints,2026,200m,200m,-14.299999999999955,True,1,Specialize all outdoor slots on 200m
+31182,Women,Sprints,2026,200m,200m,33.700000000000045,True,2,Specialize all outdoor slots on 200m
+31183,Women,Sprints,2026,200m,200m,-14.299999999999955,True,2,Specialize all outdoor slots on 200m
+31184,Women,Sprints,2026,200m,200m,10.700000000000045,True,2,Specialize all outdoor slots on 200m
+31185,Women,Sprints,2026,200m,200m,-127.29999999999995,True,1,Specialize all outdoor slots on 200m
+31187,Women,Sprints,2026,200m,200m,-106.29999999999995,True,1,Specialize all outdoor slots on 200m
+31188,Men,Jumps,2026,Long Jump,Long Jump,-83.70000000000005,True,1,Specialize all outdoor slots on Long Jump
+31193,Women,Sprints,2026,200m,200m,10.700000000000045,True,2,Specialize all outdoor slots on 200m
+31200,Men,Distance,2026,1500m,1500m,-241.0,True,2,Specialize all outdoor slots on 1500m
+31201,Men,Distance,2026,1500m,1500m,-313.0,True,2,Specialize all outdoor slots on 1500m
+31202,Women,Distance,2026,800m,800m,37.299999999999955,True,2,Specialize all outdoor slots on 800m
+31203,Women,Distance,2026,800m,800m,-275.70000000000005,True,2,Specialize all outdoor slots on 800m
+31204,Men,Distance,2026,1500m,1500m,-165.0,True,3,Specialize all outdoor slots on 1500m
+31207,Women,Distance,2026,1500m,1500m,-207.70000000000005,True,2,Specialize all outdoor slots on 1500m
+31210,Men,Jumps,2026,High Jump,High Jump,-43.0,True,2,Specialize all outdoor slots on High Jump
+31211,Men,Jumps,2026,Triple Jump,Triple Jump,51.299999999999955,True,2,Specialize all outdoor slots on Triple Jump
+31220,Men,Throws,2026,Shot Put,Shot Put,18.299999999999955,True,1,Specialize all outdoor slots on Shot Put
+31221,Men,Throws,2026,Shot Put,Shot Put,4.2999999999999545,True,3,Specialize all outdoor slots on Shot Put
+31224,Women,Throws,2026,Shot Put,Shot Put,-107.70000000000005,True,3,Specialize all outdoor slots on Shot Put

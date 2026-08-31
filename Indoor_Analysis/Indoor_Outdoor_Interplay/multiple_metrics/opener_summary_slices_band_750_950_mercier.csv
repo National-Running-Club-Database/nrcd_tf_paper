@@ -1,0 +1,17 @@
+metric,slice,n,n_athletes,mean_indoor,mean_outdoor,mean_delta,median_delta,pct_outdoor_higher,pct_indoor_higher,pct_tie
+mercier,all,147,125,596.91,641.99,45.07,43.0,84.4,14.3,1.4
+mercier,year_2024,55,52,593.84,639.16,45.33,47.0,83.6,14.5,1.8
+mercier,year_2025,35,33,570.86,629.23,58.37,52.0,97.1,2.9,0.0
+mercier,year_2026,57,50,615.88,652.54,36.67,32.0,77.2,21.1,1.8
+mercier,gender_Men,99,83,595.92,649.44,53.53,52.0,88.9,11.1,0.0
+mercier,gender_Women,48,42,598.96,626.6,27.65,30.5,75.0,20.8,4.2
+mercier,pair_200m → 200m,40,38,588.65,657.8,69.15,63.5,95.0,5.0,0.0
+mercier,pair_400m → 400m,12,11,607.75,649.5,41.75,41.5,100.0,0.0,0.0
+mercier,pair_800m → 800m,13,13,618.38,667.69,49.31,31.0,84.6,15.4,0.0
+mercier,pair_Mile → 1500m,26,23,613.12,642.42,29.31,30.5,73.1,26.9,0.0
+mercier,pair_3000m → 5000m,14,14,623.07,642.71,19.64,22.0,85.7,14.3,0.0
+mercier,pair_5000m → 5000m,5,5,618.0,645.6,27.6,22.0,80.0,20.0,0.0
+mercier,pair_Long Jump → Long Jump,17,17,535.53,592.12,56.59,49.0,76.5,23.5,0.0
+mercier,pair_Triple Jump → Triple Jump,7,7,554.57,586.86,32.29,30.0,85.7,14.3,0.0
+mercier,pair_High Jump → High Jump,9,8,612.89,648.0,35.11,56.0,66.7,11.1,22.2
+mercier,pair_Shot Put → Shot Put,4,2,653.0,662.75,9.75,11.0,75.0,25.0,0.0

@@ -1,0 +1,173 @@
+Meet Calendar Optimization — Findings
+======================================================================
+
+Research question
+-----------------
+Given an athlete with a fixed budget of N outdoor meets before April
+NIRCA nationals, which events should they contest so that end-of-season
+expected nationals margin (PB_WA − 8th-place threshold) is maximized?
+
+Calendar context (critical)
+---------------------------
+NIRCA outdoor nationals fall in early April:
+  2024-04-06 · 2025-04-05 · 2026-04-11
+Athletes typically complete an indoor season, then have only ~2–3 outdoor
+meet opportunities before nationals — a short outdoor runway.
+
+Method summary
+--------------
+• Indoor season bests (mapped to outdoor events) form the prior PB vector.
+• Pre-nationals outdoor individual results are the consumable race stream.
+• Policies assign each of N∈{2,3} race slots to an event.
+• Consuming a slot uses the next actual mark in that event when available;
+  otherwise applies synthetic volume lift = 18.0 WA (median 1→2
+  within-event jump pre-nationals) for counterfactual repeats.
+• Soft WA transfers on validated pairs (100↔200, 800→1500, …) guide
+  exploration only; reported margins use hard PBs.
+• Steeplechase thresholds: 740 (men) / 752 (women) — corrected WA.
+• Cohort: multi-event athlete-seasons (≥2 distinct events indoor∪outdoor).
+
+Empirical outdoor runway
+------------------------
+Athlete-seasons with ≥1 pre-nationals outdoor result: 4,373
+Multi-event subset used in policy sims: 2,211
+Share with indoor prior in discipline: 41.7%
+
+Distinct outdoor meets before nationals (all pre-nats athlete-seasons):
+  1 meet(s): 3,357 (76.8%)
+  2 meet(s): 912 (20.9%)
+  3 meet(s): 99 (2.3%)
+  4 meet(s): 4 (0.1%)
+  5 meet(s): 1 (0.0%)
+
+Interpretation: a large share reach nationals week with only 1 outdoor meet
+logged in-discipline — indoor priors + the first 2–3 outdoor entries dominate.
+
+Policy ranking (multi-event cohort)
+-----------------------------------
+
+N = 2 outdoor race slots
+Policy                                           n  Mean margin  Med margin   Clear%
+------------------------------------------------------------------------------------
+Hindsight greedy oracle (upper bound)         2211       -156.9      -132.0    22.6%
+Greedy expected-margin each slot              2211       -171.5      -146.3    19.0%
+Specialize on RQ1C (nationals-margin event)    2211       -173.9      -152.0    18.6%
+Specialize on RQ1A (absolute best WA)         2211       -174.4      -149.3    18.5%
+Observed chronological choices                2211       -186.8      -163.7    16.4%
+Explore alternate meet 1 → lock RQ1C          2211       -199.0      -174.0    15.2%
+
+N = 3 outdoor race slots
+Policy                                           n  Mean margin  Med margin   Clear%
+------------------------------------------------------------------------------------
+Hindsight greedy oracle (upper bound)         2211       -138.9      -114.0    26.8%
+Greedy expected-margin each slot              2211       -153.5      -128.3    22.5%
+Specialize on RQ1A (absolute best WA)         2211       -156.6      -131.3    21.8%
+Specialize on RQ1C (nationals-margin event)    2211       -157.8      -134.5    21.6%
+Observed chronological choices                2211       -181.0      -156.3    17.3%
+Explore alternate meet 1 → lock RQ1C          2211       -182.2      -157.7    18.4%
+
+Lift vs observed calendar (mean margin, multi-event)
+--------------------------------------------------
+  N=2 Specialize on RQ1C (nationals-margin event): +12.9 WA vs observed
+  N=2 Explore alternate meet 1 → lock RQ1C: -12.2 WA vs observed
+  N=2 Greedy expected-margin each slot: +15.3 WA vs observed
+  N=2 Specialize on RQ1A (absolute best WA): +12.4 WA vs observed
+  N=2 Hindsight greedy oracle (upper bound): +29.9 WA vs observed
+  N=3 Specialize on RQ1C (nationals-margin event): +23.2 WA vs observed
+  N=3 Explore alternate meet 1 → lock RQ1C: -1.2 WA vs observed
+  N=3 Greedy expected-margin each slot: +27.4 WA vs observed
+  N=3 Specialize on RQ1A (absolute best WA): +24.4 WA vs observed
+  N=3 Hindsight greedy oracle (upper bound): +42.1 WA vs observed
+
+By discipline (N=3, mean margin) — top policies
+--------------------------------------------------
+  Distance:
+    Hindsight greedy oracle (upper bound): -161.6
+    Greedy expected-margin each slot: -176.3
+    Specialize on RQ1C (nationals-margin event): -179.3
+    Specialize on RQ1A (absolute best WA): -180.8
+  Sprints:
+    Hindsight greedy oracle (upper bound): -120.9
+    Greedy expected-margin each slot: -134.9
+    Specialize on RQ1A (absolute best WA): -135.2
+    Specialize on RQ1C (nationals-margin event): -140.9
+  Hurdles:
+    Hindsight greedy oracle (upper bound): -160.9
+    Greedy expected-margin each slot: -164.5
+    Specialize on RQ1C (nationals-margin event): -164.5
+    Specialize on RQ1A (absolute best WA): -172.0
+  Jumps:
+    Hindsight greedy oracle (upper bound): -13.8
+    Greedy expected-margin each slot: -26.5
+    Specialize on RQ1C (nationals-margin event): -26.5
+    Specialize on RQ1A (absolute best WA): -32.9
+  Throws:
+    Hindsight greedy oracle (upper bound): -39.9
+    Greedy expected-margin each slot: -65.7
+    Specialize on RQ1C (nationals-margin event): -65.7
+    Specialize on RQ1A (absolute best WA): -67.3
+
+Indoor prior: RQ1A vs RQ1C agreement
+--------------------------------------------------
+Athletes with indoor prior: 1,335
+RQ1A = RQ1C: 94.4%
+RQ1A ≠ RQ1C: 5.6% → exploration meet has option value
+
+Recommended calendar templates (April nationals)
+--------------------------------------------------
+Template A — Indoor RQ1A = RQ1C (majority when they agree):
+  Indoor: race the championship event enough to confirm (≥2 marks).
+  Outdoor meets 1..N: specialize on that same RQ1C event.
+  Optional: one transfer-partner opener (e.g. 800 before 1500) only if
+  it does not displace a championship-event slot when N≤2.
+
+Template B — Indoor RQ1A ≠ RQ1C (~6% with indoor priors):
+  Outdoor meet 1: explore the RQ1C candidate (or #2 margin event).
+  Outdoor meets 2..N: lock the updated RQ1C event after meet 1.
+  Blind explore-then-lock for everyone is NOT recommended — it costs ~12 WA
+  on average at N=2 because most athletes already agree indoors.
+
+Template C — N=2 extremely tight runway (modal empirical case is even N=1):
+  Both meets on the indoor RQ1C event unless RQ1A≠RQ1C (then Template B).
+  Avoid three-event dabbling — the April calendar cannot support it.
+
+Template D — Team scoring (from coaches nationals focus, applied to N):
+  Allocate scarce outdoor entries to high clear-rate pathways first
+  (e.g. men's 4x100 / 200; distance steeple opportunity; women's 5000
+  among dual 1500/5000). Relays consume meet slots — count them against N.
+
+Gender × N=3 clear rates (specialize RQ1C vs observed)
+--------------------------------------------------
+  Men: RQ1C-specialize clear=19.2% · observed=16.2%
+  Women: RQ1C-specialize clear=27.1% · observed=19.8%
+
+Takeaways
+---------
+1. April nationals compress outdoor preparation: ~77% of athlete-seasons show only
+   ONE outdoor meet in-discipline before nationals — indoor priors dominate.
+2. Greedy margin allocation and specializing on RQ1C (or RQ1A when they agree)
+   beat observed mixed calendars by ~+13 to +27 WA mean margin.
+3. With N=2–3, blanket explore-then-lock is too expensive; reserve exploration for
+   the minority with RQ1A≠RQ1C indoors (~6%).
+4. Time-model pairs justify limited early doubles for information only — they should
+   not replace direct championship-event volume when N is 2–3.
+5. Oracle (with synthetic lifts) bounds remaining upside from perfect allocation.
+
+Limitations
+-----------
+• Counterfactual repeats use a constant WA lift; true taper/peak shapes vary.
+• Soft transfers are WA-identity approximations, not full formula predictions.
+• Observational: athletes who specialized may differ in ability/commitment.
+• Relays excluded from individual margin sims but consume real meet budget.
+• Field/hurdles indoor↔outdoor mapping is coarser than distance/sprints.
+
+Artifacts
+---------
+  output/pre_nationals_meet_distribution.csv
+  output/athlete_policy_detail.csv
+  output/policy_comparison.csv
+  output/policy_comparison_overall.csv
+  output/recommendations_by_profile.csv
+  output/meet_calendar_findings.txt
+  output/Summary_findings.md
+

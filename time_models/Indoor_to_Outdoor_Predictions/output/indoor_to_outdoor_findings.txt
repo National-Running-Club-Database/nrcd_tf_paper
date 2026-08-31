@@ -1,0 +1,178 @@
+Indoor → Outdoor Event Predictions
+========================================================================
+
+Question
+--------
+For each gender and event pair below, predict outdoor (to_event) performance
+from indoor (from_event) season best using a linear model fit on athletes
+with both marks in the same year (2024–2026).
+
+Model: outdoor = intercept + slope × indoor
+Track events: times in seconds (lower better). Field: marks in meters (higher better).
+Indoor 60m = running_event_id 2; Indoor 60m Hurdles = 33.
+
+Pairs requested
+---------------
+Sprints: 60m→100m, 200m→200m, 400m→400m
+Distance: 800→800, Mile→1500, 3000→5000, 3000→1500, 3000→Steeple, 5000→5000
+Jumps: LJ→LJ, TJ→TJ, HJ→HJ
+Hurdles: Women 60H→100H; Men 60H→110H
+Throws: SP→SP
+
+Men
+----------------------------------------
+  Indoor 60m → Outdoor 100m
+    n=389  r=0.817  MedAE=0.198  MAPE=2.23%  indoor-only preds=753
+    Outdoor 100m = 0.3034 + 1.5339 × Indoor 60m  (s)
+
+  Indoor 200m → Outdoor 200m
+    n=361  r=0.856  MedAE=0.425  MAPE=2.22%  indoor-only preds=574
+    Outdoor 200m = 1.4392 + 0.9286 × Indoor 200m  (s)
+
+  Indoor 400m → Outdoor 400m
+    n=264  r=0.910  MedAE=0.924  MAPE=2.32%  indoor-only preds=424
+    Outdoor 400m = 0.9985 × Indoor 400m − 0.3532  (s)
+
+  Indoor 800m → Outdoor 800m
+    n=410  r=0.858  MedAE=2.776  MAPE=2.90%  indoor-only preds=592
+    Outdoor 800m = 28.5862 + 0.7763 × Indoor 800m  (s)
+
+  Indoor Mile → Outdoor 1500m
+    n=662  r=0.913  MedAE=4.961  MAPE=2.52%  indoor-only preds=1157
+    Outdoor 1500m = 19.1158 + 0.8580 × Indoor Mile  (s)
+
+  Indoor 3000m → Outdoor 5000m
+    n=312  r=0.919  MedAE=16.407  MAPE=2.10%  indoor-only preds=482
+    Outdoor 5000m = 89.0023 + 1.5729 × Indoor 3000m  (s)
+
+  Indoor 3000m → Outdoor 1500m
+    n=289  r=0.843  MedAE=5.751  MAPE=2.82%  indoor-only preds=505
+    Outdoor 1500m = 52.0753 + 0.3684 × Indoor 3000m  (s)
+
+  Indoor 3000m → Outdoor 3000m Steeplechase
+    n=86  r=0.809  MedAE=19.335  MAPE=3.92%  indoor-only preds=708
+    Outdoor 3000m Steeplechase = 66.1961 + 1.0255 × Indoor 3000m  (s)
+
+  Indoor 5000m → Outdoor 5000m
+    n=126  r=0.913  MedAE=14.910  MAPE=2.18%  indoor-only preds=131
+    Outdoor 5000m = 109.5127 + 0.8863 × Indoor 5000m  (s)
+
+  Indoor Long Jump → Outdoor Long Jump
+    n=114  r=0.869  MedAE=0.196  MAPE=4.28%  indoor-only preds=203
+    Outdoor Long Jump = 0.4542 + 0.9327 × Indoor Long Jump  (m)
+
+  Indoor Triple Jump → Outdoor Triple Jump
+    n=54  r=0.826  MedAE=0.294  MAPE=3.15%  indoor-only preds=66
+    Outdoor Triple Jump = 1.5314 + 0.8914 × Indoor Triple Jump  (m)
+
+  Indoor High Jump → Outdoor High Jump
+    n=52  r=0.799  MedAE=0.047  MAPE=3.30%  indoor-only preds=66
+    Outdoor High Jump = 0.3644 + 0.7938 × Indoor High Jump  (m)
+
+  Indoor 60m Hurdles → Outdoor 110m Hurdles
+    n=85  r=0.812  MedAE=0.505  MAPE=4.32%  indoor-only preds=101
+    Outdoor 110m Hurdles = 1.0316 + 1.7377 × Indoor 60m Hurdles  (s)
+
+  Indoor Shot Put → Outdoor Shot Put
+    n=113  r=0.928  MedAE=0.459  MAPE=5.60%  indoor-only preds=117
+    Outdoor Shot Put = 0.0113 + 0.9970 × Indoor Shot Put  (m)
+
+Women
+----------------------------------------
+  Indoor 60m → Outdoor 100m
+    n=171  r=0.915  MedAE=0.212  MAPE=1.90%  indoor-only preds=247
+    Outdoor 100m = 1.7440 × Indoor 60m − 1.2906  (s)
+
+  Indoor 200m → Outdoor 200m
+    n=196  r=0.925  MedAE=0.404  MAPE=1.93%  indoor-only preds=266
+    Outdoor 200m = 0.2269 + 0.9761 × Indoor 200m  (s)
+
+  Indoor 400m → Outdoor 400m
+    n=120  r=0.953  MedAE=1.205  MAPE=2.25%  indoor-only preds=154
+    Outdoor 400m = 2.6873 + 0.9449 × Indoor 400m  (s)
+
+  Indoor 800m → Outdoor 800m
+    n=185  r=0.927  MedAE=3.276  MAPE=2.62%  indoor-only preds=309
+    Outdoor 800m = 1.0148 × Indoor 800m − 3.2924  (s)
+
+  Indoor Mile → Outdoor 1500m
+    n=292  r=0.929  MedAE=6.372  MAPE=2.59%  indoor-only preds=595
+    Outdoor 1500m = 21.4416 + 0.8602 × Indoor Mile  (s)
+
+  Indoor 3000m → Outdoor 5000m
+    n=112  r=0.916  MedAE=24.519  MAPE=2.28%  indoor-only preds=241
+    Outdoor 5000m = 1.7604 × Indoor 3000m − 34.0510  (s)
+
+  Indoor 3000m → Outdoor 1500m
+    n=98  r=0.926  MedAE=5.929  MAPE=2.53%  indoor-only preds=255
+    Outdoor 1500m = 0.4640 × Indoor 3000m − 3.1616  (s)
+
+  Indoor 3000m → Outdoor 3000m Steeplechase
+    n=39  r=0.604  MedAE=36.160  MAPE=5.88%  indoor-only preds=314
+    Outdoor 3000m Steeplechase = 248.9228 + 0.7804 × Indoor 3000m  (s)
+
+  Indoor 5000m → Outdoor 5000m
+    n=44  r=0.925  MedAE=16.613  MAPE=2.14%  indoor-only preds=59
+    Outdoor 5000m = 19.6643 + 0.9713 × Indoor 5000m  (s)
+
+  Indoor Long Jump → Outdoor Long Jump
+    n=87  r=0.840  MedAE=0.196  MAPE=4.58%  indoor-only preds=108
+    Outdoor Long Jump = 1.1528 + 0.7739 × Indoor Long Jump  (m)
+
+  Indoor Triple Jump → Outdoor Triple Jump
+    n=44  r=0.933  MedAE=0.200  MAPE=2.75%  indoor-only preds=33
+    Outdoor Triple Jump = 0.2973 + 0.9879 × Indoor Triple Jump  (m)
+
+  Indoor High Jump → Outdoor High Jump
+    n=46  r=0.759  MedAE=0.034  MAPE=3.19%  indoor-only preds=50
+    Outdoor High Jump = 0.2521 + 0.8230 × Indoor High Jump  (m)
+
+  Indoor 60m Hurdles → Outdoor 100m Hurdles
+    n=70  r=0.844  MedAE=0.492  MAPE=3.33%  indoor-only preds=79
+    Outdoor 100m Hurdles = 4.0895 + 1.2991 × Indoor 60m Hurdles  (s)
+
+  Indoor Shot Put → Outdoor Shot Put
+    n=73  r=0.847  MedAE=0.411  MAPE=6.13%  indoor-only preds=58
+    Outdoor Shot Put = 1.6080 + 0.8199 × Indoor Shot Put  (m)
+
+Example predictions (median indoor mark in paired sample)
+----------------------------------------
+  Men Indoor 60m 7.48 → pred 11.78 (actual 11.76)
+  Men Indoor 200m 24.57 → pred 24.25 (actual 24.15)
+  Men Indoor 400m 54.99 → pred 54.55 (actual 54.76)
+  Men Indoor 800m 2:11.59 → pred 2:10.74 (actual 2:08.55)
+  Men Indoor Mile 4:54.52 → pred 4:31.81 (actual 4:35.96)
+  Men Indoor 3000m 9:27.49 → pred 16:21.59 (actual 17:40.27)
+  Men Indoor 3000m 9:36.39 → pred 4:24.44 (actual 4:34.43)
+  Men Indoor 3000m 9:34.38 → pred 10:55.21 (actual 12:37.78)
+  Men Indoor 5000m 16:19.53 → pred 16:17.68 (actual 15:53.18)
+  Men Indoor Long Jump 5.94m → pred 5.99m (actual 5.97m)
+  Men Indoor Triple Jump 12.39m → pred 12.58m (actual 12.29m)
+  Men Indoor High Jump 1.78m → pred 1.78m (actual 1.70m)
+  Men Indoor 60m Hurdles 9.02 → pred 16.71 (actual 16.89)
+  Men Indoor Shot Put 11.25m → pred 11.23m (actual 11.12m)
+  Women Indoor 60m 8.61 → pred 13.72 (actual 13.56)
+  Women Indoor 200m 29.24 → pred 28.77 (actual 28.52)
+  Women Indoor 400m 1:06.31 → pred 1:05.34 (actual 1:03.66)
+  Women Indoor 800m 2:41.62 → pred 2:40.72 (actual 2:39.39)
+  Women Indoor Mile 6:02.00 → pred 5:32.85 (actual 5:08.13)
+  Women Indoor 3000m 11:38.29 → pred 19:55.24 (actual 19:55.75)
+  Women Indoor 3000m 11:42.18 → pred 5:22.66 (actual 5:21.37)
+  Women Indoor 3000m 11:49.40 → pred 13:22.54 (actual 13:51.75)
+  Women Indoor 5000m 20:25.00 → pred 20:09.47 (actual 19:54.05)
+  Women Indoor Long Jump 4.47m → pred 4.61m (actual 4.73m)
+  Women Indoor Triple Jump 9.80m → pred 9.98m (actual 10.12m)
+  Women Indoor High Jump 1.45m → pred 1.45m (actual 1.56m)
+  Women Indoor 60m Hurdles 10.65 → pred 17.93 (actual 18.46)
+  Women Indoor Shot Put 8.99m → pred 8.98m (actual 9.04m)
+
+Artifacts
+---------
+  output/indoor_to_outdoor_models.csv      — formulas by gender × pair
+  output/indoor_to_outdoor_predictions.csv — athlete-level predictions
+  output/indoor_to_outdoor_summary.csv     — fit quality summary
+  output/indoor_to_outdoor_findings.txt
+  output/Summary_findings.md
+
+Run: python time_models/Indoor_to_Outdoor_Predictions/main.py
+

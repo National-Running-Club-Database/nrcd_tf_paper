@@ -1,0 +1,92 @@
+Indoor vs Outdoor Season-Opener VDOT (outdoor opener WA in [750, 950))
+======================================================================
+Metric: VDOT [sports]
+
+Question:
+  For athletes with ≥2 indoor meets and ≥2 outdoor meets in the same year,
+  do outdoor season openers start with higher VDOT than indoor season
+  openers for similar events?
+  Restricted to comparisons where the outdoor opener result is in WA
+  band [750, 950).
+
+Method:
+  • Years: 2024, 2025, 2026 (indoor season file year paired with outdoor year).
+  • Eligibility: ≥2 distinct meet_ids with individual (non-relay) results indoors
+    AND ≥2 outdoors in that year.
+  • Season opener: earliest meet by start_date for that athlete in the season.
+  • Similar-event pairs compared only when the athlete contested the indoor
+    event at the indoor opener meet AND the paired outdoor event at the
+    outdoor opener meet.
+  • Delta = outdoor_opener_VDOT − indoor_opener_VDOT.
+  • Outdoor distance uses new_steeplechase_data when available.
+  • Relays excluded.
+  • Band filter: keep a pair only if outdoor opener WA ∈ [750, 950).
+  • Purdy/VDOT: field-event pairs omitted (undefined).
+
+Similar-event pairs:
+  • 60m → 100m
+  • 200m → 200m
+  • 400m → 400m
+  • 800m → 800m
+  • Mile → 1500m
+  • 1500m → 1500m
+  • 3000m → 5000m
+  • 5000m → 5000m
+  • 60mH → 110mH
+  • 60mH → 100mH
+  • Long Jump → Long Jump
+  • Triple Jump → Triple Jump
+  • High Jump → High Jump
+  • Shot Put → Shot Put
+
+Eligibility / sample
+--------------------
+  2024: 34 athletes in band; 37 opener pair comparisons (34 athletes with ≥1 comparable opener pair)
+  2025: 25 athletes in band; 25 opener pair comparisons (25 athletes with ≥1 comparable opener pair)
+  2026: 43 athletes in band; 48 opener pair comparisons (43 athletes with ≥1 comparable opener pair)
+  Combined: 95 athletes contributing 110 opener pair comparisons
+
+Primary result — all years, all similar-event pairs
+---------------------------------------------------
+  n=110 athletes=95  indoorμ=73.6 outdoorμ=75.8  Δμ=+2.3 Δmed=+2.1  outdoor_higher=88.2%  indoor_higher=11.8%
+  Verdict: YES — outdoor openers average higher VDOT than indoor openers for comparable events among dual-season athletes.
+
+By year
+-------
+  2024: n=37 athletes=34  indoorμ=72.5 outdoorμ=75.0  Δμ=+2.5 Δmed=+2.4  outdoor_higher=89.2%  indoor_higher=10.8%
+  2025: n=25 athletes=25  indoorμ=76.5 outdoorμ=79.2  Δμ=+2.8 Δmed=+2.5  outdoor_higher=96.0%  indoor_higher=4.0%
+  2026: n=48 athletes=43  indoorμ=72.9 outdoorμ=74.7  Δμ=+1.8 Δmed=+1.6  outdoor_higher=83.3%  indoor_higher=16.7%
+
+By gender
+---------
+  Men: n=73 athletes=63  indoorμ=79.8 outdoorμ=82.5  Δμ=+2.7 Δmed=+2.7  outdoor_higher=90.4%  indoor_higher=9.6%
+  Women: n=37 athletes=32  indoorμ=61.2 outdoorμ=62.6  Δμ=+1.4 Δmed=+1.6  outdoor_higher=83.8%  indoor_higher=16.2%
+
+By similar-event pair
+---------------------
+  200m → 200m: n=40 athletes=38  indoorμ=88.8 outdoorμ=92.3  Δμ=+3.5 Δmed=+3.2  outdoor_higher=95.0%  indoor_higher=5.0%
+  400m → 400m: n=12 athletes=11  indoorμ=74.0 outdoorμ=76.2  Δμ=+2.1 Δmed=+2.1  outdoor_higher=100.0%  indoor_higher=0.0%
+  800m → 800m: n=13 athletes=13  indoorμ=67.6 outdoorμ=69.7  Δμ=+2.1 Δmed=+1.3  outdoor_higher=84.6%  indoor_higher=15.4%
+  Mile → 1500m: n=26 athletes=23  indoorμ=61.4 outdoorμ=62.7  Δμ=+1.3 Δmed=+1.4  outdoor_higher=76.9%  indoor_higher=23.1%
+  3000m → 5000m: n=14 athletes=14  indoorμ=62.7 outdoorμ=63.9  Δμ=+1.2 Δmed=+1.3  outdoor_higher=85.7%  indoor_higher=14.3%
+  5000m → 5000m: n=5 athletes=5  indoorμ=59.7 outdoorμ=60.9  Δμ=+1.2 Δmed=+1.0  outdoor_higher=80.0%  indoor_higher=20.0%
+
+By gender × event pair (n≥10)
+-----------------------------
+  Men | 200m → 200m: n=32 athletes=30  indoorμ=91.8 outdoorμ=95.5  Δμ=+3.7 Δmed=+3.6  outdoor_higher=93.8%  indoor_higher=6.2%
+  Men | 800m → 800m: n=10 athletes=10  indoorμ=70.7 outdoorμ=73.2  Δμ=+2.6 Δmed=+1.8  outdoor_higher=90.0%  indoor_higher=10.0%
+  Men | Mile → 1500m: n=14 athletes=12  indoorμ=67.2 outdoorμ=69.0  Δμ=+1.8 Δmed=+1.6  outdoor_higher=85.7%  indoor_higher=14.3%
+  Women | Mile → 1500m: n=12 athletes=11  indoorμ=54.7 outdoorμ=55.3  Δμ=+0.6 Δmed=+0.8  outdoor_higher=66.7%  indoor_higher=33.3%
+
+Athlete-level (mean delta across an athlete-year's comparable opener pairs)
+---------------------------------------------------------------------------
+  n_athletes=102  mean_of_means=+2.27  median_of_means=+2.09  pct_athletes_outdoor_higher=87.3%
+
+Caveats:
+  • Only opener-meet results count; later-season form is ignored.
+  • Athlete must run the paired events at BOTH openers — selection into
+    the comparison set is not random.
+  • This file restricts to outdoor opener WA ∈ [750, 950); indoor opener
+    score is unrestricted (may fall outside a comparable band).
+
+Source: indoor_analysis/Indoor_Outdoor_Interplay/analyze_opener_multi_metric.py

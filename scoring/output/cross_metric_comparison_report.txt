@@ -5,6 +5,10 @@ Sports / coaching: World Athletics Points + VDOT
 Athletes with season bests in ≥2 events in a discipline; best event = max score.
 Field events omitted for Purdy/VDOT (undefined).
 
+Distance data: new_steeplechase_data/Distance_Relays_Findings
+  (corrected steeplechase WA; supersedes non_relays Distance_Events_Counting).
+Other disciplines: non_relays_findings/*_Events_Counting.
+
 ## Men
 ### Sprints
   [sports] wa (n=644 multi-event athletes)
@@ -27,19 +31,19 @@ Field events omitted for Purdy/VDOT (undefined).
     400m: 222 (34.7%)
     100m: 113 (17.7%)
 
-  Agreement wa vs vdot: 419/644 (65.1%)
-  Agreement wa vs purdy: 558/644 (86.6%)
+  Agreement wa vs vdot: 418/644 (64.9%)
+  Agreement wa vs purdy: 559/644 (86.8%)
   Agreement wa vs mercier: 466/639 (72.9%)
   Agreement vdot vs purdy: 338/644 (52.5%)
-  Agreement vdot vs mercier: 248/639 (38.8%)
-  Agreement purdy vs mercier: 527/639 (82.5%)
+  Agreement vdot vs mercier: 247/639 (38.7%)
+  Agreement purdy vs mercier: 528/639 (82.6%)
 
 ### Distance
-  [sports] wa (n=947 multi-event athletes)
-    1500m: 500 (52.8%)
-    800m: 263 (27.8%)
-    5000m: 183 (19.3%)
-    3000m Steeplechase: 1 (0.1%)
+  [sports] wa (n=952 multi-event athletes)
+    1500m: 447 (47.0%)
+    800m: 255 (26.8%)
+    5000m: 163 (17.1%)
+    3000m Steeplechase: 87 (9.1%)
 
   [sports] vdot (n=961 multi-event athletes)
     800m: 559 (58.2%)
@@ -59,12 +63,12 @@ Field events omitted for Purdy/VDOT (undefined).
     5000m: 190 (20.1%)
     3000m Steeplechase: 57 (6.0%)
 
-  Agreement wa vs vdot: 646/947 (68.2%)
-  Agreement wa vs purdy: 816/947 (86.2%)
-  Agreement wa vs mercier: 794/941 (84.4%)
+  Agreement wa vs vdot: 586/952 (61.6%)
+  Agreement wa vs purdy: 745/952 (78.3%)
+  Agreement wa vs mercier: 824/945 (87.2%)
   Agreement vdot vs purdy: 571/961 (59.4%)
-  Agreement vdot vs mercier: 674/945 (71.3%)
-  Agreement purdy vs mercier: 714/945 (75.6%)
+  Agreement vdot vs mercier: 675/945 (71.4%)
+  Agreement purdy vs mercier: 716/945 (75.8%)
 
 ### Hurdles
   [sports] wa (n=69 multi-event athletes)
@@ -101,7 +105,7 @@ Field events omitted for Purdy/VDOT (undefined).
     High Jump: 29 (29.0%)
     Triple Jump: 26 (26.0%)
 
-  Agreement wa vs mercier: 90/100 (90.0%)
+  Agreement wa vs mercier: 89/100 (89.0%)
 
 ### Throws
   [sports] wa (n=120 multi-event athletes)
@@ -149,10 +153,10 @@ Field events omitted for Purdy/VDOT (undefined).
 
 ### Distance
   [sports] wa (n=424 multi-event athletes)
-    1500m: 241 (56.8%)
-    5000m: 117 (27.6%)
-    800m: 65 (15.3%)
-    3000m Steeplechase: 1 (0.2%)
+    1500m: 189 (44.6%)
+    5000m: 96 (22.6%)
+    3000m Steeplechase: 86 (20.3%)
+    800m: 53 (12.5%)
 
   [sports] vdot (n=424 multi-event athletes)
     800m: 225 (53.1%)
@@ -171,12 +175,12 @@ Field events omitted for Purdy/VDOT (undefined).
     3000m Steeplechase: 89 (21.0%)
     800m: 71 (16.7%)
 
-  Agreement wa vs vdot: 245/424 (57.8%)
-  Agreement wa vs purdy: 394/423 (93.1%)
-  Agreement wa vs mercier: 320/424 (75.5%)
+  Agreement wa vs vdot: 177/424 (41.7%)
+  Agreement wa vs purdy: 316/423 (74.7%)
+  Agreement wa vs mercier: 402/424 (94.8%)
   Agreement vdot vs purdy: 219/423 (51.8%)
-  Agreement vdot vs mercier: 190/424 (44.8%)
-  Agreement purdy vs mercier: 296/423 (70.0%)
+  Agreement vdot vs mercier: 192/424 (45.3%)
+  Agreement purdy vs mercier: 294/423 (69.5%)
 
 ### Hurdles
   [sports] wa (n=44 multi-event athletes)

@@ -1,0 +1,213 @@
+Best First Event of Season — Athletes with Outdoor Opener in WA 750–950
+Metric: Mercier (1999) [scientific]
+========================================================================
+
+Question:
+  For athletes whose first outdoor-season result has WA in [750, 950),
+  which events tended to produce the highest Mercier (1999) as the first indoor event,
+  and which as the first outdoor event — by gender and event group?
+
+Method:
+  • Years 2024–2026; athlete-year must have ≥1 indoor and ≥1 outdoor
+    individual (non-relay) result.
+  • First result of a season = results on the chronologically earliest meet
+    date; if multiple events that day, the highest-Mercier (1999) result that day
+    is used as the noted first-event performance.
+  • Inclusion: outdoor first-event WA ∈ [750, 950)
+    (same cohort definition as the World Athletics report).
+  • Within each gender × event-group cell, rank events by mean first-event Mercier (1999).
+  • “Best” recommendation within a cell uses events with n≥5 when available.
+  • Sample: 505 athlete-years.
+
+Mean indoor first Mercier (1999): 591.6
+Mean outdoor first Mercier (1999): 641.1
+Mean Δ (out−in): +49.4
+
+Overall first-indoor events with highest mean Mercier (1999) (min n=10)
+  Men:
+    800m: mean=641.7 med=659.0 n=35
+    Shot Put: mean=628.9 med=649.0 n=14
+    3000m: mean=626.0 med=624.0 n=41
+    Mile: mean=622.2 med=621.0 n=44
+    400m: mean=602.0 med=601.0 n=45
+  Women:
+    Triple Jump: mean=632.9 med=627.5 n=10
+    Mile: mean=593.3 med=598.5 n=46
+    5000m: mean=582.6 med=582.0 n=11
+    3000m: mean=582.5 med=584.5 n=22
+    800m: mean=574.4 med=570.0 n=11
+
+Overall first-outdoor events with highest mean Mercier (1999) (min n=10)
+  Men:
+    800m: mean=674.2 med=670.0 n=57
+    400m: mean=668.7 med=661.0 n=23
+    5000m: mean=660.7 med=655.0 n=25
+    1500m: mean=655.4 med=644.0 n=42
+    200m: mean=652.6 med=650.5 n=58
+  Women:
+    Triple Jump: mean=666.7 med=642.0 n=11
+    800m: mean=626.2 med=621.5 n=16
+    400m: mean=624.6 med=614.0 n=23
+    1500m: mean=624.4 med=615.0 n=33
+    5000m: mean=622.0 med=611.0 n=27
+
+First INDOOR event — mean Mercier (1999) by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=126 athlete-years, mean Mercier (1999)=584.2)
+  Event                     n      mean    median
+  100m                      2     681.0     681.0
+  400m                     45     602.0     601.0
+  200m                     79     571.5     583.0
+  → Highest mean Mercier (1999) (n≥5): 400m (602.0, n=45)
+
+Men — Distance  (n=128 athlete-years, mean Mercier (1999)=630.4)
+  Event                     n      mean    median
+  5000m                     6     654.3     674.5
+  800m                     35     641.7     659.0
+  1500m                     2     630.0     630.0
+  3000m                    41     626.0     624.0
+  Mile                     44     622.2     621.0
+  → Highest mean Mercier (1999) (n≥5): 5000m (654.3, n=6)
+
+Men — Jumps  (n=53 athlete-years, mean Mercier (1999)=540.9)
+  Event                     n      mean    median
+  High Jump                17     587.0     562.0
+  Triple Jump              12     539.4     545.5
+  Long Jump                24     509.1     529.5
+  → Highest mean Mercier (1999) (n≥5): High Jump (587.0, n=17)
+
+Men — Throws  (n=14 athlete-years, mean Mercier (1999)=628.9)
+  Event                     n      mean    median
+  Shot Put                 14     628.9     649.0
+  → Highest mean Mercier (1999) (n≥5): Shot Put (628.9, n=14)
+
+Women — Sprints  (n=66 athlete-years, mean Mercier (1999)=564.7)
+  Event                     n      mean    median
+  100m                      1     608.0     608.0
+  400m                     23     572.7     586.0
+  200m                     42     559.2     563.0
+  → Highest mean Mercier (1999) (n≥5): 400m (572.7, n=23)
+
+Women — Distance  (n=91 athlete-years, mean Mercier (1999)=586.7)
+  Event                     n      mean    median
+  Mile                     46     593.3     598.5
+  5000m                    11     582.6     582.0
+  3000m                    22     582.5     584.5
+  800m                     11     574.4     570.0
+  1500m                     1     558.0     558.0
+  → Highest mean Mercier (1999) (n≥5): Mile (593.3, n=46)
+
+Women — Jumps  (n=26 athlete-years, mean Mercier (1999)=608.5)
+  Event                     n      mean    median
+  High Jump                 6     650.0     685.0
+  Triple Jump              10     632.9     627.5
+  Long Jump                10     559.1     517.0
+  → Highest mean Mercier (1999) (n≥5): High Jump (650.0, n=6)
+
+Women — Throws  (n=1 athlete-years, mean Mercier (1999)=533.0)
+  Event                     n      mean    median
+  Shot Put                  1     533.0     533.0
+  → Highest mean Mercier (1999) (n≥5): Shot Put (533.0, n=1)
+
+First OUTDOOR event — mean Mercier (1999) by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=118 athlete-years, mean Mercier (1999)=645.8)
+  Event                     n      mean    median
+  400m                     23     668.7     661.0
+  200m                     58     652.6     650.5
+  100m                     37     621.0     602.0
+  → Highest mean Mercier (1999) (n≥5): 400m (668.7, n=23)
+
+Men — Distance  (n=133 athlete-years, mean Mercier (1999)=663.4)
+  Event                     n      mean    median
+  3000m                     1     690.0     690.0
+  800m                     57     674.2     670.0
+  5000m                    25     660.7     655.0
+  1500m                    42     655.4     644.0
+  3000m Steeplechase        6     634.3     641.0
+  Mile                      2     628.0     628.0
+  → Highest mean Mercier (1999) (n≥5): 800m (674.2, n=57)
+
+Men — Hurdles  (n=14 athlete-years, mean Mercier (1999)=677.6)
+  Event                     n      mean    median
+  110m Hurdles              8     681.2     696.0
+  400m Hurdles              6     672.7     666.5
+  → Highest mean Mercier (1999) (n≥5): 110m Hurdles (681.2, n=8)
+
+Men — Jumps  (n=43 athlete-years, mean Mercier (1999)=604.0)
+  Event                     n      mean    median
+  High Jump                13     620.1     602.0
+  Triple Jump               5     617.0     603.0
+  Long Jump                25     593.0     593.0
+  → Highest mean Mercier (1999) (n≥5): High Jump (620.1, n=13)
+
+Men — Throws  (n=13 athlete-years, mean Mercier (1999)=682.3)
+  Event                     n      mean    median
+  Discus                    4     692.5     680.0
+  Shot Put                  9     677.8     672.0
+  → Highest mean Mercier (1999) (n≥5): Shot Put (677.8, n=9)
+
+Women — Sprints  (n=61 athlete-years, mean Mercier (1999)=614.8)
+  Event                     n      mean    median
+  400m                     23     624.6     614.0
+  200m                     23     612.2     612.0
+  100m                     15     603.9     599.0
+  → Highest mean Mercier (1999) (n≥5): 400m (624.6, n=23)
+
+Women — Distance  (n=88 athlete-years, mean Mercier (1999)=624.2)
+  Event                     n      mean    median
+  3000m                     4     626.8     622.5
+  3000m Steeplechase        6     626.7     618.5
+  800m                     16     626.2     621.5
+  event_18                  2     624.5     624.5
+  1500m                    33     624.4     615.0
+  5000m                    27     622.0     611.0
+  → Highest mean Mercier (1999) (n≥5): 3000m Steeplechase (626.7, n=6)
+
+Women — Hurdles  (n=11 athlete-years, mean Mercier (1999)=623.7)
+  Event                     n      mean    median
+  400m Hurdles              9     633.1     639.0
+  100m Hurdles              2     581.5     581.5
+  → Highest mean Mercier (1999) (n≥5): 400m Hurdles (633.1, n=9)
+
+Women — Jumps  (n=24 athlete-years, mean Mercier (1999)=653.5)
+  Event                     n      mean    median
+  High Jump                 7     674.9     670.0
+  Triple Jump              11     666.7     642.0
+  Long Jump                 6     604.3     599.0
+  → Highest mean Mercier (1999) (n≥5): High Jump (674.9, n=7)
+
+Headline recommendations (n≥5 within gender × group)
+----------------------------------------------------
+Indoor season openers:
+  Indoor | Men Sprints: 400m (mean Mercier (1999) 602.0, n=45)
+  Indoor | Men Distance: 5000m (mean Mercier (1999) 654.3, n=6)
+  Indoor | Men Jumps: High Jump (mean Mercier (1999) 587.0, n=17)
+  Indoor | Men Throws: Shot Put (mean Mercier (1999) 628.9, n=14)
+  Indoor | Women Sprints: 400m (mean Mercier (1999) 572.7, n=23)
+  Indoor | Women Distance: Mile (mean Mercier (1999) 593.3, n=46)
+  Indoor | Women Jumps: High Jump (mean Mercier (1999) 650.0, n=6)
+  Indoor | Women Throws: Shot Put (mean Mercier (1999) 533.0, n=1)
+Outdoor season openers:
+  Outdoor | Men Sprints: 400m (mean Mercier (1999) 668.7, n=23)
+  Outdoor | Men Distance: 800m (mean Mercier (1999) 674.2, n=57)
+  Outdoor | Men Hurdles: 110m Hurdles (mean Mercier (1999) 681.2, n=8)
+  Outdoor | Men Jumps: High Jump (mean Mercier (1999) 620.1, n=13)
+  Outdoor | Men Throws: Shot Put (mean Mercier (1999) 677.8, n=9)
+  Outdoor | Women Sprints: 400m (mean Mercier (1999) 624.6, n=23)
+  Outdoor | Women Distance: 3000m Steeplechase (mean Mercier (1999) 626.7, n=6)
+  Outdoor | Women Hurdles: 400m Hurdles (mean Mercier (1999) 633.1, n=9)
+  Outdoor | Women Jumps: High Jump (mean Mercier (1999) 674.9, n=7)
+
+Caveats:
+  • Conditioning on outdoor opener already in 750–950 truncates
+    outdoor WA from below; outdoor event rankings are within that cohort.
+  • Indoor first-event scores are unrestricted and often lower.
+  • Same-day multi-event openers: highest-Mercier (1999) mark that day is used.
+  • Observational — does not prove causality of event choice.
+  • Purdy/VDOT undefined for field events — those marks are skipped for
+    first-event selection under those metrics.
+
+Source detail CSV: first_event_band_750_950_detail_mercier.csv

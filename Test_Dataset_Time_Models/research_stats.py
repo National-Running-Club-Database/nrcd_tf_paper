@@ -541,7 +541,7 @@ def write_stats_report(
         "",
         "Design notes",
         "------------",
-        "  • External validation on NCAA Division I men's outdoor results (dated meets).",
+        "  • External validation on collegiate men's outdoor results (all scraped divisions).",
         "  • Models were fit on club / National Running Club data — expect distribution shift.",
         "  • Primary cross-event metric: median absolute percent error (MedAPE).",
         "  • Absolute-second MedAE is interpretable only within an event pair or event group.",

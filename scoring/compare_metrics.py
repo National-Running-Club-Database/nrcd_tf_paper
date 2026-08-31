@@ -25,30 +25,44 @@ from scoring.marks import is_field_event
 
 OUT = ROOT / "scoring" / "output"
 NON_RELAYS = ROOT / "non_relays_findings"
+# Canonical distance + corrected steeplechase WA (supersedes non_relays Distance_Events_Counting)
+NEW_STEEPLE = ROOT / "new_steeplechase_data" / "Distance_Relays_Findings"
 SEASONS = ["2024", "2025", "2026"]
 
+# (discipline, base_dir, subfolder_or_None, file_prefix, event_map)
+# Distance uses new_steeplechase_data (corrected steeple WA); other disciplines use non_relays_findings.
 DISCIPLINES = [
-    ("Sprints", "Sprints_Events_Counting", "Sprinters", {3: "100m", 4: "200m", 6: "400m"}),
+    (
+        "Sprints",
+        NON_RELAYS,
+        "Sprints_Events_Counting",
+        "Sprinters",
+        {3: "100m", 4: "200m", 6: "400m"},
+    ),
     (
         "Distance",
-        "Distance_Events_Counting",
-        "Distance",
+        NEW_STEEPLE,
+        None,
+        "Relays_Distance",
         {9: "800m", 11: "1500m", 17: "5000m", 20: "3000m Steeplechase"},
     ),
     (
         "Hurdles",
+        NON_RELAYS,
         "Hurdles_Events_Counting",
         "Hurdles",
         {34: "100m Hurdles", 35: "110m Hurdles", 37: "400m Hurdles"},
     ),
     (
         "Jumps",
+        NON_RELAYS,
         "Jumps_Events_Counting",
         "Jumps",
         {38: "Long Jump", 39: "Triple Jump", 40: "High Jump"},
     ),
     (
         "Throws",
+        NON_RELAYS,
         "Throws_Events_Counting",
         "Throws",
         {41: "Shot Put", 42: "Discus", 43: "Hammer Throw", 45: "Javelin Throw"},
@@ -68,10 +82,16 @@ def _float(val) -> float | None:
         return None
 
 
-def load_rows(folder: str, prefix: str, gender: str) -> list[dict]:
+def load_rows(
+    base: Path,
+    subfolder: str | None,
+    prefix: str,
+    gender: str,
+) -> list[dict]:
     rows: list[dict] = []
+    root = base / subfolder if subfolder else base
     for year in SEASONS:
-        path = NON_RELAYS / folder / f"{prefix}_{gender}_Outdoor_{year}_Data.csv"
+        path = root / f"{prefix}_{gender}_Outdoor_{year}_Data.csv"
         if path.exists():
             with open(path, newline="", encoding="utf-8", errors="replace") as f:
                 rows.extend(csv.DictReader(f))
@@ -155,12 +175,16 @@ def run_comparison() -> dict:
         "Athletes with season bests in ≥2 events in a discipline; best event = max score.",
         "Field events omitted for Purdy/VDOT (undefined).",
         "",
+        "Distance data: new_steeplechase_data/Distance_Relays_Findings",
+        "  (corrected steeplechase WA; supersedes non_relays Distance_Events_Counting).",
+        "Other disciplines: non_relays_findings/*_Events_Counting.",
+        "",
     ]
 
     for gender in ("Men", "Women"):
         report.append(f"## {gender}")
-        for disc, folder, prefix, emap in DISCIPLINES:
-            rows = load_rows(folder, prefix, gender)
+        for disc, base, subfolder, prefix, emap in DISCIPLINES:
+            rows = load_rows(base, subfolder, prefix, gender)
             if not rows:
                 continue
             metric_bests = {}

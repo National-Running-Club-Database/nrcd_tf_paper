@@ -1,0 +1,317 @@
+College,Athlete,Season_Year,Event_Group,Bal_Spec,Best_Event,WA_Spread,Events_Competed_In_Group
+Air Force,Austen Escoffery,2026,Distance,balanced,800m,0.0,1
+Air Force,Austen Escoffery,2026,Throws,specialized,SP,98.0,3
+Air Force,Ben Scheller,2026,Distance,balanced,1500m,0.0,1
+Air Force,Ben Scheller,2026,Jumps,balanced,PV,0.0,1
+Air Force,Brandon Stauty,2026,Jumps,balanced,HJ,0.0,1
+Air Force,Cameron Downing,2026,Distance,specialized,800m,177.0,3
+Air Force,Cameron Downing,2026,Throws,balanced,JT,0.0,1
+Air Force,Chris Atunku,2026,Distance,specialized,800m,170.0,3
+Air Force,Chris Atunku,2026,Jumps,balanced,HJ,0.0,1
+Air Force,Christopher Johnson,2026,Distance,balanced,1500m,34.0,2
+Air Force,Christopher Johnson,2026,Sprints,balanced,400m,0.0,1
+Air Force,Cody Kelley,2026,Distance,specialized,1500m,77.0,3
+Air Force,David Sliwinski,2026,Distance,specialized,5000m,115.0,2
+Air Force,Dominykas Remeikis,2026,Distance,balanced,1500m,0.0,1
+Air Force,Dominykas Remeikis,2026,Throws,specialized,DT,161.0,3
+Air Force,Ethan Ashley,2026,Distance,specialized,1500m,130.0,2
+Air Force,Ethan Ashley,2026,Jumps,specialized,PV,97.0,2
+Air Force,Ethan Ashley,2026,Throws,specialized,JT,95.0,2
+Air Force,Evan Keefe,2026,Distance,balanced,5000m,0.0,1
+Air Force,Evan Keefe,2026,Jumps,balanced,PV,0.0,1
+Air Force,Evan Keefe,2026,Throws,specialized,DT,232.0,3
+Air Force,Jacob Fieberkorn,2026,Throws,specialized,SP,210.0,3
+Air Force,Jettason Rose,2026,Distance,balanced,1500m,16.0,2
+Air Force,Jettason Rose,2026,Throws,specialized,HT,116.0,3
+Air Force,Jevonte Eaves,2026,Distance,specialized,1500m,61.0,2
+Air Force,Jevonte Eaves,2026,Sprints,balanced,400m,0.0,1
+Air Force,Josh Shriver,2026,Distance,balanced,3000m SC,28.0,2
+Air Force,Josh Shriver,2026,Jumps,balanced,PV,0.0,1
+Air Force,Junior Allen,2026,Distance,specialized,3000m SC,266.0,3
+Air Force,Junior Allen,2026,Sprints,balanced,400m,0.0,1
+Air Force,Massimo Grisotto,2026,Throws,specialized,DT,181.0,3
+Air Force,Max Austin,2026,Jumps,balanced,PV,0.0,1
+Air Force,Max Austin,2026,Sprints,balanced,400m,0.0,1
+Air Force,Max Sannes,2026,Jumps,balanced,PV,0.0,1
+Air Force,Mitchell Blakeslee,2026,Throws,balanced,DT,33.0,2
+Air Force,Patrick Allen,2026,Distance,specialized,1500m,127.0,2
+Air Force,Ryan Hajek,2026,Hurdles,balanced,400mH,0.0,1
+Air Force,Ryan Hajek,2026,Sprints,balanced,400m,0.0,1
+Air Force,Saketh Rudraraju,2026,Distance,specialized,1500m,199.0,2
+Air Force,Saketh Rudraraju,2026,Jumps,balanced,PV,0.0,1
+Air Force,Trenton Groff,2026,Throws,balanced,JT,0.0,1
+Air Force,Trevin Jordan,2026,Distance,specialized,1500m,117.0,3
+Air Force,Trevin Jordan,2026,Hurdles,balanced,400mH,0.0,1
+Air Force,Trevin Jordan,2026,Throws,specialized,SP,218.0,3
+Air Force,Will Bradbury,2026,Distance,balanced,1500m,0.0,1
+Air Force,Zach Ayers,2026,Distance,balanced,5000m,0.0,1
+Air Force,Zach Ayers,2026,Sprints,balanced,400m,0.0,1
+Air Force,Zachary King,2026,Sprints,balanced,400m,0.0,1
+DePaul,Alex Bernstein,2026,Throws,specialized,HT,378.0,2
+DePaul,Alex Long-Craine,2026,Sprints,balanced,100m,49.0,2
+DePaul,Amaru Mazibuko,2026,Sprints,balanced,100m,0.0,1
+DePaul,Caleb Schulz,2026,Sprints,balanced,100m,0.0,1
+DePaul,Christian Ortiz-Velazquez,2026,Sprints,balanced,400m,26.0,2
+DePaul,Cole Tupper,2026,Distance,specialized,3000m,64.0,3
+DePaul,Cole Tupper,2026,Hurdles,balanced,110mH,0.0,1
+DePaul,Daniel Fasasi,2026,Sprints,specialized,400m,67.0,2
+DePaul,Daniel Grauer,2026,Distance,specialized,3000m,108.0,2
+DePaul,Demetrius Rolle,2026,Sprints,specialized,100m,168.0,2
+DePaul,Denhm Holt,2026,Sprints,balanced,400m,0.0,1
+DePaul,Gavin Greaney,2026,Sprints,balanced,400m,0.0,1
+DePaul,Harper Bryan,2026,Hurdles,specialized,400mH,94.0,2
+DePaul,Hunter Bostwick,2026,Distance,specialized,3000m SC,136.0,2
+DePaul,Ian Bello,2026,Sprints,balanced,400m,0.0,1
+DePaul,Isaiah Hopf,2026,Jumps,balanced,TJ,0.0,1
+DePaul,Jack Broghammer,2026,Distance,specialized,1500m,58.0,3
+DePaul,Jack Hopkins,2026,Distance,balanced,800m,18.0,2
+DePaul,Jaiden Gary,2026,Throws,specialized,SP,248.0,3
+DePaul,Jayvion Cunningham,2026,Sprints,balanced,200m,33.0,2
+DePaul,John Bush,2026,Distance,specialized,800m,103.0,2
+DePaul,Jorden Reddick,2026,Hurdles,balanced,110mH,0.0,1
+DePaul,Joshua Hill,2026,Jumps,balanced,TJ,28.0,2
+DePaul,Kyle Clark,2026,Distance,specialized,3000m,86.0,2
+DePaul,Kyle Dube,2026,Hurdles,balanced,400mH,0.0,1
+DePaul,Kyle Friedl,2026,Distance,specialized,800m,101.0,2
+DePaul,Mason Krieg,2026,Distance,specialized,5000m,78.0,2
+DePaul,Mohamed Abdullahi,2026,Distance,specialized,1500m,133.0,2
+DePaul,Musa Butler,2026,Hurdles,balanced,400mH,0.0,1
+DePaul,Musa Butler,2026,Sprints,balanced,400m,0.0,1
+DePaul,Myles Money,2026,Sprints,balanced,100m,21.0,2
+DePaul,Nick Quinn,2026,Distance,balanced,800m,0.0,1
+DePaul,Owen Larkins,2026,Distance,balanced,800m,0.0,1
+DePaul,Quinton Boyd,2026,Throws,balanced,HT,33.0,2
+DePaul,Reid Waco,2026,Distance,specialized,1500m,169.0,2
+DePaul,Sergio Ayala,2026,Throws,specialized,SP,259.0,3
+DePaul,Tyce Smith,2026,Sprints,balanced,400m,25.0,2
+Indiana State,Brandon Mueller,2026,Sprints,specialized,400m,488358.0,2
+Indiana State,Caden Emmert,2026,Distance,balanced,10000m,0.0,1
+Indiana State,Casey Hood Jr.,2026,Sprints,specialized,200m,8305.0,2
+Indiana State,Chris Angeles,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Chris Angeles,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Collin Forrest,2026,Distance,balanced,5000m,0.0,1
+Indiana State,Collin Forrest,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Crhis Angeles,2026,Distance,balanced,10000m,0.0,1
+Indiana State,David Carnell,2026,Hurdles,specialized,110mH,95.0,2
+Indiana State,Deangelo Hughey,2026,Distance,balanced,5000m,0.0,1
+Indiana State,Graham West,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Ivan Weaver,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Jake Ottersbach,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Jake Ottersbach,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Jake Ottersbach,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Jcim Grant,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Jcim Grant,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Kieran Barnewall,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Mason Nobles,2026,Distance,balanced,10000m,0.0,1
+Indiana State,Mason Nobles,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Matthew Wray,2026,Sprints,balanced,200m,0.0,1
+Indiana State,Nick Burns,2026,Sprints,balanced,200m,0.0,1
+Indiana State,Parker Doyle,2026,Distance,balanced,5000m,0.0,1
+Indiana State,Parker Doyle,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Parker Doyle,2026,Jumps,balanced,HJ,0.0,1
+Indiana State,Parker Mimbela,2026,Distance,balanced,10000m,0.0,1
+Indiana State,Parker Mimbela,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Parrish Hartley Jr.,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Parrish Hartley Jr.,2026,Sprints,balanced,200m,0.0,1
+Indiana State,Ray Brodie III,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Ray Brodie III,2026,Sprints,balanced,200m,0.0,1
+Indiana State,Ryan York,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Ryan York,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Trent Jones,2026,Sprints,specialized,200m,274933.0,2
+Indiana State,Ty Newsom,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Ty Newsom,2026,Hurdles,balanced,110mH,0.0,1
+Indiana State,Ty Newsom,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Will Riley,2026,Sprints,specialized,200m,316736.0,2
+Indiana State,Xander Fackler,2026,Sprints,balanced,400m,0.0,1
+Indiana State,Zenon Rule,2026,Distance,balanced,1500m,0.0,1
+Indiana State,Zenon Rule,2026,Hurdles,balanced,110mH,0.0,1
+Marquette,Alexa Overstreet,2026,Distance,balanced,800m,0.0,1
+Marquette,Alexa Overstreet,2026,Sprints,balanced,100m,0.0,1
+Marquette,Alexis Boyer,2026,Sprints,balanced,400m,0.0,1
+Marquette,Alika Lugo,2026,Sprints,specialized,400m,60.0,2
+Marquette,Allie Opalka,2026,Distance,balanced,800m,0.0,1
+Marquette,Andrew Klopcic,2026,Sprints,specialized,200m,156.0,2
+Marquette,Ava Thomas,2026,Distance,balanced,800m,0.0,1
+Marquette,Blake Frea,2026,Sprints,specialized,400m,53.0,2
+Marquette,Bobby King,2026,Sprints,balanced,200m,25.0,2
+Marquette,Brynn Miller,2026,Distance,balanced,800m,0.0,1
+Marquette,Brynn Miller,2026,Sprints,balanced,100m,0.0,1
+Marquette,Charlie Dutmer,2026,Sprints,specialized,200m,323.0,2
+Marquette,Cole Donahe,2026,Sprints,specialized,400m,93.0,2
+Marquette,Danny Olsen,2026,Sprints,balanced,400m,0.0,1
+Marquette,Daylee Braden,2026,Distance,balanced,800m,0.0,1
+Marquette,Daylee Braden,2026,Sprints,balanced,400m,0.0,1
+Marquette,Edgar Valles,2026,Distance,balanced,800m,0.0,1
+Marquette,Elise Fischer,2026,Distance,balanced,800m,0.0,1
+Marquette,Ethan Aidoo,2026,Distance,balanced,800m,0.0,1
+Marquette,Frankie McGee,2026,Sprints,specialized,400m,69.0,3
+Marquette,Gabriel Thiel,2026,Sprints,balanced,100m,40.0,3
+Marquette,Gus Kasun,2026,Sprints,balanced,400m,19.0,2
+Marquette,Haley Schaffer,2026,Sprints,balanced,100m,0.0,1
+Marquette,Haneefa Adam,2026,Sprints,balanced,100m,0.0,1
+Marquette,Henrik Rosario,2026,Sprints,specialized,100m,117.0,3
+Marquette,Izzy Kissane,2026,Distance,balanced,800m,0.0,1
+Marquette,Izzy Kissane,2026,Sprints,specialized,400m,65.0,2
+Marquette,Jaiden Dornaus,2026,Sprints,balanced,400m,14.0,2
+Marquette,Justin Juniel,2026,Sprints,specialized,100m,119.0,2
+Marquette,Kassidy Papa,2026,Sprints,balanced,100m,0.0,1
+Marquette,Kaylie Earl,2026,Distance,balanced,800m,0.0,1
+Marquette,Kieran Petire,2026,Sprints,balanced,400m,0.0,1
+Marquette,Kieran Petrie,2026,Sprints,balanced,200m,0.0,1
+Marquette,Libby McCarthy,2026,Distance,balanced,800m,0.0,1
+Marquette,Libby McCarthy,2026,Sprints,balanced,200m,0.0,1
+Marquette,Lindsey Andrae,2026,Distance,balanced,800m,0.0,1
+Marquette,Lindsey Andrae,2026,Sprints,balanced,400m,0.0,1
+Marquette,Louis Hebson,2026,Sprints,balanced,100m,31.0,2
+Marquette,Makena Coltoff,2026,Sprints,balanced,200m,0.0,1
+Marquette,Marley Stoller,2026,Sprints,balanced,400m,1.0,2
+Marquette,Mia Nutile,2026,Distance,balanced,800m,0.0,1
+Marquette,Natalie Lupa,2026,Sprints,balanced,100m,0.0,1
+Marquette,Niels De Brouckere,2026,Sprints,specialized,100m,59.0,2
+Marquette,Nonic Oelling,2026,Sprints,specialized,200m,77.0,2
+Marquette,Norah Peiffle,2026,Sprints,balanced,100m,47.0,2
+Marquette,Olivia Campbell,2026,Distance,balanced,800m,0.0,1
+Marquette,Olivia Campbell,2026,Sprints,balanced,400m,0.0,1
+Marquette,Paige Haglund,2026,Distance,balanced,800m,0.0,1
+Marquette,Patrick Clune,2026,Distance,balanced,800m,0.0,1
+Marquette,Philip Johnson,2026,Sprints,balanced,100m,0.0,1
+Marquette,Reece Cruz,2026,Sprints,balanced,100m,0.0,1
+Marquette,Sanai Baker,2026,Sprints,specialized,100m,72.0,2
+Marquette,Sebastian Obrzut,2026,Sprints,balanced,200m,0.0,1
+Marquette,Sophia Abraham,2026,Sprints,balanced,100m,34.0,2
+Marquette,Sylvia Fochesato,2026,Sprints,balanced,200m,0.0,1
+Marquette,Taya Gummerson,2026,Distance,balanced,800m,0.0,1
+Marquette,Thomas Zambianchi,2026,Sprints,balanced,200m,4.0,2
+Marquette,Will Allen,2026,Distance,balanced,800m,0.0,1
+North Florida,Andrew Mahorner,2024,Distance,balanced,1500m,0.0,1
+North Florida,Ben Tary,2024,Distance,balanced,3000m SC,19.0,2
+North Florida,Camden Springer,2024,Sprints,balanced,400m,39.0,2
+North Florida,Christian Ruocco,2024,Distance,balanced,1500m,33.0,2
+North Florida,Cole Perry,2024,Distance,specialized,3000m SC,123.0,2
+North Florida,Colton Lawson,2024,Distance,specialized,3000m SC,97.0,2
+North Florida,Gavin O’Brien,2024,Distance,balanced,3000m SC,41.0,2
+North Florida,Ilias El Khattabi,2024,Distance,specialized,3000m SC,61.0,2
+North Florida,Jacob Hippo,2024,Jumps,balanced,HJ,0.0,1
+North Florida,Jonathan Bailey,2024,Sprints,specialized,100m,85.0,2
+North Florida,Justin Tackling,2024,Distance,balanced,5000m,40.0,2
+North Florida,Kameron Wallizada,2024,Distance,balanced,5000m,44.0,2
+North Florida,Ladarius Tellis,2024,Distance,balanced,800m,0.0,1
+North Florida,Ladarius Tellis,2024,Sprints,balanced,400m,0.0,1
+North Florida,Martin Ahlstrom,2024,Distance,specialized,10000m,94.0,2
+North Florida,Paul Lespasio,2024,Distance,specialized,5000m,99.0,3
+North Florida,Rey Hernandez,2024,Hurdles,balanced,400mH,45.0,2
+North Florida,Rey Hernandez,2024,Sprints,balanced,400m,31.0,3
+North Florida,Ryan Douihech,2024,Distance,balanced,1500m,6.0,2
+North Florida,Sebastian Hernandez,2024,Distance,balanced,5000m,16.0,2
+North Florida,Seth Martinez,2024,Distance,specialized,5000m,126.0,3
+North Florida,Tariq LaJoie,2024,Jumps,balanced,HJ,0.0,1
+North Florida,Thomas Weiler,2024,Distance,balanced,5000m,31.0,2
+Portland State,Event Mark Place Meet Date,2026,Distance,specialized,800m,253.0,4
+Portland State,Event Mark Place Meet Date,2026,Hurdles,balanced,110mH,26.0,2
+Portland State,Event Mark Place Meet Date,2026,Sprints,specialized,200m,78.0,3
+Providence,Cormac Dixon,2026,Distance,balanced,5000m,0.0,1
+Providence,Daniel Prescott,2026,Distance,balanced,5000m,0.0,1
+Providence,Eli Wood,2026,Sprints,balanced,200m,0.0,1
+Providence,Elliott Pugh,2026,Distance,balanced,5000m,0.0,1
+Providence,Jack Dowd,2026,Distance,balanced,1500m,0.0,1
+Providence,Kyle Bloomer,2026,Sprints,balanced,400m,0.0,1
+Providence,Liam Back,2026,Distance,balanced,1500m,0.0,1
+Providence,Matt Denardis,2026,Distance,balanced,1500m,0.0,1
+Providence,Nicholas Cassarino,2026,Distance,balanced,1500m,0.0,1
+Providence,Oliver Neate,2026,Distance,balanced,1500m,0.0,1
+Providence,Ryan Welch,2026,Distance,balanced,1500m,0.0,1
+Providence,Tucker Anglemyer,2026,Sprints,balanced,200m,0.0,1
+Providence,Tyler Bartlett,2026,Distance,balanced,1500m,0.0,1
+SIUE,Aaron Conderman,2026,Distance,balanced,3000m,26.0,2
+SIUE,Andrew Perry,2026,Distance,balanced,5000m,42.0,2
+SIUE,Cadem Belcher,2026,Sprints,balanced,400m,0.0,1
+SIUE,Caden Belcher,2026,Sprints,balanced,400m,0.0,1
+SIUE,Cullen Krieg,2026,Distance,specialized,800m,97.0,2
+SIUE,D'Andre Watson,2026,Distance,balanced,800m,0.0,1
+SIUE,Darius Alberty,2026,Hurdles,balanced,110mH,0.0,1
+SIUE,D’Andre Watson,2026,Distance,balanced,1500m,0.0,1
+SIUE,Ian O’Laughlin,2026,Distance,balanced,5000m,3.0,2
+SIUE,Jack Willenborg,2026,Distance,specialized,5000m,439.0,2
+SIUE,Konnor Bouman,2026,Sprints,balanced,100m,0.0,1
+SIUE,Konrad Sacha,2026,Sprints,balanced,400m,27.0,2
+SIUE,Logan Luttrell,2026,Distance,balanced,800m,0.0,1
+SIUE,Nathaniel Wright,2026,Distance,specialized,800m,115.0,2
+SIUE,Norman Mukwada,2026,Sprints,balanced,200m,4.0,2
+SIUE,Plamedi Nseka,2026,Sprints,balanced,400m,0.0,1
+SIUE,Reece Wolf,2026,Distance,balanced,800m,0.0,1
+SIUE,Simon McClaine,2026,Hurdles,balanced,110mH,23.0,2
+SIUE,Simon McClaine,2026,Sprints,balanced,200m,0.0,1
+SIUE,Tanner Emerson,2026,Distance,specialized,3000m,70.0,4
+SIUE,Trenton Brooks,2026,Sprints,specialized,100m,80.0,2
+SIUE,Tyler Bell,2026,Hurdles,balanced,110mH,0.0,1
+SIUE,Tyler Bell,2026,Sprints,balanced,200m,0.0,1
+Southern Indiana,Alan Marshall,2026,Distance,balanced,3000m SC,40.0,3
+Southern Indiana,Alex Nolan,2026,Distance,specialized,3000m,144.0,4
+Southern Indiana,Andrew Pace,2026,Distance,specialized,3000m,80.0,2
+Southern Indiana,Andrew Smith,2026,Distance,specialized,3000m,112.0,3
+Southern Indiana,Ben Perulfi,2026,Distance,specialized,3000m SC,128.0,3
+Southern Indiana,Blake Smith,2026,Distance,balanced,1500m,0.0,1
+Southern Indiana,Brady Tremayne,2026,Distance,specialized,5000m,148.0,3
+Southern Indiana,Carson Brown,2026,Distance,specialized,1500m,90.0,3
+Southern Indiana,Cole Hess,2026,Distance,specialized,800m,81.0,2
+Southern Indiana,Dominick Beine,2026,Distance,specialized,3000m,80.0,4
+Southern Indiana,Eli Mojonnier,2026,Distance,specialized,800m,120.0,2
+Southern Indiana,Gabe Land,2026,Distance,balanced,800m,0.0,1
+Southern Indiana,Gavin Thompson,2026,Distance,specialized,800m,363.0,2
+Southern Indiana,Griffen Wheeler,2026,Distance,balanced,1500m,36.0,2
+Southern Indiana,Holden Hough,2026,Distance,specialized,3000m,133.0,2
+Southern Indiana,Isaac Stanford,2026,Distance,specialized,1500m,52.0,2
+Southern Indiana,Jackson Collman,2026,Distance,specialized,3000m,152.0,2
+Southern Indiana,Jadon Muncy,2026,Distance,specialized,1500m,58.0,2
+Southern Indiana,Joe Schwartz,2026,Distance,specialized,1500m,61.0,3
+Southern Indiana,Joshua Myers,2026,Distance,specialized,3000m,167.0,2
+Southern Indiana,Kraedyn Young,2026,Distance,specialized,1500m,129.0,4
+Southern Indiana,Landen Swiney,2026,Distance,specialized,3000m,85.0,4
+Southern Indiana,Layden Wagoner,2026,Distance,specialized,1500m,110.0,3
+Southern Indiana,Mukal Verma,2026,Distance,specialized,3000m,72.0,3
+Southern Indiana,Noah Burgh,2026,Distance,balanced,1500m,9.0,2
+Southern Indiana,Noah Nifong,2026,Distance,specialized,1500m,58.0,2
+Southern Indiana,Ryan Luitjohan,2026,Distance,specialized,1500m,88.0,3
+Southern Indiana,Tyler Zimmerman,2026,Distance,specialized,1500m,242.0,3
+Southern Indiana,Wylee Kippenbrock,2026,Distance,specialized,1500m,51.0,2
+Southern Indiana,Zach Wells,2026,Distance,balanced,3000m,40.0,2
+Troy,Romario Taylor,2026,Sprints,specialized,400m,13123.0,2
+Troy,Time Meet Date Finish Bennett Phillips,2026,Distance,balanced,1500m,0.0,1
+Troy,Time Meet Date Finish Time Meet Date Finish,2026,Distance,balanced,1500m,0.0,1
+Troy,Tydreke Thomas,2026,Sprints,balanced,100m,0.0,1
+UTEP,Arion Hill,2026,Hurdles,balanced,110mH,0.0,1
+UTEP,Arion Hill,2026,Sprints,balanced,100m,0.0,1
+UTEP,Carmelo Corral,2026,Distance,balanced,1500m,0.0,1
+UTEP,Carmelo Corral,2026,Jumps,balanced,HJ,0.0,1
+UTEP,Carmelo Corral,2026,Throws,balanced,SP,26.0,2
+UTEP,Damon Flemings Timothy Grice,2026,Sprints,balanced,200m,0.0,1
+UTEP,Damon Flemings Timothy Grice,2026,Throws,balanced,JT,0.0,1
+UTEP,Elijah Munoz,2026,Throws,balanced,JT,0.0,1
+UTEP,Evan Avitia,2026,Distance,balanced,1500m,0.0,1
+UTEP,Israel Quintana,2026,Distance,balanced,5000m,24.0,2
+UTEP,Israel Quintana,2026,Sprints,balanced,400m,0.0,1
+UTEP,Jacob Yeager,2026,Sprints,specialized,200m,14198.0,2
+UTEP,Joseph Gomez Whitten,2026,Sprints,specialized,100m,98.0,2
+UTEP,Kalix Robinson Zacarias Velasquez,2026,Hurdles,balanced,400mH,0.0,1
+UTEP,Kalix Robinson Zacarias Velasquez,2026,Jumps,balanced,LJ,0.0,1
+UTEP,Oleksandr Blonskyi,2026,Sprints,balanced,400m,0.0,1
+UTEP,Paul Rotich,2026,Distance,balanced,1500m,17.0,2
+UTEP,Sebastian Avena Alex Brown,2026,Sprints,balanced,400m,0.0,1
+UTEP,Zion Meaders,2026,Sprints,balanced,400m,0.0,1
+Utah State,Caleb White,2026,Sprints,balanced,400m,0.0,1
+Utah State,Daniel Chase,2026,Distance,balanced,5000m,0.0,1
+Utah State,Daniel Chase,2026,Jumps,balanced,PV,0.0,1
+Utah State,Daniel Chase,2026,Sprints,balanced,200m,19.0,2
+Utah State,Daniel Chase,2026,Throws,balanced,JT,0.0,1
+Utah State,Drew Hogan Michael Amitava Maiorano,2026,Distance,balanced,800m,0.0,1
+Utah State,Jayden Holdsworth,2026,Distance,specialized,1500m,51.0,2
+Utah State,Jedidiah Megargel Marshall Rasmussen,2026,Distance,specialized,1500m,155.0,4
+Utah State,Jedidiah Megargel Marshall Rasmussen,2026,Jumps,specialized,PV,187.0,3
+Utah State,Jedidiah Megargel Marshall Rasmussen,2026,Sprints,specialized,100m,180.0,3
+Utah State,Jedidiah Megargel Marshall Rasmussen,2026,Throws,specialized,DT,201.0,3
+Utah State,Joseph Turner,2026,Throws,balanced,DT,20.0,2
+Utah State,Landon Bott,2026,Distance,balanced,800m,0.0,1
+Utah State,Lj Floyd,2026,Distance,balanced,800m,0.0,1
+Utah State,Lj Floyd,2026,Throws,specialized,SP,126.0,2
+Utah State,Porter Holt,2026,Throws,balanced,HT,0.0,1
+Utah State,Sam Beckwith,2026,Jumps,specialized,LJ,308.0,2

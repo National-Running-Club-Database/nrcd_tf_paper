@@ -1,0 +1,124 @@
+Feature-Aware Indoor → Outdoor Time Models — WA Band 850-1050 (Width 200)
+=========================================================================
+
+Method:
+  • Same indoor→outdoor pairs and feature routing as
+    feature_aware_indoor_to_outdoor_findings.txt.
+  • Band membership: indoor from-event season-best World Athletics score
+    ∈ [850, 1050). The WA value is taken from the athlete's best
+    (fastest / farthest) indoor mark in the from-event that season.
+  • Pooled + feature cohort formulas; CV seed=42, folds=5; cohort n≥12;
+    pair needs n≥20 after banding.
+
+Use:
+  1. Compute the athlete's indoor from-event season PB and its WA score.
+  2. If that WA is in [850, 1050), use this band's formulas.
+  3. Start from the pooled formula; switch to feature-cohort formulas when labeled.
+  4. For pure forecasting (outdoor unknown), prefer bal_spec / best_is_from
+     over from_stronger_wa / pair_wa_gap_50.
+
+
+Sprints — Men
+-------------
+
+Indoor 60m -> Outdoor 100m  (n=46 athlete-seasons, r=0.478)
+  Pooled model: median_ratio
+  Formula: Outdoor 100m = 1.5702 × Indoor 60m
+  CV median |error| (pooled routing): 0.169s
+  Full-sample median |error|: 0.151s
+  Ratio Outdoor 100m/Indoor 60m: median 1.570 (IQR 1.545–1.587)
+  Median marks: Indoor 60m 7.08, Outdoor 100m 11.04
+
+  Important features to know
+  --------------------------
+  • Recommended route: pair_wa_gap_50 (CV 0.066s, Δ +0.103s vs pooled).
+  • How to determine it: If |WA(indoor from) − WA(outdoor to)| ≥ 50, use large_gap; else small_gap.
+  • Other features that also beat pooled:
+      - pair_wa_gap_50: CV 0.066s (Δ +0.103s) ← recommended
+      - best_is_from: CV 0.090s (Δ +0.078s)
+
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled): Outdoor 100m = 1.5702 × Indoor 60m
+  • If |WA(indoor from) − WA(outdoor to)| ≥ 50, use large_gap; else small_gap.
+      [large_gap] n=24: Outdoor 100m = 1.5875 × Indoor 60m  (full-sample MedAE 0.091s)
+      [small_gap] n=22: Outdoor 100m = 1.5509 × Indoor 60m  (full-sample MedAE 0.063s)
+
+  How best_is_from alters the formula:
+  • Baseline (pooled): Outdoor 100m = 1.5702 × Indoor 60m
+  • Check whether the indoor from-event holds the athlete's highest WA among indoor-from + outdoor group PBs. Yes → best_is_from; no → best_not_from.
+      [best_is_from] n=28: Outdoor 100m = 1.5830 × Indoor 60m  (full-sample MedAE 0.122s)
+      [best_not_from] n=18: Outdoor 100m = 1.5423 × Indoor 60m  (full-sample MedAE 0.081s)
+
+Indoor 200m -> Outdoor 200m  (n=30 athlete-seasons, r=0.451)
+  Pooled model: median_ratio
+  Formula: Outdoor 200m = 0.9871 × Indoor 200m
+  CV median |error| (pooled routing): 0.319s
+  Full-sample median |error|: 0.320s
+  Ratio Outdoor 200m/Indoor 200m: median 0.987 (IQR 0.977–1.001)
+  Median marks: Indoor 200m 22.64, Outdoor 200m 22.27
+
+  Important features to know
+  --------------------------
+  • Recommended route: best_is_from (CV 0.225s, Δ +0.094s vs pooled).
+  • How to determine it: Check whether the indoor from-event holds the athlete's highest WA among indoor-from + outdoor group PBs. Yes → best_is_from; no → best_not_from.
+  • Other features that also beat pooled:
+      - best_is_from: CV 0.225s (Δ +0.094s) ← recommended
+      - pair_wa_gap_50: CV 0.256s (Δ +0.064s)
+      - from_stronger_wa: CV 0.279s (Δ +0.041s)
+      - bal_spec: CV 0.284s (Δ +0.035s)
+      - best_event: CV 0.297s (Δ +0.022s)
+
+  How best_is_from alters the formula:
+  • Baseline (pooled): Outdoor 200m = 0.9871 × Indoor 200m
+  • Check whether the indoor from-event holds the athlete's highest WA among indoor-from + outdoor group PBs. Yes → best_is_from; no → best_not_from.
+      [best_not_from] n=15: Outdoor 200m = exp(0.684 + 0.773×log(Indoor 200m))  (full-sample MedAE 0.109s)
+      [best_is_from] n=15: Outdoor 200m = 1.0009 × Indoor 200m  (full-sample MedAE 0.259s)
+
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled): Outdoor 200m = 0.9871 × Indoor 200m
+  • If |WA(indoor from) − WA(outdoor to)| ≥ 50, use large_gap; else small_gap.
+      [small_gap] n=18: Outdoor 200m = exp(0.301 + 0.897×log(Indoor 200m))  (full-sample MedAE 0.162s)
+      [large_gap] n=12: Outdoor 200m = 1.0047 × Indoor 200m  (full-sample MedAE 0.170s)
+
+
+Distance — Men
+--------------
+
+Indoor 800m -> Outdoor 800m  (n=29 athlete-seasons, r=0.707)
+  Pooled model: median_ratio
+  Formula: Outdoor 800m = 0.9996 × Indoor 800m
+  CV median |error| (pooled routing): 0.663s
+  Full-sample median |error|: 0.549s
+  Ratio Outdoor 800m/Indoor 800m: median 1.000 (IQR 0.996–1.007)
+  Median marks: Indoor 800m 1:56.38, Outdoor 800m 1:56.42
+
+  Important features to know
+  --------------------------
+  • Recommended route: pair_wa_gap_50 (CV 0.646s, Δ +0.017s vs pooled).
+  • How to determine it: If |WA(indoor from) − WA(outdoor to)| ≥ 50, use large_gap; else small_gap.
+  • Other features that also beat pooled:
+      - pair_wa_gap_50: CV 0.646s (Δ +0.017s) ← recommended
+
+  How pair_wa_gap_50 alters the formula:
+  • Baseline (pooled): Outdoor 800m = 0.9996 × Indoor 800m
+  • If |WA(indoor from) − WA(outdoor to)| ≥ 50, use large_gap; else small_gap.
+      [large_gap] n=15: Outdoor 800m = 1.0067 × Indoor 800m  (full-sample MedAE 0.402s)
+      [small_gap] n=14: Outdoor 800m = 0.9957 × Indoor 800m  (full-sample MedAE 0.311s)
+
+
+Sprints — Women
+---------------
+
+Indoor 60m -> Outdoor 100m  (n=24 athlete-seasons, r=0.773)
+  Pooled model: robust_trimmed_linear
+  Formula: Outdoor 100m = 2.3131 × Indoor 60m − 5.7805
+  CV median |error| (pooled routing): 0.185s
+  Full-sample median |error|: 0.169s
+  Ratio Outdoor 100m/Indoor 60m: median 1.584 (IQR 1.575–1.614)
+  Median marks: Indoor 60m 8.04, Outdoor 100m 12.77
+
+  Important features to know
+  --------------------------
+  • No feature routing beat pooled by >0.01 on CV; use the pooled formula.
+
+

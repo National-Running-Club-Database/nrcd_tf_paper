@@ -1,0 +1,9 @@
+dataset,section,n_feature,n_pooled,n_athlete_seasons,pct_recommended_target_wa_strategy,n_recommended_target_wa_strategy,pct_applied_target_wa_feature_cohort,n_applied_target_wa_feature_cohort,pct_recommended_profile_strategy,n_recommended_profile_strategy,pct_best_event_equals_to_event,n_best_event_equals_to_event,feature_within_tol_rate,pooled_within_tol_rate,feature_medape,pooled_medape,n_feature_excl_target_wa_strategy,medape_excl_target_wa_strategy,within_tol_excl_target_wa_strategy,n_band_checks,pct_to_event_wa_in_band,n_to_event_wa_in_band,pct_band_only_via_to_event,n_band_only_via_to_event,strategy,n,medape,within_tol,uses_target_wa,uses_full_season_profile,share
+All_Divisions,overall,1100.0,1100.0,157.0,0.30636363636363634,337.0,0.2,220.0,0.6481818181818182,713.0,0.3809090909090909,419.0,0.42727272727272725,0.2863636363636364,1.688621489599146,2.714416210662108,763.0,1.3498560083776985,0.4875491480996068,1100.0,0.6418181818181818,706.0,0.11727272727272728,129.0,,,,,,,
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,bal_x_best_event,351.0,0.8449686931756469,0.6894586894586895,False,True,0.3190909090909091
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,best_is_from,272.0,2.0439371641884594,0.3492647058823529,False,True,0.24727272727272728
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,from_stronger_wa,191.0,2.1920903954802355,0.28272251308900526,True,False,0.17363636363636364
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,pair_wa_gap_50,146.0,2.6911820932168893,0.3013698630136986,True,False,0.13272727272727272
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,best_event,64.0,2.93275180312551,0.203125,False,True,0.05818181818181818
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,(none),50.0,3.4720739026099166,0.24,False,False,0.045454545454545456
+All_Divisions,by_strategy,,,,,,,,,,,,,,,,,,,,,,,,bal_spec,26.0,2.7697917280655027,0.38461538461538464,False,True,0.023636363636363636

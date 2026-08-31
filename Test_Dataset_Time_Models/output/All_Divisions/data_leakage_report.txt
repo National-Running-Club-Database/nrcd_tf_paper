@@ -1,0 +1,86 @@
+DATA LEAKAGE AUDIT — Time-model test pipelines
+==============================================
+
+Executive verdict
+-----------------
+• Train/test IDENTITY isolation (club NRCD fit vs collegiate scrape) looks clean.
+• FEATURE / PROTOCOL leakage is present: some routing labels and season profiles
+  incorporate the TARGET event's WA / PB when predicting that event.
+
+1. Confirmed issues
+-------------------
+1A. Target-WA routing (CRITICAL)
+    Strategies from_stronger_wa and pair_wa_gap_* compare WA(from) to WA(to).
+    WA(to) is a transform of the time being predicted.
+    Code: validate.py :: cohort_label(); club FI scripts :: feature_labelers().
+
+1B. Full-season profile includes target (CRITICAL if framed as forecast)
+    best_event, bal_spec / WA_Spread, bal_x_best_event, best_is_from use the
+    full event-group season PB profile (preprocess.py :: add_features).
+    Even best_is_from needs a group argmax that includes WA(to).
+
+1C. Chronological uses full-season features (MODERATE–CRITICAL)
+    (x, y) dates are early→later, but Bal_Spec / Best_Event (and band membership)
+    can use marks from the whole season, including after date_from.
+
+1D. Band membership may include the target mark (MODERATE)
+    athlete_in_band(): ≥1 result WA in [lo, hi) — may be the target itself.
+
+1E. Strategy selection used the same leaked labels in club CV (MODERATE)
+    "Recommended route" in band model reports was chosen with those labels.
+
+2. Framing
+----------
+• Season-PB as joint equivalency ("given both season bests…") → less severe.
+• Season-PB as forecasting unknown B from known A → 1A/1B are leakage.
+
+3. Clear non-issues
+-------------------
+• Club CSVs use athlete_id/team_id; test scrapes use college names — no shared fit.
+• Validators parse frozen formula text; they do not refit on test CSVs.
+• Pooled formulas predict from from-event time only (once frozen).
+• RQ1 / scoring / volume analyses are not this predictive holdout design.
+
+4. Remediations
+---------------
+• Drop or quarantine target-WA strategies for predictive claims.
+• Leave-target-out profiles (and time-aware profiles for chronological).
+• Prospective band = from-event WA (or marks ≤ prediction time) only.
+• Report pooled-only metrics separately from "oracle" feature routing.
+
+QUANTITATIVE SCAN — All_Divisions
+=================================
+
+Feature-route season-PB rows: 1100
+Pooled-route season-PB rows:  1100
+Athlete-seasons (feature):    157
+
+Target-WA recommended strategies (from_stronger_wa / pair_wa_gap_*):
+  337 / 1100 = 30.6%
+  of which applied as feature cohort (not pooled fallback): 220 (20.0%)
+
+Full-season profile recommended strategies (bal_spec / best_event / best_is_from / bal_x_best_event):
+  713 / 1100 = 64.8%
+
+best_event == to_event: 419 / 1100 = 38.1%
+
+Headline accuracy (for context; not a leakage test):
+  feature MedAPE=1.69%  within_tol=42.7%
+  pooled  MedAPE=2.71%  within_tol=28.6%
+  feature excl. target-WA strategies: n=763  MedAPE=1.35%  within_tol=48.8%
+
+Band membership vs target event WA:
+  to-event WA itself in assigned band: 706 / 1100 = 64.2%
+  band membership ONLY via to-event: 129 / 1100 = 11.7%
+
+Recommended strategy breakdown (feature route):
+        strategy   n   medape  within_tol  uses_target_wa  uses_full_season_profile    share
+bal_x_best_event 351 0.844969    0.689459           False                      True 0.319091
+    best_is_from 272 2.043937    0.349265           False                      True 0.247273
+from_stronger_wa 191 2.192090    0.282723            True                     False 0.173636
+  pair_wa_gap_50 146 2.691182    0.301370            True                     False 0.132727
+      best_event  64 2.932752    0.203125           False                      True 0.058182
+          (none)  50 3.472074    0.240000           False                     False 0.045455
+        bal_spec  26 2.769792    0.384615           False                      True 0.023636
+
+Identity note: this scan does not re-join NRCD athlete_ids to NCAA names; club vs scrape schemas remain separate by construction.

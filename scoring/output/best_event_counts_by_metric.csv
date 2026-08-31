@@ -11,10 +11,10 @@ Men,Sprints,purdy,scientific,200m,212,32.92,644
 Men,Sprints,mercier,scientific,200m,304,47.57,639
 Men,Sprints,mercier,scientific,400m,222,34.74,639
 Men,Sprints,mercier,scientific,100m,113,17.68,639
-Men,Distance,wa,sports,1500m,500,52.8,947
-Men,Distance,wa,sports,800m,263,27.77,947
-Men,Distance,wa,sports,5000m,183,19.32,947
-Men,Distance,wa,sports,3000m Steeplechase,1,0.11,947
+Men,Distance,wa,sports,1500m,447,46.95,952
+Men,Distance,wa,sports,800m,255,26.79,952
+Men,Distance,wa,sports,5000m,163,17.12,952
+Men,Distance,wa,sports,3000m Steeplechase,87,9.14,952
 Men,Distance,vdot,sports,800m,559,58.17,961
 Men,Distance,vdot,sports,1500m,230,23.93,961
 Men,Distance,vdot,sports,5000m,171,17.79,961
@@ -61,10 +61,10 @@ Women,Sprints,purdy,scientific,200m,45,15.73,286
 Women,Sprints,mercier,scientific,200m,115,39.93,288
 Women,Sprints,mercier,scientific,400m,109,37.85,288
 Women,Sprints,mercier,scientific,100m,64,22.22,288
-Women,Distance,wa,sports,1500m,241,56.84,424
-Women,Distance,wa,sports,5000m,117,27.59,424
-Women,Distance,wa,sports,800m,65,15.33,424
-Women,Distance,wa,sports,3000m Steeplechase,1,0.24,424
+Women,Distance,wa,sports,1500m,189,44.58,424
+Women,Distance,wa,sports,5000m,96,22.64,424
+Women,Distance,wa,sports,3000m Steeplechase,86,20.28,424
+Women,Distance,wa,sports,800m,53,12.5,424
 Women,Distance,vdot,sports,800m,225,53.07,424
 Women,Distance,vdot,sports,1500m,126,29.72,424
 Women,Distance,vdot,sports,5000m,73,17.22,424

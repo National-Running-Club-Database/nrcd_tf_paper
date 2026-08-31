@@ -1,0 +1,86 @@
+DATA LEAKAGE AUDIT — Time-model test pipelines
+==============================================
+
+Executive verdict
+-----------------
+• Train/test IDENTITY isolation (club NRCD fit vs collegiate scrape) looks clean.
+• FEATURE / PROTOCOL leakage is present: some routing labels and season profiles
+  incorporate the TARGET event's WA / PB when predicting that event.
+
+1. Confirmed issues
+-------------------
+1A. Target-WA routing (CRITICAL)
+    Strategies from_stronger_wa and pair_wa_gap_* compare WA(from) to WA(to).
+    WA(to) is a transform of the time being predicted.
+    Code: validate.py :: cohort_label(); club FI scripts :: feature_labelers().
+
+1B. Full-season profile includes target (CRITICAL if framed as forecast)
+    best_event, bal_spec / WA_Spread, bal_x_best_event, best_is_from use the
+    full event-group season PB profile (preprocess.py :: add_features).
+    Even best_is_from needs a group argmax that includes WA(to).
+
+1C. Chronological uses full-season features (MODERATE–CRITICAL)
+    (x, y) dates are early→later, but Bal_Spec / Best_Event (and band membership)
+    can use marks from the whole season, including after date_from.
+
+1D. Band membership may include the target mark (MODERATE)
+    athlete_in_band(): ≥1 result WA in [lo, hi) — may be the target itself.
+
+1E. Strategy selection used the same leaked labels in club CV (MODERATE)
+    "Recommended route" in band model reports was chosen with those labels.
+
+2. Framing
+----------
+• Season-PB as joint equivalency ("given both season bests…") → less severe.
+• Season-PB as forecasting unknown B from known A → 1A/1B are leakage.
+
+3. Clear non-issues
+-------------------
+• Club CSVs use athlete_id/team_id; test scrapes use college names — no shared fit.
+• Validators parse frozen formula text; they do not refit on test CSVs.
+• Pooled formulas predict from from-event time only (once frozen).
+• RQ1 / scoring / volume analyses are not this predictive holdout design.
+
+4. Remediations
+---------------
+• Drop or quarantine target-WA strategies for predictive claims.
+• Leave-target-out profiles (and time-aware profiles for chronological).
+• Prospective band = from-event WA (or marks ≤ prediction time) only.
+• Report pooled-only metrics separately from "oracle" feature routing.
+
+QUANTITATIVE SCAN — D1_Only
+===========================
+
+Feature-route season-PB rows: 606
+Pooled-route season-PB rows:  606
+Athlete-seasons (feature):    88
+
+Target-WA recommended strategies (from_stronger_wa / pair_wa_gap_*):
+  190 / 606 = 31.4%
+  of which applied as feature cohort (not pooled fallback): 121 (20.0%)
+
+Full-season profile recommended strategies (bal_spec / best_event / best_is_from / bal_x_best_event):
+  381 / 606 = 62.9%
+
+best_event == to_event: 240 / 606 = 39.6%
+
+Headline accuracy (for context; not a leakage test):
+  feature MedAPE=2.05%  within_tol=37.3%
+  pooled  MedAPE=3.13%  within_tol=24.9%
+  feature excl. target-WA strategies: n=416  MedAPE=1.72%  within_tol=44.0%
+
+Band membership vs target event WA:
+  to-event WA itself in assigned band: 388 / 606 = 64.0%
+  band membership ONLY via to-event: 58 / 606 = 9.6%
+
+Recommended strategy breakdown (feature route):
+        strategy   n   medape  within_tol  uses_target_wa  uses_full_season_profile    share
+bal_x_best_event 174 0.997328    0.637931           False                      True 0.287129
+    best_is_from 154 1.941197    0.350649           False                      True 0.254125
+from_stronger_wa 102 2.900312    0.235294            True                     False 0.168317
+  pair_wa_gap_50  88 3.083981    0.215909            True                     False 0.145215
+      best_event  43 2.981857    0.209302           False                      True 0.070957
+          (none)  35 4.688748    0.142857           False                     False 0.057756
+        bal_spec  10 5.063022    0.400000           False                      True 0.016502
+
+Identity note: this scan does not re-join NRCD athlete_ids to NCAA names; club vs scrape schemas remain separate by construction.

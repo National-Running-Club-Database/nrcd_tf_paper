@@ -1,0 +1,178 @@
+Indoor ↔ Outdoor Calendar Interplay — Findings
+========================================================================
+
+Research question
+-----------------
+How should an athlete's indoor (Dec–Mar) and early outdoor (pre-April
+nationals) calendars be structured *together* to maximize nationals margin?
+
+Why this differs from outdoor-only Meet_Calendar_Analysis
+---------------------------------------------------------
+Outdoor pre-nationals runway is extremely short (modal = 1 meet). Indoor is
+where most race volume lives (median ~1–2 meets, mean ~1.6, tail to 5–7).
+Combined planning = use indoor for diagnosis/volume, outdoor for lock-in.
+
+Nationals dates: 2024-04-06 · 2025-04-05 · 2026-04-11
+Volume lifts: outdoor 1→2 median=18.0 WA; indoor=18.0; sim blend=18.0
+Athlete-seasons total=9,443; indoor+outdoor both=1,823; multi-event both=1,335
+
+Empirical combined runway (athletes with both phases)
+-----------------------------------------------------
+Mean indoor meets=1.89 · mean outdoor meets=1.30 · mean total=3.19
+Median indoor=2 · median outdoor=1
+
+Top joint (n_indoor, n_outdoor) cells:
+  indoor=1, outdoor=1: 670 athletes
+  indoor=2, outdoor=1: 381 athletes
+  indoor=3, outdoor=1: 187 athletes
+  indoor=1, outdoor=2: 185 athletes
+  indoor=2, outdoor=2: 130 athletes
+  indoor=3, outdoor=2: 64 athletes
+  indoor=4, outdoor=1: 54 athletes
+  indoor=4, outdoor=2: 38 athletes
+  indoor=5, outdoor=1: 33 athletes
+  indoor=5, outdoor=2: 24 athletes
+  indoor=1, outdoor=3: 20 athletes
+  indoor=2, outdoor=3: 8 athletes
+
+Indoor → outdoor continuity (did outdoor follow indoor RQ1C?)
+------------------------------------------------------------
+n=1,823
+Outdoor RQ1A or RQ1C equals indoor RQ1C: 57.9%
+Outdoor absolute-best equals indoor RQ1C: 56.1%
+Mean outdoor margin if outdoor RQ1A = indoor RQ1C: -201.6
+Mean outdoor margin if outdoor RQ1A ≠ indoor RQ1C: -193.0
+Δ (match − switch): -8.6 WA
+Note: switchers are not worse on average — outdoor can still correct a
+mis-ranked indoor RQ1C. Continuity is a default, not a hard rule.
+
+Combined policy comparison (multi-event athletes with both phases)
+------------------------------------------------------------
+
+Budget Ni=2 indoor slots · No=1 outdoor slots
+Policy                                                n  Mean mar  Med mar  Clear%
+----------------------------------------------------------------------------------
+Hindsight oracle (upper bound)                     1335    -119.8    -98.3   28.4%
+Indoor RQ1A → outdoor RQ1C                         1335    -157.3   -132.7   18.6%
+Greedy margin both phases                          1335    -158.8   -133.7   19.2%
+Observed indoor+outdoor choices                    1335    -167.6   -145.0   17.0%
+Take indoor as-is → specialize outdoor RQ1C        1335    -168.2   -145.0   17.1%
+Specialize RQ1C both phases                        1335    -168.9   -145.7   16.4%
+Indoor transfer-partner → outdoor RQ1C             1335    -178.3   -155.0   14.5%
+Explore indoors → lock RQ1C outdoors               1335    -183.1   -160.4   13.8%
+
+Budget Ni=2 indoor slots · No=2 outdoor slots
+Policy                                                n  Mean mar  Med mar  Clear%
+----------------------------------------------------------------------------------
+Hindsight oracle (upper bound)                     1335    -101.3    -79.3   34.4%
+Greedy margin both phases                          1335    -142.3   -116.0   22.7%
+Indoor RQ1A → outdoor RQ1C                         1335    -143.6   -121.7   21.6%
+Specialize RQ1C both phases                        1335    -152.1   -129.0   20.4%
+Take indoor as-is → specialize outdoor RQ1C        1335    -153.2   -129.0   20.6%
+Observed indoor+outdoor choices                    1335    -158.5   -136.3   19.0%
+Indoor transfer-partner → outdoor RQ1C             1335    -161.9   -138.3   18.7%
+Explore indoors → lock RQ1C outdoors               1335    -167.0   -145.4   17.8%
+
+Budget Ni=3 indoor slots · No=2 outdoor slots
+Policy                                                n  Mean mar  Med mar  Clear%
+----------------------------------------------------------------------------------
+Hindsight oracle (upper bound)                     1335     -83.3    -61.3   37.3%
+Greedy margin both phases                          1335    -128.9   -104.0   26.1%
+Indoor RQ1A → outdoor RQ1C                         1335    -129.8   -106.0   24.9%
+Specialize RQ1C both phases                        1335    -141.3   -116.7   23.0%
+Take indoor as-is → specialize outdoor RQ1C        1335    -148.4   -125.3   21.4%
+Indoor transfer-partner → outdoor RQ1C             1335    -152.4   -130.3   20.4%
+Observed indoor+outdoor choices                    1335    -154.7   -129.0   19.7%
+Explore indoors → lock RQ1C outdoors               1335    -156.6   -136.4   19.3%
+
+Lift vs observed combined calendar (mean margin)
+--------------------------------------------------
+  (Ni=2, No=2) observed mean margin = -158.5
+    Explore indoors → lock RQ1C outdoors: -8.4 WA
+    Specialize RQ1C both phases: +6.5 WA
+    Indoor transfer-partner → outdoor RQ1C: -3.3 WA
+    Greedy margin both phases: +16.2 WA
+    Indoor RQ1A → outdoor RQ1C: +14.9 WA
+    Hindsight oracle (upper bound): +57.2 WA
+  (Ni=3, No=2) observed mean margin = -154.7
+    Explore indoors → lock RQ1C outdoors: -1.9 WA
+    Specialize RQ1C both phases: +13.4 WA
+    Indoor transfer-partner → outdoor RQ1C: +2.3 WA
+    Greedy margin both phases: +25.8 WA
+    Indoor RQ1A → outdoor RQ1C: +24.9 WA
+    Hindsight oracle (upper bound): +71.4 WA
+  (Ni=2, No=1) observed mean margin = -167.6
+    Explore indoors → lock RQ1C outdoors: -15.5 WA
+    Specialize RQ1C both phases: -1.3 WA
+    Indoor transfer-partner → outdoor RQ1C: -10.7 WA
+    Greedy margin both phases: +8.7 WA
+    Indoor RQ1A → outdoor RQ1C: +10.3 WA
+    Hindsight oracle (upper bound): +47.7 WA
+
+Recommended combined calendar (April nationals)
+--------------------------------------------------
+Phase 1 — INDOOR (Dec–Mar): diagnosis + volume
+  • Goal: identify RQ1C (event closest to nationals 8th-place bar) and bank
+    ≥2 marks in that event (or its indoor proxy: mile→1500, 3000→5000, etc.).
+  • If event identity is unclear: spend 1 early indoor meet exploring an
+    alternate / transfer partner (800↔1500, 100↔200), then lock RQ1C.
+  • Indoor is the cheap place to explore — outdoor slots are too scarce.
+
+Phase 2 — EARLY OUTDOOR (before April nationals): lock + polish
+  • Default: every outdoor slot on the indoor RQ1C event (specialize).
+  • Do not re-open event shopping outdoors unless indoor evidence was thin
+    (<2 championship-event marks) or a steeple/5K opportunity appears.
+  • Optional: one transfer-partner race only if No≥3 (rare empirically).
+
+Phase link — continuity
+  • ~58% keep outdoor focus aligned with indoor RQ1C; ~42% switch.
+  • Switchers are not worse on mean outdoor margin — outdoor can correct a
+    wrong indoor ranking (especially mile/3000 proxies → true outdoor events).
+  • Default: carry indoor RQ1C outdoors; allow one outdoor correction only when
+    a new event clearly beats the indoor margin ranking (e.g. first steeple).
+
+Concrete templates by combined budget
+  (Ni=2, No=1) — most common planned scarce case (and modal joint is 1+1):
+      Indoor: bank absolute-best / RQ1C marks (build the PB vector).
+      Outdoor: single meet on the current best nationals-margin event.
+  (Ni=2, No=2):
+      Indoor: accumulate in top event(s); Outdoor: specialize on RQ1C twice.
+      Greedy / Indoor-RQ1A→Outdoor-RQ1C beat observed calendars by ~+15 WA.
+  (Ni=3, No=2) — higher-volume indoor:
+      Indoor: 2–3 marks toward the championship pathway; Outdoor: lock RQ1C.
+      Avoid spending indoor slots only on transfer partners without confirming RQ1C.
+
+Team note
+  Relays and multi-event entries consume the same meet budgets. Count them.
+  Prefer placing exploratory relay legs indoors when possible so outdoor
+  entries stay free for individual nationals pathways.
+
+Takeaways
+---------
+1. Structure the YEAR as indoor volume/diagnosis → outdoor specialization.
+2. Greedy combined allocation and Indoor-RQ1A→Outdoor-RQ1C beat observed mixes
+   (~+15 to +26 WA at Ni=2–3, No=2).
+3. Blind explore-indoors policies underperform — when Ni is only 2, exploration
+   burns the diagnosis budget; prefer racing the current best events then lock.
+4. Outdoor can still flip the event choice (~42% switch); reserve that for clear
+   margin improvements, not casual event shopping.
+5. Modal real calendar is indoor=1 + outdoor=1 — every entry is high leverage.
+
+Limitations
+-----------
+• Indoor events mapped to outdoor proxies (mile→1500, 3000→5000).
+• Synthetic lifts approximate counterfactual repeats.
+• Observational continuity ≠ causal proof of schedule design.
+• Relays excluded from individual sims but matter for real entry lists.
+
+Artifacts
+---------
+  output/combined_runway_distribution.csv
+  output/joint_indoor_outdoor_meets.csv
+  output/indoor_outdoor_continuity.csv
+  output/combined_policy_detail.csv
+  output/combined_policy_comparison.csv
+  output/combined_policy_by_discipline.csv
+  output/interplay_findings.txt
+  output/Summary_findings.md
+

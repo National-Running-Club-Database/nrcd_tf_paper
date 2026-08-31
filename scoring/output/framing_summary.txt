@@ -4,8 +4,8 @@ Sports metrics: wa, vdot
 
 Mean pairwise best-event agreement (all disciplines/genders with n>0):
   purdy vs mercier: mean 74.9% over 6 slices
-  vdot vs mercier: mean 57.4% over 6 slices
+  vdot vs mercier: mean 57.5% over 6 slices
   vdot vs purdy: mean 58.8% over 6 slices
-  wa vs mercier: mean 82.2% over 10 slices
-  wa vs purdy: mean 85.8% over 6 slices
-  wa vs vdot: mean 71.3% over 6 slices
+  wa vs mercier: mean 84.4% over 10 slices
+  wa vs purdy: mean 81.4% over 6 slices
+  wa vs vdot: mean 67.5% over 6 slices

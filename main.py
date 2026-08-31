@@ -29,6 +29,7 @@ MODULES: list[tuple[str, str]] = [
     ("causal_analysis", "Within-athlete FE dose–response for volume"),
     ("time_models", "Cross-event time models / point bands / FI"),
     ("test_dataset_time_models", "External D1 validation of pair models"),
+    ("Meet_Calendar_Analysis", "Outdoor meet budget → nationals margin policies"),
     ("coaches_analysis", "Coach-facing nationals strategy (docs)"),
     ("preliminary_findings", "Curated presentation copies (docs)"),
 ]

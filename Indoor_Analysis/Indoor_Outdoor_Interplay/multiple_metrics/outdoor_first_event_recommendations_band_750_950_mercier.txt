@@ -1,0 +1,136 @@
+Best Outdoor Season Opener — Athletes with Outdoor Opener in WA 750–950
+Metric: Mercier (1999) [scientific]
+========================================================================
+
+Question:
+  For athletes whose first outdoor-season result has WA in [750, 950),
+  which outdoor events tended to produce the highest Mercier (1999) as the
+  outdoor season opener — by gender and event group?
+
+(Outdoor-only companion to first_event_recommendations_band_750_950_*.txt;
+ indoor openers omitted.)
+
+Method:
+  • Years 2024–2026; athlete-year must have ≥1 indoor and ≥1 outdoor
+    individual (non-relay) result (same dual-season cohort as the full report).
+  • Outdoor season opener = results on the chronologically earliest outdoor
+    meet date; if multiple events that day, the highest-Mercier (1999) result
+    that day is used.
+  • Inclusion: outdoor first-event WA ∈ [750, 950).
+  • Within each gender × event-group cell, rank events by mean outdoor-opener Mercier (1999).
+  • “Best” recommendation uses events with n≥5 when available.
+  • Sample: 505 athlete-years.
+
+Mean outdoor opener Mercier (1999): 641.1
+Median outdoor opener Mercier (1999): 639.0
+
+Overall outdoor openers with highest mean Mercier (1999) (min n=10)
+  Men:
+    800m: mean=674.2 med=670.0 n=57
+    400m: mean=668.7 med=661.0 n=23
+    5000m: mean=660.7 med=655.0 n=25
+    1500m: mean=655.4 med=644.0 n=42
+    200m: mean=652.6 med=650.5 n=58
+    100m: mean=621.0 med=602.0 n=37
+    High Jump: mean=620.1 med=602.0 n=13
+    Long Jump: mean=593.0 med=593.0 n=25
+  Women:
+    Triple Jump: mean=666.7 med=642.0 n=11
+    800m: mean=626.2 med=621.5 n=16
+    400m: mean=624.6 med=614.0 n=23
+    1500m: mean=624.4 med=615.0 n=33
+    5000m: mean=622.0 med=611.0 n=27
+    200m: mean=612.2 med=612.0 n=23
+    100m: mean=603.9 med=599.0 n=15
+
+Outdoor opener — mean Mercier (1999) by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=118 athlete-years, mean Mercier (1999)=645.8)
+  Event                     n      mean    median
+  400m                     23     668.7     661.0
+  200m                     58     652.6     650.5
+  100m                     37     621.0     602.0
+  → Highest mean Mercier (1999) (n≥5): 400m (668.7, n=23)
+
+Men — Distance  (n=133 athlete-years, mean Mercier (1999)=663.4)
+  Event                     n      mean    median
+  3000m                     1     690.0     690.0
+  800m                     57     674.2     670.0
+  5000m                    25     660.7     655.0
+  1500m                    42     655.4     644.0
+  3000m Steeplechase        6     634.3     641.0
+  Mile                      2     628.0     628.0
+  → Highest mean Mercier (1999) (n≥5): 800m (674.2, n=57)
+
+Men — Hurdles  (n=14 athlete-years, mean Mercier (1999)=677.6)
+  Event                     n      mean    median
+  110m Hurdles              8     681.2     696.0
+  400m Hurdles              6     672.7     666.5
+  → Highest mean Mercier (1999) (n≥5): 110m Hurdles (681.2, n=8)
+
+Men — Jumps  (n=43 athlete-years, mean Mercier (1999)=604.0)
+  Event                     n      mean    median
+  High Jump                13     620.1     602.0
+  Triple Jump               5     617.0     603.0
+  Long Jump                25     593.0     593.0
+  → Highest mean Mercier (1999) (n≥5): High Jump (620.1, n=13)
+
+Men — Throws  (n=13 athlete-years, mean Mercier (1999)=682.3)
+  Event                     n      mean    median
+  Discus                    4     692.5     680.0
+  Shot Put                  9     677.8     672.0
+  → Highest mean Mercier (1999) (n≥5): Shot Put (677.8, n=9)
+
+Women — Sprints  (n=61 athlete-years, mean Mercier (1999)=614.8)
+  Event                     n      mean    median
+  400m                     23     624.6     614.0
+  200m                     23     612.2     612.0
+  100m                     15     603.9     599.0
+  → Highest mean Mercier (1999) (n≥5): 400m (624.6, n=23)
+
+Women — Distance  (n=88 athlete-years, mean Mercier (1999)=624.2)
+  Event                     n      mean    median
+  3000m                     4     626.8     622.5
+  3000m Steeplechase        6     626.7     618.5
+  800m                     16     626.2     621.5
+  event_18                  2     624.5     624.5
+  1500m                    33     624.4     615.0
+  5000m                    27     622.0     611.0
+  → Highest mean Mercier (1999) (n≥5): 3000m Steeplechase (626.7, n=6)
+
+Women — Hurdles  (n=11 athlete-years, mean Mercier (1999)=623.7)
+  Event                     n      mean    median
+  400m Hurdles              9     633.1     639.0
+  100m Hurdles              2     581.5     581.5
+  → Highest mean Mercier (1999) (n≥5): 400m Hurdles (633.1, n=9)
+
+Women — Jumps  (n=24 athlete-years, mean Mercier (1999)=653.5)
+  Event                     n      mean    median
+  High Jump                 7     674.9     670.0
+  Triple Jump              11     666.7     642.0
+  Long Jump                 6     604.3     599.0
+  → Highest mean Mercier (1999) (n≥5): High Jump (674.9, n=7)
+
+Headline recommendations (n≥5 within gender × group)
+----------------------------------------------------
+Outdoor season openers:
+  Outdoor | Men Sprints: 400m (mean Mercier (1999) 668.7, n=23)
+  Outdoor | Men Distance: 800m (mean Mercier (1999) 674.2, n=57)
+  Outdoor | Men Hurdles: 110m Hurdles (mean Mercier (1999) 681.2, n=8)
+  Outdoor | Men Jumps: High Jump (mean Mercier (1999) 620.1, n=13)
+  Outdoor | Men Throws: Shot Put (mean Mercier (1999) 677.8, n=9)
+  Outdoor | Women Sprints: 400m (mean Mercier (1999) 624.6, n=23)
+  Outdoor | Women Distance: 3000m Steeplechase (mean Mercier (1999) 626.7, n=6)
+  Outdoor | Women Hurdles: 400m Hurdles (mean Mercier (1999) 633.1, n=9)
+  Outdoor | Women Jumps: High Jump (mean Mercier (1999) 674.9, n=7)
+
+Caveats:
+  • Conditioning on outdoor opener already in 750–950 truncates
+    outdoor scores from below; rankings are within that cohort only.
+  • Same-day multi-event openers: highest-Mercier (1999) mark that day is used.
+  • Observational — does not prove causality of event choice.
+  • Purdy/VDOT: field openers may be absent (undefined for those metrics).
+
+Source detail CSV: outdoor_first_event_band_750_950_detail_mercier.csv
+Derived from: first_event_band_750_950_detail_{metric}.csv

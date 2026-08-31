@@ -1,0 +1,138 @@
+All_Divisions/2+_From_Only — all scraped men's documents · SEASON-PB protocol only
+Includes NCAA D1 / D3 / NAIA. Same absolute tolerances as main pipeline.
+Chronological evaluation intentionally omitted (matches D1_Only analysis).
+Filter: predict A→B only if athlete-season has ≥2 results in event A and ≥1 results in event B.
+Note: 2026_Outdoor_Marks.pdf is Air Force (GOAIRFORCEFALCONS.COM), not Colorado State; men pages 1–4 only.
+
+Outdoor Time-Model Validation — Men's Test Dataset
+==================================================
+
+Models: models/steeplechase (bands 750-950, 800-1000, 850-1050)
+Test data: output/men_test_dataset_results.csv
+Parsed Men pair models: 40
+
+Evaluation modes
+----------------
+  1. season_pb: predict target season-best from source season-best
+     (matches how the models were trained). Includes supplementary undated
+     season-best rows (USI, North Central, Oshkosh, Keiser).
+  2. chronological: earliest source mark that precedes a later target mark
+     (early-season → later-season check). Dated primary sources only.
+
+Routes
+------
+  • pooled: band pooled formula (knn uses reported median ratio fallback)
+  • feature: recommended feature cohort when label available; else pooled
+
+Tolerance: starter absolute seconds from preprocessing design
+  (100:0.15, 200:0.30, 400:0.80, 800:1.50, 1500:3.0, 3000:6.0, SC:8.0, 5000:10.0)
+
+Total prediction rows: 472
+Unique athlete-seasons tested: 47
+
+Overall summary
+---------------
+  n     mae  medae    rmse  bias_mean  p90_abs  within_tol_rate  median_abs_pct_error  mean_abs_pct_error  corr_pred_actual  train_cv_medae_ref  medae_minus_train_cv      mode route_kind
+236 18.3772 2.9161 80.0019    -3.6796  27.1468           0.3517                1.9847           56.727815            0.9632               0.127                2.7891 season_pb    feature
+236 17.4270 3.7320 71.2184    -3.6147  27.5386           0.2288                3.1670           50.365036            0.9683               0.339                3.3930 season_pb     pooled
+
+By band
+-------
+     mode     band route_kind  n  medae     mae     rmse  within_tol_rate  median_abs_pct_error  medae_minus_train_cv
+season_pb  750-950    feature 95 3.6227  9.6566  23.7727           0.4211                1.7934                3.4957
+season_pb  750-950     pooled 95 4.4572 17.8554  83.2763           0.2316                2.4027                4.1182
+season_pb 800-1000    feature 81 3.2834 22.6976  77.6379           0.2716                2.1921                3.1764
+season_pb 800-1000     pooled 81 3.8410 20.2203  73.9711           0.2222                3.3047                3.5920
+season_pb 850-1050    feature 60 2.1392 26.3522 127.0528           0.3500                2.0704                1.9862
+season_pb 850-1050     pooled 60 2.3386 12.9776  39.7862           0.2333                3.4552                2.1136
+
+By event pair (season_pb, feature route preferred view)
+-------------------------------------------------------
+    band from_event to_event  n    medae      mae  bias_mean  within_tol_rate  median_abs_pct_error  corr_pred_actual  train_cv_medae_ref  medae_minus_train_cv model_recommended_strategy
+ 750-950       800m    1500m 13   2.1040   4.5111     2.6945           0.6154                0.8989            0.9976               2.950               -0.8460           bal_x_best_event
+ 750-950      1500m     800m 11   2.3914   3.1718     0.6583           0.1818                2.1202            0.9951               1.376                1.0154           from_stronger_wa
+ 750-950      5000m    1500m  9   4.6354   5.3997     1.3242           0.3333                1.8868            0.7323               2.840                1.7954           from_stronger_wa
+ 750-950   3000m SC    1500m  9   6.0736   7.8617    -5.0629           0.1111                2.6247            0.0486               4.733                1.3406               best_is_from
+ 750-950       100m     200m  8   0.1704   0.1740    -0.0066           0.8750                0.8007            0.8563               0.127                0.0434           bal_x_best_event
+ 750-950       200m     100m  6   0.0528   0.0677     0.0353           1.0000                0.5002            0.8713               0.052                0.0008           bal_x_best_event
+ 750-950       400m     200m  6   0.3897   0.7888    -0.2635           0.1667                1.8024            0.5345               0.218                0.1717               best_is_from
+ 750-950      1500m    5000m  6  16.0827  20.0671    10.7289           0.3333                1.8491           -0.6210              12.373                3.7097               best_is_from
+ 750-950      1500m 3000m SC  6  23.7608  33.5855    33.5855           0.1667                4.2081           -0.5347                 NaN                   NaN                        NaN
+ 750-950       200m     400m  5   0.5709   1.9361     1.1864           0.8000                1.1945           -0.8964               0.491                0.0799               best_is_from
+ 750-950   3000m SC    5000m  5   6.8372   7.9634     1.5203           0.8000                0.7539            0.8882              14.624               -7.7868               best_is_from
+ 750-950      5000m     800m  2   4.6946   4.6946     4.6946           0.0000                4.1814               NaN               2.389                2.3056           from_stronger_wa
+ 750-950      5000m 3000m SC  2   8.0600   8.0600     6.8440           0.5000                1.3981               NaN              15.543               -7.4830               best_is_from
+ 750-950       800m 3000m SC  2  12.7603  12.7603     0.9719           0.0000                2.2401               NaN              30.093              -17.3327               best_is_from
+ 750-950       800m    5000m  2 131.2133 131.2133   131.2133           0.0000               15.0253               NaN              12.078              119.1353             pair_wa_gap_50
+ 750-950       400m     100m  1   0.4283   0.4283     0.4283           0.0000                4.0330               NaN               0.325                0.1033               best_is_from
+ 750-950       100m     400m  1   0.8189   0.8189    -0.8189           0.0000                1.7204               NaN               1.115               -0.2961               best_is_from
+ 750-950   3000m SC     800m  1  11.8431  11.8431    11.8431           0.0000               10.8852               NaN               3.684                8.1591                   bal_spec
+800-1000      1500m     800m 10   2.0740  61.0546   -58.2566           0.1000                1.8234            0.9919               1.483                0.5910           bal_x_best_event
+800-1000       800m    1500m 10   3.0587  24.4243   -16.8547           0.4000                1.3004            0.9966               2.811                0.2477             pair_wa_gap_50
+800-1000       100m     200m  9   0.2127  29.5612   -29.2241           0.6667                0.9973           -0.4330               0.107                0.1057           bal_x_best_event
+800-1000   3000m SC    1500m  9  17.9452  16.4805    16.1255           0.1111                7.9891            0.3261               2.825               15.1202           from_stronger_wa
+800-1000      5000m    1500m  8   7.1939   7.5602    -3.8847           0.0000                2.9628            0.5732               2.676                4.5179             pair_wa_gap_50
+800-1000       200m     100m  6   0.0736   0.0809     0.0236           1.0000                0.6901            0.8360               0.082               -0.0084           bal_x_best_event
+800-1000       400m     200m  6   0.4373   0.4926     0.3125           0.1667                2.0228            0.4598               0.233                0.2043               best_is_from
+800-1000      1500m 3000m SC  6  20.9329  29.7289    29.7289           0.1667                3.7089           -0.4744              21.951               -1.0181             pair_wa_gap_50
+800-1000      1500m    5000m  6  39.9090  47.4667    47.4667           0.0000                4.5898           -0.0249               7.630               32.2790           from_stronger_wa
+800-1000       200m     400m  5   1.1812   3.0689     3.0689           0.0000                2.4873           -0.8314               0.784                0.3972               best_is_from
+800-1000      5000m     800m  2   3.4894   3.4894     3.4894           0.0000                3.1080               NaN               3.046                0.4434           from_stronger_wa
+800-1000       800m    5000m  2   8.3936   8.3936    -8.3936           1.0000                0.9612               NaN              25.701              -17.3074               best_is_from
+800-1000       400m     100m  1   0.2328   0.2328     0.2328           0.0000                2.1921               NaN               0.201                0.0318           from_stronger_wa
+800-1000       100m     400m  1   2.8981   2.8981     2.8981           0.0000                6.0884               NaN               1.289                1.6091                   bal_spec
+850-1050       800m    1500m 10   3.0675  97.2653   -93.3806           0.4000                1.2846            0.9966               2.429                0.6385           bal_x_best_event
+850-1050       100m     200m  9   0.1176  29.5572   -29.4755           0.6667                0.5624           -0.5677               0.153               -0.0354           bal_x_best_event
+850-1050      1500m     800m  9   2.3914   3.6612     1.0312           0.0000                2.1202            0.9959               0.806                1.5854                 best_event
+850-1050      5000m    1500m  8  10.6541   9.0787    -3.0481           0.1250                4.5834            0.0588               2.262                8.3921             pair_wa_gap_50
+850-1050       400m     200m  7   1.0142   1.0787     1.0787           0.0000                4.6887            0.3634                 NaN                   NaN                        NaN
+850-1050       200m     100m  6   0.0647   0.0694     0.0262           1.0000                0.6079            0.8319               0.066               -0.0013           bal_x_best_event
+850-1050      1500m    5000m  6  26.0178  35.9637    27.6124           0.1667                3.0381            0.1090              14.649               11.3688                 best_event
+850-1050       200m     400m  5   0.5847   2.6271     2.6271           0.6000                1.2312           -0.6204               0.586               -0.0013           bal_x_best_event
+
+Closest alignments (season_pb, lowest MedAE, n≥2)
+-------------------------------------------------
+  750-950 200m→100m [feature] n=6 MedAE=0.053s  within_tol=100%  vs_train_CV 0.0007749999999995746
+  850-1050 200m→100m [feature] n=6 MedAE=0.065s  within_tol=100%  vs_train_CV -0.0013450000000007623
+  800-1000 200m→100m [feature] n=6 MedAE=0.074s  within_tol=100%  vs_train_CV -0.008425000000000057
+  850-1050 100m→200m [feature] n=9 MedAE=0.118s  within_tol=67%  vs_train_CV -0.035400000000000514
+  750-950 100m→200m [feature] n=8 MedAE=0.170s  within_tol=88%  vs_train_CV 0.043360000000002286
+  850-1050 100m→200m [pooled] n=9 MedAE=0.203s  within_tol=67%  vs_train_CV -0.021956593644253536
+  800-1000 100m→200m [feature] n=9 MedAE=0.213s  within_tol=67%  vs_train_CV 0.10573000000000408
+  800-1000 200m→100m [pooled] n=6 MedAE=0.224s  within_tol=33%  vs_train_CV 0.09001999999999943
+
+Largest errors (season_pb, highest MedAE, n≥2)
+---------------------------------------------
+  750-950 800m→5000m [feature] n=2 MedAE=131.213s  within_tol=0%
+  800-1000 1500m→5000m [feature] n=6 MedAE=39.909s  within_tol=0%
+  800-1000 1500m→5000m [pooled] n=6 MedAE=29.408s  within_tol=17%
+  850-1050 1500m→5000m [pooled] n=6 MedAE=28.491s  within_tol=17%
+  850-1050 1500m→5000m [feature] n=6 MedAE=26.018s  within_tol=17%
+  750-950 1500m→5000m [pooled] n=6 MedAE=24.692s  within_tol=17%
+  800-1000 3000m SC→1500m [pooled] n=9 MedAE=24.464s  within_tol=11%
+  750-950 1500m→3000m SC [feature] n=6 MedAE=23.761s  within_tol=17%
+
+Example predictions within tolerance (season_pb, feature)
+---------------------------------------------------------
+  Romario Taylor (Troy, 750-950): 400m 47.71s → pred 200m 22.04s vs actual 22.04s (|err|=0.002s)
+  Jonathan Bailey (North Florida, 850-1050): 100m 10.69s → pred 200m 22.22s vs actual 22.22s (|err|=0.005s)
+  Myles Money (DePaul, 850-1050): 200m 22.15s → pred 100m 10.89s vs actual 10.87s (|err|=0.023s)
+  Joseph Gomez Whitten (UTEP, 750-950): 100m 10.53s → pred 200m 21.98s vs actual 21.95s (|err|=0.026s)
+  Myles Money (DePaul, 800-1000): 100m 10.87s → pred 200m 22.12s vs actual 22.15s (|err|=0.026s)
+  Myles Money (DePaul, 750-950): 100m 10.87s → pred 200m 22.12s vs actual 22.15s (|err|=0.027s)
+  Myles Money (DePaul, 750-950): 200m 22.15s → pred 100m 10.90s vs actual 10.87s (|err|=0.033s)
+  Jayvion Cunningham (DePaul, 750-950): 200m 21.33s → pred 100m 10.63s vs actual 10.67s (|err|=0.037s)
+  Trenton Brooks (SIUE, 800-1000): 200m 21.66s → pred 100m 10.51s vs actual 10.46s (|err|=0.045s)
+  Trenton Brooks (SIUE, 750-950): 200m 21.66s → pred 100m 10.51s vs actual 10.46s (|err|=0.045s)
+  Jonathan Bailey (North Florida, 850-1050): 200m 22.22s → pred 100m 10.74s vs actual 10.69s (|err|=0.047s)
+  Romario Taylor (Troy, 800-1000): 400m 47.71s → pred 200m 22.09s vs actual 22.04s (|err|=0.050s)
+
+Notes
+-----
+  • knn_median pooled models fall back to the report's median ratio.
+  • Feature route uses cohort formula when the athlete's label exists;
+    otherwise falls back to pooled.
+  • Test athletes are NCAA D1; models were fit on club data — expect
+    some distribution shift.
+  • Positive bias => model predicts slower than actual.
+

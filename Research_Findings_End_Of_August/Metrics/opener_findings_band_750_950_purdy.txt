@@ -1,0 +1,92 @@
+Indoor vs Outdoor Season-Opener Gardner–Purdy (outdoor opener WA in [750, 950))
+===============================================================================
+Metric: Gardner–Purdy [scientific]
+
+Question:
+  For athletes with ≥2 indoor meets and ≥2 outdoor meets in the same year,
+  do outdoor season openers start with higher Gardner–Purdy than indoor season
+  openers for similar events?
+  Restricted to comparisons where the outdoor opener result is in WA
+  band [750, 950).
+
+Method:
+  • Years: 2024, 2025, 2026 (indoor season file year paired with outdoor year).
+  • Eligibility: ≥2 distinct meet_ids with individual (non-relay) results indoors
+    AND ≥2 outdoors in that year.
+  • Season opener: earliest meet by start_date for that athlete in the season.
+  • Similar-event pairs compared only when the athlete contested the indoor
+    event at the indoor opener meet AND the paired outdoor event at the
+    outdoor opener meet.
+  • Delta = outdoor_opener_Gardner–Purdy − indoor_opener_Gardner–Purdy.
+  • Outdoor distance uses new_steeplechase_data when available.
+  • Relays excluded.
+  • Band filter: keep a pair only if outdoor opener WA ∈ [750, 950).
+  • Purdy/VDOT: field-event pairs omitted (undefined).
+
+Similar-event pairs:
+  • 60m → 100m
+  • 200m → 200m
+  • 400m → 400m
+  • 800m → 800m
+  • Mile → 1500m
+  • 1500m → 1500m
+  • 3000m → 5000m
+  • 5000m → 5000m
+  • 60mH → 110mH
+  • 60mH → 100mH
+  • Long Jump → Long Jump
+  • Triple Jump → Triple Jump
+  • High Jump → High Jump
+  • Shot Put → Shot Put
+
+Eligibility / sample
+--------------------
+  2024: 34 athletes in band; 37 opener pair comparisons (34 athletes with ≥1 comparable opener pair)
+  2025: 25 athletes in band; 25 opener pair comparisons (25 athletes with ≥1 comparable opener pair)
+  2026: 43 athletes in band; 48 opener pair comparisons (43 athletes with ≥1 comparable opener pair)
+  Combined: 95 athletes contributing 110 opener pair comparisons
+
+Primary result — all years, all similar-event pairs
+---------------------------------------------------
+  n=110 athletes=95  indoorμ=657.4 outdoorμ=697.2  Δμ=+39.9 Δmed=+40.7  outdoor_higher=86.4%  indoor_higher=13.6%
+  Verdict: YES — outdoor openers average higher Gardner–Purdy than indoor openers for comparable events among dual-season athletes.
+
+By year
+-------
+  2024: n=37 athletes=34  indoorμ=637.8 outdoorμ=682.1  Δμ=+44.2 Δmed=+43.2  outdoor_higher=89.2%  indoor_higher=10.8%
+  2025: n=25 athletes=25  indoorμ=645.7 outdoorμ=694.5  Δμ=+48.8 Δmed=+45.3  outdoor_higher=96.0%  indoor_higher=4.0%
+  2026: n=48 athletes=43  indoorμ=678.5 outdoorμ=710.4  Δμ=+31.9 Δmed=+28.1  outdoor_higher=79.2%  indoor_higher=20.8%
+
+By gender
+---------
+  Men: n=73 athletes=63  indoorμ=746.0 outdoorμ=792.6  Δμ=+46.5 Δmed=+45.0  outdoor_higher=90.4%  indoor_higher=9.6%
+  Women: n=37 athletes=32  indoorμ=482.4 outdoorμ=509.1  Δμ=+26.7 Δmed=+34.3  outdoor_higher=78.4%  indoor_higher=21.6%
+
+By similar-event pair
+---------------------
+  200m → 200m: n=40 athletes=38  indoorμ=661.6 outdoorμ=721.7  Δμ=+60.0 Δmed=+55.6  outdoor_higher=95.0%  indoor_higher=5.0%
+  400m → 400m: n=12 athletes=11  indoorμ=600.9 outdoorμ=639.9  Δμ=+38.9 Δmed=+37.0  outdoor_higher=100.0%  indoor_higher=0.0%
+  800m → 800m: n=13 athletes=13  indoorμ=682.6 outdoorμ=723.3  Δμ=+40.8 Δmed=+25.4  outdoor_higher=84.6%  indoor_higher=15.4%
+  Mile → 1500m: n=26 athletes=23  indoorμ=648.8 outdoorμ=668.9  Δμ=+20.1 Δmed=+24.1  outdoor_higher=69.2%  indoor_higher=30.8%
+  3000m → 5000m: n=14 athletes=14  indoorμ=693.6 outdoorμ=718.3  Δμ=+24.8 Δmed=+32.1  outdoor_higher=85.7%  indoor_higher=14.3%
+  5000m → 5000m: n=5 athletes=5  indoorμ=635.9 outdoorμ=659.7  Δμ=+23.8 Δmed=+19.8  outdoor_higher=80.0%  indoor_higher=20.0%
+
+By gender × event pair (n≥10)
+-----------------------------
+  Men | 200m → 200m: n=32 athletes=30  indoorμ=714.5 outdoorμ=776.6  Δμ=+62.1 Δmed=+59.7  outdoor_higher=93.8%  indoor_higher=6.2%
+  Men | 800m → 800m: n=10 athletes=10  indoorμ=744.2 outdoorμ=794.9  Δμ=+50.7 Δmed=+34.3  outdoor_higher=90.0%  indoor_higher=10.0%
+  Men | Mile → 1500m: n=14 athletes=12  indoorμ=770.7 outdoorμ=802.0  Δμ=+31.3 Δmed=+25.9  outdoor_higher=85.7%  indoor_higher=14.3%
+  Women | Mile → 1500m: n=12 athletes=11  indoorμ=506.6 outdoorμ=513.6  Δμ=+7.1 Δmed=+11.6  outdoor_higher=50.0%  indoor_higher=50.0%
+
+Athlete-level (mean delta across an athlete-year's comparable opener pairs)
+---------------------------------------------------------------------------
+  n_athletes=102  mean_of_means=+39.72  median_of_means=+40.74  pct_athletes_outdoor_higher=86.3%
+
+Caveats:
+  • Only opener-meet results count; later-season form is ignored.
+  • Athlete must run the paired events at BOTH openers — selection into
+    the comparison set is not random.
+  • This file restricts to outdoor opener WA ∈ [750, 950); indoor opener
+    score is unrestricted (may fall outside a comparable band).
+
+Source: indoor_analysis/Indoor_Outdoor_Interplay/analyze_opener_multi_metric.py

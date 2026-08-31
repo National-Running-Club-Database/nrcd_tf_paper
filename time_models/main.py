@@ -27,6 +27,7 @@ COMMANDS = {
     "cross_event": "build_cross_event_time_models.py",
     "higher_races_report": "generate_higher_races_formula_reports.py",
     "research": "research_stats.py",
+    "indoor_outdoor": "Indoor_to_Outdoor_Predictions/main.py",
 }
 
 

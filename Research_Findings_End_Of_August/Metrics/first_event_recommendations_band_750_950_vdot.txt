@@ -1,0 +1,161 @@
+Best First Event of Season — Athletes with Outdoor Opener in WA 750–950
+Metric: VDOT [sports]
+========================================================================
+
+Question:
+  For athletes whose first outdoor-season result has WA in [750, 950),
+  which events tended to produce the highest VDOT as the first indoor event,
+  and which as the first outdoor event — by gender and event group?
+
+Method:
+  • Years 2024–2026; athlete-year must have ≥1 indoor and ≥1 outdoor
+    individual (non-relay) result.
+  • First result of a season = results on the chronologically earliest meet
+    date; if multiple events that day, the highest-VDOT result that day
+    is used as the noted first-event performance.
+  • Inclusion: outdoor first-event WA ∈ [750, 950)
+    (same cohort definition as the World Athletics report).
+  • Within each gender × event-group cell, rank events by mean first-event VDOT.
+  • “Best” recommendation within a cell uses events with n≥5 when available.
+  • Sample: 428 athlete-years.
+
+Mean indoor first VDOT: 72.5
+Mean outdoor first VDOT: 75.3
+Mean Δ (out−in): +2.8
+
+Overall first-indoor events with highest mean VDOT (min n=10)
+  Men:
+    200m: mean=90.7 med=91.1 n=101
+    400m: mean=81.3 med=81.2 n=33
+    800m: mean=71.3 med=72.1 n=38
+    3000m: mean=67.4 med=67.3 n=40
+    Mile: mean=67.3 med=67.3 n=40
+  Women:
+    200m: mean=74.3 med=74.8 n=58
+    400m: mean=63.8 med=64.9 n=16
+    800m: mean=55.8 med=55.8 n=15
+    Mile: mean=54.0 med=54.2 n=46
+    3000m: mean=53.1 med=52.9 n=17
+
+Overall first-outdoor events with highest mean VDOT (min n=10)
+  Men:
+    100m: mean=95.7 med=95.4 n=63
+    200m: mean=94.0 med=94.5 n=48
+    400m: mean=83.8 med=83.5 n=20
+    800m: mean=72.4 med=72.4 n=62
+    5000m: mean=69.0 med=68.9 n=26
+  Women:
+    100m: mean=79.4 med=79.3 n=46
+    200m: mean=75.7 med=75.8 n=17
+    800m: mean=57.6 med=57.5 n=30
+    1500m: mean=55.4 med=55.2 n=22
+    5000m: mean=54.9 med=54.5 n=26
+
+First INDOOR event — mean VDOT by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=136 athlete-years, mean VDOT=88.5)
+  Event                     n      mean    median
+  100m                      2      98.6      98.6
+  200m                    101      90.7      91.1
+  400m                     33      81.3      81.2
+  → Highest mean VDOT (n≥5): 200m (90.7, n=101)
+
+Men — Distance  (n=127 athlete-years, mean VDOT=68.6)
+  Event                     n      mean    median
+  800m                     38      71.3      72.1
+  5000m                     7      68.7      69.0
+  1500m                     2      67.7      67.7
+  3000m                    40      67.4      67.3
+  Mile                     40      67.3      67.3
+  → Highest mean VDOT (n≥5): 800m (71.3, n=38)
+
+Women — Sprints  (n=75 athlete-years, mean VDOT=72.1)
+  Event                     n      mean    median
+  100m                      1      81.0      81.0
+  200m                     58      74.3      74.8
+  400m                     16      63.8      64.9
+  → Highest mean VDOT (n≥5): 200m (74.3, n=58)
+
+Women — Distance  (n=90 athlete-years, mean VDOT=54.0)
+  Event                     n      mean    median
+  800m                     15      55.8      55.8
+  Mile                     46      54.0      54.2
+  3000m                    17      53.1      52.9
+  5000m                    11      53.1      53.1
+  1500m                     1      52.8      52.8
+  → Highest mean VDOT (n≥5): 800m (55.8, n=15)
+
+First OUTDOOR event — mean VDOT by gender × event group
+------------------------------------------------------------
+
+Men — Sprints  (n=131 athlete-years, mean VDOT=93.3)
+  Event                     n      mean    median
+  100m                     63      95.7      95.4
+  200m                     48      94.0      94.5
+  400m                     20      83.8      83.5
+  → Highest mean VDOT (n≥5): 100m (95.7, n=63)
+
+Men — Distance  (n=127 athlete-years, mean VDOT=70.3)
+  Event                     n      mean    median
+  800m                     62      72.4      72.4
+  5000m                    26      69.0      68.9
+  1500m                    33      68.7      68.3
+  Mile                      2      67.6      67.6
+  3000m Steeplechase        4      59.9      60.2
+  → Highest mean VDOT (n≥5): 800m (72.4, n=62)
+
+Men — Hurdles  (n=5 athlete-years, mean VDOT=71.6)
+  Event                     n      mean    median
+  110m Hurdles              2      72.4      72.4
+  400m Hurdles              3      71.1      72.1
+  → Highest mean VDOT (n≥5): 110m Hurdles (72.4, n=2)
+
+Women — Sprints  (n=72 athlete-years, mean VDOT=76.9)
+  Event                     n      mean    median
+  100m                     46      79.4      79.3
+  200m                     17      75.7      75.8
+  400m                      9      66.5      66.0
+  → Highest mean VDOT (n≥5): 100m (79.4, n=46)
+
+Women — Distance  (n=88 athlete-years, mean VDOT=55.5)
+  Event                     n      mean    median
+  800m                     30      57.6      57.5
+  1500m                    22      55.4      55.2
+  5000m                    26      54.9      54.5
+  3000m                     4      54.7      54.5
+  event_18                  2      53.1      53.1
+  3000m Steeplechase        4      46.2      46.3
+  → Highest mean VDOT (n≥5): 800m (57.6, n=30)
+
+Women — Hurdles  (n=5 athlete-years, mean VDOT=61.6)
+  Event                     n      mean    median
+  100m Hurdles              3      63.3      64.4
+  400m Hurdles              2      59.0      59.0
+  → Highest mean VDOT (n≥5): 100m Hurdles (63.3, n=3)
+
+Headline recommendations (n≥5 within gender × group)
+----------------------------------------------------
+Indoor season openers:
+  Indoor | Men Sprints: 200m (mean VDOT 90.7, n=101)
+  Indoor | Men Distance: 800m (mean VDOT 71.3, n=38)
+  Indoor | Women Sprints: 200m (mean VDOT 74.3, n=58)
+  Indoor | Women Distance: 800m (mean VDOT 55.8, n=15)
+Outdoor season openers:
+  Outdoor | Men Sprints: 100m (mean VDOT 95.7, n=63)
+  Outdoor | Men Distance: 800m (mean VDOT 72.4, n=62)
+  Outdoor | Men Hurdles: 110m Hurdles (mean VDOT 72.4, n=2)
+  Outdoor | Women Sprints: 100m (mean VDOT 79.4, n=46)
+  Outdoor | Women Distance: 800m (mean VDOT 57.6, n=30)
+  Outdoor | Women Hurdles: 100m Hurdles (mean VDOT 63.3, n=3)
+
+Caveats:
+  • Conditioning on outdoor opener already in 750–950 truncates
+    outdoor WA from below; outdoor event rankings are within that cohort.
+  • Indoor first-event scores are unrestricted and often lower.
+  • Same-day multi-event openers: highest-VDOT mark that day is used.
+  • Observational — does not prove causality of event choice.
+  • Purdy/VDOT undefined for field events — those marks are skipped for
+    first-event selection under those metrics.
+
+Source detail CSV: first_event_band_750_950_detail_vdot.csv
